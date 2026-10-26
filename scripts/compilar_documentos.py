@@ -58,6 +58,13 @@ def main():
     (STAGE/result).mkdir(parents=True, exist_ok=True)
     shutil.copy2(ROOT/result/"tabela_tcc.tex", STAGE/result/"tabela_tcc.tex")
     shutil.copytree(ROOT/result/"figuras", STAGE/result/"figuras", dirs_exist_ok=True)
+    corrected = Path("projeto/resultados/fase1_corrigida_2026")
+    if (ROOT/corrected/"tabela_tcc.tex").exists():
+        (STAGE/corrected).mkdir(parents=True, exist_ok=True)
+        for name in ["tabela_tcc.tex", "tabela_condicoes.tex"]:
+            shutil.copy2(ROOT/corrected/name, STAGE/corrected/name)
+        figures = corrected/"fase2/reconstrucao_completa/figuras"
+        shutil.copytree(ROOT/figures, STAGE/figures, dirs_exist_ok=True)
     compile_one(STAGE, "tcc")
     compile_one(STAGE/"artigo", "artigo")
 

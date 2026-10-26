@@ -1,0 +1,19 @@
+{
+  "seed": 42,
+  "folds": 5,
+  "workers": 4,
+  "min_instances": 500,
+  "max_instances": 10000,
+  "min_class_count": 5,
+  "sampling": "none_same_all_rows_all_classifiers",
+  "scalers": ["StandardScaler", "MinMaxScaler", "RobustScaler", "None"],
+  "selectors": ["PCA", "SelectKBest", "None"],
+  "classifiers": ["RandomForest", "SVM", "kNN", "MLP", "DecisionTree"],
+  "rf_estimators": 100,
+  "mlp_hidden": [64, 32],
+  "mlp_max_iter": 200,
+  "decision_tree_max_depth": 10,
+  "classifier_knn_k": 5,
+  "selector_max_features": 10,
+  "pca_solver": "auto"
+}

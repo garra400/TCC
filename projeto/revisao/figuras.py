@@ -10,8 +10,8 @@ import pandas as pd
 from projeto.revisao.experimentos import PROJECT
 
 
-def run():
-    path = PROJECT/"resultados/revisao_2026"
+def run(path=None):
+    path = Path(path) if path is not None else PROJECT/"resultados/revisao_2026"
     output = path/"figuras"
     output.mkdir(exist_ok=True)
     plt.rcParams.update({"font.size": 10, "savefig.dpi": 180})
@@ -46,4 +46,7 @@ def run():
 
 
 if __name__ == "__main__":
-    run()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--input", type=Path)
+    run(parser.parse_args().input)
