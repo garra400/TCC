@@ -1,0 +1,190 @@
+\chapter{Materiais e Métodos}
+\label{cap:materialemetodos}
+
+Este capítulo descreve os materiais, ferramentas computacionais, conjuntos de dados e métodos empregados no desenvolvimento desta pesquisa. Inicialmente são apresentados os recursos utilizados, seguidos de um panorama geral do processo experimental baseado em dois fluxogramas. Por fim, detalha-se cada etapa metodológica da Fase 1 e Fase 2 do experimento de meta-aprendizado para recomendação de pipelines de aprendizado de máquina.
+
+\section{Materiais Utilizados}
+\label{sec:materiais}
+
+Nesta seção, são apresentados os recursos computacionais, linguagens de programação, bibliotecas, ambientes de desenvolvimento e conjuntos de dados empregados ao longo da pesquisa. A seleção desses elementos foi guiada por critérios como aderência às práticas consolidadas na área de Aprendizado de Máquina (ML), disponibilidade em código aberto, escalabilidade e suporte à experimentação científica.
+
+Antes de detalhar cada grupo de materiais individualmente, é oportuno oferecer uma visão geral do ecossistema tecnológico que fundamenta esta investigação. O \autoref{quad:materiais} a seguir consolida os principais componentes utilizados, organizando-os por categoria, versão (quando aplicável) e justificativa de sua escolha. Esta apresentação permite ao leitor compreender, de forma estruturada, a base técnica sobre a qual os experimentos foram conduzidos.
+
+\begin{tabframed}[H]
+    \centering
+    \caption{Materiais, Ferramentas e Conjuntos de Dados Utilizados}
+    \label{quad:materiais}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}llll@{}}
+        \toprule
+        \textbf{Categoria} & \textbf{Nome Específico} & \textbf{Versão} & \textbf{Justificativa/Relevância} \\
+        \midrule
+        Linguagem & Python & 3.13 & Ecossistema robusto para AM, vastas bibliotecas \\
+        Ambiente de Desenvolvimento & Jupyter / VS Code & N/A & Experimentação interativa, gerenciamento de código \\
+        Biblioteca de AM & Scikit-learn & $\ge$ 1.4 & Pipelines, pré-processamento, classificadores e métricas \\
+        Estatística Computacional & SciPy & $\ge$ 1.12 & KDTree, correlações e métricas de ranqueamento \\
+        Meta-características & Implementação própria & N/A & Extração de embeddings estatísticos distribucionais \\
+        Manipulação de Dados & Pandas & $\ge$ 1.3 & Estrutura \textit{DataFrame} para dados tabulares \\
+        Computação Numérica & NumPy & $\ge$ 1.20 & Arrays multidimensionais e operações matemáticas \\
+        Visualização & Matplotlib, Seaborn e umap-learn & N/A & Gráficos, mapas de calor e projeção UMAP \\
+        Fonte de Dados & OpenML & N/A & Repositório com conjuntos anotados e metadados \\
+        Recurso Computacional & PC local & Próprio & Execução dos experimentos das Fases 1 e 2 \\
+        \bottomrule
+    \end{tabular}
+    }
+    \fonte{}
+\end{tabframed}
+
+O quadro destaca a integração entre ferramentas consolidadas do ecossistema científico de Python e infraestrutura computacional local, evidenciando o cuidado na seleção de tecnologias que garantam reprodutibilidade, desempenho e flexibilidade. A seguir, cada categoria é explorada individualmente, de forma a detalhar seu papel específico no desenvolvimento dos experimentos desta pesquisa.
+
+Os sites oficiais das principais ferramentas utilizadas são: Python\footnote{\url{https://www.python.org/}}, Jupyter\footnote{\url{https://jupyter.org/}}, Visual Studio Code\footnote{\url{https://code.visualstudio.com/}}, scikit-learn\footnote{\url{https://scikit-learn.org/}}, SciPy\footnote{\url{https://scipy.org/}}, NumPy\footnote{\url{https://numpy.org/}}, pandas\footnote{\url{https://pandas.pydata.org/}}, umap-learn\footnote{\url{https://umap-learn.readthedocs.io/}} e OpenML\footnote{\url{https://www.openml.org/}}.
+
+\subsection{Linguagens e Ambientes de Desenvolvimento}
+
+O projeto foi desenvolvido em Python (versão 3.13), utilizando como ambiente principal o Jupyter Notebook e, em etapas mais estruturadas, o Visual Studio Code. Essas ferramentas foram escolhidas devido à sua ampla adoção na comunidade científica e à compatibilidade com bibliotecas de aprendizado de máquina. O uso de controle de versão via \texttt{Git} e \texttt{GitHub} também foi empregado para rastreamento do código.
+
+\subsection{Bibliotecas e Frameworks}
+
+As principais bibliotecas utilizadas foram:
+
+\begin{itemize}
+    \item \texttt{scikit-learn}: Para construção de pipelines, pré-processamento, validação cruzada e algoritmos base (\gls{rf}, \gls{svm}, \gls{knn}, \gls{mlp} e \gls{dt}) \cite{Pedregosa2011};
+    \item \texttt{scipy}: Para a estrutura \texttt{KDTree}, correlações de Spearman e Kendall, e cálculo do Kendall Tau ponderado;
+    \item \texttt{pandas} e \texttt{numpy}: Para manipulação e estruturação de dados tabulares e vetoriais;
+    \item \texttt{matplotlib}, \texttt{seaborn} e \texttt{umap-learn}: Para geração dos gráficos, mapas de calor e projeção bidimensional dos embeddings.
+\end{itemize}
+
+\subsection{Conjuntos de Dados}
+
+Os conjuntos de dados foram obtidos do repositório público OpenML \cite{Vanschoren2014}, selecionando-se tarefas de classificação supervisionada que atendessem aos seguintes critérios: (i) entre 500 e 10.000 instâncias, de modo a equilibrar representatividade estatística e custo computacional; (ii) ao menos duas classes; e (iii) atributos predominantemente numéricos. Dos 243 \textit{task IDs} configurados inicialmente, \textbf{201 conjuntos de dados} foram carregados com sucesso e tiveram ao menos um pipeline avaliado sem erros — número que supera os 120 conjuntos do UCI Repository utilizados por \cite{Jomaa2021} como referência na literatura para tarefas de meta-aprendizado. Os 42 conjuntos restantes foram descartados por falha no download ou por não atenderem aos critérios de qualidade estabelecidos.
+
+A caracterização local dos 201 conjuntos carregados indica heterogeneidade suficiente para avaliar o ranqueamento de pipelines: o número de instâncias varia de 500 a 10.000, com mediana de 1.941; o número de atributos varia de 1 a 1.776, com mediana de 20; e a mediana da proporção da classe majoritária é 0{,}50. Apenas um conjunto apresentou valores ausentes após o carregamento, caso tratado pela rotina de pré-processamento. A \autoref{tab:exemplosDatasets} apresenta exemplos representativos do meta-conjunto.
+
+\begin{table}[H]
+\centering
+\caption{Exemplos de conjuntos de dados utilizados no meta-conjunto}
+\label{tab:exemplosDatasets}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}rllrrrr@{}}
+\toprule
+\textbf{Task ID} & \textbf{Nome} & \textbf{Caracterização} & \textbf{Instâncias} & \textbf{Atributos} & \textbf{Classes} & \textbf{Classe majoritária} \\
+\midrule
+3      & \texttt{kr-vs-kp}                         & Jogo de xadrez              & 3.196 & 36   & 2 & 0{,}522 \\
+11     & \texttt{balance-scale}                   & Balanceamento físico        & 625   & 4    & 3 & 0{,}461 \\
+9910   & \texttt{Bioresponse}                     & Classificação bioquímica    & 3.751 & 1.776 & 2 & 0{,}542 \\
+363713 & \texttt{regensburg\_pediatric\_appendicitis} & Diagnóstico médico tabular & 780   & 55   & 3 & 0{,}619 \\
+\bottomrule
+\end{tabular}
+}
+\fonte{Autoria própria (2026), com base nos dados carregados do OpenML.}
+\end{table}
+
+\subsection{Recursos Computacionais}
+\label{subsec:recursos}
+
+Os experimentos foram executados integralmente em hardware local, em uma estação de trabalho pessoal com as seguintes especificações:
+\begin{itemize}
+    \item Processador: AMD Ryzen 7 5700U com Gráficos Radeon (8 núcleos, 16 threads, 1,80 GHz base);
+    \item Memória RAM: 12 GB DDR4;
+    \item Armazenamento: SSD (Solid-State Drive), utilizado como cache dos conjuntos de dados e dos embeddings, garantindo operações de leitura e escrita de alta velocidade durante a manipulação dos dados;
+    \item Sistema Operacional: Windows 10 Pro (\textit{build} 19045);
+    \item Ambiente: Python 3.13, com as bibliotecas \texttt{scikit-learn} ($\geq$ 1.4), \texttt{scipy} ($\geq$ 1.12), \texttt{numpy}, \texttt{pandas} e \texttt{umap-learn}.
+\end{itemize}
+
+Esta configuração mostrou-se adequada para a execução dos experimentos: a Fase 1 (execução de 60 pipelines $\times$ 201 conjuntos de dados), intensiva em CPU e I/O, foi paralelizada sobre os núcleos do processador; e a Fase 2 (validação \gls{loo} do preditor \gls{knn}), de custo computacional linear no número de conjuntos de dados, foi concluída em poucos minutos.
+
+\section{Métodos}
+
+O processo experimental foi dividido em duas fases principais. A Fase 1 consiste na construção de um meta-conjunto de dados, onde pipelines são aplicados a conjuntos de dados previamente caracterizados. A Fase 2 realiza o meta-aprendizado e fornece a recomendação de pipelines adequados.
+
+\begin{figure}[H]
+    \caption{Fluxograma do processo experimental: Fase 1 - Construção do meta-conjunto} 
+    \label{fig:fluxogramas_fases}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/fase1.png}
+    \fonte{}
+\end{figure}
+
+O processo inicia com a seleção de conjuntos de dados, seguida da extração do embedding estatístico distribucional, da execução de pipelines (pré-processamento + classificador) e da avaliação via validação cruzada. Os dados resultantes são organizados no meta-conjunto com informações como: embedding do conjunto de dados ($X_{emb}$), configuração do pipeline e desempenho obtido ($Y_{perf}$).
+
+\begin{figure}[H]
+    \caption{Fluxograma do processo experimental: Fase 2 -  Meta-aprendizado e recomendação no processo experimental} 
+    \label{fig:fluxograma_fase2}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figuras/fase22.png}
+    \fonte{}
+\end{figure}
+
+Na Fase 2, o meta-conjunto é utilizado para treinar e avaliar um preditor de ranqueamento multi-saída. Para um novo conjunto de dados, o sistema localiza os conjuntos mais similares no espaço de embeddings e estima a acurácia esperada de cada pipeline, gerando uma lista ordenada de recomendações.
+
+A seguir, cada fase do processo experimental é pormenorizada. A Fase 1 foca na criação da base de conhecimento – o meta-conjunto de dados –, que é a fundação para a abordagem de meta-aprendizado. A Fase 2 utiliza essa base para treinar os metamodelos e, finalmente, gerar as recomendações de pipelines, que constitui o objetivo central desta pesquisa.
+
+\subsection{Fase 1 – Construção do Meta-conjunto}
+
+A caracterização dos conjuntos de dados é realizada por um extrator de embeddings estatísticos distribucionais implementado neste trabalho. O método calcula, para cada atributo numérico do conjunto de dados, um conjunto de estatísticas descritivas (média, desvio padrão, mínimo, máximo, mediana, percentis $P_{25}$ e $P_{75}$, assimetria e curtose) e, em seguida, agrega a distribuição dessas estatísticas sobre todos os atributos via percentis. O vetor é composto por 45 meta-features distribucionais ($9$ estatísticas $\times$ $5$ agregadores), 10 propriedades globais do conjunto e 9 posições preenchidas com zero, totalizando 64 dimensões antes da normalização para norma unitária. Essa etapa gera o vetor $\mathbf{x} \in \mathbb{R}^{64}$, que é utilizado como entrada para o preditor \gls{knn}\footnote{O k-vizinhos mais próximos (k-NN) é um algoritmo de aprendizado baseado em instâncias que estima a saída para uma nova entrada a partir dos $k$ exemplos de treinamento mais próximos no espaço de características, segundo uma métrica de distância \citeonline{Cover1967}.}. A escolha de um embedding estatístico sem treinamento neural garante aplicabilidade imediata a novos conjuntos de dados sem necessidade de retreinamento, atendendo ao critério D3 do Dataset2Vec \cite{Jomaa2021}.
+
+Os pipelines são compostos por sequências de operadores de pré-processamento seguidos por um classificador. A modularidade dos componentes permite gerar múltiplas combinações, cujas estruturas são registradas de forma detalhada para compor o histórico do experimento.
+
+Cada pipeline é avaliado por meio de validação cruzada estratificada de 5 folds sobre os conjuntos de dados. A métrica de desempenho adotada é a \textbf{acurácia balanceada} (\textit{balanced accuracy}), definida como a média aritmética da sensibilidade (recall) de cada classe, conforme a Equação \eqref{eq:balanced_acc} \citeonline{Brodersen2010}:
+
+\begin{equation}\label{eq:balanced_acc}
+  \text{BA} = \frac{1}{C} \sum_{c=1}^{C} \frac{TP_c}{TP_c + FN_c}
+\end{equation}
+
+\noindent onde $C$ é o número de classes, $TP_c$ é o número de verdadeiros positivos e $FN_c$ o de falsos negativos para a classe $c$. Para $C = 2$, a acurácia balanceada equivale à média aritmética de sensibilidade e especificidade. A escolha desta métrica em detrimento da acurácia simples é motivada pela presença de conjuntos de dados desbalanceados no meta-conjunto: a acurácia simples favorece artificialmente classificadores que preveem apenas a classe majoritária, enquanto a acurácia balanceada garante que o desempenho em todas as classes seja igualmente considerado. O desempenho médio sobre os 5 folds compõe o valor $Y_{perf}$ armazenado na matriz de acurácias.
+
+Ao final da Fase 1, o principal artefato gerado é o meta-conjunto de dados, que consolida o conhecimento empírico obtido a partir da execução sistemática de diversos pipelines sobre uma ampla variedade de conjuntos de dados. Este meta-conjunto é estruturado de forma que cada instância representa um par formado por um conjunto de dados e uma configuração de pipeline, contendo as seguintes informações:
+
+\begin{itemize}
+    \item \textbf{Embedding estatístico do conjunto de dados ($X_{emb}$):} representa as características intrínsecas do conjunto de dados por meio de estatísticas distribucionais, servindo como entrada para o preditor de ranqueamento;
+
+    \item \textbf{Configuração do pipeline:} descreve a sequência de operadores de pré-processamento e o classificador utilizados, bem como seus respectivos hiperparâmetros;
+
+    \item \textbf{Desempenho do pipeline ($Y_{perf}$):} armazena os resultados das métricas obtidas durante a validação cruzada, como acurácia balanceada e F1-score.
+\end{itemize}
+
+\subsection{Fase 2 – Meta-aprendizado por Ranqueamento}
+
+Com o meta-conjunto construído, a Fase 2 realiza a \textbf{predição de ranking} de pipelines para novos conjuntos de dados. Esta abordagem trata a recomendação como um problema de ranqueamento (em vez de classificação binária), o que preserva toda a informação ordinal de desempenho e permite ao usuário selecionar quantos pipelines desejar da lista recomendada.
+
+\subsubsection{Preditor k-NN Multi-saída}
+
+O metamodelo adotado é um \textbf{preditor k-vizinhos mais próximos} (k-NN) multi-saída, que utiliza uma estrutura \texttt{KDTree}\footnote{A KDTree (\textit{k-dimensional tree}) é uma estrutura de árvore binária que particiona recursivamente o espaço de busca por planos de corte alinhados aos eixos, permitindo consultas de vizinhança eficientes em espaços multidimensionais \citeonline{Bentley1975}.} para busca eficiente de vizinhos no espaço de embeddings. A KDTree é uma árvore binária de particionamento espacial que organiza os pontos por planos de corte em cada dimensão, reduzindo a complexidade de busca de $O(n \cdot d)$ (força bruta) para $O(d \cdot \log n)$ em média, onde $n$ é o número de conjuntos de dados e $d = 64$ é a dimensão do embedding. Para um novo conjunto de dados $D_{new}$ com embedding $\mathbf{x}_{new} \in \mathbb{R}^{64}$, o preditor identifica os $k$ conjuntos de dados mais similares no espaço de embeddings e estima a acurácia esperada de cada pipeline $P_j$ como a média das acurácias observadas nos vizinhos, conforme a Equação \eqref{eq:knn} — generalização multi-saída da regressão k-NN clássica, em que a predição é dada pela média das observações dos $k$ vizinhos mais próximos \citeonline{Altman1992}:
+
+\begin{equation}\label{eq:knn}
+  \hat{A}(P_j) = \frac{1}{k} \sum_{D_i \in \mathcal{N}_k(D_{new})} A_{i,j}
+\end{equation}
+
+\noindent onde $\mathcal{N}_k(D_{new})$ denota o conjunto dos $k$ conjuntos de dados mais próximos de $D_{new}$ no espaço de embeddings e $A_{i,j}$ é a acurácia balanceada do pipeline $P_j$ no conjunto de dados $D_i$. A similaridade entre conjuntos de dados é medida pela distância euclidiana no espaço de embeddings. A recomendação final consiste no ranking dos 60 pipelines ordenados por $\hat{A}(P_j)$ de forma decrescente.
+
+\subsubsection{Validação por Leave-One-Out}
+
+A avaliação do preditor é realizada por \textbf{Leave-One-Out (LOO) no nível de conjuntos de dados}: para cada conjunto $D_i$ no meta-conjunto, o preditor é treinado nos $n-1$ conjuntos restantes e avalia suas predições sobre o conjunto excluído. Este protocolo garante que cada avaliação simula o cenário real de inferência — um conjunto de dados genuinamente inédito —, fornecendo estimativas não enviesadas da capacidade de generalização.
+
+\subsubsection{Métricas de Avaliação de Ranking}
+
+A qualidade do ranqueamento predito em relação ao ranqueamento real foi avaliada por quatro métricas complementares:
+
+\begin{itemize}
+  \item \textbf{Coeficiente de Correlação de Spearman ($\rho$)} \cite{Spearman1904}: mede a correlação monotônica entre os postos dos scores preditos e reais. $\rho = 1$ indica ordenação perfeita; $\rho = 0$, ausência de correlação linear de postos;
+
+  \item \textbf{Kendall Tau ($\tau$)} \cite{Kendall1938}: mede a fração líquida de pares de pipelines corretamente ordenados, conforme a Equação \eqref{eq:kendall}:
+  \begin{equation}\label{eq:kendall}
+    \tau = \frac{P - Q}{\binom{n}{2}}
+  \end{equation}
+  onde $P$ é o número de pares concordantes e $Q$ o de pares discordantes. $\tau = 1$ indica todos os pares na ordem correta; $\tau = -1$, ordem invertida;
+
+  \item \textbf{Kendall Tau Ponderado ($\tau_w$)}: implementado via \texttt{scipy.stats.weightedtau}, atribui pesos maiores às inversões de ordem que ocorrem no topo do ranking (melhores pipelines), penalizando erros de recomendação que têm maior impacto prático. Formalmente, o peso de cada par de posições $(i, j)$ é inversamente proporcional ao produto de seus postos no ranking real;
+
+  \item \textbf{NDCG} (\textit{Normalized Discounted Cumulative Gain}): implementado via \texttt{sklearn.metrics.ndcg\_score}, penaliza explicitamente pipelines relevantes classificados em posições inferiores, definido pela Equação \eqref{eq:ndcg}:
+  \begin{equation}\label{eq:ndcg}
+    \text{NDCG} = \frac{\text{DCG}}{\text{IDCG}}, \quad \text{DCG} = \sum_{i=1}^{n} \frac{2^{rel_i} - 1}{\log_2(i+1)}
+  \end{equation}
+  onde $rel_i$ é a relevância do pipeline na posição $i$ (acurácia balanceada real) e IDCG é o DCG do ranking ideal (ordenação perfeita). NDCG $= 1$ indica ranking perfeito; valores próximos de 1 indicam que os pipelines de maior relevância estão próximos do topo. Assim, $\tau_w$ e NDCG são tratados como métricas complementares de topo: o primeiro avalia inversões pareadas ponderadas, enquanto o segundo avalia a relevância acumulada das posições iniciais.
+\end{itemize}
+
+As métricas são reportadas como média e desvio padrão sobre todos os folds LOO válidos (folds com variância não nula no vetor de acurácias reais). Para a seleção do hiperparâmetro $k$, avalia-se $k \in \{1, 3, 5, 7, 10\}$ e o valor com maior Kendall médio é selecionado.
+
+\subsubsection{Análise de Correlação Estatística}
+
+Como análise complementar, investiga-se a \textbf{correlação estatística entre o Kendall Tau ponderado por conjunto de dados e as dimensões do embedding}. Para cada dimensão $d \in \{1, \ldots, 64\}$ do espaço de embeddings, calcula-se o coeficiente de Spearman entre $\{\tau_w^{(i)}\}_{i=1}^{n}$ (scores de qualidade de ranqueamento por conjunto de dados) e $\{x_d^{(i)}\}_{i=1}^{n}$ (valor da dimensão $d$ no embedding de cada conjunto). Esta análise visa identificar quais aspectos da representação do conjunto de dados predizem a qualidade do meta-aprendizado, fornecendo interpretabilidade ao sistema.

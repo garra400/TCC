@@ -1,0 +1,47 @@
+\chapter{Introdução}\label{cap:introducao}
+
+A seleção do algoritmo mais adequado para um determinado problema de aprendizado de máquina (\glsadd{ml}ML, \textit{Machine Learning}) é, reconhecidamente, um dos maiores desafios enfrentados por profissionais da área. Isso ocorre porque não existe um algoritmo universalmente superior para todos os tipos de dados, conforme reforçado pelo Teorema \textit{No Free Lunch} \citeonline{Wolpert1997}, que demonstra formalmente que, em média sobre todos os problemas possíveis, qualquer dois algoritmos de otimização ou aprendizado têm desempenho equivalente — implicando que a superioridade de um algoritmo em um domínio necessariamente vem acompanhada de inferioridade em outro. As características intrínsecas dos dados — como dimensionalidade, balanceamento de classes, distribuição e presença de ruídos — impactam diretamente o desempenho dos modelos, tornando inviável a adoção de uma abordagem única e generalista.
+
+Nesse cenário, o desenvolvimento de pipelines eficientes em ML exige uma combinação cuidadosa de três componentes fundamentais: representação, avaliação e otimização, conforme proposto por \citeonline{Domingos2012}. A representação define o espaço de hipóteses possível; a avaliação, os critérios que distinguem bons modelos de ruins; e a otimização, os métodos de busca que encontram o modelo mais adequado. Tradicionalmente, a construção desses pipelines depende fortemente da expertise humana, que realiza sucessivas tentativas e ajustes manuais.
+
+Com o objetivo de reduzir esse esforço, surgem as abordagens de \glsadd{automl}\textit{AutoML} (\textit{Automated Machine Learning}), que automatizam desde a seleção de algoritmos até o ajuste de hiperparâmetros. Deste modo, como destacam \citeonline{Schoenfeld2020} e \citeonline{Vanschoren2018}, a eficácia dos sistemas de AutoML se amplia quando são utilizados modelos de meta-aprendizado, capazes de aprender a partir da experiência acumulada em múltiplos problemas anteriores.
+
+O meta-aprendizado, ou aprendizado para aprender, estrutura-se na coleta de metadados e na extração de \textit{meta-características} dos conjuntos de dados — atributos que capturam aspectos estatísticos, estruturais e informacionais dos dados \citeonline{Schoenfeld2022}. Com isso, torna-se possível treinar metamodelos capazes de prever, de maneira informada, quais algoritmos ou pipelines possuem maior chance de sucesso em um novo problema.
+
+Entretanto, apesar dos avanços, boa parte dos sistemas de AutoML e meta-aprendizado concentra-se na escolha do modelo e na configuração dos hiperparâmetros, desconsiderando um fator crítico: a qualidade do \textit{pré-processamento dos dados}. Dados inconsistentes, com escalas divergentes, alta presença de \textit{outliers} ou problemas de codificação categórica podem comprometer todo o pipeline, independentemente da qualidade do algoritmo selecionado.
+
+Diante desse cenário, este trabalho propõe e avalia uma abordagem de meta-aprendizado para \textbf{ranqueamento e recomendação de pipelines} de classificação. A proposta consiste em: (i) construir um meta-conjunto a partir da execução sistemática de 60 pipelines — combinações de escaladores, seletores de atributos e classificadores — sobre 201 conjuntos de dados obtidos do OpenML \cite{Vanschoren2014}, representando cada conjunto por uma representação estatística distribucional de 64 dimensões, também referida neste trabalho como \textit{embedding} estatístico por ser um vetor numérico de dimensão fixa que resume propriedades do conjunto de dados sem treinamento neural\footnote{O conceito de \textit{embedding} de conjuntos de dados e a distinção entre representações neurais e estatísticas são detalhados na Seção \ref{sec:embeddingsRanking}.}; e (ii) treinar um preditor \gls{knn} multi-saída, avaliado por validação \gls{loo} no nível de conjuntos de dados, capaz de estimar o ranking de desempenho esperado dos pipelines para um conjunto inédito.
+
+\section{Objetivos}\label{sec:objetivos}
+
+Este trabalho tem como objetivo geral desenvolver e avaliar um sistema de meta-aprendizado baseado em embeddings estatísticos de conjuntos de dados para ranqueamento e recomendação de pipelines de classificação, capaz de identificar, a partir das características do conjunto de dados de entrada, quais configurações de pré-processamento e classificação apresentam maior probabilidade de sucesso preditivo. Para alcançar esse objetivo geral, foram definidos os seguintes objetivos específicos:
+
+\begin{itemize}
+    \item Avaliar, por meio da construção de um meta-conjunto — repositório de conhecimento contendo descrições de pipelines, embeddings dos conjuntos de dados e rótulos de desempenho obtidos por validação cruzada estratificada —, se metadados de desempenho e meta-características de conjuntos de dados carregam sinal suficiente para diferenciar boas e más combinações de pré-processamento e classificação;
+    \item Construir e avaliar um modelo preditivo capaz de estimar, a partir de metacaracterísticas dos dados, o ranking de adequação de diferentes configurações de pré-processamento e classificação.
+\end{itemize}
+
+\section{Justificativa}\label{sec:justificativa}
+
+A relevância deste trabalho assenta-se em duas lacunas complementares dos sistemas atuais de AutoML. A primeira é a tendência de focar exclusivamente na seleção do algoritmo ou na otimização de hiperparâmetros, desconsiderando a avaliação conjunta das etapas de pré-processamento — escalonamento, seleção de atributos e classificação — como um pipeline integrado \citeonline{Schoenfeld2022}. Problemas como escalonamento inadequado ou seleção de atributos prejudicial podem comprometer completamente o desempenho do modelo, independentemente da qualidade do classificador escolhido \citeonline{Domingos2012}.
+
+A segunda lacuna refere-se à forma de avaliação: a maioria dos sistemas de AutoML trata a recomendação como seleção do \textit{melhor} pipeline (top-1), perdendo a informação ordinal completa. \citeonline{Schoenfeld2022} demonstraram que ranquear pipelines com base na similaridade de meta-características dos conjuntos de dados produz recomendações superiores às estimativas de desempenho absoluto. Contudo, as métricas de avaliação utilizadas na literatura raramente penalizam de forma diferenciada os erros nas primeiras posições do ranking — exatamente onde o impacto prático é maior para um usuário de AutoML que avalia os primeiros pipelines sugeridos.
+
+Este trabalho preenche essas lacunas ao: (i) avaliar pipelines como combinações completas de pré-processamento e classificação; (ii) adotar ranqueamento como paradigma de recomendação; e (iii) utilizar Kendall Tau ponderado e NDCG como métricas complementares para avaliar a qualidade das primeiras posições do ranking, onde o impacto prático da recomendação é maior. O meta-conjunto construído, com 201 conjuntos de dados e 60 pipelines avaliados por validação cruzada estratificada, constitui ainda uma contribuição empírica de escala superior à maioria dos estudos da área \citeonline{Vanschoren2018}.
+
+
+\section{Estrutura do Trabalho}\label{sec:estruturaTrabalho}
+
+Este trabalho está organizado em cinco capítulos:
+
+\begin{itemize}
+    \item \textbf{Capítulo \ref{cap:introducao} – Introdução:} apresenta o contexto, o problema de pesquisa, os objetivos, a justificativa e a estrutura geral do trabalho;
+
+    \item \textbf{Capítulo \ref{cap:referencialTeorico} – Referencial Teórico:} discute os fundamentos de aprendizado de máquina, AutoML, meta-aprendizado, meta-características para caracterização de conjuntos de dados, aprendizado ativo, estrutura de pipelines, componentes de pré-processamento e classificação, embeddings de conjuntos de dados e métricas de ranqueamento, e revisa os principais trabalhos relacionados nas áreas de representação de conjuntos de dados por embeddings, sistemas de recomendação de algoritmos e pipelines via meta-aprendizado, e análise de complexidade de fronteiras de decisão;
+
+    \item \textbf{Capítulo \ref{cap:materialemetodos} – Materiais e Métodos:} descreve os materiais utilizados, a metodologia experimental em duas fases — construção do meta-conjunto e meta-aprendizado por ranqueamento —, o preditor k-NN multi-saída, o protocolo de validação Leave-One-Out e as métricas de avaliação de ranking;
+
+    \item \textbf{Capítulo \ref{cap:experimentos} – Experimentos e Resultados:} apresenta os resultados da Fase~1 (caracterização e análise do meta-conjunto construído) e da Fase~2 (avaliação LOO do preditor), incluindo análise do Kendall Tau ponderado, correlação estatística entre embedding e qualidade de ranqueamento, e uma demonstração ilustrativa em conjunto de dados retido;
+
+    \item \textbf{Capítulo \ref{cap:conclusoeseperspectivas} – Conclusão:} sintetiza as contribuições do trabalho, verifica o atendimento dos objetivos, discute limitações identificadas e propõe direções para pesquisas futuras.
+\end{itemize}

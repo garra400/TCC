@@ -1,0 +1,413 @@
+%%%% CAPÍTULO 5 – EXPERIMENTOS E RESULTADOS
+
+\chapter{Experimentos e Resultados}\label{cap:experimentos}
+
+Este capítulo descreve os experimentos realizados para validar a abordagem proposta de meta-aprendizado para ranqueamento de pipelines. Inicialmente são apresentados a configuração experimental e o protocolo de avaliação. Em seguida, são reportados os resultados da construção do meta-conjunto (Fase 1) e da avaliação do preditor de ranking (Fase 2), incluindo a análise do Kendall Tau ponderado, a correlação estatística entre embeddings e qualidade de ranqueamento, e uma demonstração ilustrativa do sistema em operação. O capítulo encerra com uma discussão dos resultados em perspectiva com a literatura.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Configuração Experimental}
+\label{sec:configExperimental}
+
+Esta seção consolida as decisões experimentais que operacionalizam a metodologia descrita no capítulo anterior: o conjunto de pipelines avaliados, a fonte dos dados e o protocolo de validação utilizado para medir a capacidade de generalização do preditor de ranqueamento.
+
+\subsection{Arsenal de Pipelines}
+
+O arsenal de pipelines foi definido como o produto cartesiano de quatro grupos de operadores modulares:
+
+\begin{itemize}
+  \item \textbf{Escalonamento (4):} \texttt{StandardScaler}, \texttt{MinMaxScaler}, \texttt{RobustScaler} e ausência de escalonamento (\texttt{None});
+  \item \textbf{Seleção de atributos (3):} \texttt{PCA} (componentes principais), \texttt{SelectKBest} com critério \texttt{f\_classif} (ANOVA F, selecionando os $k = \min(10, p)$ melhores atributos) e ausência de seleção (\texttt{None});
+  \item \textbf{Classificadores (5):} \texttt{RandomForestClassifier} (\gls{rf}), \texttt{SVC} (\gls{svm}), k-vizinhos mais próximos (\gls{knn}), Rede Neural Multicamadas (\gls{mlp}) e Árvore de Decisão (\gls{dt}).
+\end{itemize}
+
+O total de combinações é $4 \times 3 \times 5 = 60$ pipelines distintos. Cada pipeline é avaliado com validação cruzada estratificada de 5 folds, usando acurácia balanceada como métrica de desempenho. A fundamentação dos componentes utilizados é apresentada na \autoref{sec:componentesArsenal}. A \autoref{tab:pipelines} apresenta as combinações em forma de resumo.
+
+\begin{table}[H]
+\centering
+\caption{Arsenal de 60 pipelines: componentes disponíveis por estágio}
+\label{tab:pipelines}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Estágio}         & \textbf{Opções}                                          & \textbf{Quantidade} \\
+\midrule
+Escalonamento            & StandardScaler, MinMaxScaler, RobustScaler, None         & 4 \\
+Seleção de atributos     & PCA, SelectKBest, None                                   & 3 \\
+Classificador            & RandomForest, SVM, kNN, MLP, DecisionTree                & 5 \\
+\midrule
+\textbf{Total (produto)} &                                                          & \textbf{60} \\
+\bottomrule
+\end{tabular}
+\fonte{}
+\end{table}
+
+\subsection{Fonte de Dados}
+
+Os conjuntos de dados foram obtidos do repositório OpenML \cite{Vanschoren2014}, selecionando tarefas de classificação supervisionada com as seguintes restrições:
+
+\begin{itemize}
+  \item Entre 500 e 10.000 instâncias (equilíbrio entre representatividade e custo computacional);
+  \item Ao menos duas classes;
+  \item Atributos predominantemente numéricos.
+\end{itemize}
+
+De 243 \textit{task IDs} configurados inicialmente, \textbf{201 conjuntos de dados} foram carregados com sucesso e tiveram ao menos um pipeline avaliado sem erros. Os 42 conjuntos restantes foram descartados por falha no download ou por não atenderem às restrições estabelecidas. A caracterização estatística e exemplos representativos desses conjuntos são apresentados na \autoref{tab:exemplosDatasets}. Ressalta-se que este número supera os 120 conjuntos UCI utilizados por \cite{Jomaa2021} como referência na literatura para tarefas de meta-aprendizado.
+
+\subsection{Protocolo de Validação}
+
+A validação é realizada por \textbf{Leave-One-Out (LOO) no nível de conjuntos de dados}: em cada fold, um conjunto de dados é excluído do meta-conjunto, o preditor k-NN é treinado nos 200 conjuntos restantes e avaliado no conjunto excluído. Este procedimento gera 201 folds de validação independentes. Folds em que todos os pipelines obtiveram acurácia idêntica (variância nula) são descartados automaticamente, pois não fornecem informação ordinal.
+
+%% Recursos Computacionais: descritos no Capítulo 4 (Materiais e Métodos, \autoref{subsec:recursos}) — removido daqui para eliminar redundância (anotação do orientador).
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Resultados da Fase 1 – Construção do Meta-conjunto}
+\label{sec:fase1Resultados}
+
+Esta seção apresenta os resultados obtidos na Fase 1 do experimento, abrangendo o dimensionamento do meta-conjunto construído, a distribuição de desempenho dos pipelines avaliados, a análise por componente (escalonadores, seletores de atributos e classificadores) e a caracterização dos embeddings distribucionais gerados para os 201 conjuntos de dados, incluindo sua visualização via UMAP e a matriz de similaridade resultante.
+
+\subsection{Dimensionamento do Meta-conjunto}
+
+O meta-conjunto resultante possui as seguintes dimensões:
+
+\begin{itemize}
+  \item \textbf{Matriz de embeddings} $\mathbf{X}_{emb} \in \mathbb{R}^{201 \times 64}$: cada linha é o vetor de embedding de 64 dimensões de um conjunto de dados;
+  \item \textbf{Matriz de acurácias} $\mathbf{Y}_{acc} \in \mathbb{R}^{201 \times 60}$: entrada $(i,j)$ é a acurácia balanceada média (5-fold) do pipeline $j$ no conjunto $i$;
+  \item \textbf{Valores ausentes:} 172 células ($< 1{,}5\%$ do total) correspondentes a pipelines que falharam em determinados conjuntos por questões de compatibilidade (ex.: SVM com dados de alta dimensionalidade sem pré-seleção).
+\end{itemize}
+
+O meta-conjunto, com $201 \times 60 = 12.060$ avaliações de pipeline, constitui a base de conhecimento sobre a qual o meta-aprendizado é realizado.
+
+\subsection{Distribuição de Desempenho no Meta-conjunto}
+
+A \autoref{fig:distYperf} apresenta o histograma das $12.060$ acurácias balanceadas registradas na matriz $\mathbf{Y}_{acc}$. A distribuição é multimodal: observa-se um pico próximo a zero, associado a pipelines inadequados para determinados conjuntos de dados (especialmente conjuntos multiclasse altamente desbalanceados), e concentrações adicionais entre 0{,}5 e 1{,}0, com mediana em torno de $0{,}63$. Esta assimetria positiva é esperada: a maioria dos pipelines avaliados com hiperparâmetros padrão produz acurácias moderadas a boas, enquanto os melhores pipelines atingem acurácias próximas de 1{,}0 em conjuntos com fronteiras de decisão simples.
+
+\begin{figure}[H]
+  \caption{Distribuição de acurácias balanceadas na matriz $\mathbf{Y}_{acc}$ do meta-conjunto ($n = 12.060$)}
+  \label{fig:distYperf}
+  \centering
+  \includegraphics[width=0.82\textwidth]{../figuras/distribuicao_yperf}
+  \fonte{Autoria própria (2026)}
+\end{figure}
+
+\subsection{Análise por Componente do Pipeline}
+
+Para compreender quais componentes do arsenal contribuem mais para o desempenho, analisa-se a acurácia balanceada média desagregada por classificador, por combinação escalonador–classificador e por combinação seletor–classificador.
+
+A \autoref{fig:boxplotClassifier} apresenta a distribuição de acurácias por tipo de classificador, agregando todos os escaladores e seletores. O \textit{Random Forest} obtém a maior mediana ($\approx 0{,}70$), seguido pelo MLP ($\approx 0{,}67$). O \textit{Decision Tree}, apesar de acurácias máximas comparáveis, apresenta maior dispersão e um \textit{outlier} próximo a zero, indicando maior sensibilidade ao conteúdo do conjunto de dados.
+
+\begin{figure}[H]
+  \caption{Distribuição de acurácias balanceadas por classificador (todos os 201 conjuntos de dados)}
+  \label{fig:boxplotClassifier}
+  \centering
+  \includegraphics[width=0.85\textwidth]{../figuras/boxplot_classifier}
+  \fonte{Autoria própria (2026)}
+\end{figure}
+
+As \autoref{fig:heatmapScaler} e \autoref{fig:heatmapSelector} apresentam mapas de calor da acurácia balanceada média por combinação de componentes. Na \autoref{fig:heatmapScaler}, observa-se que a escolha do escalador tem impacto reduzido: todos os quatro escaladores (\texttt{MinMaxScaler}, \texttt{None}, \texttt{RobustScaler}, \texttt{StandardScaler}) produzem acurácias médias muito próximas para um mesmo classificador, com variação inferior a 0{,}01. O \textit{Random Forest} destaca-se como o classificador mais robusto à escolha do escalador ($0{,}633$--$0{,}636$), enquanto o SVM apresenta a maior sensibilidade ($0{,}538$ sem escalador \textit{vs.} $0{,}601$ com \texttt{StandardScaler}).
+
+\begin{figure}[H]
+  \caption{Mapa de calor da acurácia balanceada média por escalador e classificador}
+  \label{fig:heatmapScaler}
+  \centering
+  \includegraphics[width=0.85\textwidth]{../figuras/heatmap_scaler_x_classifier}
+  \fonte{Autoria própria (2026)}
+\end{figure}
+
+Na \autoref{fig:heatmapSelector}, o impacto do seletor de atributos é mais pronunciado. Ausência de seleção (\texttt{None}) produz consistentemente os melhores resultados para todos os classificadores, com \textit{Random Forest} atingindo $0{,}657$ — o valor médio mais alto de toda a análise combinatorial. A aplicação de PCA degrada sistematicamente o desempenho em comparação com a ausência de seleção, com queda média de $3{,}5$ pontos percentuais. O SelectKBest apresenta desempenho intermediário, sugerindo que a compressão dimensional via componentes principais prejudica mais a representação dos dados para a maioria dos classificadores do que a seleção supervisionada de atributos.
+
+\begin{figure}[H]
+  \caption{Mapa de calor da acurácia balanceada média por seletor de atributos e classificador}
+  \label{fig:heatmapSelector}
+  \centering
+  \includegraphics[width=0.85\textwidth]{../figuras/heatmap_selector_x_classifier}
+  \fonte{Autoria própria (2026)}
+\end{figure}
+
+Esses resultados revelam que o \textit{Random Forest} sem seleção de atributos é a configuração de classificador mais robusta na média, o que é consistente com a literatura \cite{Fernandez-Delgado2014}, que demonstra que florestas aleatórias superam a maioria dos classificadores tabulares em benchmarks amplos. No entanto, a meta-aprendizagem opera justamente sobre as \textit{exceções} a esta regra geral: o valor do sistema de recomendação está em identificar os conjuntos de dados para os quais configurações alternativas superam o \textit{Random Forest} padrão.
+
+\subsection{Embedding Distribucional}
+
+Na ausência de uma distribuição compatível do TensorFlow para o ambiente Python 3.13+, o embedding foi gerado por um método estatístico distribucional desenvolvido neste trabalho como alternativa reprodutível ao Dataset2Vec. O método captura a \textit{distribuição} de meta-features por atributo do conjunto de dados em três blocos:
+
+\begin{enumerate}
+  \item \textbf{Bloco distribucional (45 dimensões):} para cada uma das 9 estatísticas por atributo (média, desvio padrão, mínimo, máximo, mediana, $P_{25}$, $P_{75}$, skewness e kurtosis), calcula-se a distribuição dessa estatística sobre todos os atributos do conjunto via [mín, $P_{25}$, média, $P_{75}$, máx], produzindo $9 \times 5 = 45$ meta-features;
+  \item \textbf{Bloco global (10 dimensões):} $\log(n)$, $\log(p)$, número de classes, proporção da classe majoritária, proporção da classe minoritária, entropia do alvo, proporção de atributos constantes, correlação média entre atributos, proporção média de valores únicos, razão $p/n$;
+  \item \textbf{Vetor final (64 dimensões):} os 55 valores anteriores são complementados com 9 posições preenchidas com zero, formando o vetor de 64 dimensões posteriormente normalizado para norma unitária.
+\end{enumerate}
+
+Comparativamente, o Dataset2Vec de \citeonline{Jomaa2021} também produz vetores de 64 dimensões (configuração \textit{units\_h} = 32, expandido para 64 neste trabalho), aprendidos por uma rede DeepSet treinada com tarefa de similaridade entre conjuntos de dados. A principal vantagem do embedding neural é maior expressividade (critério \textbf{D2} da taxonomia D2V); a principal vantagem do embedding distribucional é que não requer treinamento (\textbf{D3}) e é aplicável sem restrição de versão do framework.
+
+\subsection{Visualização UMAP dos Embeddings}
+
+A \autoref{fig:umap} exibe a projeção dos 201 embeddings de conjuntos de dados em 2D por meio do algoritmo UMAP (\textit{Uniform Manifold Approximation and Projection}), configurado com \texttt{n\_components=2} e \texttt{random\_state=42}.
+
+\begin{figure}[H]
+  \caption{Projeção UMAP dos embeddings de 201 conjuntos de dados no espaço bidimensional}
+  \label{fig:umap}
+  \centering
+  \includegraphics[width=0.82\textwidth]{../figuras/umap_embeddings}
+  \fonte{Autoria própria (2026)}
+\end{figure}
+
+A projeção revela que os embeddings não são distribuídos uniformemente: observam-se agrupamentos locais que sugerem grupos de conjuntos de dados com características distribucionais similares, separados por regiões de menor densidade. Esta estrutura é compatível com a hipótese central do meta-aprendizado por similaridade — conjuntos próximos no espaço de embeddings tendem a exibir padrões de desempenho similares entre os pipelines.
+
+\subsection{Matriz de Similaridade dos Embeddings}
+
+A \autoref{fig:simMatrix} apresenta a matriz de similaridade cosseno entre os 201 embeddings. Valores próximos de 1 (vermelho) indicam conjuntos altamente similares no espaço de representação; valores próximos de 0 (azul) indicam conjuntos com representações ortogonais.
+
+\begin{figure}[H]
+  \caption{Matriz de similaridade cosseno entre os embeddings dos 201 conjuntos de dados}
+  \label{fig:simMatrix}
+  \centering
+  \includegraphics[width=0.82\textwidth]{../figuras/matriz_similaridade_embeddings}
+  \fonte{Autoria própria (2026)}
+\end{figure}
+
+A presença de blocos diagonais de alta similaridade indica a existência de grupos de conjuntos de dados com propriedades distribucionais semelhantes, sugerindo que o embedding distribucional captura estrutura útil para meta-aprendizado baseado em similaridade.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Resultados da Fase 2 – Avaliação LOO do Preditor de Ranking}
+\label{sec:fase2Resultados}
+
+Esta seção apresenta os resultados da avaliação do preditor k-NN multi-saída por validação Leave-One-Out, incluindo o desempenho obtido para diferentes valores de $k$ e a distribuição das métricas de ranqueamento (Spearman, Kendall Tau e NDCG) entre os folds de validação.
+
+\subsection{Desempenho por Valor de k}
+
+A \autoref{tab:looKnn} apresenta os resultados da avaliação LOO do preditor k-NN para $k \in \{1, 3, 5, 7, 10\}$. As métricas são reportadas como média $\pm$ desvio padrão sobre os folds válidos.
+
+\begin{table}[H]
+\centering
+\caption{Resultados LOO do preditor k-NN para ranqueamento de pipelines (201 conjuntos de dados)}
+\label{tab:looKnn}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}rcccccc@{}}
+\toprule
+$k$ & Spearman ($\rho$) & Kendall ($\tau$) & Kendall pond. ($\tau_w$) & NDCG & Folds válidos \\
+\midrule
+1  & $0{,}5025 \pm 0{,}4286$ & $0{,}4200 \pm 0{,}3912$ & $0{,}4630 \pm 0{,}4038$ & $0{,}9833 \pm 0{,}0267$ & 197 \\
+3  & $0{,}5541 \pm 0{,}3846$ & $0{,}4577 \pm 0{,}3553$ & $0{,}5034 \pm 0{,}3719$ & $0{,}9830 \pm 0{,}0418$ & 198 \\
+5  & $0{,}5771 \pm 0{,}3739$ & $0{,}4757 \pm 0{,}3463$ & $0{,}5231 \pm 0{,}3613$ & $0{,}9841 \pm 0{,}0408$ & 198 \\
+7  & $0{,}5768 \pm 0{,}3678$ & $0{,}4759 \pm 0{,}3418$ & $0{,}5233 \pm 0{,}3538$ & $0{,}9844 \pm 0{,}0387$ & 198 \\
+\textbf{10} & $\mathbf{0{,}5801 \pm 0{,}3615}$ & $\mathbf{0{,}4767 \pm 0{,}3379}$ & $\mathbf{0{,}5222 \pm 0{,}3471}$ & $\mathbf{0{,}9844 \pm 0{,}0384}$ & \textbf{198} \\
+\bottomrule
+\end{tabular}
+}
+\fonte{Autoria própria (2026)}
+\end{table}
+
+O valor $k = 10$ obteve o maior Kendall médio ($\tau = 0{,}4767$) e foi selecionado como configuração ótima. A tendência geral é de melhora monotônica das métricas com o aumento de $k$, indicando que agregar informação de mais vizinhos reduz o ruído nas estimativas de desempenho, ao custo de uma eventual suavização da predição para conjuntos com características muito específicas.
+
+A \autoref{fig:looKnn} exibe graficamente o comportamento de Spearman e Kendall em função de $k$, com barras de erro correspondendo ao desvio padrão entre folds.
+
+\begin{figure}[H]
+  \caption{Spearman e Kendall Tau em função de $k$ (LOO sobre 201 conjuntos de dados)}
+  \label{fig:looKnn}
+  \centering
+  \includegraphics[width=0.82\textwidth]{../figuras/ranking_loo_knn}
+  \fonte{Autoria própria (2026)}
+\end{figure}
+
+\subsection{Distribuição das Métricas por Fold}
+
+A \autoref{fig:distribuicaoMetricas} apresenta a distribuição de Spearman e Kendall sobre os 198 folds LOO válidos para $k = 10$. A distribuição multimodal revela a heterogeneidade dos conjuntos de dados: para alguns, o meta-aprendizado gera rankings quase perfeitos ($\rho > 0{,}9$); para outros, o preditor tem desempenho próximo ao aleatório.
+
+\begin{figure}[H]
+  \caption{Distribuição de Spearman e Kendall Tau por fold LOO ($k=10$, 198 folds)}
+  \label{fig:distribuicaoMetricas}
+  \centering
+  \includegraphics[width=0.72\textwidth]{../figuras/ranking_distribuicao_metricas}
+  \fonte{Autoria própria (2026)}
+\end{figure}
+
+Esta variabilidade elevada (desvio padrão $\approx 0{,}34$--$0{,}36$) é característica dos sistemas de meta-aprendizado baseados em similaridade: quando o conjunto de teste tem vizinhos similares no meta-conjunto, a recomendação é precisa; quando é atípico (sem vizinhos próximos), o preditor recorre a generalizações menos confiáveis.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Análise do Kendall Tau Ponderado}
+\label{sec:kendallPonderado}
+
+Esta seção aprofunda a análise dos resultados da Fase 2 sob a ótica do Kendall Tau ponderado — métrica que reflete a utilidade prática do ranqueamento ao penalizar com maior intensidade os erros cometidos no topo da lista de recomendações —, em articulação com o NDCG, que também privilegia as primeiras posições por desconto logarítmico. Em seguida, compara-se o desempenho do preditor com baselines triviais e com resultados reportados na literatura, discutem-se aparentes contradições entre métricas e apontam-se as principais limitações identificadas.
+
+\subsection{\texorpdfstring{Comparação entre $\tau$ e $\tau_w$}{Comparação entre tau e tau ponderado}}
+
+O Kendall Tau ponderado ($\tau_w$) — implementado via \texttt{scipy.stats.weightedtau} — atribui pesos maiores às inversões de ordem que ocorrem no topo do ranking (melhores pipelines), refletindo a importância prática de recomendar corretamente as melhores configurações primeiro.
+
+A \autoref{fig:kendallPonderado} apresenta, no painel esquerdo, o histograma da distribuição de $\tau_w$ por conjunto de dados (fold LOO), e no painel direito, o diagrama de dispersão entre $\tau$ e $\tau_w$ por fold.
+
+\begin{figure}[H]
+  \caption{Distribuição do Kendall Tau ponderado por conjunto de dados e comparação com $\tau$ padrão}
+  \label{fig:kendallPonderado}
+  \centering
+  \includegraphics[width=0.95\textwidth]{../figuras/kendall_ponderado_por_dataset}
+  \fonte{Autoria própria (2026)}
+\end{figure}
+
+A análise revela um padrão consistente em todos os valores de $k$: $\tau_w > \tau$ em média (diferença de aproximadamente 4,5 pontos percentuais para $k=10$: $\tau_w = 0{,}522$ vs.\ $\tau = 0{,}477$). Este resultado indica que o preditor k-NN acerta melhor a ordenação dos pipelines de \textit{maior desempenho} do que a dos pipelines de desempenho intermediário ou baixo. Do ponto de vista prático de AutoML, este é o comportamento mais desejável: o usuário inicia pelos primeiros pipelines recomendados, e erros nessa posição teriam o maior impacto negativo.
+
+No diagrama de dispersão (painel direito da \autoref{fig:kendallPonderado}), os pontos acima da diagonal confirmam que $\tau_w > \tau$ na maioria dos folds. Exceções (pontos abaixo da diagonal) representam conjuntos onde o preditor acerta a ordem global mas comete mais erros nas posições superiores — situação potencialmente problemática para uso prático.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Correlação Estatística: Embeddings e Qualidade de Ranqueamento}
+\label{sec:correlacaoEmbeddings}
+
+Uma questão central para a interpretabilidade do sistema é: \textit{quais características dos conjuntos de dados (capturadas pelo embedding) estão associadas a uma melhor qualidade de ranqueamento pelo meta-aprendizado}?
+
+Para investigar esta questão, calculou-se o coeficiente de Spearman entre os valores de $\tau_w$ por conjunto de dados (obtidos no LOO com $k=10$) e cada uma das 64 dimensões do embedding, além da norma L2 do embedding de cada conjunto. A \autoref{tab:correlacaoEmbedding} apresenta as cinco dimensões com maior correlação absoluta.
+
+\begin{table}[H]
+\centering
+\caption{Top-5 dimensões do embedding correlacionadas com o Kendall Tau ponderado por conjunto de dados ($n=198$, LOO $k=10$)}
+\label{tab:correlacaoEmbedding}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+\textbf{Dimensão} & \textbf{Spearman ($\rho$)} & \textbf{p-valor} & \textbf{Interpretação (bloco)} \\
+\midrule
+32  & $+0{,}3633$  & $< 0{,}0001$ & Distribuição de percentis superiores \\
+34  & $+0{,}3469$  & $< 0{,}0001$ & Estatísticas de skewness por atributo \\
+8   & $-0{,}3449$  & $< 0{,}0001$ & Distribuição de mínimos por atributo \\
+17  & $-0{,}3378$  & $< 0{,}0001$ & Estatísticas de kurtosis por atributo \\
+2   & $-0{,}3350$  & $< 0{,}0001$ & Distribuição de médias por atributo \\
+\bottomrule
+\end{tabular}
+\fonte{Autoria própria (2026)}
+\end{table}
+
+Todas as cinco dimensões apresentam correlações estatisticamente significativas com $p < 0{,}0001$, rejeição robusta da hipótese nula mesmo após correção conservadora de múltiplos testes. Os resultados sugerem que:
+
+\begin{itemize}
+  \item Conjuntos com distribuições de atributos mais concentradas e menos assimétricas (correlação negativa nas dimensões de kurtosis e mínimos) tendem a ser mais fáceis de ranquear via meta-aprendizado por similaridade;
+  \item Conjuntos com maior diversidade nos percentis superiores de seus atributos (dimensão 32, correlação positiva) também apresentam melhor qualidade de ranqueamento, possivelmente por serem mais distinguíveis no espaço de embeddings.
+\end{itemize}
+
+A análise completa, salva em \texttt{resultados/metricas/correlacao\_kendall\_por\_dataset.csv}, constitui um passo inicial de interpretabilidade que pode orientar a seleção ou engenharia de futuros embeddings mais discriminativos para meta-aprendizado.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Demonstração Ilustrativa: Recomendação para Conjunto de Dados Retido}
+\label{sec:holdout}
+
+Para ilustrar o sistema em operação, realizou-se uma demonstração com o último conjunto do meta-conjunto (\texttt{task\_id = 363713}) como holdout: o preditor foi treinado nos 200 conjuntos restantes ($k=10$) e avaliado sobre o conjunto excluído. Esta análise tem caráter exclusivamente ilustrativo e não substitui a validação estatística principal, que é dada pelos 198 folds LOO válidos reportados anteriormente.
+
+A \autoref{tab:holdout} apresenta as métricas de ranking obtidas neste caso.
+
+\begin{table}[H]
+\centering
+\caption{Métricas de ranking para a demonstração ilustrativa com conjunto de dados retido (\texttt{task\_id = 363713}, $k=10$)}
+\label{tab:holdout}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Métrica}           & \textbf{Valor} & \textbf{p-valor} \\
+\midrule
+Spearman ($\rho$)          & 0{,}9648       & $< 0{,}0001$ \\
+Kendall ($\tau$)           & 0{,}8680       & $< 0{,}0001$ \\
+Kendall ponderado ($\tau_w$) & 0{,}8136    & N/D (por construção) \\
+NDCG                       & 0{,}9995       & — \\
+\bottomrule
+\end{tabular}
+\fonte{Autoria própria (2026)}
+\end{table}
+
+O desempenho excepcional neste conjunto específico (Spearman $= 0{,}965$, NDCG $= 0{,}9995$) indica que o conjunto possui vizinhos muito próximos no espaço de embeddings — cenário ideal para o meta-aprendizado por similaridade. Por se tratar de um único caso, esses valores não são utilizados como evidência estatística independente; eles apenas exemplificam como o recomendador opera quando o conjunto de entrada encontra vizinhos informativos no meta-conjunto.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Discussão dos Resultados}
+\label{sec:discussao}
+
+Esta seção discute os resultados apresentados nas seções anteriores à luz de baselines de comparação, de resultados reportados na literatura e das limitações identificadas, interpretando o que esses achados revelam sobre a viabilidade do meta-aprendizado por similaridade para a recomendação de pipelines.
+
+\subsection{Comparação com Baselines Triviais}
+\label{sec:baselines}
+
+Para contextualizar os resultados e verificar se o meta-aprendizado por similaridade agrega valor além de heurísticas simples, três baselines foram estabelecidos:
+
+\begin{enumerate}
+  \item \textbf{Ranking global médio (baseline forte):} para cada fold LOO, o ranking predito é simplesmente a ordenação dos pipelines pela sua acurácia balanceada média sobre os 200 conjuntos de treino. Este baseline captura a hipótese de que alguns pipelines são universalmente superiores — portanto não requer informação do conjunto de teste;
+
+  \item \textbf{Ranking aleatório (lower bound):} os 60 pipelines são ordenados aleatoriamente. Espera-se Spearman $\approx 0$ e Kendall $\approx 0$;
+
+  \item \textbf{k-NN com $k = n-1$ (média global via vizinhança):} caso degenerado do preditor onde todos os 200 conjuntos de treino são utilizados como vizinhos, equivalendo ao baseline de ranking global médio via k-NN.
+\end{enumerate}
+
+A \autoref{tab:baselines} apresenta os resultados para $k=10$ (preditor proposto) em relação aos baselines, calculados sobre os 198 folds LOO válidos.
+
+\begin{table}[H]
+\centering
+\caption{Comparação do preditor k-NN ($k=10$) com baselines triviais (LOO, $n=198$ folds)}
+\label{tab:baselines}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Método} & \textbf{Spearman ($\rho$)} & \textbf{Kendall ($\tau$)} & \textbf{Kendall pond. ($\tau_w$)} \\
+\midrule
+Ranking aleatório          & $0{,}00 \pm 0{,}17$ & $0{,}00 \pm 0{,}13$ & $0{,}00 \pm 0{,}14$ \\
+Ranking global médio       & $0{,}47 \pm 0{,}38$ & $0{,}38 \pm 0{,}36$ & $0{,}42 \pm 0{,}37$ \\
+\textbf{k-NN ($k=10$)}     & $\mathbf{0{,}58 \pm 0{,}36}$ & $\mathbf{0{,}48 \pm 0{,}34}$ & $\mathbf{0{,}52 \pm 0{,}35}$ \\
+\bottomrule
+\end{tabular}
+\fonte{Autoria própria (2026)}
+\end{table}
+
+O preditor k-NN supera o ranking global médio em todos os indicadores: $+$11 pontos percentuais em Spearman, $+$10 em Kendall e $+$10 em Kendall ponderado. Este ganho demonstra que a personalização por similaridade de conjuntos de dados contribui substantivamente além da heurística de recomendar os mesmos pipelines para todos. A diferença é particularmente relevante para o Kendall ponderado, confirmando que o meta-aprendizado melhora especialmente a recomendação das melhores configurações.
+
+\subsection{Comparação com Baselines e Literatura}
+
+A avaliação de sistemas de recomendação de pipelines na literatura de meta-aprendizado geralmente utiliza a correlação de Spearman como métrica principal. Os resultados desta pesquisa — Spearman médio de $0{,}58$ com LOO sobre 201 conjuntos de dados — posicionam-se de forma competitiva em relação ao estado da arte:
+
+\begin{itemize}
+  \item \citeonline{Schoenfeld2022} reportam correlações de Spearman na faixa de $0{,}4$--$0{,}7$ para estimativa de desempenho de pipelines em conjuntos D3M com metamodelos baseados em estrutura de DAG, confirmando que $\rho \approx 0{,}58$ é um resultado sólido para ranqueamento via similaridade;
+  \item \citeonline{Jomaa2021} demonstram que o Dataset2Vec supera MF2 em otimização de hiperparâmetros, com ganho típico de 5--15\% em correlação de Spearman. Como o embedding deste trabalho é estatisticamente análogo ao MF2, espera-se que a substituição pelo Dataset2Vec possa melhorar os resultados em trabalhos futuros.
+\end{itemize}
+
+A \autoref{tab:comparativoLiteratura} posiciona o presente trabalho em relação a referências selecionadas da literatura.
+
+\begin{table}[H]
+\centering
+\caption{Posicionamento dos resultados em relação à literatura de meta-aprendizado}
+\label{tab:comparativoLiteratura}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lllll@{}}
+\toprule
+\textbf{Trabalho} & \textbf{Embedding} & \textbf{Conjuntos} & \textbf{Tarefa} & \textbf{Spearman (LOO)} \\
+\midrule
+Dataset2Vec \cite{Jomaa2021}       & Neural (DeepSet, 64D) & 120 UCI    & Otim. de hiperparâmetros & $\sim$0{,}55--0{,}70 \\
+MF2 \cite{Feurer2015}              & Estatístico (46D)     & 120 UCI    & Otim. de hiperparâmetros & $\sim$0{,}40--0{,}55 \\
+Schoenfeld et al. \cite{Schoenfeld2022} & DAG + metadados  & 194 D3M    & Estimativa de desempenho & $\sim$0{,}40--0{,}70 \\
+\textbf{Este TCC}                  & \textbf{Estat. distrib. (64D)} & \textbf{201 OpenML} & \textbf{Ranqueamento de pipelines} & $\mathbf{0{,}58 \pm 0{,}36}$ \\
+\bottomrule
+\end{tabular}
+}
+\fonte{Autoria própria (2026)}
+\end{table}
+
+\textit{Nota:} os valores da literatura para Spearman foram extraídos ou estimados a partir das figuras e tabelas dos respectivos artigos; tarefas diferentes (otimização de hiperparâmetros vs. ranqueamento de pipelines) implicam que a comparação é indicativa, não diretamente equivalente.
+
+\subsection{Interpretação da Aparente Contradição entre NDCG e Spearman}
+\label{sec:ndcgVsSpearman}
+
+Uma observação que merece explicação é a coexistência de NDCG médio elevado ($0{,}984 \pm 0{,}038$) com Spearman moderado ($0{,}58 \pm 0{,}36$). À primeira vista, valores de NDCG próximos a 1 sugerem que o ranking predito é quase perfeito, o que pareceria inconsistente com um Spearman de 0,58. A interpretação adequada é tratar NDCG e Kendall ponderado como métricas complementares de topo, enquanto Spearman e Kendall padrão descrevem melhor a ordenação global.
+
+A explicação reside na diferença de sensibilidade das duas métricas. O NDCG é fortemente dominado pelas posições do topo: a contribuição da posição $i$ decai como $1/\log_2(i+1)$, de modo que erros nas posições 40 a 60 têm peso negligenciável. Como o conjunto de pipelines avaliados com hiperparâmetros padrão frequentemente possui um subconjunto estável de "melhores pipelines" (especialmente Random Forest sem seleção de atributos, que é consistentemente superior na média), o NDCG reflete que os três a cinco primeiros pipelines recomendados são geralmente corretos.
+
+O Spearman, por outro lado, trata todas as 60 posições com peso igual: uma inversão entre os pipelines de posição 30 e 35 penaliza tão fortemente quanto uma inversão entre os de posição 1 e 2. Como a ordenação das posições intermediárias e inferiores é genuinamente ruidosa (pipelines com acurácias próximas têm ordenações instáveis entre conjuntos de dados), o Spearman médio de 0,58 captura esta dificuldade real.
+
+A conclusão prática é coerente: o sistema é altamente confiável para identificar os melhores pipelines (NDCG $\approx 1$) e moderadamente confiável para ordenar toda a lista (Spearman $= 0{,}58$) — exatamente o comportamento desejado em aplicações de AutoML, onde o usuário raramente precisa da lista completa e apenas avalia as primeiras recomendações.
+
+\subsection{Embedding distribucional vs. Dataset2Vec}
+
+A adoção de um embedding distribucional (em vez do Dataset2Vec neural) foi motivada por restrições de compatibilidade, mas também possibilita uma análise direta do que o embedding captura.
+
+Em relação aos critérios D1--D4 de \citeonline{Jomaa2021}:
+
+\begin{description}
+  \item[\textbf{D1 – Independência de esquema}:] Atendido. O embedding distribucional é calculado para qualquer conjunto tabular, independentemente do número de atributos, instâncias ou esquema.
+  \item[\textbf{D2 – Expressividade}:] Parcialmente atendido. As 55 meta-features capturadas são mais ricas que MF1/MF2, mas potencialmente menos expressivas que embeddings neurais pré-treinados em similaridade de conjuntos de dados.
+  \item[\textbf{D3 – Escalabilidade}:] Atendido. O cálculo é $O(n \cdot p)$ sem treinamento prévio.
+  \item[\textbf{D4 – Correlação com meta-alvos}:] Atendido (evidenciado pelas correlações significativas com $\tau_w$ e pelos resultados LOO com $\rho = 0{,}58$).
+\end{description}
+
+\subsection{Limitações}
+
+As principais limitações deste trabalho são:
+
+\begin{enumerate}
+  \item \textbf{Embedding não-neural:} a ausência do Dataset2Vec real (por incompatibilidade com Python 3.13+) implica que o embedding pode ser menos expressivo que abordagens neurais pré-treinadas em similaridade. Futuros experimentos com Python 3.12 e TensorFlow podem quantificar esse ganho.
+  \item \textbf{Variabilidade entre conjuntos de dados:} o desvio padrão das métricas LOO ($\sigma \approx 0{,}34$--$0{,}36$) é elevado, indicando que o sistema funciona muito bem para alguns conjuntos e pobremente para outros. Uma análise mais profunda dos conjuntos com baixo $\tau_w$ poderia revelar padrões de falha sistemática.
+  \item \textbf{Ausência de MLP como metamodelo:} o preditor MLP (PyTorch) não foi avaliado por ausência da biblioteca no ambiente, limitando a comparação entre abordagens de meta-aprendizado.
+  \item \textbf{Hiperparâmetros fixos dos pipelines:} os classificadores foram usados com hiperparâmetros padrão do scikit-learn, sem ajuste individual, o que subestima o potencial de desempenho de alguns pipelines.
+\end{enumerate}

@@ -1,0 +1,952 @@
+--- pasta_pai\capitulos\cap-conceitos.tex
++++ TCC_selecionado\capitulos\cap-conceitos.tex
+@@ -7,7 +7,7 @@
+ 
+ O aprendizado de máquina moderno envolve uma série de decisões interdependentes que impactam diretamente a eficácia dos modelos, desde o pré-processamento dos dados até a escolha e configuração dos algoritmos. A crescente complexidade desses processos impulsionou o surgimento do \textit{AutoML}, cujo objetivo é automatizar etapas críticas de um pipeline preditivo. No entanto, para que essa automação seja eficiente, é necessário compreender os fundamentos que orientam tais decisões.
+ 
+-Este capítulo apresenta os principais conceitos que embasam a proposta deste trabalho, abordando inicialmente os fundamentos do Aprendizado de Máquina e a estrutura dos sistemas de \textit{AutoML}. Em seguida, discute-se o meta-aprendizado como estratégia para reutilizar conhecimento adquirido em problemas anteriores, otimizando escolhas futuras. Também são exploradas as meta-características, essenciais para caracterizar conjuntos de dados e treinar metamodelos eficazes, bem como o aprendizado ativo, que visa otimizar o processo de rotulagem. Por fim, são apresentadas estratégias para seleção e estruturação de pipelines, com ênfase na importância de considerar suas representações internas para melhorar a recomendação e a performance dos modelos.
++Este capítulo apresenta os principais conceitos que embasam a proposta deste trabalho, abordando inicialmente os fundamentos do Aprendizado de Máquina e a estrutura dos sistemas de \textit{AutoML}. Em seguida, discute-se o meta-aprendizado como estratégia para reutilizar conhecimento adquirido em problemas anteriores, otimizando escolhas futuras. Também são exploradas as meta-características, essenciais para caracterizar conjuntos de dados e treinar metamodelos eficazes, bem como o aprendizado ativo, que visa otimizar o processo de rotulagem. Por fim, são apresentadas estratégias para seleção e estruturação de pipelines, os componentes de pré-processamento e classificação utilizados no experimento, as representações vetoriais de conjuntos de dados e as métricas de ranqueamento adotadas na avaliação.
+ 
+ 
+ \section{Aprendizado de Máquina e AutoML}
+@@ -24,13 +24,13 @@
+ \section{Meta-aprendizado}\label{sec:metaaprendizado}
+ O meta-aprendizado, ou "aprender a aprender" \citeonline{Vilalta2002}, é a ciência de observar sistematicamente como diferentes abordagens de aprendizado de máquina performam em múltiplas tarefas, e então aprender com essa experiência (metadados) para resolver novas tarefas mais rapidamente, de modo a construir sistemas de aprendizado autoadaptativos que melhoram seu viés indutivo dinamicamente com a experiência acumulada \citeonline{Brazdil2008}. Em outras palavras, utiliza-se o histórico de desempenho de algoritmos em uma coleção de bases de dados para treinar um \emph{metamodelo} (modelo treinado sobre metadados de execuções anteriores, e não diretamente sobre os dados do problema-alvo) que pode prever o melhor algoritmo ou configuração para um novo problema. Adicionalmente, \citeonline{Schoenfeld2022} mostraram que, em vez de tratar modelos como caixas-pretas, pode-se explorar metadados granulares dos pipelines para melhorar a previsão de desempenho.
+ 
+-As abordagens de meta-aprendizado podem ser \emph{offline} ou \emph{online}. Em métodos \emph{offline}, diversos pipelines são executados previamente em coleções de conjunto de dados e os resultados formam o meta conjunto usado para treinar o metamodelo. Sistemas AutoML como o Auto-sklearn \citeonline{FeurerAutosklearn2015} e o SmartML \citeonline{Maher2019} ilustram esse caso, utilizando os resultados de múltiplas execuções em bases conhecidas para guiar a busca em novas bases. Em contrapartida, métodos online (por exemplo, TPOT, AlphaD3M) atualizam o aprendizado à medida que geram pipelines no próprio problema de interesse. 
++As abordagens de meta-aprendizado podem ser \emph{offline} ou \emph{online}. Em métodos \emph{offline}, diversos pipelines são executados previamente em coleções de conjunto de dados e os resultados formam o meta conjunto usado para treinar o metamodelo. Sistemas AutoML como o Auto-sklearn \citeonline{FeurerAutosklearn2015} e o SmartML \citeonline{Maher2019} ilustram esse caso, utilizando os resultados de múltiplas execuções em bases conhecidas para guiar a busca em novas bases. Em contrapartida, métodos \emph{online}, como o TPOT \cite{Olson2016TPOT}, atualizam o aprendizado à medida que geram pipelines no próprio problema de interesse.
+ 
+ Além disso, benchmarks específicos como o \textit{meta conjunto}, proposto por \citeonline{Triantafillou2020}, foram desenvolvidos para avaliar modelos de few-shot learning e meta-aprendizado em cenários mais realistas e desafiadores. O \textit{meta conjunto} é composto por um conjunto diversificado de conjuntos de dados que permite avaliar a capacidade dos meta-modelos de generalizar para novos domínios e tarefas com poucos exemplos. A proposta introduz variações no número de classes, tamanho de conjuntos de suporte e testes com desbalanceamento, promovendo uma avaliação mais robusta dos métodos de meta-aprendizado.
+ 
+ Em todos os casos, o objetivo é transferir conhecimento entre tarefas: utilizar metadados e meta características coletados em problemas anteriores para reduzir o tempo e esforço de modelagem em novos problemas.
+ 
+-\section{Meta-características e Caracterização de Datasets}
++\section{Meta-características e Caracterização de Conjuntos de Dados}
+ A caracterização de dados por meio de \emph{meta características} é essencial para o meta-aprendizado. Meta características são atributos que descrevem propriedades estatísticas e estruturais de um conjunto de dados, e servem de entrada para os metamodelos. Por exemplo, \citeonline{Schoenfeld2022} extraíram 72 meta características de cada base de dados, incluindo categorias simples, estatísticas, informações teóricas, \emph{landmarking} e baseadas em modelo. Esses grupos podem ser definidos genericamente da seguinte forma:
+ 
+ \begin{itemize}
+@@ -41,7 +41,7 @@
+   \item \textbf{Baseadas em modelo:} características derivadas de modelos treinados, como profundidade média de árvores de decisão, coeficientes de regressão, etc.
+ \end{itemize}
+ 
+-Essas meta características capturam informações relevantes que permitem medir similaridades entre conjuntos de dados e orientar o aprendizado \citeonline{Feurer2015}. Muitas pesquisas utilizam repositórios de dados públicos; por exemplo, o conjunto de 194 bases usado por \citeonline{Schoenfeld2022} provém do programa D3M (\textit{Data-Driven Discovery of Models}, iniciativa da DARPA voltada à automação da ciência de dados \citeonline{Lippmann2016}) e inclui conjuntos de dados originados de repositórios como o OpenML \citeonline{Vanschoren2014} e o UCI. Cada instância do meta conjunto consiste no vetor de metacaracterísticas do conjunto de dados e na estrutura do pipeline avaliado, associado ao respectivo desempenho (por exemplo, medida F1) obtido naquela base. Esse meta conjunto (meta características + descrição de pipeline + desempenho) é então utilizado para treinar metamodelos capazes de prever ou ranquear pipelines em novos conjuntos de dados.
++Essas meta características capturam informações relevantes que permitem medir similaridades entre conjuntos de dados e orientar o aprendizado \citeonline{Feurer2015}. Muitas pesquisas utilizam repositórios de dados públicos; por exemplo, o conjunto de 194 bases usado por \citeonline{Schoenfeld2022} provém do programa \gls{d3m} (\textit{Data-Driven Discovery of Models}), iniciativa da \gls{darpa} voltada à automação da ciência de dados \citeonline{Lippmann2016}, e inclui conjuntos de dados originados de repositórios como o OpenML \citeonline{Vanschoren2014} e o \gls{uci} Machine Learning Repository \cite{Dua2019}. Cada instância do meta conjunto consiste no vetor de metacaracterísticas do conjunto de dados e na estrutura do pipeline avaliado, associado ao respectivo desempenho (por exemplo, medida F1) obtido naquela base. Esse meta conjunto (meta características + descrição de pipeline + desempenho) é então utilizado para treinar metamodelos capazes de prever ou ranquear pipelines em novos conjuntos de dados.
+ 
+ \section{Aprendizado Ativo}
+ 
+@@ -49,30 +49,41 @@
+ 
+ Para implementar o aprendizado ativo, definem-se estratégias de consulta que estimam a utilidade de rotular cada instância disponível. Abordagens comuns incluem amostragem por incerteza (rotular as instâncias nas quais o modelo está menos confiante), seleção por comitê (vários modelos votam nas instâncias mais controversas) e redução de erro esperado.
+ 
+-No contexto de meta-aprendizado para AutoML, o aprendizado ativo é relevante como extensão futura: ao invés de avaliar todos os 60 pipelines em cada novo dataset, um sistema poderia selecionar ativamente quais pipelines avaliar primeiro com base na incerteza do metamodelo, reduzindo o custo computacional da construção do meta-conjunto. \citeonline{douce2024bridging} e \citeonline{Sener2018} exemplificam essa abordagem ao utilizar \textit{embeddings} para guiar a seleção de exemplos informativos no espaço de características — princípio análogo ao uso de \textit{embeddings} de datasets para identificar quais avaliações de pipeline são mais informativas para o sistema de recomendação.
++No contexto de meta-aprendizado para AutoML, o aprendizado ativo é relevante como extensão futura: ao invés de avaliar todos os 60 pipelines em cada novo conjunto de dados, um sistema poderia selecionar ativamente quais pipelines avaliar primeiro com base na incerteza do metamodelo, reduzindo o custo computacional da construção do meta-conjunto. \citeonline{douce2024bridging} e \citeonline{Sener2018} exemplificam essa abordagem ao utilizar \textit{embeddings} para guiar a seleção de exemplos informativos no espaço de características — princípio análogo ao uso de \textit{embeddings} de conjuntos de dados para identificar quais avaliações de pipeline são mais informativas para o sistema de recomendação.
+ 
+ \section{Seleção e estrutura de \textit{pipelines}}
+ Em sistemas AutoML, um \emph{pipeline} de aprendizado de máquina consiste na composição de múltiplos passos de pré-processamento e modelagem que transformam os dados até a predição final. Em geral, pipelines são representados como grafos acíclicos direcionados (\glsadd{dag}DAGs), podendo incluir estruturas paralelas como comitês. Essa flexibilidade permite representar desde um pipeline simples (uma sequência linear de transformação e classificador) até configurações complexas (ex.: três sub pipelines com combinação por votação majoritária).  
+ 
+-Entretanto, o número de pipelines possíveis cresce rapidamente com o número de algoritmos e passos disponíveis. Como observado por \citeonline{Schoenfeld2022}, as diversas maneiras de combinar algoritmos em pipelines criam um espaço de busca \emph{não escalonável} de possíveis fluxos a serem considerados. Diante disso, é útil empregar estratégias de pré-seleção ou ranqueamento de pipelines candidatos para priorizar a execução daqueles com maior potencial (especialmente quando recursos computacionais são limitados). Por exemplo, abordagens tradicionais de AutoML (Auto-sklearn, SmartML) tratam o pipeline como uma caixa-preta e utilizam apenas a desempenho observada e similaridade de meta características do conjunto de dados para ranquear modelos. Outras soluções simplificam a estrutura do pipeline (por exemplo, considerando apenas sequências lineares e usando uma rede \gls{lstm} para estimar valor, como em AlphaD3M\footnote{LSTM: rede neural recorrente que aprende dependências de longo prazo em sequências por meio de um mecanismo de portas que regula o fluxo de informação em uma célula de memória interna \citeonline{Hochreiter1997}.}).
++Entretanto, o número de pipelines possíveis cresce rapidamente com o número de algoritmos e passos disponíveis. Como observado por \citeonline{Schoenfeld2022}, as diversas maneiras de combinar algoritmos em pipelines criam um espaço de busca \emph{não escalonável} de possíveis fluxos a serem considerados. Diante disso, é útil empregar estratégias de pré-seleção ou ranqueamento de pipelines candidatos para priorizar a execução daqueles com maior potencial (especialmente quando recursos computacionais são limitados). Por exemplo, abordagens tradicionais de AutoML, como Auto-sklearn \cite{FeurerAutosklearn2015} e SmartML \cite{Maher2019}, tratam o pipeline como uma caixa-preta e utilizam apenas o desempenho observado e a similaridade de meta características do conjunto de dados para ranquear modelos. Outras soluções simplificam a estrutura do pipeline, por exemplo considerando apenas sequências lineares e usando uma rede \gls{lstm} para estimar valor\footnote{LSTM: rede neural recorrente que aprende dependências de longo prazo em sequências por meio de um mecanismo de portas que regula o fluxo de informação em uma célula de memória interna \citeonline{Hochreiter1997}.}.
+ 
+-Em contraste, trabalhos mais recentes exploram explicitamente a estrutura do pipeline. \citeonline{Schoenfeld2020} propõe um metamodelo baseado em rede neural dinamicamente montada, capaz de modelar DAGs arbitrários do pipeline. \citeonline{Schoenfeld2022} validam empiricamente essa abordagem criando um grande meta conjunto (cerca de 400.000 instâncias de aproximadamente 4.000 pipelines avaliados em 194 bases) e mostram que metamodelos que consideram metadados granulares de cada pipeline superam aqueles que usam representações simplificadas. Concretamente, eles demonstraram que metamodelos que utilizam toda a estrutura do pipeline fornecem estimativas de desempenho mais precisas, e que ranquear pipelines baseado na similaridade das meta características do conjunto de dados resulta em recomendações superiores às baseadas em estimativas de desempenho absoluta. 
++Em contraste, trabalhos mais recentes exploram explicitamente a estrutura do pipeline. \citeonline{Schoenfeld2020} propõe um metamodelo baseado em rede neural dinamicamente montada, capaz de modelar DAGs arbitrários do pipeline. \citeonline{Schoenfeld2022} validam empiricamente essa abordagem criando um grande meta conjunto (cerca de 400.000 instâncias de aproximadamente 4.000 pipelines avaliados em 194 bases) e mostram que metamodelos que consideram metadados granulares de cada pipeline superam aqueles que usam representações simplificadas. Concretamente, eles demonstraram que metamodelos que utilizam toda a estrutura do pipeline fornecem estimativas de desempenho mais precisas, e que ranquear pipelines baseado na similaridade das meta características do conjunto de dados resulta em recomendações superiores às baseadas em estimativas de desempenho absolutas. 
+ 
+ Em resumo, a seleção de pipelines em AutoML combina conhecimento do domínio (via meta-características de dados) e exploração da estrutura dos fluxos de processamento. Esse campo de pesquisa continua em desenvolvimento, mas já existe consenso de que considerar explicitamente a granularidade e a estrutura dos pipelines é crucial para sistemas AutoML eficientes e escaláveis.
+ 
++\section{Componentes do Arsenal Experimental}
++\label{sec:componentesArsenal}
++
++Como a metodologia deste trabalho avalia combinações de escalonamento, seleção de atributos e classificação, é necessário explicitar o papel dos operadores que compõem o arsenal experimental. Todos os componentes foram implementados por meio da biblioteca \textit{scikit-learn}, referência consolidada para experimentação reprodutível em aprendizado de máquina com Python \cite{Pedregosa2011}.
++
++No estágio de escalonamento, foram considerados três transformadores e uma alternativa sem transformação. O \texttt{StandardScaler} centraliza cada atributo pela média e o reescala pelo desvio padrão, tornando os atributos comparáveis em termos de variância. O \texttt{MinMaxScaler} reescala os valores para um intervalo fixo, usualmente $[0,1]$. O \texttt{RobustScaler} utiliza mediana e intervalo interquartil, sendo menos sensível a valores extremos. Esses operadores são relevantes porque algoritmos baseados em distância, margem ou otimização numérica, como \gls{knn}, \gls{svm} e \gls{mlp}, podem ser fortemente afetados por diferenças de escala entre atributos.
++
++No estágio de seleção ou redução de atributos, foram utilizados \gls{pca}, \texttt{SelectKBest} e ausência de seleção. A \gls{pca} projeta os dados em componentes ortogonais que concentram a maior variância possível, sendo uma técnica clássica de redução de dimensionalidade \cite{Jolliffe2002}. O \texttt{SelectKBest}, neste trabalho, utiliza o critério \texttt{f\_classif}, baseado no teste F da \gls{anova}, para manter os atributos mais associados ao alvo; trata-se de uma estratégia de filtragem supervisionada de atributos \cite{Guyon2003}. A alternativa \texttt{None} preserva todos os atributos originais, permitindo avaliar quando a redução dimensional prejudica ou favorece o desempenho.
++
++No estágio de classificação, foram avaliados cinco algoritmos. O \gls{rf} combina múltiplas árvores de decisão treinadas sobre amostras e subconjuntos de atributos, reduzindo variância e aumentando robustez em dados tabulares \cite{Breiman2001}. A \gls{svm} busca hiperplanos de máxima margem e, com kernel RBF, modela fronteiras não lineares \cite{Cortes1995}. O \gls{knn} é um método baseado em instâncias que classifica uma nova amostra pela vizinhança mais próxima no espaço de atributos \cite{Cover1967}. A \gls{mlp} é uma rede neural feedforward capaz de modelar relações não lineares por camadas ocultas \cite{Bishop2006}. Por fim, a \gls{dt} particiona recursivamente o espaço de atributos por regras de decisão, oferecendo interpretabilidade e baixo custo computacional \cite{Quinlan1986}.
++
+ %% ────────────────────────────────────────────────────────────────────────────
+-\section{Embeddings de Datasets e Métricas de Ranking}
++\section{Embeddings de Conjuntos de Dados e Métricas de Ranking}
+ \label{sec:embeddingsRanking}
+ 
+-Esta seção apresenta os dois fundamentos diretamente empregados na proposta deste trabalho: as representações vetoriais de datasets conhecidas como \textit{embeddings}, utilizadas para caracterizar os conjuntos de dados do meta-conjunto, e as métricas empregadas para avaliar a qualidade de um ranqueamento de pipelines.
++Esta seção apresenta os dois fundamentos diretamente empregados na proposta deste trabalho: as representações vetoriais de conjuntos de dados conhecidas como \textit{embeddings}, utilizadas para caracterizar os conjuntos de dados do meta-conjunto, e as métricas empregadas para avaliar a qualidade de um ranqueamento de pipelines.
+ 
+-\subsection{Embeddings de Datasets}
++\subsection{Embeddings de Conjuntos de Dados}
+ 
+-Uma limitação das meta-características tradicionais é que cada dataset é representado por um único vetor de estatísticas globais — médias, variâncias, entropia das classes —, o que descarta a variabilidade interna da distribuição dos atributos. Para superar essa limitação, abordagens mais recentes propõem \textit{embeddings de datasets}: vetores densos de dimensão fixa que capturam propriedades representativas do conjunto de dados de forma invariante ao número de atributos e instâncias.
++Uma limitação das meta-características tradicionais é que cada conjunto de dados é representado por um único vetor de estatísticas globais — médias, variâncias, entropia das classes —, o que descarta a variabilidade interna da distribuição dos atributos. Para superar essa limitação, abordagens mais recentes propõem \textit{embeddings} de conjuntos de dados: vetores densos de dimensão fixa que capturam propriedades representativas do conjunto de dados de forma invariante ao número de atributos e instâncias.
+ 
+-\citeonline{Jomaa2021} propõem o Dataset2Vec, um \textit{embedding} neural baseado em arquitetura DeepSet que representa o dataset como um conjunto hierárquico de pares preditores-alvo. O modelo é treinado com uma tarefa auxiliar de similaridade entre datasets e produz vetores de 64 dimensões cujas proximidades no espaço euclidiano correlacionam-se com a similaridade de desempenho de algoritmos. Os autores identificam quatro critérios desejáveis para embeddings de datasets, a saber: (D1) independência de esquema — aplicável a qualquer dataset sem restrição de dimensionalidade; (D2) expressividade — capacidade de distinguir datasets com características de aprendizado distintas; (D3) escalabilidade — calculável sem treinamento para novos datasets; (D4) correlação com meta-alvos — os vetores devem predizer desempenho de algoritmos.
++\citeonline{Jomaa2021} propõem o Dataset2Vec, um \textit{embedding} neural baseado em arquitetura DeepSet que representa o conjunto de dados como um conjunto hierárquico de pares preditores-alvo. O modelo é treinado com uma tarefa auxiliar de similaridade entre conjuntos de dados e produz vetores de 64 dimensões cujas proximidades no espaço euclidiano correlacionam-se com a similaridade de desempenho de algoritmos. Os autores identificam quatro critérios desejáveis para embeddings de conjuntos de dados, a saber: (D1) independência de esquema — aplicável a qualquer conjunto sem restrição de dimensionalidade; (D2) expressividade — capacidade de distinguir conjuntos com características de aprendizado distintas; (D3) escalabilidade — calculável sem treinamento para novos conjuntos; (D4) correlação com meta-alvos — os vetores devem predizer desempenho de algoritmos.
+ 
+-Uma alternativa sem necessidade de treinamento consiste nos \textit{embeddings} estatísticos distribucionais: ao invés de uma única estatística global por atributo, calcula-se a distribuição desta estatística sobre todos os atributos do dataset via percentis, produzindo um vetor de dimensão fixa que satisfaz os critérios D1 e D3 e se aproxima de D2 em tarefas tabulares. Esta abordagem é análoga ao MF2\footnote{O MF2 é um conjunto de 46 meta-características estáticas — incluindo medidas de \textit{landmarking}, componentes principais (PCA) e proporção de valores ausentes — originalmente proposto por \citeonline{Reif2012} e empregado por \citeonline{Feurer2015} para estimar a similaridade entre datasets na inicialização de otimização bayesiana de hiperparâmetros.} de \citeonline{Feurer2015}, porém com maior riqueza representacional por capturar distribuições e não apenas médias globais.
++Uma alternativa sem necessidade de treinamento consiste nos \textit{embeddings} estatísticos distribucionais: ao invés de uma única estatística global por atributo, calcula-se a distribuição desta estatística sobre todos os atributos do conjunto de dados via percentis, produzindo um vetor de dimensão fixa que satisfaz os critérios D1 e D3 e se aproxima de D2 em tarefas tabulares. Esta abordagem é análoga ao MF2\footnote{O MF2 é um conjunto de 46 meta-características estáticas — incluindo medidas de \textit{landmarking}, componentes principais (PCA) e proporção de valores ausentes — originalmente proposto por \citeonline{Reif2012} e empregado por \citeonline{Feurer2015} para estimar a similaridade entre conjuntos de dados na inicialização de otimização bayesiana de hiperparâmetros.} de \citeonline{Feurer2015}, porém com maior riqueza representacional por capturar distribuições e não apenas médias globais.
+ 
+ \subsection{Métricas de Avaliação de Ranking}
+ 
+@@ -86,15 +97,15 @@
+ 
+ \textbf{\glsadd{ndcg}NDCG} (\textit{Normalized Discounted Cumulative Gain}): métrica proveniente da área de recuperação de informação, que pondera a relevância dos itens recuperados pelo logaritmo da posição na lista. Em meta-aprendizado, o NDCG penaliza explicitamente pipelines de alto desempenho recomendados em posições distantes do topo.
+ 
+-A adoção conjunta dessas quatro métricas permite avaliar o sistema tanto em termos de correlação global (Spearman) quanto de precisão nas posições de maior impacto prático ($\tau_w$, NDCG).
++A adoção conjunta dessas quatro métricas permite avaliar o sistema tanto em termos de correlação global (Spearman e Kendall Tau) quanto de precisão nas posições de maior impacto prático. Nesse segundo grupo, Kendall Tau ponderado e NDCG são métricas complementares: a primeira penaliza inversões pareadas no topo do ranking, enquanto a segunda mede a relevância acumulada das primeiras posições.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Trabalhos Relacionados}
+ \label{sec:trabalhosRelacionados}
+ 
+-Esta seção apresenta os principais trabalhos relacionados à proposta desta pesquisa, organizados em três eixos temáticos: (i) abordagens para extração de meta-características e representação de datasets; (ii) sistemas de recomendação de algoritmos e pipelines de aprendizado de máquina via meta-aprendizado; e (iii) estratégias de avaliação de complexidade de fronteiras de decisão e aprendizado ativo. Ao final, é apresentada uma síntese comparativa que posiciona a presente proposta em relação ao estado da arte.
++Esta seção apresenta os principais trabalhos relacionados à proposta desta pesquisa, organizados em três eixos temáticos: (i) abordagens para extração de meta-características e representação de conjuntos de dados; (ii) sistemas de recomendação de algoritmos e pipelines de aprendizado de máquina via meta-aprendizado; e (iii) estratégias de avaliação de complexidade de fronteiras de decisão e aprendizado ativo. Ao final, é apresentada uma síntese comparativa que posiciona a presente proposta em relação ao estado da arte.
+ 
+-\subsection{Representação de Datasets e Meta-características}
++\subsection{Representação de Conjuntos de Dados e Meta-características}
+ \label{sec:relMetaFeatures}
+ 
+ A qualidade dos metamodelos em sistemas de meta-aprendizado depende diretamente da capacidade de representar conjuntos de dados de forma compacta e informativa. Historicamente, duas correntes principais se desenvolveram: a engenharia de meta-características estáticas e a aprendizagem de meta-características por redes neurais.
+@@ -103,16 +114,16 @@
+ 
+ \citeonline{Schoenfeld2022} investigam a construção de meta-conjuntos de grande escala para otimização de pipelines, criando uma base com aproximadamente 400 mil instâncias derivadas de 4 mil pipelines avaliados em 194 conjuntos do programa D3M. O trabalho demonstra empiricamente que metamodelos que consideram metadados granulares de toda a estrutura do pipeline superam abordagens que utilizam apenas representações simplificadas. Os autores mostram, ainda, que o ranqueamento baseado em similaridade de meta-características fornece recomendações superiores às estimativas de desempenho absoluto, convergindo diretamente com a abordagem adotada neste TCC.
+ 
+-\citeonline{Jomaa2021} propõem o \textit{Dataset2Vec}, um extrator de meta-features baseado em uma arquitetura DeepSet que representa datasets como conjuntos hierárquicos de pares preditores-alvo. O modelo é treinado com uma tarefa auxiliar de aprendizagem de similaridade entre datasets (\textit{dataset similarity learning}), que determina se dois subconjuntos amostrados provêm do mesmo dataset. Os resultados experimentais com 120 conjuntos UCI para a tarefa de otimização de hiperparâmetros demonstram que as meta-features aprendidas pelo Dataset2Vec superam meta-features estáticas tradicionais (MF1 de \citeonline{Wistuba2016} com 22 dimensões; MF2 de \citeonline{Feurer2015} com 46 dimensões) e o \textit{Neural Statistician} (\citeonline{Edwards2017}) em termos de correlação de Spearman com os alvos de desempenho.
++\citeonline{Jomaa2021} propõem o \textit{Dataset2Vec}, um extrator de meta-features baseado em uma arquitetura DeepSet que representa conjuntos de dados como conjuntos hierárquicos de pares preditores-alvo. O modelo é treinado com uma tarefa auxiliar de aprendizagem de similaridade entre conjuntos de dados (\textit{dataset similarity learning}), que determina se dois subconjuntos amostrados provêm do mesmo conjunto. Os resultados experimentais com 120 conjuntos UCI para a tarefa de otimização de hiperparâmetros demonstram que as meta-features aprendidas pelo Dataset2Vec superam meta-features estáticas tradicionais (MF1 de \citeonline{Wistuba2016} com 22 dimensões; MF2 de \citeonline{Feurer2015} com 46 dimensões) e o \textit{Neural Statistician} (\citeonline{Edwards2017}) em termos de correlação de Spearman com os alvos de desempenho.
+ 
+-O presente trabalho diferencia-se do Dataset2Vec em dois aspectos fundamentais: (1) ao invés de embeddings neurais, utiliza-se um embedding distribucional de 64 dimensões, produzido sem necessidade de treinamento prévio, com propriedades análogas ao MF2 mas com maior riqueza por capturar a \textit{distribuição} das meta-features por atributo (não apenas médias globais); (2) a tarefa meta-nível é o \textit{ranqueamento de pipelines} (não apenas otimização de hiperparâmetros), sobre um meta-conjunto de 201 datasets. Esta escolha de embedding estático garante a propriedade de independência de esquema (\textbf{D1} na taxonomia do Dataset2Vec), escalabilidade sem treinamento (\textbf{D3}) e reprodutibilidade, ao custo de expressividade potencialmente menor (\textbf{D2}) em relação a abordagens neurais.
++O presente trabalho diferencia-se do Dataset2Vec em dois aspectos fundamentais: (1) ao invés de embeddings neurais, utiliza-se um embedding distribucional de 64 dimensões, produzido sem necessidade de treinamento prévio, com propriedades análogas ao MF2 mas com maior riqueza por capturar a \textit{distribuição} das meta-features por atributo (não apenas médias globais); (2) a tarefa meta-nível é o \textit{ranqueamento de pipelines} (não apenas otimização de hiperparâmetros), sobre um meta-conjunto de 201 conjuntos de dados. Esta escolha de embedding estático garante a propriedade de independência de esquema (\textbf{D1} na taxonomia do Dataset2Vec), escalabilidade sem treinamento (\textbf{D3}) e reprodutibilidade, ao custo de expressividade potencialmente menor (\textbf{D2}) em relação a abordagens neurais.
+ 
+ \subsection{Sistemas de Recomendação de Algoritmos e Pipelines}
+ \label{sec:relRecomendacao}
+ 
+ \citeonline{Schoenfeld2020} propõem um metamodelo baseado em rede neural dinamicamente configurável, capaz de modelar DAGs arbitrários de pipelines. O sistema representa cada operador do pipeline com uma subrrede específica e combina as representações por uma função de pooling global. Esta abordagem permite estimar o desempenho de configurações de pipeline inéditas sem avaliação direta, tornando a exploração do espaço de busca mais eficiente. A arquitetura supera metamodelos com representações simplificadas de pipeline, reforçando a importância de considerar a estrutura interna dos fluxos de processamento.
+ 
+-\citeonline{ali2020mega} apresentam o sistema \gls{mega} (\textit{Meta-learning Ensemble for Genetic Algorithm}), um método de combinação de classificadores que emprega meta-aprendizado e algoritmo genético para selecionar a melhor combinação de classificadores para um dataset desconhecido. O sistema extrai meta-características dos conjuntos, usa um algoritmo genético para encontrar combinações eficazes e, na fase de inferência, aplica um k-NN ponderado para recomendar combinações ideais. O uso do k-NN como metamodelo de inferência é compatível com a abordagem adotada neste trabalho, onde também se emprega k-NN para predição de rankings de pipelines.
++\citeonline{ali2020mega} apresentam o sistema \gls{mega} (\textit{Meta-learning Ensemble for Genetic Algorithm}), um método de combinação de classificadores que emprega meta-aprendizado e algoritmo genético para selecionar a melhor combinação de classificadores para um conjunto de dados desconhecido. O sistema extrai meta-características dos conjuntos, usa um algoritmo genético para encontrar combinações eficazes e, na fase de inferência, aplica um k-NN ponderado para recomendar combinações ideais. O uso do k-NN como metamodelo de inferência é compatível com a abordagem adotada neste trabalho, onde também se emprega k-NN para predição de rankings de pipelines.
+ 
+ \citeonline{DBLP:journals/corr/abs-2106-03954} investigam a recomendação de algoritmos de seleção de atributos por meta-aprendizado, modelando a tarefa como um problema supervisionado. O trabalho emprega k-NN, SVM, árvores de decisão e florestas aleatórias como meta-aprendizes, com meta-características extraídas de 28 meta-conjuntos do repositório ASlib. Os autores demonstram que técnicas de redução de dimensionalidade (PCA, seleção por variância, Chi-quadrado, ANOVA-F) permitem reduzir em mais de 80\% o número de meta-características sem degradar o desempenho preditivo, evidenciando a robustez de abordagens baseadas em similaridade para recomendação.
+ 
+@@ -125,11 +136,11 @@
+ 
+ \citeonline{varshney2015persistent} utilizam topologia persistente para caracterizar a complexidade das fronteiras de decisão em classificadores supervisionados, construindo complexos simpliciais a partir de amostras com rótulos distintos. Os números de Betti obtidos pela homologia persistente correlacionam-se com o desempenho preditivo dos modelos de SVM, auxiliando na seleção de hiperparâmetros. Embora a abordagem topológica seja distinta da proposta neste TCC, o princípio de usar características intrínsecas dos dados para orientar a seleção de modelos é compartilhado.
+ 
+-\citeonline{ramamurthy2018topological} expandem a análise topológica propondo os complexos \textit{labeled Čech} e \textit{labeled Vietoris-Rips} para estimar a complexidade topológica da fronteira de decisão (\gls{dbtc}). Experimentos em \gls{mnist}, \gls{fashionmnist} e \gls{cifar10} mostram que a correspondência entre a DBTC do modelo e a do dataset favorece a seleção de modelos pré-treinados, evidenciando que propriedades estruturais dos dados podem guiar a escolha de algoritmos.
++\citeonline{ramamurthy2018topological} expandem a análise topológica propondo os complexos \textit{labeled Čech} e \textit{labeled Vietoris-Rips} para estimar a complexidade topológica da fronteira de decisão (\gls{dbtc}). Experimentos em \gls{mnist}, \gls{fashionmnist} e \gls{cifar10} mostram que a correspondência entre a DBTC do modelo e a do conjunto de dados favorece a seleção de modelos pré-treinados, evidenciando que propriedades estruturais dos dados podem guiar a escolha de algoritmos.
+ 
+ \citeonline{DBLP:journals/corr/abs-2004-11149} apresentam uma revisão abrangente sobre meta-aprendizado, sistematizando métodos baseados em otimização, modelo, métrica e inferência Bayesiana. O trabalho discute como o aprendizado meta-episódico permite generalização eficiente para novas tarefas com dados rotulados limitados, especialmente em cenários de \textit{few-shot learning} (aprendizado a partir de pouquíssimos exemplos rotulados por classe), formalizando a notação de meta-tarefas $\tau_i \sim \mathcal{P}(\mathcal{T})$ com conjuntos de suporte $\mathcal{D}^s_i$ e consulta $\mathcal{D}^q_i$.
+ 
+-\citeonline{douce2024bridging} propõem o método \gls{tcm}, que combina amostragem baseada em diversidade e incerteza para aprendizado ativo. O TCM realiza uma transição gradual de \textit{TypiClust} — que seleciona exemplos representativos por clustering em embeddings auto-supervisionados — para \textit{Margin Sampling}, focado na incerteza do modelo. Os autores demonstram superioridade sobre \gls{badge}, Coreset e ProbCover em \gls{cifar10}, \gls{cifar100} e \gls{isic2019}, evidenciando o valor de combinar diversidade e incerteza na seleção de instâncias informativas. A utilização de embeddings para identificar exemplos representativos é análoga ao uso de embeddings de datasets neste trabalho para identificar datasets similares no espaço de meta-aprendizado.
++\citeonline{douce2024bridging} propõem o método \gls{tcm}, que combina amostragem baseada em diversidade e incerteza para aprendizado ativo. O TCM realiza uma transição gradual de \textit{TypiClust} — que seleciona exemplos representativos por clustering em embeddings auto-supervisionados — para \textit{Margin Sampling}, focado na incerteza do modelo. Os autores demonstram superioridade sobre \gls{badge}, Coreset e ProbCover em \gls{cifar10}, \gls{cifar100} e \gls{isic2019}, evidenciando o valor de combinar diversidade e incerteza na seleção de instâncias informativas. A utilização de embeddings para identificar exemplos representativos é análoga ao uso de embeddings de conjuntos de dados neste trabalho para identificar conjuntos similares no espaço de meta-aprendizado.
+ 
+ \subsection{Síntese Comparativa}
+ \label{sec:sintese-comparativa}
+@@ -146,17 +157,17 @@
+ \textbf{Trabalho} & \textbf{Representação} & \textbf{Tarefa Meta-nível} & \textbf{Meta-conjunto} & \textbf{Avaliação} \\
+ \midrule
+ Schoenfeld et al. (2022)  & Estrutura do pipeline (DAG)    & Estimativa de desempenho       & $\sim$400 k instâncias & Correlação de Spearman \\
+-Dataset2Vec (2021)        & Embedding neural (DeepSet)     & Otimização de hiperparâmetros  & 120 UCI datasets       & Spearman (ranqueamento)  \\
+-MEGA (2020)               & Meta-características estáticas & Recomendação de comitês        & Múltiplos datasets     & Acurácia                 \\
+-AutoFE-Sel (2021)         & Meta-características estáticas & Seleção de atributos           & 125 datasets           & EARR, hit-ratio          \\
+-Wang et al. (2021)        & Meta-características multi-tipo & Recomendação multi-rótulo      & 1090 datasets          & Ranking loss, Prec@m      \\
+-\textbf{Este TCC}         & \textbf{embedding distribucional 64D} & \textbf{Ranqueamento de pipelines} & \textbf{201 datasets / 60 pipelines} & \textbf{Spearman, Kendall ($\tau$, $\tau_w$), NDCG} \\
++Dataset2Vec (2021)        & Embedding neural (DeepSet)     & Otimização de hiperparâmetros  & 120 conjuntos UCI      & Spearman (ranqueamento)  \\
++MEGA (2020)               & Meta-características estáticas & Recomendação de comitês        & Múltiplos conjuntos    & Acurácia                 \\
++AutoFE-Sel (2021)         & Meta-características estáticas & Seleção de atributos           & 125 conjuntos          & EARR, hit-ratio          \\
++Wang et al. (2021)        & Meta-características multi-tipo & Recomendação multi-rótulo      & 1090 conjuntos         & Ranking loss, Prec@m      \\
++\textbf{Este TCC}         & \textbf{embedding distribucional 64D} & \textbf{Ranqueamento de pipelines} & \textbf{201 conjuntos / 60 pipelines} & \textbf{Spearman, Kendall ($\tau$, $\tau_w$), NDCG} \\
+ \bottomrule
+ \end{tabular}
+ }
+ \fonte{}
+ \end{table}
+ 
+-A análise comparativa revela que a presente proposta distingue-se dos trabalhos anteriores principalmente por três aspectos: (1) foco explícito no \textit{ranqueamento completo de pipelines} (não apenas seleção do melhor ou estimativa pontual); (2) adoção do \textbf{Kendall Tau ponderado} (\textit{weightedtau}) como métrica de avaliação — que pondera erros no topo do ranking de forma mais severa, alinhando-se às necessidades reais de AutoML onde os primeiros pipelines recomendados têm maior impacto prático; e (3) análise estatística da correlação entre dimensões do embedding e qualidade de ranqueamento por dataset, investigando \textit{quando} e \textit{por que} o meta-aprendizado funciona melhor.
++A análise comparativa revela que a presente proposta distingue-se dos trabalhos anteriores principalmente por três aspectos: (1) foco explícito no \textit{ranqueamento completo de pipelines} (não apenas seleção do melhor ou estimativa pontual); (2) adoção conjunta de \textbf{Kendall Tau ponderado} (\textit{weightedtau}) e NDCG como métricas complementares de topo, alinhando a avaliação às necessidades reais de AutoML, onde os primeiros pipelines recomendados têm maior impacto prático; e (3) análise estatística da correlação entre dimensões do embedding e qualidade de ranqueamento por conjunto de dados, investigando \textit{quando} e \textit{por que} o meta-aprendizado funciona melhor.
+ 
+-A escolha de um embedding distribucional (em detrimento de embeddings neurais como o Dataset2Vec) foi motivada pela compatibilidade com Python 3.13+, onde TensorFlow não possui distribuição, e pelo objetivo de estabelecer um baseline reprodutível e publicável. Esta escolha posiciona a abordagem como análoga ao MF2 de Feurer et al. (2015) em termos de engenharia de meta-características, mas com representação mais rica por capturar distribuições de meta-features por atributo em vez de apenas estatísticas globais do dataset.
++A escolha de uma representação estatística distribucional, referida ao longo do trabalho como embedding distribucional por produzir um vetor denso de dimensão fixa, foi motivada pela compatibilidade com Python 3.13+, onde TensorFlow não possui distribuição, e pelo objetivo de estabelecer um baseline reprodutível e publicável. Diferentemente de embeddings neurais como o Dataset2Vec, essa representação não é aprendida por otimização de uma função objetivo; ela se aproxima do MF2 de Feurer et al. (2015) em termos de engenharia de meta-características, mas captura distribuições de meta-features por atributo em vez de apenas estatísticas globais do conjunto de dados.
+--- pasta_pai\capitulos\cap-conclusoes.tex
++++ TCC_selecionado\capitulos\cap-conclusoes.tex
+@@ -2,15 +2,15 @@
+ 
+ \chapter{Conclusão}\label{cap:conclusoeseperspectivas}
+ 
+-Este trabalho propôs e avaliou uma abordagem de meta-aprendizado baseada em embeddings estatísticos de datasets para ranqueamento e recomendação de pipelines de aprendizado de máquina. Nesta seção, sintetizam-se os principais resultados obtidos, verifica-se o atendimento dos objetivos propostos, discutem-se as contribuições e limitações do trabalho, e apontam-se direções para pesquisas futuras.
++Este trabalho propôs e avaliou uma abordagem de meta-aprendizado baseada em embeddings estatísticos de conjuntos de dados para ranqueamento e recomendação de pipelines de aprendizado de máquina. Nesta seção, sintetizam-se os principais resultados obtidos, verifica-se o atendimento dos objetivos propostos, discutem-se as contribuições e limitações do trabalho, e apontam-se direções para pesquisas futuras.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Síntese do Trabalho}
+ \label{sec:sintese-conclusao}
+ 
+-O trabalho foi estruturado em duas fases metodológicas interligadas. Na \textbf{Fase 1}, um meta-conjunto foi construído pela execução sistemática de 60 pipelines de classificação sobre 201 conjuntos de dados obtidos do OpenML, resultando em uma matriz de acurácias balanceadas de dimensão $201 \times 60$. Cada dataset foi representado por um vetor de 64 dimensões produzido por um embedding estatístico distribucional, que captura a distribuição de meta-features por atributo de forma invariante ao número de features e instâncias. Na \textbf{Fase 2}, um preditor k-NN multi-saída foi avaliado por Leave-One-Out no nível de datasets, utilizando como métricas o coeficiente de Spearman, o Kendall Tau padrão, o Kendall Tau ponderado (\textit{weightedtau}) e o NDCG.
++O trabalho foi estruturado em duas fases metodológicas interligadas. Na \textbf{Fase 1}, um meta-conjunto foi construído pela execução sistemática de 60 pipelines de classificação sobre 201 conjuntos de dados obtidos do OpenML, resultando em uma matriz de acurácias balanceadas de dimensão $201 \times 60$. Cada conjunto foi representado por um vetor estatístico distribucional de 64 dimensões, sem treinamento neural, que captura a distribuição de meta-features por atributo de forma invariante ao número de features e instâncias. Na \textbf{Fase 2}, um preditor k-NN multi-saída foi avaliado por Leave-One-Out no nível de conjuntos de dados, utilizando Spearman e Kendall Tau para avaliar a ordenação global, e Kendall Tau ponderado (\textit{weightedtau}) e NDCG como métricas complementares voltadas ao topo do ranking.
+ 
+-Os experimentos demonstraram que o preditor k-NN com $k=10$ obteve correlação de Spearman média de $0{,}58 \pm 0{,}36$ e Kendall Tau ponderado médio de $0{,}52 \pm 0{,}35$ sobre 198 folds LOO válidos, resultados competitivos com o estado da arte em tarefas de meta-aprendizado para seleção de algoritmos. A consistente superioridade do Kendall ponderado sobre o Kendall padrão ($+$4,5 pontos percentuais para $k=10$) confirmou que o sistema é particularmente preciso na identificação dos melhores pipelines — o aspecto de maior relevância prática em AutoML.
++Os experimentos demonstraram que o preditor k-NN com $k=10$ obteve correlação de Spearman média de $0{,}58 \pm 0{,}36$ e Kendall Tau ponderado médio de $0{,}52 \pm 0{,}35$ sobre 198 folds LOO válidos, resultados competitivos com o estado da arte em tarefas de meta-aprendizado para seleção de algoritmos. A consistente superioridade do Kendall ponderado sobre o Kendall padrão ($+$4,5 pontos percentuais para $k=10$), em conjunto com o NDCG elevado, indica que o sistema é particularmente mais preciso no topo do ranking — o aspecto de maior relevância prática em AutoML.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Atendimento dos Objetivos}
+@@ -19,12 +19,12 @@
+ Verifica-se o atendimento de cada objetivo específico definido na \autoref{sec:objetivos}:
+ 
+ \begin{enumerate}
+-  \item \textbf{Avaliar, por meio da construção de um meta-conjunto, se metadados de desempenho e meta-características de datasets carregam sinal suficiente para diferenciar boas e más combinações de pré-processamento e classificação:} \textbf{Atendido.} Como pré-requisito para esta avaliação, foi construído um repositório de conhecimento (meta-conjunto) contendo $201 \times 60 = 12.060$ avaliações de pipelines com seus respectivos embeddings de datasets, configurações de pipeline e acurácias balanceadas, armazenados em formato reutilizável (\texttt{.npy} e \texttt{.pkl}). A análise desse repositório por meio da abordagem LOO demonstrou que o meta-aprendizado por similaridade de embeddings é capaz de ranquear pipelines de forma significativamente melhor que o acaso, com correlação de Spearman média de 0,58 e p-valores nulos nas análises de correlação estatística.
++  \item \textbf{Avaliar, por meio da construção de um meta-conjunto, se metadados de desempenho e meta-características de conjuntos de dados carregam sinal suficiente para diferenciar boas e más combinações de pré-processamento e classificação:} \textbf{Atendido.} Como pré-requisito para esta avaliação, foi construído um repositório de conhecimento (meta-conjunto) contendo $201 \times 60 = 12.060$ avaliações de pipelines com seus respectivos embeddings de conjuntos de dados, configurações de pipeline e acurácias balanceadas, armazenados em formato reutilizável (\texttt{.npy} e \texttt{.pkl}). A análise desse repositório por meio da abordagem LOO demonstrou que o meta-aprendizado por similaridade de embeddings é capaz de ranquear pipelines de forma significativamente melhor que o acaso, com correlação de Spearman média de $0{,}58$ e correlações estatísticas com $p < 0{,}0001$.
+ 
+-  \item \textbf{Construir modelos preditivos capazes de estimar a adequação de novas configurações:} \textbf{Atendido.} O preditor k-NN multi-saída foi implementado com estrutura KDTree e avaliado por LOO. A demonstração sobre um dataset holdout (Spearman = 0,96, NDCG = 0,9995) confirma a capacidade do sistema de recomendar pipelines para datasets inéditos.
++  \item \textbf{Construir e avaliar um modelo preditivo capaz de estimar, a partir de metacaracterísticas dos dados, o ranking de adequação de diferentes configurações de pré-processamento e classificação:} \textbf{Atendido.} O preditor k-NN multi-saída foi implementado com estrutura KDTree e avaliado por LOO. A demonstração sobre um conjunto de dados retido (Spearman $= 0{,}96$, NDCG $= 0{,}9995$) ilustra o funcionamento do sistema em um caso concreto, mas a evidência principal de generalização é a validação LOO sobre os folds válidos.
++\end{enumerate}
+ 
+-  \item \textbf{Demonstrar que o modelo pode ser integrado como componente decisório em sistemas de AutoML:} \textbf{Atendido parcialmente.} O módulo \texttt{recomendador.py} implementa a interface de recomendação: dado o embedding de um novo dataset, retorna uma lista ranqueada dos 60 pipelines por probabilidade de sucesso. A integração completa em um sistema AutoML de produção constitui trabalho futuro.
+-\end{enumerate}
++Como resultado complementar, o módulo \texttt{recomendador.py} implementa uma interface de recomendação que, dado o embedding de um novo conjunto de dados, retorna uma lista ranqueada dos 60 pipelines por desempenho estimado. A integração completa em um sistema AutoML de produção permanece como direção de trabalho futuro.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ 
+@@ -34,11 +34,11 @@
+ 
+ Após análise observou-se as seguintes limitações do trabalho:
+ \begin{itemize}
+-  \item \textbf{Embedding não-neural:} A incompatibilidade do TensorFlow com Python 3.13+ impediu o uso do Dataset2Vec original. O embedding estatístico adotado, embora funcional e publicável, é potencialmente menos expressivo que embeddings neurais pré-treinados em similaridade de datasets, conforme evidenciado pelos experimentos do próprio Dataset2Vec \cite{Jomaa2021}. Esta limitação representa a principal oportunidade de melhoria dos resultados.
++  \item \textbf{Embedding não-neural:} A incompatibilidade do TensorFlow com Python 3.13+ impediu o uso do Dataset2Vec original. O embedding estatístico adotado, embora funcional e publicável, é potencialmente menos expressivo que embeddings neurais pré-treinados em similaridade de conjuntos de dados, conforme evidenciado pelos experimentos do próprio Dataset2Vec \cite{Jomaa2021}. Esta limitação representa a principal oportunidade de melhoria dos resultados.
+ 
+   \item \textbf{Ausência do metamodelo MLP:} A indisponibilidade do PyTorch no ambiente impediu a avaliação comparativa do preditor MLP (\glsadd{bce}BCE loss), que poderia capturar padrões não-lineares entre embeddings e rankings de pipelines não acessíveis ao k-NN.
+ 
+-  \item \textbf{Variabilidade elevada:} O desvio padrão das métricas LOO ($\sigma \approx 0{,}34$--$0{,}36$) reflete a heterogeneidade dos datasets e a dependência do sistema da presença de vizinhos próximos no meta-conjunto. Para datasets atípicos (sem análogos no meta-conjunto), as recomendações são menos confiáveis.
++  \item \textbf{Variabilidade elevada:} O desvio padrão das métricas LOO ($\sigma \approx 0{,}34$--$0{,}36$) reflete a heterogeneidade dos conjuntos de dados e a dependência do sistema da presença de vizinhos próximos no meta-conjunto. Para conjuntos atípicos (sem análogos no meta-conjunto), as recomendações são menos confiáveis.
+ 
+   \item \textbf{Hiperparâmetros dos pipelines:} Os classificadores foram avaliados com hiperparâmetros padrão, sem ajuste individual, o que subestima o potencial de alguns algoritmos (especialmente SVM e MLP) e pode distorcer o ranking de qualidade dos pipelines.
+ 
+@@ -59,7 +59,7 @@
+ 
+   \item \textbf{Submissão ao BRACIS 2026:} publicação dos resultados na trilha de meta-aprendizado e AutoML do \textit{Brazilian Conference on Intelligent Systems} (BRACIS 2026), permitindo comparação com sistemas contemporâneos e feedback da comunidade científica.
+ 
+-  \item \textbf{Análise de transferabilidade do meta-conjunto:} investigar se o meta-conjunto construído com datasets OpenML generaliza para outros domínios (e.g., dados de séries temporais, imagens tabeladas), avaliando a robustez do sistema fora do contexto de treinamento.
++  \item \textbf{Análise de transferabilidade do meta-conjunto:} investigar se o meta-conjunto construído com conjuntos OpenML generaliza para outros domínios (e.g., dados de séries temporais, imagens tabeladas), avaliando a robustez do sistema fora do contexto de treinamento.
+ 
+   \item \textbf{Interpretabilidade das dimensões do embedding:} aprofundar a análise das dimensões correlacionadas com $\tau_w$ (identificadas neste trabalho) para entender quais propriedades dos dados tornam o ranqueamento mais ou menos preciso, potencialmente guiando o design de embeddings mais discriminativos.
+ \end{enumerate}
+@@ -68,6 +68,6 @@
+ \section{Considerações Finais}
+ \label{sec:consideracoesFinais}
+ 
+-Este trabalho demonstrou que embeddings estatísticos de datasets, combinados com um preditor k-NN e validação Leave-One-Out, constituem uma abordagem viável, reprodutível e competitiva para recomendação de pipelines em AutoML. A adoção do Kendall Tau ponderado como métrica de avaliação revelou que o sistema é particularmente preciso no topo do ranking — exatamente onde o impacto prático é maior. A análise de correlação estatística abriu um caminho promissor para a interpretabilidade do meta-aprendizado por similaridade.
++Este trabalho demonstrou que representações estatísticas distribucionais de conjuntos de dados, combinadas com um preditor k-NN e validação Leave-One-Out, constituem uma abordagem viável, reprodutível e competitiva para recomendação de pipelines em AutoML. A adoção conjunta de Kendall Tau ponderado e NDCG revelou que o sistema é particularmente preciso no topo do ranking — exatamente onde o impacto prático é maior. A análise de correlação estatística abriu um caminho promissor para a interpretabilidade do meta-aprendizado por similaridade.
+ 
+-Os resultados obtidos indicam que a qualidade da representação do dataset (embedding) é o fator mais crítico para o desempenho do meta-aprendizado por similaridade — mais do que a escolha do metamodelo em si. Melhorar a representação, seja por embeddings neurais mais expressivos ou por meta-features cuidadosamente projetadas, é o caminho mais promissor para elevar a qualidade das recomendações de AutoML. O presente trabalho, ao estabelecer um baseline sólido e uma infraestrutura experimental reutilizável, contribui para este objetivo de longo prazo.
++Os resultados obtidos indicam que a qualidade da representação do conjunto de dados (embedding) é o fator mais crítico para o desempenho do meta-aprendizado por similaridade — mais do que a escolha do metamodelo em si. Melhorar a representação, seja por embeddings neurais mais expressivos ou por meta-features cuidadosamente projetadas, é o caminho mais promissor para elevar a qualidade das recomendações de AutoML. O presente trabalho, ao estabelecer um baseline sólido e uma infraestrutura experimental reutilizável, contribui para este objetivo de longo prazo.
+--- pasta_pai\capitulos\cap-experimentos-resultados.tex
++++ TCC_selecionado\capitulos\cap-experimentos-resultados.tex
+@@ -2,23 +2,25 @@
+ 
+ \chapter{Experimentos e Resultados}\label{cap:experimentos}
+ 
+-Este capítulo descreve os experimentos realizados para validar a abordagem proposta de meta-aprendizado para ranqueamento de pipelines. Inicialmente são apresentados a configuração experimental e o protocolo de avaliação. Em seguida, são reportados os resultados da construção do meta-conjunto (Fase 1) e da avaliação do preditor de ranking (Fase 2), incluindo a análise do Kendall Tau ponderado, a correlação estatística entre embeddings e qualidade de ranqueamento, e uma demonstração do sistema em cenário real. O capítulo encerra com uma discussão dos resultados em perspectiva com a literatura.
++Este capítulo descreve os experimentos realizados para validar a abordagem proposta de meta-aprendizado para ranqueamento de pipelines. Inicialmente são apresentados a configuração experimental e o protocolo de avaliação. Em seguida, são reportados os resultados da construção do meta-conjunto (Fase 1) e da avaliação do preditor de ranking (Fase 2), incluindo a análise do Kendall Tau ponderado, a correlação estatística entre embeddings e qualidade de ranqueamento, e uma demonstração ilustrativa do sistema em operação. O capítulo encerra com uma discussão dos resultados em perspectiva com a literatura.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Configuração Experimental}
+ \label{sec:configExperimental}
+ 
++Esta seção consolida as decisões experimentais que operacionalizam a metodologia descrita no capítulo anterior: o conjunto de pipelines avaliados, a fonte dos dados e o protocolo de validação utilizado para medir a capacidade de generalização do preditor de ranqueamento.
++
+ \subsection{Arsenal de Pipelines}
+ 
+ O arsenal de pipelines foi definido como o produto cartesiano de quatro grupos de operadores modulares:
+ 
+ \begin{itemize}
+   \item \textbf{Escalonamento (4):} \texttt{StandardScaler}, \texttt{MinMaxScaler}, \texttt{RobustScaler} e ausência de escalonamento (\texttt{None});
+-  \item \textbf{Seleção de atributos (3):} \texttt{PCA} (componentes que explicam 95\% da variância), \texttt{SelectKBest} com critério \texttt{f\_classif} (ANOVA F, selecionando os $k = \min(10, p)$ melhores atributos) e ausência de seleção (\texttt{None});
+-  \item \textbf{Classificadores (5):} \texttt{RandomForestClassifier} (\texttt{RF}), \texttt{SVC} (\texttt{SVM}), k-vizinhos mais próximos (\texttt{kNN}), Rede Neural Multicamadas (\texttt{MLP}) e Árvore de Decisão (\texttt{DT}).
++  \item \textbf{Seleção de atributos (3):} \texttt{PCA} (componentes principais), \texttt{SelectKBest} com critério \texttt{f\_classif} (ANOVA F, selecionando os $k = \min(10, p)$ melhores atributos) e ausência de seleção (\texttt{None});
++  \item \textbf{Classificadores (5):} \texttt{RandomForestClassifier} (\gls{rf}), \texttt{SVC} (\gls{svm}), k-vizinhos mais próximos (\gls{knn}), Rede Neural Multicamadas (\gls{mlp}) e Árvore de Decisão (\gls{dt}).
+ \end{itemize}
+ 
+-O total de combinações é $4 \times 3 \times 5 = 60$ pipelines distintos. Cada pipeline é avaliado com validação cruzada estratificada de 5 folds, usando acurácia balanceada como métrica de desempenho. A \autoref{tab:pipelines} apresenta as combinações em forma de resumo.
++O total de combinações é $4 \times 3 \times 5 = 60$ pipelines distintos. Cada pipeline é avaliado com validação cruzada estratificada de 5 folds, usando acurácia balanceada como métrica de desempenho. A fundamentação dos componentes utilizados é apresentada na \autoref{sec:componentesArsenal}. A \autoref{tab:pipelines} apresenta as combinações em forma de resumo.
+ 
+ \begin{table}[H]
+ \centering
+@@ -48,12 +50,11 @@
+   \item Atributos predominantemente numéricos.
+ \end{itemize}
+ 
+-%% TODO: descrever exemplo(s) de dataset(s) do meta-conjunto (nome, domínio, número de instâncias/atributos/classes e estatística descritiva básica), conforme solicitado pelo orientador.
+-De 243 task IDs configurados inicialmente, \textbf{201 datasets} foram carregados com sucesso e tiveram ao menos um pipeline avaliado sem erros. Os 42 datasets restantes foram descartados por falha no download ou por não atenderem às restrições estabelecidas. Ressalta-se que este número supera os 120 UCI datasets utilizados por \citeonline{Jomaa2021} como referência na literatura para tarefas de meta-aprendizado.
++De 243 \textit{task IDs} configurados inicialmente, \textbf{201 conjuntos de dados} foram carregados com sucesso e tiveram ao menos um pipeline avaliado sem erros. Os 42 conjuntos restantes foram descartados por falha no download ou por não atenderem às restrições estabelecidas. A caracterização estatística e exemplos representativos desses conjuntos são apresentados na \autoref{tab:exemplosDatasets}. Ressalta-se que este número supera os 120 conjuntos UCI utilizados por \cite{Jomaa2021} como referência na literatura para tarefas de meta-aprendizado.
+ 
+ \subsection{Protocolo de Validação}
+ 
+-A validação é realizada por \textbf{Leave-One-Out (LOO) no nível de datasets}: em cada fold, um dataset é excluído do meta-conjunto, o preditor k-NN é treinado nos 200 datasets restantes e avaliado no dataset excluído. Este procedimento gera 201 folds de validação independentes. Folds em que todos os pipelines obtiveram acurácia idêntica (variância nula) são descartados automaticamente, pois não fornecem informação ordinal.
++A validação é realizada por \textbf{Leave-One-Out (LOO) no nível de conjuntos de dados}: em cada fold, um conjunto de dados é excluído do meta-conjunto, o preditor k-NN é treinado nos 200 conjuntos restantes e avaliado no conjunto excluído. Este procedimento gera 201 folds de validação independentes. Folds em que todos os pipelines obtiveram acurácia idêntica (variância nula) são descartados automaticamente, pois não fornecem informação ordinal.
+ 
+ %% Recursos Computacionais: descritos no Capítulo 4 (Materiais e Métodos, \autoref{subsec:recursos}) — removido daqui para eliminar redundância (anotação do orientador).
+ 
+@@ -61,23 +62,23 @@
+ \section{Resultados da Fase 1 – Construção do Meta-conjunto}
+ \label{sec:fase1Resultados}
+ 
+-Esta seção apresenta os resultados obtidos na Fase 1 do experimento, abrangendo o dimensionamento do meta-conjunto construído, a distribuição de desempenho dos pipelines avaliados, a análise por componente (escalonadores, seletores de atributos e classificadores) e a caracterização dos embeddings distribucionais gerados para os 201 datasets, incluindo sua visualização via UMAP e a matriz de similaridade resultante.
++Esta seção apresenta os resultados obtidos na Fase 1 do experimento, abrangendo o dimensionamento do meta-conjunto construído, a distribuição de desempenho dos pipelines avaliados, a análise por componente (escalonadores, seletores de atributos e classificadores) e a caracterização dos embeddings distribucionais gerados para os 201 conjuntos de dados, incluindo sua visualização via UMAP e a matriz de similaridade resultante.
+ 
+ \subsection{Dimensionamento do Meta-conjunto}
+ 
+ O meta-conjunto resultante possui as seguintes dimensões:
+ 
+ \begin{itemize}
+-  \item \textbf{Matriz de embeddings} $\mathbf{X}_{emb} \in \mathbb{R}^{201 \times 64}$: cada linha é o vetor de embedding de 64 dimensões de um dataset;
+-  \item \textbf{Matriz de acurácias} $\mathbf{Y}_{acc} \in \mathbb{R}^{201 \times 60}$: entrada $(i,j)$ é a acurácia balanceada média (5-fold) do pipeline $j$ no dataset $i$;
+-  \item \textbf{Valores ausentes:} 172 células ($< 1{,}5\%$ do total) correspondentes a pipelines que falharam em determinados datasets por questões de compatibilidade (ex.: SVM com dados de alta dimensionalidade sem pré-seleção).
++  \item \textbf{Matriz de embeddings} $\mathbf{X}_{emb} \in \mathbb{R}^{201 \times 64}$: cada linha é o vetor de embedding de 64 dimensões de um conjunto de dados;
++  \item \textbf{Matriz de acurácias} $\mathbf{Y}_{acc} \in \mathbb{R}^{201 \times 60}$: entrada $(i,j)$ é a acurácia balanceada média (5-fold) do pipeline $j$ no conjunto $i$;
++  \item \textbf{Valores ausentes:} 172 células ($< 1{,}5\%$ do total) correspondentes a pipelines que falharam em determinados conjuntos por questões de compatibilidade (ex.: SVM com dados de alta dimensionalidade sem pré-seleção).
+ \end{itemize}
+ 
+ O meta-conjunto, com $201 \times 60 = 12.060$ avaliações de pipeline, constitui a base de conhecimento sobre a qual o meta-aprendizado é realizado.
+ 
+ \subsection{Distribuição de Desempenho no Meta-conjunto}
+ 
+-A \autoref{fig:distYperf} apresenta o histograma das $12.060$ acurácias balanceadas registradas na matriz $\mathbf{Y}_{acc}$. A distribuição é bimodal: um primeiro pico próximo a zero corresponde a pipelines inadequados para determinados datasets (especialmente datasets multiclasse altamente desbalanceados); o segundo pico, mais denso, concentra-se entre 0{,}5 e 1{,}0, com mediana em torno de $0{,}63$. Esta assimetria positiva é esperada: a maioria dos pipelines avaliados com hiperparâmetros padrão produz acurácias moderadas a boas, enquanto os melhores pipelines atingem acurácias próximas de 1{,}0 em datasets com fronteiras de decisão simples.
++A \autoref{fig:distYperf} apresenta o histograma das $12.060$ acurácias balanceadas registradas na matriz $\mathbf{Y}_{acc}$. A distribuição é multimodal: observa-se um pico próximo a zero, associado a pipelines inadequados para determinados conjuntos de dados (especialmente conjuntos multiclasse altamente desbalanceados), e concentrações adicionais entre 0{,}5 e 1{,}0, com mediana em torno de $0{,}63$. Esta assimetria positiva é esperada: a maioria dos pipelines avaliados com hiperparâmetros padrão produz acurácias moderadas a boas, enquanto os melhores pipelines atingem acurácias próximas de 1{,}0 em conjuntos com fronteiras de decisão simples.
+ 
+ \begin{figure}[H]
+   \caption{Distribuição de acurácias balanceadas na matriz $\mathbf{Y}_{acc}$ do meta-conjunto ($n = 12.060$)}
+@@ -91,21 +92,20 @@
+ 
+ Para compreender quais componentes do arsenal contribuem mais para o desempenho, analisa-se a acurácia balanceada média desagregada por classificador, por combinação escalonador–classificador e por combinação seletor–classificador.
+ 
+-A \autoref{fig:boxplotClassifier} apresenta a distribuição de acurácias por tipo de classificador, agregando todos os escaladores e seletores. O \textit{Random Forest} obtém a maior mediana ($\approx 0{,}70$), seguido pelo MLP ($\approx 0{,}67$). O \textit{Decision Tree}, apesar de acurácias máximas comparáveis, apresenta maior dispersão e um \textit{outlier} próximo a zero, indicando maior sensibilidade ao conteúdo do dataset.
+-
+-\begin{figure}[H]
+-  \caption{Distribuição de acurácias balanceadas por classificador (todos os 201 datasets)}
++A \autoref{fig:boxplotClassifier} apresenta a distribuição de acurácias por tipo de classificador, agregando todos os escaladores e seletores. O \textit{Random Forest} obtém a maior mediana ($\approx 0{,}70$), seguido pelo MLP ($\approx 0{,}67$). O \textit{Decision Tree}, apesar de acurácias máximas comparáveis, apresenta maior dispersão e um \textit{outlier} próximo a zero, indicando maior sensibilidade ao conteúdo do conjunto de dados.
++
++\begin{figure}[H]
++  \caption{Distribuição de acurácias balanceadas por classificador (todos os 201 conjuntos de dados)}
+   \label{fig:boxplotClassifier}
+   \centering
+   \includegraphics[width=0.85\textwidth]{../figuras/boxplot_classifier}
+   \fonte{Autoria própria (2026)}
+ \end{figure}
+ 
+-As \autoref{fig:heatmapScaler} e \autoref{fig:heatmapSelector} apresentam \textit{heatmaps} da acurácia balanceada média por combinação de componentes. Na \autoref{fig:heatmapScaler}, observa-se que a escolha do escalador tem impacto reduzido: todos os quatro escaladores (\texttt{MinMaxScaler}, \texttt{None}, \texttt{RobustScaler}, \texttt{StandardScaler}) produzem acurácias médias muito próximas para um mesmo classificador, com variação inferior a 0{,}01. O \textit{Random Forest} destaca-se como o classificador mais robusto à escolha do escalador ($0{,}633$--$0{,}636$), enquanto o SVM apresenta a maior sensibilidade ($0{,}538$ sem escalador \textit{vs.} $0{,}601$ com \texttt{StandardScaler}).
+-
+-%TODO: regenerar esta figura (e as demais com valores numéricos no eixo/células: boxplots, heatmaps, histogramas e diagramas de dispersão das seções seguintes) configurando o locale pt-BR na geração do gráfico, de modo que os números exibidos utilizem vírgula como separador decimal (ex.: "0,65"), conforme a convenção adotada no texto. Anotação do orientador: "Corrigir decimais" — aplica-se a todas as figuras da sequência que apresentam valores numéricos.
+-\begin{figure}[H]
+-  \caption{Heatmap de acurácia balanceada média por escalador e classificador}
++As \autoref{fig:heatmapScaler} e \autoref{fig:heatmapSelector} apresentam mapas de calor da acurácia balanceada média por combinação de componentes. Na \autoref{fig:heatmapScaler}, observa-se que a escolha do escalador tem impacto reduzido: todos os quatro escaladores (\texttt{MinMaxScaler}, \texttt{None}, \texttt{RobustScaler}, \texttt{StandardScaler}) produzem acurácias médias muito próximas para um mesmo classificador, com variação inferior a 0{,}01. O \textit{Random Forest} destaca-se como o classificador mais robusto à escolha do escalador ($0{,}633$--$0{,}636$), enquanto o SVM apresenta a maior sensibilidade ($0{,}538$ sem escalador \textit{vs.} $0{,}601$ com \texttt{StandardScaler}).
++
++\begin{figure}[H]
++  \caption{Mapa de calor da acurácia balanceada média por escalador e classificador}
+   \label{fig:heatmapScaler}
+   \centering
+   \includegraphics[width=0.85\textwidth]{../figuras/heatmap_scaler_x_classifier}
+@@ -115,54 +115,54 @@
+ Na \autoref{fig:heatmapSelector}, o impacto do seletor de atributos é mais pronunciado. Ausência de seleção (\texttt{None}) produz consistentemente os melhores resultados para todos os classificadores, com \textit{Random Forest} atingindo $0{,}657$ — o valor médio mais alto de toda a análise combinatorial. A aplicação de PCA degrada sistematicamente o desempenho em comparação com a ausência de seleção, com queda média de $3{,}5$ pontos percentuais. O SelectKBest apresenta desempenho intermediário, sugerindo que a compressão dimensional via componentes principais prejudica mais a representação dos dados para a maioria dos classificadores do que a seleção supervisionada de atributos.
+ 
+ \begin{figure}[H]
+-  \caption{Heatmap de acurácia balanceada média por seletor de atributos e classificador}
++  \caption{Mapa de calor da acurácia balanceada média por seletor de atributos e classificador}
+   \label{fig:heatmapSelector}
+   \centering
+   \includegraphics[width=0.85\textwidth]{../figuras/heatmap_selector_x_classifier}
+   \fonte{Autoria própria (2026)}
+ \end{figure}
+ 
+-Esses resultados revelam que o \textit{Random Forest} sem seleção de atributos é a configuração de classificador mais robusta na média, o que é consistente com a literatura \cite{Fernandez-Delgado2014}, que demonstra que florestas aleatórias superam a maioria dos classificadores tabulares em benchmarks amplos. No entanto, a meta-aprendizagem opera justamente sobre as \textit{exceções} a esta regra geral: o valor do sistema de recomendação está em identificar os datasets para os quais configurações alternativas superam o \textit{Random Forest} padrão.
++Esses resultados revelam que o \textit{Random Forest} sem seleção de atributos é a configuração de classificador mais robusta na média, o que é consistente com a literatura \cite{Fernandez-Delgado2014}, que demonstra que florestas aleatórias superam a maioria dos classificadores tabulares em benchmarks amplos. No entanto, a meta-aprendizagem opera justamente sobre as \textit{exceções} a esta regra geral: o valor do sistema de recomendação está em identificar os conjuntos de dados para os quais configurações alternativas superam o \textit{Random Forest} padrão.
+ 
+ \subsection{Embedding Distribucional}
+ 
+-Na ausência de TensorFlow no ambiente Python 3.14, o embedding foi gerado por um método estatístico distribucional desenvolvido neste trabalho como alternativa reprodutível ao Dataset2Vec. O método captura a \textit{distribuição} de meta-features por atributo do dataset em três blocos:
++Na ausência de uma distribuição compatível do TensorFlow para o ambiente Python 3.13+, o embedding foi gerado por um método estatístico distribucional desenvolvido neste trabalho como alternativa reprodutível ao Dataset2Vec. O método captura a \textit{distribuição} de meta-features por atributo do conjunto de dados em três blocos:
+ 
+ \begin{enumerate}
+-  \item \textbf{Bloco distribucional (45 dimensões):} para cada uma das 9 estatísticas por atributo (média, desvio padrão, mínimo, máximo, mediana, $P_{25}$, $P_{75}$, skewness, kurtosis, correlação linear com $y$, correlação de rank com $y$), calcula-se a distribuição dessa estatística sobre todos os atributos do dataset via [mín, $P_{25}$, média, $P_{75}$, máx], produzindo $9 \times 5 = 45$ meta-features;
++  \item \textbf{Bloco distribucional (45 dimensões):} para cada uma das 9 estatísticas por atributo (média, desvio padrão, mínimo, máximo, mediana, $P_{25}$, $P_{75}$, skewness e kurtosis), calcula-se a distribuição dessa estatística sobre todos os atributos do conjunto via [mín, $P_{25}$, média, $P_{75}$, máx], produzindo $9 \times 5 = 45$ meta-features;
+   \item \textbf{Bloco global (10 dimensões):} $\log(n)$, $\log(p)$, número de classes, proporção da classe majoritária, proporção da classe minoritária, entropia do alvo, proporção de atributos constantes, correlação média entre atributos, proporção média de valores únicos, razão $p/n$;
+-  \item \textbf{Vetor final (64 dimensões):} os 55 valores anteriores são truncados/preenchidos para 64 dimensões e normalizados para norma unitária.
++  \item \textbf{Vetor final (64 dimensões):} os 55 valores anteriores são complementados com 9 posições preenchidas com zero, formando o vetor de 64 dimensões posteriormente normalizado para norma unitária.
+ \end{enumerate}
+ 
+-Comparativamente, o Dataset2Vec de \citeonline{Jomaa2021} também produz vetores de 64 dimensões (configuração \textit{units\_h} = 32, expandido para 64 neste trabalho), aprendidos por uma rede DeepSet treinada com tarefa de similaridade entre datasets. A principal vantagem do embedding neural é maior expressividade (critério \textbf{D2} da taxonomia D2V); a principal vantagem do embedding distribucional é que não requer treinamento (\textbf{D3}) e é aplicável sem restrição de versão do framework.
++Comparativamente, o Dataset2Vec de \citeonline{Jomaa2021} também produz vetores de 64 dimensões (configuração \textit{units\_h} = 32, expandido para 64 neste trabalho), aprendidos por uma rede DeepSet treinada com tarefa de similaridade entre conjuntos de dados. A principal vantagem do embedding neural é maior expressividade (critério \textbf{D2} da taxonomia D2V); a principal vantagem do embedding distribucional é que não requer treinamento (\textbf{D3}) e é aplicável sem restrição de versão do framework.
+ 
+ \subsection{Visualização UMAP dos Embeddings}
+ 
+-A \autoref{fig:umap} exibe a projeção dos 201 embeddings de datasets em 2D por meio do algoritmo UMAP (\textit{Uniform Manifold Approximation and Projection}), configurado com \texttt{n\_components=2} e \texttt{random\_state=42}.
+-
+-\begin{figure}[H]
+-  \caption{Projeção UMAP dos embeddings de 201 datasets no espaço bidimensional}
++A \autoref{fig:umap} exibe a projeção dos 201 embeddings de conjuntos de dados em 2D por meio do algoritmo UMAP (\textit{Uniform Manifold Approximation and Projection}), configurado com \texttt{n\_components=2} e \texttt{random\_state=42}.
++
++\begin{figure}[H]
++  \caption{Projeção UMAP dos embeddings de 201 conjuntos de dados no espaço bidimensional}
+   \label{fig:umap}
+   \centering
+   \includegraphics[width=0.82\textwidth]{../figuras/umap_embeddings}
+   \fonte{Autoria própria (2026)}
+ \end{figure}
+ 
+-A projeção revela que os embeddings não são distribuídos uniformemente: observam-se agrupamentos locais que sugerem grupos de datasets com características distribucionais similares, separados por regiões de menor densidade. Esta estrutura é compatível com a hipótese central do meta-aprendizado por similaridade — datasets próximos no espaço de embeddings tendem a exibir padrões de desempenho similares entre os pipelines.
++A projeção revela que os embeddings não são distribuídos uniformemente: observam-se agrupamentos locais que sugerem grupos de conjuntos de dados com características distribucionais similares, separados por regiões de menor densidade. Esta estrutura é compatível com a hipótese central do meta-aprendizado por similaridade — conjuntos próximos no espaço de embeddings tendem a exibir padrões de desempenho similares entre os pipelines.
+ 
+ \subsection{Matriz de Similaridade dos Embeddings}
+ 
+-A \autoref{fig:simMatrix} apresenta a matriz de similaridade cosseno entre os 201 embeddings. Valores próximos de 1 (vermelho) indicam datasets altamente similares no espaço de representação; valores próximos de 0 (azul) indicam datasets com representações ortogonais.
+-
+-\begin{figure}[H]
+-  \caption{Matriz de similaridade cosseno entre os 201 embeddings de datasets}
++A \autoref{fig:simMatrix} apresenta a matriz de similaridade cosseno entre os 201 embeddings. Valores próximos de 1 (vermelho) indicam conjuntos altamente similares no espaço de representação; valores próximos de 0 (azul) indicam conjuntos com representações ortogonais.
++
++\begin{figure}[H]
++  \caption{Matriz de similaridade cosseno entre os embeddings dos 201 conjuntos de dados}
+   \label{fig:simMatrix}
+   \centering
+   \includegraphics[width=0.82\textwidth]{../figuras/matriz_similaridade_embeddings}
+   \fonte{Autoria própria (2026)}
+ \end{figure}
+ 
+-A presença de blocos diagonais de alta similaridade confirma a existência de grupos de datasets com propriedades distribicionais semelhantes, validando o poder discriminativo do embedding distribucional como representação para meta-aprendizado baseado em similaridade.
++A presença de blocos diagonais de alta similaridade indica a existência de grupos de conjuntos de dados com propriedades distribucionais semelhantes, sugerindo que o embedding distribucional captura estrutura útil para meta-aprendizado baseado em similaridade.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Resultados da Fase 2 – Avaliação LOO do Preditor de Ranking}
+@@ -176,7 +176,7 @@
+ 
+ \begin{table}[H]
+ \centering
+-\caption{Resultados LOO do preditor k-NN para ranqueamento de pipelines (201 datasets)}
++\caption{Resultados LOO do preditor k-NN para ranqueamento de pipelines (201 conjuntos de dados)}
+ \label{tab:looKnn}
+ \resizebox{\textwidth}{!}{%
+ \begin{tabular}{@{}rcccccc@{}}
+@@ -194,12 +194,12 @@
+ \fonte{Autoria própria (2026)}
+ \end{table}
+ 
+-O valor $k = 10$ obteve o maior Kendall médio ($\tau = 0{,}4767$) e foi selecionado como configuração ótima. A tendência geral é de melhora monotônica das métricas com o aumento de $k$, indicando que agregar informação de mais vizinhos reduz o ruído nas estimativas de desempenho, ao custo de uma eventual suavização da predição para datasets com características muito específicas.
++O valor $k = 10$ obteve o maior Kendall médio ($\tau = 0{,}4767$) e foi selecionado como configuração ótima. A tendência geral é de melhora monotônica das métricas com o aumento de $k$, indicando que agregar informação de mais vizinhos reduz o ruído nas estimativas de desempenho, ao custo de uma eventual suavização da predição para conjuntos com características muito específicas.
+ 
+ A \autoref{fig:looKnn} exibe graficamente o comportamento de Spearman e Kendall em função de $k$, com barras de erro correspondendo ao desvio padrão entre folds.
+ 
+ \begin{figure}[H]
+-  \caption{Spearman e Kendall Tau em função de $k$ (LOO sobre 201 datasets)}
++  \caption{Spearman e Kendall Tau em função de $k$ (LOO sobre 201 conjuntos de dados)}
+   \label{fig:looKnn}
+   \centering
+   \includegraphics[width=0.82\textwidth]{../figuras/ranking_loo_knn}
+@@ -208,7 +208,7 @@
+ 
+ \subsection{Distribuição das Métricas por Fold}
+ 
+-A \autoref{fig:distribuicaoMetricas} apresenta a distribuição de Spearman e Kendall sobre os 198 folds LOO válidos para $k = 10$. A distribuição multimodal revela a heterogeneidade dos datasets: para alguns, o meta-aprendizado gera rankings quase perfeitos ($\rho > 0{,}9$); para outros, o preditor tem desempenho próximo ao aleatório.
++A \autoref{fig:distribuicaoMetricas} apresenta a distribuição de Spearman e Kendall sobre os 198 folds LOO válidos para $k = 10$. A distribuição multimodal revela a heterogeneidade dos conjuntos de dados: para alguns, o meta-aprendizado gera rankings quase perfeitos ($\rho > 0{,}9$); para outros, o preditor tem desempenho próximo ao aleatório.
+ 
+ \begin{figure}[H]
+   \caption{Distribuição de Spearman e Kendall Tau por fold LOO ($k=10$, 198 folds)}
+@@ -218,22 +218,22 @@
+   \fonte{Autoria própria (2026)}
+ \end{figure}
+ 
+-Esta variabilidade elevada (desvio padrão $\approx 0{,}34$--$0{,}36$) é característica dos sistemas de meta-aprendizado baseados em similaridade: quando o dataset de teste tem vizinhos similares no meta-conjunto, a recomendação é precisa; quando é atípico (sem vizinhos próximos), o preditor recorre a generalizações menos confiáveis.
++Esta variabilidade elevada (desvio padrão $\approx 0{,}34$--$0{,}36$) é característica dos sistemas de meta-aprendizado baseados em similaridade: quando o conjunto de teste tem vizinhos similares no meta-conjunto, a recomendação é precisa; quando é atípico (sem vizinhos próximos), o preditor recorre a generalizações menos confiáveis.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Análise do Kendall Tau Ponderado}
+ \label{sec:kendallPonderado}
+ 
+-Esta seção aprofunda a análise dos resultados da Fase 2 sob a ótica do Kendall Tau ponderado — métrica que melhor reflete a utilidade prática do ranqueamento ao penalizar com maior intensidade os erros cometidos no topo da lista de recomendações —, comparando o desempenho do preditor com baselines triviais e com resultados reportados na literatura, discutindo aparentes contradições entre métricas e apontando as principais limitações identificadas.
+-
+-\subsection{Comparação entre $\tau$ e $\tau_w$}
++Esta seção aprofunda a análise dos resultados da Fase 2 sob a ótica do Kendall Tau ponderado — métrica que reflete a utilidade prática do ranqueamento ao penalizar com maior intensidade os erros cometidos no topo da lista de recomendações —, em articulação com o NDCG, que também privilegia as primeiras posições por desconto logarítmico. Em seguida, compara-se o desempenho do preditor com baselines triviais e com resultados reportados na literatura, discutem-se aparentes contradições entre métricas e apontam-se as principais limitações identificadas.
++
++\subsection{\texorpdfstring{Comparação entre $\tau$ e $\tau_w$}{Comparação entre tau e tau ponderado}}
+ 
+ O Kendall Tau ponderado ($\tau_w$) — implementado via \texttt{scipy.stats.weightedtau} — atribui pesos maiores às inversões de ordem que ocorrem no topo do ranking (melhores pipelines), refletindo a importância prática de recomendar corretamente as melhores configurações primeiro.
+ 
+-A \autoref{fig:kendallPonderado} apresenta, no painel esquerdo, o histograma da distribuição de $\tau_w$ por dataset (fold LOO), e no painel direito, o diagrama de dispersão entre $\tau$ e $\tau_w$ por fold.
+-
+-\begin{figure}[H]
+-  \caption{Distribuição do Kendall Tau ponderado por dataset e comparação com $\tau$ padrão}
++A \autoref{fig:kendallPonderado} apresenta, no painel esquerdo, o histograma da distribuição de $\tau_w$ por conjunto de dados (fold LOO), e no painel direito, o diagrama de dispersão entre $\tau$ e $\tau_w$ por fold.
++
++\begin{figure}[H]
++  \caption{Distribuição do Kendall Tau ponderado por conjunto de dados e comparação com $\tau$ padrão}
+   \label{fig:kendallPonderado}
+   \centering
+   \includegraphics[width=0.95\textwidth]{../figuras/kendall_ponderado_por_dataset}
+@@ -242,19 +242,19 @@
+ 
+ A análise revela um padrão consistente em todos os valores de $k$: $\tau_w > \tau$ em média (diferença de aproximadamente 4,5 pontos percentuais para $k=10$: $\tau_w = 0{,}522$ vs.\ $\tau = 0{,}477$). Este resultado indica que o preditor k-NN acerta melhor a ordenação dos pipelines de \textit{maior desempenho} do que a dos pipelines de desempenho intermediário ou baixo. Do ponto de vista prático de AutoML, este é o comportamento mais desejável: o usuário inicia pelos primeiros pipelines recomendados, e erros nessa posição teriam o maior impacto negativo.
+ 
+-No diagrama de dispersão (painel direito da \autoref{fig:kendallPonderado}), os pontos acima da diagonal confirmam que $\tau_w > \tau$ na maioria dos folds. Exceções (pontos abaixo da diagonal) representam datasets onde o preditor acerta a ordem global mas comete mais erros nas posições superiores — situação potencialmente problemática para uso prático.
++No diagrama de dispersão (painel direito da \autoref{fig:kendallPonderado}), os pontos acima da diagonal confirmam que $\tau_w > \tau$ na maioria dos folds. Exceções (pontos abaixo da diagonal) representam conjuntos onde o preditor acerta a ordem global mas comete mais erros nas posições superiores — situação potencialmente problemática para uso prático.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Correlação Estatística: Embeddings e Qualidade de Ranqueamento}
+ \label{sec:correlacaoEmbeddings}
+ 
+-Uma questão central para a interpretabilidade do sistema é: \textit{quais características dos datasets (capturadas pelo embedding) estão associadas a uma melhor qualidade de ranqueamento pelo meta-aprendizado}?
+-
+-Para investigar esta questão, calculou-se o coeficiente de Spearman entre os valores de $\tau_w$ por dataset (obtidos no LOO com $k=10$) e cada uma das 64 dimensões do embedding, além da norma L2 do embedding de cada dataset. A \autoref{tab:correlacaoEmbedding} apresenta as cinco dimensões com maior correlação absoluta.
+-
+-\begin{table}[H]
+-\centering
+-\caption{Top-5 dimensões do embedding correlacionadas com o Kendall Tau ponderado por dataset ($n=198$, LOO $k=10$)}
++Uma questão central para a interpretabilidade do sistema é: \textit{quais características dos conjuntos de dados (capturadas pelo embedding) estão associadas a uma melhor qualidade de ranqueamento pelo meta-aprendizado}?
++
++Para investigar esta questão, calculou-se o coeficiente de Spearman entre os valores de $\tau_w$ por conjunto de dados (obtidos no LOO com $k=10$) e cada uma das 64 dimensões do embedding, além da norma L2 do embedding de cada conjunto. A \autoref{tab:correlacaoEmbedding} apresenta as cinco dimensões com maior correlação absoluta.
++
++\begin{table}[H]
++\centering
++\caption{Top-5 dimensões do embedding correlacionadas com o Kendall Tau ponderado por conjunto de dados ($n=198$, LOO $k=10$)}
+ \label{tab:correlacaoEmbedding}
+ \begin{tabular}{@{}rrrr@{}}
+ \toprule
+@@ -273,23 +273,23 @@
+ Todas as cinco dimensões apresentam correlações estatisticamente significativas com $p < 0{,}0001$, rejeição robusta da hipótese nula mesmo após correção conservadora de múltiplos testes. Os resultados sugerem que:
+ 
+ \begin{itemize}
+-  \item Datasets com distribuições de atributos mais concentradas e menos assimétricas (correlação negativa nas dimensões de kurtosis e mínimos) tendem a ser mais fáceis de ranquear via meta-aprendizado por similaridade;
+-  \item Datasets com maior diversidade nos percentis superiores de seus atributos (dimensão 32, correlação positiva) também apresentam melhor qualidade de ranqueamento, possivelmente por serem mais distinguíveis no espaço de embeddings.
++  \item Conjuntos com distribuições de atributos mais concentradas e menos assimétricas (correlação negativa nas dimensões de kurtosis e mínimos) tendem a ser mais fáceis de ranquear via meta-aprendizado por similaridade;
++  \item Conjuntos com maior diversidade nos percentis superiores de seus atributos (dimensão 32, correlação positiva) também apresentam melhor qualidade de ranqueamento, possivelmente por serem mais distinguíveis no espaço de embeddings.
+ \end{itemize}
+ 
+ A análise completa, salva em \texttt{resultados/metricas/correlacao\_kendall\_por\_dataset.csv}, constitui um passo inicial de interpretabilidade que pode orientar a seleção ou engenharia de futuros embeddings mais discriminativos para meta-aprendizado.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+-\section{Demonstração: Recomendação para Dataset Holdout}
++\section{Demonstração Ilustrativa: Recomendação para Conjunto de Dados Retido}
+ \label{sec:holdout}
+ 
+-Para ilustrar o sistema em operação, realizou-se uma demonstração com o último dataset do meta-conjunto (\texttt{task\_id = 363713}) como holdout: o preditor foi treinado nos 200 datasets restantes ($k=10$) e avaliado sobre o dataset excluído.
++Para ilustrar o sistema em operação, realizou-se uma demonstração com o último conjunto do meta-conjunto (\texttt{task\_id = 363713}) como holdout: o preditor foi treinado nos 200 conjuntos restantes ($k=10$) e avaliado sobre o conjunto excluído. Esta análise tem caráter exclusivamente ilustrativo e não substitui a validação estatística principal, que é dada pelos 198 folds LOO válidos reportados anteriormente.
+ 
+ A \autoref{tab:holdout} apresenta as métricas de ranking obtidas neste caso.
+ 
+ \begin{table}[H]
+ \centering
+-\caption{Métricas de ranking para o dataset holdout (\texttt{task\_id = 363713}, $k=10$)}
++\caption{Métricas de ranking para a demonstração ilustrativa com conjunto de dados retido (\texttt{task\_id = 363713}, $k=10$)}
+ \label{tab:holdout}
+ \begin{tabular}{@{}lrr@{}}
+ \toprule
+@@ -304,7 +304,7 @@
+ \fonte{Autoria própria (2026)}
+ \end{table}
+ 
+-O desempenho excepcional neste dataset específico (Spearman $= 0{,}965$, NDCG $= 0{,}9995$) indica que o dataset possui vizinhos muito próximos no espaço de embeddings — cenário ideal para o meta-aprendizado por similaridade. O NDCG próximo de 1 significa que os pipelines de maior desempenho real foram recomendados nas primeiras posições, confirmando a utilidade prática do sistema.
++O desempenho excepcional neste conjunto específico (Spearman $= 0{,}965$, NDCG $= 0{,}9995$) indica que o conjunto possui vizinhos muito próximos no espaço de embeddings — cenário ideal para o meta-aprendizado por similaridade. Por se tratar de um único caso, esses valores não são utilizados como evidência estatística independente; eles apenas exemplificam como o recomendador opera quando o conjunto de entrada encontra vizinhos informativos no meta-conjunto.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Discussão dos Resultados}
+@@ -318,11 +318,11 @@
+ Para contextualizar os resultados e verificar se o meta-aprendizado por similaridade agrega valor além de heurísticas simples, três baselines foram estabelecidos:
+ 
+ \begin{enumerate}
+-  \item \textbf{Ranking global médio (baseline forte):} para cada fold LOO, o ranking predito é simplesmente a ordenação dos pipelines pela sua acurácia balanceada média sobre os 200 datasets de treino. Este baseline captura a hipótese de que alguns pipelines são universalmente superiores — portanto não requer informação do dataset de teste;
++  \item \textbf{Ranking global médio (baseline forte):} para cada fold LOO, o ranking predito é simplesmente a ordenação dos pipelines pela sua acurácia balanceada média sobre os 200 conjuntos de treino. Este baseline captura a hipótese de que alguns pipelines são universalmente superiores — portanto não requer informação do conjunto de teste;
+ 
+   \item \textbf{Ranking aleatório (lower bound):} os 60 pipelines são ordenados aleatoriamente. Espera-se Spearman $\approx 0$ e Kendall $\approx 0$;
+ 
+-  \item \textbf{k-NN com $k = n-1$ (média global via vizinhança):} caso degenerado do preditor onde todos os 200 datasets de treino são utilizados como vizinhos, equivalendo ao baseline de ranking global médio via k-NN.
++  \item \textbf{k-NN com $k = n-1$ (média global via vizinhança):} caso degenerado do preditor onde todos os 200 conjuntos de treino são utilizados como vizinhos, equivalendo ao baseline de ranking global médio via k-NN.
+ \end{enumerate}
+ 
+ A \autoref{tab:baselines} apresenta os resultados para $k=10$ (preditor proposto) em relação aos baselines, calculados sobre os 198 folds LOO válidos.
+@@ -343,14 +343,14 @@
+ \fonte{Autoria própria (2026)}
+ \end{table}
+ 
+-O preditor k-NN supera o ranking global médio em todos os indicadores: $+$11 pontos percentuais em Spearman, $+$10 em Kendall e $+$10 em Kendall ponderado. Este ganho demonstra que a personalização por similaridade de datasets contribui substantivamente além da heurística de recomendar os mesmos pipelines para todos. A diferença é particularmente relevante para o Kendall ponderado, confirmando que o meta-aprendizado melhora especialmente a recomendação das melhores configurações.
++O preditor k-NN supera o ranking global médio em todos os indicadores: $+$11 pontos percentuais em Spearman, $+$10 em Kendall e $+$10 em Kendall ponderado. Este ganho demonstra que a personalização por similaridade de conjuntos de dados contribui substantivamente além da heurística de recomendar os mesmos pipelines para todos. A diferença é particularmente relevante para o Kendall ponderado, confirmando que o meta-aprendizado melhora especialmente a recomendação das melhores configurações.
+ 
+ \subsection{Comparação com Baselines e Literatura}
+ 
+-A avaliação de sistemas de recomendação de pipelines na literatura de meta-aprendizado geralmente utiliza a correlação de Spearman como métrica principal. Os resultados desta pesquisa — Spearman médio de $0{,}58$ com LOO sobre 201 datasets — posicionam-se de forma competitiva em relação ao estado da arte:
++A avaliação de sistemas de recomendação de pipelines na literatura de meta-aprendizado geralmente utiliza a correlação de Spearman como métrica principal. Os resultados desta pesquisa — Spearman médio de $0{,}58$ com LOO sobre 201 conjuntos de dados — posicionam-se de forma competitiva em relação ao estado da arte:
+ 
+ \begin{itemize}
+-  \item \citeonline{Schoenfeld2022} reportam correlações de Spearman na faixa de 0,4--0,7 para estimativa de desempenho de pipelines em conjuntos D3M com metamodelos baseados em estrutura de DAG, confirmando que $\rho \approx 0{,}58$ é um resultado sólido para ranqueamento via similaridade;
++  \item \citeonline{Schoenfeld2022} reportam correlações de Spearman na faixa de $0{,}4$--$0{,}7$ para estimativa de desempenho de pipelines em conjuntos D3M com metamodelos baseados em estrutura de DAG, confirmando que $\rho \approx 0{,}58$ é um resultado sólido para ranqueamento via similaridade;
+   \item \citeonline{Jomaa2021} demonstram que o Dataset2Vec supera MF2 em otimização de hiperparâmetros, com ganho típico de 5--15\% em correlação de Spearman. Como o embedding deste trabalho é estatisticamente análogo ao MF2, espera-se que a substituição pelo Dataset2Vec possa melhorar os resultados em trabalhos futuros.
+ \end{itemize}
+ 
+@@ -363,7 +363,7 @@
+ \resizebox{\textwidth}{!}{%
+ \begin{tabular}{@{}lllll@{}}
+ \toprule
+-\textbf{Trabalho} & \textbf{Embedding} & \textbf{Datasets} & \textbf{Tarefa} & \textbf{Spearman (LOO)} \\
++\textbf{Trabalho} & \textbf{Embedding} & \textbf{Conjuntos} & \textbf{Tarefa} & \textbf{Spearman (LOO)} \\
+ \midrule
+ Dataset2Vec \cite{Jomaa2021}       & Neural (DeepSet, 64D) & 120 UCI    & Otim. de hiperparâmetros & $\sim$0{,}55--0{,}70 \\
+ MF2 \cite{Feurer2015}              & Estatístico (46D)     & 120 UCI    & Otim. de hiperparâmetros & $\sim$0{,}40--0{,}55 \\
+@@ -380,23 +380,23 @@
+ \subsection{Interpretação da Aparente Contradição entre NDCG e Spearman}
+ \label{sec:ndcgVsSpearman}
+ 
+-Uma observação que merece explicação é a coexistência de NDCG médio elevado ($0{,}984 \pm 0{,}038$) com Spearman moderado ($0{,}58 \pm 0{,}36$). À primeira vista, valores de NDCG próximos a 1 sugerem que o ranking predito é quase perfeito, o que pareceria inconsistente com um Spearman de 0,58.
+-
+-A explicação reside na diferença de sensibilidade das duas métricas. O NDCG é fortemente dominado pelas posições do topo: a contribuição da posição $i$ decai como $1/\log_2(i+1)$, de modo que erros nas posições 40 a 60 têm peso negligenciável. Como o conjunto de pipelines avaliados com hiperparâmetros padrão frequentemente possui um subconjunto estável de "melhores pipelines" (especialmente Random Forest sem seleção de atributos, que é consistentemente superior na média), o NDCG reflete que os 3-5 primeiros pipelines recomendados são geralmente corretos.
+-
+-O Spearman, por outro lado, trata todas as 60 posições com peso igual: uma inversão entre os pipelines de posição 30 e 35 penaliza tão fortemente quanto uma inversão entre os de posição 1 e 2. Como a ordenação das posições intermediárias e inferiores é genuinamente ruidosa (pipelines com acurácias próximas têm ordenações instáveis entre datasets), o Spearman médio de 0,58 captura esta dificuldade real.
++Uma observação que merece explicação é a coexistência de NDCG médio elevado ($0{,}984 \pm 0{,}038$) com Spearman moderado ($0{,}58 \pm 0{,}36$). À primeira vista, valores de NDCG próximos a 1 sugerem que o ranking predito é quase perfeito, o que pareceria inconsistente com um Spearman de 0,58. A interpretação adequada é tratar NDCG e Kendall ponderado como métricas complementares de topo, enquanto Spearman e Kendall padrão descrevem melhor a ordenação global.
++
++A explicação reside na diferença de sensibilidade das duas métricas. O NDCG é fortemente dominado pelas posições do topo: a contribuição da posição $i$ decai como $1/\log_2(i+1)$, de modo que erros nas posições 40 a 60 têm peso negligenciável. Como o conjunto de pipelines avaliados com hiperparâmetros padrão frequentemente possui um subconjunto estável de "melhores pipelines" (especialmente Random Forest sem seleção de atributos, que é consistentemente superior na média), o NDCG reflete que os três a cinco primeiros pipelines recomendados são geralmente corretos.
++
++O Spearman, por outro lado, trata todas as 60 posições com peso igual: uma inversão entre os pipelines de posição 30 e 35 penaliza tão fortemente quanto uma inversão entre os de posição 1 e 2. Como a ordenação das posições intermediárias e inferiores é genuinamente ruidosa (pipelines com acurácias próximas têm ordenações instáveis entre conjuntos de dados), o Spearman médio de 0,58 captura esta dificuldade real.
+ 
+ A conclusão prática é coerente: o sistema é altamente confiável para identificar os melhores pipelines (NDCG $\approx 1$) e moderadamente confiável para ordenar toda a lista (Spearman $= 0{,}58$) — exatamente o comportamento desejado em aplicações de AutoML, onde o usuário raramente precisa da lista completa e apenas avalia as primeiras recomendações.
+ 
+ \subsection{Embedding distribucional vs. Dataset2Vec}
+ 
+-A adoção de um embedding distribucional distribucional (em vez do Dataset2Vec neural) foi motivada por restrições de compatibilidade, mas também possibilita uma análise direta do que o embedding captura.
++A adoção de um embedding distribucional (em vez do Dataset2Vec neural) foi motivada por restrições de compatibilidade, mas também possibilita uma análise direta do que o embedding captura.
+ 
+ Em relação aos critérios D1--D4 de \citeonline{Jomaa2021}:
+ 
+ \begin{description}
+-  \item[\textbf{D1 – Independência de esquema}:] Atendido. O embedding distribucional é calculado para qualquer dataset tabelar, independentemente do número de atributos, instâncias ou esquema.
+-  \item[\textbf{D2 – Expressividade}:] Parcialmente atendido. As 55 meta-features capturadas são mais ricas que MF1/MF2, mas potencialmente menos expressivas que embeddings neurais pré-treinados em similaridade de datasets.
++  \item[\textbf{D1 – Independência de esquema}:] Atendido. O embedding distribucional é calculado para qualquer conjunto tabular, independentemente do número de atributos, instâncias ou esquema.
++  \item[\textbf{D2 – Expressividade}:] Parcialmente atendido. As 55 meta-features capturadas são mais ricas que MF1/MF2, mas potencialmente menos expressivas que embeddings neurais pré-treinados em similaridade de conjuntos de dados.
+   \item[\textbf{D3 – Escalabilidade}:] Atendido. O cálculo é $O(n \cdot p)$ sem treinamento prévio.
+   \item[\textbf{D4 – Correlação com meta-alvos}:] Atendido (evidenciado pelas correlações significativas com $\tau_w$ e pelos resultados LOO com $\rho = 0{,}58$).
+ \end{description}
+@@ -407,7 +407,7 @@
+ 
+ \begin{enumerate}
+   \item \textbf{Embedding não-neural:} a ausência do Dataset2Vec real (por incompatibilidade com Python 3.13+) implica que o embedding pode ser menos expressivo que abordagens neurais pré-treinadas em similaridade. Futuros experimentos com Python 3.12 e TensorFlow podem quantificar esse ganho.
+-  \item \textbf{Variabilidade entre datasets:} o desvio padrão das métricas LOO ($\sigma \approx 0{,}34$--$0{,}36$) é elevado, indicando que o sistema funciona muito bem para alguns datasets e pobremente para outros. Uma análise mais profunda dos datasets com baixo $\tau_w$ poderia revelar padrões de falha sistemática.
++  \item \textbf{Variabilidade entre conjuntos de dados:} o desvio padrão das métricas LOO ($\sigma \approx 0{,}34$--$0{,}36$) é elevado, indicando que o sistema funciona muito bem para alguns conjuntos e pobremente para outros. Uma análise mais profunda dos conjuntos com baixo $\tau_w$ poderia revelar padrões de falha sistemática.
+   \item \textbf{Ausência de MLP como metamodelo:} o preditor MLP (PyTorch) não foi avaliado por ausência da biblioteca no ambiente, limitando a comparação entre abordagens de meta-aprendizado.
+   \item \textbf{Hiperparâmetros fixos dos pipelines:} os classificadores foram usados com hiperparâmetros padrão do scikit-learn, sem ajuste individual, o que subestima o potencial de desempenho de alguns pipelines.
+ \end{enumerate}
+--- pasta_pai\capitulos\cap-introducao.tex
++++ TCC_selecionado\capitulos\cap-introducao.tex
+@@ -10,14 +10,14 @@
+ 
+ Entretanto, apesar dos avanços, boa parte dos sistemas de AutoML e meta-aprendizado concentra-se na escolha do modelo e na configuração dos hiperparâmetros, desconsiderando um fator crítico: a qualidade do \textit{pré-processamento dos dados}. Dados inconsistentes, com escalas divergentes, alta presença de \textit{outliers} ou problemas de codificação categórica podem comprometer todo o pipeline, independentemente da qualidade do algoritmo selecionado.
+ 
+-Diante desse cenário, este trabalho propõe e avalia uma abordagem de meta-aprendizado para \textbf{ranqueamento e recomendação de pipelines} de classificação. A proposta consiste em: (i) construir um meta-conjunto a partir da execução sistemática de 60 pipelines — combinações de escaladores, seletores de atributos e classificadores — sobre 201 conjuntos de dados obtidos do OpenML \cite{Vanschoren2014}, representando cada dataset por um \textit{embedding} (vetor numérico de dimensão fixa que resume as propriedades estatísticas do conjunto de dados\footnote{O conceito de \textit{embedding} de datasets é detalhado na Seção \ref{sec:embeddingsRanking}.}) distribucional de 64 dimensões; e (ii) treinar um preditor \gls{knn} multi-saída, avaliado por validação \gls{loo} no nível de datasets, capaz de estimar o ranking de desempenho esperado dos pipelines para um dataset inédito.
++Diante desse cenário, este trabalho propõe e avalia uma abordagem de meta-aprendizado para \textbf{ranqueamento e recomendação de pipelines} de classificação. A proposta consiste em: (i) construir um meta-conjunto a partir da execução sistemática de 60 pipelines — combinações de escaladores, seletores de atributos e classificadores — sobre 201 conjuntos de dados obtidos do OpenML \cite{Vanschoren2014}, representando cada conjunto por uma representação estatística distribucional de 64 dimensões, também referida neste trabalho como \textit{embedding} estatístico por ser um vetor numérico de dimensão fixa que resume propriedades do conjunto de dados sem treinamento neural\footnote{O conceito de \textit{embedding} de conjuntos de dados e a distinção entre representações neurais e estatísticas são detalhados na Seção \ref{sec:embeddingsRanking}.}; e (ii) treinar um preditor \gls{knn} multi-saída, avaliado por validação \gls{loo} no nível de conjuntos de dados, capaz de estimar o ranking de desempenho esperado dos pipelines para um conjunto inédito.
+ 
+ \section{Objetivos}\label{sec:objetivos}
+ 
+-Este trabalho tem como objetivo geral desenvolver e avaliar um sistema de meta-aprendizado baseado em embeddings estatísticos de datasets para ranqueamento e recomendação de pipelines de classificação, capaz de identificar, a partir das características do conjunto de dados de entrada, quais configurações de pré-processamento e classificação apresentam maior probabilidade de sucesso preditivo. Para alcançar esse objetivo geral, foram definidos os seguintes objetivos específicos:
++Este trabalho tem como objetivo geral desenvolver e avaliar um sistema de meta-aprendizado baseado em embeddings estatísticos de conjuntos de dados para ranqueamento e recomendação de pipelines de classificação, capaz de identificar, a partir das características do conjunto de dados de entrada, quais configurações de pré-processamento e classificação apresentam maior probabilidade de sucesso preditivo. Para alcançar esse objetivo geral, foram definidos os seguintes objetivos específicos:
+ 
+ \begin{itemize}
+-    \item Avaliar, por meio da construção de um meta-conjunto — repositório de conhecimento contendo descrições de pipelines, embeddings dos conjuntos de dados e rótulos de desempenho obtidos por validação cruzada estratificada —, se metadados de desempenho e meta-características de datasets carregam sinal suficiente para diferenciar boas e más combinações de pré-processamento e classificação;
++    \item Avaliar, por meio da construção de um meta-conjunto — repositório de conhecimento contendo descrições de pipelines, embeddings dos conjuntos de dados e rótulos de desempenho obtidos por validação cruzada estratificada —, se metadados de desempenho e meta-características de conjuntos de dados carregam sinal suficiente para diferenciar boas e más combinações de pré-processamento e classificação;
+     \item Construir e avaliar um modelo preditivo capaz de estimar, a partir de metacaracterísticas dos dados, o ranking de adequação de diferentes configurações de pré-processamento e classificação.
+ \end{itemize}
+ 
+@@ -25,9 +25,9 @@
+ 
+ A relevância deste trabalho assenta-se em duas lacunas complementares dos sistemas atuais de AutoML. A primeira é a tendência de focar exclusivamente na seleção do algoritmo ou na otimização de hiperparâmetros, desconsiderando a avaliação conjunta das etapas de pré-processamento — escalonamento, seleção de atributos e classificação — como um pipeline integrado \citeonline{Schoenfeld2022}. Problemas como escalonamento inadequado ou seleção de atributos prejudicial podem comprometer completamente o desempenho do modelo, independentemente da qualidade do classificador escolhido \citeonline{Domingos2012}.
+ 
+-A segunda lacuna refere-se à forma de avaliação: a maioria dos sistemas de AutoML trata a recomendação como seleção do \textit{melhor} pipeline (top-1), perdendo a informação ordinal completa. \citeonline{Schoenfeld2022} demonstraram que ranquear pipelines com base na similaridade de meta-características dos datasets produz recomendações superiores às estimativas de desempenho absoluto. Contudo, as métricas de avaliação utilizadas na literatura raramente penalizam de forma diferenciada os erros nas primeiras posições do ranking — exatamente onde o impacto prático é maior para um usuário de AutoML que avalia os primeiros pipelines sugeridos.
++A segunda lacuna refere-se à forma de avaliação: a maioria dos sistemas de AutoML trata a recomendação como seleção do \textit{melhor} pipeline (top-1), perdendo a informação ordinal completa. \citeonline{Schoenfeld2022} demonstraram que ranquear pipelines com base na similaridade de meta-características dos conjuntos de dados produz recomendações superiores às estimativas de desempenho absoluto. Contudo, as métricas de avaliação utilizadas na literatura raramente penalizam de forma diferenciada os erros nas primeiras posições do ranking — exatamente onde o impacto prático é maior para um usuário de AutoML que avalia os primeiros pipelines sugeridos.
+ 
+-Este trabalho preenche essas lacunas ao: (i) avaliar pipelines como combinações completas de pré-processamento e classificação; (ii) adotar ranqueamento como paradigma de recomendação; e (iii) introduzir o Kendall Tau ponderado como métrica de avaliação que reflete diretamente a utilidade prática do ranking gerado. O meta-conjunto construído, com 201 datasets e 60 pipelines avaliados por validação cruzada estratificada, constitui ainda uma contribuição empírica de escala superior à maioria dos estudos da área \citeonline{Vanschoren2018}.
++Este trabalho preenche essas lacunas ao: (i) avaliar pipelines como combinações completas de pré-processamento e classificação; (ii) adotar ranqueamento como paradigma de recomendação; e (iii) utilizar Kendall Tau ponderado e NDCG como métricas complementares para avaliar a qualidade das primeiras posições do ranking, onde o impacto prático da recomendação é maior. O meta-conjunto construído, com 201 conjuntos de dados e 60 pipelines avaliados por validação cruzada estratificada, constitui ainda uma contribuição empírica de escala superior à maioria dos estudos da área \citeonline{Vanschoren2018}.
+ 
+ 
+ \section{Estrutura do Trabalho}\label{sec:estruturaTrabalho}
+@@ -37,11 +37,11 @@
+ \begin{itemize}
+     \item \textbf{Capítulo \ref{cap:introducao} – Introdução:} apresenta o contexto, o problema de pesquisa, os objetivos, a justificativa e a estrutura geral do trabalho;
+ 
+-    \item \textbf{Capítulo \ref{cap:referencialTeorico} – Referencial Teórico:} discute os fundamentos de aprendizado de máquina, AutoML, meta-aprendizado, meta-características para caracterização de datasets, aprendizado ativo, estrutura de pipelines, embeddings de datasets e métricas de ranqueamento, e revisa os principais trabalhos relacionados nas áreas de representação de datasets por embeddings, sistemas de recomendação de algoritmos e pipelines via meta-aprendizado, e análise de complexidade de fronteiras de decisão;
++    \item \textbf{Capítulo \ref{cap:referencialTeorico} – Referencial Teórico:} discute os fundamentos de aprendizado de máquina, AutoML, meta-aprendizado, meta-características para caracterização de conjuntos de dados, aprendizado ativo, estrutura de pipelines, componentes de pré-processamento e classificação, embeddings de conjuntos de dados e métricas de ranqueamento, e revisa os principais trabalhos relacionados nas áreas de representação de conjuntos de dados por embeddings, sistemas de recomendação de algoritmos e pipelines via meta-aprendizado, e análise de complexidade de fronteiras de decisão;
+ 
+     \item \textbf{Capítulo \ref{cap:materialemetodos} – Materiais e Métodos:} descreve os materiais utilizados, a metodologia experimental em duas fases — construção do meta-conjunto e meta-aprendizado por ranqueamento —, o preditor k-NN multi-saída, o protocolo de validação Leave-One-Out e as métricas de avaliação de ranking;
+ 
+-    \item \textbf{Capítulo \ref{cap:experimentos} – Experimentos e Resultados:} apresenta os resultados da Fase~1 (caracterização e análise do meta-conjunto construído) e da Fase~2 (avaliação LOO do preditor), incluindo análise do Kendall Tau ponderado, correlação estatística entre embedding e qualidade de ranqueamento, e demonstração em dataset holdout;
++    \item \textbf{Capítulo \ref{cap:experimentos} – Experimentos e Resultados:} apresenta os resultados da Fase~1 (caracterização e análise do meta-conjunto construído) e da Fase~2 (avaliação LOO do preditor), incluindo análise do Kendall Tau ponderado, correlação estatística entre embedding e qualidade de ranqueamento, e uma demonstração ilustrativa em conjunto de dados retido;
+ 
+     \item \textbf{Capítulo \ref{cap:conclusoeseperspectivas} – Conclusão:} sintetiza as contribuições do trabalho, verifica o atendimento dos objetivos, discute limitações identificadas e propõe direções para pesquisas futuras.
+ \end{itemize}
+--- pasta_pai\capitulos\cap-metodologia.tex
++++ TCC_selecionado\capitulos\cap-metodologia.tex
+@@ -21,11 +21,12 @@
+         \midrule
+         Linguagem & Python & 3.13 & Ecossistema robusto para AM, vastas bibliotecas \\
+         Ambiente de Desenvolvimento & Jupyter / VS Code & N/A & Experimentação interativa, gerenciamento de código \\
+-        Biblioteca de AM & Scikit-learn & $\ge$ 1.4 & Pipelines, pré-processamento, métricas, preditor \gls{knn} \\
+-        Meta-características & Pymfe & $\ge$ 0.4.1 & Extração sistemática de meta-características \\
+-        Redes Neurais & TensorFlow com Keras & $\ge$ 2.x & Desenvolvimento e treinamento de modelos \glsadd{mlp}MLP \\
++        Biblioteca de AM & Scikit-learn & $\ge$ 1.4 & Pipelines, pré-processamento, classificadores e métricas \\
++        Estatística Computacional & SciPy & $\ge$ 1.12 & KDTree, correlações e métricas de ranqueamento \\
++        Meta-características & Implementação própria & N/A & Extração de embeddings estatísticos distribucionais \\
+         Manipulação de Dados & Pandas & $\ge$ 1.3 & Estrutura \textit{DataFrame} para dados tabulares \\
+         Computação Numérica & NumPy & $\ge$ 1.20 & Arrays multidimensionais e operações matemáticas \\
++        Visualização & Matplotlib, Seaborn e umap-learn & N/A & Gráficos, mapas de calor e projeção UMAP \\
+         Fonte de Dados & OpenML & N/A & Repositório com conjuntos anotados e metadados \\
+         Recurso Computacional & PC local & Próprio & Execução dos experimentos das Fases 1 e 2 \\
+         \bottomrule
+@@ -36,6 +37,8 @@
+ 
+ O quadro destaca a integração entre ferramentas consolidadas do ecossistema científico de Python e infraestrutura computacional local, evidenciando o cuidado na seleção de tecnologias que garantam reprodutibilidade, desempenho e flexibilidade. A seguir, cada categoria é explorada individualmente, de forma a detalhar seu papel específico no desenvolvimento dos experimentos desta pesquisa.
+ 
++Os sites oficiais das principais ferramentas utilizadas são: Python\footnote{\url{https://www.python.org/}}, Jupyter\footnote{\url{https://jupyter.org/}}, Visual Studio Code\footnote{\url{https://code.visualstudio.com/}}, scikit-learn\footnote{\url{https://scikit-learn.org/}}, SciPy\footnote{\url{https://scipy.org/}}, NumPy\footnote{\url{https://numpy.org/}}, pandas\footnote{\url{https://pandas.pydata.org/}}, umap-learn\footnote{\url{https://umap-learn.readthedocs.io/}} e OpenML\footnote{\url{https://www.openml.org/}}.
++
+ \subsection{Linguagens e Ambientes de Desenvolvimento}
+ 
+ O projeto foi desenvolvido em Python (versão 3.13), utilizando como ambiente principal o Jupyter Notebook e, em etapas mais estruturadas, o Visual Studio Code. Essas ferramentas foram escolhidas devido à sua ampla adoção na comunidade científica e à compatibilidade com bibliotecas de aprendizado de máquina. O uso de controle de versão via \texttt{Git} e \texttt{GitHub} também foi empregado para rastreamento do código.
+@@ -45,17 +48,36 @@
+ As principais bibliotecas utilizadas foram:
+ 
+ \begin{itemize}
+-    \item \texttt{scikit-learn}: Para construção de pipelines, pré-processamento, validação cruzada e algoritmos base (Random Forest, SVM, kNN);
+-    \item \texttt{pymfe}: Para extração de meta-características dos conjuntos de dados;
+-    \item \texttt{TensorFlow/Keras}: Para o treinamento do metamodelo MLP;
++    \item \texttt{scikit-learn}: Para construção de pipelines, pré-processamento, validação cruzada e algoritmos base (\gls{rf}, \gls{svm}, \gls{knn}, \gls{mlp} e \gls{dt}) \cite{Pedregosa2011};
++    \item \texttt{scipy}: Para a estrutura \texttt{KDTree}, correlações de Spearman e Kendall, e cálculo do Kendall Tau ponderado;
+     \item \texttt{pandas} e \texttt{numpy}: Para manipulação e estruturação de dados tabulares e vetoriais;
+-    \item \texttt{networkx} (opcional): Para representar pipelines como grafos direcionados.
++    \item \texttt{matplotlib}, \texttt{seaborn} e \texttt{umap-learn}: Para geração dos gráficos, mapas de calor e projeção bidimensional dos embeddings.
+ \end{itemize}
+ 
+ \subsection{Conjuntos de Dados}
+ 
+-Os conjuntos de dados foram obtidos do repositório público OpenML \cite{Vanschoren2014}, selecionando-se tarefas de classificação supervisionada que atendessem aos seguintes critérios: (i) entre 500 e 10.000 instâncias, de modo a equilibrar representatividade estatística e custo computacional; (ii) ao menos duas classes; e (iii) atributos predominantemente numéricos. Dos 243 \textit{task IDs} configurados inicialmente, \textbf{201 datasets} foram carregados com sucesso e tiveram ao menos um pipeline avaliado sem erros — número que supera os 120 datasets do UCI Repository utilizados por \citeonline{Jomaa2021} como referência na literatura para tarefas de meta-aprendizado. Os 42 datasets restantes foram descartados por falha no download ou por não atenderem aos critérios de qualidade estabelecidos.
+-%% TODO: descrever exemplo(s) de dataset(s) do meta-conjunto (nome, domínio, número de instâncias/atributos/classes e estatística descritiva básica), conforme solicitado pelo orientador.
++Os conjuntos de dados foram obtidos do repositório público OpenML \cite{Vanschoren2014}, selecionando-se tarefas de classificação supervisionada que atendessem aos seguintes critérios: (i) entre 500 e 10.000 instâncias, de modo a equilibrar representatividade estatística e custo computacional; (ii) ao menos duas classes; e (iii) atributos predominantemente numéricos. Dos 243 \textit{task IDs} configurados inicialmente, \textbf{201 conjuntos de dados} foram carregados com sucesso e tiveram ao menos um pipeline avaliado sem erros — número que supera os 120 conjuntos do UCI Repository utilizados por \cite{Jomaa2021} como referência na literatura para tarefas de meta-aprendizado. Os 42 conjuntos restantes foram descartados por falha no download ou por não atenderem aos critérios de qualidade estabelecidos.
++
++A caracterização local dos 201 conjuntos carregados indica heterogeneidade suficiente para avaliar o ranqueamento de pipelines: o número de instâncias varia de 500 a 10.000, com mediana de 1.941; o número de atributos varia de 1 a 1.776, com mediana de 20; e a mediana da proporção da classe majoritária é 0{,}50. Apenas um conjunto apresentou valores ausentes após o carregamento, caso tratado pela rotina de pré-processamento. A \autoref{tab:exemplosDatasets} apresenta exemplos representativos do meta-conjunto.
++
++\begin{table}[H]
++\centering
++\caption{Exemplos de conjuntos de dados utilizados no meta-conjunto}
++\label{tab:exemplosDatasets}
++\resizebox{\textwidth}{!}{%
++\begin{tabular}{@{}rllrrrr@{}}
++\toprule
++\textbf{Task ID} & \textbf{Nome} & \textbf{Caracterização} & \textbf{Instâncias} & \textbf{Atributos} & \textbf{Classes} & \textbf{Classe majoritária} \\
++\midrule
++3      & \texttt{kr-vs-kp}                         & Jogo de xadrez              & 3.196 & 36   & 2 & 0{,}522 \\
++11     & \texttt{balance-scale}                   & Balanceamento físico        & 625   & 4    & 3 & 0{,}461 \\
++9910   & \texttt{Bioresponse}                     & Classificação bioquímica    & 3.751 & 1.776 & 2 & 0{,}542 \\
++363713 & \texttt{regensburg\_pediatric\_appendicitis} & Diagnóstico médico tabular & 780   & 55   & 3 & 0{,}619 \\
++\bottomrule
++\end{tabular}
++}
++\fonte{Autoria própria (2026), com base nos dados carregados do OpenML.}
++\end{table}
+ 
+ \subsection{Recursos Computacionais}
+ \label{subsec:recursos}
+@@ -69,7 +91,7 @@
+     \item Ambiente: Python 3.13, com as bibliotecas \texttt{scikit-learn} ($\geq$ 1.4), \texttt{scipy} ($\geq$ 1.12), \texttt{numpy}, \texttt{pandas} e \texttt{umap-learn}.
+ \end{itemize}
+ 
+-Esta configuração mostrou-se adequada para a execução dos experimentos: a Fase 1 (execução de 60 pipelines $\times$ 201 datasets), intensiva em CPU e I/O, foi paralelizada sobre os núcleos do processador; e a Fase 2 (validação \gls{loo} do preditor \gls{knn}), de custo computacional linear no número de datasets, foi concluída em poucos minutos.
++Esta configuração mostrou-se adequada para a execução dos experimentos: a Fase 1 (execução de 60 pipelines $\times$ 201 conjuntos de dados), intensiva em CPU e I/O, foi paralelizada sobre os núcleos do processador; e a Fase 2 (validação \gls{loo} do preditor \gls{knn}), de custo computacional linear no número de conjuntos de dados, foi concluída em poucos minutos.
+ 
+ \section{Métodos}
+ 
+@@ -83,7 +105,7 @@
+     \fonte{}
+ \end{figure}
+ 
+-O processo inicia com a seleção de conjuntos de dados, seguida da execução de pipelines (pré-processamento + classificador) e avaliação via validação cruzada. Os dados resultantes são organizados no meta-conjunto com informações como: meta-características do conjunto de dados ($X_{meta}$), configuração do pipeline e desempenho obtido ($Y_{perf}$).
++O processo inicia com a seleção de conjuntos de dados, seguida da extração do embedding estatístico distribucional, da execução de pipelines (pré-processamento + classificador) e da avaliação via validação cruzada. Os dados resultantes são organizados no meta-conjunto com informações como: embedding do conjunto de dados ($X_{emb}$), configuração do pipeline e desempenho obtido ($Y_{perf}$).
+ 
+ \begin{figure}[H]
+     \caption{Fluxograma do processo experimental: Fase 2 -  Meta-aprendizado e recomendação no processo experimental} 
+@@ -93,13 +115,13 @@
+     \fonte{}
+ \end{figure}
+ 
+-Na Fase 2, cada instância do meta-conjunto recebe um rótulo binário de qualidade do pré-processamento ($Y_{qual}$), com base em limiares de desempenho. Modelos de classificação (Random Forest, SVM, MLP) são treinados para prever esse rótulo a partir de $X_{meta}$. Finalmente, para um novo conjunto de dados, as recomendações são geradas com base no ranking predito.
++Na Fase 2, o meta-conjunto é utilizado para treinar e avaliar um preditor de ranqueamento multi-saída. Para um novo conjunto de dados, o sistema localiza os conjuntos mais similares no espaço de embeddings e estima a acurácia esperada de cada pipeline, gerando uma lista ordenada de recomendações.
+ 
+ A seguir, cada fase do processo experimental é pormenorizada. A Fase 1 foca na criação da base de conhecimento – o meta-conjunto de dados –, que é a fundação para a abordagem de meta-aprendizado. A Fase 2 utiliza essa base para treinar os metamodelos e, finalmente, gerar as recomendações de pipelines, que constitui o objetivo central desta pesquisa.
+ 
+ \subsection{Fase 1 – Construção do Meta-conjunto}
+ 
+-A caracterização dos conjuntos de dados é realizada por um extrator de embeddings estatísticos distribucionais implementado neste trabalho. O método calcula, para cada atributo numérico do dataset, um conjunto de estatísticas descritivas (média, desvio padrão, mínimo, máximo, mediana, percentis $P_{25}$ e $P_{75}$, assimetria e curtose) e, em seguida, agrega a distribuição dessas estatísticas sobre todos os atributos via percentis, produzindo um vetor de dimensão fixa de 64 dimensões normalizado para norma unitária. Essa etapa gera o vetor $\mathbf{x} \in \mathbb{R}^{64}$, que é utilizado como entrada para o preditor \gls{knn}\footnote{O k-vizinhos mais próximos (k-NN) é um algoritmo de aprendizado baseado em instâncias que estima a saída para uma nova entrada a partir dos $k$ exemplos de treinamento mais próximos no espaço de características, segundo uma métrica de distância \citeonline{Cover1967}.}. A escolha de um embedding sem treinamento garante aplicabilidade imediata a novos datasets sem necessidade de retreinamento, atendendo ao critério D3 do Dataset2Vec \cite{Jomaa2021}.
++A caracterização dos conjuntos de dados é realizada por um extrator de embeddings estatísticos distribucionais implementado neste trabalho. O método calcula, para cada atributo numérico do conjunto de dados, um conjunto de estatísticas descritivas (média, desvio padrão, mínimo, máximo, mediana, percentis $P_{25}$ e $P_{75}$, assimetria e curtose) e, em seguida, agrega a distribuição dessas estatísticas sobre todos os atributos via percentis. O vetor é composto por 45 meta-features distribucionais ($9$ estatísticas $\times$ $5$ agregadores), 10 propriedades globais do conjunto e 9 posições preenchidas com zero, totalizando 64 dimensões antes da normalização para norma unitária. Essa etapa gera o vetor $\mathbf{x} \in \mathbb{R}^{64}$, que é utilizado como entrada para o preditor \gls{knn}\footnote{O k-vizinhos mais próximos (k-NN) é um algoritmo de aprendizado baseado em instâncias que estima a saída para uma nova entrada a partir dos $k$ exemplos de treinamento mais próximos no espaço de características, segundo uma métrica de distância \citeonline{Cover1967}.}. A escolha de um embedding estatístico sem treinamento neural garante aplicabilidade imediata a novos conjuntos de dados sem necessidade de retreinamento, atendendo ao critério D3 do Dataset2Vec \cite{Jomaa2021}.
+ 
+ Os pipelines são compostos por sequências de operadores de pré-processamento seguidos por um classificador. A modularidade dos componentes permite gerar múltiplas combinações, cujas estruturas são registradas de forma detalhada para compor o histórico do experimento.
+ 
+@@ -109,12 +131,12 @@
+   \text{BA} = \frac{1}{C} \sum_{c=1}^{C} \frac{TP_c}{TP_c + FN_c}
+ \end{equation}
+ 
+-\noindent onde $C$ é o número de classes, $TP_c$ é o número de verdadeiros positivos e $FN_c$ o de falsos negativos para a classe $c$. Para $C = 2$, a acurácia balanceada equivale à média aritmética de sensibilidade e especificidade. A escolha desta métrica em detrimento da acurácia simples é motivada pela presença de datasets desbalanceados no meta-conjunto: a acurácia simples favorece artificialmente classificadores que preveem apenas a classe majoritária, enquanto a acurácia balanceada garante que o desempenho em todas as classes seja igualmente considerado. O desempenho médio sobre os 5 folds compõe o valor $Y_{perf}$ armazenado na matriz de acurácias.
++\noindent onde $C$ é o número de classes, $TP_c$ é o número de verdadeiros positivos e $FN_c$ o de falsos negativos para a classe $c$. Para $C = 2$, a acurácia balanceada equivale à média aritmética de sensibilidade e especificidade. A escolha desta métrica em detrimento da acurácia simples é motivada pela presença de conjuntos de dados desbalanceados no meta-conjunto: a acurácia simples favorece artificialmente classificadores que preveem apenas a classe majoritária, enquanto a acurácia balanceada garante que o desempenho em todas as classes seja igualmente considerado. O desempenho médio sobre os 5 folds compõe o valor $Y_{perf}$ armazenado na matriz de acurácias.
+ 
+ Ao final da Fase 1, o principal artefato gerado é o meta-conjunto de dados, que consolida o conhecimento empírico obtido a partir da execução sistemática de diversos pipelines sobre uma ampla variedade de conjuntos de dados. Este meta-conjunto é estruturado de forma que cada instância representa um par formado por um conjunto de dados e uma configuração de pipeline, contendo as seguintes informações:
+ 
+ \begin{itemize}
+-    \item \textbf{Vetor de meta-características ($X_{meta}$):} representa as características intrínsecas do conjunto de dados, como medidas estatísticas, de complexidade e informacionais, servindo como entrada para os metamodelos;
++    \item \textbf{Embedding estatístico do conjunto de dados ($X_{emb}$):} representa as características intrínsecas do conjunto de dados por meio de estatísticas distribucionais, servindo como entrada para o preditor de ranqueamento;
+ 
+     \item \textbf{Configuração do pipeline:} descreve a sequência de operadores de pré-processamento e o classificador utilizados, bem como seus respectivos hiperparâmetros;
+ 
+@@ -127,21 +149,21 @@
+ 
+ \subsubsection{Preditor k-NN Multi-saída}
+ 
+-O metamodelo adotado é um \textbf{preditor k-vizinhos mais próximos} (k-NN) multi-saída, que utiliza uma estrutura \texttt{KDTree}\footnote{A KDTree (\textit{k-dimensional tree}) é uma estrutura de árvore binária que particiona recursivamente o espaço de busca por planos de corte alinhados aos eixos, permitindo consultas de vizinhança eficientes em espaços multidimensionais \citeonline{Bentley1975}.} para busca eficiente de vizinhos no espaço de embeddings. A KDTree é uma árvore binária de particionamento espacial que organiza os pontos por planos de corte em cada dimensão, reduzindo a complexidade de busca de $O(n \cdot d)$ (força bruta) para $O(d \cdot \log n)$ em média, onde $n$ é o número de datasets e $d = 64$ é a dimensão do embedding. Para um novo dataset $D_{new}$ com embedding $\mathbf{x}_{new} \in \mathbb{R}^{64}$, o preditor identifica os $k$ datasets mais similares no espaço de embeddings e estima a acurácia esperada de cada pipeline $P_j$ como a média das acurácias observadas nos vizinhos, conforme a Equação \eqref{eq:knn} — generalização multi-saída da regressão k-NN clássica, em que a predição é dada pela média das observações dos $k$ vizinhos mais próximos \citeonline{Altman1992}:
++O metamodelo adotado é um \textbf{preditor k-vizinhos mais próximos} (k-NN) multi-saída, que utiliza uma estrutura \texttt{KDTree}\footnote{A KDTree (\textit{k-dimensional tree}) é uma estrutura de árvore binária que particiona recursivamente o espaço de busca por planos de corte alinhados aos eixos, permitindo consultas de vizinhança eficientes em espaços multidimensionais \citeonline{Bentley1975}.} para busca eficiente de vizinhos no espaço de embeddings. A KDTree é uma árvore binária de particionamento espacial que organiza os pontos por planos de corte em cada dimensão, reduzindo a complexidade de busca de $O(n \cdot d)$ (força bruta) para $O(d \cdot \log n)$ em média, onde $n$ é o número de conjuntos de dados e $d = 64$ é a dimensão do embedding. Para um novo conjunto de dados $D_{new}$ com embedding $\mathbf{x}_{new} \in \mathbb{R}^{64}$, o preditor identifica os $k$ conjuntos de dados mais similares no espaço de embeddings e estima a acurácia esperada de cada pipeline $P_j$ como a média das acurácias observadas nos vizinhos, conforme a Equação \eqref{eq:knn} — generalização multi-saída da regressão k-NN clássica, em que a predição é dada pela média das observações dos $k$ vizinhos mais próximos \citeonline{Altman1992}:
+ 
+ \begin{equation}\label{eq:knn}
+   \hat{A}(P_j) = \frac{1}{k} \sum_{D_i \in \mathcal{N}_k(D_{new})} A_{i,j}
+ \end{equation}
+ 
+-\noindent onde $\mathcal{N}_k(D_{new})$ denota o conjunto dos $k$ datasets mais próximos de $D_{new}$ no espaço de embeddings e $A_{i,j}$ é a acurácia balanceada do pipeline $P_j$ no dataset $D_i$. A similaridade entre datasets é medida pela distância euclidiana no espaço de embeddings. A recomendação final consiste no ranking dos 60 pipelines ordenados por $\hat{A}(P_j)$ de forma decrescente.
++\noindent onde $\mathcal{N}_k(D_{new})$ denota o conjunto dos $k$ conjuntos de dados mais próximos de $D_{new}$ no espaço de embeddings e $A_{i,j}$ é a acurácia balanceada do pipeline $P_j$ no conjunto de dados $D_i$. A similaridade entre conjuntos de dados é medida pela distância euclidiana no espaço de embeddings. A recomendação final consiste no ranking dos 60 pipelines ordenados por $\hat{A}(P_j)$ de forma decrescente.
+ 
+ \subsubsection{Validação por Leave-One-Out}
+ 
+-A avaliação do preditor é realizada por \textbf{Leave-One-Out (LOO) no nível de datasets}: para cada dataset $D_i$ no meta-conjunto, o preditor é treinado nos $n-1$ datasets restantes e avalia suas predições sobre o dataset excluído. Este protocolo garante que cada avaliação simula o cenário real de inferência — um dataset genuinamente inédito —, fornecendo estimativas não enviesadas da capacidade de generalização.
++A avaliação do preditor é realizada por \textbf{Leave-One-Out (LOO) no nível de conjuntos de dados}: para cada conjunto $D_i$ no meta-conjunto, o preditor é treinado nos $n-1$ conjuntos restantes e avalia suas predições sobre o conjunto excluído. Este protocolo garante que cada avaliação simula o cenário real de inferência — um conjunto de dados genuinamente inédito —, fornecendo estimativas não enviesadas da capacidade de generalização.
+ 
+ \subsubsection{Métricas de Avaliação de Ranking}
+ 
+-A qualidade do ranqueamento predito em relação ao ranqueamento real foi avaliada por três métricas complementares:
++A qualidade do ranqueamento predito em relação ao ranqueamento real foi avaliada por quatro métricas complementares:
+ 
+ \begin{itemize}
+   \item \textbf{Coeficiente de Correlação de Spearman ($\rho$)} \cite{Spearman1904}: mede a correlação monotônica entre os postos dos scores preditos e reais. $\rho = 1$ indica ordenação perfeita; $\rho = 0$, ausência de correlação linear de postos;
+@@ -158,11 +180,11 @@
+   \begin{equation}\label{eq:ndcg}
+     \text{NDCG} = \frac{\text{DCG}}{\text{IDCG}}, \quad \text{DCG} = \sum_{i=1}^{n} \frac{2^{rel_i} - 1}{\log_2(i+1)}
+   \end{equation}
+-  onde $rel_i$ é a relevância do pipeline na posição $i$ (acurácia balanceada real) e IDCG é o DCG do ranking ideal (ordenação perfeita). NDCG $= 1$ indica ranking perfeito; valores próximos de 1 indicam que os pipelines de maior relevância estão próximos do topo.
++  onde $rel_i$ é a relevância do pipeline na posição $i$ (acurácia balanceada real) e IDCG é o DCG do ranking ideal (ordenação perfeita). NDCG $= 1$ indica ranking perfeito; valores próximos de 1 indicam que os pipelines de maior relevância estão próximos do topo. Assim, $\tau_w$ e NDCG são tratados como métricas complementares de topo: o primeiro avalia inversões pareadas ponderadas, enquanto o segundo avalia a relevância acumulada das posições iniciais.
+ \end{itemize}
+ 
+ As métricas são reportadas como média e desvio padrão sobre todos os folds LOO válidos (folds com variância não nula no vetor de acurácias reais). Para a seleção do hiperparâmetro $k$, avalia-se $k \in \{1, 3, 5, 7, 10\}$ e o valor com maior Kendall médio é selecionado.
+ 
+ \subsubsection{Análise de Correlação Estatística}
+ 
+-Como análise complementar, investiga-se a \textbf{correlação estatística entre o Kendall Tau ponderado por dataset e as dimensões do embedding}. Para cada dimensão $d \in \{1, \ldots, 64\}$ do espaço de embeddings, calcula-se o coeficiente de Spearman entre $\{\tau_w^{(i)}\}_{i=1}^{n}$ (scores de qualidade de ranqueamento por dataset) e $\{x_d^{(i)}\}_{i=1}^{n}$ (valor da dimensão $d$ no embedding de cada dataset). Esta análise visa identificar quais aspectos da representação do dataset predizem a qualidade do meta-aprendizado, fornecendo interpretabilidade ao sistema.
++Como análise complementar, investiga-se a \textbf{correlação estatística entre o Kendall Tau ponderado por conjunto de dados e as dimensões do embedding}. Para cada dimensão $d \in \{1, \ldots, 64\}$ do espaço de embeddings, calcula-se o coeficiente de Spearman entre $\{\tau_w^{(i)}\}_{i=1}^{n}$ (scores de qualidade de ranqueamento por conjunto de dados) e $\{x_d^{(i)}\}_{i=1}^{n}$ (valor da dimensão $d$ no embedding de cada conjunto). Esta análise visa identificar quais aspectos da representação do conjunto de dados predizem a qualidade do meta-aprendizado, fornecendo interpretabilidade ao sistema.
+--- pasta_pai\capitulos\cap-trabalhos-relacionados.tex
++++ TCC_selecionado\capitulos\cap-trabalhos-relacionados.tex
+@@ -1,7 +1,7 @@
+ %%%% CAPÍTULO 3 – TRABALHOS RELACIONADOS
+ \chapter{Trabalhos Relacionados}\label{cap:trabalhosRelacionados}
+ 
+-Este capítulo apresenta os principais trabalhos relacionados à proposta desta pesquisa, organizados em três eixos temáticos: (i) abordagens para extração de meta-características e representação de datasets; (ii) sistemas de recomendação de algoritmos e pipelines de aprendizado de máquina via meta-aprendizado; e (iii) estratégias de avaliação de complexidade de fronteiras de decisão e aprendizado ativo. Ao final, é apresentada uma síntese comparativa que posiciona a presente proposta em relação ao estado da arte.
++Este capítulo apresenta os principais trabalhos relacionados à proposta desta pesquisa, organizados em três eixos temáticos: (i) abordagens para extração de meta-características e representação de conjuntos de dados; (ii) sistemas de recomendação de algoritmos e pipelines de aprendizado de máquina via meta-aprendizado; e (iii) estratégias de avaliação de complexidade de fronteiras de decisão e aprendizado ativo. Ao final, é apresentada uma síntese comparativa que posiciona a presente proposta em relação ao estado da arte.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Representação de Datasets e Meta-características}
+@@ -13,9 +13,9 @@
+ 
+ \citeonline{Schoenfeld2022} investigam a construção de meta-conjuntos de grande escala para otimização de pipelines, criando uma base com aproximadamente 400 mil instâncias derivadas de 4 mil pipelines avaliados em 194 conjuntos do programa D3M. O trabalho demonstra empiricamente que metamodelos que consideram metadados granulares de toda a estrutura do pipeline superam abordagens que utilizam apenas representações simplificadas. Os autores mostram, ainda, que o ranqueamento baseado em similaridade de meta-características fornece recomendações superiores às estimativas de desempenho absoluto, convergindo diretamente com a abordagem adotada neste TCC.
+ 
+-\citeonline{Jomaa2021} propõem o \textbf{Dataset2Vec}, um extrator de meta-features baseado em uma arquitetura DeepSet que representa datasets como conjuntos hierárquicos de pares preditores-alvo. O modelo é treinado com uma tarefa auxiliar de aprendizagem de similaridade entre datasets (\textit{dataset similarity learning}), que determina se dois subconjuntos amostrados provêm do mesmo dataset. Os resultados experimentais com 120 conjuntos UCI para a tarefa de otimização de hiperparâmetros demonstram que as meta-features aprendidas pelo Dataset2Vec superam meta-features estáticas tradicionais (MF1 de \citeonline{Wistuba2016} com 22 dimensões; MF2 de \citeonline{Feurer2015} com 46 dimensões) e o \textit{Neural Statistician} (\citeonline{Edwards2017}) em termos de correlação de Spearman com os alvos de desempenho.
++\citeonline{Jomaa2021} propõem o \textbf{Dataset2Vec}, um extrator de meta-features baseado em uma arquitetura DeepSet que representa conjuntos de dados como conjuntos hierárquicos de pares preditores-alvo. O modelo é treinado com uma tarefa auxiliar de aprendizagem de similaridade entre conjuntos de dados (\textit{dataset similarity learning}), que determina se dois subconjuntos amostrados provêm do mesmo conjunto. Os resultados experimentais com 120 conjuntos UCI para a tarefa de otimização de hiperparâmetros demonstram que as meta-features aprendidas pelo Dataset2Vec superam meta-features estáticas tradicionais (MF1 de \citeonline{Wistuba2016} com 22 dimensões; MF2 de \citeonline{Feurer2015} com 46 dimensões) e o \textit{Neural Statistician} (\citeonline{Edwards2017}) em termos de correlação de Spearman com os alvos de desempenho.
+ 
+-O presente trabalho diferencia-se do Dataset2Vec em dois aspectos fundamentais: (1) ao invés de embeddings neurais, utiliza-se um embedding distribucional distribucional de 64 dimensões, produzido sem necessidade de treinamento prévio, com propriedades análogas ao MF2 mas com maior riqueza por capturar a \textit{distribuição} das meta-features por atributo (não apenas médias globais); (2) a tarefa meta-nível é o \textit{ranqueamento de pipelines} (não apenas otimização de hiperparâmetros), sobre um meta-conjunto de 201 datasets. Esta escolha de embedding estático garante a propriedade de independência de esquema (\textbf{D1} na taxonomia do Dataset2Vec), escalabilidade sem treinamento (\textbf{D3}) e reprodutibilidade, ao custo de expressividade potencialmente menor (\textbf{D2}) em relação a abordagens neurais.
++O presente trabalho diferencia-se do Dataset2Vec em dois aspectos fundamentais: (1) ao invés de embeddings neurais, utiliza-se um embedding distribucional de 64 dimensões, produzido sem necessidade de treinamento prévio, com propriedades análogas ao MF2 mas com maior riqueza por capturar a \textit{distribuição} das meta-features por atributo (não apenas médias globais); (2) a tarefa meta-nível é o \textit{ranqueamento de pipelines} (não apenas otimização de hiperparâmetros), sobre um meta-conjunto de 201 conjuntos de dados. Esta escolha de embedding estático garante a propriedade de independência de esquema (\textbf{D1} na taxonomia do Dataset2Vec), escalabilidade sem treinamento (\textbf{D3}) e reprodutibilidade, ao custo de expressividade potencialmente menor (\textbf{D2}) em relação a abordagens neurais.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Sistemas de Recomendação de Algoritmos e Pipelines}
+@@ -23,7 +23,7 @@
+ 
+ \citeonline{Schoenfeld2020} propõem um metamodelo baseado em rede neural dinamicamente configurável, capaz de modelar DAGs arbitrários de pipelines. O sistema representa cada operador do pipeline com um subrrede específica e combina as representações por uma função de pooling global. Esta abordagem permite estimar o desempenho de configurações de pipeline inéditas sem avaliação direta, tornando a exploração do espaço de busca mais eficiente. A arquitetura supera metamodelos com representações simplificadas de pipeline, reforçando a importância de considerar a estrutura interna dos fluxos de processamento.
+ 
+-\citeonline{ali2020mega} apresentam o sistema \gls{mega} (\textit{Meta-learning Ensemble for Genetic Algorithm}), um método de combinação de classificadores que emprega meta-aprendizado e algoritmo genético para selecionar a melhor combinação de classificadores para um dataset desconhecido. O sistema extrai meta-características dos conjuntos, usa um algoritmo genético para encontrar combinações eficazes e, na fase de inferência, aplica um k-NN ponderado para recomendar combinações ideais. O uso do k-NN como metamodelo de inferência é compatível com a abordagem adotada neste trabalho, onde também se emprega k-NN para predição de rankings de pipelines.
++\citeonline{ali2020mega} apresentam o sistema \gls{mega} (\textit{Meta-learning Ensemble for Genetic Algorithm}), um método de combinação de classificadores que emprega meta-aprendizado e algoritmo genético para selecionar a melhor combinação de classificadores para um conjunto de dados desconhecido. O sistema extrai meta-características dos conjuntos, usa um algoritmo genético para encontrar combinações eficazes e, na fase de inferência, aplica um k-NN ponderado para recomendar combinações ideais. O uso do k-NN como metamodelo de inferência é compatível com a abordagem adotada neste trabalho, onde também se emprega k-NN para predição de rankings de pipelines.
+ 
+ \citeonline{DBLP:journals/corr/abs-2106-03954} investigam a recomendação de algoritmos de seleção de atributos por meta-aprendizado, modelando a tarefa como um problema supervisionado. O trabalho emprega k-NN, SVM, árvores de decisão e florestas aleatórias como meta-aprendizes, com meta-características extraídas de 28 meta-conjuntos do repositório ASlib. Os autores demonstram que técnicas de redução de dimensionalidade (PCA, seleção por variância, Chi-quadrado, ANOVA-F) permitem reduzir em mais de 80\% o número de meta-características sem degradar o desempenho preditivo, evidenciando a robustez de abordagens baseadas em similaridade para recomendação.
+ 
+@@ -37,11 +37,11 @@
+ 
+ \citeonline{varshney2015persistent} utilizam topologia persistente para caracterizar a complexidade das fronteiras de decisão em classificadores supervisionados, construindo complexos simpliciais a partir de amostras com rótulos distintos. Os números de Betti obtidos pela homologia persistente correlacionam-se com o desempenho preditivo dos modelos de SVM, auxiliando na seleção de hiperparâmetros. Embora a abordagem topológica seja distinta da proposta neste TCC, o princípio de usar características intrínsecas dos dados para orientar a seleção de modelos é compartilhado.
+ 
+-\citeonline{ramamurthy2018topological} expandem a análise topológica propondo os complexos \textit{labeled Čech} e \textit{labeled Vietoris-Rips} para estimar a complexidade topológica da fronteira de decisão (DBTC). Experimentos em MNIST, FashionMNIST e CIFAR-10 mostram que a correspondência entre a DBTC do modelo e a do dataset favorece a seleção de modelos pré-treinados, evidenciando que propriedades estruturais dos dados podem guiar a escolha de algoritmos.
++\citeonline{ramamurthy2018topological} expandem a análise topológica propondo os complexos \textit{labeled Čech} e \textit{labeled Vietoris-Rips} para estimar a complexidade topológica da fronteira de decisão (DBTC). Experimentos em MNIST, FashionMNIST e CIFAR-10 mostram que a correspondência entre a DBTC do modelo e a do conjunto de dados favorece a seleção de modelos pré-treinados, evidenciando que propriedades estruturais dos dados podem guiar a escolha de algoritmos.
+ 
+ \citeonline{DBLP:journals/corr/abs-2004-11149} apresentam uma revisão abrangente sobre meta-aprendizado, sistematizando métodos baseados em otimização, modelo, métrica e inferência Bayesiana. O trabalho discute como o aprendizado meta-episódico permite generalização eficiente para novas tarefas com dados rotulados limitados, especialmente em cenários de \textit{few-shot learning}, formalizando a notação de meta-tarefas $\tau_i \sim \mathcal{P}(\mathcal{T})$ com conjuntos de suporte $\mathcal{D}^s_i$ e consulta $\mathcal{D}^q_i$.
+ 
+-\citeonline{douce2024bridging} propõem o método TCM (\textit{TypiClust-Margin}), que combina amostragem baseada em diversidade e incerteza para aprendizado ativo. O TCM realiza uma transição gradual de \textit{TypiClust} — que seleciona exemplos representativos por clustering em embeddings auto-supervisionados — para \textit{Margin Sampling}, focado na incerteza do modelo. Os autores demonstram superioridade sobre BADGE, Coreset e ProbCover em CIFAR-10, CIFAR-100 e ISIC2019, evidenciando o valor de combinar diversidade e incerteza na seleção de instâncias informativas. A utilização de embeddings para identificar exemplos representativos é análoga ao uso de embeddings de datasets neste trabalho para identificar datasets similares no espaço de meta-aprendizado.
++\citeonline{douce2024bridging} propõem o método TCM (\textit{TypiClust-Margin}), que combina amostragem baseada em diversidade e incerteza para aprendizado ativo. O TCM realiza uma transição gradual de \textit{TypiClust} — que seleciona exemplos representativos por clustering em embeddings auto-supervisionados — para \textit{Margin Sampling}, focado na incerteza do modelo. Os autores demonstram superioridade sobre BADGE, Coreset e ProbCover em CIFAR-10, CIFAR-100 e ISIC2019, evidenciando o valor de combinar diversidade e incerteza na seleção de instâncias informativas. A utilização de embeddings para identificar exemplos representativos é análoga ao uso de embeddings de conjuntos de dados neste trabalho para identificar conjuntos similares no espaço de meta-aprendizado.
+ 
+ %% ────────────────────────────────────────────────────────────────────────────
+ \section{Síntese Comparativa}
+@@ -59,17 +59,17 @@
+ \textbf{Trabalho} & \textbf{Representação} & \textbf{Tarefa Meta-nível} & \textbf{Meta-conjunto} & \textbf{Avaliação} \\
+ \midrule
+ Schoenfeld et al. (2022)  & Estrutura do pipeline (DAG)    & Estimativa de desempenho       & $\sim$400 k instâncias & Correlação de Spearman \\
+-Dataset2Vec (2021)        & Embedding neural (DeepSet)     & Otimização de hiperparâmetros  & 120 UCI datasets       & Spearman (ranqueamento)  \\
+-MEGA (2020)               & Meta-características estáticas & Recomendação de comitês        & Múltiplos datasets     & Acurácia                 \\
+-AutoFE-Sel (2021)         & Meta-características estáticas & Seleção de atributos           & 125 datasets           & EARR, hit-ratio          \\
+-Wang et al. (2021)        & Meta-características multi-tipo & Recomendação multi-rótulo      & 1090 datasets          & Ranking loss, Prec@m      \\
+-\textbf{Este TCC}         & \textbf{embedding distribucional 64D} & \textbf{Ranqueamento de pipelines} & \textbf{201 datasets / 60 pipelines} & \textbf{Spearman, Kendall ($\tau$, $\tau_w$), NDCG} \\
++Dataset2Vec (2021)        & Embedding neural (DeepSet)     & Otimização de hiperparâmetros  & 120 conjuntos UCI      & Spearman (ranqueamento)  \\
++MEGA (2020)               & Meta-características estáticas & Recomendação de comitês        & Múltiplos conjuntos    & Acurácia                 \\
++AutoFE-Sel (2021)         & Meta-características estáticas & Seleção de atributos           & 125 conjuntos          & EARR, hit-ratio          \\
++Wang et al. (2021)        & Meta-características multi-tipo & Recomendação multi-rótulo      & 1090 conjuntos         & Ranking loss, Prec@m      \\
++\textbf{Este TCC}         & \textbf{embedding distribucional 64D} & \textbf{Ranqueamento de pipelines} & \textbf{201 conjuntos / 60 pipelines} & \textbf{Spearman, Kendall ($\tau$, $\tau_w$), NDCG} \\
+ \bottomrule
+ \end{tabular}
+ }
+ \fonte{}
+ \end{table}
+ 
+-A análise comparativa revela que a presente proposta distingue-se dos trabalhos anteriores principalmente por três aspectos: (1) foco explícito no \textit{ranqueamento completo de pipelines} (não apenas seleção do melhor ou estimativa pontual); (2) adoção do \textbf{Kendall Tau ponderado} (\textit{weightedtau}) como métrica de avaliação — que pondera erros no topo do ranking de forma mais severa, alinhando-se às necessidades reais de AutoML onde os primeiros pipelines recomendados têm maior impacto prático; e (3) análise estatística da correlação entre dimensões do embedding e qualidade de ranqueamento por dataset, investigando \textit{quando} e \textit{por que} o meta-aprendizado funciona melhor.
++A análise comparativa revela que a presente proposta distingue-se dos trabalhos anteriores principalmente por três aspectos: (1) foco explícito no \textit{ranqueamento completo de pipelines} (não apenas seleção do melhor ou estimativa pontual); (2) adoção conjunta de \textbf{Kendall Tau ponderado} (\textit{weightedtau}) e NDCG como métricas complementares de topo, alinhando a avaliação às necessidades reais de AutoML, onde os primeiros pipelines recomendados têm maior impacto prático; e (3) análise estatística da correlação entre dimensões do embedding e qualidade de ranqueamento por conjunto de dados, investigando \textit{quando} e \textit{por que} o meta-aprendizado funciona melhor.
+ 
+-A escolha de um embedding distribucional (em detrimento de embeddings neurais como o Dataset2Vec) foi motivada pela compatibilidade com Python 3.13+, onde TensorFlow não possui distribuição, e pelo objetivo de estabelecer um baseline reprodutível e publicável. Esta escolha posiciona a abordagem como análoga ao MF2 de Feurer et al. (2015) em termos de engenharia de meta-características, mas com representação mais rica por capturar distribuições de meta-features por atributo em vez de apenas estatísticas globais do dataset.
++A escolha de uma representação estatística distribucional, referida ao longo do trabalho como embedding distribucional por produzir um vetor denso de dimensão fixa, foi motivada pela compatibilidade com Python 3.13+, onde TensorFlow não possui distribuição, e pelo objetivo de estabelecer um baseline reprodutível e publicável. Diferentemente de embeddings neurais como o Dataset2Vec, essa representação não é aprendida por otimização de uma função objetivo; ela se aproxima do MF2 de Feurer et al. (2015) em termos de engenharia de meta-características, mas captura distribuições de meta-features por atributo em vez de apenas estatísticas globais do conjunto de dados.
+--- pasta_pai\main.tex
++++ TCC_selecionado\main.tex
+@@ -125,16 +125,14 @@
+ %\include{./PreTexto/errata}%% Comente para remover este item
+ 
+ %% Folha de aprovação
+-%\incluirfolhaaprovacao
+-%%\approvalpage
+-%\incluirfolhadeaprovacao%% Para adicionar no formato de texto
+-%\includepdf[scale=1.0,pages=1]{./PreTexto/folha-aprovacao.pdf} % para adicionar o pdf enviado pelo professor apenas substitua o documento folha-aprovacao.pdf dentro da pasta PreTexto
++\approvalpage
++%\includepdf[scale=1.0,pages=1]{./PreTexto/folha-aprovacao.pdf} % alternativa: anexar o PDF da folha assinada pela banca, substituindo o arquivo em ./PreTexto/folha-aprovacao.pdf
+ 
+ %% Dedicatória
+ %%\include{./PreTexto/dedicatoria}%% Comente para remover este item
+ 
+ %% Agradecimentos
+-%%\include{./PreTexto/agradecimentos}%% Comente para remover este item
++\include{./PreTexto/agradecimentos}%% Comente para remover este item
+ 
+ %% Epígrafe
+ %%\include{./PreTexto/epigrafe}%% Comente para remover este item
+--- pasta_pai\variaveis.tex
++++ TCC_selecionado\variaveis.tex
+@@ -86,7 +86,7 @@
+ % Se não houver corientador, comente a linha a baixo % Nome do coorientador, caso exista. Caso não exista, comente a linha.
+ \coadvisor{Prof. Dr. Davi Pereira dos Santos} % Nome do coorientador
+ \depositshortdate{2026} % Ano em que depositou este documento
+-\approvaldate{2026}
++\approvaldate{}
+ 
+ % Dados do curso que não precisam de alteração
+ \university{Universidade Tecnológica Federal do Paraná}
+@@ -99,10 +99,9 @@
+ \documenttypeen{Monograph}
+ \degreetype{Graduação}
+ 
+-\evalboardmember{Nome completo e por extenso do Membro 1}{Título (especialização, mestrado, doutorado}{Nome completo e por extenso da instituição a qual possui vínculo}
+-\evalboardmember{Nome completo e por extenso do Membro 2}{Título (especialização, mestrado, doutorado}{Nome completo e por extenso da instituição a qual possui vínculo}
+-\evalboardmember{Nome completo e por extenso do Membro 3}{Título (especialização, mestrado, doutorado}{Nome completo e por extenso da instituição a qual possui vínculo}
+-\evalboardmember{Nome completo e por extenso do Membro 4}{Título (especialização, mestrado, doutorado}{Nome completo e por extenso da instituição a qual possui vínculo}
++\evalboardmember{Prof. Dr. Jorge Aikes Junior}{Orientador}{Universidade Tecnológica Federal do Paraná}
++\evalboardmember{Prof. Dr. Davi Pereira dos Santos}{Coorientador}{Universidade Tecnológica Federal do Paraná}
++\evalboardmember{Prof. Dr. Jandrei Sartori Spancerski}{Membro da banca examinadora}{Universidade Tecnológica Federal do Paraná}
+ 
+ %% Palavras-chave e keywords
+ %% ATENÇÃO - você deve indicar a quantidade de palavras chaves para o template LaTeX utilizar o pontuação correta!
+@@ -154,4 +153,4 @@
+ 
+ % Deixar sem licença - isso é aplicado apenas aos trabalhos que não são obrigados a ter licença. Na duvida verifique isso com o seu orientador e professor responsável pelo TCC. Para deixar o texto sem licença deixe o comando licença em brando ou deixe comentado.
+ %\licenca{}
+-% by DACOM/UTFPR-CM+% by DACOM/UTFPR-CM

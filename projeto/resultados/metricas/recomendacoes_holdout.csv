@@ -1,0 +1,11 @@
+rank,scaler,selector,classifier,score_predito
+1,RobustScaler,None,MLP,0.6849610268708514
+2,StandardScaler,None,MLP,0.673392297879282
+3,RobustScaler,None,RandomForest,0.6575573713158323
+4,None,None,RandomForest,0.6575511192611783
+5,MinMaxScaler,None,RandomForest,0.6575442021919274
+6,StandardScaler,None,RandomForest,0.6575152293592442
+7,MinMaxScaler,SelectKBest,DecisionTree,0.6566739460535864
+8,None,SelectKBest,DecisionTree,0.6566520310701622
+9,RobustScaler,SelectKBest,DecisionTree,0.65664700429541
+10,StandardScaler,SelectKBest,DecisionTree,0.6562214605934239

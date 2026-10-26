@@ -1,0 +1,1141 @@
+%%%% REFERÊNCIAS
+%%
+%% Conjunto padronizado de elementos descritivos retirados de um documento, que permite sua identificação individual.
+%%
+%% Cada entrada no arquivo BibTeX segue um formato padrão. Este formato muda ligeiramente baseado no tipo de entrada, mas a sintaxe
+%% continua a mesma.
+%%
+%% O rótulo de cada entrada não pode conter caracteres especiais, acentuados ou cedilha.
+%%
+%% A formatação do texto no campo "AUTHOR" deve obedecer algumas regras:
+%%   - Acento agudo:        "á = {\'a}".
+%%   - Acento crase:        "à = {\`a}".
+%%   - Acento til:          "ã = {\~a}".
+%%   - Acento circunflexo:  "ê = {\^e}".
+%%   - Acento trema:        "ü = {\"u}".
+%%   - Acento na letra i:   "í = {\'\i}".
+%%   - Cedilha:             "ç = {\c{c}}".
+%%   - Sobrenome composto:  "Santos, Filho, Jos{\'e} C. S.; da Silva, Erivanildo Lopes".
+%%   - Nome de organização: "{\mbox IONA Technologies PLC}".
+%%
+%% A formatação do texto no campo "TITLE" deve obedecer algumas regras (também válidas para o texto no campo "AUTHOR"):
+%%   - MAIÚSCULAS: "REAL = {REAL}".
+%%   - Minúsculas: "real = {real}".
+%%   - CamelCase:  "Real = {R}eal".
+
+%% TIPOS DE ENTRADA
+%%
+%% Ao inserir uma referência no banco de dados, a primeira coisa a decidir é o tipo de entrada. Existem vários tipos de entrada, mas
+%% não são completas, porém são suficientes para o BibTeX fornecer entradas para lidar com praticamente qualquer tipo de referência
+%% razoavelmente bem.
+
+%% ARTICLE - Um artigo de um jornal ou revista.
+%%   - Campos requeridos: AUTHOR, TITLE, JOURNAL e YEAR.
+%%   - Campos opcionais: VOLUME, NUMBER, PAGES, MONTH e NOTE.
+
+@ARTICLE{Guimaraes2003,
+  AUTHOR   = {Guimar{\~a}es, Eliane G. and Maffeis, Antonio T. and Pereira, James L. and Russo, Bruno G. and Cardozo, Eleri and Bergerman, Marcel and Magalh{\~a}es, Mauricio F.},
+  TITLE    = {{REAL}},
+  JOURNAL  = {IEEE Transactions on Education},
+  YEAR     = {2003},
+  VOLUME   = {46},
+  NUMBER   = {1},
+  PAGES    = {37--42},
+  MONTH    = feb,
+  SUBTITLE = {a virtual laboratory for mobile robot experiment}
+}
+
+@article{cavalcanti2021aprendizado,
+  title={Aprendizado ativo para classificadores de fluxo de dados baseados em agrupamento},
+  author={Cavalcanti, Douglas Monteiro and others},
+  year={2021},
+  journal={teste},
+  publisher={Universidade Federal de Uberl{\^a}ndia}
+}
+
+@article{li2020finding,
+  title={Finding the homology of decision boundaries with active learning},
+  author={Li, Weizhi and Dasarathy, Gautam and Natesan Ramamurthy, Karthikeyan and Berisha, Visar},
+  journal={Advances in Neural Information Processing Systems},
+  volume={33},
+  pages={8355--8365},
+  year={2020}
+}
+
+@article{kotsiantis2007supervised,
+  title={Supervised machine learning: A review of classification techniques},
+  author={Kotsiantis, Sotiris B and Zaharakis, Ioannis and Pintelas, P and others},
+  journal={Emerging artificial intelligence applications in computer engineering},
+  volume={160},
+  number={1},
+  pages={3--24},
+  year={2007},
+  publisher={Amsterdam}
+}
+
+@article{golshanrad2021mega,
+  title={MEGA: Predicting the best classifier combination using meta-learning and a genetic algorithm},
+  author={Golshanrad, Paria and Rahmani, Hossein and Karimian, Banafsheh and Karimkhani, Fatemeh and Weiss, Gerhard},
+  journal={Intelligent Data Analysis},
+  volume={25},
+  number={6},
+  pages={1547--1563},
+  year={2021},
+  publisher={SAGE Publications Sage UK: London, England}
+}
+
+@article{amancio2014systematic,
+  title={A systematic comparison of supervised classifiers},
+  author={Amancio, Diego Raphael and Comin, Cesar Henrique and Casanova, Dalcimar and Travieso, Gonzalo and Bruno, Odemir Martinez and Rodrigues, Francisco Aparecido and da Fontoura Costa, Luciano},
+  journal={PloS one},
+  volume={9},
+  number={4},
+  pages={e94137},
+  year={2014},
+  publisher={Public Library of Science San Francisco, USA}
+}
+
+@inproceedings{ramamurthy2019topological,
+  title={Topological data analysis of decision boundaries with application to model selection},
+  author={Ramamurthy, Karthikeyan Natesan and Varshney, Kush and Mody, Krishnan},
+  booktitle={International Conference on Machine Learning},
+  pages={5351--5360},
+  year={2019},
+  organization={PMLR}
+}
+
+@INPROCEEDINGS{7178708,
+
+  author={Varshney, Kush R. and Ramamurthy, Karthikeyan Natesan},
+
+  booktitle={2015 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+
+  title={Persistent topology of decision boundaries}, 
+
+  year={2015},
+
+  volume={},
+
+  number={},
+
+  pages={3931-3935},
+
+  keywords={Kernel;Polynomials;Topology;Shape;Accuracy;Support vector machines;Data analysis;Graph walk;persistent homology;simplicial complex;supervised classification;topological data analysis},
+
+  doi={10.1109/ICASSP.2015.7178708}}
+
+
+@article{payot2023active,
+  title={Active learning meets fractal decision boundaries: a cautionary tale from the Sitnikov three-body problem},
+  author={Payot, Nicolas and Pasquato, Mario and Trani, Alessandro Alberto and Hezaveh, Yashar and Perreault-Levasseur, Laurence},
+  journal={arXiv preprint arXiv:2311.18010},
+  year={2023}
+}
+
+
+@ARTICLE{Frederico2012,
+  AUTHOR    = {Frederico, Guilherme Francisco and Martins, Roberto Antonio},
+  TITLE     = {Modelo para alinhamento entre a maturidade dos sistemas de medição de desempenho e a maturidade da gestão da cadeia de suprimentos},
+  JOURNAL   = {Gestão \& Produção},
+  YEAR      = {2012},
+  VOLUME    = {19},
+  PAGES     = {857--871},
+  MONTH     = dec,
+  ISSN      = {0104-530X},
+  PUBLISHER = {Scielo},
+  URL       = {http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0104-530X2012000400014&nrm=iso},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+%% BOOK - Um livro com uma editora explícita.
+%%   - Campos requeridos: AUTHOR ou EDITOR, TITLE, PUBLISHER e YEAR.
+%%   - Campos opcionais: VOLUME ou NUMBER, SERIES, ADDRESS, EDITION, MONTH e NOTE.
+
+@book{Coulouris2013,
+  title={Sistemas Distribu{\'\i}dos},
+  subtitle={conceitos e projeto},
+  author={Coulouris, George and Dollimore, Jean and Kindberg, Tim and Blair, Gordon},
+  isbn={9788582600542},
+  url={https://books.google.com.br/books?id=6WU3AgAAQBAJ},
+  year={2013},
+  publisher={Bookman Editora},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+
+@book{Pressman2009,
+  title={Engenharia de Software - 7.ed.},
+  author={Pressman, Roger S.},
+  pages = {107},
+  isbn={9788580550443},
+  url={https://books.google.com.br/books?id=y0rH9wuXe68C},
+  year={2009},
+  publisher={McGraw Hill Brasil},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+@BOOK{Pedrycz1998,
+  AUTHOR    = {Pedrycz, Witold and Gomide, Fernando A. C.},
+  TITLE     = {An Introduction to Fuzzy Sets},
+  PUBLISHER = {MIT Press},
+  YEAR      = {1998},
+  ADDRESS   = {Massachusetts, USA},
+  MONTH     = apr,
+  PAGES     = {465},
+  SUBTITLE  = {analysis and design (complex adaptive systems)}
+}
+
+%% BOOKLET - Uma obra impressa mas sem uma editora ou instituição patrocinadora.
+%%   - Campos requeridos: TITLE.
+%%   - Campos opcionais: AUTHOR, HOWPUBLISHED, ADDRESS, MONTH, YEAR e NOTE.
+
+@BOOKLET{Thompson2001,
+  TITLE        = {X-Ray Data Booklet},
+  AUTHOR       = {Thompson, Albert C. and Vaughan, Douglas},
+  HOWPUBLISHED = {Lawrence Berkeley National Laboratory, University of California},
+  ADDRESS      = {California, USA},
+  MONTH        = jan,
+  YEAR         = {2001},
+  PAGES        = {457}
+}
+
+%% CONFERENCE - O mesmo que "INPROCEEDINGS", incluído para compatibilidade de escrita.
+%%   - Campos requeridos: AUTHOR, TITLE, BOOKTITLE e YEAR.
+%%   - Campos opcionais: EDITOR, VOLUME ou NUMBER, SERIES, PAGES, ADDRESS, MONTH, ORGANIZATION, PUBLISHER e NOTE.
+
+@CONFERENCE{Alt1995,
+  AUTHOR       = {Alt, Martin and Martin, Florian},
+  TITLE        = {Generation of Efficient Interprocedural Analyzers with {PAG}},
+  BOOKTITLE    = {SAS'95, Static Analysis Symposium},
+  YEAR         = {1995},
+  EDITOR       = {Mycroft, Alan},
+  PAGES        = {33--50},
+  MONTH        = sep,
+  PUBLISHER    = {Springer}
+}
+
+%% INBOOK - Uma parte de um livro, que pode ser um capítulo e/ou um intervalo de páginas.
+%%   - Campos requeridos: AUTHOR ou EDITOR, TITLE, CHAPTER ou PAGES, PUBLISHER e YEAR.
+%%   - Campos opcionais: VOLUME ou NUMBER, SERIES, TYPE, ADDRESS, EDITION, MONTH, NOTE.
+
+@BOOK{Santos2000,
+  AUTHOR    = {Santos, Euripedes P. and von Zuben, Fernando J.},
+  TITLE     = {Recurrent Neural Networks},
+  CHAPTER   = {3},
+  PAGES     = {47--75},
+  PUBLISHER = {CRC Press},
+  YEAR      = {2000},
+  VOLUME    = {13},
+  ADDRESS   = {USA},
+  SERIES    = {International Series on Computational Intelligence},
+  SUBTITLE  = {design, applications}
+}
+
+%% INCOLLECTION - Uma parte de um livro com o seu próprio título.
+%%   - Campos requeridos: AUTHOR, TITLE, BOOKTITLE, PUBLISHER e YEAR.
+%%   - Campos opcionais: EDITOR, VOLUME OR NUMBER, SERIES, TYPE, CHAPTER, PAGES, ADDRESS, EDITION, MONTH e NOTE.
+
+@INCOLLECTION{Pinto2000,
+  AUTHOR    = {Pinto, Alexandre S. and Faina, Luis F. and Cardozo, Eleri},
+  TITLE     = {A {TINA}-Based Distributed Environment for Mobile Multimedia Applications},
+  BOOKTITLE = {Managing QoS in Multimedia Networks, Services},
+  PUBLISHER = {Kluwer Academic Publishers},
+  YEAR      = {2000},
+  EDITOR    = {de Souza, Jos{\'e} Neuman and Boutaba, Raouf},
+  PAGES     = {163--175}
+}
+
+%% INPROCEEDINGS - Um artigo nos anais de uma conferência.
+%%   - Campos requeridos: AUTHOR, TITLE, BOOKTITLE e YEAR.
+%%   - Campos opcionais: EDITOR, VOLUME ou NUMBER, SERIES, PAGES, ADDRESS, MONTH, ORGANIZATION, PUBLISHER e NOTE.
+
+@INPROCEEDINGS{Faina2001,
+  AUTHOR       = {Faina, Luis F. and Pinto, Rossano P. and Guimar{\~a}es, Eliane G. and Cardozo, Eleri},
+  TITLE        = {Mobile Agents for Supporting Ubiquity in Telecommunication Services},
+  BOOKTITLE    = {Second Latin American Network Operation, Management Symposium (LANOMS)},
+  YEAR         = {2001},
+  EDITOR       = {Loureiro, A. and Nogueira, J.},
+  PAGES        = {50--61},
+  ADDRESS      = {Belo Horizonte},
+  MONTH        = aug
+}
+
+%% MANUAL - Uma documentação técnica.
+%%   - Campos requeridos: TITLE.
+%%   - Campos opcionais: AUTHOR, ORGANIZATION, ADDRESS, EDITION, MONTH, YEAR e NOTE.
+
+@MANUAL{IONA1999,
+  TITLE        = {Orbix Programming Reference},
+  AUTHOR       = {{\mbox IONA Technologies PLC}},
+  ORGANIZATION = {IONA Technologies PLC},
+  ADDRESS      = {Dublin, Ireland},
+  MONTH        = oct,
+  YEAR         = {1999}
+}
+
+@MANUAL{NBR6024:2012,
+  TITLE         = {{NBR} 6024},
+  AUTHOR        = {{ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS}},
+  ORGANIZATION  = {Associação Brasileira de Normas Técnicas},
+  ADDRESS       = {Rio de Janeiro},
+  MONTH         = feb,
+  YEAR          = {2012},
+  DATE-ADDED    = {2012-12-15 21:24:06 +0000},
+  DATE-MODIFIED = {2012-12-15 21:24:28 +0000},
+  ORG-SHORT     = {ABNT},
+  PAGES         = {4},
+  SUBTITLE      = {numeração progressiva das seções de um documento}
+}
+
+@MANUAL{NBR14724:2011,
+  TITLE         = {{NBR} 14724},
+  AUTHOR        = {{ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS}},
+  ORGANIZATION  = {Associação Brasileira de Normas Técnicas},
+  ADDRESS       = {Rio de Janeiro},
+  MONTH         = mar,
+  YEAR          = {2011},
+  NOTE          = {},
+  DATE-ADDED    = {2012-12-15 20:34:08 +0000},
+  DATE-MODIFIED = {2012-12-15 20:35:25 +0000},
+  ORG-SHORT     = {ABNT},
+  PAGES         = {15},
+  SUBTITLE      = {informação e documentação -- trabalhos acadêmicos -- apresentação}
+}
+
+@MANUAL{NBR10520:2002,
+  TITLE         = {{NBR} 10520},
+  AUTHOR        = {{ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS}},
+  ORGANIZATION  = {Associação Brasileira de Normas Técnicas},
+  ADDRESS       = {Rio de Janeiro},
+  MONTH         = aug,
+  YEAR          = {2002},
+  DATE-ADDED    = {2012-12-15 21:43:38 +0000},
+  DATE-MODIFIED = {2013-01-12 22:17:20 +0000},
+  ORG-SHORT     = {ABNT},
+  PAGES         = {7},
+  SUBTITLE      = {informação e documentação -- apresentação de citações em documentos}
+}
+
+@MANUAL{abnTeX2:2013,
+  TITLE         = {A classe abntex2},
+  AUTHOR        = {abnTeX2 and Araujo, Lauro C{\'e}sar},
+  ORGANIZATION  = {Equipe abnTeX2},
+  YEAR          = {2013},
+  BDSK-URL-1    = {http://code.google.com/p/abntex2/},
+  DATE-ADDED    = {2013-01-09 10:37:38 +0000},
+  DATE-MODIFIED = {2013-04-05 11:03:48 +0000},
+  URL           = {http://www.abntex.net.br/},
+  SUBTITLE      = {{modelo canônico de trabalhos acadêmicos brasileiros compatível com as normas ABNT NBR 14724:2011, ABNT NBR 6024:2012 e outras}},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+@MANUAL{abnTeX2:2013Cite,
+  TITLE         = {O pacote abntex2cite},
+  AUTHOR        = {abnTeX2 and Araujo, Lauro C{\'e}sar},
+  ORGANIZATION  = {Equipe abnTeX2},
+  YEAR          = {2013},
+  BDSK-URL-1    = {http://code.google.com/p/abntex2/},
+  DATE-ADDED    = {2013-01-09 10:37:45 +0000},
+  DATE-MODIFIED = {2013-04-05 10:47:36 +0000},
+  URL           = {http://www.abntex.net.br/},
+  SUBTITLE      = {{estilos bibliográficos compatíveis com a ABNT NBR 6023}},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+@MANUAL{abnTeX2:2013CiteAlf,
+  TITLE         = {O pacote abntex2cite},
+  AUTHOR        = {abnTeX2 and Araujo, Lauro C{\'e}sar},
+  ORGANIZATION  = {Equipe abnTeX2},
+  YEAR          = {2013},
+  BDSK-URL-1    = {http://code.google.com/p/abntex2/},
+  DATE-ADDED    = {2013-01-09 10:37:45 +0000},
+  DATE-MODIFIED = {2013-04-05 11:03:05 +0000},
+  URL           = {http://www.abntex.net.br/},
+  SUBTITLE      = {{tópicos específicos da ABNT NBR 10520:2002 e o estilo bibliográfico alfabético (sistema autor-data)}},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+@MANUAL{UTFPR2008,
+  TITLE        = {Orientação para a entrega de trabalhos acadêmicos},
+  AUTHOR       = {UTFPR},
+  ORGANIZATION = {Universidade Tecnológica Federal do Paraná},
+  ADDRESS      = {Curitiba},
+  EDITION      = {1a},
+  YEAR         = {2021},
+  URL          = {http://www.utfpr.edu.br/biblioteca/trabalhos-academicos/discentes},
+  URLACCESSDATE = {08 nov. 2021}
+}
+
+@MANUAL{Wilson2010,
+  TITLE         = {The Memoir Class for Configurable Typesetting - User Guide},
+  AUTHOR        = {Wilson, Peter and Madsen, Lars},
+  ORGANIZATION  = {The Herries Press},
+  ADDRESS       = {Normandy Park, WA, USA},
+  YEAR          = {2010},
+  BDSK-URL-1    = {http://ctan.tche.br/macros/latex/contrib/memoir/memman.pdf},
+  DATE-ADDED    = {2013-01-09 10:37:50 +0000},
+  DATE-MODIFIED = {2013-03-21 13:23:25 +0000},
+  URL           = {http://mirrors.ctan.org/macros/latex/contrib/memoir/memman.pdf},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+%% MASTERSTHESIS - Uma dissertação de mestrado.
+%%   - Campos requeridos: AUTHOR, TITLE, SCHOOL e YEAR.
+%%   - Campos opcionais: TYPE, ADDRESS, MONTH e NOTE.
+
+@MASTERSTHESIS{SantosFilho2003,
+  AUTHOR  = {Santos, Filho, Jos{\'e} C. S.},
+  TITLE   = {Combinação por Ganho Igual em Ambiente com Desvanecimento Arbitrário},
+  SCHOOL  = {Faculdade de Engenharia Elétrica e de Computação, Universidade Estadual de Campinas},
+  YEAR    = {2003},
+  ADDRESS = {Campinas},
+  MONTH   = aug,
+  PAGES   = {150}
+}
+
+@MASTERSTHESIS{Araujo2012,
+  AUTHOR        = {Araujo, Lauro C{\'e}sar},
+  TITLE         = {Configuração},
+  SCHOOL        = {Universidade de Brasília},
+  YEAR          = {2012},
+  ADDRESS       = {Brasília},
+  DATE-ADDED    = {2013-01-09 11:04:42 +0000},
+  DATE-MODIFIED = {2013-01-09 11:04:42 +0000},
+  SUBTITLE      = {uma perspectiva de arquitetura da informação da escola de {B}rasília}
+}
+
+%% MISC - Use esse tipo quando nada mais se encaixa.
+%%   - Campos requeridos: "NENHUM".
+%%   - Campos opcionais: AUTHOR, TITLE, HOWPUBLISHED, MONTH, YEAR e NOTE.
+
+
+@MISC{Larsson2003,
+  AUTHOR        = {Larsson, Alexander},
+  TITLE         = {Dia's Homepage},
+  HOWPUBLISHED  = {Lysator, The Academic Computer Society},
+  MONTH         = aug,
+  YEAR          = {2003},
+  URL           = {http://www.lysator.liu.se/~alla/dia/dia.html},
+  urlaccessdate = {28 nov. 2003}
+}
+
+@book{date2004,
+  title = {Introdução a sistemas de bancos de dados},
+  author = {Date, C.J.},
+  isbn = {9788535212730},
+  url = {https://books.google.com.br/books?id=xBeO9LSlK7UC},
+  year = {2004},
+  publisher = {ELSEVIER EDITORA},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+@MISC{Hadian1982,
+  AUTHOR       = {Hadian, R.},
+  TITLE        = {{Fotografia da erupção vulcânica em 1982 do Galungung, Indonésia (com descargas de raios), produzida pelo Serviço Geológico dos Estados Unidos da América}},
+  MONTH        = dec,
+  YEAR         = {1982},
+  NOTE         =  {Galunggung, Indonesia; 07.25 S 108.05 E; 2,168 m. His image is in the public domain because it contains materials that originally came from the U.S. National Oceanic and Atmospheric Administration, taken or made as part of an employee's official duties.},
+  ORGANIZATION = {U.S. National Oceanic and Atmospheric Administration},
+  URL          = {http://www.ngdc.noaa.gov/seg/hazard/img/200_res/30/30_603.tif},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+@MISC{Sartore2013,
+  AUTHOR       = {Sartore, Joel},
+  TITLE        = {{Camaleão pantera fotografado por Joel Sartore, National Geographic}},
+  MONTH        = mar,
+  YEAR         = {2013},
+  NOTE         = {Published March 5, 2013},
+  ORGANIZATION = {National Geographic},
+  URL          = {http://images.nationalgeographic.com/wpf/media-live/photos/000/649/cache/08-tedx-photo-ark-panther-chameleon_64915_600x450.jpg},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+@MISC{daSilva2009,
+  AUTHOR       = {da Silva, Erivanildo Lopes and Bahia, Marcus Vinicius},
+  TITLE        = {Compostos orgânicos: fórmulas estruturais e principais classes},
+  HOWPUBLISHED = {Site UOL Educação},
+  MONTH        = feb,
+  YEAR         = {2009},
+  ORGANIZATION = {Universidade Federal da Bahia},
+  URL          = {http://educacao.uol.com.br/disciplinas/quimica/compostos-organicos-formulas-estruturais-e-principais-classes.htm},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+@MISC{Smallen2014,
+  AUTHOR       = {Smallen, Shava},
+  TITLE        = {My \LaTeX\ notes},
+  HOWPUBLISHED = {San Diego Supercomputer Center},
+  MONTH        = feb,
+  YEAR         = {2014},
+  URL          = {http://users.sdsc.edu/~ssmallen/},
+  URLACCESSDATE = {21 ago. 2014}
+}
+
+%% PHDTHESIS - Uma tese de doutorado.
+%%   - Campos requeridos: AUTHOR, TITLE, SCHOOL e YEAR.
+%%   - Campos opcionais: TYPE, ADDRESS, MONTH e NOTE.
+
+@PHDTHESIS{Faina2000,
+  AUTHOR  = {Faina, Luis F.},
+  TITLE   = {Uma Arquitetura para Suporte à Ubiquidade dos Serviços de Telecomunicações Baseada na Arquitetura {TINA} e em Agentes Móveis},
+  SCHOOL  = {Faculdade de Engenharia Elétrica e de Computação, Universidade Estadual de Campinas},
+  YEAR    = {2000},
+  ADDRESS = {Campinas},
+  MONTH   = dec,
+  PAGES   = {150}
+}
+
+%% PROCEEDINGS - As deliberações de uma conferência.
+%%   - Campos requeridos: TITLE e YEAR.
+%%   - Campos opcionais: EDITOR, VOLUME ou NUMBER, SERIES, ADDRESS, MONTH, ORGANIZATION, PUBLISHER e NOTE.
+
+@PROCEEDINGS{Pirmez2002,
+  TITLE        = {{Anais do XX Simpósio Brasileiro de Redes de Computadores}},
+  YEAR         = {2002},
+  EDITOR       = {Pirmez, Luci and Carmo, Luis Fernando and Mac{\^e}do, Raimundo Jos{\'e}},
+  ADDRESS      = {Rio de Janeiro},
+  MONTH        = may,
+  ORGANIZATION = {Sociedade Brasileira de Computação},
+  PUBLISHER    = {Núcleo de Computação Eletrônica da UFRJ}
+}
+
+%% TECHREPORT - Um relatório publicado por uma escola ou uma outra instituição, geralmente dentro de uma série numerada.
+%%   - Campos requeridos: AUTHOR, TITLE, INSTITUTION e YEAR.
+%%   - Campos opcionais: TYPE, NUMBER, ADDRESS, MONTH e NOTE.
+
+@TECHREPORT{OMG2000,
+  AUTHOR      = {{OMG}},
+  TITLE       = {Audio/Video Streams, Version 1.0},
+  INSTITUTION = {Object Management Group (OMG)},
+  YEAR        = {2000},
+  TYPE        = {OMG Specification},
+  ADDRESS     = {Massachusetts, USA},
+  MONTH       = jan,
+  NOTE        = {formal/2000-01-03},
+  URL         = {http://www.omg.org/},
+  URLACCESSDATE = {21 ago. 2013}
+}
+
+%% UNPUBLISHED - Um documento com um autor e um título, mas não publicado formalmente.
+%%   - Campos requeridos: AUTHOR, TITLE e NOTE.
+%%   - Campos opcionais: MONTH e YEAR.
+
+@UNPUBLISHED{Sichman2002,
+  AUTHOR = {Sichman, Jaime S.},
+  TITLE  = {Sobre Agentes Móveis e Fixos},
+  NOTE   = {Comunicação pessoal por e-mail},
+  MONTH  = mar,
+  YEAR   = {2002}
+}
+
+%% CAMPOS
+%%
+%% Os tipos de entradas bibliográficas contém alguns subconjuntos padrões de entradas de dados:
+%%   - ADDRESS: Endereço da editora (normalmente, apenas a cidade, mas pode ser o endereço completo para editoras menos conhecidas).
+%%   - ANNOTE: Uma anotação para estilos bibliográficos adotados (não típico).
+%%   - AUTHOR: O(s) nome(s) do(s) autor(es) (no caso de haver mais de um autor, separá-los por "and").
+%%   - BOOKTITLE: O título do livro, mesmo que apenas parte dele esteja sendo citado.
+%%   - CHAPTER: O número do capítulo.
+%%   - CROSSREF: A chave de entrada da referência cruzada.
+%%   - EDITION: A edição de um livro, forma longa (como o "primeiro" ou "segundo").
+%%   - EDITOR: O(s) nome(s) do(s) editor(es).
+%%   - EPRINT: A especificação de uma publicação eletrônica, muitas vezes um "preprint" ou um relatório técnico.
+%%   - HOWPUBLISHED: Como ele foi publicado, se o método de publicação não é típico.
+%%   - INSTITUTION: A instituição que esteve envolvida na publicação, mas não é necessariamente a editora.
+%%   - JOURNAL: O jornal ou a revista onde o trabalho foi publicado.
+%%   - KEY: Um campo oculto utilizado para especificar ou colocar em ordem alfabética as entradas (quando o campos "autor" e
+%%     "editor" estão em falta). Note que isto é muito diferente da chave (mencionados apenas após esta lista) que é usado para
+%%     citar ou fazer uma referência cruzada à entrada.
+%%   - MONTH: O mês de publicação (ou, se não publicado, no mês de criação).
+%%   - NOTE: Diversas informações extras.
+%%   - NUMBER: O "número" de um jornal, uma revista, ou um relatório técnico, se aplicável. (A maioria das publicações tem um campo
+%%     "volume", mas não o campo "número").
+%%   - ORGANIZATION: A organização patrocinadora.
+%%   - PAGES: números de página, separados por vírgulas ou hifens duplo. Para os livros, o número total de páginas.
+%%   - PUBLISHER: O nome da editora.
+%%   - SCHOOL: A escola onde a tese ou dissertação foi escrita.
+%%   - SERIES: A série de livros onde foi publicado em (por exemplo: "A Hardy Boys" ou "Lecture Notes in Computer Science").
+%%   - TITLE: o título do trabalho.
+%%   - TYPE: O tipo de relatório técnico, por exemplo, "Nota de Investigação".
+%%   - URL: O endereço da web.
+%%   - VOLUME: O volume de uma revista ou de um livro com vários volumes.
+%%   - YEAR: O ano de publicação (ou, se não publicado, o ano de criação).
+%%
+%% Além disto, cada entrada contém uma chave (rótulo) que é usada para citar ou uma entrada de referência cruzada. Esta chave é o
+%% primeiro item em uma entrada BibTeX, e não faz parte de qualquer domínio.
+
+@article{tomasulo:algorithm:5392028,
+  author = {Tomasulo, R. M.},
+  title = {An Efficient Algorithm for Exploiting Multiple Arithmetic Units},
+  journal = {IBM Journal of Research and Development},
+  year = {1967},
+  month = {Jan},
+  number = {1},
+  pages = {25-33},
+  volume = {11},
+  doi = {10.1147/rd.111.0025},
+  ISSN = {0018-8646}
+}
+
+@article{Cruz2003,
+  author = {Cruz, Renato},
+  title = {Padrão Brasileiro de {TV} Enfrenta Oposição},
+  journal = {O Estado de São Paulo},
+  address = {São Paulo},
+  year = {2003},
+  month = {fev},
+  day = {2}
+}
+
+@misc{Moore:2000:CMC:333067.333074,
+  author = {Moore, Gordon E.},
+  title = {Readings in Computer Architecture},
+  year = {2000},
+  url = {http://dl.acm.org/citation.cfm?id=333067.333074},
+  urlaccessdate = {21 ago. 2013}
+}
+
+@article{vanschoren2012meta,
+  title={Experiment databases for machine learning},
+  author={Vanschoren, Joaquin and Blockeel, Hendrik and Pfahringer, Bernhard and Holmes, Geoffrey},
+  journal={ACM SIGKDD Explorations Newsletter},
+  volume={13},
+  number={2},
+  pages={17--23},
+  year={2012},
+  publisher={ACM}
+}
+
+@article{reif2014automatic,
+  title={Automatic classifier selection for non-experts},
+  author={Reif, Matthias and Shafait, Faisal and Dengel, Andreas},
+  journal={Pattern Analysis and Applications},
+  volume={17},
+  pages={83--96},
+  year={2014},
+  publisher={Springer}
+}
+
+@article{ali2020mega,
+author = {Paria Golshanrad and Hossein Rahmani and Banafsheh Karimian and Fatemeh Karimkhani and Gerhard Weiss},
+title ={MEGA: Predicting the best classifier combination using meta-learning and a genetic algorithm},
+
+journal = {Intelligent Data Analysis},
+volume = {25},
+number = {6},
+pages = {1547-1563},
+year = {2021},
+doi = {10.3233/IDA-205494},
+
+URL = { 
+    
+    
+        https://journals.sagepub.com/doi/abs/10.3233/IDA-205494
+    
+
+},
+eprint = { 
+    
+    
+        https://journals.sagepub.com/doi/pdf/10.3233/IDA-205494
+    
+
+}
+,
+    abstract = { Classifier combination through ensemble systems is one of the most effective approaches to improve the accuracy of classification systems. Ensemble systems are generally used to combine classifiers; However, selecting the best combination of individual classifiers is a challenging task. In this paper, we propose an efficient assembling method that employs both meta-learning and a genetic algorithm for the selection of the best classifiers. Our method is called MEGA, standing for using MEta-learning and a Genetic Algorithm for algorithm recommendation. MEGA has three main components: Training, Model Interpretation and Testing. The Training component extracts meta-features of each training dataset and uses a genetic algorithm to discover the best classifier combination. The Model Interpretation component interprets the relationships between meta-features and classifiers using a priori and multi-label decision tree algorithms. Finally, the Testing component uses a weighted k-nearest-neighbors algorithm to predict the best combination of classifiers for unseen datasets. We present extensive experimental results that demonstrate the performance of MEGA. MEGA achieves superior results in a comparison of three other methods and, most importantly, is able to find novel interpretable rules that can be used to select the best combination of classifiers for an unseen dataset. }
+}
+@inproceedings{bilalli2017predictive,
+  title={Predictive modeling through meta-learning: a survey},
+  author={Bilalli, Bashkim and Abell{\'o}, Alberto and Aluja-Banet, Tom{\`a}s},
+  booktitle={CEUR Workshop Proceedings},
+  volume={2032},
+  pages={1--10},
+  year={2017}
+}
+
+@misc{wang2021ensemblelearningbasedclassification,
+      title={Ensemble Learning Based Classification Algorithm Recommendation}, 
+      author={Guangtao Wang and Qinbao Song and Xiaoyan Zhu},
+      year={2021},
+      eprint={2101.05993},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR},
+      url={https://arxiv.org/abs/2101.05993}, 
+}
+
+@misc{fusi2018probabilistic,
+  title={Probabilistic matrix factorization for automated machine learning},
+  author={Fusi, Nicolo and Sheth, Rushin and Graepel, Thore},
+  year={2018},
+  note={Microsoft Research Technical Report}
+}
+
+@article{zhao2021gnnmeta,
+  title={Meta-learning with graph neural networks for algorithm recommendation},
+  author={Zhao, Shuo and Wang, Xia and Zhang, Chuan},
+  journal={IEEE Transactions on Neural Networks and Learning Systems},
+  year={2021},
+  publisher={IEEE}
+}
+
+@article{maldonado2014meta,
+  title={A meta-learning approach for selecting classification models based on dataset complexity},
+  author={Maldonado, Sebastian and Weber, Richard and Basak, Debasis},
+  journal={Applied Soft Computing},
+  volume={27},
+  pages={351--362},
+  year={2014},
+  publisher={Elsevier}
+}
+
+@article{garcia2016meta,
+  title={Using meta-learning to recommend feature selection algorithms},
+  author={García, Salvador and Luengo, Julián and Herrera, Francisco},
+  journal={Soft Computing},
+  volume={20},
+  number={2},
+  pages={665--675},
+  year={2016},
+  publisher={Springer}
+}
+
+@inproceedings{pfahringer2000meta,
+  title={Meta-learning by landmarking various learning algorithms},
+  author={Pfahringer, Bernhard and Bensusan, Hilan and Giraud-Carrier, Christophe},
+  booktitle={Proceedings of the Seventeenth International Conference on Machine Learning (ICML)},
+  pages={743--750},
+  year={2000}
+}
+
+@article{Khadiev2019TheQV,
+  title={The Quantum Version Of Classification Decision Tree Constructing Algorithm C5.0},
+  author={Kamil Ravilevich Khadiev and Ilnaz Mannapov and Liliya Safina},
+  journal={ArXiv},
+  year={2019},
+  volume={abs/1907.06840},
+  url={https://api.semanticscholar.org/CorpusID:196831492}
+}
+
+@article{varshney2015persistent,
+  title={Persistent topology of decision boundaries},
+  author={Varshney, Kush R. and Ramamurthy, Karthikeyan Natesan},
+  journal={ICASSP},
+  pages={3931--3935},
+  year={2015},
+  publisher={IEEE}
+}
+
+@misc{ramamurthy2018topological,
+      title={Topological Data Analysis of Decision Boundaries with Application to Model Selection}, 
+      author={Karthikeyan Natesan Ramamurthy and Kush R. Varshney and Krishnan Mody},
+      year={2018},
+      eprint={1805.09949},
+      archivePrefix={arXiv},
+      primaryClass={stat.ML},
+      url={https://arxiv.org/abs/1805.09949}, 
+}
+
+@article{douce2024bridging,
+      title={Bridging Diversity and Uncertainty in Active learning with Self-Supervised Pre-Training}, 
+      author={Paul Doucet and Benjamin Estermann and Till Aczel and Roger Wattenhofer},
+      year={2025},
+      eprint={2403.03728},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2403.03728}, 
+}
+
+@article{khan,
+author = {Khan, Irfan and Zhang, Xianchao and Ayyasamy, Ramesh Kumar and Ali, Rahman},
+year = {2023},
+month = {07},
+pages = {1773-1793},
+title = {AutoFe-Sel: A Meta-learning based methodology for Recommending Feature Subset Selection Algorithms},
+volume = {17},
+journal = {KSII Transactions on Internet and Information Systems},
+doi = {10.3837/tiis.2023.07.002}
+}
+
+@article{DBLP:journals/corr/abs-2106-03954,
+  author       = {Geand Trindade Pereira and
+                  Mois{\'{e}}s Rocha dos Santos and
+                  Andr{\'{e}} Carlos Ponce de Leon Ferreira de Carvalho},
+  title        = {Evaluating Meta-Feature Selection for the Algorithm Recommendation
+                  Problem},
+  journal      = {CoRR},
+  volume       = {abs/2106.03954},
+  year         = {2021},
+  url          = {https://arxiv.org/abs/2106.03954},
+  eprinttype    = {arXiv},
+  eprint       = {2106.03954},
+  timestamp    = {Thu, 10 Jun 2021 16:34:18 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2106-03954.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{inproceedings,
+author = {Filchenkov, Andrey},
+year = {2015},
+month = {11},
+pages = {},
+title = {Datasets Meta-Feature Description for Recommending Feature Selection Algorithm},
+doi = {10.1109/AINL-ISMW-FRUCT.2015.7382962}
+}
+
+
+
+@article{DBLP:journals/corr/abs-2004-11149,
+  author       = {Huimin Peng},
+  title        = {A Comprehensive Overview and Survey of Recent Advances in Meta-Learning},
+  journal      = {CoRR},
+  volume       = {abs/2004.11149},
+  year         = {2020},
+  url          = {https://arxiv.org/abs/2004.11149},
+  eprinttype    = {arXiv},
+  eprint       = {2004.11149},
+  timestamp    = {Sat, 23 Jan 2021 01:11:18 +0100},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2004-11149.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+
+
+
+
+@book{Domingos2012,
+  title={O algoritmo mestre: como a busca pelo algoritmo de machine learning definitivo recriar{\'a} nosso mundo},
+  author={Domingos, Pedro},
+  year={2017},
+  publisher={Novatec Editora}
+}
+
+@mastersthesis{Schoenfeld2020,
+  author = {Schoenfeld, Brandon J.},
+  title = {Metalearning by Exploiting Granular Machine Learning Pipeline Metadata},
+  school = {Brigham Young University},
+  year = {2020},
+  url = {https://scholarsarchive.byu.edu/etd/8730/}
+}
+
+@article{Schoenfeld2022,
+  author = {Schoenfeld, Brandon and Seppi, Kevin and Giraud-Carrier, Christophe},
+  title = {Metalearning using structure-rich pipeline representations for improved AutoML},
+  journal = {International Journal of Data Analysis Techniques and Strategies},
+  year = {2022},
+  volume = {14},
+  number = {1},
+  pages = {49-72},
+  doi = {10.1504/IJDATS.2022.129174},
+  url = {https://www.inderscienceonline.com/doi/abs/10.1504/IJDATS.2022.129174}
+}
+
+@article{Vanschoren2018,
+  author = {Vanschoren, Joaquin},
+  title = {Meta-Learning: A Survey},
+  journal = {arXiv preprint arXiv:1810.03548},
+  year = {2018},
+  url = {https://arxiv.org/abs/1810.03548}
+}
+
+@article{Wolpert1997,
+  author  = {Wolpert, David H. and Macready, William G.},
+  title   = {No Free Lunch Theorems for Optimization},
+  journal = {IEEE Transactions on Evolutionary Computation},
+  volume  = {1},
+  number  = {1},
+  pages   = {67--82},
+  year    = {1997}
+}
+
+@techreport{Settles2009,
+  author = {Settles, Burr},
+  title = {Active Learning Literature Survey},
+  institution = {University of Wisconsin--Madison},
+  year = {2009},
+  number = {1648},
+  url = {https://minds.wisconsin.edu/bitstream/handle/1793/60660/TR1648.pdf?sequence=1&isAllowed=y.}
+}
+
+@article{Vanschoren2014,
+  author = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},
+  title = {OpenML: Networked Science in Machine Learning},
+  journal = {ACM SIGKDD Explorations Newsletter},
+  year = {2014},
+  volume = {15},
+  number = {2},
+  pages = {49--60},
+  doi = {10.1145/2641190.2641198},
+  url = {https://www.kdd.org/exploration_files/15-2-2013-12.pdf#page=51}
+}
+
+@inproceedings{Triantafillou2020,
+  title={Meta-Dataset: A Dataset of Datasets for Learning to Learn from Few Examples},
+  author={Eleni Triantafillou and Tyler Zhu and Vincent Dumoulin and Pascal Lamblin and Utku Evci and Kelvin Xu and Ross Goroshin and Carles Gelada and Kevin Swersky and Pierre-Antoine Manzagol and Hugo Larochelle},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2020},
+  url={https://arxiv.org/abs/1903.03096}
+}
+
+@article{Jomaa2021,
+  author    = {Jomaa, Hadi S. and Schmidt-Thieme, Lars and Grabocka, Josif},
+  title     = {Dataset2Vec: Learning Dataset Meta-Features},
+  journal   = {Data Mining and Knowledge Discovery},
+  volume    = {35},
+  number    = {3},
+  pages     = {964--985},
+  year      = {2021},
+  doi       = {10.1007/s10618-021-00737-9}
+}
+
+@inproceedings{Feurer2015,
+  author    = {Feurer, Matthias and Springenberg, Jost Tobias and Hutter, Frank},
+  title     = {Initializing Bayesian Hyperparameter Optimization via Meta-Learning},
+  booktitle = {Proceedings of the Twenty-Ninth {AAAI} Conference on Artificial Intelligence},
+  pages     = {1128--1135},
+  publisher = {AAAI Press},
+  address   = {Austin, Texas, USA},
+  year      = {2015}
+}
+
+@article{Vilalta2002,
+  author  = {Vilalta, Ricardo and Drissi, Youssef},
+  title   = {A Perspective View and Survey of Meta-Learning},
+  journal = {Artificial Intelligence Review},
+  volume  = {18},
+  pages   = {77--95},
+  year    = {2002}
+}
+
+@book{Brazdil2008,
+  author    = {Brazdil, Pavel and Giraud-Carrier, Christophe and Soares, Carlos and Vilalta, Ricardo},
+  title     = {Metalearning: Applications to Data Mining},
+  series    = {Cognitive Technologies},
+  publisher = {Springer},
+  year      = {2008}
+}
+
+@article{Cohn1994,
+  author  = {Cohn, David and Atlas, Les and Ladner, Richard},
+  title   = {Improving Generalization with Active Learning},
+  journal = {Machine Learning},
+  volume  = {15},
+  pages   = {201--221},
+  year    = {1994}
+}
+
+@article{Hochreiter1997,
+  author  = {Hochreiter, Sepp and Schmidhuber, J{\"u}rgen},
+  title   = {Long Short-Term Memory},
+  journal = {Neural Computation},
+  volume  = {9},
+  number  = {8},
+  pages   = {1735--1780},
+  year    = {1997}
+}
+
+@inproceedings{Reif2012,
+  author    = {Reif, Matthias and Shafait, Faisal and Dengel, Andreas},
+  title     = {Meta2-Features: Providing Meta-Learners More Information},
+  booktitle = {Poster and Demo Track of the 35th German Conference on Artificial Intelligence (KI)},
+  year      = {2012}
+}
+
+@article{Cover1967,
+  author  = {Cover, Thomas M. and Hart, Peter E.},
+  title   = {Nearest Neighbor Pattern Classification},
+  journal = {IEEE Transactions on Information Theory},
+  volume  = {13},
+  number  = {1},
+  pages   = {21--27},
+  year    = {1967}
+}
+
+@article{Altman1992,
+  author  = {Altman, Naomi S.},
+  title   = {An Introduction to Kernel and Nearest-Neighbor Nonparametric Regression},
+  journal = {The American Statistician},
+  volume  = {46},
+  number  = {3},
+  pages   = {175--185},
+  year    = {1992}
+}
+
+@inproceedings{Brodersen2010,
+  author    = {Brodersen, Kay H. and Ong, Cheng Soon and Stephan, Klaas E. and Buhmann, Joachim M.},
+  title     = {The Balanced Accuracy and Its Posterior Distribution},
+  booktitle = {Proceedings of the 20th International Conference on Pattern Recognition (ICPR)},
+  pages     = {3121--3124},
+  year      = {2010}
+}
+
+@article{Bentley1975,
+  author  = {Bentley, Jon Louis},
+  title   = {Multidimensional Binary Search Trees Used for Associative Searching},
+  journal = {Communications of the ACM},
+  volume  = {18},
+  number  = {9},
+  pages   = {509--517},
+  year    = {1975}
+}
+
+@inproceedings{Sener2018,
+  author    = {Sener, Ozan and Savarese, Silvio},
+  title     = {Active Learning for Convolutional Neural Networks: A Core-Set Approach},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2018}
+}
+
+@inproceedings{Lippmann2016,
+  author    = {Lippmann, Richard and Campbell, William and Campbell, Joseph},
+  title     = {An Overview of the {DARPA} Data Driven Discovery of Models ({D3M}) Program},
+  booktitle = {29th Conference on Neural Information Processing Systems (NIPS)},
+  address   = {Barcelona, Spain},
+  year      = {2016}
+}
+
+@inproceedings{Wistuba2016,
+  author    = {Wistuba, Martin and Schilling, Nicolas and Schmidt-Thieme, Lars},
+  title     = {Two-stage Transfer Surrogate Model for Automatic Hyperparameter Optimization},
+  booktitle = {Joint European Conference on Machine Learning and Knowledge Discovery in Databases (ECML/PKDD)},
+  pages     = {13--28},
+  year      = {2016}
+}
+
+@inproceedings{Edwards2017,
+  author    = {Edwards, Harrison and Storkey, Amos},
+  title     = {Towards a Neural Statistician},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2017}
+}
+
+@article{Spearman1904,
+  author  = {Spearman, Charles},
+  title   = {The Proof and Measurement of Association between Two Things},
+  journal = {The American Journal of Psychology},
+  volume  = {15},
+  number  = {1},
+  pages   = {72--101},
+  year    = {1904}
+}
+
+@article{Kendall1938,
+  author  = {Kendall, Maurice George},
+  title   = {A New Measure of Rank Correlation},
+  journal = {Biometrika},
+  volume  = {30},
+  number  = {1/2},
+  pages   = {81--93},
+  year    = {1938}
+}
+
+@article{Fernandez-Delgado2014,
+  author  = {Fern{\'a}ndez-Delgado, Manuel and Cernadas, Eva and Barro, Sen{\'e}n and Amorim, Dinani},
+  title   = {Do we Need Hundreds of Classifiers to Solve Real World Classification Problems?},
+  journal = {Journal of Machine Learning Research},
+  volume  = {15},
+  number  = {1},
+  pages   = {3133--3181},
+  year    = {2014}
+}
+
+@inproceedings{FeurerAutosklearn2015,
+  author    = {Feurer, Matthias and Klein, Aaron and Eggensperger, Katharina and Springenberg, Jost Tobias and Blum, Manuel and Hutter, Frank},
+  title     = {Efficient and Robust Automated Machine Learning},
+  booktitle = {Advances in Neural Information Processing Systems 28 (NIPS 2015)},
+  pages     = {2962--2970},
+  publisher = {Curran Associates, Inc.},
+  year      = {2015}
+}
+
+@inproceedings{Maher2019,
+  author    = {Maher, Mohamed and Sakr, Sherif},
+  title     = {{SmartML}: A Meta Learning-Based Framework for Automated Selection and Hyperparameter Tuning for Machine Learning Algorithms},
+  booktitle = {Proceedings of the 22nd International Conference on Extending Database Technology (EDBT 2019)},
+  pages     = {554--557},
+  address   = {Lisboa, Portugal},
+  year      = {2019}
+}
+
+@article{Pedregosa2011,
+  author  = {Pedregosa, Fabian and Varoquaux, Ga{\"e}l and Gramfort, Alexandre and Michel, Vincent and Thirion, Bertrand and Grisel, Olivier and Blondel, Mathieu and Prettenhofer, Peter and Weiss, Ron and Dubourg, Vincent and Vanderplas, Jake and Passos, Alexandre and Cournapeau, David and Brucher, Matthieu and Perrot, Matthieu and Duchesnay, {\'E}douard},
+  title   = {Scikit-learn: Machine Learning in Python},
+  journal = {Journal of Machine Learning Research},
+  volume  = {12},
+  pages   = {2825--2830},
+  year    = {2011}
+}
+
+@article{Breiman2001,
+  author  = {Breiman, Leo},
+  title   = {Random Forests},
+  journal = {Machine Learning},
+  volume  = {45},
+  number  = {1},
+  pages   = {5--32},
+  year    = {2001}
+}
+
+@article{Cortes1995,
+  author  = {Cortes, Corinna and Vapnik, Vladimir},
+  title   = {Support-Vector Networks},
+  journal = {Machine Learning},
+  volume  = {20},
+  number  = {3},
+  pages   = {273--297},
+  year    = {1995}
+}
+
+@article{Quinlan1986,
+  author  = {Quinlan, J. Ross},
+  title   = {Induction of Decision Trees},
+  journal = {Machine Learning},
+  volume  = {1},
+  number  = {1},
+  pages   = {81--106},
+  year    = {1986}
+}
+
+@book{Jolliffe2002,
+  author    = {Jolliffe, Ian T.},
+  title     = {Principal Component Analysis},
+  edition   = {2},
+  publisher = {Springer},
+  address   = {New York},
+  year      = {2002}
+}
+
+@article{Guyon2003,
+  author  = {Guyon, Isabelle and Elisseeff, Andr{\'e}},
+  title   = {An Introduction to Variable and Feature Selection},
+  journal = {Journal of Machine Learning Research},
+  volume  = {3},
+  pages   = {1157--1182},
+  year    = {2003}
+}
+
+@book{Bishop2006,
+  author    = {Bishop, Christopher M.},
+  title     = {Pattern Recognition and Machine Learning},
+  publisher = {Springer},
+  address   = {New York},
+  year      = {2006}
+}
+
+@inproceedings{Olson2016TPOT,
+  author    = {Olson, Randal S. and Urbanowicz, Ryan J. and Andrews, Peter C. and Lavender, Nicole A. and Kidd, La Creis and Moore, Jason H.},
+  title     = {Automating Biomedical Data Science Through Tree-Based Pipeline Optimization},
+  booktitle = {Applications of Evolutionary Computation},
+  pages     = {123--137},
+  publisher = {Springer},
+  year      = {2016}
+}
+
+@misc{Dua2019,
+  author       = {Dua, Dheeru and Graff, Casey},
+  title        = {{UCI} Machine Learning Repository},
+  howpublished = {University of California, Irvine, School of Information and Computer Sciences},
+  year         = {2019},
+  url          = {https://archive.ics.uci.edu/ml}
+}

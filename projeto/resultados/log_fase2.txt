@@ -1,0 +1,75 @@
+C:\Users\GarraPC\Documents\TCC\projeto\fase1_meta_conjunto\..\fase2_metamodelos\recomendador.py:26: UserWarning: Dataset2Vec indisponível (No module named 'tensorflow'). Usando embedding estatístico avançado (publicável para Python \u2265 3.13).
+  from fase1_meta_conjunto.embedding_generator import gerar_embedding
+============================================================
+  FASE 2 – Predição de Ranking por Meta-aprendizado
+============================================================
+
+[1/6] Carregando matrizes X_emb e Y_accuracy...
+Matrizes carregadas: X_emb=(201, 64), Y_accuracy=(201, 60), 201 datasets, 60 pipelines.
+  201 datasets × 60 pipelines  (NaN: 172 células)
+
+[2/6] Avaliação LOO do preditor KNN (KDTree multi-output)...
+
+  [LOO-KNN] k=1  (201 folds)...
+    Spearman=nan±nan  |  Kendall=nan±nan  |  NDCG=0.9834±0.0266  (199 folds)
+
+  [LOO-KNN] k=3  (201 folds)...
+    Spearman=nan±nan  |  Kendall=nan±nan  |  NDCG=0.9831±0.0417  (199 folds)
+
+  [LOO-KNN] k=5  (201 folds)...
+    Spearman=nan±nan  |  Kendall=nan±nan  |  NDCG=0.9842±0.0408  (199 folds)
+
+  [LOO-KNN] k=7  (201 folds)...
+    Spearman=nan±nan  |  Kendall=nan±nan  |  NDCG=0.9845±0.0387  (199 folds)
+
+  [LOO-KNN] k=10  (201 folds)...
+    Spearman=nan±nan  |  Kendall=nan±nan  |  NDCG=0.9845±0.0383  (199 folds)
+
+  Resultados KNN-LOO salvos em: C:\Users\GarraPC\Documents\TCC\projeto\resultados\metricas\loo_knn_resumo.csv
+
+Resumo KNN-LOO:
+ k  spearman_media  spearman_std  kendalltau_media  kendalltau_std  ndcg_media  ndcg_std
+ 1             NaN           NaN               NaN             NaN    0.983352  0.026595
+ 3             NaN           NaN               NaN             NaN    0.983065  0.041742
+ 5             NaN           NaN               NaN             NaN    0.984225  0.040751
+ 7             NaN           NaN               NaN             NaN    0.984511  0.038667
+10             NaN           NaN               NaN             NaN    0.984485  0.038321
+
+[3/6] Avaliação LOO do preditor MLP (BCE loss)...
+C:\Users\GarraPC\Documents\TCC\projeto\fase1_meta_conjunto\..\fase2_metamodelos\avaliacao_ranking.py:184: UserWarning: PyTorch não encontrado. PreditorMLPRanking não estará disponível. Instale com: pip install torch
+  from fase2_metamodelos.preditor_mlp import PreditorMLPRanking
+
+  [LOO-MLP] 201 folds...
+  [AVISO] MLP pulado: PyTorch não encontrado. Instale com: pip install torch
+
+[4/6] Selecionando melhor k pelo Kendall's tau médio...
+  Melhor k = 1  (Kendall=nan ± nan, Spearman=nan ± nan)
+
+[5/6] Demonstração – recomendação para dataset holdout (task_id=363713)...
+
+  Holdout task_id=363713:
+    Spearman rho = 0.9654  (p=0.0000)
+    Kendall  tau = 0.8840  (p=0.0000)
+    NDCG         = 0.9995  (sklearn.metrics.ndcg_score)
+
+  Recomendações salvas em: C:\Users\GarraPC\Documents\TCC\projeto\resultados\metricas\recomendacoes_holdout.csv
+
+[6/6] Gerando visualizações de ranking...
+  Figura salva: C:\Users\GarraPC\Documents\TCC\projeto\resultados\figuras\ranking_loo_knn.png
+C:\Users\GarraPC\Documents\TCC\projeto\fase1_meta_conjunto\..\utils\visualizacao.py:162: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.boxplot(data=df_melt, x="Métrica", y="Valor",
+  Figura salva: C:\Users\GarraPC\Documents\TCC\projeto\resultados\figuras\ranking_distribuicao_metricas.png
+  Figura salva: C:\Users\GarraPC\Documents\TCC\projeto\resultados\figuras\matriz_similaridade_embeddings.png
+
+============================================================
+  Fase 2 concluída.
+  Melhor preditor: KNN k=1
+  Kendall médio  (LOO): nan ± nan
+  Spearman médio (LOO): nan ± nan
+  NDCG médio     (LOO): 0.9834 ± 0.0266
+  Métricas em: resultados/metricas/
+  Figuras em:  resultados/figuras/
+============================================================

@@ -1,0 +1,75 @@
+%%%% CAPÍTULO 3 – TRABALHOS RELACIONADOS
+\chapter{Trabalhos Relacionados}\label{cap:trabalhosRelacionados}
+
+Este capítulo apresenta os principais trabalhos relacionados à proposta desta pesquisa, organizados em três eixos temáticos: (i) abordagens para extração de meta-características e representação de conjuntos de dados; (ii) sistemas de recomendação de algoritmos e pipelines de aprendizado de máquina via meta-aprendizado; e (iii) estratégias de avaliação de complexidade de fronteiras de decisão e aprendizado ativo. Ao final, é apresentada uma síntese comparativa que posiciona a presente proposta em relação ao estado da arte.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Representação de Datasets e Meta-características}
+\label{sec:relMetaFeatures}
+
+A qualidade dos metamodelos em sistemas de meta-aprendizado depende diretamente da capacidade de representar conjuntos de dados de forma compacta e informativa. Historicamente, duas correntes principais se desenvolveram: a engenharia de meta-características estáticas e a aprendizagem de meta-características por redes neurais.
+
+\citeonline{Vanschoren2014} introduzem o OpenML, uma plataforma colaborativa que centraliza conjuntos de dados, experimentos e resultados de algoritmos em um repositório público e estruturado. Além de prover acesso unificado a centenas de conjuntos de dados anotados, o OpenML define uma infraestrutura para coleta sistemática de meta-dados — acurácias, tempos de execução, hiperparâmetros utilizados — que viabiliza a construção de grandes meta-conjuntos. Esta plataforma constitui a principal fonte de dados do presente trabalho, tendo fornecido os 201 conjuntos utilizados nos experimentos.
+
+\citeonline{Schoenfeld2022} investigam a construção de meta-conjuntos de grande escala para otimização de pipelines, criando uma base com aproximadamente 400 mil instâncias derivadas de 4 mil pipelines avaliados em 194 conjuntos do programa D3M. O trabalho demonstra empiricamente que metamodelos que consideram metadados granulares de toda a estrutura do pipeline superam abordagens que utilizam apenas representações simplificadas. Os autores mostram, ainda, que o ranqueamento baseado em similaridade de meta-características fornece recomendações superiores às estimativas de desempenho absoluto, convergindo diretamente com a abordagem adotada neste TCC.
+
+\citeonline{Jomaa2021} propõem o \textbf{Dataset2Vec}, um extrator de meta-features baseado em uma arquitetura DeepSet que representa conjuntos de dados como conjuntos hierárquicos de pares preditores-alvo. O modelo é treinado com uma tarefa auxiliar de aprendizagem de similaridade entre conjuntos de dados (\textit{dataset similarity learning}), que determina se dois subconjuntos amostrados provêm do mesmo conjunto. Os resultados experimentais com 120 conjuntos UCI para a tarefa de otimização de hiperparâmetros demonstram que as meta-features aprendidas pelo Dataset2Vec superam meta-features estáticas tradicionais (MF1 de \citeonline{Wistuba2016} com 22 dimensões; MF2 de \citeonline{Feurer2015} com 46 dimensões) e o \textit{Neural Statistician} (\citeonline{Edwards2017}) em termos de correlação de Spearman com os alvos de desempenho.
+
+O presente trabalho diferencia-se do Dataset2Vec em dois aspectos fundamentais: (1) ao invés de embeddings neurais, utiliza-se um embedding distribucional de 64 dimensões, produzido sem necessidade de treinamento prévio, com propriedades análogas ao MF2 mas com maior riqueza por capturar a \textit{distribuição} das meta-features por atributo (não apenas médias globais); (2) a tarefa meta-nível é o \textit{ranqueamento de pipelines} (não apenas otimização de hiperparâmetros), sobre um meta-conjunto de 201 conjuntos de dados. Esta escolha de embedding estático garante a propriedade de independência de esquema (\textbf{D1} na taxonomia do Dataset2Vec), escalabilidade sem treinamento (\textbf{D3}) e reprodutibilidade, ao custo de expressividade potencialmente menor (\textbf{D2}) em relação a abordagens neurais.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Sistemas de Recomendação de Algoritmos e Pipelines}
+\label{sec:relRecomendacao}
+
+\citeonline{Schoenfeld2020} propõem um metamodelo baseado em rede neural dinamicamente configurável, capaz de modelar DAGs arbitrários de pipelines. O sistema representa cada operador do pipeline com um subrrede específica e combina as representações por uma função de pooling global. Esta abordagem permite estimar o desempenho de configurações de pipeline inéditas sem avaliação direta, tornando a exploração do espaço de busca mais eficiente. A arquitetura supera metamodelos com representações simplificadas de pipeline, reforçando a importância de considerar a estrutura interna dos fluxos de processamento.
+
+\citeonline{ali2020mega} apresentam o sistema \gls{mega} (\textit{Meta-learning Ensemble for Genetic Algorithm}), um método de combinação de classificadores que emprega meta-aprendizado e algoritmo genético para selecionar a melhor combinação de classificadores para um conjunto de dados desconhecido. O sistema extrai meta-características dos conjuntos, usa um algoritmo genético para encontrar combinações eficazes e, na fase de inferência, aplica um k-NN ponderado para recomendar combinações ideais. O uso do k-NN como metamodelo de inferência é compatível com a abordagem adotada neste trabalho, onde também se emprega k-NN para predição de rankings de pipelines.
+
+\citeonline{DBLP:journals/corr/abs-2106-03954} investigam a recomendação de algoritmos de seleção de atributos por meta-aprendizado, modelando a tarefa como um problema supervisionado. O trabalho emprega k-NN, SVM, árvores de decisão e florestas aleatórias como meta-aprendizes, com meta-características extraídas de 28 meta-conjuntos do repositório ASlib. Os autores demonstram que técnicas de redução de dimensionalidade (PCA, seleção por variância, Chi-quadrado, ANOVA-F) permitem reduzir em mais de 80\% o número de meta-características sem degradar o desempenho preditivo, evidenciando a robustez de abordagens baseadas em similaridade para recomendação.
+
+\citeonline{wang2021ensemblelearningbasedclassification} propõem um método multi-rótulo de recomendação de algoritmos de classificação baseado em aprendizado por comitê. O modelo mapeia meta-características de 1090 problemas de classificação para o conjunto de algoritmos adequados, combinando múltiplos tipos de meta-características em modelos-base com integração ponderada. Os experimentos demonstram superioridade em métricas de ranking (perda de ordenação e \textit{Precision@m}) sobre modelos individuais, reforçando o valor de abordagens de comitê para recomendação.
+
+\citeonline{khan} descrevem o AutoFE-Sel, sistema de meta-aprendizado para recomendação de algoritmos de seleção de subconjunto de atributos. A abordagem utiliza a métrica EARR (\textit{Adjusted Ratio of Ratios}), que combina acurácia, tempo de execução e número de atributos selecionados para comparar algoritmos. Experimentos com 125 conjuntos de dados e 12 algoritmos candidatos demonstram que o AutoFE-Sel supera abordagens tradicionais (MCFA, IBL-Ranking, Fuzzy-Sim) em acurácia, \textit{hit-ratio} e \textit{F-measure}, atingindo acerto superior a 92\%.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Avaliação de Fronteiras de Decisão e Aprendizado Ativo}
+\label{sec:relFronteirasAtivo}
+
+\citeonline{varshney2015persistent} utilizam topologia persistente para caracterizar a complexidade das fronteiras de decisão em classificadores supervisionados, construindo complexos simpliciais a partir de amostras com rótulos distintos. Os números de Betti obtidos pela homologia persistente correlacionam-se com o desempenho preditivo dos modelos de SVM, auxiliando na seleção de hiperparâmetros. Embora a abordagem topológica seja distinta da proposta neste TCC, o princípio de usar características intrínsecas dos dados para orientar a seleção de modelos é compartilhado.
+
+\citeonline{ramamurthy2018topological} expandem a análise topológica propondo os complexos \textit{labeled Čech} e \textit{labeled Vietoris-Rips} para estimar a complexidade topológica da fronteira de decisão (DBTC). Experimentos em MNIST, FashionMNIST e CIFAR-10 mostram que a correspondência entre a DBTC do modelo e a do conjunto de dados favorece a seleção de modelos pré-treinados, evidenciando que propriedades estruturais dos dados podem guiar a escolha de algoritmos.
+
+\citeonline{DBLP:journals/corr/abs-2004-11149} apresentam uma revisão abrangente sobre meta-aprendizado, sistematizando métodos baseados em otimização, modelo, métrica e inferência Bayesiana. O trabalho discute como o aprendizado meta-episódico permite generalização eficiente para novas tarefas com dados rotulados limitados, especialmente em cenários de \textit{few-shot learning}, formalizando a notação de meta-tarefas $\tau_i \sim \mathcal{P}(\mathcal{T})$ com conjuntos de suporte $\mathcal{D}^s_i$ e consulta $\mathcal{D}^q_i$.
+
+\citeonline{douce2024bridging} propõem o método TCM (\textit{TypiClust-Margin}), que combina amostragem baseada em diversidade e incerteza para aprendizado ativo. O TCM realiza uma transição gradual de \textit{TypiClust} — que seleciona exemplos representativos por clustering em embeddings auto-supervisionados — para \textit{Margin Sampling}, focado na incerteza do modelo. Os autores demonstram superioridade sobre BADGE, Coreset e ProbCover em CIFAR-10, CIFAR-100 e ISIC2019, evidenciando o valor de combinar diversidade e incerteza na seleção de instâncias informativas. A utilização de embeddings para identificar exemplos representativos é análoga ao uso de embeddings de conjuntos de dados neste trabalho para identificar conjuntos similares no espaço de meta-aprendizado.
+
+%% ────────────────────────────────────────────────────────────────────────────
+\section{Síntese Comparativa}
+\label{sec:sintese-comparativa}
+
+A \autoref{tab:comparativo} sintetiza os principais trabalhos relacionados em relação a quatro dimensões: tipo de representação dos dados, tarefa de meta-nível, tamanho do meta-conjunto e método de avaliação utilizado.
+
+\begin{table}[H]
+\centering
+\caption{Comparativo entre trabalhos relacionados e a proposta deste TCC}
+\label{tab:comparativo}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lllll@{}}
+\toprule
+\textbf{Trabalho} & \textbf{Representação} & \textbf{Tarefa Meta-nível} & \textbf{Meta-conjunto} & \textbf{Avaliação} \\
+\midrule
+Schoenfeld et al. (2022)  & Estrutura do pipeline (DAG)    & Estimativa de desempenho       & $\sim$400 k instâncias & Correlação de Spearman \\
+Dataset2Vec (2021)        & Embedding neural (DeepSet)     & Otimização de hiperparâmetros  & 120 conjuntos UCI      & Spearman (ranqueamento)  \\
+MEGA (2020)               & Meta-características estáticas & Recomendação de comitês        & Múltiplos conjuntos    & Acurácia                 \\
+AutoFE-Sel (2021)         & Meta-características estáticas & Seleção de atributos           & 125 conjuntos          & EARR, hit-ratio          \\
+Wang et al. (2021)        & Meta-características multi-tipo & Recomendação multi-rótulo      & 1090 conjuntos         & Ranking loss, Prec@m      \\
+\textbf{Este TCC}         & \textbf{embedding distribucional 64D} & \textbf{Ranqueamento de pipelines} & \textbf{201 conjuntos / 60 pipelines} & \textbf{Spearman, Kendall ($\tau$, $\tau_w$), NDCG} \\
+\bottomrule
+\end{tabular}
+}
+\fonte{}
+\end{table}
+
+A análise comparativa revela que a presente proposta distingue-se dos trabalhos anteriores principalmente por três aspectos: (1) foco explícito no \textit{ranqueamento completo de pipelines} (não apenas seleção do melhor ou estimativa pontual); (2) adoção conjunta de \textbf{Kendall Tau ponderado} (\textit{weightedtau}) e NDCG como métricas complementares de topo, alinhando a avaliação às necessidades reais de AutoML, onde os primeiros pipelines recomendados têm maior impacto prático; e (3) análise estatística da correlação entre dimensões do embedding e qualidade de ranqueamento por conjunto de dados, investigando \textit{quando} e \textit{por que} o meta-aprendizado funciona melhor.
+
+A escolha de uma representação estatística distribucional, referida ao longo do trabalho como embedding distribucional por produzir um vetor denso de dimensão fixa, foi motivada pela compatibilidade com Python 3.13+, onde TensorFlow não possui distribuição, e pelo objetivo de estabelecer um baseline reprodutível e publicável. Diferentemente de embeddings neurais como o Dataset2Vec, essa representação não é aprendida por otimização de uma função objetivo; ela se aproxima do MF2 de Feurer et al. (2015) em termos de engenharia de meta-características, mas captura distribuições de meta-features por atributo em vez de apenas estatísticas globais do conjunto de dados.

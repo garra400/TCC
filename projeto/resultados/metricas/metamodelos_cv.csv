@@ -1,0 +1,4 @@
+modelo,balanced_accuracy,balanced_acc_std,precisao,recall,f1_macro,f1_macro_std
+RandomForest,0.8559,0.029,0.8573,0.8559,0.8559,0.0288
+MLP,0.8543,0.0161,0.857,0.8543,0.8543,0.016
+SVM,0.8531,0.0242,0.8559,0.8531,0.8528,0.0246

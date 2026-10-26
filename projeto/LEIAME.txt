@@ -1,0 +1,183 @@
+================================================================================
+  META-APRENDIZADO BASEADO EM EMBEDDINGS DE DATASETS
+  Projeto de Implementação – TCC (UTFPR-CM)
+  Versão 2.0 — Predição de Ranking com LOO + Spearman/Kendall
+================================================================================
+
+VISÃO GERAL
+───────────
+O projeto implementa um sistema de meta-aprendizado que, dado um novo dataset
+de classificação, recomenda os melhores pipelines de aprendizado de máquina.
+
+Fluxo principal:
+  Dataset → Embedding (Dataset2Vec) → Preditor KNN/MLP → Ranking de Pipelines
+
+Novidades da Versão 2.0 (vs. v1.0):
+  ✔ Migração de classificação (Y_qual binário) para REGRESSÃO DE RANKING
+  ✔ 100+ datasets (OpenML-CC18 + complementares, anteriormente 11)
+  ✔ Preditor KNN multi-output via KDTree (equivalente a 60 modelos KNeighborsRegressor)
+  ✔ Preditor MLP com loss BCE (Binary Cross-Entropy) para learning-to-rank
+  ✔ Avaliação via Leave-One-Out (LOO) em vez de k-fold estratificado
+  ✔ Métricas de ranking: coeficiente de Spearman (ρ) e Kendall's tau (τ)
+  ✔ Matrizes X_emb e Y_accuracy persistidas para uso direto no preditor
+
+
+ESTRUTURA DO PROJETO
+────────────────────
+projeto/
+├── config.py                          ← Configurações globais (edite antes de rodar)
+├── requirements.txt                   ← Dependências Python
+├── executar_fase1.py                  ← Script principal da Fase 1
+├── executar_fase2.py                  ← Script principal da Fase 2
+│
+├── fase1_meta_conjunto/
+│   ├── dataset_loader.py              ← Carrega 100+ datasets do OpenML
+│   ├── embedding_generator.py         ← Gera X_emb via Dataset2Vec (ou fallback)
+│   ├── pipeline_builder.py            ← Avalia 60 pipelines com CV estratificado
+│   ├── pipeline_encoder.py            ← Codifica pipelines em one-hot
+│   └── meta_conjunto.py               ← Monta DataFrame longo + matrizes de ranking
+│
+├── fase2_metamodelos/
+│   ├── preditor_knn.py               ← Preditor KNN multi-output (KDTree)   [NOVO]
+│   ├── preditor_mlp.py               ← Preditor MLP com BCE loss (PyTorch)  [NOVO]
+│   ├── avaliacao_ranking.py          ← LOO + Spearman + Kendall              [NOVO]
+│   ├── recomendador.py               ← Recomendação via preditor KNN         [ATUALIZADO]
+│   ├── rotulagem.py                  ← (mantido para compatibilidade)
+│   └── metamodelo_trainer.py         ← (mantido para compatibilidade)
+│
+├── utils/
+│   └── visualizacao.py               ← Gráficos exploratórios + ranking      [ATUALIZADO]
+│
+├── notebooks/
+│   ├── 01_exploracao_fase1.ipynb
+│   └── 02_analise_fase2.ipynb
+│
+├── data/
+│   ├── datasets/                      ← Cache dos datasets (.pkl por task_id)
+│   ├── meta_conjunto/                 ← Saídas da Fase 1
+│   │   ├── meta_conjunto.pkl          ← DataFrame longo (n_datasets × n_pipelines linhas)
+│   │   ├── meta_conjunto.csv          ← Mesmo, formato tabular expandido
+│   │   ├── pipelines_raw.csv          ← Resultado bruto dos pipelines
+│   │   ├── X_emb.npy                  ← Matriz de embeddings (n_datasets × 64)
+│   │   ├── Y_accuracy.npy             ← Matriz de acurácias (n_datasets × 60)
+│   │   ├── task_ids.npy               ← IDs dos datasets
+│   │   └── pipeline_keys.pkl          ← Lista de (scaler, selector, classifier)
+│   └── metamodelos/                   ← Modelos treinados (.pkl)
+│
+└── resultados/
+    ├── figuras/                       ← Figuras geradas automaticamente
+    └── metricas/                      ← CSVs com métricas de avaliação
+
+
+COMO EXECUTAR
+─────────────
+
+1. Instalar dependências:
+   pip install -r requirements.txt
+
+2. (Opcional) Clonar o Dataset2Vec original:
+   git clone https://github.com/hadijomaa/dataset2vec
+   → Ajustar D2V_REPO_PATH em config.py
+   → Sem ele, embedding estatístico de fallback é usado
+
+3. Executar a Fase 1 (construção do meta-conjunto):
+   python executar_fase1.py
+   → Baixa 100+ datasets do OpenML (com cache automático)
+   → Avalia 60 pipelines em cada dataset via CV-5
+   → Salva X_emb.npy e Y_accuracy.npy para a Fase 2
+   → Tempo estimado: horas (dependendo do hardware e nº de datasets)
+
+4. Executar a Fase 2 (predição de ranking e avaliação):
+   python executar_fase2.py
+   → LOO com preditor KNN para k ∈ {1,3,5,7,10}
+   → LOO com preditor MLP-BCE (requer PyTorch)
+   → Seleciona automaticamente o melhor k pelo Kendall tau
+   → Demonstração de recomendação para dataset holdout
+
+5. Para análise interativa:
+   jupyter notebook notebooks/
+
+
+CONFIGURAÇÕES PRINCIPAIS (config.py)
+──────────────────────────────────────
+OPENML_TASK_IDS  → lista de ~120 IDs do OpenML (objetivo: 100+ válidos após filtro)
+MIN_INSTANCIAS   → mínimo de instâncias por dataset (padrão: 500)
+MAX_INSTANCIAS   → máximo de instâncias (padrão: 100000)
+SCALERS          → [StandardScaler, MinMaxScaler, RobustScaler, None]  (4 opções)
+SELECTORS        → [PCA, SelectKBest, None]                            (3 opções)
+CLASSIFIERS      → [RandomForest, SVM, kNN, MLP, DecisionTree]         (5 opções)
+CV_FOLDS         → número de folds na validação cruzada (padrão: 5)
+KNN_K_RANGE      → valores de k avaliados no LOO (padrão: [1,3,5,7,10])
+KNN_K_PADRAO     → k usado para recomendação final
+
+
+PIPELINES (60 combinações = 4 × 3 × 5)
+────────────────────────────────────────
+Cada pipeline é a composição sequencial:
+  Scaler (4) → Selector (3) → Classifier (5)
+
+O preditor KNN atribui uma nota (acurácia estimada) a cada um dos 60 pipelines
+para o dataset de consulta. O ranking é derivado ordenando os scores.
+
+
+MÉTRICAS DE AVALIAÇÃO DO RANKING
+──────────────────────────────────
+Coeficiente de Spearman (ρ):
+  Correlação de postos entre o ranking predito e o ranking real.
+  ρ = 1  → predição perfeita da ordem; ρ = 0 → sem correlação.
+
+Coeficiente de Kendall's tau (τ):
+  Fração de pares de pipelines corretamente ordenados pelo preditor.
+  τ = 1  → todos os pares na ordem correta; τ = 0 → acaso.
+  Implementação: scipy.stats.kendalltau
+
+Ambas as métricas são calculadas para cada fold do LOO e reportadas
+como média ± desvio padrão.
+
+
+RESULTADOS ESPERADOS
+────────────────────
+Após Fase 1:
+  - data/meta_conjunto/X_emb.npy          (n_datasets × 64)
+  - data/meta_conjunto/Y_accuracy.npy     (n_datasets × 60)
+  - resultados/figuras/distribuicao_yperf.png
+  - resultados/figuras/heatmap_scaler_x_classifier.png
+  - resultados/figuras/boxplot_classifier.png
+  - resultados/figuras/umap_embeddings.png
+
+Após Fase 2:
+  - resultados/metricas/loo_knn_resumo.csv
+  - resultados/metricas/loo_knn_k{k}_por_fold.csv  (um por k)
+  - resultados/metricas/loo_mlp_resumo.csv
+  - resultados/metricas/recomendacoes_holdout.csv
+  - resultados/figuras/ranking_loo_knn.png
+  - resultados/figuras/ranking_distribuicao_metricas.png
+  - resultados/figuras/matriz_similaridade_embeddings.png
+
+
+REFERÊNCIAS
+────────────
+Jomaa, H.S.; Grabocka, J.; Schmidt-Thieme, L.
+  Dataset2Vec: Learning dataset meta-features.
+  Data Mining and Knowledge Discovery, 35, 964–985, 2021.
+
+Pineda Arango, S.; Grabocka, J.
+  Deep Pipeline Embeddings for AutoML.
+  KDD '23, 1907–1919, 2023.
+
+Maia, C. et al.
+  PIPES: A Meta-dataset of Machine Learning Pipelines. arXiv, 2025.
+
+Bischl, B. et al.
+  OpenML Benchmarking Suites. NeurIPS 2021.
+  https://link.springer.com/article/10.1007/s10618-021-00737-9
+
+Spearman, C. (1904). The proof and measurement of association between two things.
+  The American Journal of Psychology, 15(1), 72–101.
+
+Kendall, M.G. (1938). A new measure of rank correlation.
+  Biometrika, 30(1/2), 81–93.
+
+Burges, C. et al. (2005). Learning to rank using gradient descent (RankNet).
+  ICML 2005.
+================================================================================
