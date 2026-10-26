@@ -5,6 +5,13 @@
 \usepackage{graphicx,url}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb}
+\usepackage{booktabs,flafter}
+% O template fixa rodapé e aviso editorial de 2025; esta é uma versão de trabalho.
+\makeatletter
+\def\runningfoot{\def\@runningfoot{Manuscrito revisado, outubro de 2026.}}
+\def\firstfoot{\def\@firstfoot{Manuscrito revisado, outubro de 2026.}}
+\long\def\permission{\par Versão de trabalho para revisão dos autores.}
+\makeatother
 
 % ====================================================================
 % Author metadata (3 authors: student + advisor + co-advisor, all UTFPR,
@@ -32,7 +39,7 @@
 
 % Article abstract (100-300 words, English, no references, single paragraph)
 \begin{abstract}
-Selecting an adequate machine learning pipeline -- the combination of preprocessing operators and a classification algorithm -- is a central problem in Automated Machine Learning (AutoML), since model performance depends critically on this choice and no single configuration is universally superior. This work proposes and evaluates a meta-learning approach that ranks and recommends classification pipelines for a previously unseen dataset using statistical embeddings. A meta-dataset is built by systematically running 60 pipelines, combining four scaling operators, three feature selectors and five classifiers, over 201 datasets from OpenML, evaluated through 5-fold stratified cross-validation, yielding a 201$\times$60 matrix of balanced-accuracy scores. Each dataset is represented by a 64-dimensional distributional statistical embedding inspired by Dataset2Vec, which summarizes the per-attribute distribution of meta-features in a schema-agnostic way. A multi-output k-nearest neighbors (k-NN) predictor is then trained on these embeddings and evaluated by Leave-One-Out at the dataset level, using Spearman and Kendall rank correlations, the weighted Kendall tau (which penalizes errors at the top of the ranking more heavily) and NDCG. For $k=10$, the predictor achieves mean Spearman, Kendall and weighted-Kendall correlations of 0.58, 0.48 and 0.52, respectively, clearly outperforming random and global-mean baselines and matching the range reported by comparable approaches in the literature. A statistical analysis further shows that several embedding dimensions correlate significantly ($p<0.0001$) with ranking quality. These results indicate that simple, reproducible statistical embeddings combined with an instance-based predictor already provide a competitive baseline for pipeline ranking, opening a path toward neural embeddings such as Dataset2Vec.
+Selecting classification pipelines requires evaluating both data representation and predictor choice. We revisit a statistical meta-learning benchmark containing 201 OpenML tasks and 60 pipelines. Dataset vectors comprise 55 deterministic descriptors and nine padded zeros, with no representation learning. Auditing related tasks and minimum class support yields a primary evaluation of 193 tasks in 165 groups. Five outer group partitions, with inner group validation for neighborhood selection, compare multi-output k-NN and Random Forest against global-mean and random baselines. Group-averaged weighted Kendall is 0.3995 for k-NN, 0.4309 for Random Forest and 0.3690 for the global mean. The paired Random Forest minus k-NN difference is 0.0314 with a descriptive 95\% interval [0.0073, 0.0564]; the k-NN advantage over the global mean remains uncertain. Error analysis identifies 17 tasks with nonpositive weighted correlation and one undefined case. A separate 180-evaluation pilot explores hyperparameters on raw data with preprocessing fitted within folds. Historical Phase 1 scores remain subject to preprocessing and sampling limitations; the results characterize this retrospective benchmark rather than establish universal superiority.
 \end{abstract}
 
 % ACM Computing Classification System (CCS) categories
@@ -44,11 +51,6 @@ Selecting an adequate machine learning pipeline -- the combination of preprocess
 	<concept_significance>500</concept_significance>
 	</concept>
 	<concept>
-	<concept_id>10010147.10010257.10010293.10010294</concept_id>
-	<concept_desc>Computing methodologies~Learning latent representations</concept_desc>
-	<concept_significance>300</concept_significance>
-	</concept>
-	<concept>
 	<concept_id>10002951.10003317.10003347.10003352</concept_id>
 	<concept_desc>Information systems~Learning to rank</concept_desc>
 	<concept_significance>300</concept_significance>
@@ -57,7 +59,6 @@ Selecting an adequate machine learning pipeline -- the combination of preprocess
 \end{CCSXML}
 
 \ccsdesc[500]{Computing methodologies~Machine learning algorithms}
-\ccsdesc[300]{Computing methodologies~Learning latent representations}
 \ccsdesc[300]{Information systems~Learning to rank}
 
 % Keywords (alphabetical order)
@@ -77,168 +78,112 @@ Selecting an adequate machine learning pipeline -- the combination of preprocess
 \section{Introdução}
 \label{sec:introduction}
 
-A escolha do algoritmo mais adequado para um problema de aprendizado de máquina é um dos maiores desafios enfrentados por profissionais da área, já que nenhum algoritmo é universalmente superior em todos os domínios -- fato formalizado pelo teorema \textit{No Free Lunch} \cite{Wolpert1997}. Construir um pipeline eficiente exige ainda uma combinação cuidadosa de representação, avaliação e otimização \cite{Domingos2012}, processo que tradicionalmente depende fortemente da expertise humana e de tentativa e erro.
+A recomendação de pipelines de classificação combina decisões sobre pré-processamento, seleção de atributos e classificador. Em AutoML, essa escolha depende do espaço de busca, da estratégia e do protocolo de avaliação \cite{Baratchi2024}. O meta-aprendizado reutiliza experiências entre problemas, mas a validade das recomendações depende de separar tarefas relacionadas e de ajustar hiperparâmetros sem consultar o teste.
 
-O \textit{Automated Machine Learning} (AutoML) busca reduzir esse esforço automatizando a seleção de algoritmos e o ajuste de hiperparâmetros, e sua eficácia aumenta substancialmente quando combinado a técnicas de \emph{meta-aprendizado} \cite{Schoenfeld2020,Vanschoren2018}: ao extrair meta-características que resumem propriedades estatísticas, estruturais e informacionais dos conjuntos de dados, um metamodelo pode aprender, a partir da experiência acumulada, quais configurações tendem a ter sucesso em problemas semelhantes \cite{Schoenfeld2022}.
+Este trabalho investiga uma representação estatística determinística para ranquear 60 pipelines e compara preditores k-NN e Random Forest multi-saída. A partir de um acervo histórico de 201 tarefas OpenML, a auditoria delimita 193 tarefas elegíveis em 165 grupos. Spearman e Kendall avaliam a ordenação global, Kendall ponderado enfatiza pares de maior importância e NDCG@5 e regret avaliam utilidade das primeiras recomendações. As métricas são complementares, e NDCG alto não implica recuperar exatamente os melhores pipelines.
 
-Entretanto, boa parte da literatura de AutoML e meta-aprendizado concentra-se na seleção do modelo e no ajuste de hiperparâmetros, desconsiderando o impacto do \emph{pré-processamento dos dados}. Escalonamento inadequado, seleção de atributos prejudicial ou tratamento pobre de variáveis categóricas podem comprometer todo o pipeline, independentemente da qualidade do classificador final. Além disso, a maioria dos sistemas de recomendação reduz o problema à escolha de uma única melhor configuração (top-1), descartando a informação ordinal que um ranking completo oferece -- exatamente a informação mais útil para um usuário que deseja inspecionar uma lista curta de candidatos.
-
-Este trabalho aborda essas duas lacunas propondo uma abordagem de meta-aprendizado que (i) trata escalonamento, seleção de atributos e classificação como um único pipeline integrado, e (ii) formula a recomendação como um problema de \emph{ranqueamento}, e não de seleção top-1, introduzindo ainda o Kendall Tau \emph{ponderado} como métrica de avaliação que reflete mais diretamente a utilidade prática de um ranking ao penalizar com mais peso os erros próximos ao topo. Concretamente, nós (a) construímos um meta-conjunto a partir da execução sistemática de 60 pipelines de classificação sobre 201 datasets do OpenML \cite{Vanschoren2014}, representando cada dataset por um embedding estatístico distribucional de 64 dimensões, e (b) treinamos e avaliamos, por meio de validação \textit{Leave-One-Out} (LOO) no nível de datasets, um preditor k-vizinhos-mais-próximos (k-NN) multi-saída que estima o ranking de desempenho esperado dos 60 pipelines para um dataset inédito. O meta-conjunto resultante -- 201 datasets e 60 pipelines avaliados por validação cruzada estratificada -- constitui, por si só, uma contribuição empírica de escala comparável ou superior à da maioria dos estudos da área \cite{Vanschoren2018}.
-
-O restante deste artigo está organizado da seguinte forma. A Seção~\ref{sec:related} situa este trabalho frente a abordagens de representação de datasets e recomendação de pipelines. A Seção~\ref{sec:methodology} descreve a metodologia em duas fases (construção do meta-conjunto e meta-aprendizado por ranqueamento). A Seção~\ref{sec:results} apresenta e discute os resultados experimentais, e a Seção~\ref{sec:conclusion} conclui o trabalho e aponta direções futuras.
+As contribuições são: (i) explicitar a construção dos 64 componentes do vetor e os critérios de elegibilidade; (ii) disponibilizar avaliação por grupos com ajuste interno e baselines calculadas no treino; e (iii) documentar erros, resultados ausentes e um piloto de hiperparâmetros. O estudo distingue reprodução histórica de nova avaliação, sem apresentar um caso isolado como validação externa.
 
 \section{Trabalhos Relacionados}
-\label{sec:related}
 
-Os trabalhos relevantes para esta pesquisa podem ser organizados em três eixos: (i) representação de datasets por meta-características e embeddings, (ii) recomendação de algoritmos e pipelines via meta-aprendizado, e (iii) avaliação de recomendações baseada em ranqueamento.
+A discussão está organizada em três eixos: representação, recomendação e avaliação. No primeiro, Dataset2Vec aprende representações de conjuntos de dados \cite{Jomaa2021}, enquanto o vetor aqui utilizado concatena estatísticas fixas e não recebe treinamento. TabPFN \cite{Hollmann2025} exemplifica reutilização de conhecimento entre problemas tabulares por um modelo fundacional; sua tarefa de predição difere do ranqueamento do arsenal estudado.
 
-Quanto à representação, conjuntos clássicos de meta-características descrevem datasets por meio de um vetor fixo de descritores estatísticos, informacionais e baseados em modelos, enquanto abordagens mais recentes aprendem embeddings densos diretamente dos dados. \citeN{Jomaa2021} propõem o Dataset2Vec, uma arquitetura neural que aprende representações de datasets agnósticas ao esquema, amostrando e agregando estatísticas por atributo por meio de codificadores de conjuntos hierárquicos; o embedding distribucional adotado neste trabalho é diretamente inspirado nessa ideia, mas substitui o codificador aprendido por agregações estatísticas pré-definidas, trocando poder representacional por simplicidade, interpretabilidade e reprodutibilidade.
+No eixo de recomendação, \citeN{Baratchi2024} oferecem um enquadramento para distinguir espaço de busca, estratégia e avaliação. Este trabalho mantém o arsenal fixo na comparação principal para separar a influência do metamodelo. Isso favorece controle experimental, mas restringe conclusões sobre configurações não avaliadas.
 
-Quanto à recomendação, \citeN{Schoenfeld2022} mostram que ranquear pipelines pela similaridade das meta-características dos datasets produz recomendações melhores do que estimar diretamente o desempenho absoluto, e que representar pipelines de forma estruturada (em vez de rótulos opacos) melhora o meta-aprendizado. \citeN{Schoenfeld2020} estende essa linha explorando metadados granulares de pipelines. Esses trabalhos, contudo, em geral avaliam rankings com métricas -- como correlação de Spearman ou acurácia top-$k$ -- que não diferenciam erros no topo do ranking de erros nas posições inferiores, ainda que os primeiros sejam muito mais custosos na prática, já que usuários tipicamente inspecionam apenas os primeiros pipelines recomendados.
-
-Este trabalho se diferencia ao (i) avaliar pipelines como combinações completas de escalonamento, seleção e classificação, em vez de componentes isolados; (ii) adotar o ranqueamento, e não a seleção top-1, como paradigma de recomendação; e (iii) introduzir o Kendall Tau ponderado \cite{scipy} como métrica de avaliação que recompensa diretamente o ordenamento correto dos melhores pipelines. Além disso, fornece um meta-conjunto de tamanho considerável e abertamente reprodutível (201 datasets $\times$ 60 pipelines, avaliados por validação cruzada estratificada de 5 folds), que pode servir como benchmark para futuros estudos de meta-aprendizado na comunidade de AutoML \cite{Vanschoren2018}.
+No eixo de avaliação, AMLB \cite{Gijsbers2024} enfatiza comparações extensíveis que consideram desempenho, custo e falhas. Aqui, essa perspectiva orienta a disponibilização de exclusões e predições por tarefa. No Free Lunch não garante, sozinho, vantagem de uma recomendação personalizada em dados reais: seus pressupostos e a relação com vieses indutivos exigem análise cuidadosa \cite{Goldblum2024}. Não se comparam diretamente correlações obtidas em tarefas e protocolos distintos.
 
 \section{Metodologia}
-\label{sec:methodology}
 
-A metodologia experimental está organizada em duas fases: (1) construção de um meta-conjunto que associa embeddings de datasets a rótulos de desempenho de pipelines, e (2) treinamento e avaliação de um metamodelo de ranqueamento sobre esse meta-conjunto.
+O estudo compreende reprodução do acervo, auditoria, avaliação por grupos e um piloto separado. Configuração, metadados OpenML, índices de divisão, predições e escores ficam em arquivos próprios, ligados por identificadores de tarefa, pipeline, fold e modelo.
 
-\subsection{Fase 1 -- Construção do Meta-conjunto}
-\label{sec:phase1}
+\subsection{Acervo Histórico e Critérios de Qualidade}
 
-\textbf{Datasets.} Foram selecionados 201 datasets de classificação do repositório OpenML \cite{Vanschoren2014}, filtrando-se tarefas com 500 a 10 mil instâncias, ao menos duas classes e atributos predominantemente numéricos, de modo que os mesmos operadores de pré-processamento pudessem ser aplicados uniformemente. De 243 identificadores de tarefas candidatos, 201 datasets foram carregados com sucesso e atenderam aos critérios de qualidade; os 42 restantes foram descartados por falha no download ou por problemas de qualidade.
+O acervo tem 201 tarefas do OpenML \cite{Vanschoren2014}, representações $X\in\mathbb{R}^{201\times64}$ e desempenhos $Y\in\mathbb{R}^{201\times60}$. Das 12.060 células, 172 estão ausentes. O carregador histórico codificou categorias e imputou a mediana antes da CV. A SVM recebeu uma subamostra global de até 5.000 exemplos, enquanto outros classificadores usaram o conjunto inteiro. Essas decisões limitam os escores reutilizados; a Fase 1 completa não foi reconstruída.
 
-\textbf{Arsenal de pipelines.} Sessenta pipelines foram definidos como o produto cartesiano de quatro operadores de escalonamento (incluindo a opção identidade, sem escalonamento), três estratégias de seleção de atributos (incluindo nenhuma seleção) e cinco algoritmos de classificação (Random Forest, SVM, k-NN, entre outros usados como aprendizes-base no estudo original), totalizando $4 \times 3 \times 5 = 60$ configurações. Cada pipeline foi avaliado em cada dataset por validação cruzada estratificada de 5 folds, e seu desempenho foi resumido pela acurácia balanceada
+Os 60 pipelines cruzam quatro escalonadores (StandardScaler, MinMaxScaler, RobustScaler e ausência), três seletores (PCA, SelectKBest por ANOVA e ausência) e cinco classificadores: Random Forest com 100 árvores, SVM RBF com $C=1$ e gamma scale, k-NN com cinco vizinhos, MLP com camadas 64 e 32 e até 200 iterações, e árvore com profundidade máxima 10. PCA e SelectKBest usam $\min(10,\max(1,P-1))$ componentes ou atributos. Os algoritmos estocásticos usam semente 42. Não se realiza otimização dos hiperparâmetros desse arsenal no experimento principal.
 
-\begin{equation}\label{eq:balanced_acc}
-  \text{BA} = \frac{1}{C} \sum_{c=1}^{C} \frac{TP_c}{TP_c + FN_c},
+Metadados oficiais confirmam classificação supervisionada para as 201 tarefas. Nomes repetidos ou fingerprints idênticos dos atributos processados formam grupos transitivos conservadores. São 186 nomes e 172 grupos no acervo. A avaliação principal requer 500--10.000 exemplos, ao menos duas classes e mínimo de cinco exemplos por classe. Excluem-se oito tarefas (2075, 3486, 362281, 363078, 363094, 363393, 363554 e 363559), sem consultar seu desempenho de ranking. Restam 193 tarefas, 179 nomes, 165 grupos e 52 escores ausentes. O catálogo inclui links de tarefa e conjunto, tamanho, dimensionalidade, classes, balanceamento e motivos de exclusão.
+
+A tarefa 363713 já consta no acervo e não constitui holdout independente. Sua demonstração pontual foi removida. O agrupamento reduz repetições detectáveis, mas não certifica independência entre todas as possíveis versões dos conjuntos.
+
+\subsection{Representação Estatística de 64 Posições}
+
+Para cada atributo numérico, calculam-se nove descritores: média, desvio padrão populacional acrescido de $10^{-8}$, mínimo, máximo, mediana, assimetria, curtose de Fisher e correlações de Pearson e Spearman com o alvo codificado. Cada descritor é agregado entre atributos por mínimo, percentil 25, média, percentil 75 e máximo, produzindo 45 entradas.
+
+Dez propriedades globais completam o vetor: $\log(1+N)$, $\log(1+P)$, número de classes, proporções majoritária e minoritária, entropia das proporções acrescidas de $10^{-8}$, proporção de atributos constantes, média da matriz de correlação absoluta entre atributos com diagonal zerada, média das proporções de valores únicos e $P/(N+10^{-8})$. A média das correlações inclui os zeros da diagonal no denominador $P^2$.
+
+Concatenam-se 55 descritores e nove zeros; com dimensão 64 não há truncamento. Aplica-se \texttt{nan\_to\_num} e normalização L2, preservando vetor nulo. Os percentis por atributo calculados no código não integram os nove blocos. Não há loss, pesos aprendidos ou treinamento da representação. O método exige rótulos do conjunto consultado, e correlações com códigos nominais multiclasses dependem de uma ordenação arbitrária.
+
+\subsection{Preditores e Validação por Grupos}
+
+O k-NN prevê a acurácia de cada pipeline pela média dos vizinhos ponderada por $w_i=1/(d_i+10^{-8})$, com distância euclidiana. O comparador Random Forest é um regressor multi-saída nativo com 200 árvores, mínimo de duas observações por folha, \texttt{max\_features=1.0} e semente 42. A média global usa somente o treino; o baseline aleatório usa escores uniformes com semente 42 acrescida do fold.
+
+Usa-se GroupKFold externo com cinco divisões, embaralhamento e semente 42. Dentro de cada treino externo, quatro divisões por grupos escolhem $k\in\{1,3,5,7,10\}$ pela média de Kendall ponderado por grupo; empates escolhem o menor $k$. Avalia-se também um k-NN cujas dimensões são padronizadas exclusivamente no treino de cada divisão. Nenhum grupo de teste é usado para ajustar k, imputação ou padronização.
+
+Escores ausentes de treino são imputados pela mediana por pipeline. Colunas inteiramente ausentes no treino ficam fora da avaliação do teste. Escores reais ausentes não são imputados para calcular métricas. Correlações indefinidas são mantidas como NaN com estado explícito, preservando NDCG e regret quando calculáveis. As médias são agregadas primeiro dentro de grupo, depois entre grupos.
+
+\subsection{Métricas e Análise de Erros}
+
+Spearman mede associação de postos e Kendall tau-b trata empates. O Kendall ponderado padrão da SciPy usa pesos hiperbólicos aditivos $1/(r_i+1)+1/(r_j+1)$ e média de duas ordenações lexicográficas decrescentes dos escores real e predito; não usa produto dos postos e não fornece p-valor.
+
+NDCG é calculado pela implementação do scikit-learn com ganho linear da acurácia balanceada:
+\begin{equation}
+\operatorname{DCG}@K=\sum_{i=1}^{K}\frac{rel_i}{\log_2(i+1)},\qquad
+\operatorname{NDCG}@K=\frac{\operatorname{DCG}@K}{\operatorname{IDCG}@K}.
 \end{equation}
+Reportam-se NDCG completo, NDCG@5 e regret: melhor acurácia real disponível menos a acurácia da primeira recomendação (ou da melhor entre cinco). Empates de predição recebem tratamento médio em NDCG e ordem estável das colunas em regret. Assim, NDCG e Kendall ponderado capturam aspectos complementares da ordenação.
 
-\noindent em que $C$ é o número de classes, e $TP_c$ e $FN_c$ são, respectivamente, os verdadeiros positivos e falsos negativos da classe $c$. Essa métrica é robusta ao desbalanceamento de classes, comum entre os datasets selecionados. A execução dos 60 pipelines sobre os 201 datasets produziu 12.060 avaliações pipeline-dataset (com 172 valores ausentes causados por falhas pontuais de execução), organizadas em uma matriz de desempenho $Y \in \mathbb{R}^{201 \times 60}$.
-
-\textbf{Embeddings de datasets.} Cada dataset é ainda representado por um vetor numérico de tamanho fixo que resume suas propriedades estatísticas de forma agnóstica ao esquema -- isto é, independentemente do número de atributos ou instâncias --, seguindo o espírito do Dataset2Vec \cite{Jomaa2021}. Para cada atributo, calcula-se um conjunto de meta-características (por exemplo, medidas de tendência central, dispersão, assimetria e conteúdo informacional), e a distribuição empírica de cada meta-característica \emph{entre os atributos} é resumida em um número fixo de estatísticas (como média, desvio-padrão e quantis), formando um bloco distribucional de $45$ dimensões. Um bloco global complementar de $10$ dimensões captura propriedades do dataset como um todo (número de instâncias, número de atributos, número de classes, balanceamento de classes etc.). A concatenação é truncada ou preenchida com zeros até um comprimento fixo de $64$, produzindo a matriz de embeddings $X \in \mathbb{R}^{201 \times 64}$. O par $(X, Y)$ constitui o meta-conjunto utilizado na Fase 2.
-
-\subsection{Fase 2 -- Preditor de Ranking de Pipelines}
-\label{sec:phase2}
-
-\textbf{Preditor.} Dado o embedding $D_{new}$ de um novo dataset, estima-se a acurácia balanceada esperada de cada pipeline $P_j$ pela média dos rótulos de seus $k$ vizinhos mais próximos no espaço de embeddings (utilizando uma KD-Tree para busca eficiente):
-
-\begin{equation}\label{eq:knn}
-  \hat{A}(P_j) = \frac{1}{k} \sum_{D_i \in \mathcal{N}_k(D_{new})} A_{i,j},
-\end{equation}
-
-\noindent em que $\mathcal{N}_k(D_{new})$ é o conjunto dos $k$ vizinhos mais próximos de $D_{new}$ (por distância euclidiana no espaço de embeddings) e $A_{i,j}$ é a acurácia balanceada do pipeline $P_j$ no dataset $D_i$ (ou seja, a entrada $Y_{i,j}$). Ordenando as 60 estimativas $\hat{A}(P_1), \dots, \hat{A}(P_{60})$ em ordem decrescente, obtém-se o ranking previsto para $D_{new}$. Esse preditor simples, multi-saída e baseado em instâncias foi escolhido deliberadamente como uma baseline interpretável e computacionalmente leve: cada predição pode ser rastreada até um pequeno conjunto de datasets similares já observados.
-
-\textbf{Protocolo de validação.} O preditor é avaliado por \textit{Leave-One-Out} (LOO) no nível de \emph{datasets}: cada um dos 201 datasets é, por sua vez, retido como consulta, enquanto os 200 restantes formam o conjunto de vizinhos; o ranking previsto é então comparado ao ranking real (obtido ordenando os rótulos verdadeiros de acurácia balanceada $Y_{i,\cdot}$). Esse protocolo é repetido para $k \in \{1,3,5,7,10\}$, a fim de estudar a sensibilidade do preditor ao tamanho da vizinhança.
-
-\textbf{Métricas de ranqueamento.} Quatro métricas complementares são usadas para comparar os rankings previsto e real de cada dataset retido: a correlação de postos de Spearman; o Kendall Tau padrão,
-
-\begin{equation}\label{eq:kendall}
-  \tau = \frac{P - Q}{\binom{n}{2}},
-\end{equation}
-
-\noindent em que $P$ e $Q$ são, respectivamente, os números de pares concordantes e discordantes entre os $n=60$ pipelines; o Kendall Tau \emph{ponderado} $\tau_w$ (\texttt{scipy.stats.weightedtau} \cite{scipy}), que atribui pesos maiores às inversões de ordem ocorridas próximas ao topo do ranking real -- isto é, entre os melhores pipelines --, penalizando mais severamente os erros de maior impacto prático; e o \textit{Normalized Discounted Cumulative Gain},
-
-\begin{equation}\label{eq:ndcg}
-  \text{NDCG} = \frac{\text{DCG}}{\text{IDCG}}, \quad \text{DCG} = \sum_{i=1}^{n} \frac{2^{rel_i} - 1}{\log_2(i+1)},
-\end{equation}
-
-\noindent em que $rel_i$ é a relevância (acurácia balanceada real) do pipeline colocado na posição $i$ pelo ranking \emph{previsto}, e IDCG é o DCG do ranking ideal; $\text{NDCG}=1$ indica um ranking perfeito, e valores próximos de 1 indicam que os pipelines realmente melhores estão posicionados perto do topo.
-
-Como análise complementar, mede-se, para cada uma das $64$ dimensões $d$ do embedding, a correlação de Spearman entre os escores de Kendall ponderado por dataset $\{\tau_w^{(i)}\}_{i=1}^{201}$ e os respectivos valores de embedding $\{x_d^{(i)}\}_{i=1}^{201}$, a fim de identificar quais aspectos da representação do dataset são mais preditivos da qualidade do ranqueamento, fornecendo alguma interpretabilidade ao sistema proposto.
+Intervalos descritivos de 95\% usam 2.000 reamostragens de grupos com semente 42; diferenças pareadas usam grupos com ambas as métricas definidas. A sobreposição de treinos limita a inferência. O diagnóstico considera tamanho, número de atributos, proporção majoritária, atributos constantes e distância ao vizinho. Correlações exploratórias por grupo recebem ajuste Benjamini--Hochberg para cinco comparações, sem interpretação causal.
 
 \section{Resultados e Discussão}
-\label{sec:results}
 
-\subsection{Caracterização do Meta-conjunto}
+Esta seção apresenta a reprodução histórica, a comparação principal e o diagnóstico de falhas. O piloto de hiperparâmetros é discutido separadamente, pois utiliza dados brutos e não substitui os escores do acervo.
 
-O meta-conjunto construído compreende uma matriz de embeddings $X \in \mathbb{R}^{201 \times 64}$ e uma matriz de desempenho $Y \in \mathbb{R}^{201 \times 60}$ com 12.060 entradas (172 ausentes). A Figura~\ref{fig:dist_yperf} mostra que a distribuição dos escores de acurácia balanceada é bimodal, com mediana em torno de $0{,}63$, indicando que o desempenho dos pipelines varia substancialmente entre as combinações de dataset e configuração -- exatamente a variabilidade que um recomendador baseado em ranking precisa capturar. Uma análise por componente do arsenal de pipelines mostra que a escolha do classificador domina o desempenho geral (Random Forest tem, em média, o melhor desempenho), que a escolha do escalador tem impacto comparativamente baixo e que, de forma um tanto contraintuitiva, não aplicar seleção de atributos supera, em média, a seleção via PCA ou SelectKBest em cerca de 3,5 pontos percentuais -- sugerindo que, para os datasets considerados, a redução de atributos descarta sinal útil com mais frequência do que remove ruído. Uma projeção UMAP bidimensional do espaço de embeddings, somada a uma análise de similaridade de cosseno, mostra que datasets com perfis estatísticos semelhantes tendem a se agrupar e a compartilhar padrões de desempenho de pipelines parecidos -- a propriedade estrutural explorada pelo preditor k-NN da Fase 2.
+\subsection{Reprodução e Comparação Principal}
 
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=0.9\linewidth]{figuras/distribuicao_yperf.png}
-\end{center}
-\caption{Distribuição (bimodal) dos escores de acurácia balanceada no meta-conjunto, com mediana indicada pela linha tracejada.}
-\label{fig:dist_yperf}
-\end{figure}
+A reprodução com o preditor KDTree original mantém, para $k=10$, Spearman médio de aproximadamente 0,5801 e Kendall ponderado de 0,5222 sobre 198 tarefas com correlações definidas. Esses resultados por tarefa podem manter parentes no treino e escolher k na mesma avaliação; são exploração histórica. Diferenças para a nova avaliação também refletem o tamanho de treino, os filtros e a agregação, não apenas o agrupamento.
 
-\subsection{Avaliação do Preditor de Ranking}
+A Tabela~\ref{tab:modelos} compara os modelos na avaliação revisada. Há 192 tarefas em 164 grupos com correlações definidas, além de um caso de escores reais constantes. NDCG e regret continuam registrados nesse caso. O ajuste interno escolheu $k=10$ nos cinco folds, coincidindo com o k-NN fixo em 10.
 
-A Tabela~\ref{tab:loo} resume a avaliação LOO para $k \in \{1,3,5,7,10\}$ (média $\pm$ desvio-padrão sobre os folds válidos), e a Figura~\ref{fig:loo_knn} ilustra a evolução das correlações de Spearman e Kendall em função de $k$. O desempenho melhora monotonicamente com $k$ até $k=10$ (maior valor testado), o que atribuímos ao efeito de suavização da média na Eq.~\eqref{eq:knn}, que reduz a variância da estimativa à medida que mais vizinhos são agregados. Para $k=10$, com 198 folds válidos (3 datasets foram excluídos por rótulos ausentes), o preditor atinge correlação de Spearman média de $0{,}58 \pm 0{,}36$, Kendall padrão de $0{,}48 \pm 0{,}34$, Kendall ponderado de $0{,}52 \pm 0{,}35$ e NDCG de $0{,}984 \pm 0{,}038$.
-
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=0.95\linewidth]{figuras/ranking_loo_knn.png}
-\end{center}
-\caption{Qualidade do ranking (correlações de Spearman $\rho$ e Kendall $\tau$, média e desvio-padrão) em função do número de vizinhos $k$ na avaliação LOO.}
-\label{fig:loo_knn}
-\end{figure}
-
-\begin{table}[t]
-\caption{Métricas de qualidade de ranking na avaliação LOO para $k=10$ (média $\pm$ desvio-padrão, $n=198$ folds válidos).}
-\label{tab:loo}
-\begin{center}
-\begin{tabular}{lc}
-\hline
-\textbf{Métrica} & \textbf{Valor} \\
-\hline
-Correlação de Spearman          & $0{,}5801 \pm 0{,}3615$ \\
-Kendall Tau ($\tau$)            & $0{,}4767 \pm 0{,}3379$ \\
-Kendall Tau ponderado ($\tau_w$) & $0{,}5222 \pm 0{,}3471$ \\
-NDCG                            & $0{,}9844 \pm 0{,}0384$ \\
-\hline
-\end{tabular}
-\end{center}
+\begin{table}[htbp]
+\caption{Avaliação revisada: médias por grupo. Menor regret é melhor.}
+\label{tab:modelos}
+\centering
+\resizebox{\linewidth}{!}{\input{../projeto/resultados/revisao_2026/tabela_tcc.tex}}
 \end{table}
 
-A diferença entre $\tau_w$ e $\tau$ -- a variante ponderada supera a padrão em cerca de $4{,}5$ pontos percentuais, em média -- indica que o preditor é comparativamente \emph{mais} preciso próximo ao topo do ranking do que ao longo de todo o ranking, exatamente a região de maior relevância prática para um usuário que inspeciona apenas os primeiros pipelines recomendados. Os valores elevados de NDCG (próximos de $0{,}98$) podem, à primeira vista, parecer contraditórios com os escores moderados de Spearman/Kendall; a explicação é que o NDCG, por construção, é dominado pela relevância dos itens posicionados no topo e é calculado em escala com desconto logarítmico, permanecendo alto mesmo quando a ordem relativa dos pipelines intermediários e inferiores não é perfeitamente recuperada -- reforçando, sob outro ângulo, que o preditor é mais confiável exatamente onde isso mais importa.
+A diferença pareada Random Forest menos k-NN em Kendall ponderado é 0,0314, com intervalo descritivo [0,0073; 0,0564]. A diferença média global menos k-NN é -0,0305, com intervalo [-0,0637; 0,0026], sem estabelecer vantagem do k-NN nesse critério. A Figura~\ref{fig:modelos} apresenta os intervalos por grupo. O resultado sugere vantagem do Random Forest neste acervo; não demonstra superioridade universal nem isola o efeito da representação, mantida igual em todos os modelos.
 
-A análise de correlação estatística identifica cinco dimensões do embedding cujos valores se correlacionam significativamente com o escore de Kendall ponderado por dataset (todas com $p<0{,}0001$), associadas a descritores de balanceamento de classes, dispersão de valores de atributos e conteúdo informacional -- evidência de que o espaço de embeddings codifica estrutura genuinamente relevante para a recomendação de pipelines, e não atua como uma assinatura numérica opaca.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.95\linewidth]{../projeto/resultados/revisao_2026/figuras/comparacao_modelos.pdf}
+\caption{Kendall ponderado médio por grupo e intervalos descritivos de 95\%.}
+\label{fig:modelos}
+\end{figure}
 
-\textbf{Demonstração em holdout.} Em um dataset excluído de ambas as fases (tarefa OpenML 363713), o preditor com $k=10$ obtém correlação de Spearman de $0{,}96$, Kendall padrão de $0{,}87$, Kendall ponderado de $0{,}81$ e NDCG de $0{,}9995$, ilustrando que, para datasets cujos embeddings caem próximos a regiões bem representadas do meta-conjunto, a abordagem consegue recuperar rankings quase indistinguíveis do real.
+A baseline aleatória já alcança NDCG@5 de 0,8687, o que evidencia a baixa discriminação de NDCG com relevâncias próximas. Portanto, valores altos não demonstram top-5 correto. Regret@1 é 0,0372 para k-NN, 0,0305 para Random Forest e 0,0334 para média global. A interpretação depende conjuntamente de correlação, relevância e perda da recomendação.
 
-\textbf{Comparação com baselines e a literatura.} A Tabela~\ref{tab:baselines} contrasta o preditor proposto com duas baselines simples: um ranking aleatório (correlações esperadas próximas de zero) e um ranking de ``média global'', que sempre recomenda pipelines ordenados por seu desempenho médio em todos os datasets de treino, ignorando o embedding de consulta. O preditor k-NN supera claramente ambas, mostrando que o embedding de fato carrega sinal específico do dataset que um ranking agnóstico à consulta não consegue explorar. A correlação de Spearman obtida ($0{,}58 \pm 0{,}36$) é também compatível com as faixas relatadas por abordagens comparáveis que utilizam representações neurais mais ricas -- por exemplo, $\sim$0,55--0,70 para pipelines baseados em Dataset2Vec e $\sim$0,40--0,70 para as representações estruturadas de \citeN{Schoenfeld2022} -- sugerindo que um embedding estatístico comparativamente simples e totalmente reprodutível já constitui um ponto de partida competitivo.
+\subsection{Diagnóstico e Piloto de Hiperparâmetros}
 
-\begin{table}[t]
-\caption{Correlações médias de Spearman / Kendall / Kendall ponderado: abordagem proposta vs.\ baselines e faixas de referência da literatura.}
-\label{tab:baselines}
-\begin{center}
-\begin{tabular}{lccc}
-\hline
-\textbf{Abordagem} & \textbf{Spearman} & \textbf{Kendall} & \textbf{$\tau_w$} \\
-\hline
-Ranking aleatório            & $\approx 0$  & $\approx 0$  & $\approx 0$ \\
-Ranking de média global      & $0{,}47$ & $0{,}38$ & $0{,}42$ \\
-Proposto (k-NN, $k{=}10$)    & $0{,}58$ & $0{,}48$ & $0{,}52$ \\
-\hline
-Baseado em Dataset2Vec (lit.) & \multicolumn{3}{c}{$\sim 0{,}55$--$0{,}70$} \\
-\citeNP{Schoenfeld2022} (lit.) & \multicolumn{3}{c}{$\sim 0{,}40$--$0{,}70$} \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+O k-NN ajustado apresenta 17 tarefas com Kendall ponderado não positivo e uma indefinida. Entre as piores estão as tarefas 363159, 361148 e 361169. Após ajuste das cinco correlações exploratórias, o número de atributos apresenta associação positiva com a qualidade ($\rho\approx0,2064$, $q\approx0,0400$). Não se encontrou associação ajustada abaixo de 0,05 para as demais variáveis. A investigação não permite atribuir falhas exclusivamente a outliers ou desbalanceamento.
 
-\textbf{Limitações.} O embedding atual é puramente estatístico (não-neural), o preditor é um modelo simples baseado em instâncias (nenhum MLP ou outro metamodelo aprendido foi ainda avaliado sobre o mesmo meta-conjunto), a variância entre datasets permanece alta, e o arsenal de pipelines e os hiperparâmetros foram mantidos fixos para tornar o estudo tratável. Essas limitações apontam diretamente para as direções de trabalhos futuros descritas a seguir.
+No piloto separado, as tarefas 11, 15, 37, 4538, 9914 e 361198 usam dados brutos com o alvo oficial da tarefa. Codificação ordinal categórica e imputação numérica por mediana são ajustadas dentro dos folds. Com StandardScaler e sem seletor, variam-se profundidade da árvore (5, 10, ilimitada) e vizinhos do classificador k-NN (3, 5, 11), totalizando 36 combinações de tarefa/classificador/valor e 180 avaliações nos mesmos cinco folds por tarefa. Os resultados mostram sensibilidade às configurações, mas selecionar o melhor valor nesses folds é exploratório; o piloto não mede ranqueamento de um arsenal expandido em todos os grupos.
+
+\subsection{Limitações}
+
+A representação fixa e o arsenal controlado permitem auditoria e comparação de preditores. Seu alcance é delimitado por rótulos necessários na consulta, codificação nominal arbitrária e pelo espaço de candidatos. A comparação não substitui uma ablação de representações. Os escores históricos mantêm imputação anterior à CV e subamostragem exclusiva da SVM. O piloto corrige o tratamento no subconjunto, mas a matriz completa não foi reconstruída. Os grupos podem não detectar todas as versões relacionadas; a avaliação é retrospectiva, sem teste externo posterior, e Random Forest não foi otimizado. Intervalos por grupo são descritivos devido à sobreposição de treinos.
 
 \section{Conclusão}
-\label{sec:conclusion}
 
-Este trabalho propôs e avaliou uma abordagem de meta-aprendizado para ranquear e recomendar pipelines de classificação a partir de embeddings estatísticos de datasets. Um meta-conjunto combinando $201$ datasets, $60$ pipelines e um embedding distribucional de $64$ dimensões por dataset foi construído e caracterizado (Fase 1), e um preditor de ranking k-NN multi-saída foi treinado e avaliado por \textit{Leave-One-Out} no nível de datasets (Fase 2). Os dois objetivos específicos definidos para o estudo foram atendidos: (i) o meta-conjunto construído mostra que rótulos de desempenho e meta-características de datasets carregam sinal suficiente para diferenciar boas e más configurações de pipeline, e (ii) o preditor resultante estima de forma confiável os rankings de pipelines para datasets inéditos, com correlações de Spearman, Kendall e Kendall ponderado de $0{,}58$, $0{,}48$ e $0{,}52$ para $k=10$, superando as baselines aleatória e agnóstica à consulta e equiparando-se às faixas relatadas por abordagens baseadas em embeddings neurais mais ricos. Uma análise estatística mostra ainda que diversas dimensões do embedding se correlacionam significativamente com a qualidade do ranqueamento, reforçando a interpretabilidade da representação proposta.
+O estudo disponibiliza um benchmark auditado para investigação de recomendação de pipelines. Na avaliação revisada, Random Forest apresenta Kendall ponderado médio superior ao k-NN, enquanto a vantagem do k-NN sobre média global permanece incerta pelo intervalo utilizado. A auditoria de grupos, classes raras e demonstração de holdout alterou a interpretação dos resultados e delimitou quais evidências sustentam as conclusões.
 
-Como trabalhos futuros, pretende-se (i) substituir ou complementar o embedding estatístico por uma representação neural aprendida, como o Dataset2Vec \cite{Jomaa2021}; (ii) avaliar metamodelos mais ricos (por exemplo, perceptrons multicamadas) sobre o mesmo meta-conjunto; (iii) expandir o arsenal de pipelines e permitir variação de hiperparâmetros; (iv) estudar a transferibilidade da abordagem entre domínios; e (v) investigar mais a fundo a interpretabilidade do espaço de embeddings, incluindo as dimensões identificadas como significativamente correlacionadas com a qualidade do ranqueamento. O próprio meta-conjunto -- $201$ datasets $\times$ $60$ pipelines avaliados por validação cruzada estratificada -- é disponibilizado como um benchmark reutilizável para as comunidades de meta-aprendizado e AutoML.
+Como continuação, propõem-se: (i) reconstruir toda a Fase 1 com pré-processamento dentro dos folds; (ii) ampliar o arsenal de hiperparâmetros; (iii) comparar representações sob o mesmo protocolo; e (iv) testar em conjuntos externos coletados após o desenvolvimento. O acervo histórico, a nova avaliação e o piloto permanecem separados para permitir inspeção e reprodução.
 
-% Acknowledgments. Beyond the institutional thanks, this section formally
-% records the advising/co-advising roles underlying the original TCC from
-% which this article derives (fill in / adjust the funding-agency sentence
-% in \bottomstuff above if there is a scholarship or grant to disclose).
 \begin{ack}
-Os autores agradecem ao Departamento Acadêmico de Computação da Universidade Tecnológica Federal do Paraná (UTFPR) pelo apoio institucional ao desenvolvimento deste trabalho. Registra-se ainda que este artigo deriva do Trabalho de Conclusão de Curso de J. V. Dos Santos Gomes, no qual J. Aikes Junior atuou como orientador e D. Pereira dos Santos como coorientador, sendo responsáveis pela definição da metodologia, pelo acompanhamento da condução dos experimentos e pela revisão crítica dos resultados que fundamentam este trabalho.
+Os autores agradecem à Universidade Tecnológica Federal do Paraná pelo apoio institucional e à orientação do TCC que deu origem a este estudo.
 \end{ack}
-
 \begin{received}
 \end{received}
-
 \bibliographystyle{kdmile}
 \bibliography{references}
-
 \end{document}

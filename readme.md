@@ -1,3 +1,28 @@
+# TCC — Meta-aprendizado para ranqueamento de pipelines
+
+Esta branch contém a revisão experimental e textual de outubro de 2026.
+Comece pelo [painel da revisão](docs/revisao/PAINEL.md), que liga cada solicitação
+dos revisores às alterações, evidências, resultados e pendências.
+
+- [TCC revisado — PDF](documentos/tcc_revisado.pdf)
+- [Artigo revisado — PDF](documentos/artigo_revisado.pdf)
+- [Viabilidade](docs/revisao/VIABILIDADE.md)
+- [Campos numéricos para revisão](docs/revisao/CAMPOS_TCC.json)
+- [Instruções de reprodução](docs/revisao/PAINEL.md#reprodução)
+
+A `main` preserva o acervo consolidado anterior às correções. Os PDFs antigos
+na raiz são históricos. A comparação principal usa 193 tarefas elegíveis em
+165 grupos; o acervo original contém 201 tarefas e 60 pipelines. A reconstrução
+completa da Fase 1 continua pendente e está declarada nos documentos.
+
+O código está em `projeto/`, as fontes do TCC na raiz e em `capitulos/`, o artigo
+em `artigo/` e os resultados novos em `projeto/resultados/revisao_2026/`.
+Os caches dos datasets são locais e não são enviados ao GitHub.
+
+---
+
+## Documentação original do template
+
 # Modelo Latex para desenvolvimento de TCCs do DAINF-PB (UTFPR-PB) e DACOM-CM (UTFPR-CM)
 
   Este modelo LaTeX (não oficial) permite a produção de trabalhos acadêmicos (teses, dissertações, trabalhos de conclusão, etc.) da Universidade Tecnológica Federal do Paraná (UTFPR).

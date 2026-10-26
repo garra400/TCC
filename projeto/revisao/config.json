@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "k_values": [1, 3, 5, 7, 10],
+  "rf_estimators": 200,
+  "rf_min_samples_leaf": 2,
+  "bootstrap_samples": 2000,
+  "primary_metric": "kendall_ponderado",
+  "grouping": "nome_dataset_or_identical_processed_features",
+  "pilot_tasks": [11, 15, 37, 4538, 9914, 361198],
+  "pilot_classifiers": {
+    "DecisionTree": {"max_depth": [5, 10, null]},
+    "kNN": {"n_neighbors": [3, 5, 11]}
+  }
+}

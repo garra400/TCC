@@ -1,0 +1,11 @@
+{
+  "arquivo_base_tasks": 201,
+  "tasks_elegiveis": 193,
+  "grupos": 165,
+  "tau_knn": 0.3995248283166471,
+  "tau_rf": 0.4309180400442745,
+  "falhas_knn": 17,
+  "indefinidos": 1,
+  "pilot_folds": 180,
+  "source_manifest": "projeto/resultados/revisao_2026/manifesto.json"
+}

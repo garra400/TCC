@@ -1,0 +1,11 @@
+# Código e configurações com bytes estáveis em checkouts Windows/Linux.
+*.py text eol=lf
+*.json text eol=lf
+*.tex text eol=lf
+*.md text eol=lf
+*.bib text eol=lf
+# Artefatos CSV preservam os bytes originais para os hashes dos manifestos.
+*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.npy -text
+*.pkl -text
+*.pdf -text

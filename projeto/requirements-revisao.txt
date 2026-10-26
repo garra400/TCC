@@ -1,0 +1,7 @@
+# O código usa GroupKFold(shuffle=True), disponível desde scikit-learn 1.6.
+numpy>=2.0,<3
+pandas>=2.2,<4
+scipy>=1.13,<2
+scikit-learn>=1.6,<2
+matplotlib>=3.9,<4
+openml>=0.14,<1

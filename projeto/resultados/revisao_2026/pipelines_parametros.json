@@ -1,0 +1,2224 @@
+{
+  "sklearn": "1.8.0",
+  "n_features_exemplo": 20,
+  "nota": "Parâmetros efetivos atuais; seletores dependem de P; não reconstrói versões históricas desconhecidas.",
+  "pipelines": [
+    {
+      "pipeline_id": 0,
+      "scaler": "StandardScaler",
+      "selector": "PCA",
+      "classifier": "RandomForest",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 1,
+      "scaler": "StandardScaler",
+      "selector": "PCA",
+      "classifier": "SVM",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 2,
+      "scaler": "StandardScaler",
+      "selector": "PCA",
+      "classifier": "kNN",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 3,
+      "scaler": "StandardScaler",
+      "selector": "PCA",
+      "classifier": "MLP",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 4,
+      "scaler": "StandardScaler",
+      "selector": "PCA",
+      "classifier": "DecisionTree",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 5,
+      "scaler": "StandardScaler",
+      "selector": "SelectKBest",
+      "classifier": "RandomForest",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 6,
+      "scaler": "StandardScaler",
+      "selector": "SelectKBest",
+      "classifier": "SVM",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 7,
+      "scaler": "StandardScaler",
+      "selector": "SelectKBest",
+      "classifier": "kNN",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 8,
+      "scaler": "StandardScaler",
+      "selector": "SelectKBest",
+      "classifier": "MLP",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 9,
+      "scaler": "StandardScaler",
+      "selector": "SelectKBest",
+      "classifier": "DecisionTree",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 10,
+      "scaler": "StandardScaler",
+      "selector": "None",
+      "classifier": "RandomForest",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 11,
+      "scaler": "StandardScaler",
+      "selector": "None",
+      "classifier": "SVM",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 12,
+      "scaler": "StandardScaler",
+      "selector": "None",
+      "classifier": "kNN",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 13,
+      "scaler": "StandardScaler",
+      "selector": "None",
+      "classifier": "MLP",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 14,
+      "scaler": "StandardScaler",
+      "selector": "None",
+      "classifier": "DecisionTree",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "with_mean": true,
+          "with_std": true
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 15,
+      "scaler": "MinMaxScaler",
+      "selector": "PCA",
+      "classifier": "RandomForest",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 16,
+      "scaler": "MinMaxScaler",
+      "selector": "PCA",
+      "classifier": "SVM",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 17,
+      "scaler": "MinMaxScaler",
+      "selector": "PCA",
+      "classifier": "kNN",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 18,
+      "scaler": "MinMaxScaler",
+      "selector": "PCA",
+      "classifier": "MLP",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 19,
+      "scaler": "MinMaxScaler",
+      "selector": "PCA",
+      "classifier": "DecisionTree",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 20,
+      "scaler": "MinMaxScaler",
+      "selector": "SelectKBest",
+      "classifier": "RandomForest",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 21,
+      "scaler": "MinMaxScaler",
+      "selector": "SelectKBest",
+      "classifier": "SVM",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 22,
+      "scaler": "MinMaxScaler",
+      "selector": "SelectKBest",
+      "classifier": "kNN",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 23,
+      "scaler": "MinMaxScaler",
+      "selector": "SelectKBest",
+      "classifier": "MLP",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 24,
+      "scaler": "MinMaxScaler",
+      "selector": "SelectKBest",
+      "classifier": "DecisionTree",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 25,
+      "scaler": "MinMaxScaler",
+      "selector": "None",
+      "classifier": "RandomForest",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 26,
+      "scaler": "MinMaxScaler",
+      "selector": "None",
+      "classifier": "SVM",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 27,
+      "scaler": "MinMaxScaler",
+      "selector": "None",
+      "classifier": "kNN",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 28,
+      "scaler": "MinMaxScaler",
+      "selector": "None",
+      "classifier": "MLP",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 29,
+      "scaler": "MinMaxScaler",
+      "selector": "None",
+      "classifier": "DecisionTree",
+      "params": {
+        "scaler": {
+          "clip": false,
+          "copy": true,
+          "feature_range": [
+            0,
+            1
+          ]
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 30,
+      "scaler": "RobustScaler",
+      "selector": "PCA",
+      "classifier": "RandomForest",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 31,
+      "scaler": "RobustScaler",
+      "selector": "PCA",
+      "classifier": "SVM",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 32,
+      "scaler": "RobustScaler",
+      "selector": "PCA",
+      "classifier": "kNN",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 33,
+      "scaler": "RobustScaler",
+      "selector": "PCA",
+      "classifier": "MLP",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 34,
+      "scaler": "RobustScaler",
+      "selector": "PCA",
+      "classifier": "DecisionTree",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 35,
+      "scaler": "RobustScaler",
+      "selector": "SelectKBest",
+      "classifier": "RandomForest",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 36,
+      "scaler": "RobustScaler",
+      "selector": "SelectKBest",
+      "classifier": "SVM",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 37,
+      "scaler": "RobustScaler",
+      "selector": "SelectKBest",
+      "classifier": "kNN",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 38,
+      "scaler": "RobustScaler",
+      "selector": "SelectKBest",
+      "classifier": "MLP",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 39,
+      "scaler": "RobustScaler",
+      "selector": "SelectKBest",
+      "classifier": "DecisionTree",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 40,
+      "scaler": "RobustScaler",
+      "selector": "None",
+      "classifier": "RandomForest",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 41,
+      "scaler": "RobustScaler",
+      "selector": "None",
+      "classifier": "SVM",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 42,
+      "scaler": "RobustScaler",
+      "selector": "None",
+      "classifier": "kNN",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 43,
+      "scaler": "RobustScaler",
+      "selector": "None",
+      "classifier": "MLP",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 44,
+      "scaler": "RobustScaler",
+      "selector": "None",
+      "classifier": "DecisionTree",
+      "params": {
+        "scaler": {
+          "copy": true,
+          "quantile_range": [
+            25.0,
+            75.0
+          ],
+          "unit_variance": false,
+          "with_centering": true,
+          "with_scaling": true
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 45,
+      "scaler": "None",
+      "selector": "PCA",
+      "classifier": "RandomForest",
+      "params": {
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 46,
+      "scaler": "None",
+      "selector": "PCA",
+      "classifier": "SVM",
+      "params": {
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 47,
+      "scaler": "None",
+      "selector": "PCA",
+      "classifier": "kNN",
+      "params": {
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 48,
+      "scaler": "None",
+      "selector": "PCA",
+      "classifier": "MLP",
+      "params": {
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 49,
+      "scaler": "None",
+      "selector": "PCA",
+      "classifier": "DecisionTree",
+      "params": {
+        "selector": {
+          "copy": true,
+          "iterated_power": "auto",
+          "n_components": 10,
+          "n_oversamples": 10,
+          "power_iteration_normalizer": "auto",
+          "random_state": null,
+          "svd_solver": "auto",
+          "tol": 0.0,
+          "whiten": false
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 50,
+      "scaler": "None",
+      "selector": "SelectKBest",
+      "classifier": "RandomForest",
+      "params": {
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 51,
+      "scaler": "None",
+      "selector": "SelectKBest",
+      "classifier": "SVM",
+      "params": {
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 52,
+      "scaler": "None",
+      "selector": "SelectKBest",
+      "classifier": "kNN",
+      "params": {
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 53,
+      "scaler": "None",
+      "selector": "SelectKBest",
+      "classifier": "MLP",
+      "params": {
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 54,
+      "scaler": "None",
+      "selector": "SelectKBest",
+      "classifier": "DecisionTree",
+      "params": {
+        "selector": {
+          "k": 10,
+          "score_func": "<function f_classif at 0x00000195D2FDB5E0>"
+        },
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    },
+    {
+      "pipeline_id": 55,
+      "scaler": "None",
+      "selector": "None",
+      "classifier": "RandomForest",
+      "params": {
+        "clf": {
+          "bootstrap": true,
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": null,
+          "max_features": "sqrt",
+          "max_leaf_nodes": null,
+          "max_samples": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "n_estimators": 100,
+          "n_jobs": null,
+          "oob_score": false,
+          "random_state": 42,
+          "verbose": 0,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 56,
+      "scaler": "None",
+      "selector": "None",
+      "classifier": "SVM",
+      "params": {
+        "clf": {
+          "C": 1.0,
+          "break_ties": false,
+          "cache_size": 200,
+          "class_weight": null,
+          "coef0": 0.0,
+          "decision_function_shape": "ovr",
+          "degree": 3,
+          "gamma": "scale",
+          "kernel": "rbf",
+          "max_iter": -1,
+          "probability": false,
+          "random_state": 42,
+          "shrinking": true,
+          "tol": 0.001,
+          "verbose": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 57,
+      "scaler": "None",
+      "selector": "None",
+      "classifier": "kNN",
+      "params": {
+        "clf": {
+          "algorithm": "auto",
+          "leaf_size": 30,
+          "metric": "minkowski",
+          "metric_params": null,
+          "n_jobs": null,
+          "n_neighbors": 5,
+          "p": 2,
+          "weights": "uniform"
+        }
+      }
+    },
+    {
+      "pipeline_id": 58,
+      "scaler": "None",
+      "selector": "None",
+      "classifier": "MLP",
+      "params": {
+        "clf": {
+          "activation": "relu",
+          "alpha": 0.0001,
+          "batch_size": "auto",
+          "beta_1": 0.9,
+          "beta_2": 0.999,
+          "early_stopping": false,
+          "epsilon": 1e-08,
+          "hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "learning_rate": "constant",
+          "learning_rate_init": 0.001,
+          "max_fun": 15000,
+          "max_iter": 200,
+          "momentum": 0.9,
+          "n_iter_no_change": 10,
+          "nesterovs_momentum": true,
+          "power_t": 0.5,
+          "random_state": 42,
+          "shuffle": true,
+          "solver": "adam",
+          "tol": 0.0001,
+          "validation_fraction": 0.1,
+          "verbose": false,
+          "warm_start": false
+        }
+      }
+    },
+    {
+      "pipeline_id": 59,
+      "scaler": "None",
+      "selector": "None",
+      "classifier": "DecisionTree",
+      "params": {
+        "clf": {
+          "ccp_alpha": 0.0,
+          "class_weight": null,
+          "criterion": "gini",
+          "max_depth": 10,
+          "max_features": null,
+          "max_leaf_nodes": null,
+          "min_impurity_decrease": 0.0,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "min_weight_fraction_leaf": 0.0,
+          "monotonic_cst": null,
+          "random_state": 42,
+          "splitter": "best"
+        }
+      }
+    }
+  ]
+}

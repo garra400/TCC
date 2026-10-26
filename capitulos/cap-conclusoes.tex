@@ -1,73 +1,25 @@
-%%%% CAPÍTULO 6 – CONCLUSÕES E PERSPECTIVAS
-
 \chapter{Conclusão}\label{cap:conclusoeseperspectivas}
 
-Este trabalho propôs e avaliou uma abordagem de meta-aprendizado baseada em embeddings estatísticos de conjuntos de dados para ranqueamento e recomendação de pipelines de aprendizado de máquina. Nesta seção, sintetizam-se os principais resultados obtidos, verifica-se o atendimento dos objetivos propostos, discutem-se as contribuições e limitações do trabalho, e apontam-se direções para pesquisas futuras.
+Este trabalho desenvolveu e avaliou uma infraestrutura de meta-aprendizado para ranquear pipelines de classificação com descritores estatísticos de conjuntos rotulados. A auditoria e a separação de tarefas relacionadas reformularam a interpretação dos resultados históricos.
 
-%% ────────────────────────────────────────────────────────────────────────────
-\section{Síntese do Trabalho}
-\label{sec:sintese-conclusao}
+\section{Síntese dos Resultados}\label{sec:sintese-conclusao}
 
-O trabalho foi estruturado em duas fases metodológicas interligadas. Na \textbf{Fase 1}, um meta-conjunto foi construído pela execução sistemática de 60 pipelines de classificação sobre 201 conjuntos de dados obtidos do OpenML, resultando em uma matriz de acurácias balanceadas de dimensão $201 \times 60$. Cada conjunto foi representado por um vetor estatístico distribucional de 64 dimensões, sem treinamento neural, que captura a distribuição de meta-features por atributo de forma invariante ao número de features e instâncias. Na \textbf{Fase 2}, um preditor k-NN multi-saída foi avaliado por Leave-One-Out no nível de conjuntos de dados, utilizando Spearman e Kendall Tau para avaliar a ordenação global, e Kendall Tau ponderado (\textit{weightedtau}) e NDCG como métricas complementares voltadas ao topo do ranking.
+O acervo histórico contém 201 tarefas e 60 pipelines, com 172 escores ausentes. A auditoria identificou 186 nomes e 172 grupos conservadores. O requisito de cinco exemplos por classe delimitou a avaliação principal a 193 tarefas em 165 grupos. A tarefa anteriormente apresentada como holdout pertencia ao acervo e foi retirada como evidência de generalização independente.
 
-Os experimentos demonstraram que o preditor k-NN com $k=10$ obteve correlação de Spearman média de $0{,}58 \pm 0{,}36$ e Kendall Tau ponderado médio de $0{,}52 \pm 0{,}35$ sobre 198 folds LOO válidos, resultados competitivos com o estado da arte em tarefas de meta-aprendizado para seleção de algoritmos. A consistente superioridade do Kendall ponderado sobre o Kendall padrão ($+$4,5 pontos percentuais para $k=10$), em conjunto com o NDCG elevado, indica que o sistema é particularmente mais preciso no topo do ranking — o aspecto de maior relevância prática em AutoML.
+Em cinco partições externas por grupos, com ajuste interno de k, o Kendall ponderado médio por grupo foi $0{,}3995$ para k-NN, $0{,}4309$ para Random Forest multi-saída e $0{,}3690$ para média global. A diferença pareada Random Forest menos k-NN foi $0{,}0314$, com intervalo descritivo de 95\% $[0{,}0073;0{,}0564]$. A comparação entre k-NN e média global permaneceu inconclusiva pelo intervalo adotado. Os dados sugerem vantagem de Random Forest neste benchmark, sem estabelecer superioridade geral do metamodelo ou da representação.
 
-%% ────────────────────────────────────────────────────────────────────────────
-\section{Atendimento dos Objetivos}
-\label{sec:objetivosAtendidos}
+Foram encontradas 17 tarefas com Kendall ponderado não positivo e uma com correlação indefinida. A associação com número de atributos permaneceu após correção para cinco comparações; desbalanceamento e distância ao treino não explicaram isoladamente a instabilidade. Essas associações não demonstram causalidade.
 
-Verifica-se o atendimento de cada objetivo específico definido na \autoref{sec:objetivos}:
+\section{Atendimento dos Objetivos}\label{sec:objetivosAtendidos}
 
-\begin{enumerate}
-  \item \textbf{Avaliar, por meio da construção de um meta-conjunto, se metadados de desempenho e meta-características de conjuntos de dados carregam sinal suficiente para diferenciar boas e más combinações de pré-processamento e classificação:} \textbf{Atendido.} Como pré-requisito para esta avaliação, foi construído um repositório de conhecimento (meta-conjunto) contendo $201 \times 60 = 12.060$ avaliações de pipelines com seus respectivos embeddings de conjuntos de dados, configurações de pipeline e acurácias balanceadas, armazenados em formato reutilizável (\texttt{.npy} e \texttt{.pkl}). A análise desse repositório por meio da abordagem LOO demonstrou que o meta-aprendizado por similaridade de embeddings é capaz de ranquear pipelines de forma significativamente melhor que o acaso, com correlação de Spearman média de $0{,}58$ e correlações estatísticas com $p < 0{,}0001$.
+O primeiro objetivo foi atendido pela construção e disponibilização de matrizes, configurações e escores para investigar relações entre características dos dados e desempenho. A auditoria mostrou que parte das tarefas não atendia ao protocolo declarado; sua exclusão documentada integra o resultado científico.
 
-  \item \textbf{Construir e avaliar um modelo preditivo capaz de estimar, a partir de metacaracterísticas dos dados, o ranking de adequação de diferentes configurações de pré-processamento e classificação:} \textbf{Atendido.} O preditor k-NN multi-saída foi implementado com estrutura KDTree e avaliado por LOO. A demonstração sobre um conjunto de dados retido (Spearman $= 0{,}96$, NDCG $= 0{,}9995$) ilustra o funcionamento do sistema em um caso concreto, mas a evidência principal de generalização é a validação LOO sobre os folds válidos.
-\end{enumerate}
+O segundo objetivo foi atendido pela implementação de preditores de ranking e sua comparação com baselines sob grupos separados. O ganho depende do comparador e da métrica. O piloto de hiperparâmetros em dados brutos, com 180 avaliações, demonstrou a viabilidade técnica de ampliar as configurações, mantendo essa evidência separada da matriz histórica.
 
-Como resultado complementar, o módulo \texttt{recomendador.py} implementa uma interface de recomendação que, dado o embedding de um novo conjunto de dados, retorna uma lista ranqueada dos 60 pipelines por desempenho estimado. A integração completa em um sistema AutoML de produção permanece como direção de trabalho futuro.
+\section{Limitações e Perspectivas}\label{sec:limitacoes}
 
-%% ────────────────────────────────────────────────────────────────────────────
+A representação determinística permite auditoria: são 55 descritores, nove zeros e normalização L2. As correlações com alvos multiclasses codificados dependem de uma ordenação nominal arbitrária, e o método requer rótulos do problema de entrada. Comparar dois metamodelos com o mesmo vetor não isola o ganho da representação.
 
-%% ────────────────────────────────────────────────────────────────────────────
-\section{Limitações e Avaliação Crítica}
-\label{sec:limitacoes}
+A Fase 1 histórica mantém imputação antes da CV e subamostragem global exclusiva da SVM. O piloto novo usa tratamento dentro dos folds, mas não substitui a reconstrução de toda a matriz. Os grupos não garantem independência entre todas as versões dos dados; a avaliação é retrospectiva, Random Forest não foi otimizado e os intervalos de bootstrap são descritivos devido à sobreposição de treinos.
 
-Após análise observou-se as seguintes limitações do trabalho:
-\begin{itemize}
-  \item \textbf{Embedding não-neural:} A incompatibilidade do TensorFlow com Python 3.13+ impediu o uso do Dataset2Vec original. O embedding estatístico adotado, embora funcional e publicável, é potencialmente menos expressivo que embeddings neurais pré-treinados em similaridade de conjuntos de dados, conforme evidenciado pelos experimentos do próprio Dataset2Vec \cite{Jomaa2021}. Esta limitação representa a principal oportunidade de melhoria dos resultados.
-
-  \item \textbf{Ausência do metamodelo MLP:} A indisponibilidade do PyTorch no ambiente impediu a avaliação comparativa do preditor MLP (\glsadd{bce}BCE loss), que poderia capturar padrões não-lineares entre embeddings e rankings de pipelines não acessíveis ao k-NN.
-
-  \item \textbf{Variabilidade elevada:} O desvio padrão das métricas LOO ($\sigma \approx 0{,}34$--$0{,}36$) reflete a heterogeneidade dos conjuntos de dados e a dependência do sistema da presença de vizinhos próximos no meta-conjunto. Para conjuntos atípicos (sem análogos no meta-conjunto), as recomendações são menos confiáveis.
-
-  \item \textbf{Hiperparâmetros dos pipelines:} Os classificadores foram avaliados com hiperparâmetros padrão, sem ajuste individual, o que subestima o potencial de alguns algoritmos (especialmente SVM e MLP) e pode distorcer o ranking de qualidade dos pipelines.
-
-\end{itemize}
-
-%% ────────────────────────────────────────────────────────────────────────────
-\section{Trabalhos Futuros}
-\label{sec:trabalhosFuturos}
-
-Com base nos resultados obtidos e nas limitações identificadas, propõem-se as seguintes extensões para trabalhos futuros:
-
-\begin{enumerate}
-  \item \textbf{Integração com Dataset2Vec:} replicar os experimentos com o embedding neural do Dataset2Vec \cite{Jomaa2021} em um ambiente Python 3.11/3.12 com TensorFlow, quantificando o ganho de desempenho em relação ao embedding estatístico e validando a hipótese de maior expressividade (critério \textbf{D2}).
-
-  \item \textbf{Avaliação do preditor MLP:} comparar o preditor k-NN com o preditor MLP (BCE loss, PyTorch) em termos de Spearman, Kendall e NDCG, investigando se a não-linearidade do MLP resulta em melhor generalização.
-
-  \item \textbf{Expansão do arsenal de pipelines:} ampliar os 60 pipelines com combinações de ajuste de hiperparâmetros (Grid Search LOO), algoritmos adicionais (XGBoost, LightGBM, Extra Trees) e operadores de engenharia de features, aumentando a cobertura do espaço de busca de AutoML.
-
-  \item \textbf{Submissão ao BRACIS 2026:} publicação dos resultados na trilha de meta-aprendizado e AutoML do \textit{Brazilian Conference on Intelligent Systems} (BRACIS 2026), permitindo comparação com sistemas contemporâneos e feedback da comunidade científica.
-
-  \item \textbf{Análise de transferabilidade do meta-conjunto:} investigar se o meta-conjunto construído com conjuntos OpenML generaliza para outros domínios (e.g., dados de séries temporais, imagens tabeladas), avaliando a robustez do sistema fora do contexto de treinamento.
-
-  \item \textbf{Interpretabilidade das dimensões do embedding:} aprofundar a análise das dimensões correlacionadas com $\tau_w$ (identificadas neste trabalho) para entender quais propriedades dos dados tornam o ranqueamento mais ou menos preciso, potencialmente guiando o design de embeddings mais discriminativos.
-\end{enumerate}
-
-%% ────────────────────────────────────────────────────────────────────────────
-\section{Considerações Finais}
-\label{sec:consideracoesFinais}
-
-Este trabalho demonstrou que representações estatísticas distribucionais de conjuntos de dados, combinadas com um preditor k-NN e validação Leave-One-Out, constituem uma abordagem viável, reprodutível e competitiva para recomendação de pipelines em AutoML. A adoção conjunta de Kendall Tau ponderado e NDCG revelou que o sistema é particularmente preciso no topo do ranking — exatamente onde o impacto prático é maior. A análise de correlação estatística abriu um caminho promissor para a interpretabilidade do meta-aprendizado por similaridade.
-
-Os resultados obtidos indicam que a qualidade da representação do conjunto de dados (embedding) é o fator mais crítico para o desempenho do meta-aprendizado por similaridade — mais do que a escolha do metamodelo em si. Melhorar a representação, seja por embeddings neurais mais expressivos ou por meta-features cuidadosamente projetadas, é o caminho mais promissor para elevar a qualidade das recomendações de AutoML. O presente trabalho, ao estabelecer um baseline sólido e uma infraestrutura experimental reutilizável, contribui para este objetivo de longo prazo.
+Os próximos passos científicos são: (i) reconstruir o benchmark com dados brutos e pré-processamento dentro dos folds; (ii) avaliar o arsenal expandido sob o mesmo protocolo; (iii) comparar representações estatísticas e neurais com recursos equivalentes; e (iv) validar em conjuntos externos coletados após o desenvolvimento. Isso permitirá distinguir os efeitos da representação, do metamodelo e do espaço de pipelines.

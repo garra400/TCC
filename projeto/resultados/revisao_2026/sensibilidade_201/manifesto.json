@@ -1,0 +1,70 @@
+{
+  "config": {
+    "seed": 42,
+    "outer_folds": 5,
+    "inner_folds": 4,
+    "k_values": [
+      1,
+      3,
+      5,
+      7,
+      10
+    ],
+    "rf_estimators": 200,
+    "rf_min_samples_leaf": 2,
+    "bootstrap_samples": 2000,
+    "primary_metric": "kendall_ponderado",
+    "grouping": "nome_dataset_or_identical_processed_features",
+    "pilot_tasks": [
+      11,
+      15,
+      37,
+      4538,
+      9914,
+      361198
+    ],
+    "pilot_classifiers": {
+      "DecisionTree": {
+        "max_depth": [
+          5,
+          10,
+          null
+        ]
+      },
+      "kNN": {
+        "n_neighbors": [
+          3,
+          5,
+          11
+        ]
+      }
+    }
+  },
+  "python": "3.14.2",
+  "packages": {
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0"
+  },
+  "input_sha256": {
+    "X_emb.npy": "fadfbdeb206373d701b9b2b115cd92a84794f29b9adec1860a08ae134b12b830",
+    "Y_accuracy.npy": "6af1959d04d84655363b09e88999eddc173492b85bb3517db4b6bbacf42a4599",
+    "task_ids.npy": "1cd70c6478dde8fdf65180a85ac39509589dc4139ddf92cf5ed9a5c83fb68fda",
+    "pipelines_raw.csv": "484e777a64f643f762042328aaf13a41c036888d3bde9e719e808f98d610a15d"
+  },
+  "code_sha256": "c992e6574032ee68562e300f8fb5cb39100bc464bd4835ffa2e0312aae934712",
+  "config_sha256": "b9ee44772432b2c8a096074094cd6bf65c065f12de96690715119332fb90f4d7",
+  "archive_tasks": 201,
+  "archive_missing_scores": 172,
+  "n_tasks": 201,
+  "n_excluded_tasks": 0,
+  "include_ineligible": true,
+  "n_names": 186,
+  "n_groups": 172,
+  "missing_scores": 172,
+  "holdout_363713_in_training_archive": true,
+  "metadata_sha256": "5483a1e611907730892acd66f068ab67c08c58ca40f188f2edd2d52ce4cad829",
+  "dataset_catalog_sha256": "3e901c7f30ab6a19357c8ca039158408f772646ccf9bd7d9cc19f88f1ab6a72a",
+  "caveat": "Retrospective grouped CV on historical Phase 1. Bootstrap intervals are descriptive; training folds overlap."
+}
