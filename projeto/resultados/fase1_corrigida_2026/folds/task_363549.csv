@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+363549,Estimation_of_Obesity_Levels,0,0,StandardScaler,PCA,RandomForest,1688,423,ok,,0.8211152011644623,0.8186574594911903,,0.7544305999908829
+363549,Estimation_of_Obesity_Levels,1,0,StandardScaler,PCA,RandomForest,1689,422,ok,,0.8082247602105977,0.8068468838157282,,0.68111730000237
+363549,Estimation_of_Obesity_Levels,2,0,StandardScaler,PCA,RandomForest,1689,422,ok,,0.796357722589635,0.7942821010552262,,0.8192292999883648
+363549,Estimation_of_Obesity_Levels,3,0,StandardScaler,PCA,RandomForest,1689,422,ok,,0.819116167687772,0.8204591119117125,,0.7151488999952562
+363549,Estimation_of_Obesity_Levels,4,0,StandardScaler,PCA,RandomForest,1689,422,ok,,0.7825659318467902,0.7804899045570626,,0.7286261999979615
+363549,Estimation_of_Obesity_Levels,0,1,StandardScaler,PCA,SVM,1688,423,ok,,0.7748984002678584,0.769098822405052,,0.15550229999644216
+363549,Estimation_of_Obesity_Levels,1,1,StandardScaler,PCA,SVM,1689,422,ok,,0.7509137898454401,0.7456776300181813,,0.1339250000019092
+363549,Estimation_of_Obesity_Levels,2,1,StandardScaler,PCA,SVM,1689,422,ok,,0.7590755947224082,0.7554716991474045,,0.2001004999910947
+363549,Estimation_of_Obesity_Levels,3,1,StandardScaler,PCA,SVM,1689,422,ok,,0.7689367615871484,0.7657539464973474,,0.15560240000195336
+363549,Estimation_of_Obesity_Levels,4,1,StandardScaler,PCA,SVM,1689,422,ok,,0.7477698058398788,0.7421681183566174,,0.15263499999127816
+363549,Estimation_of_Obesity_Levels,0,2,StandardScaler,PCA,kNN,1688,423,ok,,0.7750795455228953,0.7628779109309223,,0.021590699994703755
+363549,Estimation_of_Obesity_Levels,1,2,StandardScaler,PCA,kNN,1689,422,ok,,0.7992899985664764,0.7923823703980837,,0.020010699998238124
+363549,Estimation_of_Obesity_Levels,2,2,StandardScaler,PCA,kNN,1689,422,ok,,0.7599781221395864,0.751903340825021,,0.020532100010314025
+363549,Estimation_of_Obesity_Levels,3,2,StandardScaler,PCA,kNN,1689,422,ok,,0.8050429191836186,0.8019238393076679,,0.021049600007245317
+363549,Estimation_of_Obesity_Levels,4,2,StandardScaler,PCA,kNN,1689,422,ok,,0.7754385187882724,0.7619272134222942,,0.04991710001195315
+363549,Estimation_of_Obesity_Levels,0,3,StandardScaler,PCA,MLP,1688,423,ok,,0.8175991587321636,0.8117896515202382,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.102154000007431
+363549,Estimation_of_Obesity_Levels,1,3,StandardScaler,PCA,MLP,1689,422,ok,,0.7879834069643182,0.7839729547064623,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0859138000087114
+363549,Estimation_of_Obesity_Levels,2,3,StandardScaler,PCA,MLP,1689,422,ok,,0.8007050176943323,0.8011256317693941,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7424283000000287
+363549,Estimation_of_Obesity_Levels,3,3,StandardScaler,PCA,MLP,1689,422,ok,,0.8228891469339168,0.8237911022640609,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7851268000085838
+363549,Estimation_of_Obesity_Levels,4,3,StandardScaler,PCA,MLP,1689,422,ok,,0.7633301968703593,0.7595789992571912,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.825582100005704
+363549,Estimation_of_Obesity_Levels,0,4,StandardScaler,PCA,DecisionTree,1688,423,ok,,0.7023842605123393,0.7041543694146427,,0.025144300001556985
+363549,Estimation_of_Obesity_Levels,1,4,StandardScaler,PCA,DecisionTree,1689,422,ok,,0.6627197526520187,0.6629341545573686,,0.026544100008322857
+363549,Estimation_of_Obesity_Levels,2,4,StandardScaler,PCA,DecisionTree,1689,422,ok,,0.6421944568453508,0.6432797317825089,,0.024643400000059046
+363549,Estimation_of_Obesity_Levels,3,4,StandardScaler,PCA,DecisionTree,1689,422,ok,,0.6951494884067403,0.6904076576574951,,0.029473000002326444
+363549,Estimation_of_Obesity_Levels,4,4,StandardScaler,PCA,DecisionTree,1689,422,ok,,0.6406483245459704,0.6378303902349868,,0.02738899999530986
+363549,Estimation_of_Obesity_Levels,0,5,StandardScaler,SelectKBest,RandomForest,1688,423,ok,,0.9565923038829443,0.9559233644242174,,0.39427610000711866
+363549,Estimation_of_Obesity_Levels,1,5,StandardScaler,SelectKBest,RandomForest,1689,422,ok,,0.9361573748273255,0.937160352086135,,0.4126317000045674
+363549,Estimation_of_Obesity_Levels,2,5,StandardScaler,SelectKBest,RandomForest,1689,422,ok,,0.9672154280109,0.9673810122628888,,0.6196855000016512
+363549,Estimation_of_Obesity_Levels,3,5,StandardScaler,SelectKBest,RandomForest,1689,422,ok,,0.9455683429695022,0.9449853639554094,,0.39275939999788534
+363549,Estimation_of_Obesity_Levels,4,5,StandardScaler,SelectKBest,RandomForest,1689,422,ok,,0.9412017447506521,0.9415720498969599,,0.377579699998023
+363549,Estimation_of_Obesity_Levels,0,6,StandardScaler,SelectKBest,SVM,1688,423,ok,,0.8887931535714788,0.8875552916621456,,0.13075409999873955
+363549,Estimation_of_Obesity_Levels,1,6,StandardScaler,SelectKBest,SVM,1689,422,ok,,0.8514569812599371,0.8525439590780659,,0.12113690000842325
+363549,Estimation_of_Obesity_Levels,2,6,StandardScaler,SelectKBest,SVM,1689,422,ok,,0.8956393248220994,0.8941834955561034,,0.13279090001014993
+363549,Estimation_of_Obesity_Levels,3,6,StandardScaler,SelectKBest,SVM,1689,422,ok,,0.8732199786813234,0.8726288109307697,,0.12745790000190027
+363549,Estimation_of_Obesity_Levels,4,6,StandardScaler,SelectKBest,SVM,1689,422,ok,,0.867648555748115,0.8683989633720751,,0.114772399989306
+363549,Estimation_of_Obesity_Levels,0,7,StandardScaler,SelectKBest,kNN,1688,423,ok,,0.8289448464325312,0.8245711686012893,,0.017469700003857724
+363549,Estimation_of_Obesity_Levels,1,7,StandardScaler,SelectKBest,kNN,1689,422,ok,,0.7842377564052442,0.7805909109932061,,0.019569399999454618
+363549,Estimation_of_Obesity_Levels,2,7,StandardScaler,SelectKBest,kNN,1689,422,ok,,0.8368551712878028,0.8347298397650565,,0.018275399997946806
+363549,Estimation_of_Obesity_Levels,3,7,StandardScaler,SelectKBest,kNN,1689,422,ok,,0.8306697999600623,0.8270635729328225,,0.017706800004816614
+363549,Estimation_of_Obesity_Levels,4,7,StandardScaler,SelectKBest,kNN,1689,422,ok,,0.8101519256821305,0.8057049516894994,,0.019253900012699887
+363549,Estimation_of_Obesity_Levels,0,8,StandardScaler,SelectKBest,MLP,1688,423,ok,,0.9567565074954238,0.9566748557329382,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8695983000070555
+363549,Estimation_of_Obesity_Levels,1,8,StandardScaler,SelectKBest,MLP,1689,422,ok,,0.9389853259311387,0.939083728057509,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7438805999991018
+363549,Estimation_of_Obesity_Levels,2,8,StandardScaler,SelectKBest,MLP,1689,422,ok,,0.9507966003285393,0.950808127227744,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9163535999978194
+363549,Estimation_of_Obesity_Levels,3,8,StandardScaler,SelectKBest,MLP,1689,422,ok,,0.9450520385839397,0.9449166083122534,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0674553999997443
+363549,Estimation_of_Obesity_Levels,4,8,StandardScaler,SelectKBest,MLP,1689,422,ok,,0.9636312352412949,0.9636529950057715,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7188252999912947
+363549,Estimation_of_Obesity_Levels,0,9,StandardScaler,SelectKBest,DecisionTree,1688,423,ok,,0.9355155973382574,0.9344714451534946,,0.011284899999736808
+363549,Estimation_of_Obesity_Levels,1,9,StandardScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9355083795970496,0.9352994107648698,,0.013147299992851913
+363549,Estimation_of_Obesity_Levels,2,9,StandardScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9485370713840924,0.949885578815913,,0.012670200012507848
+363549,Estimation_of_Obesity_Levels,3,9,StandardScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9326071332170741,0.9327992792481538,,0.013047000000369735
+363549,Estimation_of_Obesity_Levels,4,9,StandardScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9352630344333741,0.9346532223014437,,0.012244900004588999
+363549,Estimation_of_Obesity_Levels,0,10,StandardScaler,None,RandomForest,1688,423,ok,,0.9568320932852953,0.9562348376594458,,0.6204993999999715
+363549,Estimation_of_Obesity_Levels,1,10,StandardScaler,None,RandomForest,1689,422,ok,,0.9336122188338937,0.9349194450321097,,0.44666899999720044
+363549,Estimation_of_Obesity_Levels,2,10,StandardScaler,None,RandomForest,1689,422,ok,,0.9755068921956184,0.975369396450902,,0.4679381000023568
+363549,Estimation_of_Obesity_Levels,3,10,StandardScaler,None,RandomForest,1689,422,ok,,0.9438586275703909,0.9433529246268771,,0.47598780000407714
+363549,Estimation_of_Obesity_Levels,4,10,StandardScaler,None,RandomForest,1689,422,ok,,0.9559768206903286,0.956192433026189,,0.42136560000653844
+363549,Estimation_of_Obesity_Levels,0,11,StandardScaler,None,SVM,1688,423,ok,,0.8985450236681763,0.8989584397226571,,0.15674890000082087
+363549,Estimation_of_Obesity_Levels,1,11,StandardScaler,None,SVM,1689,422,ok,,0.878484358302708,0.8784784902958801,,0.1548246000020299
+363549,Estimation_of_Obesity_Levels,2,11,StandardScaler,None,SVM,1689,422,ok,,0.8897581007971673,0.8894352707376948,,0.14194330001191702
+363549,Estimation_of_Obesity_Levels,3,11,StandardScaler,None,SVM,1689,422,ok,,0.8757215303661783,0.8767048693875006,,0.15024089999496937
+363549,Estimation_of_Obesity_Levels,4,11,StandardScaler,None,SVM,1689,422,ok,,0.8653630614481017,0.8672604842732197,,0.13627080000878777
+363549,Estimation_of_Obesity_Levels,0,12,StandardScaler,None,kNN,1688,423,ok,,0.8198021737430606,0.8092630777602535,,0.012345199997071177
+363549,Estimation_of_Obesity_Levels,1,12,StandardScaler,None,kNN,1689,422,ok,,0.7915606999504784,0.7826918999350948,,0.012521700002253056
+363549,Estimation_of_Obesity_Levels,2,12,StandardScaler,None,kNN,1689,422,ok,,0.7901620935500179,0.7802147701382317,,0.010421600003610365
+363549,Estimation_of_Obesity_Levels,3,12,StandardScaler,None,kNN,1689,422,ok,,0.8353319254933312,0.8330396063116824,,0.010905100003583357
+363549,Estimation_of_Obesity_Levels,4,12,StandardScaler,None,kNN,1689,422,ok,,0.8047636171535927,0.7970392663910151,,0.010474499998963438
+363549,Estimation_of_Obesity_Levels,0,13,StandardScaler,None,MLP,1688,423,ok,,0.933662442283132,0.9323805330337039,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.1210170999984257
+363549,Estimation_of_Obesity_Levels,1,13,StandardScaler,None,MLP,1689,422,ok,,0.9360663949487842,0.9366428085435413,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8711942999943858
+363549,Estimation_of_Obesity_Levels,2,13,StandardScaler,None,MLP,1689,422,ok,,0.9480133254975238,0.9481139626417849,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7703094000025885
+363549,Estimation_of_Obesity_Levels,3,13,StandardScaler,None,MLP,1689,422,ok,,0.899427352337975,0.8977438884036193,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.91484459998901
+363549,Estimation_of_Obesity_Levels,4,13,StandardScaler,None,MLP,1689,422,ok,,0.943845092769127,0.9436180263533831,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8185119999980088
+363549,Estimation_of_Obesity_Levels,0,14,StandardScaler,None,DecisionTree,1688,423,ok,,0.9301424902410125,0.9297740145031833,,0.014538000003085472
+363549,Estimation_of_Obesity_Levels,1,14,StandardScaler,None,DecisionTree,1689,422,ok,,0.9401699377068836,0.9401380957838432,,0.01809730000968557
+363549,Estimation_of_Obesity_Levels,2,14,StandardScaler,None,DecisionTree,1689,422,ok,,0.9412033143236075,0.941932997271045,,0.025130199996056035
+363549,Estimation_of_Obesity_Levels,3,14,StandardScaler,None,DecisionTree,1689,422,ok,,0.9280106609742799,0.9281830630487108,,0.01483689999440685
+363549,Estimation_of_Obesity_Levels,4,14,StandardScaler,None,DecisionTree,1689,422,ok,,0.9349943376129531,0.9344623477806195,,0.01596179998887237
+363549,Estimation_of_Obesity_Levels,0,15,MinMaxScaler,PCA,RandomForest,1688,423,ok,,0.7630861657955255,0.7572844588560502,,0.6334186000021873
+363549,Estimation_of_Obesity_Levels,1,15,MinMaxScaler,PCA,RandomForest,1689,422,ok,,0.7321317799150311,0.7284722973366836,,0.668912499997532
+363549,Estimation_of_Obesity_Levels,2,15,MinMaxScaler,PCA,RandomForest,1689,422,ok,,0.7337695378404799,0.7311425978790345,,0.791681199989398
+363549,Estimation_of_Obesity_Levels,3,15,MinMaxScaler,PCA,RandomForest,1689,422,ok,,0.7484840342866471,0.7488070252718046,,0.6147880999924382
+363549,Estimation_of_Obesity_Levels,4,15,MinMaxScaler,PCA,RandomForest,1689,422,ok,,0.7652384548813229,0.7603771720819447,,0.6989670999901136
+363549,Estimation_of_Obesity_Levels,0,16,MinMaxScaler,PCA,SVM,1688,423,ok,,0.7104119926780025,0.6976499848170914,,0.1495275000052061
+363549,Estimation_of_Obesity_Levels,1,16,MinMaxScaler,PCA,SVM,1689,422,ok,,0.6667709229285583,0.6562658145699515,,0.17600389999279287
+363549,Estimation_of_Obesity_Levels,2,16,MinMaxScaler,PCA,SVM,1689,422,ok,,0.675109765873797,0.661823375672608,,0.16844809999747667
+363549,Estimation_of_Obesity_Levels,3,16,MinMaxScaler,PCA,SVM,1689,422,ok,,0.6697539578640637,0.6637468119714927,,0.14650660000916105
+363549,Estimation_of_Obesity_Levels,4,16,MinMaxScaler,PCA,SVM,1689,422,ok,,0.6885061012529011,0.6790840119046874,,0.15740690000529867
+363549,Estimation_of_Obesity_Levels,0,17,MinMaxScaler,PCA,kNN,1688,423,ok,,0.6953626012739313,0.6787239749998302,,0.01742819999344647
+363549,Estimation_of_Obesity_Levels,1,17,MinMaxScaler,PCA,kNN,1689,422,ok,,0.664976412020747,0.6571765562700058,,0.01930970000103116
+363549,Estimation_of_Obesity_Levels,2,17,MinMaxScaler,PCA,kNN,1689,422,ok,,0.6778293851251762,0.6655215627415393,,0.019545100003597327
+363549,Estimation_of_Obesity_Levels,3,17,MinMaxScaler,PCA,kNN,1689,422,ok,,0.7076148381382537,0.7030470782723853,,0.018268100000568666
+363549,Estimation_of_Obesity_Levels,4,17,MinMaxScaler,PCA,kNN,1689,422,ok,,0.6954809948235944,0.6839865367668941,,0.016078799992101267
+363549,Estimation_of_Obesity_Levels,0,18,MinMaxScaler,PCA,MLP,1688,423,ok,,0.7610635943148258,0.7546839065720236,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7910163000051398
+363549,Estimation_of_Obesity_Levels,1,18,MinMaxScaler,PCA,MLP,1689,422,ok,,0.7330766022884251,0.7285569576835759,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8987634000077378
+363549,Estimation_of_Obesity_Levels,2,18,MinMaxScaler,PCA,MLP,1689,422,ok,,0.7342369074262171,0.7299610478954677,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9751774000033038
+363549,Estimation_of_Obesity_Levels,3,18,MinMaxScaler,PCA,MLP,1689,422,ok,,0.7477723356490996,0.7485328378308694,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0896592999924906
+363549,Estimation_of_Obesity_Levels,4,18,MinMaxScaler,PCA,MLP,1689,422,ok,,0.7495931056927352,0.7471226876134075,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8491322999907425
+363549,Estimation_of_Obesity_Levels,0,19,MinMaxScaler,PCA,DecisionTree,1688,423,ok,,0.6494827285467679,0.643313070643371,,0.027674500001012348
+363549,Estimation_of_Obesity_Levels,1,19,MinMaxScaler,PCA,DecisionTree,1689,422,ok,,0.670131069669247,0.6671203913899904,,0.026717699991422705
+363549,Estimation_of_Obesity_Levels,2,19,MinMaxScaler,PCA,DecisionTree,1689,422,ok,,0.6428088505999758,0.6420340280122581,,0.023602300003403798
+363549,Estimation_of_Obesity_Levels,3,19,MinMaxScaler,PCA,DecisionTree,1689,422,ok,,0.6360268953137742,0.6315494140501262,,0.024397299988777377
+363549,Estimation_of_Obesity_Levels,4,19,MinMaxScaler,PCA,DecisionTree,1689,422,ok,,0.6516824089562189,0.647195207697112,,0.025937600003089756
+363549,Estimation_of_Obesity_Levels,0,20,MinMaxScaler,SelectKBest,RandomForest,1688,423,ok,,0.9565923038829443,0.9559233644242174,,0.4203979000012623
+363549,Estimation_of_Obesity_Levels,1,20,MinMaxScaler,SelectKBest,RandomForest,1689,422,ok,,0.9361573748273255,0.937160352086135,,0.3816477000073064
+363549,Estimation_of_Obesity_Levels,2,20,MinMaxScaler,SelectKBest,RandomForest,1689,422,ok,,0.9672154280109,0.9673810122628888,,0.35349959999439307
+363549,Estimation_of_Obesity_Levels,3,20,MinMaxScaler,SelectKBest,RandomForest,1689,422,ok,,0.9435275266429716,0.942818832167239,,0.36103439998987596
+363549,Estimation_of_Obesity_Levels,4,20,MinMaxScaler,SelectKBest,RandomForest,1689,422,ok,,0.9436647989378442,0.9439132863067553,,0.3958330000023125
+363549,Estimation_of_Obesity_Levels,0,21,MinMaxScaler,SelectKBest,SVM,1688,423,ok,,0.8187720416784456,0.8115840003750947,,0.13944149999588262
+363549,Estimation_of_Obesity_Levels,1,21,MinMaxScaler,SelectKBest,SVM,1689,422,ok,,0.7820848645971799,0.781094628525829,,0.13104229999589734
+363549,Estimation_of_Obesity_Levels,2,21,MinMaxScaler,SelectKBest,SVM,1689,422,ok,,0.7877420250457575,0.7827062719949659,,0.13296380000247154
+363549,Estimation_of_Obesity_Levels,3,21,MinMaxScaler,SelectKBest,SVM,1689,422,ok,,0.801674343433329,0.7973908744711246,,0.13691460000700317
+363549,Estimation_of_Obesity_Levels,4,21,MinMaxScaler,SelectKBest,SVM,1689,422,ok,,0.8221505743413962,0.8203323980486231,,0.1431153000012273
+363549,Estimation_of_Obesity_Levels,0,22,MinMaxScaler,SelectKBest,kNN,1688,423,ok,,0.8222177111339674,0.8198774347953626,,0.017548399991937913
+363549,Estimation_of_Obesity_Levels,1,22,MinMaxScaler,SelectKBest,kNN,1689,422,ok,,0.7771457241900591,0.77445914079116,,0.016973100005998276
+363549,Estimation_of_Obesity_Levels,2,22,MinMaxScaler,SelectKBest,kNN,1689,422,ok,,0.8079744864934145,0.8053366251253824,,0.01601219999429304
+363549,Estimation_of_Obesity_Levels,3,22,MinMaxScaler,SelectKBest,kNN,1689,422,ok,,0.8005597060957556,0.7974302671319068,,0.018338599998969585
+363549,Estimation_of_Obesity_Levels,4,22,MinMaxScaler,SelectKBest,kNN,1689,422,ok,,0.810238348636067,0.8075239176544836,,0.01610160000564065
+363549,Estimation_of_Obesity_Levels,0,23,MinMaxScaler,SelectKBest,MLP,1688,423,ok,,0.951426406106209,0.9503426719400008,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.218997300005867
+363549,Estimation_of_Obesity_Levels,1,23,MinMaxScaler,SelectKBest,MLP,1689,422,ok,,0.9582922824302135,0.9583031519868791,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.049620399993728
+363549,Estimation_of_Obesity_Levels,2,23,MinMaxScaler,SelectKBest,MLP,1689,422,ok,,0.953756777336943,0.9533500182933592,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.725596400006907
+363549,Estimation_of_Obesity_Levels,3,23,MinMaxScaler,SelectKBest,MLP,1689,422,ok,,0.9348687209077519,0.9345153983352741,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6714890000002924
+363549,Estimation_of_Obesity_Levels,4,23,MinMaxScaler,SelectKBest,MLP,1689,422,ok,,0.9643927328397124,0.9636585831391027,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9006163000012748
+363549,Estimation_of_Obesity_Levels,0,24,MinMaxScaler,SelectKBest,DecisionTree,1688,423,ok,,0.9355155973382574,0.9344714451534946,,0.01257820001046639
+363549,Estimation_of_Obesity_Levels,1,24,MinMaxScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9355083795970496,0.9352994107648698,,0.017863700006273575
+363549,Estimation_of_Obesity_Levels,2,24,MinMaxScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9510433370482527,0.9523560452289718,,0.010723399987909943
+363549,Estimation_of_Obesity_Levels,3,24,MinMaxScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9326071332170741,0.9327992792481538,,0.011284800013527274
+363549,Estimation_of_Obesity_Levels,4,24,MinMaxScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9352630344333741,0.9346532223014437,,0.012504199999966659
+363549,Estimation_of_Obesity_Levels,0,25,MinMaxScaler,None,RandomForest,1688,423,ok,,0.9568320932852953,0.9562348376594458,,0.5909131000080379
+363549,Estimation_of_Obesity_Levels,1,25,MinMaxScaler,None,RandomForest,1689,422,ok,,0.9336122188338937,0.9346561150250501,,0.5986869000043953
+363549,Estimation_of_Obesity_Levels,2,25,MinMaxScaler,None,RandomForest,1689,422,ok,,0.973000626531458,0.97283546622903,,0.41763840000203345
+363549,Estimation_of_Obesity_Levels,3,25,MinMaxScaler,None,RandomForest,1689,422,ok,,0.9438586275703909,0.9433529246268771,,0.4184038999956101
+363549,Estimation_of_Obesity_Levels,4,25,MinMaxScaler,None,RandomForest,1689,422,ok,,0.9585742232877311,0.9586148446244716,,0.4631273999984842
+363549,Estimation_of_Obesity_Levels,0,26,MinMaxScaler,None,SVM,1688,423,ok,,0.8332975453665109,0.8286210030570933,,0.20927500000107102
+363549,Estimation_of_Obesity_Levels,1,26,MinMaxScaler,None,SVM,1689,422,ok,,0.7983670862981207,0.7928505235740325,,0.19657780000125058
+363549,Estimation_of_Obesity_Levels,2,26,MinMaxScaler,None,SVM,1689,422,ok,,0.7842455700086892,0.7783267989688705,,0.14384950000385288
+363549,Estimation_of_Obesity_Levels,3,26,MinMaxScaler,None,SVM,1689,422,ok,,0.8082396876994417,0.8057105530059641,,0.141004699995392
+363549,Estimation_of_Obesity_Levels,4,26,MinMaxScaler,None,SVM,1689,422,ok,,0.796376331299847,0.792062011630543,,0.1600763000024017
+363549,Estimation_of_Obesity_Levels,0,27,MinMaxScaler,None,kNN,1688,423,ok,,0.7740708661890928,0.7628799996387915,,0.012698399994405918
+363549,Estimation_of_Obesity_Levels,1,27,MinMaxScaler,None,kNN,1689,422,ok,,0.7618122344723331,0.7518579838088362,,0.012249099992914125
+363549,Estimation_of_Obesity_Levels,2,27,MinMaxScaler,None,kNN,1689,422,ok,,0.7625053958184242,0.7491103311879798,,0.012843000004068017
+363549,Estimation_of_Obesity_Levels,3,27,MinMaxScaler,None,kNN,1689,422,ok,,0.7788576620416594,0.7747188754783181,,0.011324099992634729
+363549,Estimation_of_Obesity_Levels,4,27,MinMaxScaler,None,kNN,1689,422,ok,,0.7423491785888133,0.7314961561547696,,0.011849300004541874
+363549,Estimation_of_Obesity_Levels,0,28,MinMaxScaler,None,MLP,1688,423,ok,,0.9636413303900989,0.9631550019606827,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8582853999978397
+363549,Estimation_of_Obesity_Levels,1,28,MinMaxScaler,None,MLP,1689,422,ok,,0.9605911330049262,0.9605373594310136,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.730170900002122
+363549,Estimation_of_Obesity_Levels,2,28,MinMaxScaler,None,MLP,1689,422,ok,,0.9549719504091837,0.9534860606887439,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7401442999980645
+363549,Estimation_of_Obesity_Levels,3,28,MinMaxScaler,None,MLP,1689,422,ok,,0.9343868962941484,0.9341583973487425,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7438655000005383
+363549,Estimation_of_Obesity_Levels,4,28,MinMaxScaler,None,MLP,1689,422,ok,,0.9518340530785437,0.9514154021045028,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8172999000089476
+363549,Estimation_of_Obesity_Levels,0,29,MinMaxScaler,None,DecisionTree,1688,423,ok,,0.9301424902410125,0.9297740145031833,,0.04109749999770429
+363549,Estimation_of_Obesity_Levels,1,29,MinMaxScaler,None,DecisionTree,1689,422,ok,,0.9401699377068836,0.9401380957838432,,0.023702799997408874
+363549,Estimation_of_Obesity_Levels,2,29,MinMaxScaler,None,DecisionTree,1689,422,ok,,0.9412033143236075,0.941932997271045,,0.015690700005507097
+363549,Estimation_of_Obesity_Levels,3,29,MinMaxScaler,None,DecisionTree,1689,422,ok,,0.9280106609742799,0.9281830630487108,,0.01686590000463184
+363549,Estimation_of_Obesity_Levels,4,29,MinMaxScaler,None,DecisionTree,1689,422,ok,,0.9324880719487928,0.9319891550258791,,0.0143516000098316
+363549,Estimation_of_Obesity_Levels,0,30,RobustScaler,PCA,RandomForest,1688,423,ok,,0.8566731024859103,0.852967949548731,,0.6286236000014469
+363549,Estimation_of_Obesity_Levels,1,30,RobustScaler,PCA,RandomForest,1689,422,ok,,0.8244207261448641,0.8225014417021475,,0.7177614999964135
+363549,Estimation_of_Obesity_Levels,2,30,RobustScaler,PCA,RandomForest,1689,422,ok,,0.8326579547166784,0.8310638112828383,,0.638719199996558
+363549,Estimation_of_Obesity_Levels,3,30,RobustScaler,PCA,RandomForest,1689,422,ok,,0.8631084930707453,0.8611074482225431,,0.7324227999924915
+363549,Estimation_of_Obesity_Levels,4,30,RobustScaler,PCA,RandomForest,1689,422,ok,,0.8596377985158236,0.8597237218178806,,0.6802318999980344
+363549,Estimation_of_Obesity_Levels,0,31,RobustScaler,PCA,SVM,1688,423,ok,,0.7575931639971049,0.7497767920473553,,0.153926799990586
+363549,Estimation_of_Obesity_Levels,1,31,RobustScaler,PCA,SVM,1689,422,ok,,0.7827442854536452,0.777525060419648,,0.14315689999784809
+363549,Estimation_of_Obesity_Levels,2,31,RobustScaler,PCA,SVM,1689,422,ok,,0.7809862926950762,0.7755943976853458,,0.13973429999896325
+363549,Estimation_of_Obesity_Levels,3,31,RobustScaler,PCA,SVM,1689,422,ok,,0.7898869259419963,0.786808405355871,,0.15416190000541974
+363549,Estimation_of_Obesity_Levels,4,31,RobustScaler,PCA,SVM,1689,422,ok,,0.804865983554083,0.8019112259519162,,0.14511539999512024
+363549,Estimation_of_Obesity_Levels,0,32,RobustScaler,PCA,kNN,1688,423,ok,,0.7895717674042798,0.7770326480906616,,0.018952900005388074
+363549,Estimation_of_Obesity_Levels,1,32,RobustScaler,PCA,kNN,1689,422,ok,,0.7809432585294654,0.7722822654723389,,0.017109200009144843
+363549,Estimation_of_Obesity_Levels,2,32,RobustScaler,PCA,kNN,1689,422,ok,,0.7909030234992839,0.7877378396339344,,0.016862000004039146
+363549,Estimation_of_Obesity_Levels,3,32,RobustScaler,PCA,kNN,1689,422,ok,,0.7888565847509087,0.7813759909038422,,0.019100999998045154
+363549,Estimation_of_Obesity_Levels,4,32,RobustScaler,PCA,kNN,1689,422,ok,,0.798564616422089,0.7920740764947855,,0.025174399997922592
+363549,Estimation_of_Obesity_Levels,0,33,RobustScaler,PCA,MLP,1688,423,ok,,0.8372267032365553,0.8326947939666542,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7170858000026783
+363549,Estimation_of_Obesity_Levels,1,33,RobustScaler,PCA,MLP,1689,422,ok,,0.8218325644434019,0.8224235642173209,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7319642000074964
+363549,Estimation_of_Obesity_Levels,2,33,RobustScaler,PCA,MLP,1689,422,ok,,0.8373257650289927,0.8386088874593757,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.087016699995729
+363549,Estimation_of_Obesity_Levels,3,33,RobustScaler,PCA,MLP,1689,422,ok,,0.8286252969136392,0.8270742198745769,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.123590699993656
+363549,Estimation_of_Obesity_Levels,4,33,RobustScaler,PCA,MLP,1689,422,ok,,0.8277182214377629,0.8230063291158262,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7870194999995874
+363549,Estimation_of_Obesity_Levels,0,34,RobustScaler,PCA,DecisionTree,1688,423,ok,,0.6851168171365216,0.6811473486458709,,0.03151549999893177
+363549,Estimation_of_Obesity_Levels,1,34,RobustScaler,PCA,DecisionTree,1689,422,ok,,0.6737380105298826,0.673625151843262,,0.024192100012442097
+363549,Estimation_of_Obesity_Levels,2,34,RobustScaler,PCA,DecisionTree,1689,422,ok,,0.6805333032535119,0.6781688330676564,,0.027382600004784763
+363549,Estimation_of_Obesity_Levels,3,34,RobustScaler,PCA,DecisionTree,1689,422,ok,,0.6975262318775984,0.6944631340085378,,0.02715469998656772
+363549,Estimation_of_Obesity_Levels,4,34,RobustScaler,PCA,DecisionTree,1689,422,ok,,0.6639851266943546,0.6600610625600248,,0.028807599999709055
+363549,Estimation_of_Obesity_Levels,0,35,RobustScaler,SelectKBest,RandomForest,1688,423,ok,,0.9565923038829443,0.9559233644242174,,0.3768689000135055
+363549,Estimation_of_Obesity_Levels,1,35,RobustScaler,SelectKBest,RandomForest,1689,422,ok,,0.9361573748273255,0.937160352086135,,0.3820663000078639
+363549,Estimation_of_Obesity_Levels,2,35,RobustScaler,SelectKBest,RandomForest,1689,422,ok,,0.9672154280109,0.9673810122628888,,0.411621200008085
+363549,Estimation_of_Obesity_Levels,3,35,RobustScaler,SelectKBest,RandomForest,1689,422,ok,,0.9435275266429716,0.942818832167239,,0.4092520999984117
+363549,Estimation_of_Obesity_Levels,4,35,RobustScaler,SelectKBest,RandomForest,1689,422,ok,,0.9412017447506521,0.9415720498969599,,0.4207062999921618
+363549,Estimation_of_Obesity_Levels,0,36,RobustScaler,SelectKBest,SVM,1688,423,ok,,0.8981540626860823,0.8957428076483932,,0.12259420000191312
+363549,Estimation_of_Obesity_Levels,1,36,RobustScaler,SelectKBest,SVM,1689,422,ok,,0.8390296348424426,0.8386517618220093,,0.1487215999950422
+363549,Estimation_of_Obesity_Levels,2,36,RobustScaler,SelectKBest,SVM,1689,422,ok,,0.8674788313105156,0.8661646155853858,,0.1565037999971537
+363549,Estimation_of_Obesity_Levels,3,36,RobustScaler,SelectKBest,SVM,1689,422,ok,,0.8668466729531137,0.8657650987042603,,0.13920630000939127
+363549,Estimation_of_Obesity_Levels,4,36,RobustScaler,SelectKBest,SVM,1689,422,ok,,0.9034892771216338,0.9033618382290242,,0.14503649999096524
+363549,Estimation_of_Obesity_Levels,0,37,RobustScaler,SelectKBest,kNN,1688,423,ok,,0.8519613209268382,0.8472958656456523,,0.017766999997547828
+363549,Estimation_of_Obesity_Levels,1,37,RobustScaler,SelectKBest,kNN,1689,422,ok,,0.7765410378710872,0.7719847191545514,,0.046382899992750026
+363549,Estimation_of_Obesity_Levels,2,37,RobustScaler,SelectKBest,kNN,1689,422,ok,,0.8321639872811618,0.8263314326266412,,0.028776099992683157
+363549,Estimation_of_Obesity_Levels,3,37,RobustScaler,SelectKBest,kNN,1689,422,ok,,0.8555178640126545,0.8537875028215632,,0.040260200010379776
+363549,Estimation_of_Obesity_Levels,4,37,RobustScaler,SelectKBest,kNN,1689,422,ok,,0.8382389310541075,0.8350340609848802,,0.023816999993869103
+363549,Estimation_of_Obesity_Levels,0,38,RobustScaler,SelectKBest,MLP,1688,423,ok,,0.9637234321963385,0.9638039272132747,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6883330999989994
+363549,Estimation_of_Obesity_Levels,1,38,RobustScaler,SelectKBest,MLP,1689,422,ok,,0.9478106185002737,0.948184548133706,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0238275000010617
+363549,Estimation_of_Obesity_Levels,2,38,RobustScaler,SelectKBest,MLP,1689,422,ok,,0.9575537974750501,0.9572980499669915,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.99292200000491
+363549,Estimation_of_Obesity_Levels,3,38,RobustScaler,SelectKBest,MLP,1689,422,ok,,0.9538419378388969,0.9536572438023947,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8088049000070896
+363549,Estimation_of_Obesity_Levels,4,38,RobustScaler,SelectKBest,MLP,1689,422,ok,,0.9686005550926474,0.968394716864706,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6566982000076678
+363549,Estimation_of_Obesity_Levels,0,39,RobustScaler,SelectKBest,DecisionTree,1688,423,ok,,0.9355155973382574,0.9344714451534946,,0.011296700002276339
+363549,Estimation_of_Obesity_Levels,1,39,RobustScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9355083795970496,0.9352994107648698,,0.01232539999182336
+363549,Estimation_of_Obesity_Levels,2,39,RobustScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9460308057199319,0.947222133980499,,0.03207050000492018
+363549,Estimation_of_Obesity_Levels,3,39,RobustScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9326071332170741,0.9327992792481538,,0.011691499996231869
+363549,Estimation_of_Obesity_Levels,4,39,RobustScaler,SelectKBest,DecisionTree,1689,422,ok,,0.9352630344333741,0.9346532223014437,,0.010982699997839518
+363549,Estimation_of_Obesity_Levels,0,40,RobustScaler,None,RandomForest,1688,423,ok,,0.9568320932852953,0.9562348376594458,,0.47703249999904074
+363549,Estimation_of_Obesity_Levels,1,40,RobustScaler,None,RandomForest,1689,422,ok,,0.9336122188338937,0.9349194450321097,,0.44224959998973645
+363549,Estimation_of_Obesity_Levels,2,40,RobustScaler,None,RandomForest,1689,422,ok,,0.973000626531458,0.97283546622903,,0.6938523999997415
+363549,Estimation_of_Obesity_Levels,3,40,RobustScaler,None,RandomForest,1689,422,ok,,0.946321681757583,0.9458619747095087,,0.44848029999411665
+363549,Estimation_of_Obesity_Levels,4,40,RobustScaler,None,RandomForest,1689,422,ok,,0.9559768206903286,0.956192433026189,,0.4443398999865167
+363549,Estimation_of_Obesity_Levels,0,41,RobustScaler,None,SVM,1688,423,ok,,0.8762263644037044,0.8738904023832744,,0.1699672999966424
+363549,Estimation_of_Obesity_Levels,1,41,RobustScaler,None,SVM,1689,422,ok,,0.8719485495347564,0.8707299636157576,,0.145904300006805
+363549,Estimation_of_Obesity_Levels,2,41,RobustScaler,None,SVM,1689,422,ok,,0.8647901171880447,0.8638534157945753,,0.15873709999141283
+363549,Estimation_of_Obesity_Levels,3,41,RobustScaler,None,SVM,1689,422,ok,,0.8795823916550923,0.8800000168555141,,0.15136709999933373
+363549,Estimation_of_Obesity_Levels,4,41,RobustScaler,None,SVM,1689,422,ok,,0.8627271613530364,0.8629088294005395,,0.15292649999901187
+363549,Estimation_of_Obesity_Levels,0,42,RobustScaler,None,kNN,1688,423,ok,,0.846334089191232,0.8385193828787446,,0.011114399996586144
+363549,Estimation_of_Obesity_Levels,1,42,RobustScaler,None,kNN,1689,422,ok,,0.7870904683712565,0.7750181486719033,,0.010480500000994653
+363549,Estimation_of_Obesity_Levels,2,42,RobustScaler,None,kNN,1689,422,ok,,0.8142445014871242,0.8070330479176173,,0.012057600004482083
+363549,Estimation_of_Obesity_Levels,3,42,RobustScaler,None,kNN,1689,422,ok,,0.8305031328273244,0.8242195654528908,,0.010531100007938221
+363549,Estimation_of_Obesity_Levels,4,42,RobustScaler,None,kNN,1689,422,ok,,0.8296371591419557,0.8230029337827292,,0.012529400002676994
+363549,Estimation_of_Obesity_Levels,0,43,RobustScaler,None,MLP,1688,423,ok,,0.958393330807124,0.9576742815247051,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7892124999925727
+363549,Estimation_of_Obesity_Levels,1,43,RobustScaler,None,MLP,1689,422,ok,,0.9367620611462977,0.9370839656340675,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7885590000078082
+363549,Estimation_of_Obesity_Levels,2,43,RobustScaler,None,MLP,1689,422,ok,,0.9511530213725792,0.9508634584613544,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9710592000046745
+363549,Estimation_of_Obesity_Levels,3,43,RobustScaler,None,MLP,1689,422,ok,,0.9519354699225768,0.9516487147319657,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.951226699995459
+363549,Estimation_of_Obesity_Levels,4,43,RobustScaler,None,MLP,1689,422,ok,,0.9552726765067963,0.9554564114104386,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8157823000074131
+363549,Estimation_of_Obesity_Levels,0,44,RobustScaler,None,DecisionTree,1688,423,ok,,0.9301424902410125,0.9297740145031833,,0.01762389999930747
+363549,Estimation_of_Obesity_Levels,1,44,RobustScaler,None,DecisionTree,1689,422,ok,,0.9401699377068836,0.9401380957838432,,0.015778000000864267
+363549,Estimation_of_Obesity_Levels,2,44,RobustScaler,None,DecisionTree,1689,422,ok,,0.9386970486594469,0.9392430679756111,,0.016955899991444312
+363549,Estimation_of_Obesity_Levels,3,44,RobustScaler,None,DecisionTree,1689,422,ok,,0.9280106609742799,0.9281830630487108,,0.016124200003105216
+363549,Estimation_of_Obesity_Levels,4,44,RobustScaler,None,DecisionTree,1689,422,ok,,0.9324880719487928,0.9319891550258791,,0.0164160999993328
+363549,Estimation_of_Obesity_Levels,0,45,None,PCA,RandomForest,1688,423,ok,,0.8852784143424538,0.883638216367924,,0.6308021000004373
+363549,Estimation_of_Obesity_Levels,1,45,None,PCA,RandomForest,1689,422,ok,,0.9092462272265227,0.9095700034983688,,0.5965924999909475
+363549,Estimation_of_Obesity_Levels,2,45,None,PCA,RandomForest,1689,422,ok,,0.8958585375926358,0.8941656501233981,,0.6615847999928519
+363549,Estimation_of_Obesity_Levels,3,45,None,PCA,RandomForest,1689,422,ok,,0.9106487555998241,0.9104649457679039,,0.5737233999971068
+363549,Estimation_of_Obesity_Levels,4,45,None,PCA,RandomForest,1689,422,ok,,0.89763227007199,0.8969620247404974,,0.6214720999996644
+363549,Estimation_of_Obesity_Levels,0,46,None,PCA,SVM,1688,423,ok,,0.6996481351161155,0.6888914013323998,,0.13671620000968687
+363549,Estimation_of_Obesity_Levels,1,46,None,PCA,SVM,1689,422,ok,,0.723894232022311,0.7167497294403692,,0.14099800000258256
+363549,Estimation_of_Obesity_Levels,2,46,None,PCA,SVM,1689,422,ok,,0.6879424043013412,0.6734409754162322,,0.12608370000089053
+363549,Estimation_of_Obesity_Levels,3,46,None,PCA,SVM,1689,422,ok,,0.6565004642736962,0.642701588142696,,0.13810739999462385
+363549,Estimation_of_Obesity_Levels,4,46,None,PCA,SVM,1689,422,ok,,0.6865847491964215,0.6790632437661986,,0.13403589998779353
+363549,Estimation_of_Obesity_Levels,0,47,None,PCA,kNN,1688,423,ok,,0.857434774676154,0.8521419443417012,,0.013697600006707944
+363549,Estimation_of_Obesity_Levels,1,47,None,PCA,kNN,1689,422,ok,,0.8777975701774964,0.8733913771198137,,0.014657299994723871
+363549,Estimation_of_Obesity_Levels,2,47,None,PCA,kNN,1689,422,ok,,0.8428566529872387,0.8370521020148255,,0.012320800000452437
+363549,Estimation_of_Obesity_Levels,3,47,None,PCA,kNN,1689,422,ok,,0.8731012312978625,0.8671325791305268,,0.013754699990386143
+363549,Estimation_of_Obesity_Levels,4,47,None,PCA,kNN,1689,422,ok,,0.8263312236805291,0.8179915235815353,,0.014156099990941584
+363549,Estimation_of_Obesity_Levels,0,48,None,PCA,MLP,1688,423,ok,,0.867148250399482,0.8628228420950046,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.004670399997849
+363549,Estimation_of_Obesity_Levels,1,48,None,PCA,MLP,1689,422,ok,,0.8495986133917167,0.8472947992036172,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8818670000036946
+363549,Estimation_of_Obesity_Levels,2,48,None,PCA,MLP,1689,422,ok,,0.8627365238663345,0.8594831662769084,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6831851000024471
+363549,Estimation_of_Obesity_Levels,3,48,None,PCA,MLP,1689,422,ok,,0.8578048231084973,0.8555628579991348,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.150350099997013
+363549,Estimation_of_Obesity_Levels,4,48,None,PCA,MLP,1689,422,ok,,0.8693279324599004,0.867327094775985,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7611647000012454
+363549,Estimation_of_Obesity_Levels,0,49,None,PCA,DecisionTree,1688,423,ok,,0.8051594820067727,0.8013436760546361,,0.024449100004858337
+363549,Estimation_of_Obesity_Levels,1,49,None,PCA,DecisionTree,1689,422,ok,,0.8213660176714362,0.8204003800321518,,0.024917100003222004
+363549,Estimation_of_Obesity_Levels,2,49,None,PCA,DecisionTree,1689,422,ok,,0.8341230198943274,0.8346911744919018,,0.024155799997970462
+363549,Estimation_of_Obesity_Levels,3,49,None,PCA,DecisionTree,1689,422,ok,,0.834364330829046,0.8343634520029006,,0.024170599994249642
+363549,Estimation_of_Obesity_Levels,4,49,None,PCA,DecisionTree,1689,422,ok,,0.8212328017586342,0.8218644714105051,,0.028777600004104897
+363549,Estimation_of_Obesity_Levels,0,50,None,SelectKBest,RandomForest,1688,423,ok,,0.9565923038829443,0.9559233644242174,,0.3633830999897327
+363549,Estimation_of_Obesity_Levels,1,50,None,SelectKBest,RandomForest,1689,422,ok,,0.9361573748273255,0.937160352086135,,0.40417590001015924
+363549,Estimation_of_Obesity_Levels,2,50,None,SelectKBest,RandomForest,1689,422,ok,,0.9672154280109,0.9673810122628888,,0.35997649999626447
+363549,Estimation_of_Obesity_Levels,3,50,None,SelectKBest,RandomForest,1689,422,ok,,0.9435275266429716,0.942818832167239,,0.37039070000173524
+363549,Estimation_of_Obesity_Levels,4,50,None,SelectKBest,RandomForest,1689,422,ok,,0.9436647989378442,0.9439132863067553,,0.6761319000070216
+363549,Estimation_of_Obesity_Levels,0,51,None,SelectKBest,SVM,1688,423,ok,,0.6159500051125667,0.6021610974971457,,0.15380220000224654
+363549,Estimation_of_Obesity_Levels,1,51,None,SelectKBest,SVM,1689,422,ok,,0.6223164601089478,0.6184878528228289,,0.16528629999083932
+363549,Estimation_of_Obesity_Levels,2,51,None,SelectKBest,SVM,1689,422,ok,,0.5775135661337488,0.5614156205960832,,0.16396369998983573
+363549,Estimation_of_Obesity_Levels,3,51,None,SelectKBest,SVM,1689,422,ok,,0.5249800537171507,0.5174114872662088,,0.16114179999567568
+363549,Estimation_of_Obesity_Levels,4,51,None,SelectKBest,SVM,1689,422,ok,,0.5908482970531723,0.5737527658518289,,0.21068319999903906
+363549,Estimation_of_Obesity_Levels,0,52,None,SelectKBest,kNN,1688,423,ok,,0.8332785987958402,0.8266961442235646,,0.014855799992801622
+363549,Estimation_of_Obesity_Levels,1,52,None,SelectKBest,kNN,1689,422,ok,,0.8732363587197333,0.8672255084160773,,0.015284399996744469
+363549,Estimation_of_Obesity_Levels,2,52,None,SelectKBest,kNN,1689,422,ok,,0.8343504807684825,0.8258864171243993,,0.014281199997640215
+363549,Estimation_of_Obesity_Levels,3,52,None,SelectKBest,kNN,1689,422,ok,,0.8462399556619618,0.8438684170728219,,0.014793400012422353
+363549,Estimation_of_Obesity_Levels,4,52,None,SelectKBest,kNN,1689,422,ok,,0.8338379827145576,0.8276229226158769,,0.01247650000732392
+363549,Estimation_of_Obesity_Levels,0,53,None,SelectKBest,MLP,1688,423,ok,,0.7698295410118071,0.7596935647185034,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7938914999976987
+363549,Estimation_of_Obesity_Levels,1,53,None,SelectKBest,MLP,1689,422,ok,,0.7613091980087053,0.7557941741474169,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8536378999997396
+363549,Estimation_of_Obesity_Levels,2,53,None,SelectKBest,MLP,1689,422,ok,,0.78321410961213,0.7771800776909886,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9140546999988146
+363549,Estimation_of_Obesity_Levels,3,53,None,SelectKBest,MLP,1689,422,ok,,0.7632279861684467,0.7621624429788312,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8671099000057438
+363549,Estimation_of_Obesity_Levels,4,53,None,SelectKBest,MLP,1689,422,ok,,0.7589631763337507,0.7595391495086782,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7058858999953372
+363549,Estimation_of_Obesity_Levels,0,54,None,SelectKBest,DecisionTree,1688,423,ok,,0.9355155973382574,0.9344714451534946,,0.01287820001016371
+363549,Estimation_of_Obesity_Levels,1,54,None,SelectKBest,DecisionTree,1689,422,ok,,0.9355083795970496,0.9352994107648698,,0.012877200002549216
+363549,Estimation_of_Obesity_Levels,2,54,None,SelectKBest,DecisionTree,1689,422,ok,,0.9485370713840924,0.949885578815913,,0.012070099997799844
+363549,Estimation_of_Obesity_Levels,3,54,None,SelectKBest,DecisionTree,1689,422,ok,,0.9326071332170741,0.9327992792481538,,0.011828800008515827
+363549,Estimation_of_Obesity_Levels,4,54,None,SelectKBest,DecisionTree,1689,422,ok,,0.9352630344333741,0.9346532223014437,,0.012804199999663979
+363549,Estimation_of_Obesity_Levels,0,55,None,None,RandomForest,1688,423,ok,,0.9568320932852953,0.9562348376594458,,0.43331369999214076
+363549,Estimation_of_Obesity_Levels,1,55,None,None,RandomForest,1689,422,ok,,0.9336122188338937,0.9349194450321097,,0.45107179999467917
+363549,Estimation_of_Obesity_Levels,2,55,None,None,RandomForest,1689,422,ok,,0.973000626531458,0.97283546622903,,0.5153314000053797
+363549,Estimation_of_Obesity_Levels,3,55,None,None,RandomForest,1689,422,ok,,0.9438586275703909,0.9433529246268771,,0.4306595000089146
+363549,Estimation_of_Obesity_Levels,4,55,None,None,RandomForest,1689,422,ok,,0.9559768206903286,0.956192433026189,,0.4581563000101596
+363549,Estimation_of_Obesity_Levels,0,56,None,None,SVM,1688,423,ok,,0.6287741268036834,0.6170225383465342,,0.15536779999092687
+363549,Estimation_of_Obesity_Levels,1,56,None,None,SVM,1689,422,ok,,0.671274793442281,0.6644680660929948,,0.1699776000023121
+363549,Estimation_of_Obesity_Levels,2,56,None,None,SVM,1689,422,ok,,0.5841864949533508,0.5681995865765407,,0.20593019999796525
+363549,Estimation_of_Obesity_Levels,3,56,None,None,SVM,1689,422,ok,,0.5645404932775903,0.55261827124012,,0.16230900000664406
+363549,Estimation_of_Obesity_Levels,4,56,None,None,SVM,1689,422,ok,,0.588223387755825,0.5701316486338879,,0.17032730000209995
+363549,Estimation_of_Obesity_Levels,0,57,None,None,kNN,1688,423,ok,,0.8547319310866107,0.8466758725660143,,0.011043299993616529
+363549,Estimation_of_Obesity_Levels,1,57,None,None,kNN,1689,422,ok,,0.8872275490656032,0.8834460219768575,,0.017350900001474656
+363549,Estimation_of_Obesity_Levels,2,57,None,None,kNN,1689,422,ok,,0.8603669037098305,0.854953508002292,,0.012548200000310317
+363549,Estimation_of_Obesity_Levels,3,57,None,None,kNN,1689,422,ok,,0.8895845578408209,0.8846073180399182,,0.012986500005354173
+363549,Estimation_of_Obesity_Levels,4,57,None,None,kNN,1689,422,ok,,0.8307069245591764,0.8203287062827398,,0.013293099997099489
+363549,Estimation_of_Obesity_Levels,0,58,None,None,MLP,1688,423,ok,,0.8152735423671383,0.8126044703018135,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0731976999959443
+363549,Estimation_of_Obesity_Levels,1,58,None,None,MLP,1689,422,ok,,0.7754580759506868,0.7719379981325167,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8942771000001812
+363549,Estimation_of_Obesity_Levels,2,58,None,None,MLP,1689,422,ok,,0.756330053857196,0.7479400599359073,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7392441999982111
+363549,Estimation_of_Obesity_Levels,3,58,None,None,MLP,1689,422,ok,,0.8170714458731405,0.8125373270151802,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8501287999970373
+363549,Estimation_of_Obesity_Levels,4,58,None,None,MLP,1689,422,ok,,0.7790762171887399,0.774015270564889,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8870187000138685
+363549,Estimation_of_Obesity_Levels,0,59,None,None,DecisionTree,1688,423,ok,,0.9301424902410125,0.9297740145031833,,0.018009399995207787
+363549,Estimation_of_Obesity_Levels,1,59,None,None,DecisionTree,1689,422,ok,,0.9401699377068836,0.9401380957838432,,0.017324200001894496
+363549,Estimation_of_Obesity_Levels,2,59,None,None,DecisionTree,1689,422,ok,,0.9412033143236075,0.941932997271045,,0.018197800003690645
+363549,Estimation_of_Obesity_Levels,3,59,None,None,DecisionTree,1689,422,ok,,0.9280106609742799,0.9281830630487108,,0.015841200001887046
+363549,Estimation_of_Obesity_Levels,4,59,None,None,DecisionTree,1689,422,ok,,0.9324880719487928,0.9319891550258791,,0.018411399985780008

@@ -1,0 +1,801 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,0,StandardScaler,PCA,RandomForest,7997,2000,ok,,0.16977034685844775,0.16948798749040783,,4.122921600006521
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,0,StandardScaler,PCA,RandomForest,7997,2000,ok,,0.15706100514343646,0.1567554748335248,,3.01799690000189
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,0,StandardScaler,PCA,RandomForest,7998,1999,ok,,0.1621189886403881,0.16190106910700977,,3.0163113000016892
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,0,StandardScaler,PCA,RandomForest,7998,1999,ok,,0.16746121382707918,0.16656819074530216,,2.8866149999957997
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,0,StandardScaler,PCA,RandomForest,7998,1999,ok,,0.14783361141274493,0.1467880610245279,,2.9226074000034714
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,1,StandardScaler,PCA,SVM,7997,2000,ok,,0.15714113243053676,0.15298299222323603,,6.0064625999948476
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,1,StandardScaler,PCA,SVM,7997,2000,ok,,0.1502597906172907,0.1437129084314764,,5.4844031000102405
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,1,StandardScaler,PCA,SVM,7998,1999,ok,,0.13938391395007296,0.1337115243625437,,5.403281100007007
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,1,StandardScaler,PCA,SVM,7998,1999,ok,,0.1484459867852739,0.14312987946453493,,5.453439300006721
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,1,StandardScaler,PCA,SVM,7998,1999,ok,,0.15646200273539215,0.15120476681922723,,5.368518399991444
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,2,StandardScaler,PCA,kNN,7997,2000,ok,,0.15221459305856008,0.1494890383561023,,0.07865909999236465
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,2,StandardScaler,PCA,kNN,7997,2000,ok,,0.15785825210919588,0.15400342979404635,,0.07709219999378547
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,2,StandardScaler,PCA,kNN,7998,1999,ok,,0.16277544305025915,0.1588946855744326,,0.08021690000896342
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,2,StandardScaler,PCA,kNN,7998,1999,ok,,0.16440681494833242,0.15745653680388697,,0.08274990000063553
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,2,StandardScaler,PCA,kNN,7998,1999,ok,,0.14759748723598773,0.14368368468972606,,0.07790789999125991
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,3,StandardScaler,PCA,MLP,7997,2000,ok,,0.17363960739322037,0.17211586296353823,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.841517299995758
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,3,StandardScaler,PCA,MLP,7997,2000,ok,,0.16446446394711164,0.1610774309503028,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.089043499989202
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,3,StandardScaler,PCA,MLP,7998,1999,ok,,0.16490763623985452,0.164392908528341,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.023724300001049
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,3,StandardScaler,PCA,MLP,7998,1999,ok,,0.18287272645104763,0.17840250719715753,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.27884250000352
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,3,StandardScaler,PCA,MLP,7998,1999,ok,,0.1690085816182396,0.16659967253166091,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.910840099997586
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,4,StandardScaler,PCA,DecisionTree,7997,2000,ok,,0.16027400971664826,0.15459237828288563,,0.0920534999895608
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,4,StandardScaler,PCA,DecisionTree,7997,2000,ok,,0.1549109871880213,0.14955994216666849,,0.08186399999249261
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,4,StandardScaler,PCA,DecisionTree,7998,1999,ok,,0.15292661478091799,0.14339862710103396,,0.08495819999370724
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,4,StandardScaler,PCA,DecisionTree,7998,1999,ok,,0.15734405183552533,0.15035397478328377,,0.08503490001021419
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,4,StandardScaler,PCA,DecisionTree,7998,1999,ok,,0.14222273633014215,0.134002592261324,,0.08623390000138897
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,5,StandardScaler,SelectKBest,RandomForest,7997,2000,ok,,0.18297866610776173,0.18247960000688082,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.804002100005164
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,5,StandardScaler,SelectKBest,RandomForest,7997,2000,ok,,0.17976913314788492,0.1793274168988125,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.919622300003539
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,5,StandardScaler,SelectKBest,RandomForest,7998,1999,ok,,0.14848248290906246,0.14812390581571366,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",4.1452478999999585
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,5,StandardScaler,SelectKBest,RandomForest,7998,1999,ok,,0.1659697572425811,0.16540099124253,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",4.044717900003889
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,5,StandardScaler,SelectKBest,RandomForest,7998,1999,ok,,0.17327975601391216,0.17250359325820652,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.8943015999975614
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,6,StandardScaler,SelectKBest,SVM,7997,2000,ok,,0.15611940641386504,0.15475607366681693,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.247996999998577
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,6,StandardScaler,SelectKBest,SVM,7997,2000,ok,,0.1528962478933895,0.14913175015123176,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.440907000011066
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,6,StandardScaler,SelectKBest,SVM,7998,1999,ok,,0.1471311094510058,0.1316934443941413,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.5619796000100905
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,6,StandardScaler,SelectKBest,SVM,7998,1999,ok,,0.13884400696387225,0.1255719741724657,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.512561600000481
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,6,StandardScaler,SelectKBest,SVM,7998,1999,ok,,0.15416430991682598,0.1472920913419686,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.354153899999801
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,7,StandardScaler,SelectKBest,kNN,7997,2000,ok,,0.14259301979088618,0.14043554689663915,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.09866930000134744
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,7,StandardScaler,SelectKBest,kNN,7997,2000,ok,,0.17235386643229839,0.16959238581714844,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.11047460000554565
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,7,StandardScaler,SelectKBest,kNN,7998,1999,ok,,0.15483357385893717,0.15099560872496473,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.041273199996794574
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,7,StandardScaler,SelectKBest,kNN,7998,1999,ok,,0.15601733733619458,0.1517349801667145,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.054358500012313016
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,7,StandardScaler,SelectKBest,kNN,7998,1999,ok,,0.15387545932629956,0.14851778324912263,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10125180000613909
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,8,StandardScaler,SelectKBest,MLP,7997,2000,ok,,0.1736281148294017,0.16882104106564286,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.79321639999398
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,8,StandardScaler,SelectKBest,MLP,7997,2000,ok,,0.16568562213595783,0.15842884121400597,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.147139399996377
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,8,StandardScaler,SelectKBest,MLP,7998,1999,ok,,0.1706946917136144,0.15897269248995838,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.314591900008963
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,8,StandardScaler,SelectKBest,MLP,7998,1999,ok,,0.16804925357425857,0.16177489782756632,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.032875199991395
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,8,StandardScaler,SelectKBest,MLP,7998,1999,ok,,0.17737435492976317,0.1719262145844591,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.474044300004607
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,9,StandardScaler,SelectKBest,DecisionTree,7997,2000,ok,,0.16631677747028514,0.14841834478936627,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10491709999041632
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,9,StandardScaler,SelectKBest,DecisionTree,7997,2000,ok,,0.17692922512015552,0.16284061654935764,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10229090000211727
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,9,StandardScaler,SelectKBest,DecisionTree,7998,1999,ok,,0.1562974809962809,0.1434261834077704,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10565330000827089
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,9,StandardScaler,SelectKBest,DecisionTree,7998,1999,ok,,0.1719794428392164,0.165579020573651,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10404190000554081
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,9,StandardScaler,SelectKBest,DecisionTree,7998,1999,ok,,0.1758013603599094,0.15966069457028068,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10885289999714587
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,10,StandardScaler,None,RandomForest,7997,2000,ok,,0.1769238017131068,0.1748568043996412,,3.2203288999880897
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,10,StandardScaler,None,RandomForest,7997,2000,ok,,0.1748787549796997,0.17447671537727416,,3.1453864999930374
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,10,StandardScaler,None,RandomForest,7998,1999,ok,,0.16849646811339644,0.16826464177873096,,3.0584195999981603
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,10,StandardScaler,None,RandomForest,7998,1999,ok,,0.1783044308486055,0.17733700851756165,,3.0767921000078786
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,10,StandardScaler,None,RandomForest,7998,1999,ok,,0.16021099926274837,0.15969272184054475,,3.264462999999523
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,11,StandardScaler,None,SVM,7997,2000,ok,,0.15714113243053676,0.15298299222323603,,19.293586699990556
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,11,StandardScaler,None,SVM,7997,2000,ok,,0.1502597906172907,0.1437129084314764,,15.285595599998487
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,11,StandardScaler,None,SVM,7998,1999,ok,,0.13938391395007296,0.1337115243625437,,13.435485499998322
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,11,StandardScaler,None,SVM,7998,1999,ok,,0.1484459867852739,0.14312987946453493,,14.622176200005924
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,11,StandardScaler,None,SVM,7998,1999,ok,,0.15646200273539215,0.15120476681922723,,16.35082659999898
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,12,StandardScaler,None,kNN,7997,2000,ok,,0.15221459305856008,0.1494890383561023,,0.19591869998839684
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,12,StandardScaler,None,kNN,7997,2000,ok,,0.15785825210919588,0.15400342979404635,,0.3008184999926016
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,12,StandardScaler,None,kNN,7998,1999,ok,,0.16277544305025915,0.1588946855744326,,0.19350229999690782
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,12,StandardScaler,None,kNN,7998,1999,ok,,0.16440681494833242,0.15745653680388697,,0.18679639999754727
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,12,StandardScaler,None,kNN,7998,1999,ok,,0.14759748723598773,0.14368368468972606,,0.19644430000334978
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,13,StandardScaler,None,MLP,7997,2000,ok,,0.18438787989513497,0.18159261408448152,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,13.610093200011761
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,13,StandardScaler,None,MLP,7997,2000,ok,,0.17502888108270873,0.16881100105100047,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,14.481218400003854
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,13,StandardScaler,None,MLP,7998,1999,ok,,0.1683208412748568,0.16735488634448656,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,12.684843299997738
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,13,StandardScaler,None,MLP,7998,1999,ok,,0.17053140675118383,0.16550364053803557,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,11.875094000002719
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,13,StandardScaler,None,MLP,7998,1999,ok,,0.17300768424428564,0.16618316666812663,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,13.167118899989873
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,14,StandardScaler,None,DecisionTree,7997,2000,ok,,0.17258008748373665,0.16141657998610073,,0.17474339999898802
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,14,StandardScaler,None,DecisionTree,7997,2000,ok,,0.1668336550981522,0.1533491562832627,,0.16642929999215994
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,14,StandardScaler,None,DecisionTree,7998,1999,ok,,0.16190234004212742,0.15725103675191462,,0.17737790000683162
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,14,StandardScaler,None,DecisionTree,7998,1999,ok,,0.1789469508162589,0.16168449425368941,,0.16450310000800528
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,14,StandardScaler,None,DecisionTree,7998,1999,ok,,0.17564631195389957,0.16246582074596924,,0.16886320000048727
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,15,MinMaxScaler,PCA,RandomForest,7997,2000,ok,,0.1679362087241945,0.16773893762698527,,3.0606445000012172
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,15,MinMaxScaler,PCA,RandomForest,7997,2000,ok,,0.16897393149407106,0.16876770417484005,,3.301309999995283
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,15,MinMaxScaler,PCA,RandomForest,7998,1999,ok,,0.18259382819605322,0.18194202903100384,,2.978828799998155
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,15,MinMaxScaler,PCA,RandomForest,7998,1999,ok,,0.17128899085786672,0.1694810977149773,,2.907958600000711
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,15,MinMaxScaler,PCA,RandomForest,7998,1999,ok,,0.16198725159849395,0.16078729684094378,,2.8619149000005564
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,16,MinMaxScaler,PCA,SVM,7997,2000,ok,,0.11278122142529137,0.09242412072781649,,6.252887299997383
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,16,MinMaxScaler,PCA,SVM,7997,2000,ok,,0.11000593821148033,0.08700436517198548,,6.22390749999613
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,16,MinMaxScaler,PCA,SVM,7998,1999,ok,,0.1104580538080652,0.0916571021401515,,6.285759799997322
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,16,MinMaxScaler,PCA,SVM,7998,1999,ok,,0.10863026001753866,0.09673235691015569,,6.130140699999174
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,16,MinMaxScaler,PCA,SVM,7998,1999,ok,,0.11492932763345397,0.10593221362422199,,6.067070799996145
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,17,MinMaxScaler,PCA,kNN,7997,2000,ok,,0.15024343864848627,0.14489916442784476,,0.046651199998450466
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,17,MinMaxScaler,PCA,kNN,7997,2000,ok,,0.14842783712338045,0.14642566751939426,,0.03960299999744166
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,17,MinMaxScaler,PCA,kNN,7998,1999,ok,,0.14585762902013527,0.14075013732110211,,0.04408829999738373
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,17,MinMaxScaler,PCA,kNN,7998,1999,ok,,0.14563542174304153,0.1389399186242735,,0.04387920000590384
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,17,MinMaxScaler,PCA,kNN,7998,1999,ok,,0.15804757267718822,0.15483363004373152,,0.04686570000194479
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,18,MinMaxScaler,PCA,MLP,7997,2000,ok,,0.1734212321436387,0.1679116424817001,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.55642789999547
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,18,MinMaxScaler,PCA,MLP,7997,2000,ok,,0.18069337547994516,0.17742300514427978,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.201760200012359
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,18,MinMaxScaler,PCA,MLP,7998,1999,ok,,0.1664646489027819,0.16386237812197246,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.430166900012409
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,18,MinMaxScaler,PCA,MLP,7998,1999,ok,,0.1694484504074155,0.16402494037053966,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.839490099999239
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,18,MinMaxScaler,PCA,MLP,7998,1999,ok,,0.16245408012722373,0.15809946440750353,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.877529300007154
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,19,MinMaxScaler,PCA,DecisionTree,7997,2000,ok,,0.16771331110774462,0.1563050993830127,,0.09341489999496844
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,19,MinMaxScaler,PCA,DecisionTree,7997,2000,ok,,0.16539652113849468,0.14656656313847624,,0.08340240000688937
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,19,MinMaxScaler,PCA,DecisionTree,7998,1999,ok,,0.15810826912750736,0.1498513753097396,,0.082330399993225
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,19,MinMaxScaler,PCA,DecisionTree,7998,1999,ok,,0.14502209903353125,0.1263418804979581,,0.08511830000497866
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,19,MinMaxScaler,PCA,DecisionTree,7998,1999,ok,,0.16011259826764246,0.14771972235151806,,0.08703769999556243
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,20,MinMaxScaler,SelectKBest,RandomForest,7997,2000,ok,,0.1844670017291034,0.1839810883740057,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.930980399993132
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,20,MinMaxScaler,SelectKBest,RandomForest,7997,2000,ok,,0.17928298827671332,0.17881011863867335,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.9697746000019833
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,20,MinMaxScaler,SelectKBest,RandomForest,7998,1999,ok,,0.1490528903964218,0.1487425320670388,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",4.0025352999946335
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,20,MinMaxScaler,SelectKBest,RandomForest,7998,1999,ok,,0.16484624035521084,0.16412320977789005,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",4.103685000009136
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,20,MinMaxScaler,SelectKBest,RandomForest,7998,1999,ok,,0.17426557517887792,0.17344004826428125,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.98565360000066
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,21,MinMaxScaler,SelectKBest,SVM,7997,2000,ok,,0.1257974570090559,0.10347996904174851,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.125625700005912
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,21,MinMaxScaler,SelectKBest,SVM,7997,2000,ok,,0.11560459769737857,0.10421976560921532,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.093126699997811
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,21,MinMaxScaler,SelectKBest,SVM,7998,1999,ok,,0.10380538379991093,0.08565107737722866,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.215502500010189
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,21,MinMaxScaler,SelectKBest,SVM,7998,1999,ok,,0.10184336045761144,0.07369080918069583,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.240262300008908
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,21,MinMaxScaler,SelectKBest,SVM,7998,1999,ok,,0.11810462301566282,0.09751174715786716,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.36343380001199
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,22,MinMaxScaler,SelectKBest,kNN,7997,2000,ok,,0.153142403904543,0.14766996043976527,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.06630549998953938
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,22,MinMaxScaler,SelectKBest,kNN,7997,2000,ok,,0.148089535868371,0.14518573882337557,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.07162989999051206
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,22,MinMaxScaler,SelectKBest,kNN,7998,1999,ok,,0.16667418701839395,0.16358146348166436,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.038352899995516054
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,22,MinMaxScaler,SelectKBest,kNN,7998,1999,ok,,0.16843301139169092,0.16410701412926706,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.05775740000535734
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,22,MinMaxScaler,SelectKBest,kNN,7998,1999,ok,,0.16108495301338596,0.1553857559657848,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.08748950000153854
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,23,MinMaxScaler,SelectKBest,MLP,7997,2000,ok,,0.1559992021208539,0.14898104810899235,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.213476900011301
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,23,MinMaxScaler,SelectKBest,MLP,7997,2000,ok,,0.17167115874667982,0.14905857815664306,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.364540900001884
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,23,MinMaxScaler,SelectKBest,MLP,7998,1999,ok,,0.16414797114396218,0.14697079520756426,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.188360799991642
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,23,MinMaxScaler,SelectKBest,MLP,7998,1999,ok,,0.15275782907222651,0.13624875632380967,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.335215800005244
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,23,MinMaxScaler,SelectKBest,MLP,7998,1999,ok,,0.16303622937919715,0.1512818124088891,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",8.694757899997057
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,24,MinMaxScaler,SelectKBest,DecisionTree,7997,2000,ok,,0.16631677747028514,0.14841834478936627,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10715660000278149
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,24,MinMaxScaler,SelectKBest,DecisionTree,7997,2000,ok,,0.17692922512015552,0.16284061654935764,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10936789998959284
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,24,MinMaxScaler,SelectKBest,DecisionTree,7998,1999,ok,,0.15580340985003588,0.1428951875607015,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10354719999304507
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,24,MinMaxScaler,SelectKBest,DecisionTree,7998,1999,ok,,0.1719794428392164,0.1655736199765832,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10701190000690985
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,24,MinMaxScaler,SelectKBest,DecisionTree,7998,1999,ok,,0.1758013603599094,0.15969626318724595,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10464439999486785
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,25,MinMaxScaler,None,RandomForest,7997,2000,ok,,0.1779524813746338,0.17572741791686253,,2.9371446000004653
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,25,MinMaxScaler,None,RandomForest,7997,2000,ok,,0.1744548685548327,0.17395423509273467,,3.5632208999886643
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,25,MinMaxScaler,None,RandomForest,7998,1999,ok,,0.16695330937197825,0.16671208608889232,,2.98443430000043
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,25,MinMaxScaler,None,RandomForest,7998,1999,ok,,0.17677806230977688,0.17559394259154162,,3.0675861000054283
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,25,MinMaxScaler,None,RandomForest,7998,1999,ok,,0.1622563299762472,0.16187737412362954,,3.16585330000089
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,26,MinMaxScaler,None,SVM,7997,2000,ok,,0.10575835243908135,0.0740984732859623,,17.00838990000193
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,26,MinMaxScaler,None,SVM,7997,2000,ok,,0.11545485718707815,0.07655829668136287,,15.495689899995341
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,26,MinMaxScaler,None,SVM,7998,1999,ok,,0.0940032866670875,0.0671600544569354,,18.866106400004355
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,26,MinMaxScaler,None,SVM,7998,1999,ok,,0.10995952395247605,0.08150805152150178,,18.29139510000823
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,26,MinMaxScaler,None,SVM,7998,1999,ok,,0.11404749204222485,0.0843958398231802,,21.163767999998527
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,27,MinMaxScaler,None,kNN,7997,2000,ok,,0.15024343864848627,0.14489916442784476,,0.2094879999931436
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,27,MinMaxScaler,None,kNN,7997,2000,ok,,0.14842783712338045,0.14642566751939426,,0.19969130000390578
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,27,MinMaxScaler,None,kNN,7998,1999,ok,,0.14585762902013527,0.14075013732110211,,0.20418099999369588
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,27,MinMaxScaler,None,kNN,7998,1999,ok,,0.14563542174304153,0.1389399186242735,,0.21482409999589436
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,27,MinMaxScaler,None,kNN,7998,1999,ok,,0.15804757267718822,0.15483363004373152,,0.21785810000437777
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,28,MinMaxScaler,None,MLP,7997,2000,ok,,0.17743147449720437,0.16385303202754584,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,12.749171899995417
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,28,MinMaxScaler,None,MLP,7997,2000,ok,,0.167317653642485,0.15977395533114455,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,12.525891699988279
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,28,MinMaxScaler,None,MLP,7998,1999,ok,,0.16990752266918463,0.16616926718281008,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,11.610801299990271
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,28,MinMaxScaler,None,MLP,7998,1999,ok,,0.16590244326569914,0.14464786289260545,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,13.348473399993964
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,28,MinMaxScaler,None,MLP,7998,1999,ok,,0.16691374261659297,0.15631355528398422,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,13.340646800003015
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,29,MinMaxScaler,None,DecisionTree,7997,2000,ok,,0.17258008748373665,0.16141657998610073,,0.16852720000315458
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,29,MinMaxScaler,None,DecisionTree,7997,2000,ok,,0.1668336550981522,0.1533491562832627,,0.16965159999381285
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,29,MinMaxScaler,None,DecisionTree,7998,1999,ok,,0.16141878104793014,0.15668848785357417,,0.1622261000011349
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,29,MinMaxScaler,None,DecisionTree,7998,1999,ok,,0.1789469508162589,0.16168839855314668,,0.1684155999973882
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,29,MinMaxScaler,None,DecisionTree,7998,1999,ok,,0.17564631195389957,0.16247416256687394,,0.1780677999922773
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,30,RobustScaler,PCA,RandomForest,7997,2000,ok,,0.15072619288104933,0.15018794225075396,,2.96132889999717
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,30,RobustScaler,PCA,RandomForest,7997,2000,ok,,0.15541154024965287,0.1552205837307291,,3.033764699997846
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,30,RobustScaler,PCA,RandomForest,7998,1999,ok,,0.17150716308968914,0.1717425596665483,,2.874564500001725
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,30,RobustScaler,PCA,RandomForest,7998,1999,ok,,0.16727293398258086,0.1663985301551493,,2.8594665999989957
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,30,RobustScaler,PCA,RandomForest,7998,1999,ok,,0.1511177690309022,0.15092301431962032,,3.113447700001416
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,31,RobustScaler,PCA,SVM,7997,2000,ok,,0.16034236724344555,0.15708087536461,,5.383269300000393
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,31,RobustScaler,PCA,SVM,7997,2000,ok,,0.1417658746509386,0.13695169368262466,,5.518637500004843
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,31,RobustScaler,PCA,SVM,7998,1999,ok,,0.14217035602940264,0.13587598419480937,,5.414346500008833
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,31,RobustScaler,PCA,SVM,7998,1999,ok,,0.15454357698102575,0.14872729950262267,,5.280100400006631
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,31,RobustScaler,PCA,SVM,7998,1999,ok,,0.15796679580808384,0.1526256094760516,,5.450113300001249
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,32,RobustScaler,PCA,kNN,7997,2000,ok,,0.1601254217369738,0.1565913072185437,,0.07906180000281893
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,32,RobustScaler,PCA,kNN,7997,2000,ok,,0.15132659981253405,0.1483224923936236,,0.09158060001209378
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,32,RobustScaler,PCA,kNN,7998,1999,ok,,0.1631473305023824,0.1584044450328774,,0.08955759998934809
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,32,RobustScaler,PCA,kNN,7998,1999,ok,,0.1633427791437958,0.15938291421056688,,0.08084260000032373
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,32,RobustScaler,PCA,kNN,7998,1999,ok,,0.1414617818858498,0.13661802076984236,,0.0850771999976132
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,33,RobustScaler,PCA,MLP,7997,2000,ok,,0.1801237368040035,0.1774865965513836,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.109490500006359
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,33,RobustScaler,PCA,MLP,7997,2000,ok,,0.16252844270365305,0.15780836143554647,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.9218739999923855
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,33,RobustScaler,PCA,MLP,7998,1999,ok,,0.16484312574437734,0.16030541714149432,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.373986999999033
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,33,RobustScaler,PCA,MLP,7998,1999,ok,,0.17354481801621088,0.16926830645211186,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.984418200008804
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,33,RobustScaler,PCA,MLP,7998,1999,ok,,0.1870755911116455,0.18422994249307426,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.758598699991126
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,34,RobustScaler,PCA,DecisionTree,7997,2000,ok,,0.15107445651263976,0.13817681331030587,,0.08043020000332035
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,34,RobustScaler,PCA,DecisionTree,7997,2000,ok,,0.14507235208023017,0.137725543348476,,0.09592890000203624
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,34,RobustScaler,PCA,DecisionTree,7998,1999,ok,,0.16402979376580057,0.1544195530407049,,0.1092728000076022
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,34,RobustScaler,PCA,DecisionTree,7998,1999,ok,,0.14688127592504543,0.13039210316920952,,0.08751230000052601
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,34,RobustScaler,PCA,DecisionTree,7998,1999,ok,,0.16097805328827125,0.15397938083826057,,0.08641570000327192
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,35,RobustScaler,SelectKBest,RandomForest,7997,2000,ok,,0.18496165222375394,0.1845476454718476,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.7936920000065584
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,35,RobustScaler,SelectKBest,RandomForest,7997,2000,ok,,0.17975486439303356,0.17925495217063217,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",4.10690899999463
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,35,RobustScaler,SelectKBest,RandomForest,7998,1999,ok,,0.15200268506202466,0.1517115508208622,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",4.071874100001878
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,35,RobustScaler,SelectKBest,RandomForest,7998,1999,ok,,0.16204514906936798,0.16159967261724847,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.9772784000087995
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,35,RobustScaler,SelectKBest,RandomForest,7998,1999,ok,,0.17630696106798946,0.17559289865147745,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.765916100004688
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,36,RobustScaler,SelectKBest,SVM,7997,2000,ok,,0.1645062165692894,0.15972570265050878,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.302123200002825
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,36,RobustScaler,SelectKBest,SVM,7997,2000,ok,,0.1534015696373052,0.14886209505006132,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.459887199991499
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,36,RobustScaler,SelectKBest,SVM,7998,1999,ok,,0.1466473316811304,0.1313893441617222,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.588111999997636
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,36,RobustScaler,SelectKBest,SVM,7998,1999,ok,,0.1431758542181768,0.13181683596038649,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.514640800000052
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,36,RobustScaler,SelectKBest,SVM,7998,1999,ok,,0.15603867311989508,0.14635904189756996,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.189429999998538
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,37,RobustScaler,SelectKBest,kNN,7997,2000,ok,,0.15187052474970517,0.15029523674229778,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.09753549999732058
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,37,RobustScaler,SelectKBest,kNN,7997,2000,ok,,0.1605743925014076,0.15840970016168598,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.09759309999935795
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,37,RobustScaler,SelectKBest,kNN,7998,1999,ok,,0.1557288574857734,0.1512397056964734,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.043847299995832145
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,37,RobustScaler,SelectKBest,kNN,7998,1999,ok,,0.15898461356940155,0.15555281997652812,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.05048320000059903
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,37,RobustScaler,SelectKBest,kNN,7998,1999,ok,,0.16255140283261396,0.1566745141558139,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.08882840001024306
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,38,RobustScaler,SelectKBest,MLP,7997,2000,ok,,0.1740834618820846,0.16895901203900812,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.142582000000402
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,38,RobustScaler,SelectKBest,MLP,7997,2000,ok,,0.17570859995688884,0.16786708586210433,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.104820599997765
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,38,RobustScaler,SelectKBest,MLP,7998,1999,ok,,0.17346570470413725,0.16174638519753592,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.532630400004564
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,38,RobustScaler,SelectKBest,MLP,7998,1999,ok,,0.16977469722126484,0.1548388215297251,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.112734199996339
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,38,RobustScaler,SelectKBest,MLP,7998,1999,ok,,0.17486712564452458,0.17015824881529715,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide",7.1329401999973925
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,39,RobustScaler,SelectKBest,DecisionTree,7997,2000,ok,,0.16631677747028514,0.14841834478936627,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.1066014000098221
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,39,RobustScaler,SelectKBest,DecisionTree,7997,2000,ok,,0.17692922512015552,0.16284061654935764,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10008540000126231
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,39,RobustScaler,SelectKBest,DecisionTree,7998,1999,ok,,0.1563170205331381,0.1436152624937847,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10114009999961127
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,39,RobustScaler,SelectKBest,DecisionTree,7998,1999,ok,,0.1719794428392164,0.16557287197562542,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.10800900000322144
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,39,RobustScaler,SelectKBest,DecisionTree,7998,1999,ok,,0.1758013603599094,0.1596892618251221,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.11152080001193099
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,40,RobustScaler,None,RandomForest,7997,2000,ok,,0.17799801839033502,0.17600320964730987,,2.942684100009501
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,40,RobustScaler,None,RandomForest,7997,2000,ok,,0.1734427014428501,0.17287339843553437,,3.090300900003058
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,40,RobustScaler,None,RandomForest,7998,1999,ok,,0.1643640612860646,0.16409176348065574,,2.967334499990102
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,40,RobustScaler,None,RandomForest,7998,1999,ok,,0.1738300240515933,0.17263500241413954,,3.024986300006276
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,40,RobustScaler,None,RandomForest,7998,1999,ok,,0.16173270091522152,0.1612428995783728,,3.0935909999971045
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,41,RobustScaler,None,SVM,7997,2000,ok,,0.15881659014958602,0.15536753114567003,,14.724758700001985
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,41,RobustScaler,None,SVM,7997,2000,ok,,0.1430681240018065,0.1374038574436334,,13.305206100005307
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,41,RobustScaler,None,SVM,7998,1999,ok,,0.13968196250431808,0.13247603147831036,,15.978935799997998
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,41,RobustScaler,None,SVM,7998,1999,ok,,0.15542654502277434,0.14942295650557105,,15.612451400011196
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,41,RobustScaler,None,SVM,7998,1999,ok,,0.16289104249731148,0.15750194846182458,,16.761821399995824
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,42,RobustScaler,None,kNN,7997,2000,ok,,0.1601254217369738,0.1565913072185437,,0.20563070000207517
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,42,RobustScaler,None,kNN,7997,2000,ok,,0.15132659981253405,0.1483224923936236,,0.19767890000366606
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,42,RobustScaler,None,kNN,7998,1999,ok,,0.1631473305023824,0.1584044450328774,,0.18650049999996554
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,42,RobustScaler,None,kNN,7998,1999,ok,,0.1633427791437958,0.15938291421056688,,0.18499409999640193
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,42,RobustScaler,None,kNN,7998,1999,ok,,0.1414617818858498,0.13661802076984236,,0.21176350000314415
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,43,RobustScaler,None,MLP,7997,2000,ok,,0.1735843347224809,0.17173780795954485,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,15.045810099996743
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,43,RobustScaler,None,MLP,7997,2000,ok,,0.16520758806682823,0.15717033907833272,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,13.166001100005815
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,43,RobustScaler,None,MLP,7998,1999,ok,,0.17195171990423028,0.16920052607886585,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,12.720188599996618
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,43,RobustScaler,None,MLP,7998,1999,ok,,0.15751242457313988,0.14778075130801002,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,12.71498160000192
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,43,RobustScaler,None,MLP,7998,1999,ok,,0.1695427136451832,0.16166927349310406,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,13.51388310000766
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,44,RobustScaler,None,DecisionTree,7997,2000,ok,,0.17258008748373665,0.16141657998610073,,0.27210760000161827
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,44,RobustScaler,None,DecisionTree,7997,2000,ok,,0.1668336550981522,0.15335317312185004,,0.1671500000084052
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,44,RobustScaler,None,DecisionTree,7998,1999,ok,,0.16141878104793014,0.15668848785357417,,0.1771498000016436
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,44,RobustScaler,None,DecisionTree,7998,1999,ok,,0.1789469508162589,0.16168839855314668,,0.18712309999682475
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,44,RobustScaler,None,DecisionTree,7998,1999,ok,,0.17564631195389957,0.16246582074596924,,0.1802257999952417
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,45,None,PCA,RandomForest,7997,2000,ok,,0.16609055986133295,0.16602183509040339,,4.2520746999944095
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,45,None,PCA,RandomForest,7997,2000,ok,,0.13820014959982274,0.137894105013844,,3.8534599999984493
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,45,None,PCA,RandomForest,7998,1999,ok,,0.13432505449130155,0.13418077462141406,,4.374826800005394
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,45,None,PCA,RandomForest,7998,1999,ok,,0.17413140747428252,0.17385751807848956,,3.6785706999944523
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,45,None,PCA,RandomForest,7998,1999,ok,,0.13518341957591973,0.13514809260941965,,4.523059700004524
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,46,None,PCA,SVM,7997,2000,ok,,0.08462336911534772,0.026547831513074813,,6.528755699997419
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,46,None,PCA,SVM,7997,2000,ok,,0.08416732610280997,0.026051820101831314,,6.145808899993426
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,46,None,PCA,SVM,7998,1999,ok,,0.07664282132367238,0.02422800833646194,,6.10158919999958
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,46,None,PCA,SVM,7998,1999,ok,,0.0903852281503324,0.028056045741000898,,6.255827400003909
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,46,None,PCA,SVM,7998,1999,ok,,0.08869040846512687,0.02803829723805337,,6.178743500000564
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,47,None,PCA,kNN,7997,2000,ok,,0.10112290077385061,0.09375420400296451,,0.032676000002538785
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,47,None,PCA,kNN,7997,2000,ok,,0.09444483583435756,0.08838032317266728,,0.03233480000926647
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,47,None,PCA,kNN,7998,1999,ok,,0.081290483551241,0.07847814084460895,,0.03218439999909606
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,47,None,PCA,kNN,7998,1999,ok,,0.09223946074975037,0.08512126845865649,,0.03730110000469722
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,47,None,PCA,kNN,7998,1999,ok,,0.09396487399981307,0.0857010060106608,,0.03081150000798516
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,48,None,PCA,MLP,7997,2000,ok,,0.10137865137865139,0.031105834464043417,,1.281456500000786
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,48,None,PCA,MLP,7997,2000,ok,,0.09031819659053979,0.028627661549894812,,0.8633841000118991
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,48,None,PCA,MLP,7998,1999,ok,,0.08975760889374886,0.02702562815310169,,0.8040976999909617
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,48,None,PCA,MLP,7998,1999,ok,,0.09372189806972414,0.028961554661981928,,0.5928627000103006
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,48,None,PCA,MLP,7998,1999,ok,,0.09270636784448939,0.02858090152913872,,0.47764339999412186
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,49,None,PCA,DecisionTree,7997,2000,ok,,0.14277490299326415,0.1286790222578264,,0.09139870000944939
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,49,None,PCA,DecisionTree,7997,2000,ok,,0.10277530324672707,0.06987422200793422,,0.0917905999958748
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,49,None,PCA,DecisionTree,7998,1999,ok,,0.09684259412691315,0.07604086984588909,,0.10299419998773374
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,49,None,PCA,DecisionTree,7998,1999,ok,,0.15571313926623181,0.14515848303564735,,0.09608920000027865
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,49,None,PCA,DecisionTree,7998,1999,ok,,0.10599617367788859,0.07455259070749062,,0.11225500000000466
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,50,None,SelectKBest,RandomForest,7997,2000,ok,,0.17554917509167642,0.17562513588477904,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.8438197999930708
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,50,None,SelectKBest,RandomForest,7997,2000,ok,,0.1790400329036679,0.17850636807825315,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",4.026581400001305
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,50,None,SelectKBest,RandomForest,7998,1999,ok,,0.15500526413218838,0.15477298496883643,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.933712199999718
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,50,None,SelectKBest,RandomForest,7998,1999,ok,,0.17612997849784554,0.1760688551788786,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.666599399992265
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,50,None,SelectKBest,RandomForest,7998,1999,ok,,0.17351324683944822,0.17283136278519284,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",3.868577200002619
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,51,None,SelectKBest,SVM,7997,2000,ok,,0.09371071225841843,0.03223098898664461,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.373908500012476
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,51,None,SelectKBest,SVM,7997,2000,ok,,0.0959917483981655,0.02989389971714833,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.270160699990811
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,51,None,SelectKBest,SVM,7998,1999,ok,,0.09090909090909091,0.015705501080272563,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",6.037123599991901
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,51,None,SelectKBest,SVM,7998,1999,ok,,0.09090909090909091,0.015705501080272563,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.944753999996465
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,51,None,SelectKBest,SVM,7998,1999,ok,,0.09090909090909091,0.015705501080272563,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",5.90848489999189
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,52,None,SelectKBest,kNN,7997,2000,ok,,0.09924054683788955,0.09256048989559611,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.03387139999540523
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,52,None,SelectKBest,kNN,7997,2000,ok,,0.09548342614797209,0.08891893053712305,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.03262080000422429
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,52,None,SelectKBest,kNN,7998,1999,ok,,0.081290483551241,0.0784757019058114,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.03018270000757184
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,52,None,SelectKBest,kNN,7998,1999,ok,,0.09176117809401498,0.08475229636698799,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.03148820000933483
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,52,None,SelectKBest,kNN,7998,1999,ok,,0.09558494591124189,0.08761377891744397,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.030205600007320754
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,53,None,SelectKBest,MLP,7997,2000,ok,,0.08957772019982038,0.026804157718660956,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.45981190000020433
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,53,None,SelectKBest,MLP,7997,2000,ok,,0.09090909090909091,0.015546410608139005,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.7614644999994198
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,53,None,SelectKBest,MLP,7998,1999,ok,,0.09090909090909091,0.015705501080272563,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",1.9178994999965653
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,53,None,SelectKBest,MLP,7998,1999,ok,,0.09090909090909091,0.015325032274184818,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.7769665999949211
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,53,None,SelectKBest,MLP,7998,1999,ok,,0.09090909090909091,0.015401265401265402,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.9279639000014868
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,54,None,SelectKBest,DecisionTree,7997,2000,ok,,0.1698432949495338,0.13514444657716526,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.08810879998782184
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,54,None,SelectKBest,DecisionTree,7997,2000,ok,,0.16690219834168737,0.15209991825149638,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.09072089999972377
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,54,None,SelectKBest,DecisionTree,7998,1999,ok,,0.16026081085642532,0.14267833368668337,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.0904246999998577
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,54,None,SelectKBest,DecisionTree,7998,1999,ok,,0.17128381117348554,0.1647692645337037,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.09191350000037346
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,54,None,SelectKBest,DecisionTree,7998,1999,ok,,0.17723623639638772,0.1453112269594445,"Features [  0   2   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19
+  20  21  22  23  24  25  26  29  30  32  34  35  36  37  38  39  40  41
+  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  59  60  61
+  62  63  64  66  68  69  70  71  72  73  74  75  76  77  78  79  80  81
+  82  83  84  85  86  87  88  89  90  93  94  96  98  99 100 101 102 103
+ 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 123] are constant. | invalid value encountered in divide",0.08715130000200588
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,55,None,None,RandomForest,7997,2000,ok,,0.1763807844879383,0.17462266915618335,,2.9183647999889217
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,55,None,None,RandomForest,7997,2000,ok,,0.16949609273273342,0.16889979485038067,,2.8846366000070702
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,55,None,None,RandomForest,7998,1999,ok,,0.15049513770442155,0.1503845207422586,,2.8253808000008576
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,55,None,None,RandomForest,7998,1999,ok,,0.1901107880673071,0.18904591348209598,,3.046402100007981
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,55,None,None,RandomForest,7998,1999,ok,,0.16579502616322842,0.16523604510901224,,2.9992921999946702
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,56,None,None,SVM,7997,2000,ok,,0.09090909090909091,0.0157741801577418,,18.97631790000014
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,56,None,None,SVM,7997,2000,ok,,0.09090909090909091,0.01569832634245608,,16.962382300000172
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,56,None,None,SVM,7998,1999,ok,,0.09090909090909091,0.015705501080272563,,15.820628300003591
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,56,None,None,SVM,7998,1999,ok,,0.09090909090909091,0.015705501080272563,,16.16298259999894
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,56,None,None,SVM,7998,1999,ok,,0.09090909090909091,0.015705501080272563,,18.85478820001299
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,57,None,None,kNN,7997,2000,ok,,0.10109777233963127,0.09382099935497895,,0.20596930000465363
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,57,None,None,kNN,7997,2000,ok,,0.09543983365949894,0.08910183057913645,,0.24267420000978746
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,57,None,None,kNN,7998,1999,ok,,0.08179274372200945,0.07907921457726798,,0.2265869999973802
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,57,None,None,kNN,7998,1999,ok,,0.09176125060303195,0.08414812698358086,,0.2050835999980336
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,57,None,None,kNN,7998,1999,ok,,0.09495630501026225,0.08637561802069295,,0.2147738999919966
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,58,None,None,MLP,7997,2000,ok,,0.09090909090909091,0.014705882352941178,,0.9961737999983598
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,58,None,None,MLP,7997,2000,ok,,0.09090909090909091,0.015012510425354463,,1.4438339000043925
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,58,None,None,MLP,7998,1999,ok,,0.09090909090909091,0.015477428749739962,,0.8130993999948259
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,58,None,None,MLP,7998,1999,ok,,0.09090909090909091,0.015477428749739962,,1.3314669000101276
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,58,None,None,MLP,7998,1999,ok,,0.09090909090909091,0.015629546493744026,,0.8261836000019684
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,0,59,None,None,DecisionTree,7997,2000,ok,,0.17807205616451646,0.15501882840226633,,0.15207019999797922
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,1,59,None,None,DecisionTree,7997,2000,ok,,0.15837882765651343,0.1508369377554769,,0.1508483000070555
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,2,59,None,None,DecisionTree,7998,1999,ok,,0.16181332626356212,0.1494581806754916,,0.14351239999814425
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,3,59,None,None,DecisionTree,7998,1999,ok,,0.17766376040631363,0.16589789856554132,,0.1455980000027921
+361840,timing-attack-dataset-256-micro-seconds-delay-2022-09-17,4,59,None,None,DecisionTree,7998,1999,ok,,0.17574612945791007,0.14948340234067634,,0.15061070000228938

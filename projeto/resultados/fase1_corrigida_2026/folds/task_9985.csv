@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+9985,first-order-theorem-proving,0,0,StandardScaler,PCA,RandomForest,4894,1224,ok,,0.46710676532815104,0.48127811136636134,,2.786913200005074
+9985,first-order-theorem-proving,1,0,StandardScaler,PCA,RandomForest,4894,1224,ok,,0.5135765696737671,0.5259543608861411,,2.036570099997334
+9985,first-order-theorem-proving,2,0,StandardScaler,PCA,RandomForest,4894,1224,ok,,0.4788008541226132,0.4910679062172592,,1.9448727999988478
+9985,first-order-theorem-proving,3,0,StandardScaler,PCA,RandomForest,4895,1223,ok,,0.507626960041819,0.5212994436080964,,1.878129999997327
+9985,first-order-theorem-proving,4,0,StandardScaler,PCA,RandomForest,4895,1223,ok,,0.4646449174255236,0.47920305274900726,,1.9588664000038989
+9985,first-order-theorem-proving,0,1,StandardScaler,PCA,SVM,4894,1224,ok,,0.2882939757868041,0.29490983491812983,,1.9560025999962818
+9985,first-order-theorem-proving,1,1,StandardScaler,PCA,SVM,4894,1224,ok,,0.29367585995269146,0.30593630278527545,,2.166852900001686
+9985,first-order-theorem-proving,2,1,StandardScaler,PCA,SVM,4894,1224,ok,,0.2901159406746748,0.2947750387104325,,1.8431535999989137
+9985,first-order-theorem-proving,3,1,StandardScaler,PCA,SVM,4895,1223,ok,,0.2830469669518541,0.2874643246186693,,1.8669727999949828
+9985,first-order-theorem-proving,4,1,StandardScaler,PCA,SVM,4895,1223,ok,,0.2621196744867566,0.2586942402273921,,1.935896099996171
+9985,first-order-theorem-proving,0,2,StandardScaler,PCA,kNN,4894,1224,ok,,0.4164891876341492,0.4203261476642493,,0.049685100006172433
+9985,first-order-theorem-proving,1,2,StandardScaler,PCA,kNN,4894,1224,ok,,0.4703950269488309,0.475043006823106,,0.042285700008505955
+9985,first-order-theorem-proving,2,2,StandardScaler,PCA,kNN,4894,1224,ok,,0.4476210827493088,0.45551137047083207,,0.04139020000002347
+9985,first-order-theorem-proving,3,2,StandardScaler,PCA,kNN,4895,1223,ok,,0.4389525303024004,0.44240691581529096,,0.041539699988788925
+9985,first-order-theorem-proving,4,2,StandardScaler,PCA,kNN,4895,1223,ok,,0.4239944795604649,0.43061630000762313,,0.041642600001068786
+9985,first-order-theorem-proving,0,3,StandardScaler,PCA,MLP,4894,1224,ok,,0.40039669516682325,0.41572509963148807,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.1691070000088075
+9985,first-order-theorem-proving,1,3,StandardScaler,PCA,MLP,4894,1224,ok,,0.41739083417561323,0.4232645450520948,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.228931199992076
+9985,first-order-theorem-proving,2,3,StandardScaler,PCA,MLP,4894,1224,ok,,0.38027242961899965,0.3895085999422363,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.088583400007337
+9985,first-order-theorem-proving,3,3,StandardScaler,PCA,MLP,4895,1223,ok,,0.415977945564985,0.4266687468929224,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.702999200002523
+9985,first-order-theorem-proving,4,3,StandardScaler,PCA,MLP,4895,1223,ok,,0.3728289122247852,0.3824794743861463,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.895899499999359
+9985,first-order-theorem-proving,0,4,StandardScaler,PCA,DecisionTree,4894,1224,ok,,0.3856500738437583,0.3933907013656806,,0.07689300000492949
+9985,first-order-theorem-proving,1,4,StandardScaler,PCA,DecisionTree,4894,1224,ok,,0.39617253198118635,0.4047440584943762,,0.06971749999502208
+9985,first-order-theorem-proving,2,4,StandardScaler,PCA,DecisionTree,4894,1224,ok,,0.3654600210232797,0.3692388906214959,,0.06620709999697283
+9985,first-order-theorem-proving,3,4,StandardScaler,PCA,DecisionTree,4895,1223,ok,,0.4009507512017594,0.4108210163113259,,0.07513749999634456
+9985,first-order-theorem-proving,4,4,StandardScaler,PCA,DecisionTree,4895,1223,ok,,0.3546776310128505,0.36619575530839493,,0.11946760000137147
+9985,first-order-theorem-proving,0,5,StandardScaler,SelectKBest,RandomForest,4894,1224,ok,,0.4720659859862654,0.48355986046664506,,1.5051704000070458
+9985,first-order-theorem-proving,1,5,StandardScaler,SelectKBest,RandomForest,4894,1224,ok,,0.5160690444540071,0.529949200924399,,1.323451299991575
+9985,first-order-theorem-proving,2,5,StandardScaler,SelectKBest,RandomForest,4894,1224,ok,,0.4550022934610704,0.46410184326458687,,1.1540071000054013
+9985,first-order-theorem-proving,3,5,StandardScaler,SelectKBest,RandomForest,4895,1223,ok,,0.4843745880563046,0.4940254735797092,,1.8464450000028592
+9985,first-order-theorem-proving,4,5,StandardScaler,SelectKBest,RandomForest,4895,1223,ok,,0.47705741949169284,0.48948341272266743,,1.3106235999875935
+9985,first-order-theorem-proving,0,6,StandardScaler,SelectKBest,SVM,4894,1224,ok,,0.32583743565965834,0.34589677243108136,,2.065931500008446
+9985,first-order-theorem-proving,1,6,StandardScaler,SelectKBest,SVM,4894,1224,ok,,0.3356736587759401,0.34375538467570466,,2.0827309000014793
+9985,first-order-theorem-proving,2,6,StandardScaler,SelectKBest,SVM,4894,1224,ok,,0.31401506278672797,0.3292011183010039,,1.886240200008615
+9985,first-order-theorem-proving,3,6,StandardScaler,SelectKBest,SVM,4895,1223,ok,,0.3320633971158852,0.35119321346167154,,2.270023000004585
+9985,first-order-theorem-proving,4,6,StandardScaler,SelectKBest,SVM,4895,1223,ok,,0.31087049557561963,0.32248474589259857,,2.015042999992147
+9985,first-order-theorem-proving,0,7,StandardScaler,SelectKBest,kNN,4894,1224,ok,,0.3808514195075998,0.3839320469719471,,0.05391290000989102
+9985,first-order-theorem-proving,1,7,StandardScaler,SelectKBest,kNN,4894,1224,ok,,0.44282375592698403,0.4502660989036659,,0.05390709999483079
+9985,first-order-theorem-proving,2,7,StandardScaler,SelectKBest,kNN,4894,1224,ok,,0.42300135516414805,0.42756651312143185,,0.04991790000349283
+9985,first-order-theorem-proving,3,7,StandardScaler,SelectKBest,kNN,4895,1223,ok,,0.42656976829582344,0.43181974543480345,,0.051497699998435564
+9985,first-order-theorem-proving,4,7,StandardScaler,SelectKBest,kNN,4895,1223,ok,,0.3910222832977574,0.396664284661801,,0.05362510000122711
+9985,first-order-theorem-proving,0,8,StandardScaler,SelectKBest,MLP,4894,1224,ok,,0.3802403956915856,0.3965642254426474,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.499033600004623
+9985,first-order-theorem-proving,1,8,StandardScaler,SelectKBest,MLP,4894,1224,ok,,0.3882615546077361,0.39018041613357735,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.25693560000218
+9985,first-order-theorem-proving,2,8,StandardScaler,SelectKBest,MLP,4894,1224,ok,,0.3762657486731181,0.3912778661243587,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.894201400005841
+9985,first-order-theorem-proving,3,8,StandardScaler,SelectKBest,MLP,4895,1223,ok,,0.3725905292438263,0.3889779190312988,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.93913959999918
+9985,first-order-theorem-proving,4,8,StandardScaler,SelectKBest,MLP,4895,1223,ok,,0.36216199370521535,0.37701861347950927,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.966539599990938
+9985,first-order-theorem-proving,0,9,StandardScaler,SelectKBest,DecisionTree,4894,1224,ok,,0.3593093132811944,0.3738484138894469,,0.03318910000962205
+9985,first-order-theorem-proving,1,9,StandardScaler,SelectKBest,DecisionTree,4894,1224,ok,,0.3857373694801121,0.3967174907744236,,0.035866500009433366
+9985,first-order-theorem-proving,2,9,StandardScaler,SelectKBest,DecisionTree,4894,1224,ok,,0.3609561520629929,0.3776321100347168,,0.046440799997071736
+9985,first-order-theorem-proving,3,9,StandardScaler,SelectKBest,DecisionTree,4895,1223,ok,,0.3732917594788689,0.3816138456261539,,0.03690679999999702
+9985,first-order-theorem-proving,4,9,StandardScaler,SelectKBest,DecisionTree,4895,1223,ok,,0.34281759464525513,0.35821060062852145,,0.032857700003660284
+9985,first-order-theorem-proving,0,10,StandardScaler,None,RandomForest,4894,1224,ok,,0.5039944437342591,0.5152732757770359,,2.5310083999938797
+9985,first-order-theorem-proving,1,10,StandardScaler,None,RandomForest,4894,1224,ok,,0.5406885993817627,0.554480124150427,,2.5362278999964474
+9985,first-order-theorem-proving,2,10,StandardScaler,None,RandomForest,4894,1224,ok,,0.4908793451893565,0.49901898615711343,,2.4540641000057803
+9985,first-order-theorem-proving,3,10,StandardScaler,None,RandomForest,4895,1223,ok,,0.5140952465757579,0.5268270963504583,,2.4827316000009887
+9985,first-order-theorem-proving,4,10,StandardScaler,None,RandomForest,4895,1223,ok,,0.4871035280228346,0.5006532125195399,,2.365347400002065
+9985,first-order-theorem-proving,0,11,StandardScaler,None,SVM,4894,1224,ok,,0.36991546993277136,0.39688799583501355,,3.2953609000105644
+9985,first-order-theorem-proving,1,11,StandardScaler,None,SVM,4894,1224,ok,,0.37727449652270445,0.3924521801245793,,2.9162709999945946
+9985,first-order-theorem-proving,2,11,StandardScaler,None,SVM,4894,1224,ok,,0.36627876681919425,0.3849901664211373,,3.086363100010203
+9985,first-order-theorem-proving,3,11,StandardScaler,None,SVM,4895,1223,ok,,0.3700291450049873,0.39071371646538083,,2.7918100000097184
+9985,first-order-theorem-proving,4,11,StandardScaler,None,SVM,4895,1223,ok,,0.3511250685625955,0.37008327809579405,,2.706853099996806
+9985,first-order-theorem-proving,0,12,StandardScaler,None,kNN,4894,1224,ok,,0.4326105467385499,0.43830861767545387,,0.10127660000580363
+9985,first-order-theorem-proving,1,12,StandardScaler,None,kNN,4894,1224,ok,,0.4594102813875119,0.4620739109064926,,0.055858900013845414
+9985,first-order-theorem-proving,2,12,StandardScaler,None,kNN,4894,1224,ok,,0.4630106280377823,0.4692194827730163,,0.0630780999927083
+9985,first-order-theorem-proving,3,12,StandardScaler,None,kNN,4895,1223,ok,,0.44008564836250325,0.44271724504700244,,0.054829599990625866
+9985,first-order-theorem-proving,4,12,StandardScaler,None,kNN,4895,1223,ok,,0.42971992648440294,0.43548816840738275,,0.05368840000301134
+9985,first-order-theorem-proving,0,13,StandardScaler,None,MLP,4894,1224,ok,,0.43469347508274,0.4426063655238556,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.504584900001646
+9985,first-order-theorem-proving,1,13,StandardScaler,None,MLP,4894,1224,ok,,0.44773991882994285,0.4552243115239072,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.347612800003844
+9985,first-order-theorem-proving,2,13,StandardScaler,None,MLP,4894,1224,ok,,0.43356727190588124,0.4354964321650094,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.206583499995759
+9985,first-order-theorem-proving,3,13,StandardScaler,None,MLP,4895,1223,ok,,0.42217124244479165,0.43381721337667906,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.07733920001192
+9985,first-order-theorem-proving,4,13,StandardScaler,None,MLP,4895,1223,ok,,0.400447152978882,0.40822392112237355,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.8703870000026654
+9985,first-order-theorem-proving,0,14,StandardScaler,None,DecisionTree,4894,1224,ok,,0.39638975101064006,0.3983777078196192,,0.2003238000033889
+9985,first-order-theorem-proving,1,14,StandardScaler,None,DecisionTree,4894,1224,ok,,0.43138580492020506,0.43816175771415006,,0.16641429999435786
+9985,first-order-theorem-proving,2,14,StandardScaler,None,DecisionTree,4894,1224,ok,,0.40185383751378656,0.40074858558670307,,0.15450950000376906
+9985,first-order-theorem-proving,3,14,StandardScaler,None,DecisionTree,4895,1223,ok,,0.3936053070262231,0.40572381354331344,,0.15474389999872074
+9985,first-order-theorem-proving,4,14,StandardScaler,None,DecisionTree,4895,1223,ok,,0.3609829884551286,0.3580679580925579,,0.1840587000042433
+9985,first-order-theorem-proving,0,15,MinMaxScaler,PCA,RandomForest,4894,1224,ok,,0.48150642270222527,0.4948831489283157,,2.1806260000012117
+9985,first-order-theorem-proving,1,15,MinMaxScaler,PCA,RandomForest,4894,1224,ok,,0.5157319528192114,0.5316766840570935,,1.9904389000002993
+9985,first-order-theorem-proving,2,15,MinMaxScaler,PCA,RandomForest,4894,1224,ok,,0.45536157570160213,0.46287100421605754,,1.9562353000073927
+9985,first-order-theorem-proving,3,15,MinMaxScaler,PCA,RandomForest,4895,1223,ok,,0.47932402607278396,0.48951168293399955,,1.9307578000007197
+9985,first-order-theorem-proving,4,15,MinMaxScaler,PCA,RandomForest,4895,1223,ok,,0.4709678850608725,0.4860611926889171,,2.0675735999975586
+9985,first-order-theorem-proving,0,16,MinMaxScaler,PCA,SVM,4894,1224,ok,,0.34219544277635666,0.3623993597446207,,2.1184310000098776
+9985,first-order-theorem-proving,1,16,MinMaxScaler,PCA,SVM,4894,1224,ok,,0.3334128513973053,0.34636288212196265,,1.9794210999971256
+9985,first-order-theorem-proving,2,16,MinMaxScaler,PCA,SVM,4894,1224,ok,,0.3114732735252951,0.30979451748315345,,1.781407799993758
+9985,first-order-theorem-proving,3,16,MinMaxScaler,PCA,SVM,4895,1223,ok,,0.335473711696003,0.3512005292698004,,1.867596500000218
+9985,first-order-theorem-proving,4,16,MinMaxScaler,PCA,SVM,4895,1223,ok,,0.2921280692819836,0.29055593733168567,,1.8445900999940932
+9985,first-order-theorem-proving,0,17,MinMaxScaler,PCA,kNN,4894,1224,ok,,0.4128793750758825,0.4185292190543252,,0.057415200004470535
+9985,first-order-theorem-proving,1,17,MinMaxScaler,PCA,kNN,4894,1224,ok,,0.4613876242472627,0.4673262715169552,,0.037570700005744584
+9985,first-order-theorem-proving,2,17,MinMaxScaler,PCA,kNN,4894,1224,ok,,0.44510528055547455,0.4502846443083941,,0.033359099994413555
+9985,first-order-theorem-proving,3,17,MinMaxScaler,PCA,kNN,4895,1223,ok,,0.4539545282346688,0.4569626414252294,,0.03654249999090098
+9985,first-order-theorem-proving,4,17,MinMaxScaler,PCA,kNN,4895,1223,ok,,0.419980610945026,0.42505082887809037,,0.035257800002000295
+9985,first-order-theorem-proving,0,18,MinMaxScaler,PCA,MLP,4894,1224,ok,,0.3870948739376805,0.39923168094108946,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.592749000003096
+9985,first-order-theorem-proving,1,18,MinMaxScaler,PCA,MLP,4894,1224,ok,,0.41003455480117096,0.42260512444600673,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.307825900003081
+9985,first-order-theorem-proving,2,18,MinMaxScaler,PCA,MLP,4894,1224,ok,,0.3834464636205817,0.3932853383648292,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.42788049999217
+9985,first-order-theorem-proving,3,18,MinMaxScaler,PCA,MLP,4895,1223,ok,,0.3943340965068005,0.4008059869111955,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.6516856999951415
+9985,first-order-theorem-proving,4,18,MinMaxScaler,PCA,MLP,4895,1223,ok,,0.37688181870363335,0.38540498492512704,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.652494399997522
+9985,first-order-theorem-proving,0,19,MinMaxScaler,PCA,DecisionTree,4894,1224,ok,,0.384008808174066,0.3909288251383998,,0.0695354000054067
+9985,first-order-theorem-proving,1,19,MinMaxScaler,PCA,DecisionTree,4894,1224,ok,,0.3730602528010532,0.38842550239339796,,0.06925509999564383
+9985,first-order-theorem-proving,2,19,MinMaxScaler,PCA,DecisionTree,4894,1224,ok,,0.3566777950412534,0.37066621572317965,,0.06607719999738038
+9985,first-order-theorem-proving,3,19,MinMaxScaler,PCA,DecisionTree,4895,1223,ok,,0.37547002816876757,0.37762313573019796,,0.12898140000470448
+9985,first-order-theorem-proving,4,19,MinMaxScaler,PCA,DecisionTree,4895,1223,ok,,0.35549570427511706,0.3646376300260541,,0.06427219999022782
+9985,first-order-theorem-proving,0,20,MinMaxScaler,SelectKBest,RandomForest,4894,1224,ok,,0.47622989644910835,0.4879129436243916,,1.2685580999968806
+9985,first-order-theorem-proving,1,20,MinMaxScaler,SelectKBest,RandomForest,4894,1224,ok,,0.5159568341809323,0.5299761766808724,,1.2709258000104455
+9985,first-order-theorem-proving,2,20,MinMaxScaler,SelectKBest,RandomForest,4894,1224,ok,,0.452165512169989,0.4612216877271142,,1.339236499989056
+9985,first-order-theorem-proving,3,20,MinMaxScaler,SelectKBest,RandomForest,4895,1223,ok,,0.4843745880563046,0.49409635848979133,,1.1721901999990223
+9985,first-order-theorem-proving,4,20,MinMaxScaler,SelectKBest,RandomForest,4895,1223,ok,,0.4798038487146267,0.4920448857766723,,1.1302996000013081
+9985,first-order-theorem-proving,0,21,MinMaxScaler,SelectKBest,SVM,4894,1224,ok,,0.2147339278436685,0.18772038599068416,,2.1648945000051754
+9985,first-order-theorem-proving,1,21,MinMaxScaler,SelectKBest,SVM,4894,1224,ok,,0.21049641681540265,0.1774692542150443,,2.198364900003071
+9985,first-order-theorem-proving,2,21,MinMaxScaler,SelectKBest,SVM,4894,1224,ok,,0.2129472647448684,0.183221530711924,,2.5238897999952314
+9985,first-order-theorem-proving,3,21,MinMaxScaler,SelectKBest,SVM,4895,1223,ok,,0.2287966328083745,0.20799532371194296,,2.092164799993043
+9985,first-order-theorem-proving,4,21,MinMaxScaler,SelectKBest,SVM,4895,1223,ok,,0.21832930593341407,0.19153200790910763,,1.90342590000364
+9985,first-order-theorem-proving,0,22,MinMaxScaler,SelectKBest,kNN,4894,1224,ok,,0.39322125955770887,0.39788491804885945,,0.047650399996200576
+9985,first-order-theorem-proving,1,22,MinMaxScaler,SelectKBest,kNN,4894,1224,ok,,0.4445232817414036,0.4503491141248701,,0.5720113999996101
+9985,first-order-theorem-proving,2,22,MinMaxScaler,SelectKBest,kNN,4894,1224,ok,,0.41896005496292843,0.42493306399521485,,0.0817488000029698
+9985,first-order-theorem-proving,3,22,MinMaxScaler,SelectKBest,kNN,4895,1223,ok,,0.42284706411368317,0.42625155461803726,,0.044658499988145195
+9985,first-order-theorem-proving,4,22,MinMaxScaler,SelectKBest,kNN,4895,1223,ok,,0.3904527824280251,0.39505385584195957,,0.04334640000888612
+9985,first-order-theorem-proving,0,23,MinMaxScaler,SelectKBest,MLP,4894,1224,ok,,0.337165187286276,0.3510995126734235,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.382406800010358
+9985,first-order-theorem-proving,1,23,MinMaxScaler,SelectKBest,MLP,4894,1224,ok,,0.3522608045359001,0.35613332074334975,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.735184399993159
+9985,first-order-theorem-proving,2,23,MinMaxScaler,SelectKBest,MLP,4894,1224,ok,,0.32253465162419365,0.3305907151668417,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.990659799994319
+9985,first-order-theorem-proving,3,23,MinMaxScaler,SelectKBest,MLP,4895,1223,ok,,0.33042774349032733,0.33820340338567695,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.251120299988543
+9985,first-order-theorem-proving,4,23,MinMaxScaler,SelectKBest,MLP,4895,1223,ok,,0.3339341281324864,0.3401549769047501,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.88752599999134
+9985,first-order-theorem-proving,0,24,MinMaxScaler,SelectKBest,DecisionTree,4894,1224,ok,,0.3593093132811944,0.3738484138894469,,0.03380930000275839
+9985,first-order-theorem-proving,1,24,MinMaxScaler,SelectKBest,DecisionTree,4894,1224,ok,,0.3857373694801121,0.3966540458580731,,0.03739549999590963
+9985,first-order-theorem-proving,2,24,MinMaxScaler,SelectKBest,DecisionTree,4894,1224,ok,,0.3609561520629929,0.3776321100347168,,0.03349709999747574
+9985,first-order-theorem-proving,3,24,MinMaxScaler,SelectKBest,DecisionTree,4895,1223,ok,,0.3749924397509778,0.38394119993260206,,0.035521400001016445
+9985,first-order-theorem-proving,4,24,MinMaxScaler,SelectKBest,DecisionTree,4895,1223,ok,,0.34281759464525513,0.35821060062852145,,0.03365739999571815
+9985,first-order-theorem-proving,0,25,MinMaxScaler,None,RandomForest,4894,1224,ok,,0.5039944437342591,0.5156674683587686,,2.820254499994917
+9985,first-order-theorem-proving,1,25,MinMaxScaler,None,RandomForest,4894,1224,ok,,0.5400362836609538,0.5534567922168038,,2.5809474999987287
+9985,first-order-theorem-proving,2,25,MinMaxScaler,None,RandomForest,4894,1224,ok,,0.49222343121086193,0.5005182118982756,,2.836472299997695
+9985,first-order-theorem-proving,3,25,MinMaxScaler,None,RandomForest,4895,1223,ok,,0.5144214044361624,0.5273242418268698,,2.4770892999949865
+9985,first-order-theorem-proving,4,25,MinMaxScaler,None,RandomForest,4895,1223,ok,,0.4877571227940764,0.5011996956888097,,2.6160218000004534
+9985,first-order-theorem-proving,0,26,MinMaxScaler,None,SVM,4894,1224,ok,,0.29560041262873393,0.30401910393059367,,3.1158435999968788
+9985,first-order-theorem-proving,1,26,MinMaxScaler,None,SVM,4894,1224,ok,,0.2666899112636298,0.2621953917715049,,2.941308499997831
+9985,first-order-theorem-proving,2,26,MinMaxScaler,None,SVM,4894,1224,ok,,0.2853636747750952,0.2843410893288992,,2.685893899993971
+9985,first-order-theorem-proving,3,26,MinMaxScaler,None,SVM,4895,1223,ok,,0.28366847052456023,0.28495155108459014,,2.9034659000026295
+9985,first-order-theorem-proving,4,26,MinMaxScaler,None,SVM,4895,1223,ok,,0.27510646597500293,0.2721621738500535,,2.782455399996252
+9985,first-order-theorem-proving,0,27,MinMaxScaler,None,kNN,4894,1224,ok,,0.42105166268288935,0.42733896534288895,,0.06540149998909328
+9985,first-order-theorem-proving,1,27,MinMaxScaler,None,kNN,4894,1224,ok,,0.46555624440109294,0.47233687648411576,,0.054189500006032176
+9985,first-order-theorem-proving,2,27,MinMaxScaler,None,kNN,4894,1224,ok,,0.4503123108964324,0.45755299943360045,,0.0782035000011092
+9985,first-order-theorem-proving,3,27,MinMaxScaler,None,kNN,4895,1223,ok,,0.4536177019047418,0.45689442610357167,,0.056038800001260825
+9985,first-order-theorem-proving,4,27,MinMaxScaler,None,kNN,4895,1223,ok,,0.4243727513734042,0.4322221053157899,,0.0745288000034634
+9985,first-order-theorem-proving,0,28,MinMaxScaler,None,MLP,4894,1224,ok,,0.41448614445919046,0.41906719161451783,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.685044799989555
+9985,first-order-theorem-proving,1,28,MinMaxScaler,None,MLP,4894,1224,ok,,0.38384481047524943,0.39270153170984595,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.4656695000012405
+9985,first-order-theorem-proving,2,28,MinMaxScaler,None,MLP,4894,1224,ok,,0.4113680262820134,0.4171204699941091,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.853580399998464
+9985,first-order-theorem-proving,3,28,MinMaxScaler,None,MLP,4895,1223,ok,,0.40479793352948995,0.41737499480811485,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.213164300002973
+9985,first-order-theorem-proving,4,28,MinMaxScaler,None,MLP,4895,1223,ok,,0.3572423967947014,0.3676458035387316,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.329742499990971
+9985,first-order-theorem-proving,0,29,MinMaxScaler,None,DecisionTree,4894,1224,ok,,0.3967159088710445,0.3988651160443597,,0.16313349999836646
+9985,first-order-theorem-proving,1,29,MinMaxScaler,None,DecisionTree,4894,1224,ok,,0.43105964705980065,0.43775034204421165,,0.1618878000008408
+9985,first-order-theorem-proving,2,29,MinMaxScaler,None,DecisionTree,4894,1224,ok,,0.40185383751378656,0.40074858558670307,,0.1529034999985015
+9985,first-order-theorem-proving,3,29,MinMaxScaler,None,DecisionTree,4895,1223,ok,,0.3936053070262231,0.40572381354331344,,0.15332759999728296
+9985,first-order-theorem-proving,4,29,MinMaxScaler,None,DecisionTree,4895,1223,ok,,0.3609829884551286,0.3581971891960829,,0.22890599998936523
+9985,first-order-theorem-proving,0,30,RobustScaler,PCA,RandomForest,4894,1224,ok,,0.44466786372170913,0.45774348915294044,,1.9960829999909038
+9985,first-order-theorem-proving,1,30,RobustScaler,PCA,RandomForest,4894,1224,ok,,0.5114728194761021,0.5259848625949918,,2.05043800000567
+9985,first-order-theorem-proving,2,30,RobustScaler,PCA,RandomForest,4894,1224,ok,,0.451869417888714,0.46027110160634765,,1.9819595000008121
+9985,first-order-theorem-proving,3,30,RobustScaler,PCA,RandomForest,4895,1223,ok,,0.46893216165786883,0.4808368745347635,,1.886652100001811
+9985,first-order-theorem-proving,4,30,RobustScaler,PCA,RandomForest,4895,1223,ok,,0.45064908436678736,0.46545648130930567,,2.007668599995668
+9985,first-order-theorem-proving,0,31,RobustScaler,PCA,SVM,4894,1224,ok,,0.18757745192634268,0.13944203860313065,,2.4357059999892954
+9985,first-order-theorem-proving,1,31,RobustScaler,PCA,SVM,4894,1224,ok,,0.17785628575998988,0.12165753426225863,,2.322082800004864
+9985,first-order-theorem-proving,2,31,RobustScaler,PCA,SVM,4894,1224,ok,,0.18227788779558685,0.13077518730669166,,2.5349277000059374
+9985,first-order-theorem-proving,3,31,RobustScaler,PCA,SVM,4895,1223,ok,,0.18824453923563825,0.1403744259273587,,2.302539299998898
+9985,first-order-theorem-proving,4,31,RobustScaler,PCA,SVM,4895,1223,ok,,0.17951901161486064,0.1266532547412483,,2.2895427999901585
+9985,first-order-theorem-proving,0,32,RobustScaler,PCA,kNN,4894,1224,ok,,0.3958749877552143,0.4053010651962792,,0.0437106000026688
+9985,first-order-theorem-proving,1,32,RobustScaler,PCA,kNN,4894,1224,ok,,0.4486734627115278,0.45377485139062596,,0.04125019999628421
+9985,first-order-theorem-proving,2,32,RobustScaler,PCA,kNN,4894,1224,ok,,0.42224555486783505,0.4239140758353989,,0.045830400005797856
+9985,first-order-theorem-proving,3,32,RobustScaler,PCA,kNN,4895,1223,ok,,0.42790025676912286,0.42919907092502557,,0.040817700006300583
+9985,first-order-theorem-proving,4,32,RobustScaler,PCA,kNN,4895,1223,ok,,0.384450846670689,0.3892253682149766,,0.051009599992539734
+9985,first-order-theorem-proving,0,33,RobustScaler,PCA,MLP,4894,1224,ok,,0.3495921578871586,0.3588819270227181,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.1324133000016445
+9985,first-order-theorem-proving,1,33,RobustScaler,PCA,MLP,4894,1224,ok,,0.3511956089670772,0.3606561546684263,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.415200499992352
+9985,first-order-theorem-proving,2,33,RobustScaler,PCA,MLP,4894,1224,ok,,0.3815440708465065,0.3916278688171732,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.8749946000025375
+9985,first-order-theorem-proving,3,33,RobustScaler,PCA,MLP,4895,1223,ok,,0.3750191956688836,0.38191713116611686,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.178936700001941
+9985,first-order-theorem-proving,4,33,RobustScaler,PCA,MLP,4895,1223,ok,,0.3166584329282352,0.3232480946489278,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.701080600003479
+9985,first-order-theorem-proving,0,34,RobustScaler,PCA,DecisionTree,4894,1224,ok,,0.3550114434251657,0.3588477948610738,,0.0726213000016287
+9985,first-order-theorem-proving,1,34,RobustScaler,PCA,DecisionTree,4894,1224,ok,,0.38402959984446133,0.38969670997880534,,0.06898029999865685
+9985,first-order-theorem-proving,2,34,RobustScaler,PCA,DecisionTree,4894,1224,ok,,0.3537396981923033,0.35937398865465914,,0.06197339999198448
+9985,first-order-theorem-proving,3,34,RobustScaler,PCA,DecisionTree,4895,1223,ok,,0.3676412134250393,0.3792956647842671,,0.06506329998956062
+9985,first-order-theorem-proving,4,34,RobustScaler,PCA,DecisionTree,4895,1223,ok,,0.3555691485862622,0.3660566483353489,,0.06876829999964684
+9985,first-order-theorem-proving,0,35,RobustScaler,SelectKBest,RandomForest,4894,1224,ok,,0.47454872503856843,0.48627958792405,,1.226971699987189
+9985,first-order-theorem-proving,1,35,RobustScaler,SelectKBest,RandomForest,4894,1224,ok,,0.5163952023144115,0.5302738787371855,,1.231597200006945
+9985,first-order-theorem-proving,2,35,RobustScaler,SelectKBest,RandomForest,4894,1224,ok,,0.4529300381638728,0.4619946911559547,,1.40348009999434
+9985,first-order-theorem-proving,3,35,RobustScaler,SelectKBest,RandomForest,4895,1223,ok,,0.48191939092368813,0.49168956822812,,1.249760899998364
+9985,first-order-theorem-proving,4,35,RobustScaler,SelectKBest,RandomForest,4895,1223,ok,,0.47844883516449116,0.4909152302973489,,1.1945498999994015
+9985,first-order-theorem-proving,0,36,RobustScaler,SelectKBest,SVM,4894,1224,ok,,0.23296855925142343,0.21282578870054478,,2.0778347000014037
+9985,first-order-theorem-proving,1,36,RobustScaler,SelectKBest,SVM,4894,1224,ok,,0.28203915279151237,0.2861244074333278,,2.1894521999929566
+9985,first-order-theorem-proving,2,36,RobustScaler,SelectKBest,SVM,4894,1224,ok,,0.21274069225466308,0.18314454900078259,,3.2758621999964816
+9985,first-order-theorem-proving,3,36,RobustScaler,SelectKBest,SVM,4895,1223,ok,,0.238679908839544,0.22343310490469567,,2.12145240000973
+9985,first-order-theorem-proving,4,36,RobustScaler,SelectKBest,SVM,4895,1223,ok,,0.22950687310101078,0.2120816312632169,,1.94497599999886
+9985,first-order-theorem-proving,0,37,RobustScaler,SelectKBest,kNN,4894,1224,ok,,0.39030094728701914,0.39565389436393783,,0.04516060001333244
+9985,first-order-theorem-proving,1,37,RobustScaler,SelectKBest,kNN,4894,1224,ok,,0.4454325182423109,0.4532582240520063,,0.05207580000569578
+9985,first-order-theorem-proving,2,37,RobustScaler,SelectKBest,kNN,4894,1224,ok,,0.4135583229885594,0.42051298804647796,,0.05857709998963401
+9985,first-order-theorem-proving,3,37,RobustScaler,SelectKBest,kNN,4895,1223,ok,,0.43155049038789284,0.4378678987603772,,0.044186699989950284
+9985,first-order-theorem-proving,4,37,RobustScaler,SelectKBest,kNN,4895,1223,ok,,0.39789109165191605,0.40223132403745016,,0.041321199998492375
+9985,first-order-theorem-proving,0,38,RobustScaler,SelectKBest,MLP,4894,1224,ok,,0.38126923110678596,0.40011941732164596,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.781319699992309
+9985,first-order-theorem-proving,1,38,RobustScaler,SelectKBest,MLP,4894,1224,ok,,0.38612356794105224,0.3898214860823557,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.442971199998283
+9985,first-order-theorem-proving,2,38,RobustScaler,SelectKBest,MLP,4894,1224,ok,,0.3597072267553991,0.37455642587162413,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.435953699998208
+9985,first-order-theorem-proving,3,38,RobustScaler,SelectKBest,MLP,4895,1223,ok,,0.37932301867500895,0.3909152428283824,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.410137999992003
+9985,first-order-theorem-proving,4,38,RobustScaler,SelectKBest,MLP,4895,1223,ok,,0.37488630576827126,0.3864879333171975,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.667157200005022
+9985,first-order-theorem-proving,0,39,RobustScaler,SelectKBest,DecisionTree,4894,1224,ok,,0.3593093132811944,0.3738484138894469,,0.03484180000668857
+9985,first-order-theorem-proving,1,39,RobustScaler,SelectKBest,DecisionTree,4894,1224,ok,,0.3857373694801121,0.3966540458580731,,0.03363879999960773
+9985,first-order-theorem-proving,2,39,RobustScaler,SelectKBest,DecisionTree,4894,1224,ok,,0.3609561520629929,0.3776321100347168,,0.03672270000970457
+9985,first-order-theorem-proving,3,39,RobustScaler,SelectKBest,DecisionTree,4895,1223,ok,,0.3749924397509778,0.38394119993260206,,0.033830200001830235
+9985,first-order-theorem-proving,4,39,RobustScaler,SelectKBest,DecisionTree,4895,1223,ok,,0.34281759464525513,0.35821060062852145,,0.033183400009875186
+9985,first-order-theorem-proving,0,40,RobustScaler,None,RandomForest,4894,1224,ok,,0.5066611104009257,0.5182595188991268,,3.151875400013523
+9985,first-order-theorem-proving,1,40,RobustScaler,None,RandomForest,4894,1224,ok,,0.5406885993817627,0.554480124150427,,2.9770588999963365
+9985,first-order-theorem-proving,2,40,RobustScaler,None,RandomForest,4894,1224,ok,,0.49222343121086193,0.5004579365844601,,2.4596921000047587
+9985,first-order-theorem-proving,3,40,RobustScaler,None,RandomForest,4895,1223,ok,,0.5144214044361624,0.5271148892680382,,2.4828949000075227
+9985,first-order-theorem-proving,4,40,RobustScaler,None,RandomForest,4895,1223,ok,,0.4863390020289507,0.49976161286597093,,2.353831500004162
+9985,first-order-theorem-proving,0,41,RobustScaler,None,SVM,4894,1224,ok,,0.19117130208975683,0.14599121574744822,,3.3402288000070257
+9985,first-order-theorem-proving,1,41,RobustScaler,None,SVM,4894,1224,ok,,0.18044746446409266,0.1265673933666406,,4.444089899989194
+9985,first-order-theorem-proving,2,41,RobustScaler,None,SVM,4894,1224,ok,,0.18680499776671355,0.13852357982604824,,3.1448911000043154
+9985,first-order-theorem-proving,3,41,RobustScaler,None,SVM,4895,1223,ok,,0.19386812200207817,0.15025736816024848,,3.1202459999913117
+9985,first-order-theorem-proving,4,41,RobustScaler,None,SVM,4895,1223,ok,,0.18192352081915397,0.13199612407456676,,3.7887703999876976
+9985,first-order-theorem-proving,0,42,RobustScaler,None,kNN,4894,1224,ok,,0.4039496002633747,0.410812651537844,,0.0609995999984676
+9985,first-order-theorem-proving,1,42,RobustScaler,None,kNN,4894,1224,ok,,0.4564754048179443,0.4621630430365798,,0.060623400000622496
+9985,first-order-theorem-proving,2,42,RobustScaler,None,kNN,4894,1224,ok,,0.43765321409513086,0.4403495263386407,,0.05735219999041874
+9985,first-order-theorem-proving,3,42,RobustScaler,None,kNN,4895,1223,ok,,0.43205775805898056,0.43458863586090496,,0.056846400009817444
+9985,first-order-theorem-proving,4,42,RobustScaler,None,kNN,4895,1223,ok,,0.4049117952602351,0.40806814150911985,,0.09284129999286961
+9985,first-order-theorem-proving,0,43,RobustScaler,None,MLP,4894,1224,ok,,0.4234392834121709,0.4294343480083947,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.829114199994365
+9985,first-order-theorem-proving,1,43,RobustScaler,None,MLP,4894,1224,ok,,0.44766747409673235,0.45781598626947734,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.17220119999547
+9985,first-order-theorem-proving,2,43,RobustScaler,None,MLP,4894,1224,ok,,0.43130402529560546,0.4340631906095158,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.462511000005179
+9985,first-order-theorem-proving,3,43,RobustScaler,None,MLP,4895,1223,ok,,0.43434450884996006,0.4480416261301247,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.282854699995369
+9985,first-order-theorem-proving,4,43,RobustScaler,None,MLP,4895,1223,ok,,0.39985636797566704,0.4045222207862835,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.468057799997041
+9985,first-order-theorem-proving,0,44,RobustScaler,None,DecisionTree,4894,1224,ok,,0.3967159088710445,0.3988651160443597,,0.20980219999910332
+9985,first-order-theorem-proving,1,44,RobustScaler,None,DecisionTree,4894,1224,ok,,0.43138580492020506,0.43816175771415006,,0.1584972000127891
+9985,first-order-theorem-proving,2,44,RobustScaler,None,DecisionTree,4894,1224,ok,,0.40185383751378656,0.40074858558670307,,0.15153489999647718
+9985,first-order-theorem-proving,3,44,RobustScaler,None,DecisionTree,4895,1223,ok,,0.3936053070262231,0.40572381354331344,,0.1696488000015961
+9985,first-order-theorem-proving,4,44,RobustScaler,None,DecisionTree,4895,1223,ok,,0.3609829884551286,0.3580679580925579,,0.16342649998841807
+9985,first-order-theorem-proving,0,45,None,PCA,RandomForest,4894,1224,ok,,0.4628489760343997,0.4746726732785205,,2.051381700002821
+9985,first-order-theorem-proving,1,45,None,PCA,RandomForest,4894,1224,ok,,0.5115235333583147,0.5274660538203703,,1.9639078000036534
+9985,first-order-theorem-proving,2,45,None,PCA,RandomForest,4894,1224,ok,,0.4698431333414414,0.4807668586883236,,2.0465345999982674
+9985,first-order-theorem-proving,3,45,None,PCA,RandomForest,4895,1223,ok,,0.4893637240704745,0.5043826504614263,,1.9985358999983873
+9985,first-order-theorem-proving,4,45,None,PCA,RandomForest,4895,1223,ok,,0.46587585150563454,0.4800049467778424,,2.1217376999993576
+9985,first-order-theorem-proving,0,46,None,PCA,SVM,4894,1224,ok,,0.2909204945057158,0.2992142973349316,,1.9774083999946015
+9985,first-order-theorem-proving,1,46,None,PCA,SVM,4894,1224,ok,,0.29502692165101135,0.30539481688877346,,2.8637851999956183
+9985,first-order-theorem-proving,2,46,None,PCA,SVM,4894,1224,ok,,0.2953105410439731,0.2996441717862794,,2.4630653000058373
+9985,first-order-theorem-proving,3,46,None,PCA,SVM,4895,1223,ok,,0.28902978429443404,0.296043312432011,,1.9928067000000738
+9985,first-order-theorem-proving,4,46,None,PCA,SVM,4895,1223,ok,,0.2683528099427739,0.2655434245185391,,3.0507986000011442
+9985,first-order-theorem-proving,0,47,None,PCA,kNN,4894,1224,ok,,0.4257611029082276,0.43099089718368555,,0.04198539999197237
+9985,first-order-theorem-proving,1,47,None,PCA,kNN,4894,1224,ok,,0.459821366858125,0.46699446630221814,,0.040038300008745864
+9985,first-order-theorem-proving,2,47,None,PCA,kNN,4894,1224,ok,,0.45141316473994536,0.4575598037495498,,0.04046009999001399
+9985,first-order-theorem-proving,3,47,None,PCA,kNN,4895,1223,ok,,0.4514667715269503,0.4549436100505324,,0.040578100000857376
+9985,first-order-theorem-proving,4,47,None,PCA,kNN,4895,1223,ok,,0.4202661664226314,0.4269266103511549,,0.040295999991940334
+9985,first-order-theorem-proving,0,48,None,PCA,MLP,4894,1224,ok,,0.3944618609705737,0.4086662153780607,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.001065299991751
+9985,first-order-theorem-proving,1,48,None,PCA,MLP,4894,1224,ok,,0.40277759226887216,0.40860417163285717,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.240552899995237
+9985,first-order-theorem-proving,2,48,None,PCA,MLP,4894,1224,ok,,0.38757982652033035,0.39469650482612634,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.020156500002486
+9985,first-order-theorem-proving,3,48,None,PCA,MLP,4895,1223,ok,,0.403735660925648,0.41371390555377413,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.583166799988248
+9985,first-order-theorem-proving,4,48,None,PCA,MLP,4895,1223,ok,,0.37055288614697307,0.3801605464442696,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.090562299999874
+9985,first-order-theorem-proving,0,49,None,PCA,DecisionTree,4894,1224,ok,,0.38901034349425445,0.39777101325824127,,0.07446340000024065
+9985,first-order-theorem-proving,1,49,None,PCA,DecisionTree,4894,1224,ok,,0.3966674923904341,0.4108339043031523,,0.06431970000267029
+9985,first-order-theorem-proving,2,49,None,PCA,DecisionTree,4894,1224,ok,,0.3941157327231124,0.40317736470104365,,0.06411099999968428
+9985,first-order-theorem-proving,3,49,None,PCA,DecisionTree,4895,1223,ok,,0.388439150302746,0.39568518042454154,,0.06816070000058971
+9985,first-order-theorem-proving,4,49,None,PCA,DecisionTree,4895,1223,ok,,0.33731743918971396,0.3440894709576449,,0.0675247000035597
+9985,first-order-theorem-proving,0,50,None,SelectKBest,RandomForest,4894,1224,ok,,0.4756394088928568,0.48781623243096955,,1.1774138000037055
+9985,first-order-theorem-proving,1,50,None,SelectKBest,RandomForest,4894,1224,ok,,0.5156306763205277,0.529590029764861,,1.2051234999962617
+9985,first-order-theorem-proving,2,50,None,SelectKBest,RandomForest,4894,1224,ok,,0.4525503918950749,0.46163477127969393,,1.2565659999963827
+9985,first-order-theorem-proving,3,50,None,SelectKBest,RandomForest,4895,1223,ok,,0.48326347694519356,0.4928209381460181,,1.1497369999997318
+9985,first-order-theorem-proving,4,50,None,SelectKBest,RandomForest,4895,1223,ok,,0.47844883516449116,0.4909152302973489,,1.195977800001856
+9985,first-order-theorem-proving,0,51,None,SelectKBest,SVM,4894,1224,ok,,0.3275473089619138,0.34789509928025836,,1.995626899995841
+9985,first-order-theorem-proving,1,51,None,SelectKBest,SVM,4894,1224,ok,,0.3381263778552772,0.3451047848140616,,1.9271755999943707
+9985,first-order-theorem-proving,2,51,None,SelectKBest,SVM,4894,1224,ok,,0.3187497896462029,0.33410519118051657,,2.0364047000039136
+9985,first-order-theorem-proving,3,51,None,SelectKBest,SVM,4895,1223,ok,,0.33308132527698614,0.3519593789609807,,2.168989599987981
+9985,first-order-theorem-proving,4,51,None,SelectKBest,SVM,4895,1223,ok,,0.31152409034686146,0.32312649153104633,,1.832626800009166
+9985,first-order-theorem-proving,0,52,None,SelectKBest,kNN,4894,1224,ok,,0.38430429238495245,0.3876696802859924,,0.05201100000704173
+9985,first-order-theorem-proving,1,52,None,SelectKBest,kNN,4894,1224,ok,,0.4459502961034742,0.45262559715995687,,0.04527360000065528
+9985,first-order-theorem-proving,2,52,None,SelectKBest,kNN,4894,1224,ok,,0.4210796238710561,0.4264426240567997,,0.06494759999623057
+9985,first-order-theorem-proving,3,52,None,SelectKBest,kNN,4895,1223,ok,,0.4284839146167576,0.4338998881475014,,0.04821200000878889
+9985,first-order-theorem-proving,4,52,None,SelectKBest,kNN,4895,1223,ok,,0.3883821201988787,0.3942509662690439,,0.04911049999645911
+9985,first-order-theorem-proving,0,53,None,SelectKBest,MLP,4894,1224,ok,,0.37701284529008666,0.39775265691145734,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.10108140000375
+9985,first-order-theorem-proving,1,53,None,SelectKBest,MLP,4894,1224,ok,,0.3839484344807431,0.38690614804424667,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.670045000006212
+9985,first-order-theorem-proving,2,53,None,SelectKBest,MLP,4894,1224,ok,,0.3778390303251688,0.3891851967361751,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.310406400007196
+9985,first-order-theorem-proving,3,53,None,SelectKBest,MLP,4895,1223,ok,,0.37657809716832996,0.3939169668595029,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.581295399999362
+9985,first-order-theorem-proving,4,53,None,SelectKBest,MLP,4895,1223,ok,,0.3656445025406853,0.38234911780014597,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.285794899988105
+9985,first-order-theorem-proving,0,54,None,SelectKBest,DecisionTree,4894,1224,ok,,0.3593093132811944,0.3738484138894469,,0.03431659999478143
+9985,first-order-theorem-proving,1,54,None,SelectKBest,DecisionTree,4894,1224,ok,,0.3857373694801121,0.3966540458580731,,0.03965779999271035
+9985,first-order-theorem-proving,2,54,None,SelectKBest,DecisionTree,4894,1224,ok,,0.3620747202956551,0.378793484892259,,0.03376890000072308
+9985,first-order-theorem-proving,3,54,None,SelectKBest,DecisionTree,4895,1223,ok,,0.3732917594788689,0.3816138456261539,,0.037336299996240996
+9985,first-order-theorem-proving,4,54,None,SelectKBest,DecisionTree,4895,1223,ok,,0.34552762174552604,0.3611339980245943,,0.03126830000837799
+9985,first-order-theorem-proving,0,55,None,None,RandomForest,4894,1224,ok,,0.5039944437342591,0.5155941207866274,,2.4832609000004595
+9985,first-order-theorem-proving,1,55,None,None,RandomForest,4894,1224,ok,,0.5395979155274744,0.5531040927750971,,2.9862420999997994
+9985,first-order-theorem-proving,2,55,None,None,RandomForest,4894,1224,ok,,0.4932306066837908,0.5013853877599959,,2.4533234999980778
+9985,first-order-theorem-proving,3,55,None,None,RandomForest,4895,1223,ok,,0.5144214044361624,0.5271797696469294,,2.488376799999969
+9985,first-order-theorem-proving,4,55,None,None,RandomForest,4895,1223,ok,,0.4863390020289507,0.5001515583540125,,2.3175247000035597
+9985,first-order-theorem-proving,0,56,None,None,SVM,4894,1224,ok,,0.3712488032661047,0.39818856870635005,,3.0106904999993276
+9985,first-order-theorem-proving,1,56,None,None,SVM,4894,1224,ok,,0.37757586786643094,0.3934039200786437,,3.207690299997921
+9985,first-order-theorem-proving,2,56,None,None,SVM,4894,1224,ok,,0.36314371204608237,0.3805795475508725,,3.061354699995718
+9985,first-order-theorem-proving,3,56,None,None,SVM,4895,1223,ok,,0.3707971941601332,0.3915910950015035,,2.933135700004641
+9985,first-order-theorem-proving,4,56,None,None,SVM,4895,1223,ok,,0.353242715621419,0.3722592356831713,,2.74091259999841
+9985,first-order-theorem-proving,0,57,None,None,kNN,4894,1224,ok,,0.4318243405278639,0.43740547444836886,,0.060391599996364675
+9985,first-order-theorem-proving,1,57,None,None,kNN,4894,1224,ok,,0.46286074133285626,0.46641525036940307,,0.0626637999957893
+9985,first-order-theorem-proving,2,57,None,None,kNN,4894,1224,ok,,0.46139026808841693,0.46843240178074347,,0.056902700001955964
+9985,first-order-theorem-proving,3,57,None,None,kNN,4895,1223,ok,,0.4425295522287967,0.44525025036076893,,0.06636929999513086
+9985,first-order-theorem-proving,4,57,None,None,kNN,4895,1223,ok,,0.4291391359584868,0.4339247554897095,,0.0564540999912424
+9985,first-order-theorem-proving,0,58,None,None,MLP,4894,1224,ok,,0.43166234622486366,0.4397869377801496,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.481457700007013
+9985,first-order-theorem-proving,1,58,None,None,MLP,4894,1224,ok,,0.4467112849951472,0.4561781091868246,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.249963800000842
+9985,first-order-theorem-proving,2,58,None,None,MLP,4894,1224,ok,,0.4425181195071968,0.4457370282069748,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.209817299997667
+9985,first-order-theorem-proving,3,58,None,None,MLP,4895,1223,ok,,0.43216101070982127,0.4446895455863123,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.8299151999963215
+9985,first-order-theorem-proving,4,58,None,None,MLP,4895,1223,ok,,0.412701222471135,0.42298723336901856,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.846396200009622
+9985,first-order-theorem-proving,0,59,None,None,DecisionTree,4894,1224,ok,,0.39527863989952894,0.3974547940486321,,0.20155100000556558
+9985,first-order-theorem-proving,1,59,None,None,DecisionTree,4894,1224,ok,,0.43138580492020506,0.43816175771415006,,0.15321590000530705
+9985,first-order-theorem-proving,2,59,None,None,DecisionTree,4894,1224,ok,,0.40185383751378656,0.40074858558670307,,0.15556820000347216
+9985,first-order-theorem-proving,3,59,None,None,DecisionTree,4895,1223,ok,,0.3936053070262231,0.40572381354331344,,0.1894099999917671
+9985,first-order-theorem-proving,4,59,None,None,DecisionTree,4895,1223,ok,,0.3609829884551286,0.3581971891960829,,0.14743890000681859

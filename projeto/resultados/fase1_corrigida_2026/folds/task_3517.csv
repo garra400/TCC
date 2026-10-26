@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+3517,ipums_la_97-small,0,0,StandardScaler,PCA,RandomForest,5615,1404,ok,,0.2639399915237657,0.2577493362331331,,4.62892990000546
+3517,ipums_la_97-small,1,0,StandardScaler,PCA,RandomForest,5615,1404,ok,,0.294622438102691,0.2891204193869384,,2.609436499988078
+3517,ipums_la_97-small,2,0,StandardScaler,PCA,RandomForest,5615,1404,ok,,0.28198470956397176,0.2741568105385618,,2.7117093999986537
+3517,ipums_la_97-small,3,0,StandardScaler,PCA,RandomForest,5615,1404,ok,,0.2798815431994981,0.2716385734156804,,3.06860769999912
+3517,ipums_la_97-small,4,0,StandardScaler,PCA,RandomForest,5616,1403,ok,,0.272240359400419,0.25862175855538466,,2.5775863000017125
+3517,ipums_la_97-small,0,1,StandardScaler,PCA,SVM,5615,1404,ok,,0.23195104705052175,0.19343828051426748,,3.1640205000003334
+3517,ipums_la_97-small,1,1,StandardScaler,PCA,SVM,5615,1404,ok,,0.25098035960472254,0.20423227206805128,,2.7800362999987556
+3517,ipums_la_97-small,2,1,StandardScaler,PCA,SVM,5615,1404,ok,,0.26037078366718747,0.21701216359458608,,3.019785899989074
+3517,ipums_la_97-small,3,1,StandardScaler,PCA,SVM,5615,1404,ok,,0.2468183798125677,0.20506958852607834,,3.2650698000070406
+3517,ipums_la_97-small,4,1,StandardScaler,PCA,SVM,5616,1403,ok,,0.25856925333665,0.21746551033959563,,2.8324958000011975
+3517,ipums_la_97-small,0,2,StandardScaler,PCA,kNN,5615,1404,ok,,0.23892089587943438,0.23583812568312906,,0.09031369999866001
+3517,ipums_la_97-small,1,2,StandardScaler,PCA,kNN,5615,1404,ok,,0.25539354764908273,0.255169875430006,,0.08061619999352843
+3517,ipums_la_97-small,2,2,StandardScaler,PCA,kNN,5615,1404,ok,,0.22845552756966214,0.22063740674938412,,0.07503829999768641
+3517,ipums_la_97-small,3,2,StandardScaler,PCA,kNN,5615,1404,ok,,0.2576649440614248,0.25517623553946733,,0.07347059999301564
+3517,ipums_la_97-small,4,2,StandardScaler,PCA,kNN,5616,1403,ok,,0.24354961964982091,0.23730496991240072,,0.074669299996458
+3517,ipums_la_97-small,0,3,StandardScaler,PCA,MLP,5615,1404,ok,,0.27223210333340436,0.2593288058663666,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.748459900001762
+3517,ipums_la_97-small,1,3,StandardScaler,PCA,MLP,5615,1404,ok,,0.27571078404010335,0.25798846914165613,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.346603999991203
+3517,ipums_la_97-small,2,3,StandardScaler,PCA,MLP,5615,1404,ok,,0.2779320888894744,0.26666422586892646,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.663815199994133
+3517,ipums_la_97-small,3,3,StandardScaler,PCA,MLP,5615,1404,ok,,0.28941068779685175,0.2749854322187898,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.315838800001075
+3517,ipums_la_97-small,4,3,StandardScaler,PCA,MLP,5616,1403,ok,,0.28881579861173895,0.2794460735401941,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.305198500005645
+3517,ipums_la_97-small,0,4,StandardScaler,PCA,DecisionTree,5615,1404,ok,,0.23882030353184242,0.23748871139437985,,0.09173870000813622
+3517,ipums_la_97-small,1,4,StandardScaler,PCA,DecisionTree,5615,1404,ok,,0.2560218572887381,0.25102582378560157,,0.0866288999968674
+3517,ipums_la_97-small,2,4,StandardScaler,PCA,DecisionTree,5615,1404,ok,,0.25983647145590627,0.25805063500363884,,0.09287510000285693
+3517,ipums_la_97-small,3,4,StandardScaler,PCA,DecisionTree,5615,1404,ok,,0.26742336301481046,0.2572884893091833,,0.09255359999951907
+3517,ipums_la_97-small,4,4,StandardScaler,PCA,DecisionTree,5616,1403,ok,,0.2517113478770492,0.24065697385867826,,0.09215120000590105
+3517,ipums_la_97-small,0,5,StandardScaler,SelectKBest,RandomForest,5615,1404,ok,,0.2701291449716461,0.27314797638905697,Features [0] are constant. | invalid value encountered in divide,0.9592087000055471
+3517,ipums_la_97-small,1,5,StandardScaler,SelectKBest,RandomForest,5615,1404,ok,,0.2839391802650604,0.27886581490922646,Features [0] are constant. | invalid value encountered in divide,0.8484842000034405
+3517,ipums_la_97-small,2,5,StandardScaler,SelectKBest,RandomForest,5615,1404,ok,,0.252652597887565,0.2426515769241113,Features [0] are constant. | invalid value encountered in divide,0.884407999998075
+3517,ipums_la_97-small,3,5,StandardScaler,SelectKBest,RandomForest,5615,1404,ok,,0.24647446865825864,0.23601938521702326,Features [0] are constant. | invalid value encountered in divide,0.9891354999999749
+3517,ipums_la_97-small,4,5,StandardScaler,SelectKBest,RandomForest,5616,1403,ok,,0.2294591344136906,0.22173674157761636,Features [0] are constant. | invalid value encountered in divide,0.8646045999921625
+3517,ipums_la_97-small,0,6,StandardScaler,SelectKBest,SVM,5615,1404,ok,,0.22759326521862835,0.18043516659405984,Features [0] are constant. | invalid value encountered in divide,3.0416728999989573
+3517,ipums_la_97-small,1,6,StandardScaler,SelectKBest,SVM,5615,1404,ok,,0.2423744284477075,0.1805285181431726,Features [0] are constant. | invalid value encountered in divide,3.18527199998789
+3517,ipums_la_97-small,2,6,StandardScaler,SelectKBest,SVM,5615,1404,ok,,0.24097022124131076,0.1870761509209836,Features [0] are constant. | invalid value encountered in divide,3.054774100004579
+3517,ipums_la_97-small,3,6,StandardScaler,SelectKBest,SVM,5615,1404,ok,,0.25300802094298513,0.20355777406073647,Features [0] are constant. | invalid value encountered in divide,3.108431799992104
+3517,ipums_la_97-small,4,6,StandardScaler,SelectKBest,SVM,5616,1403,ok,,0.23504966698699747,0.18039798033048945,Features [0] are constant. | invalid value encountered in divide,2.9092559999990044
+3517,ipums_la_97-small,0,7,StandardScaler,SelectKBest,kNN,5615,1404,ok,,0.23976506771490302,0.23920670699148905,Features [0] are constant. | invalid value encountered in divide,0.06317059999855701
+3517,ipums_la_97-small,1,7,StandardScaler,SelectKBest,kNN,5615,1404,ok,,0.26757686795286284,0.26392560126885406,Features [0] are constant. | invalid value encountered in divide,0.08361070000682957
+3517,ipums_la_97-small,2,7,StandardScaler,SelectKBest,kNN,5615,1404,ok,,0.23825825974114676,0.23461316482827949,Features [0] are constant. | invalid value encountered in divide,0.10216470000159461
+3517,ipums_la_97-small,3,7,StandardScaler,SelectKBest,kNN,5615,1404,ok,,0.21499875596677742,0.2089787403670748,Features [0] are constant. | invalid value encountered in divide,0.07399869999790099
+3517,ipums_la_97-small,4,7,StandardScaler,SelectKBest,kNN,5616,1403,ok,,0.22599129577653781,0.22472182363677007,Features [0] are constant. | invalid value encountered in divide,0.04811760000302456
+3517,ipums_la_97-small,0,8,StandardScaler,SelectKBest,MLP,5615,1404,ok,,0.2545679768164244,0.22792366924812002,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.288811599995825
+3517,ipums_la_97-small,1,8,StandardScaler,SelectKBest,MLP,5615,1404,ok,,0.27655632151104076,0.24156073951398138,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,7.926525699993363
+3517,ipums_la_97-small,2,8,StandardScaler,SelectKBest,MLP,5615,1404,ok,,0.27095185338718863,0.23611030404775396,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.3609952999977395
+3517,ipums_la_97-small,3,8,StandardScaler,SelectKBest,MLP,5615,1404,ok,,0.2775015641665332,0.24323761166236113,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.419199299998581
+3517,ipums_la_97-small,4,8,StandardScaler,SelectKBest,MLP,5616,1403,ok,,0.25986041694458584,0.23033015793502143,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.415479899995262
+3517,ipums_la_97-small,0,9,StandardScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.23600540938406445,0.22376313122004213,Features [0] are constant. | invalid value encountered in divide,0.017688500010990538
+3517,ipums_la_97-small,1,9,StandardScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.2827937344303578,0.2651345458446441,Features [0] are constant. | invalid value encountered in divide,0.023849200006225146
+3517,ipums_la_97-small,2,9,StandardScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.2504190067919132,0.22843030554656685,Features [0] are constant. | invalid value encountered in divide,0.016004399993107654
+3517,ipums_la_97-small,3,9,StandardScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.26327427848159146,0.24089200688464824,Features [0] are constant. | invalid value encountered in divide,0.018174999990151264
+3517,ipums_la_97-small,4,9,StandardScaler,SelectKBest,DecisionTree,5616,1403,ok,,0.2545963192102002,0.23947679183054427,Features [0] are constant. | invalid value encountered in divide,0.016083399998024106
+3517,ipums_la_97-small,0,10,StandardScaler,None,RandomForest,5615,1404,ok,,0.3183559257597527,0.3138763097953231,,1.6252577999985078
+3517,ipums_la_97-small,1,10,StandardScaler,None,RandomForest,5615,1404,ok,,0.3355818328009482,0.32500217049439895,,1.7727837000129512
+3517,ipums_la_97-small,2,10,StandardScaler,None,RandomForest,5615,1404,ok,,0.33520944847140166,0.32740111771987296,,2.560530300004757
+3517,ipums_la_97-small,3,10,StandardScaler,None,RandomForest,5615,1404,ok,,0.32428605797985155,0.3104463175291698,,1.5997185000014724
+3517,ipums_la_97-small,4,10,StandardScaler,None,RandomForest,5616,1403,ok,,0.3211516025786318,0.3106103550824503,,1.5665804000018397
+3517,ipums_la_97-small,0,11,StandardScaler,None,SVM,5615,1404,ok,,0.26619426433104443,0.23721843361428493,,5.416619199997513
+3517,ipums_la_97-small,1,11,StandardScaler,None,SVM,5615,1404,ok,,0.2791684239007631,0.24164488101714265,,6.447505300006014
+3517,ipums_la_97-small,2,11,StandardScaler,None,SVM,5615,1404,ok,,0.2808932035063736,0.2431939480551395,,6.848459200002253
+3517,ipums_la_97-small,3,11,StandardScaler,None,SVM,5615,1404,ok,,0.27477619331172803,0.23634360355966127,,6.348685300006764
+3517,ipums_la_97-small,4,11,StandardScaler,None,SVM,5616,1403,ok,,0.2834916840069037,0.24608190117248852,,5.026021099998616
+3517,ipums_la_97-small,0,12,StandardScaler,None,kNN,5615,1404,ok,,0.2428559354058312,0.24304257795237116,,0.0770663000002969
+3517,ipums_la_97-small,1,12,StandardScaler,None,kNN,5615,1404,ok,,0.2414330282779375,0.23101931688391875,,0.07896479999180883
+3517,ipums_la_97-small,2,12,StandardScaler,None,kNN,5615,1404,ok,,0.23108365352674512,0.22482905447925788,,0.07870009999896865
+3517,ipums_la_97-small,3,12,StandardScaler,None,kNN,5615,1404,ok,,0.24423823238596712,0.2433366955828081,,0.15495720000762958
+3517,ipums_la_97-small,4,12,StandardScaler,None,kNN,5616,1403,ok,,0.24289749049356274,0.23808544103088142,,0.0738429999910295
+3517,ipums_la_97-small,0,13,StandardScaler,None,MLP,5615,1404,ok,,0.30470958239790263,0.30681200762106625,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.34128249999776
+3517,ipums_la_97-small,1,13,StandardScaler,None,MLP,5615,1404,ok,,0.32654521822503246,0.3263813944888825,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.624305000004824
+3517,ipums_la_97-small,2,13,StandardScaler,None,MLP,5615,1404,ok,,0.31121516103322666,0.3118353017312553,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.669462800011388
+3517,ipums_la_97-small,3,13,StandardScaler,None,MLP,5615,1404,ok,,0.3044219457935554,0.3014715911924991,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.007953100008308
+3517,ipums_la_97-small,4,13,StandardScaler,None,MLP,5616,1403,ok,,0.3189697409668798,0.31592645131238056,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.846739399989019
+3517,ipums_la_97-small,0,14,StandardScaler,None,DecisionTree,5615,1404,ok,,0.3089001986819203,0.30476909690232623,,0.07711660000495613
+3517,ipums_la_97-small,1,14,StandardScaler,None,DecisionTree,5615,1404,ok,,0.32445061454605767,0.32262470544913824,,0.08119069998792838
+3517,ipums_la_97-small,2,14,StandardScaler,None,DecisionTree,5615,1404,ok,,0.31312028844234596,0.3114213037852098,,0.09344459998828825
+3517,ipums_la_97-small,3,14,StandardScaler,None,DecisionTree,5615,1404,ok,,0.30415929073078085,0.2966953650390299,,0.09556359999987762
+3517,ipums_la_97-small,4,14,StandardScaler,None,DecisionTree,5616,1403,ok,,0.3244543502795023,0.32135726182605606,,0.07978940001339652
+3517,ipums_la_97-small,0,15,MinMaxScaler,PCA,RandomForest,5615,1404,ok,,0.23726949248513243,0.22185873601458084,,2.4947081999998773
+3517,ipums_la_97-small,1,15,MinMaxScaler,PCA,RandomForest,5615,1404,ok,,0.23803036647666148,0.22396060840358764,,2.5911487999983365
+3517,ipums_la_97-small,2,15,MinMaxScaler,PCA,RandomForest,5615,1404,ok,,0.24233457602598302,0.22947843354688005,,2.8328333999961615
+3517,ipums_la_97-small,3,15,MinMaxScaler,PCA,RandomForest,5615,1404,ok,,0.236897168468734,0.22215154820646638,,2.775769100000616
+3517,ipums_la_97-small,4,15,MinMaxScaler,PCA,RandomForest,5616,1403,ok,,0.25878419953107085,0.24862898994533908,,2.560561400008737
+3517,ipums_la_97-small,0,16,MinMaxScaler,PCA,SVM,5615,1404,ok,,0.22566572212037234,0.18920075944413012,,2.688244399992982
+3517,ipums_la_97-small,1,16,MinMaxScaler,PCA,SVM,5615,1404,ok,,0.23518223070257835,0.19392898254995783,,2.959710700000869
+3517,ipums_la_97-small,2,16,MinMaxScaler,PCA,SVM,5615,1404,ok,,0.23689937973896963,0.19033206927415525,,3.209862499992596
+3517,ipums_la_97-small,3,16,MinMaxScaler,PCA,SVM,5615,1404,ok,,0.23511727703769417,0.19304000966659166,,3.3820444000011776
+3517,ipums_la_97-small,4,16,MinMaxScaler,PCA,SVM,5616,1403,ok,,0.24508056537726272,0.2028984985579301,,3.346957299989299
+3517,ipums_la_97-small,0,17,MinMaxScaler,PCA,kNN,5615,1404,ok,,0.21383792112126043,0.21064384614454895,,0.05759609999950044
+3517,ipums_la_97-small,1,17,MinMaxScaler,PCA,kNN,5615,1404,ok,,0.22454409765584732,0.22165833240320276,,0.08249369999975897
+3517,ipums_la_97-small,2,17,MinMaxScaler,PCA,kNN,5615,1404,ok,,0.20557244667540206,0.19657938874304526,,0.06305430000065826
+3517,ipums_la_97-small,3,17,MinMaxScaler,PCA,kNN,5615,1404,ok,,0.2183903603737517,0.21401992410110293,,0.05784280000079889
+3517,ipums_la_97-small,4,17,MinMaxScaler,PCA,kNN,5616,1403,ok,,0.21571709597964014,0.2076802863645139,,0.06326380000973586
+3517,ipums_la_97-small,0,18,MinMaxScaler,PCA,MLP,5615,1404,ok,,0.24699188186655893,0.22229339634814382,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.759309200002463
+3517,ipums_la_97-small,1,18,MinMaxScaler,PCA,MLP,5615,1404,ok,,0.24301319859165224,0.2149123395275953,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.236085500000627
+3517,ipums_la_97-small,2,18,MinMaxScaler,PCA,MLP,5615,1404,ok,,0.2192606815735254,0.18772067470101922,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.9598114999971585
+3517,ipums_la_97-small,3,18,MinMaxScaler,PCA,MLP,5615,1404,ok,,0.24481839257963933,0.21715127575244292,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.1494726999953855
+3517,ipums_la_97-small,4,18,MinMaxScaler,PCA,MLP,5616,1403,ok,,0.26018437139131945,0.24237825717840483,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.922172100006719
+3517,ipums_la_97-small,0,19,MinMaxScaler,PCA,DecisionTree,5615,1404,ok,,0.22742564299672874,0.219342570549234,,0.08697160000156146
+3517,ipums_la_97-small,1,19,MinMaxScaler,PCA,DecisionTree,5615,1404,ok,,0.2167731068265698,0.21062371334262797,,0.08886509999865666
+3517,ipums_la_97-small,2,19,MinMaxScaler,PCA,DecisionTree,5615,1404,ok,,0.22963475249205223,0.21583766403655746,,0.09029870000085793
+3517,ipums_la_97-small,3,19,MinMaxScaler,PCA,DecisionTree,5615,1404,ok,,0.2284715657301069,0.22357445763289552,,0.09303239999280777
+3517,ipums_la_97-small,4,19,MinMaxScaler,PCA,DecisionTree,5616,1403,ok,,0.23988923309664856,0.23501154255772158,,0.08494590000191238
+3517,ipums_la_97-small,0,20,MinMaxScaler,SelectKBest,RandomForest,5615,1404,ok,,0.2669211863776947,0.2696975409083616,Features [0] are constant. | invalid value encountered in divide,0.8594214000040665
+3517,ipums_la_97-small,1,20,MinMaxScaler,SelectKBest,RandomForest,5615,1404,ok,,0.2810085761342668,0.27602864057431753,Features [0] are constant. | invalid value encountered in divide,0.8341121000121348
+3517,ipums_la_97-small,2,20,MinMaxScaler,SelectKBest,RandomForest,5615,1404,ok,,0.25043223798125946,0.24125056931714442,Features [0] are constant. | invalid value encountered in divide,0.7762579999980517
+3517,ipums_la_97-small,3,20,MinMaxScaler,SelectKBest,RandomForest,5615,1404,ok,,0.24698046809901297,0.23700587636791198,Features [0] are constant. | invalid value encountered in divide,0.8143803999992087
+3517,ipums_la_97-small,4,20,MinMaxScaler,SelectKBest,RandomForest,5616,1403,ok,,0.22801513073336874,0.21982088755051432,Features [0] are constant. | invalid value encountered in divide,0.7411666000116384
+3517,ipums_la_97-small,0,21,MinMaxScaler,SelectKBest,SVM,5615,1404,ok,,0.22091134487502867,0.17327000815795043,Features [0] are constant. | invalid value encountered in divide,2.914171799988253
+3517,ipums_la_97-small,1,21,MinMaxScaler,SelectKBest,SVM,5615,1404,ok,,0.2386926911942885,0.1782952616684791,Features [0] are constant. | invalid value encountered in divide,3.870161200000439
+3517,ipums_la_97-small,2,21,MinMaxScaler,SelectKBest,SVM,5615,1404,ok,,0.23985674673447266,0.1861023958224438,Features [0] are constant. | invalid value encountered in divide,2.974611500001629
+3517,ipums_la_97-small,3,21,MinMaxScaler,SelectKBest,SVM,5615,1404,ok,,0.24248094721026625,0.18467597808566716,Features [0] are constant. | invalid value encountered in divide,4.444000399991637
+3517,ipums_la_97-small,4,21,MinMaxScaler,SelectKBest,SVM,5616,1403,ok,,0.24478886930076096,0.19427130192558087,Features [0] are constant. | invalid value encountered in divide,3.0985748000093736
+3517,ipums_la_97-small,0,22,MinMaxScaler,SelectKBest,kNN,5615,1404,ok,,0.24097815332551098,0.24229759056128924,Features [0] are constant. | invalid value encountered in divide,0.06019790000573266
+3517,ipums_la_97-small,1,22,MinMaxScaler,SelectKBest,kNN,5615,1404,ok,,0.2682163342141653,0.265648485223339,Features [0] are constant. | invalid value encountered in divide,0.06142179999733344
+3517,ipums_la_97-small,2,22,MinMaxScaler,SelectKBest,kNN,5615,1404,ok,,0.2368244528008561,0.23314423196805856,Features [0] are constant. | invalid value encountered in divide,0.06033959999331273
+3517,ipums_la_97-small,3,22,MinMaxScaler,SelectKBest,kNN,5615,1404,ok,,0.21971210366079083,0.2141985883748028,Features [0] are constant. | invalid value encountered in divide,0.07437480000953656
+3517,ipums_la_97-small,4,22,MinMaxScaler,SelectKBest,kNN,5616,1403,ok,,0.21813421891346096,0.21568214454198434,Features [0] are constant. | invalid value encountered in divide,0.08168960000330117
+3517,ipums_la_97-small,0,23,MinMaxScaler,SelectKBest,MLP,5615,1404,ok,,0.25585913033152863,0.22214969004597035,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.182995899987873
+3517,ipums_la_97-small,1,23,MinMaxScaler,SelectKBest,MLP,5615,1404,ok,,0.2770828617513117,0.24091109875330757,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,7.373623999999836
+3517,ipums_la_97-small,2,23,MinMaxScaler,SelectKBest,MLP,5615,1404,ok,,0.26133103787605105,0.2173365673800162,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.025135899995803
+3517,ipums_la_97-small,3,23,MinMaxScaler,SelectKBest,MLP,5615,1404,ok,,0.26105537725283845,0.22050761048795423,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.798948800002108
+3517,ipums_la_97-small,4,23,MinMaxScaler,SelectKBest,MLP,5616,1403,ok,,0.24481564990479066,0.20022644832841408,Features [0] are constant. | invalid value encountered in divide,6.177779699995881
+3517,ipums_la_97-small,0,24,MinMaxScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.23632757433251805,0.22404693237100995,Features [0] are constant. | invalid value encountered in divide,0.01622589999169577
+3517,ipums_la_97-small,1,24,MinMaxScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.2827937344303578,0.2651345458446441,Features [0] are constant. | invalid value encountered in divide,0.016618099994957447
+3517,ipums_la_97-small,2,24,MinMaxScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.2500960093758926,0.2282114925725401,Features [0] are constant. | invalid value encountered in divide,0.015841400003409944
+3517,ipums_la_97-small,3,24,MinMaxScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.26359644343004507,0.24115649890178462,Features [0] are constant. | invalid value encountered in divide,0.02144709999265615
+3517,ipums_la_97-small,4,24,MinMaxScaler,SelectKBest,DecisionTree,5616,1403,ok,,0.2545963192102002,0.23947679183054427,Features [0] are constant. | invalid value encountered in divide,0.015507300005992875
+3517,ipums_la_97-small,0,25,MinMaxScaler,None,RandomForest,5615,1404,ok,,0.317975260377624,0.3136468249296264,,1.5433398000022862
+3517,ipums_la_97-small,1,25,MinMaxScaler,None,RandomForest,5615,1404,ok,,0.3321690619850155,0.32044818855656554,,1.6975667999940924
+3517,ipums_la_97-small,2,25,MinMaxScaler,None,RandomForest,5615,1404,ok,,0.33202582917603696,0.32379598404347565,,1.6520808999921428
+3517,ipums_la_97-small,3,25,MinMaxScaler,None,RandomForest,5615,1404,ok,,0.32587755282521236,0.3115618530554122,,1.5969525999971665
+3517,ipums_la_97-small,4,25,MinMaxScaler,None,RandomForest,5616,1403,ok,,0.31989348829518993,0.30882996778095045,,1.7128998999978648
+3517,ipums_la_97-small,0,26,MinMaxScaler,None,SVM,5615,1404,ok,,0.2278111119056681,0.17976718145631587,,5.735750799998641
+3517,ipums_la_97-small,1,26,MinMaxScaler,None,SVM,5615,1404,ok,,0.24507590484962521,0.1918919570618154,,7.383043599998928
+3517,ipums_la_97-small,2,26,MinMaxScaler,None,SVM,5615,1404,ok,,0.2492474715720357,0.19488254261865573,,5.681410000004689
+3517,ipums_la_97-small,3,26,MinMaxScaler,None,SVM,5615,1404,ok,,0.24932644659578473,0.20121772043203565,,6.093910700001288
+3517,ipums_la_97-small,4,26,MinMaxScaler,None,SVM,5616,1403,ok,,0.2582749525070563,0.20872396178623528,,6.474043700000038
+3517,ipums_la_97-small,0,27,MinMaxScaler,None,kNN,5615,1404,ok,,0.2554556619721666,0.2564844511716823,,0.12279720000515226
+3517,ipums_la_97-small,1,27,MinMaxScaler,None,kNN,5615,1404,ok,,0.23798195636100683,0.2299405397620668,,0.07139969999843743
+3517,ipums_la_97-small,2,27,MinMaxScaler,None,kNN,5615,1404,ok,,0.21473905933987414,0.20784445134485727,,0.07737369999813382
+3517,ipums_la_97-small,3,27,MinMaxScaler,None,kNN,5615,1404,ok,,0.23486136961572845,0.23304959663082653,,0.07989850000012666
+3517,ipums_la_97-small,4,27,MinMaxScaler,None,kNN,5616,1403,ok,,0.2435508149204401,0.24181112936555027,,0.07624049999867566
+3517,ipums_la_97-small,0,28,MinMaxScaler,None,MLP,5615,1404,ok,,0.31074285284498854,0.3004801770914435,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.216131599998334
+3517,ipums_la_97-small,1,28,MinMaxScaler,None,MLP,5615,1404,ok,,0.3320728911326774,0.3083014725098596,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.37962009999319
+3517,ipums_la_97-small,2,28,MinMaxScaler,None,MLP,5615,1404,ok,,0.33831026813790044,0.3349352435627181,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.177391000004718
+3517,ipums_la_97-small,3,28,MinMaxScaler,None,MLP,5615,1404,ok,,0.3175224047389525,0.29237346208716775,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.583996299988939
+3517,ipums_la_97-small,4,28,MinMaxScaler,None,MLP,5616,1403,ok,,0.30194309647614537,0.28570576195509956,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.282272899989039
+3517,ipums_la_97-small,0,29,MinMaxScaler,None,DecisionTree,5615,1404,ok,,0.309410402763553,0.30532035318209416,,0.09048470000561792
+3517,ipums_la_97-small,1,29,MinMaxScaler,None,DecisionTree,5615,1404,ok,,0.32373222374145993,0.3218909086762108,,0.0910202999948524
+3517,ipums_la_97-small,2,29,MinMaxScaler,None,DecisionTree,5615,1404,ok,,0.31261215836104517,0.3109947727904021,,0.08107499999459833
+3517,ipums_la_97-small,3,29,MinMaxScaler,None,DecisionTree,5615,1404,ok,,0.30353429073078086,0.2961803539713521,,0.08827779999410268
+3517,ipums_la_97-small,4,29,MinMaxScaler,None,DecisionTree,5616,1403,ok,,0.3244543502795023,0.32135841221313804,,0.07807050000701565
+3517,ipums_la_97-small,0,30,RobustScaler,PCA,RandomForest,5615,1404,ok,,0.32522759707849036,0.3244957862870307,,2.8202777999977116
+3517,ipums_la_97-small,1,30,RobustScaler,PCA,RandomForest,5615,1404,ok,,0.2882622262122593,0.27603169890837653,,2.582534900007886
+3517,ipums_la_97-small,2,30,RobustScaler,PCA,RandomForest,5615,1404,ok,,0.32812597720833037,0.32231085389419456,,2.5534274999954505
+3517,ipums_la_97-small,3,30,RobustScaler,PCA,RandomForest,5615,1404,ok,,0.32486894809365696,0.31792046544393393,,2.793374799992307
+3517,ipums_la_97-small,4,30,RobustScaler,PCA,RandomForest,5616,1403,ok,,0.3080876271408599,0.2975854412658668,,2.6227692999964347
+3517,ipums_la_97-small,0,31,RobustScaler,PCA,SVM,5615,1404,ok,,0.2394336471702083,0.17954287854987977,,2.705385399996885
+3517,ipums_la_97-small,1,31,RobustScaler,PCA,SVM,5615,1404,ok,,0.2476549599798324,0.18640904725902369,,2.8018474000127753
+3517,ipums_la_97-small,2,31,RobustScaler,PCA,SVM,5615,1404,ok,,0.23801746549442238,0.1790369163892212,,3.0508507000049576
+3517,ipums_la_97-small,3,31,RobustScaler,PCA,SVM,5615,1404,ok,,0.2545827137424951,0.19260021119523424,,2.7943156999972416
+3517,ipums_la_97-small,4,31,RobustScaler,PCA,SVM,5616,1403,ok,,0.2448319482432148,0.1846664695523796,,2.7323657000088133
+3517,ipums_la_97-small,0,32,RobustScaler,PCA,kNN,5615,1404,ok,,0.27927595519044235,0.27841925541519413,,0.059881199995288625
+3517,ipums_la_97-small,1,32,RobustScaler,PCA,kNN,5615,1404,ok,,0.28169455235643037,0.2810966153705254,,0.06643179999082349
+3517,ipums_la_97-small,2,32,RobustScaler,PCA,kNN,5615,1404,ok,,0.2750001922500706,0.2730519250414528,,0.06354889999784064
+3517,ipums_la_97-small,3,32,RobustScaler,PCA,kNN,5615,1404,ok,,0.2700315577163522,0.26463347744288857,,0.06518360000336543
+3517,ipums_la_97-small,4,32,RobustScaler,PCA,kNN,5616,1403,ok,,0.28064565705062994,0.2745605362761561,,0.061436799995135516
+3517,ipums_la_97-small,0,33,RobustScaler,PCA,MLP,5615,1404,ok,,0.29014592999955424,0.2712678309971963,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.503425600007176
+3517,ipums_la_97-small,1,33,RobustScaler,PCA,MLP,5615,1404,ok,,0.30865487276431947,0.2938117491487454,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.488169400006882
+3517,ipums_la_97-small,2,33,RobustScaler,PCA,MLP,5615,1404,ok,,0.30892940387372364,0.2907392610277178,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.482165700013866
+3517,ipums_la_97-small,3,33,RobustScaler,PCA,MLP,5615,1404,ok,,0.3032057543469039,0.2874622628422695,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.866548299993156
+3517,ipums_la_97-small,4,33,RobustScaler,PCA,MLP,5616,1403,ok,,0.30745789917534605,0.294602260368109,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.830441199999768
+3517,ipums_la_97-small,0,34,RobustScaler,PCA,DecisionTree,5615,1404,ok,,0.2939503862367854,0.286596426123791,,0.09105920000001788
+3517,ipums_la_97-small,1,34,RobustScaler,PCA,DecisionTree,5615,1404,ok,,0.28350189671927806,0.27958118493365797,,0.08259989999351092
+3517,ipums_la_97-small,2,34,RobustScaler,PCA,DecisionTree,5615,1404,ok,,0.2898618717143286,0.27093341140194305,,0.13123679999262094
+3517,ipums_la_97-small,3,34,RobustScaler,PCA,DecisionTree,5615,1404,ok,,0.2950692302558334,0.28927906508735296,,0.08839580000494607
+3517,ipums_la_97-small,4,34,RobustScaler,PCA,DecisionTree,5616,1403,ok,,0.30292790455254043,0.2927874895406721,,0.09019860000989866
+3517,ipums_la_97-small,0,35,RobustScaler,SelectKBest,RandomForest,5615,1404,ok,,0.26863444606834663,0.2712757179499294,Features [0] are constant. | invalid value encountered in divide,0.9806531999929575
+3517,ipums_la_97-small,1,35,RobustScaler,SelectKBest,RandomForest,5615,1404,ok,,0.2843503725896351,0.27867169934179853,Features [0] are constant. | invalid value encountered in divide,0.759692499996163
+3517,ipums_la_97-small,2,35,RobustScaler,SelectKBest,RandomForest,5615,1404,ok,,0.254392723510304,0.2449369058084459,Features [0] are constant. | invalid value encountered in divide,0.8360011000040686
+3517,ipums_la_97-small,3,35,RobustScaler,SelectKBest,RandomForest,5615,1404,ok,,0.24820109151078945,0.23822887935083886,Features [0] are constant. | invalid value encountered in divide,0.78483459999552
+3517,ipums_la_97-small,4,35,RobustScaler,SelectKBest,RandomForest,5616,1403,ok,,0.2268799266517361,0.21926234368952935,Features [0] are constant. | invalid value encountered in divide,0.7591138999996474
+3517,ipums_la_97-small,0,36,RobustScaler,SelectKBest,SVM,5615,1404,ok,,0.21121383862823478,0.1494313591313372,Features [0] are constant. | invalid value encountered in divide,3.0187231000018073
+3517,ipums_la_97-small,1,36,RobustScaler,SelectKBest,SVM,5615,1404,ok,,0.2263429602319279,0.16274494986812113,Features [0] are constant. | invalid value encountered in divide,2.7174715000001015
+3517,ipums_la_97-small,2,36,RobustScaler,SelectKBest,SVM,5615,1404,ok,,0.20720477248377134,0.15370499225965112,Features [0] are constant. | invalid value encountered in divide,2.827178100007586
+3517,ipums_la_97-small,3,36,RobustScaler,SelectKBest,SVM,5615,1404,ok,,0.22325702188091734,0.16695175807806176,Features [0] are constant. | invalid value encountered in divide,2.8922740000125486
+3517,ipums_la_97-small,4,36,RobustScaler,SelectKBest,SVM,5616,1403,ok,,0.2404590476498047,0.18617267016536188,Features [0] are constant. | invalid value encountered in divide,2.8702582999976585
+3517,ipums_la_97-small,0,37,RobustScaler,SelectKBest,kNN,5615,1404,ok,,0.2445004396588492,0.24561595013205823,Features [0] are constant. | invalid value encountered in divide,0.07944030000362545
+3517,ipums_la_97-small,1,37,RobustScaler,SelectKBest,kNN,5615,1404,ok,,0.26059506332411186,0.2571344699923192,Features [0] are constant. | invalid value encountered in divide,0.08164069999475032
+3517,ipums_la_97-small,2,37,RobustScaler,SelectKBest,kNN,5615,1404,ok,,0.23777214305671585,0.23434735079443456,Features [0] are constant. | invalid value encountered in divide,0.06245589999889489
+3517,ipums_la_97-small,3,37,RobustScaler,SelectKBest,kNN,5615,1404,ok,,0.22343747150699178,0.21686342866016942,Features [0] are constant. | invalid value encountered in divide,0.06893300000228919
+3517,ipums_la_97-small,4,37,RobustScaler,SelectKBest,kNN,5616,1403,ok,,0.21430607786292502,0.21249125345206277,Features [0] are constant. | invalid value encountered in divide,0.05226210001274012
+3517,ipums_la_97-small,0,38,RobustScaler,SelectKBest,MLP,5615,1404,ok,,0.27243341330756937,0.24468500181515224,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,10.550329399993643
+3517,ipums_la_97-small,1,38,RobustScaler,SelectKBest,MLP,5615,1404,ok,,0.2837977131941441,0.2480961758250666,Features [0] are constant. | invalid value encountered in divide,6.316143000003649
+3517,ipums_la_97-small,2,38,RobustScaler,SelectKBest,MLP,5615,1404,ok,,0.2654030315940314,0.22534828597174672,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.116116100005456
+3517,ipums_la_97-small,3,38,RobustScaler,SelectKBest,MLP,5615,1404,ok,,0.27515578116237427,0.23568539579359404,Features [0] are constant. | invalid value encountered in divide,4.193230000004405
+3517,ipums_la_97-small,4,38,RobustScaler,SelectKBest,MLP,5616,1403,ok,,0.2670867072657934,0.23772945116002508,Features [0] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.704303499995149
+3517,ipums_la_97-small,0,39,RobustScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.2356253271415068,0.22312461502964687,Features [0] are constant. | invalid value encountered in divide,0.03526109999802429
+3517,ipums_la_97-small,1,39,RobustScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.2827937344303578,0.2651620819910593,Features [0] are constant. | invalid value encountered in divide,0.017974099988350645
+3517,ipums_la_97-small,2,39,RobustScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.2500960093758926,0.2282114925725401,Features [0] are constant. | invalid value encountered in divide,0.019235800005844794
+3517,ipums_la_97-small,3,39,RobustScaler,SelectKBest,DecisionTree,5615,1404,ok,,0.26327427848159146,0.2409261862226633,Features [0] are constant. | invalid value encountered in divide,0.018214900002931245
+3517,ipums_la_97-small,4,39,RobustScaler,SelectKBest,DecisionTree,5616,1403,ok,,0.2545963192102002,0.23947679183054427,Features [0] are constant. | invalid value encountered in divide,0.01565080000727903
+3517,ipums_la_97-small,0,40,RobustScaler,None,RandomForest,5615,1404,ok,,0.3215129232209341,0.3170153302109471,,1.705203099991195
+3517,ipums_la_97-small,1,40,RobustScaler,None,RandomForest,5615,1404,ok,,0.3284218631224486,0.3160172348699706,,1.8813918999949237
+3517,ipums_la_97-small,2,40,RobustScaler,None,RandomForest,5615,1404,ok,,0.33267430829013844,0.3244116198285459,,1.713996100006625
+3517,ipums_la_97-small,3,40,RobustScaler,None,RandomForest,5615,1404,ok,,0.3283092376105217,0.31492789232994645,,1.666581400000723
+3517,ipums_la_97-small,4,40,RobustScaler,None,RandomForest,5616,1403,ok,,0.32000635756849877,0.30891085482573766,,1.5934121000027517
+3517,ipums_la_97-small,0,41,RobustScaler,None,SVM,5615,1404,ok,,0.27386048019346737,0.22677137758602425,,6.411972499990952
+3517,ipums_la_97-small,1,41,RobustScaler,None,SVM,5615,1404,ok,,0.290462328888379,0.23917009264886777,,6.784630499998457
+3517,ipums_la_97-small,2,41,RobustScaler,None,SVM,5615,1404,ok,,0.29397129129215255,0.2417125959485671,,5.475587599998107
+3517,ipums_la_97-small,3,41,RobustScaler,None,SVM,5615,1404,ok,,0.2835030395610979,0.22941823420481322,,6.1448107000032905
+3517,ipums_la_97-small,4,41,RobustScaler,None,SVM,5616,1403,ok,,0.2926354718013697,0.23788607590381705,,5.2667857999913394
+3517,ipums_la_97-small,0,42,RobustScaler,None,kNN,5615,1404,ok,,0.2560049752110988,0.2534652660842464,,0.08157589999609627
+3517,ipums_la_97-small,1,42,RobustScaler,None,kNN,5615,1404,ok,,0.2510999097752467,0.24594486619306835,,0.07950440001150128
+3517,ipums_la_97-small,2,42,RobustScaler,None,kNN,5615,1404,ok,,0.2529513219527958,0.24533023665140788,,0.07677879999391735
+3517,ipums_la_97-small,3,42,RobustScaler,None,kNN,5615,1404,ok,,0.2436340314960101,0.23597459836216422,,0.08028429999831133
+3517,ipums_la_97-small,4,42,RobustScaler,None,kNN,5616,1403,ok,,0.27131690303044576,0.2646303679829541,,0.07632579999335576
+3517,ipums_la_97-small,0,43,RobustScaler,None,MLP,5615,1404,ok,,0.32913244998377716,0.33095144270983345,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.298938199994154
+3517,ipums_la_97-small,1,43,RobustScaler,None,MLP,5615,1404,ok,,0.31934383016881274,0.3164188007894546,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.848152600010508
+3517,ipums_la_97-small,2,43,RobustScaler,None,MLP,5615,1404,ok,,0.3124863174032788,0.30654718996301183,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.350345100014238
+3517,ipums_la_97-small,3,43,RobustScaler,None,MLP,5615,1404,ok,,0.3050274641108413,0.29686844882106833,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.858092800001032
+3517,ipums_la_97-small,4,43,RobustScaler,None,MLP,5616,1403,ok,,0.3207294447486292,0.31646581184203915,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.298252499997034
+3517,ipums_la_97-small,0,44,RobustScaler,None,DecisionTree,5615,1404,ok,,0.3089001986819203,0.3048173387000509,,0.08799930001259781
+3517,ipums_la_97-small,1,44,RobustScaler,None,DecisionTree,5615,1404,ok,,0.3234092263254393,0.3215762809349771,,0.08513289999973495
+3517,ipums_la_97-small,2,44,RobustScaler,None,DecisionTree,5615,1404,ok,,0.3127972910263253,0.311111911274982,,0.08425960000022314
+3517,ipums_la_97-small,3,44,RobustScaler,None,DecisionTree,5615,1404,ok,,0.30415929073078085,0.2966953650390299,,0.08979199999885168
+3517,ipums_la_97-small,4,44,RobustScaler,None,DecisionTree,5616,1403,ok,,0.3244543502795023,0.32135841221313804,,0.08784929999092128
+3517,ipums_la_97-small,0,45,None,PCA,RandomForest,5615,1404,ok,,0.22945435422946714,0.22489396492414598,,2.897457500002929
+3517,ipums_la_97-small,1,45,None,PCA,RandomForest,5615,1404,ok,,0.24693043094050224,0.2397597456206107,,3.4084812000073725
+3517,ipums_la_97-small,2,45,None,PCA,RandomForest,5615,1404,ok,,0.23077998802570124,0.2240641461480326,,2.619975000008708
+3517,ipums_la_97-small,3,45,None,PCA,RandomForest,5615,1404,ok,,0.21779835073176013,0.20591175921952673,,2.8498315999895567
+3517,ipums_la_97-small,4,45,None,PCA,RandomForest,5616,1403,ok,,0.23738944690662994,0.23001618869140478,,2.5436813999986043
+3517,ipums_la_97-small,0,46,None,PCA,SVM,5615,1404,ok,,0.20099128818471185,0.16025318318434828,,3.4678955000126734
+3517,ipums_la_97-small,1,46,None,PCA,SVM,5615,1404,ok,,0.19752548020135113,0.1471889782581483,,4.47141259998898
+3517,ipums_la_97-small,2,46,None,PCA,SVM,5615,1404,ok,,0.22017429916422193,0.17718950361015406,,3.1841419999982463
+3517,ipums_la_97-small,3,46,None,PCA,SVM,5615,1404,ok,,0.20191458450689886,0.15688539205474816,,3.38554540000041
+3517,ipums_la_97-small,4,46,None,PCA,SVM,5616,1403,ok,,0.20931040582178997,0.16157459034546334,,3.4149797999998555
+3517,ipums_la_97-small,0,47,None,PCA,kNN,5615,1404,ok,,0.19290421153225823,0.19344251401859242,,0.08616140000231098
+3517,ipums_la_97-small,1,47,None,PCA,kNN,5615,1404,ok,,0.19473621339874836,0.19397105887338972,,0.05047740000009071
+3517,ipums_la_97-small,2,47,None,PCA,kNN,5615,1404,ok,,0.18767373202782392,0.18648324219434637,,0.05457839999871794
+3517,ipums_la_97-small,3,47,None,PCA,kNN,5615,1404,ok,,0.191630681056502,0.19073079438684967,,0.04915999999502674
+3517,ipums_la_97-small,4,47,None,PCA,kNN,5616,1403,ok,,0.1717931686542126,0.16802264005902356,,0.05195350000576582
+3517,ipums_la_97-small,0,48,None,PCA,MLP,5615,1404,ok,,0.23194855262960448,0.2079623614139122,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.748740100010764
+3517,ipums_la_97-small,1,48,None,PCA,MLP,5615,1404,ok,,0.2233228431620425,0.2091882229683527,,6.449862599998596
+3517,ipums_la_97-small,2,48,None,PCA,MLP,5615,1404,ok,,0.20635591265146677,0.18657405628426443,,3.980427399990731
+3517,ipums_la_97-small,3,48,None,PCA,MLP,5615,1404,ok,,0.21705993874248197,0.20031157911638975,,5.07109159999527
+3517,ipums_la_97-small,4,48,None,PCA,MLP,5616,1403,ok,,0.2238431537650068,0.20650443190305698,,5.079072199994698
+3517,ipums_la_97-small,0,49,None,PCA,DecisionTree,5615,1404,ok,,0.2181292929227791,0.2082459134725163,,0.08670109999366105
+3517,ipums_la_97-small,1,49,None,PCA,DecisionTree,5615,1404,ok,,0.23124221494149427,0.23071726288611544,,0.08268409999436699
+3517,ipums_la_97-small,2,49,None,PCA,DecisionTree,5615,1404,ok,,0.2158995999215878,0.20734719375801125,,0.10000640001089778
+3517,ipums_la_97-small,3,49,None,PCA,DecisionTree,5615,1404,ok,,0.2088504568199609,0.20436125769581115,,0.09786619999795221
+3517,ipums_la_97-small,4,49,None,PCA,DecisionTree,5616,1403,ok,,0.19682592029578194,0.19060769753504997,,0.08441460000176448
+3517,ipums_la_97-small,0,50,None,SelectKBest,RandomForest,5615,1404,ok,,0.26662428158323137,0.26927962500071273,Features [0] are constant. | invalid value encountered in divide,0.8392707000020891
+3517,ipums_la_97-small,1,50,None,SelectKBest,RandomForest,5615,1404,ok,,0.2828997197478532,0.2780245723355014,Features [0] are constant. | invalid value encountered in divide,0.762754399998812
+3517,ipums_la_97-small,2,50,None,SelectKBest,RandomForest,5615,1404,ok,,0.2472466275905666,0.23742264176864825,Features [0] are constant. | invalid value encountered in divide,0.846835899996222
+3517,ipums_la_97-small,3,50,None,SelectKBest,RandomForest,5615,1404,ok,,0.24737669395515705,0.2376581026140823,Features [0] are constant. | invalid value encountered in divide,0.7541895999893313
+3517,ipums_la_97-small,4,50,None,SelectKBest,RandomForest,5616,1403,ok,,0.22719808762399013,0.21941750996568885,Features [0] are constant. | invalid value encountered in divide,0.7913308000133839
+3517,ipums_la_97-small,0,51,None,SelectKBest,SVM,5615,1404,ok,,0.2107227014517147,0.1571409639044487,Features [0] are constant. | invalid value encountered in divide,2.803077899996424
+3517,ipums_la_97-small,1,51,None,SelectKBest,SVM,5615,1404,ok,,0.22141082907922105,0.16783912716683763,Features [0] are constant. | invalid value encountered in divide,3.1545634000067366
+3517,ipums_la_97-small,2,51,None,SelectKBest,SVM,5615,1404,ok,,0.2107504569231739,0.1590300286395363,Features [0] are constant. | invalid value encountered in divide,2.9898084000014933
+3517,ipums_la_97-small,3,51,None,SelectKBest,SVM,5615,1404,ok,,0.22103342625710076,0.16799326973833045,Features [0] are constant. | invalid value encountered in divide,2.90128759999061
+3517,ipums_la_97-small,4,51,None,SelectKBest,SVM,5616,1403,ok,,0.20531756259204714,0.15479091104074938,Features [0] are constant. | invalid value encountered in divide,3.0141757000092184
+3517,ipums_la_97-small,0,52,None,SelectKBest,kNN,5615,1404,ok,,0.2422432709548124,0.24595423753342627,Features [0] are constant. | invalid value encountered in divide,0.0582457999989856
+3517,ipums_la_97-small,1,52,None,SelectKBest,kNN,5615,1404,ok,,0.24576471249090323,0.2450686828450714,Features [0] are constant. | invalid value encountered in divide,0.06777030001103412
+3517,ipums_la_97-small,2,52,None,SelectKBest,kNN,5615,1404,ok,,0.22728740586106283,0.22713015877868406,Features [0] are constant. | invalid value encountered in divide,0.06723939999938011
+3517,ipums_la_97-small,3,52,None,SelectKBest,kNN,5615,1404,ok,,0.2329742794155193,0.23143563213140328,Features [0] are constant. | invalid value encountered in divide,0.0588924999901792
+3517,ipums_la_97-small,4,52,None,SelectKBest,kNN,5616,1403,ok,,0.21787338957422378,0.21648902625605326,Features [0] are constant. | invalid value encountered in divide,0.05291280000528786
+3517,ipums_la_97-small,0,53,None,SelectKBest,MLP,5615,1404,ok,,0.26655455504647085,0.23953755607461294,Features [0] are constant. | invalid value encountered in divide,2.511048199987272
+3517,ipums_la_97-small,1,53,None,SelectKBest,MLP,5615,1404,ok,,0.24987175031598663,0.21198363858608593,Features [0] are constant. | invalid value encountered in divide,2.936310200006119
+3517,ipums_la_97-small,2,53,None,SelectKBest,MLP,5615,1404,ok,,0.2636275152609414,0.23613744344593052,Features [0] are constant. | invalid value encountered in divide,1.5034380000142846
+3517,ipums_la_97-small,3,53,None,SelectKBest,MLP,5615,1404,ok,,0.2618973066239767,0.2295067939759184,Features [0] are constant. | invalid value encountered in divide,2.505360800001654
+3517,ipums_la_97-small,4,53,None,SelectKBest,MLP,5616,1403,ok,,0.2415154818835573,0.19339793148896867,Features [0] are constant. | invalid value encountered in divide,3.729167799989227
+3517,ipums_la_97-small,0,54,None,SelectKBest,DecisionTree,5615,1404,ok,,0.23632757433251805,0.22404693237100995,Features [0] are constant. | invalid value encountered in divide,0.018430500000249594
+3517,ipums_la_97-small,1,54,None,SelectKBest,DecisionTree,5615,1404,ok,,0.2827937344303578,0.2651620819910593,Features [0] are constant. | invalid value encountered in divide,0.01828669999667909
+3517,ipums_la_97-small,2,54,None,SelectKBest,DecisionTree,5615,1404,ok,,0.2500960093758926,0.2282114925725401,Features [0] are constant. | invalid value encountered in divide,0.017561799992108718
+3517,ipums_la_97-small,3,54,None,SelectKBest,DecisionTree,5615,1404,ok,,0.26327427848159146,0.2409261862226633,Features [0] are constant. | invalid value encountered in divide,0.01686899999913294
+3517,ipums_la_97-small,4,54,None,SelectKBest,DecisionTree,5616,1403,ok,,0.2545963192102002,0.23947679183054427,Features [0] are constant. | invalid value encountered in divide,0.015354500006651506
+3517,ipums_la_97-small,0,55,None,None,RandomForest,5615,1404,ok,,0.32049251505766885,0.3161547053985263,,1.5722846999997273
+3517,ipums_la_97-small,1,55,None,None,RandomForest,5615,1404,ok,,0.3336644984592768,0.3218750510345454,,1.9044159000040963
+3517,ipums_la_97-small,2,55,None,None,RandomForest,5615,1404,ok,,0.3301535922175931,0.3203889671073402,,1.6830874000006588
+3517,ipums_la_97-small,3,55,None,None,RandomForest,5615,1404,ok,,0.32537952485891186,0.3113101082448574,,1.6016032000043197
+3517,ipums_la_97-small,4,55,None,None,RandomForest,5616,1403,ok,,0.32256138195286155,0.31163566538798976,,1.5341245000017807
+3517,ipums_la_97-small,0,56,None,None,SVM,5615,1404,ok,,0.1945939406690511,0.14440072013156485,,5.859641699993517
+3517,ipums_la_97-small,1,56,None,None,SVM,5615,1404,ok,,0.2026784757673158,0.14575314126939565,,7.730061299997033
+3517,ipums_la_97-small,2,56,None,None,SVM,5615,1404,ok,,0.20828114167769585,0.14997098598266081,,6.869356600000174
+3517,ipums_la_97-small,3,56,None,None,SVM,5615,1404,ok,,0.2122333263202188,0.15654926553115778,,6.796987399997306
+3517,ipums_la_97-small,4,56,None,None,SVM,5616,1403,ok,,0.21015095729013256,0.1549923171553088,,5.528372599990689
+3517,ipums_la_97-small,0,57,None,None,kNN,5615,1404,ok,,0.19499934671773844,0.19756641536505648,,0.07269870000891387
+3517,ipums_la_97-small,1,57,None,None,kNN,5615,1404,ok,,0.20279556119580563,0.20283824669403863,,0.08413469999504741
+3517,ipums_la_97-small,2,57,None,None,kNN,5615,1404,ok,,0.19567300254229641,0.19283066851224054,,0.07353999999759253
+3517,ipums_la_97-small,3,57,None,None,kNN,5615,1404,ok,,0.21115773717732073,0.21388315714746073,,0.07706020001205616
+3517,ipums_la_97-small,4,57,None,None,kNN,5616,1403,ok,,0.1914242700455135,0.18946416239710445,,0.07985330000519753
+3517,ipums_la_97-small,0,58,None,None,MLP,5615,1404,ok,,0.24591978047637147,0.21312318439461297,,4.1519506000040565
+3517,ipums_la_97-small,1,58,None,None,MLP,5615,1404,ok,,0.27817173137316764,0.2560474694624257,,4.960858999998891
+3517,ipums_la_97-small,2,58,None,None,MLP,5615,1404,ok,,0.24340309747710762,0.22054080590306976,,4.306329099999857
+3517,ipums_la_97-small,3,58,None,None,MLP,5615,1404,ok,,0.2629620733257495,0.24232178918412675,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.5978742000006605
+3517,ipums_la_97-small,4,58,None,None,MLP,5616,1403,ok,,0.29135456543334937,0.2609713939197725,,5.177479400008451
+3517,ipums_la_97-small,0,59,None,None,DecisionTree,5615,1404,ok,,0.30973256771200663,0.30557443040791527,,0.07336780001060106
+3517,ipums_la_97-small,1,59,None,None,DecisionTree,5615,1404,ok,,0.32373222374145993,0.32186167614732103,,0.08155589998932555
+3517,ipums_la_97-small,2,59,None,None,DecisionTree,5615,1404,ok,,0.31261215836104517,0.31090534714060264,,0.08453930000541732
+3517,ipums_la_97-small,3,59,None,None,DecisionTree,5615,1404,ok,,0.30415929073078085,0.2966953650390299,,0.08224820000759792
+3517,ipums_la_97-small,4,59,None,None,DecisionTree,5616,1403,ok,,0.3244543502795023,0.32135841221313804,,0.07703329999640118

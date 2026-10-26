@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,0,StandardScaler,PCA,RandomForest,4704,1176,ok,,0.9871562988001344,0.9863902240763465,,1.509561400001985
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,0,StandardScaler,PCA,RandomForest,4704,1176,ok,,0.9841591057344482,0.9867470223702476,,2.0805443999997806
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,0,StandardScaler,PCA,RandomForest,4704,1176,ok,,0.9867029218686071,0.9888351465261574,,1.1586061000125483
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,0,StandardScaler,PCA,RandomForest,4704,1176,ok,,0.994366134434836,0.9944610743210959,,1.0908551999891642
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,0,StandardScaler,PCA,RandomForest,4704,1176,ok,,0.9811977738515395,0.9849186478367904,,1.2278006999986246
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,1,StandardScaler,PCA,SVM,4704,1176,ok,,0.9954337899543378,0.9924856768473193,,0.3728164000058314
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,1,StandardScaler,PCA,SVM,4704,1176,ok,,0.9902251477593943,0.9871091774424636,,0.35794820000592154
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,1,StandardScaler,PCA,SVM,4704,1176,ok,,0.9971503403832452,0.9958497071935998,,0.35744639999757055
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,1,StandardScaler,PCA,SVM,4704,1176,ok,,0.994479559095739,0.9925121051047876,,0.5360008999996353
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,1,StandardScaler,PCA,SVM,4704,1176,ok,,0.9883873629027415,0.9851562100565049,,0.32548559999850113
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,2,StandardScaler,PCA,kNN,4704,1176,ok,,0.9834697266204114,0.9844593049132597,,0.05439410000690259
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,2,StandardScaler,PCA,kNN,4704,1176,ok,,0.9880606455948922,0.9837368933046452,,0.03872879999107681
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,2,StandardScaler,PCA,kNN,4704,1176,ok,,0.9843024985501455,0.981838216910751,,0.0396755999972811
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,2,StandardScaler,PCA,kNN,4704,1176,ok,,0.9755560760221463,0.9773847858219004,,0.041118399996776134
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,2,StandardScaler,PCA,kNN,4704,1176,ok,,0.967241403268884,0.9634182431115468,,0.0339354000025196
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,3,StandardScaler,PCA,MLP,4704,1176,ok,,0.9986681887366818,0.9979695227117756,,4.010745899999165
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,3,StandardScaler,PCA,MLP,4704,1176,ok,,0.9988584474885845,0.9972777070768549,,4.240571700007422
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,3,StandardScaler,PCA,MLP,4704,1176,ok,,0.9956709956709956,0.9972505745068195,,4.123612600000342
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,3,StandardScaler,PCA,MLP,4704,1176,ok,,0.9980954544149169,0.9965294751694977,,3.8597227999998722
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,3,StandardScaler,PCA,MLP,4704,1176,ok,,0.9969558599695586,0.9965437046578755,,3.4658697999984724
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,4,StandardScaler,PCA,DecisionTree,4704,1176,ok,,0.9588522208385223,0.9619034067651908,,0.05076740001095459
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,4,StandardScaler,PCA,DecisionTree,4704,1176,ok,,0.9604706556761351,0.957545366163707,,0.0486533000075724
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,4,StandardScaler,PCA,DecisionTree,4704,1176,ok,,0.9667505600801686,0.966210516714792,,0.056934499996714294
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,4,StandardScaler,PCA,DecisionTree,4704,1176,ok,,0.9606763657047551,0.9634088544010851,,0.06242230000498239
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,4,StandardScaler,PCA,DecisionTree,4704,1176,ok,,0.964329830626865,0.958839094109971,,0.04982159999781288
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,5,StandardScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7709284627092846,0.7668253128419993,Features [21 30] are constant. | invalid value encountered in divide,0.3773012000019662
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,5,StandardScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7982812469113839,0.7933830772794566,Features [21 30] are constant. | invalid value encountered in divide,0.43216369999572635
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,5,StandardScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7822206804241446,0.7840471240327576,Features [21 30] are constant. | invalid value encountered in divide,0.40178909999667667
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,5,StandardScaler,SelectKBest,RandomForest,4704,1176,ok,,0.8114887946827517,0.8117844959755748,Features [21 30] are constant. | invalid value encountered in divide,0.839228800003184
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,5,StandardScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7717338047514221,0.7727460648276648,Features [21 30] are constant. | invalid value encountered in divide,0.44355369999539107
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,6,StandardScaler,SelectKBest,SVM,4704,1176,ok,,0.6139476961394769,0.6128499314982693,Features [21 30] are constant. | invalid value encountered in divide,0.7406374999991385
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,6,StandardScaler,SelectKBest,SVM,4704,1176,ok,,0.5780332681017613,0.5667865874921957,Features [21 30] are constant. | invalid value encountered in divide,0.7702715999912471
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,6,StandardScaler,SelectKBest,SVM,4704,1176,ok,,0.5872148223976995,0.5466695474244755,Features [21 30] are constant. | invalid value encountered in divide,0.8584438999969279
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,6,StandardScaler,SelectKBest,SVM,4704,1176,ok,,0.6139828065798768,0.5975392689958949,Features [21 30] are constant. | invalid value encountered in divide,1.275464299993473
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,6,StandardScaler,SelectKBest,SVM,4704,1176,ok,,0.5826895675335299,0.5494234937184662,Features [21 30] are constant. | invalid value encountered in divide,0.7588914999942062
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,7,StandardScaler,SelectKBest,kNN,4704,1176,ok,,0.7855536776769654,0.7856908577007302,Features [21 30] are constant. | invalid value encountered in divide,0.03863199999614153
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,7,StandardScaler,SelectKBest,kNN,4704,1176,ok,,0.8076039257546107,0.8011137133286145,Features [21 30] are constant. | invalid value encountered in divide,0.036229600009392016
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,7,StandardScaler,SelectKBest,kNN,4704,1176,ok,,0.8099686734663312,0.8073505895000522,Features [21 30] are constant. | invalid value encountered in divide,0.03435929999977816
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,7,StandardScaler,SelectKBest,kNN,4704,1176,ok,,0.821210959005171,0.8191712999576977,Features [21 30] are constant. | invalid value encountered in divide,0.0363571000052616
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,7,StandardScaler,SelectKBest,kNN,4704,1176,ok,,0.8204616723939046,0.8199675459978271,Features [21 30] are constant. | invalid value encountered in divide,0.041930200008209795
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,8,StandardScaler,SelectKBest,MLP,4704,1176,ok,,0.7779482693866254,0.7664994662658214,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.038744799996493
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,8,StandardScaler,SelectKBest,MLP,4704,1176,ok,,0.7865568601869972,0.7803826561643993,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.763828800001647
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,8,StandardScaler,SelectKBest,MLP,4704,1176,ok,,0.8023078410107249,0.8019654007983058,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.486652299994603
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,8,StandardScaler,SelectKBest,MLP,4704,1176,ok,,0.7562025679552088,0.757645798498126,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.885347999996156
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,8,StandardScaler,SelectKBest,MLP,4704,1176,ok,,0.7304461501936884,0.7401498179814107,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.109390700003132
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,9,StandardScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.6940318053331752,0.6941304102902236,Features [21 30] are constant. | invalid value encountered in divide,0.01803610000933986
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,9,StandardScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.7480010476585819,0.7446419936886038,Features [21 30] are constant. | invalid value encountered in divide,0.01172529999166727
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,9,StandardScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.6807721654715251,0.6838411578555412,Features [21 30] are constant. | invalid value encountered in divide,0.011739300010958686
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,9,StandardScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.7095950626753785,0.7163005893827332,Features [21 30] are constant. | invalid value encountered in divide,0.010794400004670024
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,9,StandardScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.7277305357496121,0.7301061549597659,Features [21 30] are constant. | invalid value encountered in divide,0.010315399995306507
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,10,StandardScaler,None,RandomForest,4704,1176,ok,,0.990580956334381,0.9928254677006944,,0.5252833999984432
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,10,StandardScaler,None,RandomForest,4704,1176,ok,,1.0,1.0,,0.5076762000098825
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,10,StandardScaler,None,RandomForest,4704,1176,ok,,0.9933930913429775,0.9936727065349821,,0.5397900999960257
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,10,StandardScaler,None,RandomForest,4704,1176,ok,,0.9992389649923896,0.9985472362578472,,0.4838631000020541
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,10,StandardScaler,None,RandomForest,4704,1176,ok,,0.9971451396884325,0.9966411607551046,,0.4984771000017645
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,11,StandardScaler,None,SVM,4704,1176,ok,,0.9950532724505327,0.9912413784810609,,0.6348055999987992
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,11,StandardScaler,None,SVM,4704,1176,ok,,0.9956240487062405,0.9918141161672006,,0.5935771000076784
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,11,StandardScaler,None,SVM,4704,1176,ok,,0.9941523927856503,0.9951262040090051,,0.613169200005359
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,11,StandardScaler,None,SVM,4704,1176,ok,,0.9951838817728978,0.9944041268024656,,0.559630500007188
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,11,StandardScaler,None,SVM,4704,1176,ok,,0.9914315029331829,0.9865239877806723,,0.7588261999917449
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,12,StandardScaler,None,kNN,4704,1176,ok,,0.9425369151396548,0.9441276363367717,,0.06074610000359826
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,12,StandardScaler,None,kNN,4704,1176,ok,,0.9692003202277175,0.961638703417643,,0.05071460000181105
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,12,StandardScaler,None,kNN,4704,1176,ok,,0.9680423586384818,0.9670255342377675,,0.05524090000835713
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,12,StandardScaler,None,kNN,4704,1176,ok,,0.9645112780815096,0.960085138104206,,0.05047269999340642
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,12,StandardScaler,None,kNN,4704,1176,ok,,0.957415970963691,0.9525197640026314,,0.05187569999543484
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,13,StandardScaler,None,MLP,4704,1176,ok,,0.9963134278202771,0.9964074966949218,,2.7320238999964204
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,13,StandardScaler,None,MLP,4704,1176,ok,,0.9988584474885845,0.9986689432685908,,2.3195114999980433
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,13,StandardScaler,None,MLP,4704,1176,ok,,1.0,1.0,,2.6600852999981726
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,13,StandardScaler,None,MLP,4704,1176,ok,,0.9978494623655915,0.9985411677300399,,2.8646643000101903
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,13,StandardScaler,None,MLP,4704,1176,ok,,0.9975236991261803,0.9973359217423751,,2.5853420000057667
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,14,StandardScaler,None,DecisionTree,4704,1176,ok,,0.9924365968886516,0.9929446287675286,,0.01922509999712929
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,14,StandardScaler,None,DecisionTree,4704,1176,ok,,0.9939586669038724,0.9936749701445245,,0.020053999993251637
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,14,StandardScaler,None,DecisionTree,4704,1176,ok,,0.9986689432685908,0.9986689432685908,,0.019201400005840696
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,14,StandardScaler,None,DecisionTree,4704,1176,ok,,0.9992389649923896,0.9985472362578472,,0.01877480000257492
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,14,StandardScaler,None,DecisionTree,4704,1176,ok,,0.9979061746960428,0.9973085141031816,,0.020671399994171225
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,15,MinMaxScaler,PCA,RandomForest,4704,1176,ok,,0.9870376959418055,0.9854019896006637,,1.1406191999994917
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,15,MinMaxScaler,PCA,RandomForest,4704,1176,ok,,0.9843493644863508,0.9866492654927054,,1.0698663999937708
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,15,MinMaxScaler,PCA,RandomForest,4704,1176,ok,,0.9977220956719818,0.9972076179498709,,1.0941375999973388
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,15,MinMaxScaler,PCA,RandomForest,4704,1176,ok,,0.9975236991261803,0.9966424624113319,,1.283417600003304
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,15,MinMaxScaler,PCA,RandomForest,4704,1176,ok,,0.9845446182617578,0.9850183954874135,,1.1589830999873811
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,16,MinMaxScaler,PCA,SVM,4704,1176,ok,,0.9865385755796714,0.982598583485176,,0.3489518999995198
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,16,MinMaxScaler,PCA,SVM,4704,1176,ok,,0.9785229990709442,0.9759855664538836,,0.363538100005826
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,16,MinMaxScaler,PCA,SVM,4704,1176,ok,,0.9910017848514432,0.9878584112981903,,0.3569606999953976
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,16,MinMaxScaler,PCA,SVM,4704,1176,ok,,0.992196454072908,0.9896391928515863,,0.5193958000018029
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,16,MinMaxScaler,PCA,SVM,4704,1176,ok,,0.9851539431534263,0.9802088451714074,,0.32536449999315664
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,17,MinMaxScaler,PCA,kNN,4704,1176,ok,,0.9539771491826287,0.953886827542632,,0.0376929000049131
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,17,MinMaxScaler,PCA,kNN,4704,1176,ok,,0.9576637213623514,0.9580093267466574,,0.04112460000033025
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,17,MinMaxScaler,PCA,kNN,4704,1176,ok,,0.9803577033559412,0.979696738520419,,0.04033789999084547
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,17,MinMaxScaler,PCA,kNN,4704,1176,ok,,0.9691987450523039,0.963560482254735,,0.03616439999314025
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,17,MinMaxScaler,PCA,kNN,4704,1176,ok,,0.9679832955489748,0.9608911207658714,,0.03498080000281334
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,18,MinMaxScaler,PCA,MLP,4704,1176,ok,,0.9958143074581431,0.9929604720768954,,3.2887427999958163
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,18,MinMaxScaler,PCA,MLP,4704,1176,ok,,0.993649805293641,0.9910236787518639,,4.584216800009017
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,18,MinMaxScaler,PCA,MLP,4704,1176,ok,,0.9977220956719818,0.9972076179498709,,3.737867100004223
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,18,MinMaxScaler,PCA,MLP,4704,1176,ok,,0.9910720862229546,0.9916570386923129,,4.877361300008488
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,18,MinMaxScaler,PCA,MLP,4704,1176,ok,,0.9907463229835436,0.9904648573828352,,4.402270699996734
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,19,MinMaxScaler,PCA,DecisionTree,4704,1176,ok,,0.9747178240328925,0.9708793434553235,,0.04549350000161212
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,19,MinMaxScaler,PCA,DecisionTree,4704,1176,ok,,0.9692225582636541,0.9707931978940166,,0.04994659998919815
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,19,MinMaxScaler,PCA,DecisionTree,4704,1176,ok,,0.9829714418187363,0.9798498833210583,,0.0465262000070652
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,19,MinMaxScaler,PCA,DecisionTree,4704,1176,ok,,0.9570796131130969,0.9634684544826714,,0.04847929999232292
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,19,MinMaxScaler,PCA,DecisionTree,4704,1176,ok,,0.9813072823803278,0.9792263750375105,,0.040505800003302284
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,20,MinMaxScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7709284627092846,0.7668253128419993,Features [21 30] are constant. | invalid value encountered in divide,0.3931907000078354
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,20,MinMaxScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7982812469113839,0.7933830772794566,Features [21 30] are constant. | invalid value encountered in divide,0.45410410000476986
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,20,MinMaxScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7778916760951402,0.7799944204756741,Features [21 30] are constant. | invalid value encountered in divide,0.48437569999077823
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,20,MinMaxScaler,SelectKBest,RandomForest,4704,1176,ok,,0.8114887946827517,0.8117844959755748,Features [21 30] are constant. | invalid value encountered in divide,0.3841902999993181
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,20,MinMaxScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7717338047514221,0.7727460648276648,Features [21 30] are constant. | invalid value encountered in divide,0.5014326999953482
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,21,MinMaxScaler,SelectKBest,SVM,4704,1176,ok,,0.5690639269406392,0.5317631493482845,Features [21 30] are constant. | invalid value encountered in divide,0.7759775000013178
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,21,MinMaxScaler,SelectKBest,SVM,4704,1176,ok,,0.5737265018086936,0.5475115746371136,Features [21 30] are constant. | invalid value encountered in divide,0.8482363000075566
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,21,MinMaxScaler,SelectKBest,SVM,4704,1176,ok,,0.5760128469115446,0.5375768505218766,Features [21 30] are constant. | invalid value encountered in divide,0.929720999993151
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,21,MinMaxScaler,SelectKBest,SVM,4704,1176,ok,,0.5825233466742901,0.5426118270880297,Features [21 30] are constant. | invalid value encountered in divide,0.772925800003577
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,21,MinMaxScaler,SelectKBest,SVM,4704,1176,ok,,0.5766321785965105,0.5376622548383203,Features [21 30] are constant. | invalid value encountered in divide,0.9909159999951953
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,22,MinMaxScaler,SelectKBest,kNN,4704,1176,ok,,0.7841502105200734,0.7848726918185837,Features [21 30] are constant. | invalid value encountered in divide,0.04134910000720993
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,22,MinMaxScaler,SelectKBest,kNN,4704,1176,ok,,0.8134080531340805,0.8042294652185097,Features [21 30] are constant. | invalid value encountered in divide,0.038778200003434904
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,22,MinMaxScaler,SelectKBest,kNN,4704,1176,ok,,0.807804171301829,0.8054894015191515,Features [21 30] are constant. | invalid value encountered in divide,0.04726999999547843
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,22,MinMaxScaler,SelectKBest,kNN,4704,1176,ok,,0.831963647177214,0.8269697324918329,Features [21 30] are constant. | invalid value encountered in divide,0.0373783000104595
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,22,MinMaxScaler,SelectKBest,kNN,4704,1176,ok,,0.8184437021479184,0.8189808767718182,Features [21 30] are constant. | invalid value encountered in divide,0.03646899999876041
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,23,MinMaxScaler,SelectKBest,MLP,4704,1176,ok,,0.6599952558856669,0.6635955180261637,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.875032099997043
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,23,MinMaxScaler,SelectKBest,MLP,4704,1176,ok,,0.6651569511158552,0.6667931233052324,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.905958500006818
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,23,MinMaxScaler,SelectKBest,MLP,4704,1176,ok,,0.6579760979124885,0.6536935897308357,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.09488250000868
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,23,MinMaxScaler,SelectKBest,MLP,4704,1176,ok,,0.6690868700006677,0.6749636083406575,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.959121799998684
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,23,MinMaxScaler,SelectKBest,MLP,4704,1176,ok,,0.6391119105073698,0.6361039692668484,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.768713900004514
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,24,MinMaxScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.6940318053331752,0.6941304102902236,Features [21 30] are constant. | invalid value encountered in divide,0.01072819999535568
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,24,MinMaxScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.7480010476585819,0.7446419936886038,Features [21 30] are constant. | invalid value encountered in divide,0.010717099998146296
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,24,MinMaxScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.6807721654715251,0.6838411578555412,Features [21 30] are constant. | invalid value encountered in divide,0.010876300002564676
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,24,MinMaxScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.7095950626753785,0.7163005893827332,Features [21 30] are constant. | invalid value encountered in divide,0.010654300000169314
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,24,MinMaxScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.7277305357496121,0.7301061549597659,Features [21 30] are constant. | invalid value encountered in divide,0.010903400005190633
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,25,MinMaxScaler,None,RandomForest,4704,1176,ok,,0.990580956334381,0.9928254677006944,,0.4640405000100145
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,25,MinMaxScaler,None,RandomForest,4704,1176,ok,,0.9988584474885845,0.9986689432685908,,0.47162280000338797
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,25,MinMaxScaler,None,RandomForest,4704,1176,ok,,0.9933930913429775,0.9936727065349821,,0.5180724999954691
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,25,MinMaxScaler,None,RandomForest,4704,1176,ok,,0.9992389649923896,0.9985472362578472,,0.45661090000066906
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,25,MinMaxScaler,None,RandomForest,4704,1176,ok,,0.9971451396884325,0.9966411607551046,,0.5344757999991998
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,26,MinMaxScaler,None,SVM,4704,1176,ok,,0.9948630136986302,0.990482236645799,,0.5782458999892697
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,26,MinMaxScaler,None,SVM,4704,1176,ok,,0.9944824961948249,0.9898136093720281,,0.5309866000025067
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,26,MinMaxScaler,None,SVM,4704,1176,ok,,0.9984813971146546,0.9978745836644473,,0.5472499000024982
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,26,MinMaxScaler,None,SVM,4704,1176,ok,,0.9979061746960428,0.9965287160680277,,0.5032267999922624
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,26,MinMaxScaler,None,SVM,4704,1176,ok,,0.9914315029331829,0.9865239877806723,,0.6204477999999654
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,27,MinMaxScaler,None,kNN,4704,1176,ok,,0.9537399434659708,0.9510427993234263,,0.05152049999742303
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,27,MinMaxScaler,None,kNN,4704,1176,ok,,0.9685109411136809,0.9585475930391043,,0.053157100002863444
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,27,MinMaxScaler,None,kNN,4704,1176,ok,,0.9726814281118661,0.9722988222180103,,0.05589990000589751
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,27,MinMaxScaler,None,kNN,4704,1176,ok,,0.9647611862629497,0.9574373707904499,,0.051252200006274506
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,27,MinMaxScaler,None,kNN,4704,1176,ok,,0.9597597044490883,0.9551674421620441,,0.05085970000072848
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,28,MinMaxScaler,None,MLP,4704,1176,ok,,0.9986681887366818,0.9971828773082608,,4.2069993000040995
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,28,MinMaxScaler,None,MLP,4704,1176,ok,,0.9992389649923896,0.9985402989674834,,5.613162199995713
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,28,MinMaxScaler,None,MLP,4704,1176,ok,,0.9992406985573273,0.9985411677300399,,5.240881699995953
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,28,MinMaxScaler,None,MLP,4704,1176,ok,,0.9972777070768549,0.9971832557142912,,3.716176500005531
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,28,MinMaxScaler,None,MLP,4704,1176,ok,,0.9975236991261803,0.9973359217423751,,4.0830191999993986
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,29,MinMaxScaler,None,DecisionTree,4704,1176,ok,,0.9924365968886516,0.9929446287675286,,0.019263499998487532
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,29,MinMaxScaler,None,DecisionTree,4704,1176,ok,,0.9939586669038724,0.9936749701445245,,0.018941799993626773
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,29,MinMaxScaler,None,DecisionTree,4704,1176,ok,,0.9986689432685908,0.9986689432685908,,0.02166110000689514
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,29,MinMaxScaler,None,DecisionTree,4704,1176,ok,,0.9992389649923896,0.9985472362578472,,0.018893799991928972
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,29,MinMaxScaler,None,DecisionTree,4704,1176,ok,,0.9979061746960428,0.9973085141031816,,0.018507000000681728
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,30,RobustScaler,PCA,RandomForest,4704,1176,ok,,0.982945897329459,0.9859022379458068,,1.2719573999929707
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,30,RobustScaler,PCA,RandomForest,4704,1176,ok,,0.989963233113918,0.9882202305815242,,1.2553996999922674
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,30,RobustScaler,PCA,RandomForest,4704,1176,ok,,0.9926337899003047,0.9930058415184274,,1.1940908999968087
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,30,RobustScaler,PCA,RandomForest,4704,1176,ok,,0.9919504620235825,0.9925090154104569,,1.1063020000001416
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,30,RobustScaler,PCA,RandomForest,4704,1176,ok,,0.9851163735504942,0.987035420247682,,1.0875593000091612
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,31,RobustScaler,PCA,SVM,4704,1176,ok,,0.9897729743620154,0.987070058186685,,0.36425769999914337
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,31,RobustScaler,PCA,SVM,4704,1176,ok,,0.9909861827670047,0.9863557086485972,,0.3618898000131594
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,31,RobustScaler,PCA,SVM,4704,1176,ok,,0.9939255884586181,0.989994662893083,,0.4017359999998007
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,31,RobustScaler,PCA,SVM,4704,1176,ok,,0.9919504620235825,0.9902807060246297,,0.2885392000025604
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,31,RobustScaler,PCA,SVM,4704,1176,ok,,0.9831359729074401,0.97867078170348,,0.3394687999971211
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,32,RobustScaler,PCA,kNN,4704,1176,ok,,0.9734082508055111,0.978026375827556,,0.04082840000046417
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,32,RobustScaler,PCA,kNN,4704,1176,ok,,0.9882509043467947,0.9857341187135171,,0.044251300001633354
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,32,RobustScaler,PCA,kNN,4704,1176,ok,,0.9920620346115682,0.9908812815723915,,0.04109529999550432
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,32,RobustScaler,PCA,kNN,4704,1176,ok,,0.9935253282371401,0.9897474341811692,,0.03885989999980666
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,32,RobustScaler,PCA,kNN,4704,1176,ok,,0.9820722335200528,0.9811984378377918,,0.04495450000104029
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,33,RobustScaler,PCA,MLP,4704,1176,ok,,0.9900101800786733,0.9923511991764274,,5.11868400000094
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,33,RobustScaler,PCA,MLP,4704,1176,ok,,0.9988584474885845,0.9972777070768549,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.223653299995931
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,33,RobustScaler,PCA,MLP,4704,1176,ok,,0.9992406985573273,0.9985411677300399,,4.275246899997001
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,33,RobustScaler,PCA,MLP,4704,1176,ok,,0.9994282447112636,0.9986420656058955,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.739109000001918
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,33,RobustScaler,PCA,MLP,4704,1176,ok,,0.986638443565715,0.9874989877495531,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.863367999991169
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,34,RobustScaler,PCA,DecisionTree,4704,1176,ok,,0.9698649904129356,0.9664756072558505,,0.054274200010695495
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,34,RobustScaler,PCA,DecisionTree,4704,1176,ok,,0.9735046156279031,0.9706108674349018,,0.05592369999794755
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,34,RobustScaler,PCA,DecisionTree,4704,1176,ok,,0.978887475470619,0.9826789977239789,,0.053471999999601394
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,34,RobustScaler,PCA,DecisionTree,4704,1176,ok,,0.979974492083981,0.9789233789814716,,0.048303799994755536
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,34,RobustScaler,PCA,DecisionTree,4704,1176,ok,,0.9758435538065182,0.9728785631899819,,0.05318039999110624
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,35,RobustScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7709284627092846,0.7668253128419993,Features [21 30] are constant. | invalid value encountered in divide,0.38894960000470746
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,35,RobustScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7982812469113839,0.7933830772794566,Features [21 30] are constant. | invalid value encountered in divide,0.5813515999907395
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,35,RobustScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7778916760951402,0.7799944204756741,Features [21 30] are constant. | invalid value encountered in divide,0.39873159999842755
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,35,RobustScaler,SelectKBest,RandomForest,4704,1176,ok,,0.8114887946827517,0.8117844959755748,Features [21 30] are constant. | invalid value encountered in divide,0.3718153999943752
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,35,RobustScaler,SelectKBest,RandomForest,4704,1176,ok,,0.7717338047514221,0.7727460648276648,Features [21 30] are constant. | invalid value encountered in divide,0.3720086999965133
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,36,RobustScaler,SelectKBest,SVM,4704,1176,ok,,0.615398110261124,0.613382838160648,Features [21 30] are constant. | invalid value encountered in divide,1.0740418000059435
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,36,RobustScaler,SelectKBest,SVM,4704,1176,ok,,0.5780332681017613,0.5668793639723195,Features [21 30] are constant. | invalid value encountered in divide,0.8463540999946417
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,36,RobustScaler,SelectKBest,SVM,4704,1176,ok,,0.5828465598955993,0.5431076859648288,Features [21 30] are constant. | invalid value encountered in divide,0.7590160999970976
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,36,RobustScaler,SelectKBest,SVM,4704,1176,ok,,0.5978422448919951,0.5695249159357967,Features [21 30] are constant. | invalid value encountered in divide,0.7382896000053734
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,36,RobustScaler,SelectKBest,SVM,4704,1176,ok,,0.5842077214166359,0.5501479624107707,Features [21 30] are constant. | invalid value encountered in divide,0.6983236000087345
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,37,RobustScaler,SelectKBest,kNN,4704,1176,ok,,0.7857216983929313,0.7822014400432304,Features [21 30] are constant. | invalid value encountered in divide,0.03524420000030659
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,37,RobustScaler,SelectKBest,kNN,4704,1176,ok,,0.8120762418707624,0.8022652571791274,Features [21 30] are constant. | invalid value encountered in divide,0.032075900002382696
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,37,RobustScaler,SelectKBest,kNN,4704,1176,ok,,0.811945629476897,0.8088795802132358,Features [21 30] are constant. | invalid value encountered in divide,0.03593669999099802
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,37,RobustScaler,SelectKBest,kNN,4704,1176,ok,,0.8310133324507297,0.827049700178049,Features [21 30] are constant. | invalid value encountered in divide,0.03187880000041332
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,37,RobustScaler,SelectKBest,kNN,4704,1176,ok,,0.8153428497870255,0.8160516114502842,Features [21 30] are constant. | invalid value encountered in divide,0.029232600005343556
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,38,RobustScaler,SelectKBest,MLP,4704,1176,ok,,0.7363483168277689,0.7346680070965572,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.7955036999919685
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,38,RobustScaler,SelectKBest,MLP,4704,1176,ok,,0.7368202573682026,0.7396608078939254,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.979504099988844
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,38,RobustScaler,SelectKBest,MLP,4704,1176,ok,,0.7498304549278031,0.7490443900822908,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.750247900010436
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,38,RobustScaler,SelectKBest,MLP,4704,1176,ok,,0.7930116159215953,0.790902219473648,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.025503100012429
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,38,RobustScaler,SelectKBest,MLP,4704,1176,ok,,0.6986002985861246,0.704706449943834,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.613602500001434
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,39,RobustScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.6940318053331752,0.6941304102902236,Features [21 30] are constant. | invalid value encountered in divide,0.009782699999050237
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,39,RobustScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.7480010476585819,0.7446419936886038,Features [21 30] are constant. | invalid value encountered in divide,0.011666400008834898
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,39,RobustScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.6807721654715251,0.6838411578555412,Features [21 30] are constant. | invalid value encountered in divide,0.010265199991408736
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,39,RobustScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.7095950626753785,0.7163005893827332,Features [21 30] are constant. | invalid value encountered in divide,0.012315300002228469
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,39,RobustScaler,SelectKBest,DecisionTree,4704,1176,ok,,0.7277305357496121,0.7301061549597659,Features [21 30] are constant. | invalid value encountered in divide,0.019466300000203773
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,40,RobustScaler,None,RandomForest,4704,1176,ok,,0.990580956334381,0.9928254677006944,,0.5554387000011047
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,40,RobustScaler,None,RandomForest,4704,1176,ok,,0.9988584474885845,0.9986689432685908,,0.4803403999976581
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,40,RobustScaler,None,RandomForest,4704,1176,ok,,0.9933930913429775,0.9936727065349821,,0.4488517999998294
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,40,RobustScaler,None,RandomForest,4704,1176,ok,,0.9992389649923896,0.9985472362578472,,0.5172009999951115
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,40,RobustScaler,None,RandomForest,4704,1176,ok,,0.9971451396884325,0.9966411607551046,,0.5948330999963218
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,41,RobustScaler,None,SVM,4704,1176,ok,,0.9971461187214613,0.9958485550001553,,0.46675900000263937
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,41,RobustScaler,None,SVM,4704,1176,ok,,0.9950532724505327,0.9911468108215855,,0.5584196000127122
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,41,RobustScaler,None,SVM,4704,1176,ok,,0.9962034927866363,0.9935317374296518,,0.7299059000069974
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,41,RobustScaler,None,SVM,4704,1176,ok,,0.9979061746960428,0.9965287160680277,,0.4898558000131743
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,41,RobustScaler,None,SVM,4704,1176,ok,,0.9902919084878249,0.9856571218082956,,0.594418400010909
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,42,RobustScaler,None,kNN,4704,1176,ok,,0.9843024175215955,0.982679205900447,,0.049169400008395314
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,42,RobustScaler,None,kNN,4704,1176,ok,,0.9895827156101129,0.9863998075255282,,0.05364529999496881
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,42,RobustScaler,None,kNN,4704,1176,ok,,0.9898975324470661,0.9908622933381946,,0.050176799995824695
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,42,RobustScaler,None,kNN,4704,1176,ok,,0.9921358256103417,0.9889602262199512,,0.04944969998905435
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,42,RobustScaler,None,kNN,4704,1176,ok,,0.9763018844343518,0.9735914813949521,,0.047851299998001195
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,43,RobustScaler,None,MLP,4704,1176,ok,,0.9984779299847792,0.9978733308442335,,2.7990518000005977
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,43,RobustScaler,None,MLP,4704,1176,ok,,0.9988584474885845,0.9986689432685908,,2.948011700005736
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,43,RobustScaler,None,MLP,4704,1176,ok,,1.0,1.0,,4.233491799997864
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,43,RobustScaler,None,MLP,4704,1176,ok,,1.0,1.0,,2.601167800006806
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,43,RobustScaler,None,MLP,4704,1176,ok,,0.9980954544149169,0.9980013800460995,,2.727223000008962
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,44,RobustScaler,None,DecisionTree,4704,1176,ok,,0.9924365968886516,0.9929446287675286,,0.021334299992304295
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,44,RobustScaler,None,DecisionTree,4704,1176,ok,,0.9939586669038724,0.9936749701445245,,0.021073299998533912
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,44,RobustScaler,None,DecisionTree,4704,1176,ok,,0.9986689432685908,0.9986689432685908,,0.019560499989893287
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,44,RobustScaler,None,DecisionTree,4704,1176,ok,,0.9992389649923896,0.9985472362578472,,0.0181942000053823
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,44,RobustScaler,None,DecisionTree,4704,1176,ok,,0.9979061746960428,0.9973085141031816,,0.0194305000040913
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,45,None,PCA,RandomForest,4704,1176,ok,,0.8648100377552432,0.8712360323143823,,1.4914113999984693
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,45,None,PCA,RandomForest,4704,1176,ok,,0.8289919745399198,0.82825104675398,,1.688947000002372
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,45,None,PCA,RandomForest,4704,1176,ok,,0.8012733602409968,0.8137756430455316,,1.6809351999982027
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,45,None,PCA,RandomForest,4704,1176,ok,,0.8363594423124683,0.842299044003637,,1.4859205999964615
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,45,None,PCA,RandomForest,4704,1176,ok,,0.8282637866167827,0.8331532954153172,,1.4147184000030393
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,46,None,PCA,SVM,4704,1176,ok,,0.725029156536006,0.7279167264511525,,0.8371485000097891
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,46,None,PCA,SVM,4704,1176,ok,,0.6923738362094527,0.6972095270219345,,0.7621310000104131
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,46,None,PCA,SVM,4704,1176,ok,,0.6762104029693319,0.68566992234325,,0.9733354000054533
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,46,None,PCA,SVM,4704,1176,ok,,0.7103358011703088,0.7227014465821955,,0.7569214000104694
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,46,None,PCA,SVM,4704,1176,ok,,0.7114965848380335,0.719899155432366,,0.7887109000002965
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,47,None,PCA,kNN,4704,1176,ok,,0.5456719840281484,0.5456917176133125,,0.047181699992506765
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,47,None,PCA,kNN,4704,1176,ok,,0.5607296052501533,0.5609992372404996,,0.04275659999984782
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,47,None,PCA,kNN,4704,1176,ok,,0.5730002007562501,0.5722410749500519,,0.08573769999202341
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,47,None,PCA,kNN,4704,1176,ok,,0.5830143538453596,0.582785976700784,,0.04154740000376478
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,47,None,PCA,kNN,4704,1176,ok,,0.5842634568195062,0.5838353530740368,,0.04387010000937153
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,48,None,PCA,MLP,4704,1176,ok,,0.942633279962047,0.9434091283021666,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.836683100002119
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,48,None,PCA,MLP,4704,1176,ok,,0.9477480282274803,0.9386144705319301,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.897743800000171
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,48,None,PCA,MLP,4704,1176,ok,,0.9508444879571368,0.9554892625896879,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.402921799992328
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,48,None,PCA,MLP,4704,1176,ok,,0.9226585467141083,0.9284785690084282,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.200765399989905
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,48,None,PCA,MLP,4704,1176,ok,,0.9615086237861149,0.9589873838347672,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.657972199987853
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,49,None,PCA,DecisionTree,4704,1176,ok,,0.8478102947281029,0.8168365697679731,,0.05730449999100529
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,49,None,PCA,DecisionTree,4704,1176,ok,,0.8036677933938208,0.7696403809644501,,0.05755540000973269
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,49,None,PCA,DecisionTree,4704,1176,ok,,0.8002269717789553,0.7812475439270511,,0.15737169999920297
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,49,None,PCA,DecisionTree,4704,1176,ok,,0.8419414043889818,0.8077898727056111,,0.07208739999623504
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,49,None,PCA,DecisionTree,4704,1176,ok,,0.7430738234696914,0.7462318486021254,,0.07053019999875687
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,50,None,SelectKBest,RandomForest,4704,1176,ok,,0.7709284627092846,0.7668253128419993,Features [21 30] are constant. | invalid value encountered in divide,0.3619948999985354
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,50,None,SelectKBest,RandomForest,4704,1176,ok,,0.7982812469113839,0.7933830772794566,Features [21 30] are constant. | invalid value encountered in divide,0.4523585999995703
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,50,None,SelectKBest,RandomForest,4704,1176,ok,,0.7778916760951402,0.7799944204756741,Features [21 30] are constant. | invalid value encountered in divide,0.6297330999950645
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,50,None,SelectKBest,RandomForest,4704,1176,ok,,0.8114887946827517,0.8117844959755748,Features [21 30] are constant. | invalid value encountered in divide,0.4503528000059305
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,50,None,SelectKBest,RandomForest,4704,1176,ok,,0.7717338047514221,0.7727460648276648,Features [21 30] are constant. | invalid value encountered in divide,0.3672268999944208
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,51,None,SelectKBest,SVM,4704,1176,ok,,0.5610730593607306,0.5215926221512813,Features [21 30] are constant. | invalid value encountered in divide,0.9079668999911519
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,51,None,SelectKBest,SVM,4704,1176,ok,,0.5517503805175038,0.5122412544124734,Features [21 30] are constant. | invalid value encountered in divide,0.8973943000019062
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,51,None,SelectKBest,SVM,4704,1176,ok,,0.5736711247950342,0.532636593752516,Features [21 30] are constant. | invalid value encountered in divide,0.9556207999994513
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,51,None,SelectKBest,SVM,4704,1176,ok,,0.5708793805201146,0.5282782279595261,Features [21 30] are constant. | invalid value encountered in divide,0.9089261999906739
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,51,None,SelectKBest,SVM,4704,1176,ok,,0.5707018491975845,0.5295382070378237,Features [21 30] are constant. | invalid value encountered in divide,0.8543424999952549
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,52,None,SelectKBest,kNN,4704,1176,ok,,0.7930478957876218,0.7881361023587571,Features [21 30] are constant. | invalid value encountered in divide,0.04210900000180118
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,52,None,SelectKBest,kNN,4704,1176,ok,,0.8107444306074444,0.8010438123047975,Features [21 30] are constant. | invalid value encountered in divide,0.031019200003356673
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,52,None,SelectKBest,kNN,4704,1176,ok,,0.8076741169748433,0.8074729237005337,Features [21 30] are constant. | invalid value encountered in divide,0.03136069999891333
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,52,None,SelectKBest,kNN,4704,1176,ok,,0.8262769854137133,0.8229200175262722,Features [21 30] are constant. | invalid value encountered in divide,0.029460499994456768
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,52,None,SelectKBest,kNN,4704,1176,ok,,0.8186705514697245,0.8163318733177279,Features [21 30] are constant. | invalid value encountered in divide,0.0283488999994006
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,53,None,SelectKBest,MLP,4704,1176,ok,,0.6809508984166518,0.6893561742056905,Features [21 30] are constant. | invalid value encountered in divide,1.7730624999967404
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,53,None,SelectKBest,MLP,4704,1176,ok,,0.6754556326474135,0.6803974595039612,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.221739900007378
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,53,None,SelectKBest,MLP,4704,1176,ok,,0.7744539811415644,0.7801742681658951,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.169032199992216
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,53,None,SelectKBest,MLP,4704,1176,ok,,0.7005846153612936,0.7093558779524094,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.686424200001056
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,53,None,SelectKBest,MLP,4704,1176,ok,,0.7114234752834374,0.7191217635796346,Features [21 30] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.513477000000421
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,54,None,SelectKBest,DecisionTree,4704,1176,ok,,0.6940318053331752,0.6941304102902236,Features [21 30] are constant. | invalid value encountered in divide,0.01094030000967905
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,54,None,SelectKBest,DecisionTree,4704,1176,ok,,0.7480010476585819,0.7446419936886038,Features [21 30] are constant. | invalid value encountered in divide,0.011281099999905564
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,54,None,SelectKBest,DecisionTree,4704,1176,ok,,0.6807721654715251,0.6838411578555412,Features [21 30] are constant. | invalid value encountered in divide,0.011795400001574308
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,54,None,SelectKBest,DecisionTree,4704,1176,ok,,0.7095950626753785,0.7163005893827332,Features [21 30] are constant. | invalid value encountered in divide,0.011208100011572242
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,54,None,SelectKBest,DecisionTree,4704,1176,ok,,0.7277305357496121,0.7301061549597659,Features [21 30] are constant. | invalid value encountered in divide,0.009870599998976104
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,55,None,None,RandomForest,4704,1176,ok,,0.990580956334381,0.9928254677006944,,0.4882060999952955
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,55,None,None,RandomForest,4704,1176,ok,,0.9988584474885845,0.9986689432685908,,0.47916209998948034
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,55,None,None,RandomForest,4704,1176,ok,,0.9941523927856503,0.9943391844076777,,0.9501454000128433
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,55,None,None,RandomForest,4704,1176,ok,,0.9992389649923896,0.9985472362578472,,0.45385510000051
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,55,None,None,RandomForest,4704,1176,ok,,0.9971451396884325,0.9966411607551046,,0.4520496000041021
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,56,None,None,SVM,4704,1176,ok,,0.9535249757852498,0.9575667971356747,,1.4208447999990312
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,56,None,None,SVM,4704,1176,ok,,0.9464606930360354,0.9528096954883644,,1.2467777999991085
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,56,None,None,SVM,4704,1176,ok,,0.9758851555172526,0.9776267476155303,,2.1450428999960423
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,56,None,None,SVM,4704,1176,ok,,0.9720008091655346,0.9738751427153595,,1.279051999998046
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,56,None,None,SVM,4704,1176,ok,,0.9696418490847325,0.9670885769752485,,1.3662621999974363
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,57,None,None,kNN,4704,1176,ok,,0.6017785486963568,0.60278893934941,,0.055269899996346794
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,57,None,None,kNN,4704,1176,ok,,0.6080373203660875,0.6071694045102608,,0.052111800003331155
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,57,None,None,kNN,4704,1176,ok,,0.6189400777014135,0.6201028007387578,,0.06849059999512974
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,57,None,None,kNN,4704,1176,ok,,0.6198886622585337,0.6199441401376998,,0.04857239998818841
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,57,None,None,kNN,4704,1176,ok,,0.6270598244343231,0.6284956391523506,,0.04869680000410881
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,58,None,None,MLP,4704,1176,ok,,1.0,1.0,,4.604853099997854
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,58,None,None,MLP,4704,1176,ok,,0.9975266362252664,0.996544279364378,,3.2656829999905312
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,58,None,None,MLP,4704,1176,ok,,0.9992406985573273,0.9993342837052257,,4.738962599993101
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,58,None,None,MLP,4704,1176,ok,,0.9992389649923896,0.9985472362578472,,3.806720000007772
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,58,None,None,MLP,4704,1176,ok,,0.9975236991261803,0.9973359217423751,,3.809346200010623
+167114,jungle_chess_2pcs_endgame_rat_elephant,0,59,None,None,DecisionTree,4704,1176,ok,,0.9924365968886516,0.9929446287675286,,0.02025139999750536
+167114,jungle_chess_2pcs_endgame_rat_elephant,1,59,None,None,DecisionTree,4704,1176,ok,,0.9939586669038724,0.9936749701445245,,0.021276999992551282
+167114,jungle_chess_2pcs_endgame_rat_elephant,2,59,None,None,DecisionTree,4704,1176,ok,,0.9986689432685908,0.9986689432685908,,0.019707600004039705
+167114,jungle_chess_2pcs_endgame_rat_elephant,3,59,None,None,DecisionTree,4704,1176,ok,,0.9992389649923896,0.9985472362578472,,0.019465999997919425
+167114,jungle_chess_2pcs_endgame_rat_elephant,4,59,None,None,DecisionTree,4704,1176,ok,,0.9979061746960428,0.9973085141031816,,0.018374500010395423

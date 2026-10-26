@@ -1,219 +1,84 @@
-\chapter{Materiais e Métodos}
-\label{cap:materialemetodos}
+\chapter{Materiais e Métodos}\label{cap:materialemetodos}
 
-Este capítulo descreve os materiais, ferramentas computacionais, conjuntos de dados e métodos empregados no desenvolvimento desta pesquisa. Inicialmente são apresentados os recursos utilizados, seguidos de um panorama geral do processo experimental baseado em dois fluxogramas. Por fim, detalha-se cada etapa metodológica da Fase 1 e Fase 2 do experimento de meta-aprendizado para recomendação de pipelines de aprendizado de máquina.
+Este capítulo descreve os dados, a reconstrução dos escores de pipelines e a avaliação dos metamodelos. O protocolo distingue os dados brutos usados na validação dos classificadores da meta-descrição da tarefa rotulada. A reconstrução integral substitui a produção histórica de escores na avaliação principal; os artefatos anteriores são preservados para comparação controlada.
 
-\section{Materiais Utilizados}
-\label{sec:materiais}
+\section{Materiais e Fonte dos Dados}\label{sec:materiais}
 
-Nesta seção, são apresentados os recursos computacionais, linguagens de programação, bibliotecas, ambientes de desenvolvimento e conjuntos de dados empregados ao longo da pesquisa. A seleção desses elementos foi guiada por critérios como aderência às práticas consolidadas na área de Aprendizado de Máquina (ML), disponibilidade em código aberto, escalabilidade e suporte à experimentação científica.
+Os dados provêm de 201 tarefas OpenML \cite{Vanschoren2014} do acervo original. Os metadados oficiais identificam tarefa, versão do dataset e alvo; os arquivos brutos ficam no cache local OpenML, e seus hashes integram o catálogo. Utiliza-se o alvo especificado pela tarefa, confirmado como igual ao padrão do dataset nesta coleta. Não houve falha de carregamento.
 
-Antes de detalhar cada grupo de materiais individualmente, é oportuno oferecer uma visão geral do ecossistema tecnológico que fundamenta esta investigação. O \autoref{quad:materiais} a seguir consolida os principais componentes utilizados, organizando-os por categoria, versão (quando aplicável) e justificativa de sua escolha. Esta apresentação permite ao leitor compreender, de forma estruturada, a base técnica sobre a qual os experimentos foram conduzidos.
+Os critérios de inclusão são classificação supervisionada, 500 a 10.000 exemplos, ao menos duas classes, pelo menos cinco observações por classe e atributos tabulares disponíveis após remover colunas de data/hora. Os critérios não usam desempenho dos classificadores ou do ranqueamento. Permanecem 193 tarefas elegíveis em 165 grupos; o catálogo registra as oito exclusões por suporte de classe insuficiente, nomes, links, tamanho, atributos, classes, balanceamento e proporção de valores ausentes.
 
-\begin{tabframed}[H]
-    \centering
-    \caption{Materiais, Ferramentas e Conjuntos de Dados Utilizados}
-    \label{quad:materiais}
-    \resizebox{\textwidth}{!}{%
-    \begin{tabular}{@{}llll@{}}
-        \toprule
-        \textbf{Categoria} & \textbf{Nome Específico} & \textbf{Versão} & \textbf{Justificativa/Relevância} \\
-        \midrule
-        Linguagem & Python & 3.13 & Ecossistema robusto para AM, vastas bibliotecas \\
-        Ambiente de Desenvolvimento & Jupyter / VS Code & N/A & Experimentação interativa, gerenciamento de código \\
-        Biblioteca de AM & Scikit-learn & $\ge$ 1.4 & Pipelines, pré-processamento, classificadores e métricas \\
-        Estatística Computacional & SciPy & $\ge$ 1.12 & KDTree, correlações e métricas de ranqueamento \\
-        Meta-características & Implementação própria & N/A & Extração de embeddings estatísticos distribucionais \\
-        Manipulação de Dados & Pandas & $\ge$ 1.3 & Estrutura \textit{DataFrame} para dados tabulares \\
-        Computação Numérica & NumPy & $\ge$ 1.20 & Arrays multidimensionais e operações matemáticas \\
-        Visualização & Matplotlib, Seaborn e umap-learn & N/A & Gráficos, mapas de calor e projeção UMAP \\
-        Fonte de Dados & OpenML & N/A & Repositório com conjuntos anotados e metadados \\
-        Recurso Computacional & PC local & Próprio & Execução dos experimentos das Fases 1 e 2 \\
-        \bottomrule
-    \end{tabular}
-    }
-    \fonte{}
-\end{tabframed}
+Tarefas distintas podem representar o mesmo dataset ou versões relacionadas. Os grupos anteriores, formados por nomes repetidos ou atributos processados idênticos, são preservados e conferidos contra IDs e fingerprints dos atributos brutos. A atribuição de grupos não mudou nesta reconstrução. Essa regra é conservadora, mas não assegura detectar todas as famílias com nomes e transformações diferentes. A tarefa 363713 já integrava o acervo e não é tratada como holdout externo.
 
-O quadro destaca a integração entre ferramentas consolidadas do ecossistema científico de Python e infraestrutura computacional local, evidenciando o cuidado na seleção de tecnologias que garantam reprodutibilidade, desempenho e flexibilidade. A seguir, cada categoria é explorada individualmente, de forma a detalhar seu papel específico no desenvolvimento dos experimentos desta pesquisa.
+\subsection{Ambiente Computacional}\label{subsec:recursos}
 
-Os sites oficiais das principais ferramentas utilizadas são: Python\footnote{\url{https://www.python.org/}}, Jupyter\footnote{\url{https://jupyter.org/}}, Visual Studio Code\footnote{\url{https://code.visualstudio.com/}}, scikit-learn\footnote{\url{https://scikit-learn.org/}}, SciPy\footnote{\url{https://scipy.org/}}, NumPy\footnote{\url{https://numpy.org/}}, pandas\footnote{\url{https://pandas.pydata.org/}}, umap-learn\footnote{\url{https://umap-learn.readthedocs.io/}} e OpenML\footnote{\url{https://www.openml.org/}}.
+A execução usa Python 3.14.2, NumPy 2.4.3, pandas 3.0.1, SciPy 1.17.1 e scikit-learn 1.8.0. O computador local dispõe de processador Intel Core i5-9400F, com seis núcleos lógicos. A reconstrução utiliza quatro processos inicialmente e seis após retomada dos checkpoints em tarefas diferentes, com uma thread BLAS e um job por classificador em cada processo. As versões efetivas, configurações, ajustes operacionais e hashes constam dos manifestos; a limitação de paralelismo controla a utilização de recursos sem subamostrar observações.
 
-\subsection{Linguagens e Ambientes de Desenvolvimento}
+\section{Fase 1: Escores em Dados Brutos}
 
-O projeto foi desenvolvido em Python (versão 3.13), utilizando como ambiente principal o Jupyter Notebook e, em etapas mais estruturadas, o Visual Studio Code. Essas ferramentas foram escolhidas devido à sua ampla adoção na comunidade científica e à compatibilidade com bibliotecas de aprendizado de máquina. O uso de controle de versão via \texttt{Git} e \texttt{GitHub} também foi empregado para rastreamento do código.
+Para cada tarefa, uma validação estratificada de cinco folds usa embaralhamento e semente 42. Cada observação participa do teste uma única vez e do treino nos demais folds. Os índices são gerados uma vez por tarefa e compartilhados por todos os pipelines. Não existe subamostra exclusiva da SVM: os cinco classificadores recebem as mesmas linhas de treino e teste em cada fold.
 
-\subsection{Bibliotecas e Frameworks}
+O tratamento numérico estima a mediana exclusivamente no treino, preservando atributos vazios. Nos atributos categóricos, valores ausentes são convertidos deterministicamente em um marcador; um codificador ordinal é ajustado no treino, atribuindo -1 a categorias desconhecidas no teste. Escalonadores e seletores também são ajustados apenas no treino. O teste recebe somente as transformações ajustadas, sem usar seus rótulos para selecionar atributos ou estimar parâmetros.
 
-As principais bibliotecas utilizadas foram:
+As transformações comuns são calculadas uma vez por fold e combinação e reutilizadas pelos classificadores que recebem exatamente a mesma entrada. Essa otimização não compartilha ajuste entre folds e não muda os algoritmos. A auditoria verifica cobertura de linhas, ausência de interseção treino/teste e amostras equivalentes entre classificadores.
 
-\begin{itemize}
-    \item \texttt{scikit-learn}: Para construção de pipelines, pré-processamento, validação cruzada e algoritmos base (\gls{rf}, \gls{svm}, \gls{knn}, \gls{mlp} e \gls{dt}) \cite{Pedregosa2011};
-    \item \texttt{scipy}: Para a estrutura \texttt{KDTree}, correlações de Spearman e Kendall, e cálculo do Kendall Tau ponderado;
-    \item \texttt{pandas} e \texttt{numpy}: Para manipulação e estruturação de dados tabulares e vetoriais;
-    \item \texttt{matplotlib}, \texttt{seaborn} e \texttt{umap-learn}: Para geração dos gráficos, mapas de calor e projeção bidimensional dos embeddings.
-\end{itemize}
+\subsection{Arsenal de 60 Pipelines}
 
-\subsection{Conjuntos de Dados}
+O arsenal cruza quatro escalonadores (StandardScaler, MinMaxScaler, RobustScaler e ausência), três seletores (PCA, SelectKBest por ANOVA e ausência) e cinco classificadores. Os seletores usam $q=\min(10,\max(1,P-1),N_{treino})$ componentes ou atributos, respeitando dimensões disponíveis. PCA usa solver automático e semente 42, controlando a parte aleatória não fixada no código histórico.
 
-Os conjuntos de dados foram obtidos do repositório público OpenML \cite{Vanschoren2014}, selecionando-se tarefas de classificação supervisionada que atendessem aos seguintes critérios: (i) entre 500 e 10.000 instâncias, de modo a equilibrar representatividade estatística e custo computacional; (ii) ao menos duas classes; e (iii) disponibilidade para processamento tabular. O carregador histórico codifica atributos categóricos; não há filtro implementado exigindo maioria numérica. Dos 243 \textit{task IDs} configurados inicialmente, \textbf{201 conjuntos de dados} foram carregados com sucesso e tiveram ao menos um pipeline avaliado sem erros — número que supera os 120 conjuntos do UCI Repository utilizados por \cite{Jomaa2021} como referência na literatura para tarefas de meta-aprendizado. As 42 tarefas restantes não integram as matrizes; os artefatos não permitem reconstruir individualmente todos os motivos. Na revisão, critérios de qualidade são auditados por tarefa.
+Os classificadores são: (i) Random Forest com 100 árvores; (ii) SVM RBF com $C=1$, gamma scale e sem limite de subamostra; (iii) k-NN com cinco vizinhos uniformes; (iv) MLP com camadas 64 e 32, otimizador Adam e até 200 iterações; e (v) árvore de decisão com profundidade máxima 10. Usa-se semente 42 nos componentes estocásticos. Demais parâmetros são os padrões da versão registrada da biblioteca, exportados para auditoria. Não se otimizam os hiperparâmetros desse arsenal nesta comparação.
 
-A caracterização local dos 201 conjuntos carregados indica heterogeneidade suficiente para avaliar o ranqueamento de pipelines: o número de instâncias varia de 500 a 10.000, com mediana de 1.941; o número de atributos varia de 1 a 1.776, com mediana de 20; e a mediana da proporção da classe majoritária é 0{,}50. Apenas um conjunto apresentou valores ausentes após o carregamento, caso tratado pela rotina de pré-processamento. A \autoref{tab:exemplosDatasets} apresenta exemplos representativos do meta-conjunto.
+\subsection{Métricas, Avisos e Resultados Ausentes}
 
-\begin{table}[H]
-\centering
-\caption{Exemplos de conjuntos de dados utilizados no meta-conjunto}
-\label{tab:exemplosDatasets}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{@{}rllrrrr@{}}
-\toprule
-\textbf{Task ID} & \textbf{Nome} & \textbf{Caracterização} & \textbf{Instâncias} & \textbf{Atributos} & \textbf{Classes} & \textbf{Classe majoritária} \\
-\midrule
-3      & \texttt{kr-vs-kp}                         & Jogo de xadrez              & 3.196 & 36   & 2 & 0{,}522 \\
-11     & \texttt{balance-scale}                   & Balanceamento físico        & 625   & 4    & 3 & 0{,}461 \\
-9910   & \texttt{Bioresponse}                     & Classificação bioquímica    & 3.751 & 1.776 & 2 & 0{,}542 \\
-363713 & \texttt{regensburg\_pediatric\_appendicitis} & Diagnóstico médico tabular & 780   & 55   & 3 & 0{,}619 \\
-\bottomrule
-\end{tabular}
-}
-\fonte{Autoria própria (2026), com base nos dados carregados do OpenML.}
-\end{table}
+São calculados acurácia balanceada e F1 macro no teste de cada fold. O alvo do metamodelo é a média de acurácia balanceada dos cinco folds, não uma média de subconjunto de folds bem-sucedidos. Se qualquer ajuste falhar, o alvo desse par tarefa/pipeline fica ausente. Médias, desvios amostrais, tempos, estados, erros e avisos são registrados separadamente.
 
-\subsection{Recursos Computacionais}
-\label{subsec:recursos}
+Avisos de convergência, especialmente no MLP, são preservados como evidência do orçamento finito de treinamento. Eles não são ocultados nem descritos como convergência garantida. Os escores resultantes caracterizam os modelos com o orçamento fixado. No total, a execução contempla 57900 ajustes para 11580 posições de escore na matriz final.
 
-Os experimentos foram executados integralmente em hardware local, em uma estação de trabalho pessoal com as seguintes especificações:
-\begin{itemize}
-    \item Processador: AMD Ryzen 7 5700U com Gráficos Radeon (8 núcleos, 16 threads, 1,80 GHz base);
-    \item Memória RAM: 12 GB DDR4;
-    \item Armazenamento: SSD (Solid-State Drive), utilizado como cache dos conjuntos de dados e dos embeddings, garantindo operações de leitura e escrita de alta velocidade durante a manipulação dos dados;
-    \item Sistema Operacional: Windows 10 Pro (\textit{build} 19045);
-    \item Ambiente: Python 3.13, com as bibliotecas \texttt{scikit-learn} ($\geq$ 1.4), \texttt{scipy} ($\geq$ 1.12), \texttt{numpy}, \texttt{pandas} e \texttt{umap-learn}.
-\end{itemize}
+\section{Representação Estatística das Tarefas}\label{sec:representacaoReconstruida}
 
-Esta configuração mostrou-se adequada para a execução dos experimentos: a Fase 1 (execução de 60 pipelines $\times$ 201 conjuntos de dados), intensiva em CPU e I/O, foi paralelizada sobre os núcleos do processador; e a Fase 2 (validação \gls{loo} do preditor \gls{knn}), de custo computacional linear no número de conjuntos de dados, foi concluída em poucos minutos.
+A representação é um vetor determinístico, sem treinamento neural ou otimização de função objetivo. Para cada atributo numérico após codificação da tarefa, calculam-se média, desvio padrão populacional acrescido de $10^{-8}$, mínimo, máximo, mediana, assimetria, curtose de Fisher e correlações de Pearson e Spearman com o alvo codificado. Cada um dos nove descritores é agregado entre atributos por mínimo, percentil 25, média, percentil 75 e máximo: $9\times5=45$ componentes.
 
-\section{Métodos}
+Dez propriedades globais completam o vetor: $\log(1+N)$, $\log(1+P)$, número de classes, proporções majoritária e minoritária, entropia das proporções acrescidas de $10^{-8}$, proporção de atributos constantes, média da correlação absoluta entre atributos com diagonal zerada, média das proporções de valores únicos e $P/(N+10^{-8})$. A média da matriz de correlação inclui os zeros da diagonal no denominador $P^2$. Concatenam-se 55 descritores e nove zeros; não há truncamento com dimensão 64. Valores não finitos recebem \texttt{nan\_to\_num} e aplica-se norma L2, preservando vetor nulo.
 
-O processo experimental foi dividido em duas fases principais. A Fase 1 consiste na construção de um meta-conjunto de dados, onde pipelines são aplicados a conjuntos de dados previamente caracterizados. A Fase 2 realiza o meta-aprendizado e fornece a recomendação de pipelines adequados.
+A meta-descrição utiliza a tarefa rotulada completa, disponível no cenário de recomendação, e é calculada separadamente do ajuste dos classificadores em folds. Ela não usa predições ou escores de teste. Portanto, o estudo não cobre consulta sem rótulos e não trata essa extração global de descritores como uma transformação do classificador dentro da CV. As correlações com alvos nominais multiclasses dependem de codificação arbitrária. O vetor estatístico é distinto de uma representação neural aprendida como Dataset2Vec \cite{Jomaa2021}.
 
-\begin{figure}[H]
-    \caption{Fluxograma do processo experimental: Fase 1 - Construção do meta-conjunto} 
-    \label{fig:fluxogramas_fases}
-    \centering
-    \includegraphics[width=0.8\textwidth]{figuras/fase1.png}
-    \fonte{}
-\end{figure}
+\section{Fase 2: Predição e Avaliação por Grupos}
 
-O processo inicia com a seleção de conjuntos de dados, seguida da extração do embedding estatístico distribucional, da execução de pipelines (pré-processamento + classificador) e da avaliação via validação cruzada. Os dados resultantes são organizados no meta-conjunto com informações como: embedding do conjunto de dados ($X_{emb}$), configuração do pipeline e desempenho obtido ($Y_{perf}$).
-
-\begin{figure}[H]
-    \caption{Fluxograma do processo experimental: Fase 2 -  Meta-aprendizado e recomendação no processo experimental} 
-    \label{fig:fluxograma_fase2}
-    \centering
-    \includegraphics[width=0.8\textwidth]{figuras/fase22.png}
-    \fonte{}
-\end{figure}
-
-Na Fase 2, o meta-conjunto é utilizado para treinar e avaliar um preditor de ranqueamento multi-saída. Para um novo conjunto de dados, o sistema localiza os conjuntos mais similares no espaço de embeddings e estima a acurácia esperada de cada pipeline, gerando uma lista ordenada de recomendações.
-
-A seguir, cada fase do processo experimental é pormenorizada. A Fase 1 foca na criação da base de conhecimento – o meta-conjunto de dados –, que é a fundação para a abordagem de meta-aprendizado. A Fase 2 utiliza essa base para treinar os metamodelos e, finalmente, gerar as recomendações de pipelines, que constitui o objetivo central desta pesquisa.
-
-\subsection{Fase 1 – Construção do Meta-conjunto}
-
-A representação dos conjuntos rotulados é um vetor determinístico de meta-atributos estatísticos, também denominado embedding estatístico, sem treinamento, função de perda ou otimização da representação. Para cada atributo numérico são calculados nove descritores: média, desvio padrão populacional acrescido de $10^{-8}$, mínimo, máximo, mediana, assimetria, curtose de Fisher, correlação de Pearson com o alvo e correlação de Spearman com o alvo. Cada descritor é agregado entre atributos por mínimo, percentil 25, média, percentil 75 e máximo, nesta ordem, produzindo $9\times5=45$ entradas. Os percentis por atributo calculados pelo código não integram os nove blocos.
-
-O bloco global contém, nesta ordem: $\log(1+N)$, $\log(1+P)$, número de classes, proporção majoritária, proporção minoritária, entropia das proporções acrescidas de $10^{-8}$, proporção de atributos constantes, média da correlação absoluta entre atributos com diagonal zerada, proporção média de valores únicos por atributo e $P/(N+10^{-8})$. A média de correlações inclui os zeros da diagonal no denominador $P^2$. Os blocos totalizam 55 descritores; com dimensão configurada em 64, acrescentam-se nove zeros, sem truncamento. Valores não finitos são tratados por \texttt{nan\_to\_num}, e o vetor é normalizado pela norma L2, exceto quando nulo.
-
-O contrato de índices e operações consta em \texttt{docs/revisao/EMBEDDING.md}. A representação exige rótulos disponíveis do conjunto de entrada; correlações com rótulos multiclasses codificados dependem de sua ordenação nominal. A padronização entre dimensões, quando avaliada, é aprendida somente no treino do metamodelo. O caminho estatístico é distinto do Dataset2Vec neural \cite{Jomaa2021}; as matrizes versionadas fixam qual representação foi efetivamente utilizada.
-
-
-Os pipelines são compostos por sequências de operadores de pré-processamento seguidos por um classificador. A modularidade dos componentes permite gerar múltiplas combinações, cujas estruturas são registradas de forma detalhada para compor o histórico do experimento.
-
-Cada pipeline é avaliado por meio de validação cruzada estratificada de 5 folds sobre os conjuntos de dados. A métrica de desempenho adotada é a \textbf{acurácia balanceada} (\textit{balanced accuracy}), definida como a média aritmética da sensibilidade (recall) de cada classe, conforme a Equação \eqref{eq:balanced_acc} \citeonline{Brodersen2010}:
-
-\begin{equation}\label{eq:balanced_acc}
-  \text{BA} = \frac{1}{C} \sum_{c=1}^{C} \frac{TP_c}{TP_c + FN_c}
-\end{equation}
-
-\noindent onde $C$ é o número de classes, $TP_c$ é o número de verdadeiros positivos e $FN_c$ o de falsos negativos para a classe $c$. Para $C = 2$, a acurácia balanceada equivale à média aritmética de sensibilidade e especificidade. A escolha desta métrica em detrimento da acurácia simples é motivada pela presença de conjuntos de dados desbalanceados no meta-conjunto: a acurácia simples favorece artificialmente classificadores que preveem apenas a classe majoritária, enquanto a acurácia balanceada garante que o desempenho em todas as classes seja igualmente considerado. O desempenho médio sobre os 5 folds compõe o valor $Y_{perf}$ armazenado na matriz de acurácias.
-
-Ao final da Fase 1, o principal artefato gerado é o meta-conjunto de dados, que consolida o conhecimento empírico obtido a partir da execução sistemática de diversos pipelines sobre uma ampla variedade de conjuntos de dados. Este meta-conjunto é estruturado de forma que cada instância representa um par formado por um conjunto de dados e uma configuração de pipeline, contendo as seguintes informações:
-
-\begin{itemize}
-    \item \textbf{Embedding estatístico do conjunto de dados ($X_{emb}$):} representa as características intrínsecas do conjunto de dados por meio de estatísticas distribucionais, servindo como entrada para o preditor de ranqueamento;
-
-    \item \textbf{Configuração do pipeline:} descreve a sequência de operadores de pré-processamento e o classificador utilizados, bem como seus respectivos hiperparâmetros;
-
-    \item \textbf{Desempenho do pipeline ($Y_{perf}$):} armazena os resultados das métricas obtidas durante a validação cruzada, como acurácia balanceada e F1-score.
-\end{itemize}
-
-\subsection{Fase 2 – Meta-aprendizado por Ranqueamento}
-
-Com o meta-conjunto construído, a Fase 2 realiza a \textbf{predição de ranking} de pipelines para novos conjuntos de dados. Esta abordagem trata a recomendação como um problema de ranqueamento (em vez de classificação binária), o que preserva toda a informação ordinal de desempenho e permite ao usuário selecionar quantos pipelines desejar da lista recomendada.
-
-\subsubsection{Preditor k-NN Multi-saída}
-
-O metamodelo adotado é um \textbf{preditor k-vizinhos mais próximos} (k-NN) multi-saída, que utiliza uma estrutura \texttt{KDTree}\footnote{A KDTree (\textit{k-dimensional tree}) é uma estrutura de árvore binária que particiona recursivamente o espaço de busca por planos de corte alinhados aos eixos, permitindo consultas de vizinhança eficientes em espaços multidimensionais \citeonline{Bentley1975}.} para busca eficiente de vizinhos no espaço de embeddings. A KDTree é uma árvore binária de particionamento espacial que organiza os pontos por planos de corte em cada dimensão, permitindo consultas cuja eficiência depende da dimensão e da distribuição, sem garantia de custo logarítmico em alta dimensão; $n$ é o número de conjuntos de dados e $d = 64$ é a dimensão do embedding. Para um novo conjunto de dados $D_{new}$ com embedding $\mathbf{x}_{new} \in \mathbb{R}^{64}$, o preditor identifica os $k$ conjuntos de dados mais similares no espaço de embeddings e estima a acurácia esperada de cada pipeline $P_j$ como a média das acurácias observadas nos vizinhos, conforme a Equação \eqref{eq:knn} — generalização multi-saída da regressão k-NN clássica, em que a predição é dada pela média ponderada das observações dos $k$ vizinhos mais próximos \citeonline{Altman1992}:
-
+O k-NN estima a acurácia dos 60 pipelines pela média dos vizinhos ponderada pelo inverso da distância euclidiana:
 \begin{equation}\label{eq:knn}
-  \hat{A}(P_j) = \frac{\sum_{D_i \in \mathcal{N}_k(D_{new})} w_i A_{i,j}}{\sum_{D_i \in \mathcal{N}_k(D_{new})} w_i}, \quad w_i = \frac{1}{\lVert \mathbf{x}_{new}-\mathbf{x}_i\rVert_2 + 10^{-8}}
+\hat A(P_j)=\frac{\sum_i w_i A_{i,j}}{\sum_i w_i},\qquad
+w_i=\frac{1}{\lVert\mathbf{x}_{novo}-\mathbf{x}_i\rVert_2+10^{-8}}.
 \end{equation}
 
-\noindent onde $\mathcal{N}_k(D_{new})$ denota o conjunto dos $k$ conjuntos de dados mais próximos de $D_{new}$ no espaço de embeddings e $A_{i,j}$ é a acurácia balanceada do pipeline $P_j$ no conjunto de dados $D_i$. A similaridade entre conjuntos de dados é medida pela distância euclidiana no espaço de embeddings. A recomendação final consiste no ranking dos 60 pipelines ordenados por $\hat{A}(P_j)$ de forma decrescente.
+O comparador Random Forest meta é um regressor multi-saída nativo com 200 árvores, mínimo de duas observações por folha, max features 1,0 e semente 42. As baselines são média global de escores por pipeline apenas no treino e ranking aleatório por escores uniformes com semente 42 acrescida do fold. Avalia-se também k-NN com padronização de dimensões ajustada exclusivamente no treino.
 
-\subsubsection{Validação por Leave-One-Out}
+Usa-se GroupKFold externo com cinco divisões, shuffle e semente 42. Dentro do treino externo, quatro divisões por grupos selecionam $k\in\{1,3,5,7,10\}$ pela média de Kendall ponderado por grupo, escolhendo o menor k em empate. Teste externo não participa da escolha de k, padronização ou imputação de alvos. As divisões têm grupos disjuntos em todos os níveis.
 
-A avaliação do preditor é realizada por \textbf{Leave-One-Out (LOO) no nível de conjuntos de dados}: para cada conjunto $D_i$ no meta-conjunto, o preditor é treinado nos $n-1$ conjuntos restantes e avalia suas predições sobre o conjunto excluído. Esse protocolo histórico exclui uma tarefa por vez, mas pode manter outra relacionada no treino; por isso, sua reprodução é exploratória e a avaliação principal da revisão separa grupos de tarefas relacionadas.
+Resultados ausentes no treino meta são imputados pela mediana de cada pipeline. Colunas inteiramente ausentes no treino são excluídas da avaliação correspondente no teste. Escores reais ausentes no teste nunca são imputados para calcular qualidade do ranking. Correlações indefinidas permanecem como NaN com estado explícito, mantendo NDCG e regret quando calculáveis.
 
-\subsubsection{Métricas de Avaliação de Ranking}
+\subsection{Métricas de Ranqueamento}
 
-A qualidade do ranqueamento predito em relação ao ranqueamento real foi avaliada por quatro métricas complementares:
+Spearman mede associação de postos. Kendall tau-b trata empates, com
+\begin{equation}\label{eq:kendall}
+\tau_b=\frac{C-D}{\sqrt{(C+D+T_x)(C+D+T_y)}},
+\end{equation}
+onde $C,D$ são pares concordantes e discordantes e $T_x,T_y$ contam empates exclusivos. Kendall ponderado padrão da SciPy usa pesos hiperbólicos aditivos $1/(r_i+1)+1/(r_j+1)$ e média de duas ordenações lexicográficas decrescentes dos escores real e predito; sua implementação não fornece p-valor.
 
-\begin{itemize}
-  \item \textbf{Coeficiente de Correlação de Spearman ($\rho$)} \cite{Spearman1904}: mede a correlação monotônica entre os postos dos scores preditos e reais. $\rho = 1$ indica ordenação perfeita; $\rho = 0$, ausência de correlação linear de postos;
+NDCG usa ganho linear de acurácia balanceada e desconto logarítmico, conforme a implementação do scikit-learn:
+\begin{equation}\label{eq:ndcg}
+\operatorname{NDCG}@K=\frac{\operatorname{DCG}@K}{\operatorname{IDCG}@K},\qquad
+\operatorname{DCG}@K=\sum_{i=1}^K\frac{rel_i}{\log_2(i+1)}.
+\end{equation}
+Reportam-se NDCG completo e NDCG@5. Regret@1 é a diferença para a melhor acurácia real disponível ao recomendar o primeiro pipeline; Regret@5 considera o melhor entre os cinco primeiros. Empates recebem tratamento médio em NDCG e ordem estável de colunas em regret. As métricas são complementares: NDCG elevado não equivale a recuperação exata do top-5.
 
-  \item \textbf{Kendall Tau ($\tau$)} \cite{Kendall1938}: mede a fração líquida de pares de pipelines corretamente ordenados, conforme a Equação \eqref{eq:kendall}:
-  \begin{equation}\label{eq:kendall}
-    \tau_b = \frac{P_c-Q_d}{\sqrt{(P_c+Q_d+T_x)(P_c+Q_d+T_y)}}
-  \end{equation}
-  onde $P_c,Q_d$ contam pares concordantes e discordantes e $T_x,T_y$ contam empates exclusivos em cada ranking. $\tau = 1$ indica todos os pares na ordem correta; $\tau = -1$, ordem invertida;
+\subsection{Comparação Controlada e Diagnóstico}
 
-  \item \textbf{Kendall Tau Ponderado ($\tau_w$)}: implementado via \texttt{scipy.stats.weightedtau}, atribui pesos maiores às inversões de ordem que ocorrem no topo do ranking (melhores pipelines), penalizando erros de recomendação que têm maior impacto prático. Os parâmetros padrão usam peso aditivo $1/(r_i+1)+1/(r_j+1)$ e média de duas ordenações lexicográficas decrescentes dos escores real e predito, sem p-valor definido;
+Executam-se três condições com as mesmas tarefas, grupos e folds externos: matrizes históricas; escores reconstruídos com vetores históricos; e escores e vetores reconstruídos. As entradas usam precisão float32 em todas as condições, como no armazenamento histórico, evitando mudar a resolução dos empates somente na condição nova. Os valores originais reconstruídos em float64 são preservados. A comparação pareada examina as mesmas tarefas/grupos avaliáveis nas duas condições. Ela distingue parte do efeito da representação, mas não isola causalmente somente a imputação, pois também mudam a codificação por fold, a amostra da SVM e o controle aleatório da PCA.
 
-  \item \textbf{NDCG} (\textit{Normalized Discounted Cumulative Gain}): implementado via \texttt{sklearn.metrics.ndcg\_score}, penaliza explicitamente pipelines relevantes classificados em posições inferiores, definido pela Equação \eqref{eq:ndcg}:
-  \begin{equation}\label{eq:ndcg}
-    \text{NDCG} = \frac{\text{DCG}}{\text{IDCG}}, \quad \text{DCG} = \sum_{i=1}^{n} \frac{rel_i}{\log_2(i+1)}
-  \end{equation}
-  onde $rel_i$ é a relevância do pipeline na posição $i$ (acurácia balanceada real) e IDCG é o DCG do ranking ideal (ordenação perfeita). O ganho é linear, conforme a implementação usada. Relevâncias próximas podem produzir NDCG alto mesmo com muitas inversões; a revisão acrescenta NDCG@5 e regret sem interpretar NDCG alto como recuperação exata do top-5. Assim, $\tau_w$ e NDCG são tratados como métricas complementares de topo: o primeiro avalia inversões pareadas ponderadas, enquanto o segundo avalia a relevância acumulada das posições iniciais.
-\end{itemize}
+Calculam-se médias dentro dos grupos e depois entre grupos. Intervalos descritivos de 95\% usam 2.000 reamostragens de grupos, com semente 42; a sobreposição dos treinos limita a interpretação inferencial. O diagnóstico usa cinco associações de Spearman por grupo (tamanho, atributos, proporção majoritária, atributos constantes e distância ao vizinho), com ajuste Benjamini--Hochberg e sem atribuição causal.
 
-As métricas são reportadas como média e desvio padrão sobre todos os folds LOO válidos (folds com variância não nula no vetor de acurácias reais). Para a seleção do hiperparâmetro $k$, avalia-se $k \in \{1, 3, 5, 7, 10\}$ como exploração histórica. Na avaliação revisada, k é escolhido pela média de Kendall ponderado por grupo em validação interna, sem consultar o teste externo.
+\section{Reprodutibilidade e Delimitação}
 
-\subsubsection{Análise de Correlação Estatística}
+Arquivos separados preservam parâmetros, versões, hashes de dados e código, predições, métricas, índices e estados de cada ajuste. Checkpoints por tarefa permitem retomar sem misturar execuções de configurações distintas. Dados brutos permanecem no cache local; as evidências e matrizes agregadas são versionadas.
 
-Como análise complementar, investiga-se a \textbf{correlação estatística entre o Kendall Tau ponderado por conjunto de dados e as dimensões do embedding}. Para cada dimensão $d \in \{1, \ldots, 64\}$ do espaço de embeddings, calcula-se o coeficiente de Spearman entre $\{\tau_w^{(i)}\}_{i=1}^{n}$ (scores de qualidade de ranqueamento por conjunto de dados) e $\{x_d^{(i)}\}_{i=1}^{n}$ (valor da dimensão $d$ no embedding de cada conjunto). Esta análise visa identificar quais aspectos da representação do conjunto de dados predizem a qualidade do meta-aprendizado, fornecendo interpretabilidade ao sistema.
-
-\subsection{Auditoria e Validação por Grupos}
-
-Metadados oficiais identificam tipo de tarefa, conjunto e alvo. Nomes repetidos e fingerprints dos atributos processados formam grupos transitivos conservadores. Uma tarefa é elegível se é de classificação supervisionada, possui 500 a 10.000 exemplos, ao menos duas classes e cinco observações por classe. O catálogo registra critérios e exclusões sem usar a qualidade do ranqueamento. A tarefa 363713 não é holdout independente, pois integra o acervo.
-
-A avaliação externa usa \texttt{GroupKFold} com cinco divisões, embaralhamento e semente 42. Em cada treino externo, quatro divisões internas por grupos selecionam $k\in\{1,3,5,7,10\}$ pela média de Kendall ponderado por grupo; empates escolhem o menor $k$. Grupos de teste ficam ausentes do treino, inclusive nas divisões internas. Há dois k-NN ajustados: um com os vetores L2 históricos e outro com StandardScaler ajustado no treino de cada divisão.
-
-Random Forest é um regressor multi-saída nativo, com 200 árvores, mínimo de duas observações por folha, \texttt{max\_features=1.0} e semente 42. As baselines são média por pipeline somente no treino e escores aleatórios uniformes com semente 42 acrescida do índice do fold. Todos os modelos usam as mesmas partições.
-
-Saídas ausentes no treino são imputadas pela mediana de cada pipeline, sem consultar teste. Colunas sem observações em todo o treino não são avaliadas no teste. Escores reais ausentes nunca são imputados para avaliar ranking. Correlações indefinidas recebem NaN e um estado explícito; NDCG e regret continuam registrados quando calculáveis. Regret@1 é a melhor acurácia real disponível menos a acurácia do primeiro pipeline recomendado; Regret@5 usa o melhor entre os cinco primeiros. Empates nas predições usam ordem estável das colunas para regret; NDCG usa o tratamento médio de empates da biblioteca.
-
-As médias são calculadas dentro dos grupos e depois entre grupos. Intervalos descritivos de 95\% usam 2.000 reamostragens dos grupos com semente 42. Comparações pareadas usam grupos com ambas as métricas definidas. A sobreposição dos treinos limita a interpretação inferencial. O diagnóstico usa cinco correlações exploratórias de Spearman por grupo, com ajuste Benjamini--Hochberg, sem atribuição causal.
-
-\subsection{Arsenal de Pipelines e Piloto de Hiperparâmetros}
-
-O arsenal histórico cruza quatro escalonadores (StandardScaler, MinMaxScaler, RobustScaler e ausência), três seletores (PCA, SelectKBest por ANOVA e ausência) e cinco classificadores. Os seletores usam $q=\min(10,\max(1,P-1))$. Os classificadores são Random Forest com 100 árvores, SVM RBF com $C=1$ e gamma scale, k-NN com cinco vizinhos uniformes, MLP com camadas 64 e 32 e até 200 iterações, e árvore de decisão com profundidade máxima 10. Usa-se semente 42 nos algoritmos estocásticos. Demais parâmetros seguem padrões das bibliotecas da execução original; a exportação de parâmetros atuais serve à auditoria, sem presumir versões históricas idênticas.
-
-Manter os 60 candidatos controla o espaço de busca ao comparar metamodelos. Um piloto separado utiliza seis tarefas fixadas em configuração, duas famílias de classificadores e três valores por família, com StandardScaler e sem seletor. Dados brutos usam o alvo da tarefa OpenML; mediana numérica e codificador ordinal categórico são ajustados exclusivamente no treino, e categorias desconhecidas recebem código -1. Os cinco folds estratificados, embaralhados com semente 42, são iguais para todos os valores de uma tarefa. O piloto é exploratório e não substitui uma matriz completa com arsenal expandido.
-
-\subsection{Reprodutibilidade e Limites da Fase 1}
-
-A revisão foi executada com Python 3.14.2, NumPy 2.4.3, pandas 3.0.1, SciPy 1.17.1 e scikit-learn 1.8.0. Manifestos registram configurações, versões e hashes. Splits, predições, métricas, avisos, falhas e exclusões ficam em arquivos separados; os resultados antigos permanecem fora do diretório da revisão.
-
-A Fase 1 histórica imputou mediana antes da validação e subamostrou globalmente até 5.000 exemplos somente para SVM, de modo que pipelines podem ter sido avaliados em amostras diferentes. A revisão não altera retroativamente esses escores. O piloto novo usa tratamento dentro dos folds; uma reconstrução integral da Fase 1 ainda é necessária para um benchmark com esse tratamento em todas as tarefas.
+O estudo continua retrospectivo, com consulta rotulada e arsenal fixo. Não houve busca exaustiva de hiperparâmetros ou coleta de teste externa após o desenvolvimento. O piloto anterior de 180 avaliações permanece separado. Essas limitações delimitam as conclusões, mesmo após concluir a reconstrução integral da Fase 1.

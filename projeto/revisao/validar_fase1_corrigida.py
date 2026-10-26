@@ -38,6 +38,9 @@ def run():
         folds = pd.read_csv(folds_file)
         all_folds.append(folds)
         assert len(folds) == 300 and not folds.duplicated(["pipeline_id", "fold"]).any()
+        assert folds.task_id.eq(tid).all()
+        assert set(folds.pipeline_id) == set(range(60))
+        assert set(folds.fold) == set(range(config["folds"]))
         n_records += len(folds)
         n = int(catalog.loc[tid, "n_instancias"])
         seen_test = []

@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+14969,GesturePhaseSegmentationProcessed,0,0,StandardScaler,PCA,RandomForest,7898,1975,ok,,0.510426928686209,0.5237581343121498,,3.8878770000010263
+14969,GesturePhaseSegmentationProcessed,1,0,StandardScaler,PCA,RandomForest,7898,1975,ok,,0.5081776181104143,0.5233051770696308,,3.4613306000101147
+14969,GesturePhaseSegmentationProcessed,2,0,StandardScaler,PCA,RandomForest,7898,1975,ok,,0.5192180230242732,0.5390529162391747,,3.119356600000174
+14969,GesturePhaseSegmentationProcessed,3,0,StandardScaler,PCA,RandomForest,7899,1974,ok,,0.527365245919428,0.5392230168491607,,3.2335419000010006
+14969,GesturePhaseSegmentationProcessed,4,0,StandardScaler,PCA,RandomForest,7899,1974,ok,,0.504305443500721,0.5160546363849781,,3.014266199999838
+14969,GesturePhaseSegmentationProcessed,0,1,StandardScaler,PCA,SVM,7898,1975,ok,,0.41717687639921197,0.4000266765909569,,4.960050699999556
+14969,GesturePhaseSegmentationProcessed,1,1,StandardScaler,PCA,SVM,7898,1975,ok,,0.4058190351997378,0.387715216325745,,5.133521799987648
+14969,GesturePhaseSegmentationProcessed,2,1,StandardScaler,PCA,SVM,7898,1975,ok,,0.4007627653952592,0.3836545271092823,,5.193750299993553
+14969,GesturePhaseSegmentationProcessed,3,1,StandardScaler,PCA,SVM,7899,1974,ok,,0.4212860173823566,0.4018843537850051,,5.293487899994943
+14969,GesturePhaseSegmentationProcessed,4,1,StandardScaler,PCA,SVM,7899,1974,ok,,0.4221141853665807,0.4057849826777707,,4.7687032999965595
+14969,GesturePhaseSegmentationProcessed,0,2,StandardScaler,PCA,kNN,7898,1975,ok,,0.4971686034059573,0.4998600124027234,,0.25241789998835884
+14969,GesturePhaseSegmentationProcessed,1,2,StandardScaler,PCA,kNN,7898,1975,ok,,0.4858594100945474,0.4879190991066866,,0.18339839999680407
+14969,GesturePhaseSegmentationProcessed,2,2,StandardScaler,PCA,kNN,7898,1975,ok,,0.5080157961238645,0.5109714284009677,,0.17523360000632238
+14969,GesturePhaseSegmentationProcessed,3,2,StandardScaler,PCA,kNN,7899,1974,ok,,0.5198749619598441,0.5214581328238025,,0.16783089999807999
+14969,GesturePhaseSegmentationProcessed,4,2,StandardScaler,PCA,kNN,7899,1974,ok,,0.49760011185899594,0.5000469374081211,,0.20635399999446236
+14969,GesturePhaseSegmentationProcessed,0,3,StandardScaler,PCA,MLP,7898,1975,ok,,0.464383425849568,0.4645900369673184,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.758712599999853
+14969,GesturePhaseSegmentationProcessed,1,3,StandardScaler,PCA,MLP,7898,1975,ok,,0.4683356070005783,0.4700760159861418,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.213265900005354
+14969,GesturePhaseSegmentationProcessed,2,3,StandardScaler,PCA,MLP,7898,1975,ok,,0.4616954599003435,0.4559025045396659,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.991315100007341
+14969,GesturePhaseSegmentationProcessed,3,3,StandardScaler,PCA,MLP,7899,1974,ok,,0.4786849034192288,0.4717188341773297,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.7094501000101445
+14969,GesturePhaseSegmentationProcessed,4,3,StandardScaler,PCA,MLP,7899,1974,ok,,0.4714053943111791,0.47188123434684803,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.341916500008665
+14969,GesturePhaseSegmentationProcessed,0,4,StandardScaler,PCA,DecisionTree,7898,1975,ok,,0.41134586795738387,0.41397553217101474,,0.1759911999979522
+14969,GesturePhaseSegmentationProcessed,1,4,StandardScaler,PCA,DecisionTree,7898,1975,ok,,0.4136894062694007,0.4176236054627293,,0.2062136000022292
+14969,GesturePhaseSegmentationProcessed,2,4,StandardScaler,PCA,DecisionTree,7898,1975,ok,,0.4083087492469194,0.4128101744431862,,0.11096890000044368
+14969,GesturePhaseSegmentationProcessed,3,4,StandardScaler,PCA,DecisionTree,7899,1974,ok,,0.4156006304440097,0.4185675336327289,,0.11220679999678396
+14969,GesturePhaseSegmentationProcessed,4,4,StandardScaler,PCA,DecisionTree,7899,1974,ok,,0.4142669492460886,0.41441617712210677,,0.1008698999939952
+14969,GesturePhaseSegmentationProcessed,0,5,StandardScaler,SelectKBest,RandomForest,7898,1975,ok,,0.4625180867541214,0.4733181339537461,,3.802595300003304
+14969,GesturePhaseSegmentationProcessed,1,5,StandardScaler,SelectKBest,RandomForest,7898,1975,ok,,0.45893927409610535,0.464857238742897,,4.753943000003346
+14969,GesturePhaseSegmentationProcessed,2,5,StandardScaler,SelectKBest,RandomForest,7898,1975,ok,,0.48318905631826,0.4965700116415993,,3.361903099998017
+14969,GesturePhaseSegmentationProcessed,3,5,StandardScaler,SelectKBest,RandomForest,7899,1974,ok,,0.47576521458640186,0.4829450888360666,,3.1656389999989187
+14969,GesturePhaseSegmentationProcessed,4,5,StandardScaler,SelectKBest,RandomForest,7899,1974,ok,,0.46905208717194685,0.4801316020522227,,5.589441399992211
+14969,GesturePhaseSegmentationProcessed,0,6,StandardScaler,SelectKBest,SVM,7898,1975,ok,,0.3766710025190418,0.3515481662392558,,5.700412100006361
+14969,GesturePhaseSegmentationProcessed,1,6,StandardScaler,SelectKBest,SVM,7898,1975,ok,,0.35538576345487305,0.31985314699804707,,5.408837099996163
+14969,GesturePhaseSegmentationProcessed,2,6,StandardScaler,SelectKBest,SVM,7898,1975,ok,,0.37761487243798586,0.35420472237583656,,4.618509599997196
+14969,GesturePhaseSegmentationProcessed,3,6,StandardScaler,SelectKBest,SVM,7899,1974,ok,,0.3823473073605511,0.3545719632541159,,5.04338019998977
+14969,GesturePhaseSegmentationProcessed,4,6,StandardScaler,SelectKBest,SVM,7899,1974,ok,,0.3726273464655763,0.34608244368150076,,4.727199100001599
+14969,GesturePhaseSegmentationProcessed,0,7,StandardScaler,SelectKBest,kNN,7898,1975,ok,,0.4421717905126,0.4446571005718173,,0.1936885000031907
+14969,GesturePhaseSegmentationProcessed,1,7,StandardScaler,SelectKBest,kNN,7898,1975,ok,,0.43743131379924405,0.4380711644414129,,0.1624320999981137
+14969,GesturePhaseSegmentationProcessed,2,7,StandardScaler,SelectKBest,kNN,7898,1975,ok,,0.4580594516414636,0.46044128517031313,,0.15181539999321103
+14969,GesturePhaseSegmentationProcessed,3,7,StandardScaler,SelectKBest,kNN,7899,1974,ok,,0.4614517956687799,0.4627888326174133,,0.2591326999972807
+14969,GesturePhaseSegmentationProcessed,4,7,StandardScaler,SelectKBest,kNN,7899,1974,ok,,0.4477981560487706,0.4513156058134479,,0.14677759999176487
+14969,GesturePhaseSegmentationProcessed,0,8,StandardScaler,SelectKBest,MLP,7898,1975,ok,,0.4367626810700692,0.43390478085362566,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.120925299997907
+14969,GesturePhaseSegmentationProcessed,1,8,StandardScaler,SelectKBest,MLP,7898,1975,ok,,0.41566164825225577,0.41437862146927545,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,11.2841000000044
+14969,GesturePhaseSegmentationProcessed,2,8,StandardScaler,SelectKBest,MLP,7898,1975,ok,,0.4292190440581643,0.43261363036855993,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.468020400003297
+14969,GesturePhaseSegmentationProcessed,3,8,StandardScaler,SelectKBest,MLP,7899,1974,ok,,0.4248161561046099,0.42324295356074576,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.276433999999426
+14969,GesturePhaseSegmentationProcessed,4,8,StandardScaler,SelectKBest,MLP,7899,1974,ok,,0.4349837055881829,0.43785191752773456,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.9135649999952875
+14969,GesturePhaseSegmentationProcessed,0,9,StandardScaler,SelectKBest,DecisionTree,7898,1975,ok,,0.41753670885458655,0.42213894312412803,,0.1158383000001777
+14969,GesturePhaseSegmentationProcessed,1,9,StandardScaler,SelectKBest,DecisionTree,7898,1975,ok,,0.43107676107963366,0.43650218668308105,,0.46725770000193734
+14969,GesturePhaseSegmentationProcessed,2,9,StandardScaler,SelectKBest,DecisionTree,7898,1975,ok,,0.4079279304368443,0.4122019241258146,,0.10513759999594186
+14969,GesturePhaseSegmentationProcessed,3,9,StandardScaler,SelectKBest,DecisionTree,7899,1974,ok,,0.395912907614384,0.39759783545274646,,0.106738000002224
+14969,GesturePhaseSegmentationProcessed,4,9,StandardScaler,SelectKBest,DecisionTree,7899,1974,ok,,0.4036557564810857,0.40515176775453166,,0.11069169999973383
+14969,GesturePhaseSegmentationProcessed,0,10,StandardScaler,None,RandomForest,7898,1975,ok,,0.600682565807066,0.6246706125138943,,5.19108979999146
+14969,GesturePhaseSegmentationProcessed,1,10,StandardScaler,None,RandomForest,7898,1975,ok,,0.5863550622587986,0.6114006818219901,,6.588484799998696
+14969,GesturePhaseSegmentationProcessed,2,10,StandardScaler,None,RandomForest,7898,1975,ok,,0.5782845151745215,0.6025178725677423,,4.647817800010671
+14969,GesturePhaseSegmentationProcessed,3,10,StandardScaler,None,RandomForest,7899,1974,ok,,0.6030550189099554,0.6219288656525297,,5.077452999990783
+14969,GesturePhaseSegmentationProcessed,4,10,StandardScaler,None,RandomForest,7899,1974,ok,,0.5975166863134421,0.6244710375183136,,5.060384600001271
+14969,GesturePhaseSegmentationProcessed,0,11,StandardScaler,None,SVM,7898,1975,ok,,0.43610296456709674,0.4236773997887468,,6.0912514999945415
+14969,GesturePhaseSegmentationProcessed,1,11,StandardScaler,None,SVM,7898,1975,ok,,0.4253676898181899,0.4110244247477176,,7.223175099992659
+14969,GesturePhaseSegmentationProcessed,2,11,StandardScaler,None,SVM,7898,1975,ok,,0.4289362897229042,0.41791887742740624,,6.057709200002137
+14969,GesturePhaseSegmentationProcessed,3,11,StandardScaler,None,SVM,7899,1974,ok,,0.438771731573096,0.4213364110548971,,5.515244700000039
+14969,GesturePhaseSegmentationProcessed,4,11,StandardScaler,None,SVM,7899,1974,ok,,0.437891154417818,0.4270878866862846,,6.046978699989268
+14969,GesturePhaseSegmentationProcessed,0,12,StandardScaler,None,kNN,7898,1975,ok,,0.5346386380131841,0.5382542722868883,,0.11369589999958407
+14969,GesturePhaseSegmentationProcessed,1,12,StandardScaler,None,kNN,7898,1975,ok,,0.5240501583171938,0.530406790724573,,0.18236289999913424
+14969,GesturePhaseSegmentationProcessed,2,12,StandardScaler,None,kNN,7898,1975,ok,,0.5144521481658937,0.5189906631150055,,0.14031200000317767
+14969,GesturePhaseSegmentationProcessed,3,12,StandardScaler,None,kNN,7899,1974,ok,,0.5586839980562028,0.5616337674075315,,0.11423730000387877
+14969,GesturePhaseSegmentationProcessed,4,12,StandardScaler,None,kNN,7899,1974,ok,,0.5230675074740289,0.5245973237479473,,0.11477839999133721
+14969,GesturePhaseSegmentationProcessed,0,13,StandardScaler,None,MLP,7898,1975,ok,,0.4820577495996482,0.4813504521984161,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,10.640538499996183
+14969,GesturePhaseSegmentationProcessed,1,13,StandardScaler,None,MLP,7898,1975,ok,,0.5170354126759114,0.5202594730828315,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,11.200592099994537
+14969,GesturePhaseSegmentationProcessed,2,13,StandardScaler,None,MLP,7898,1975,ok,,0.49523786088869004,0.49871104477485373,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.782917100004852
+14969,GesturePhaseSegmentationProcessed,3,13,StandardScaler,None,MLP,7899,1974,ok,,0.5076163385270023,0.5114344189921227,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.05132099999173
+14969,GesturePhaseSegmentationProcessed,4,13,StandardScaler,None,MLP,7899,1974,ok,,0.5180163537847694,0.5197597536239049,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.6540485000005
+14969,GesturePhaseSegmentationProcessed,0,14,StandardScaler,None,DecisionTree,7898,1975,ok,,0.4710325069977485,0.4718857147372907,,0.3573391999962041
+14969,GesturePhaseSegmentationProcessed,1,14,StandardScaler,None,DecisionTree,7898,1975,ok,,0.4758723931738144,0.4786593206316252,,0.31924749999598134
+14969,GesturePhaseSegmentationProcessed,2,14,StandardScaler,None,DecisionTree,7898,1975,ok,,0.4659836979350939,0.46984102981262954,,0.40731769999547396
+14969,GesturePhaseSegmentationProcessed,3,14,StandardScaler,None,DecisionTree,7899,1974,ok,,0.4789716092774685,0.48238219047579933,,0.3434056999976747
+14969,GesturePhaseSegmentationProcessed,4,14,StandardScaler,None,DecisionTree,7899,1974,ok,,0.46222950767179166,0.4684170991093669,,0.32275820001086686
+14969,GesturePhaseSegmentationProcessed,0,15,MinMaxScaler,PCA,RandomForest,7898,1975,ok,,0.5168850913489839,0.5339175048360454,,3.8594077000016114
+14969,GesturePhaseSegmentationProcessed,1,15,MinMaxScaler,PCA,RandomForest,7898,1975,ok,,0.5367067509774482,0.5541530243883124,,3.4259283999999752
+14969,GesturePhaseSegmentationProcessed,2,15,MinMaxScaler,PCA,RandomForest,7898,1975,ok,,0.5361534519285923,0.5530368958555123,,3.7146158999967156
+14969,GesturePhaseSegmentationProcessed,3,15,MinMaxScaler,PCA,RandomForest,7899,1974,ok,,0.5496557927171598,0.5616344324537351,,3.019849100004649
+14969,GesturePhaseSegmentationProcessed,4,15,MinMaxScaler,PCA,RandomForest,7899,1974,ok,,0.5405813812634385,0.5550530443801962,,3.095681399994646
+14969,GesturePhaseSegmentationProcessed,0,16,MinMaxScaler,PCA,SVM,7898,1975,ok,,0.42121885830993033,0.4039629877357829,,4.902721599995857
+14969,GesturePhaseSegmentationProcessed,1,16,MinMaxScaler,PCA,SVM,7898,1975,ok,,0.42442035775990145,0.40822997611087447,,4.717662099996232
+14969,GesturePhaseSegmentationProcessed,2,16,MinMaxScaler,PCA,SVM,7898,1975,ok,,0.42090073534361966,0.4076467475219778,,4.754377199991723
+14969,GesturePhaseSegmentationProcessed,3,16,MinMaxScaler,PCA,SVM,7899,1974,ok,,0.4227806047713546,0.4053594016666745,,4.551677099996596
+14969,GesturePhaseSegmentationProcessed,4,16,MinMaxScaler,PCA,SVM,7899,1974,ok,,0.4191775940291528,0.4021288028306252,,4.371143199998187
+14969,GesturePhaseSegmentationProcessed,0,17,MinMaxScaler,PCA,kNN,7898,1975,ok,,0.5013147486884694,0.5060171401685076,,0.13900959999591578
+14969,GesturePhaseSegmentationProcessed,1,17,MinMaxScaler,PCA,kNN,7898,1975,ok,,0.4883771713751283,0.49220176429151496,,0.11889529999461956
+14969,GesturePhaseSegmentationProcessed,2,17,MinMaxScaler,PCA,kNN,7898,1975,ok,,0.5206375509450137,0.5249736763039394,,0.11635589999787044
+14969,GesturePhaseSegmentationProcessed,3,17,MinMaxScaler,PCA,kNN,7899,1974,ok,,0.5126384883596542,0.5130162265228223,,0.12201029999414459
+14969,GesturePhaseSegmentationProcessed,4,17,MinMaxScaler,PCA,kNN,7899,1974,ok,,0.5207395416361003,0.5217590085101953,,0.11885379999876022
+14969,GesturePhaseSegmentationProcessed,0,18,MinMaxScaler,PCA,MLP,7898,1975,ok,,0.44926957801988354,0.43607929020063524,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.643337499990594
+14969,GesturePhaseSegmentationProcessed,1,18,MinMaxScaler,PCA,MLP,7898,1975,ok,,0.4416657042343859,0.43064343295275676,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.917994500006898
+14969,GesturePhaseSegmentationProcessed,2,18,MinMaxScaler,PCA,MLP,7898,1975,ok,,0.45218176256762665,0.435361466250576,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.855272999993758
+14969,GesturePhaseSegmentationProcessed,3,18,MinMaxScaler,PCA,MLP,7899,1974,ok,,0.4601742456205141,0.44469280915913656,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.578808699996443
+14969,GesturePhaseSegmentationProcessed,4,18,MinMaxScaler,PCA,MLP,7899,1974,ok,,0.4579182599278567,0.443328728401119,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.874256700000842
+14969,GesturePhaseSegmentationProcessed,0,19,MinMaxScaler,PCA,DecisionTree,7898,1975,ok,,0.42706314702273884,0.4316631900545147,,0.11522350000450388
+14969,GesturePhaseSegmentationProcessed,1,19,MinMaxScaler,PCA,DecisionTree,7898,1975,ok,,0.41799171990494555,0.4237717423201815,,0.13020850000611972
+14969,GesturePhaseSegmentationProcessed,2,19,MinMaxScaler,PCA,DecisionTree,7898,1975,ok,,0.4576776600715465,0.45943837916666375,,0.13025000000197906
+14969,GesturePhaseSegmentationProcessed,3,19,MinMaxScaler,PCA,DecisionTree,7899,1974,ok,,0.44920764840670835,0.45260133564160887,,0.10620720000588335
+14969,GesturePhaseSegmentationProcessed,4,19,MinMaxScaler,PCA,DecisionTree,7899,1974,ok,,0.42117467642853335,0.41961789512301806,,0.13998560000618454
+14969,GesturePhaseSegmentationProcessed,0,20,MinMaxScaler,SelectKBest,RandomForest,7898,1975,ok,,0.46303538623945106,0.47333074396705477,,3.4062421999988146
+14969,GesturePhaseSegmentationProcessed,1,20,MinMaxScaler,SelectKBest,RandomForest,7898,1975,ok,,0.46231984432253076,0.4693111525650003,,3.571030000006431
+14969,GesturePhaseSegmentationProcessed,2,20,MinMaxScaler,SelectKBest,RandomForest,7898,1975,ok,,0.4903018066200568,0.5052228147023532,,2.9104097000090405
+14969,GesturePhaseSegmentationProcessed,3,20,MinMaxScaler,SelectKBest,RandomForest,7899,1974,ok,,0.47683160414536496,0.48337290502027364,,3.19871989999956
+14969,GesturePhaseSegmentationProcessed,4,20,MinMaxScaler,SelectKBest,RandomForest,7899,1974,ok,,0.4664001015230541,0.4762043452842648,,3.77075799999875
+14969,GesturePhaseSegmentationProcessed,0,21,MinMaxScaler,SelectKBest,SVM,7898,1975,ok,,0.3450377504134986,0.295060211161823,,4.971656900001108
+14969,GesturePhaseSegmentationProcessed,1,21,MinMaxScaler,SelectKBest,SVM,7898,1975,ok,,0.33133040845829154,0.27650682395693665,,5.714933700000984
+14969,GesturePhaseSegmentationProcessed,2,21,MinMaxScaler,SelectKBest,SVM,7898,1975,ok,,0.3229517327954584,0.2643028532133379,,4.651170099998126
+14969,GesturePhaseSegmentationProcessed,3,21,MinMaxScaler,SelectKBest,SVM,7899,1974,ok,,0.33461676498222975,0.2821714426497944,,4.449675900003058
+14969,GesturePhaseSegmentationProcessed,4,21,MinMaxScaler,SelectKBest,SVM,7899,1974,ok,,0.32341512105940873,0.26020613526515884,,5.810146000003442
+14969,GesturePhaseSegmentationProcessed,0,22,MinMaxScaler,SelectKBest,kNN,7898,1975,ok,,0.4308192311665692,0.43103720017271946,,0.1598015000054147
+14969,GesturePhaseSegmentationProcessed,1,22,MinMaxScaler,SelectKBest,kNN,7898,1975,ok,,0.43645803951303064,0.43690926794783047,,0.16476780000084545
+14969,GesturePhaseSegmentationProcessed,2,22,MinMaxScaler,SelectKBest,kNN,7898,1975,ok,,0.43593830988321985,0.43919326621956234,,0.12280339999415446
+14969,GesturePhaseSegmentationProcessed,3,22,MinMaxScaler,SelectKBest,kNN,7899,1974,ok,,0.4692705402395344,0.47057263671856686,,0.1270883999968646
+14969,GesturePhaseSegmentationProcessed,4,22,MinMaxScaler,SelectKBest,kNN,7899,1974,ok,,0.4457728641820659,0.44801739138478913,,0.12094599999545608
+14969,GesturePhaseSegmentationProcessed,0,23,MinMaxScaler,SelectKBest,MLP,7898,1975,ok,,0.40882549035166954,0.40508148312974745,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.002231699996628
+14969,GesturePhaseSegmentationProcessed,1,23,MinMaxScaler,SelectKBest,MLP,7898,1975,ok,,0.37510236636099686,0.36513180997790895,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.83691519999411
+14969,GesturePhaseSegmentationProcessed,2,23,MinMaxScaler,SelectKBest,MLP,7898,1975,ok,,0.3981317617291048,0.3905829869193508,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.475784599999315
+14969,GesturePhaseSegmentationProcessed,3,23,MinMaxScaler,SelectKBest,MLP,7899,1974,ok,,0.40831538254654465,0.4061248893248016,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.832806699996581
+14969,GesturePhaseSegmentationProcessed,4,23,MinMaxScaler,SelectKBest,MLP,7899,1974,ok,,0.39354091914274864,0.3861682226213972,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.00360150000779
+14969,GesturePhaseSegmentationProcessed,0,24,MinMaxScaler,SelectKBest,DecisionTree,7898,1975,ok,,0.41753670885458655,0.42213894312412803,,0.1450336999987485
+14969,GesturePhaseSegmentationProcessed,1,24,MinMaxScaler,SelectKBest,DecisionTree,7898,1975,ok,,0.43107676107963366,0.43650218668308105,,0.10575790000439156
+14969,GesturePhaseSegmentationProcessed,2,24,MinMaxScaler,SelectKBest,DecisionTree,7898,1975,ok,,0.40863187699134135,0.4128767777274974,,0.11145050000050105
+14969,GesturePhaseSegmentationProcessed,3,24,MinMaxScaler,SelectKBest,DecisionTree,7899,1974,ok,,0.395912907614384,0.39759783545274646,,0.1146345999877667
+14969,GesturePhaseSegmentationProcessed,4,24,MinMaxScaler,SelectKBest,DecisionTree,7899,1974,ok,,0.4036557564810857,0.40515176775453166,,0.18077720000292175
+14969,GesturePhaseSegmentationProcessed,0,25,MinMaxScaler,None,RandomForest,7898,1975,ok,,0.6041107782346848,0.627539994604746,,5.825440400003572
+14969,GesturePhaseSegmentationProcessed,1,25,MinMaxScaler,None,RandomForest,7898,1975,ok,,0.5823443233557161,0.6061491782188005,,4.696649300007266
+14969,GesturePhaseSegmentationProcessed,2,25,MinMaxScaler,None,RandomForest,7898,1975,ok,,0.5849416520023243,0.6103790173426366,,4.602973899993231
+14969,GesturePhaseSegmentationProcessed,3,25,MinMaxScaler,None,RandomForest,7899,1974,ok,,0.5944087695277908,0.6125838783438784,,5.212530999997398
+14969,GesturePhaseSegmentationProcessed,4,25,MinMaxScaler,None,RandomForest,7899,1974,ok,,0.5972098330592187,0.6244512411563887,,5.244116500005475
+14969,GesturePhaseSegmentationProcessed,0,26,MinMaxScaler,None,SVM,7898,1975,ok,,0.34145834393212926,0.2887799136679705,,5.70515670000168
+14969,GesturePhaseSegmentationProcessed,1,26,MinMaxScaler,None,SVM,7898,1975,ok,,0.33252545037460035,0.2642287613508129,,6.260286999997334
+14969,GesturePhaseSegmentationProcessed,2,26,MinMaxScaler,None,SVM,7898,1975,ok,,0.3193906676077548,0.25562877863235084,,5.367998100002296
+14969,GesturePhaseSegmentationProcessed,3,26,MinMaxScaler,None,SVM,7899,1974,ok,,0.33768371533427316,0.2787008978261118,,5.891527600004338
+14969,GesturePhaseSegmentationProcessed,4,26,MinMaxScaler,None,SVM,7899,1974,ok,,0.32910548401175654,0.26188291298000366,,6.99526060000062
+14969,GesturePhaseSegmentationProcessed,0,27,MinMaxScaler,None,kNN,7898,1975,ok,,0.5322740436253064,0.5352291135394631,,0.11672839999664575
+14969,GesturePhaseSegmentationProcessed,1,27,MinMaxScaler,None,kNN,7898,1975,ok,,0.5251141012950875,0.5309696321845384,,0.17942389998643193
+14969,GesturePhaseSegmentationProcessed,2,27,MinMaxScaler,None,kNN,7898,1975,ok,,0.5376167392264817,0.5442236440279216,,0.1322747999947751
+14969,GesturePhaseSegmentationProcessed,3,27,MinMaxScaler,None,kNN,7899,1974,ok,,0.558913866934885,0.559996642000122,,0.11039000000164378
+14969,GesturePhaseSegmentationProcessed,4,27,MinMaxScaler,None,kNN,7899,1974,ok,,0.5308542656957155,0.5311618776239119,,0.11633460001030471
+14969,GesturePhaseSegmentationProcessed,0,28,MinMaxScaler,None,MLP,7898,1975,ok,,0.42325000322562634,0.41670080959724787,,8.659232100006193
+14969,GesturePhaseSegmentationProcessed,1,28,MinMaxScaler,None,MLP,7898,1975,ok,,0.4078939824491967,0.4045843500305882,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.901444799994351
+14969,GesturePhaseSegmentationProcessed,2,28,MinMaxScaler,None,MLP,7898,1975,ok,,0.433491363525594,0.42808617969937945,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.44625820001238
+14969,GesturePhaseSegmentationProcessed,3,28,MinMaxScaler,None,MLP,7899,1974,ok,,0.43835720306078585,0.43593635835693556,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.47760610000114
+14969,GesturePhaseSegmentationProcessed,4,28,MinMaxScaler,None,MLP,7899,1974,ok,,0.42331340709337634,0.40875680746886706,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.283145900000818
+14969,GesturePhaseSegmentationProcessed,0,29,MinMaxScaler,None,DecisionTree,7898,1975,ok,,0.4710325069977485,0.4718857147372907,,0.4368101000000024
+14969,GesturePhaseSegmentationProcessed,1,29,MinMaxScaler,None,DecisionTree,7898,1975,ok,,0.4758723931738144,0.4786593206316252,,0.381526400000439
+14969,GesturePhaseSegmentationProcessed,2,29,MinMaxScaler,None,DecisionTree,7898,1975,ok,,0.4659836979350939,0.46984102981262954,,0.32054459999199025
+14969,GesturePhaseSegmentationProcessed,3,29,MinMaxScaler,None,DecisionTree,7899,1974,ok,,0.4789716092774685,0.48238219047579933,,0.3463110000011511
+14969,GesturePhaseSegmentationProcessed,4,29,MinMaxScaler,None,DecisionTree,7899,1974,ok,,0.46222950767179166,0.4684170991093669,,0.33691329999419395
+14969,GesturePhaseSegmentationProcessed,0,30,RobustScaler,PCA,RandomForest,7898,1975,ok,,0.45752971237952533,0.4672218471630153,,3.4197313000040594
+14969,GesturePhaseSegmentationProcessed,1,30,RobustScaler,PCA,RandomForest,7898,1975,ok,,0.45432302121722434,0.46013562232449756,,3.107603399999789
+14969,GesturePhaseSegmentationProcessed,2,30,RobustScaler,PCA,RandomForest,7898,1975,ok,,0.45001685139392633,0.45296594720917155,,3.072807399992598
+14969,GesturePhaseSegmentationProcessed,3,30,RobustScaler,PCA,RandomForest,7899,1974,ok,,0.459473887572153,0.466816680648307,,3.089154699991923
+14969,GesturePhaseSegmentationProcessed,4,30,RobustScaler,PCA,RandomForest,7899,1974,ok,,0.4599300917782294,0.4671449231886567,,3.313017199994647
+14969,GesturePhaseSegmentationProcessed,0,31,RobustScaler,PCA,SVM,7898,1975,ok,,0.31603597219431856,0.27455529310778815,,6.345207099991967
+14969,GesturePhaseSegmentationProcessed,1,31,RobustScaler,PCA,SVM,7898,1975,ok,,0.3067791957593012,0.25963012581238254,,5.614675799995894
+14969,GesturePhaseSegmentationProcessed,2,31,RobustScaler,PCA,SVM,7898,1975,ok,,0.30958856654791134,0.2655211195548402,,5.495420100007323
+14969,GesturePhaseSegmentationProcessed,3,31,RobustScaler,PCA,SVM,7899,1974,ok,,0.3150124118833646,0.27066944581677166,,5.5372703000030015
+14969,GesturePhaseSegmentationProcessed,4,31,RobustScaler,PCA,SVM,7899,1974,ok,,0.3193786531892836,0.273026766851959,,6.0205062000022735
+14969,GesturePhaseSegmentationProcessed,0,32,RobustScaler,PCA,kNN,7898,1975,ok,,0.43343466890503046,0.4317066240700064,,0.27703480000491254
+14969,GesturePhaseSegmentationProcessed,1,32,RobustScaler,PCA,kNN,7898,1975,ok,,0.4396187619493362,0.4402997378779581,,0.2342759000021033
+14969,GesturePhaseSegmentationProcessed,2,32,RobustScaler,PCA,kNN,7898,1975,ok,,0.4456023637980507,0.44655463488684005,,0.23443009999755304
+14969,GesturePhaseSegmentationProcessed,3,32,RobustScaler,PCA,kNN,7899,1974,ok,,0.44330798935604,0.4443668413182621,,0.2835083000099985
+14969,GesturePhaseSegmentationProcessed,4,32,RobustScaler,PCA,kNN,7899,1974,ok,,0.44491545260023313,0.4438428070344195,,0.22988749999785796
+14969,GesturePhaseSegmentationProcessed,0,33,RobustScaler,PCA,MLP,7898,1975,ok,,0.4090792946247376,0.40800681991445886,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.56694210000569
+14969,GesturePhaseSegmentationProcessed,1,33,RobustScaler,PCA,MLP,7898,1975,ok,,0.39047591103587925,0.3854141923562587,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.178723700009868
+14969,GesturePhaseSegmentationProcessed,2,33,RobustScaler,PCA,MLP,7898,1975,ok,,0.3950216258492077,0.3903513085299248,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.00306790000468
+14969,GesturePhaseSegmentationProcessed,3,33,RobustScaler,PCA,MLP,7899,1974,ok,,0.41192936642403477,0.4088539310030484,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.373951400004444
+14969,GesturePhaseSegmentationProcessed,4,33,RobustScaler,PCA,MLP,7899,1974,ok,,0.4143309746308308,0.4117009193056652,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.420178099986515
+14969,GesturePhaseSegmentationProcessed,0,34,RobustScaler,PCA,DecisionTree,7898,1975,ok,,0.36758919176141264,0.36748349505254835,,0.11692740001308266
+14969,GesturePhaseSegmentationProcessed,1,34,RobustScaler,PCA,DecisionTree,7898,1975,ok,,0.3760974713270596,0.3733395108625932,,0.10669909999705851
+14969,GesturePhaseSegmentationProcessed,2,34,RobustScaler,PCA,DecisionTree,7898,1975,ok,,0.3853741585543511,0.3766651798828732,,0.10743029999139253
+14969,GesturePhaseSegmentationProcessed,3,34,RobustScaler,PCA,DecisionTree,7899,1974,ok,,0.37892454601520076,0.3760095306619406,,0.10420510001131333
+14969,GesturePhaseSegmentationProcessed,4,34,RobustScaler,PCA,DecisionTree,7899,1974,ok,,0.3840249350520656,0.38080808171298663,,0.1398031999997329
+14969,GesturePhaseSegmentationProcessed,0,35,RobustScaler,SelectKBest,RandomForest,7898,1975,ok,,0.4625180867541214,0.4733181339537461,,3.2572122999990825
+14969,GesturePhaseSegmentationProcessed,1,35,RobustScaler,SelectKBest,RandomForest,7898,1975,ok,,0.4592782571469528,0.46518485534450366,,3.563842699993984
+14969,GesturePhaseSegmentationProcessed,2,35,RobustScaler,SelectKBest,RandomForest,7898,1975,ok,,0.48318905631826,0.4965700116415993,,3.3578830000042217
+14969,GesturePhaseSegmentationProcessed,3,35,RobustScaler,SelectKBest,RandomForest,7899,1974,ok,,0.47576521458640186,0.4829450888360666,,3.1225293000024976
+14969,GesturePhaseSegmentationProcessed,4,35,RobustScaler,SelectKBest,RandomForest,7899,1974,ok,,0.46905208717194685,0.4801316020522227,,3.498054300012882
+14969,GesturePhaseSegmentationProcessed,0,36,RobustScaler,SelectKBest,SVM,7898,1975,ok,,0.3764639848061012,0.3502337758337234,,5.1032443000003695
+14969,GesturePhaseSegmentationProcessed,1,36,RobustScaler,SelectKBest,SVM,7898,1975,ok,,0.35383415280894615,0.3169891624497415,,5.3988484000001336
+14969,GesturePhaseSegmentationProcessed,2,36,RobustScaler,SelectKBest,SVM,7898,1975,ok,,0.37721085293358936,0.35103318016315205,,4.847002199996496
+14969,GesturePhaseSegmentationProcessed,3,36,RobustScaler,SelectKBest,SVM,7899,1974,ok,,0.38402484903033884,0.35357154892422205,,5.359965600000578
+14969,GesturePhaseSegmentationProcessed,4,36,RobustScaler,SelectKBest,SVM,7899,1974,ok,,0.37301642541330055,0.3453735797159608,,4.829415799991693
+14969,GesturePhaseSegmentationProcessed,0,37,RobustScaler,SelectKBest,kNN,7898,1975,ok,,0.4369483296562958,0.43784397981057843,,0.1283191000111401
+14969,GesturePhaseSegmentationProcessed,1,37,RobustScaler,SelectKBest,kNN,7898,1975,ok,,0.43284916899403525,0.43291723202958493,,0.1501690999866696
+14969,GesturePhaseSegmentationProcessed,2,37,RobustScaler,SelectKBest,kNN,7898,1975,ok,,0.4470730880480879,0.4486361466475851,,0.1206772000005003
+14969,GesturePhaseSegmentationProcessed,3,37,RobustScaler,SelectKBest,kNN,7899,1974,ok,,0.4616899146311105,0.4641064118514552,,0.14081130000704434
+14969,GesturePhaseSegmentationProcessed,4,37,RobustScaler,SelectKBest,kNN,7899,1974,ok,,0.45018715817019395,0.4515824275014605,,0.11538909999944735
+14969,GesturePhaseSegmentationProcessed,0,38,RobustScaler,SelectKBest,MLP,7898,1975,ok,,0.4321586344590071,0.43064975203536704,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.247954799997387
+14969,GesturePhaseSegmentationProcessed,1,38,RobustScaler,SelectKBest,MLP,7898,1975,ok,,0.4140854181862118,0.4154505377833508,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.837122199998703
+14969,GesturePhaseSegmentationProcessed,2,38,RobustScaler,SelectKBest,MLP,7898,1975,ok,,0.43198545513112324,0.43645512178593,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.706963100004941
+14969,GesturePhaseSegmentationProcessed,3,38,RobustScaler,SelectKBest,MLP,7899,1974,ok,,0.4386435188985304,0.440374426269337,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.891731700001401
+14969,GesturePhaseSegmentationProcessed,4,38,RobustScaler,SelectKBest,MLP,7899,1974,ok,,0.4294275816575766,0.43232159057097697,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.897556500000064
+14969,GesturePhaseSegmentationProcessed,0,39,RobustScaler,SelectKBest,DecisionTree,7898,1975,ok,,0.41753670885458655,0.42213894312412803,,0.10606550000375137
+14969,GesturePhaseSegmentationProcessed,1,39,RobustScaler,SelectKBest,DecisionTree,7898,1975,ok,,0.43107676107963366,0.43650218668308105,,0.13120450000860728
+14969,GesturePhaseSegmentationProcessed,2,39,RobustScaler,SelectKBest,DecisionTree,7898,1975,ok,,0.4079279304368443,0.4122019241258146,,0.1078910999931395
+14969,GesturePhaseSegmentationProcessed,3,39,RobustScaler,SelectKBest,DecisionTree,7899,1974,ok,,0.395912907614384,0.39759783545274646,,0.10404539998853579
+14969,GesturePhaseSegmentationProcessed,4,39,RobustScaler,SelectKBest,DecisionTree,7899,1974,ok,,0.4036557564810857,0.40515176775453166,,0.11359339999035001
+14969,GesturePhaseSegmentationProcessed,0,40,RobustScaler,None,RandomForest,7898,1975,ok,,0.600682565807066,0.6246706125138943,,4.926821700006258
+14969,GesturePhaseSegmentationProcessed,1,40,RobustScaler,None,RandomForest,7898,1975,ok,,0.5863550622587986,0.6114006818219901,,5.857671900012065
+14969,GesturePhaseSegmentationProcessed,2,40,RobustScaler,None,RandomForest,7898,1975,ok,,0.5782845151745215,0.6025178725677423,,5.049190499994438
+14969,GesturePhaseSegmentationProcessed,3,40,RobustScaler,None,RandomForest,7899,1974,ok,,0.6030550189099554,0.6219288656525297,,5.210364600003231
+14969,GesturePhaseSegmentationProcessed,4,40,RobustScaler,None,RandomForest,7899,1974,ok,,0.5965166863134421,0.6233476695625633,,5.055420399992727
+14969,GesturePhaseSegmentationProcessed,0,41,RobustScaler,None,SVM,7898,1975,ok,,0.3921618555649862,0.374205093850955,,7.023600599990459
+14969,GesturePhaseSegmentationProcessed,1,41,RobustScaler,None,SVM,7898,1975,ok,,0.3909938426406899,0.3681997518717964,,7.05608540000685
+14969,GesturePhaseSegmentationProcessed,2,41,RobustScaler,None,SVM,7898,1975,ok,,0.38089111008651017,0.36038437233567,,6.435083799995482
+14969,GesturePhaseSegmentationProcessed,3,41,RobustScaler,None,SVM,7899,1974,ok,,0.4045613462903135,0.38329843911815475,,5.833743399998639
+14969,GesturePhaseSegmentationProcessed,4,41,RobustScaler,None,SVM,7899,1974,ok,,0.41603177579449546,0.3982082593248936,,6.023984499988728
+14969,GesturePhaseSegmentationProcessed,0,42,RobustScaler,None,kNN,7898,1975,ok,,0.5195955242655721,0.5221405342821723,,0.11862409999594092
+14969,GesturePhaseSegmentationProcessed,1,42,RobustScaler,None,kNN,7898,1975,ok,,0.5042925619652847,0.5093010020469089,,0.1128993000020273
+14969,GesturePhaseSegmentationProcessed,2,42,RobustScaler,None,kNN,7898,1975,ok,,0.5153995044481183,0.5185003520624499,,0.11840039999515284
+14969,GesturePhaseSegmentationProcessed,3,42,RobustScaler,None,kNN,7899,1974,ok,,0.5267939980671018,0.5307401106231416,,0.11292430000321474
+14969,GesturePhaseSegmentationProcessed,4,42,RobustScaler,None,kNN,7899,1974,ok,,0.5076454845671015,0.5106508032989747,,0.12660760000289883
+14969,GesturePhaseSegmentationProcessed,0,43,RobustScaler,None,MLP,7898,1975,ok,,0.4755793474233495,0.4767908237533522,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.560595600007218
+14969,GesturePhaseSegmentationProcessed,1,43,RobustScaler,None,MLP,7898,1975,ok,,0.5014024803398184,0.5042327615300949,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,10.135932799996226
+14969,GesturePhaseSegmentationProcessed,2,43,RobustScaler,None,MLP,7898,1975,ok,,0.48147728715780336,0.48260921696241155,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.426512200006982
+14969,GesturePhaseSegmentationProcessed,3,43,RobustScaler,None,MLP,7899,1974,ok,,0.5168473235164981,0.5179932268914371,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.733150100000785
+14969,GesturePhaseSegmentationProcessed,4,43,RobustScaler,None,MLP,7899,1974,ok,,0.5176178420784757,0.5195124588930176,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,10.154136500001187
+14969,GesturePhaseSegmentationProcessed,0,44,RobustScaler,None,DecisionTree,7898,1975,ok,,0.4710325069977485,0.4718857147372907,,0.3676975999987917
+14969,GesturePhaseSegmentationProcessed,1,44,RobustScaler,None,DecisionTree,7898,1975,ok,,0.4758723931738144,0.4786593206316252,,0.3415585999900941
+14969,GesturePhaseSegmentationProcessed,2,44,RobustScaler,None,DecisionTree,7898,1975,ok,,0.4659836979350939,0.46984102981262954,,0.31236369999533053
+14969,GesturePhaseSegmentationProcessed,3,44,RobustScaler,None,DecisionTree,7899,1974,ok,,0.4789716092774685,0.48238219047579933,,0.35150429999339394
+14969,GesturePhaseSegmentationProcessed,4,44,RobustScaler,None,DecisionTree,7899,1974,ok,,0.46222950767179166,0.4684170991093669,,0.3804029000020819
+14969,GesturePhaseSegmentationProcessed,0,45,None,PCA,RandomForest,7898,1975,ok,,0.5897428059009734,0.6064543899293064,,3.2231971000001067
+14969,GesturePhaseSegmentationProcessed,1,45,None,PCA,RandomForest,7898,1975,ok,,0.5775698877490087,0.594311035866318,,3.062506000002031
+14969,GesturePhaseSegmentationProcessed,2,45,None,PCA,RandomForest,7898,1975,ok,,0.5661197422774269,0.5868130784249985,,3.4614978000026895
+14969,GesturePhaseSegmentationProcessed,3,45,None,PCA,RandomForest,7899,1974,ok,,0.5895128689081448,0.6042954759426123,,3.5836991999967722
+14969,GesturePhaseSegmentationProcessed,4,45,None,PCA,RandomForest,7899,1974,ok,,0.5923430559265221,0.6055946167138488,,3.6608781999966595
+14969,GesturePhaseSegmentationProcessed,0,46,None,PCA,SVM,7898,1975,ok,,0.4272416738975314,0.41348094960103055,,4.627384699997492
+14969,GesturePhaseSegmentationProcessed,1,46,None,PCA,SVM,7898,1975,ok,,0.42812164754175763,0.4147671366585996,,4.494473700004164
+14969,GesturePhaseSegmentationProcessed,2,46,None,PCA,SVM,7898,1975,ok,,0.43638584247585743,0.4287665150805128,,7.94017509999685
+14969,GesturePhaseSegmentationProcessed,3,46,None,PCA,SVM,7899,1974,ok,,0.43706023085643453,0.42303871415608585,,4.907393999994383
+14969,GesturePhaseSegmentationProcessed,4,46,None,PCA,SVM,7899,1974,ok,,0.4402511828256156,0.42731241001668624,,4.377200900009484
+14969,GesturePhaseSegmentationProcessed,0,47,None,PCA,kNN,7898,1975,ok,,0.5679517541294494,0.5710898214589488,,0.1268943000031868
+14969,GesturePhaseSegmentationProcessed,1,47,None,PCA,kNN,7898,1975,ok,,0.5441677869137235,0.5452552961521023,,0.1266829000087455
+14969,GesturePhaseSegmentationProcessed,2,47,None,PCA,kNN,7898,1975,ok,,0.555681493079934,0.5603485668688272,,0.12023729999782518
+14969,GesturePhaseSegmentationProcessed,3,47,None,PCA,kNN,7899,1974,ok,,0.567081955708828,0.5687600518196785,,0.1228409999894211
+14969,GesturePhaseSegmentationProcessed,4,47,None,PCA,kNN,7899,1974,ok,,0.5565398278206699,0.5594275829424118,,0.12705409999762196
+14969,GesturePhaseSegmentationProcessed,0,48,None,PCA,MLP,7898,1975,ok,,0.402916075929852,0.38231251469522315,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.66601480000827
+14969,GesturePhaseSegmentationProcessed,1,48,None,PCA,MLP,7898,1975,ok,,0.40975736335778423,0.3888060386921673,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.680492699990282
+14969,GesturePhaseSegmentationProcessed,2,48,None,PCA,MLP,7898,1975,ok,,0.40545594535332874,0.38341527336394476,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.935678499998176
+14969,GesturePhaseSegmentationProcessed,3,48,None,PCA,MLP,7899,1974,ok,,0.40698884495638143,0.3846646467269094,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.237610399999539
+14969,GesturePhaseSegmentationProcessed,4,48,None,PCA,MLP,7899,1974,ok,,0.39599480855205477,0.37371924535456724,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.3913876000005985
+14969,GesturePhaseSegmentationProcessed,0,49,None,PCA,DecisionTree,7898,1975,ok,,0.4345728229340226,0.4343325391722047,,0.11115870000503492
+14969,GesturePhaseSegmentationProcessed,1,49,None,PCA,DecisionTree,7898,1975,ok,,0.4441233432042628,0.44759752151582666,,0.11151249999238644
+14969,GesturePhaseSegmentationProcessed,2,49,None,PCA,DecisionTree,7898,1975,ok,,0.46181512910073524,0.4654559203148546,,0.10769889999937732
+14969,GesturePhaseSegmentationProcessed,3,49,None,PCA,DecisionTree,7899,1974,ok,,0.44681865930284037,0.4481744772657752,,0.11193690000800416
+14969,GesturePhaseSegmentationProcessed,4,49,None,PCA,DecisionTree,7899,1974,ok,,0.4427734064985719,0.44026571987291047,,0.11656880000373349
+14969,GesturePhaseSegmentationProcessed,0,50,None,SelectKBest,RandomForest,7898,1975,ok,,0.46988132773439356,0.4796907298613247,,3.6581408999918494
+14969,GesturePhaseSegmentationProcessed,1,50,None,SelectKBest,RandomForest,7898,1975,ok,,0.4656126725237863,0.472414732005752,,3.1459786999912467
+14969,GesturePhaseSegmentationProcessed,2,50,None,SelectKBest,RandomForest,7898,1975,ok,,0.4807428147335047,0.49517104430704695,,3.372200800004066
+14969,GesturePhaseSegmentationProcessed,3,50,None,SelectKBest,RandomForest,7899,1974,ok,,0.4797718294299537,0.48707681648385187,,3.192384800000582
+14969,GesturePhaseSegmentationProcessed,4,50,None,SelectKBest,RandomForest,7899,1974,ok,,0.46610035338860134,0.4757895209589732,,3.2763220999913756
+14969,GesturePhaseSegmentationProcessed,0,51,None,SelectKBest,SVM,7898,1975,ok,,0.37317722542286974,0.3463713833945027,,4.775699500009068
+14969,GesturePhaseSegmentationProcessed,1,51,None,SelectKBest,SVM,7898,1975,ok,,0.36629227021989824,0.3342247072523965,,5.126505099993665
+14969,GesturePhaseSegmentationProcessed,2,51,None,SelectKBest,SVM,7898,1975,ok,,0.37078753354583677,0.34265617927692904,,4.59436079999432
+14969,GesturePhaseSegmentationProcessed,3,51,None,SelectKBest,SVM,7899,1974,ok,,0.3762104765458204,0.34592153019925165,,4.492615399998613
+14969,GesturePhaseSegmentationProcessed,4,51,None,SelectKBest,SVM,7899,1974,ok,,0.3704988990028581,0.3418934890125041,,5.700911399995675
+14969,GesturePhaseSegmentationProcessed,0,52,None,SelectKBest,kNN,7898,1975,ok,,0.4511922510243571,0.4538387935014233,,0.11905829999886919
+14969,GesturePhaseSegmentationProcessed,1,52,None,SelectKBest,kNN,7898,1975,ok,,0.4384936273202065,0.4378890496433325,,0.08617169999342877
+14969,GesturePhaseSegmentationProcessed,2,52,None,SelectKBest,kNN,7898,1975,ok,,0.4452282474244197,0.44713042307800926,,0.1519782999966992
+14969,GesturePhaseSegmentationProcessed,3,52,None,SelectKBest,kNN,7899,1974,ok,,0.4456202434031429,0.4468844571109881,,0.08654739998746663
+14969,GesturePhaseSegmentationProcessed,4,52,None,SelectKBest,kNN,7899,1974,ok,,0.439719924956888,0.4408077210330692,,0.09182990000408608
+14969,GesturePhaseSegmentationProcessed,0,53,None,SelectKBest,MLP,7898,1975,ok,,0.36860351965852844,0.3406090416178912,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.348706400007359
+14969,GesturePhaseSegmentationProcessed,1,53,None,SelectKBest,MLP,7898,1975,ok,,0.35309597720504293,0.3225371765125248,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.1323658999899635
+14969,GesturePhaseSegmentationProcessed,2,53,None,SelectKBest,MLP,7898,1975,ok,,0.37328405592329084,0.3466634734238392,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.405096499991487
+14969,GesturePhaseSegmentationProcessed,3,53,None,SelectKBest,MLP,7899,1974,ok,,0.36716395543405655,0.3385051229930345,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.0371480000030715
+14969,GesturePhaseSegmentationProcessed,4,53,None,SelectKBest,MLP,7899,1974,ok,,0.35833649364303455,0.32455783415369793,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.757784500005073
+14969,GesturePhaseSegmentationProcessed,0,54,None,SelectKBest,DecisionTree,7898,1975,ok,,0.41672977039085274,0.4211211788885566,,0.10876740000094287
+14969,GesturePhaseSegmentationProcessed,1,54,None,SelectKBest,DecisionTree,7898,1975,ok,,0.4314311203168334,0.4372254828507832,,0.10786990000633523
+14969,GesturePhaseSegmentationProcessed,2,54,None,SelectKBest,DecisionTree,7898,1975,ok,,0.40716761912541594,0.412301158064745,,0.10947809999925084
+14969,GesturePhaseSegmentationProcessed,3,54,None,SelectKBest,DecisionTree,7899,1974,ok,,0.4003808036276796,0.4024730542914824,,0.10713730000134092
+14969,GesturePhaseSegmentationProcessed,4,54,None,SelectKBest,DecisionTree,7899,1974,ok,,0.4017095870679677,0.40579468927938195,,0.11290799999551382
+14969,GesturePhaseSegmentationProcessed,0,55,None,None,RandomForest,7898,1975,ok,,0.5980201482014473,0.6214327237303456,,6.1989532000006875
+14969,GesturePhaseSegmentationProcessed,1,55,None,None,RandomForest,7898,1975,ok,,0.593461715377628,0.6194966183983968,,4.631919699997525
+14969,GesturePhaseSegmentationProcessed,2,55,None,None,RandomForest,7898,1975,ok,,0.5806496613406112,0.603947213471984,,5.102509399992414
+14969,GesturePhaseSegmentationProcessed,3,55,None,None,RandomForest,7899,1974,ok,,0.5958993328661318,0.6140478359240866,,4.792475500013097
+14969,GesturePhaseSegmentationProcessed,4,55,None,None,RandomForest,7899,1974,ok,,0.5972610801722642,0.6206112931192007,,4.937426200005575
+14969,GesturePhaseSegmentationProcessed,0,56,None,None,SVM,7898,1975,ok,,0.43792813264847874,0.42409644530728813,,5.7970069000002695
+14969,GesturePhaseSegmentationProcessed,1,56,None,None,SVM,7898,1975,ok,,0.42369298463014216,0.40810715245756146,,5.316915599993081
+14969,GesturePhaseSegmentationProcessed,2,56,None,None,SVM,7898,1975,ok,,0.4339144804953209,0.4229501803651763,,5.745003299991367
+14969,GesturePhaseSegmentationProcessed,3,56,None,None,SVM,7899,1974,ok,,0.438780661063744,0.4261473040024894,,5.034841299988329
+14969,GesturePhaseSegmentationProcessed,4,56,None,None,SVM,7899,1974,ok,,0.44011870176031814,0.42655610842212194,,5.25063229999796
+14969,GesturePhaseSegmentationProcessed,0,57,None,None,kNN,7898,1975,ok,,0.5542212561498776,0.5557656541222071,,0.12282029999187216
+14969,GesturePhaseSegmentationProcessed,1,57,None,None,kNN,7898,1975,ok,,0.5600030633135206,0.5610722901830758,,0.11651490000076592
+14969,GesturePhaseSegmentationProcessed,2,57,None,None,kNN,7898,1975,ok,,0.5622079430587019,0.5674468143186624,,0.11785619999864139
+14969,GesturePhaseSegmentationProcessed,3,57,None,None,kNN,7899,1974,ok,,0.5817908999610057,0.5834774695205496,,0.12074589999974705
+14969,GesturePhaseSegmentationProcessed,4,57,None,None,kNN,7899,1974,ok,,0.5620611801787125,0.5657175551788962,,0.11499629999161698
+14969,GesturePhaseSegmentationProcessed,0,58,None,None,MLP,7898,1975,ok,,0.42073601173709074,0.4002137703701999,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.560548499997822
+14969,GesturePhaseSegmentationProcessed,1,58,None,None,MLP,7898,1975,ok,,0.4104073011185231,0.3880216083201798,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.860893100005342
+14969,GesturePhaseSegmentationProcessed,2,58,None,None,MLP,7898,1975,ok,,0.4329092968127718,0.4111318525146963,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.662015199995949
+14969,GesturePhaseSegmentationProcessed,3,58,None,None,MLP,7899,1974,ok,,0.4366682874505231,0.4160685998886563,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.380880400000024
+14969,GesturePhaseSegmentationProcessed,4,58,None,None,MLP,7899,1974,ok,,0.4276200076053711,0.4016190918742609,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.045029699991574
+14969,GesturePhaseSegmentationProcessed,0,59,None,None,DecisionTree,7898,1975,ok,,0.46227788046116575,0.46171338313897825,,0.3205069999967236
+14969,GesturePhaseSegmentationProcessed,1,59,None,None,DecisionTree,7898,1975,ok,,0.4740500621221747,0.47692362198714056,,0.3095452999987174
+14969,GesturePhaseSegmentationProcessed,2,59,None,None,DecisionTree,7898,1975,ok,,0.46443261199988894,0.4676441577515905,,0.3039137000014307
+14969,GesturePhaseSegmentationProcessed,3,59,None,None,DecisionTree,7899,1974,ok,,0.46861698676507296,0.4725459056018666,,0.328493700013496
+14969,GesturePhaseSegmentationProcessed,4,59,None,None,DecisionTree,7899,1974,ok,,0.4595242581085639,0.4650244235197064,,0.3245885999931488

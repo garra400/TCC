@@ -1,0 +1,67 @@
+{
+  "status": "complete",
+  "config": {
+    "seed": 42,
+    "folds": 5,
+    "workers": 4,
+    "min_instances": 500,
+    "max_instances": 10000,
+    "min_class_count": 5,
+    "sampling": "none_same_all_rows_all_classifiers",
+    "scalers": [
+      "StandardScaler",
+      "MinMaxScaler",
+      "RobustScaler",
+      "None"
+    ],
+    "selectors": [
+      "PCA",
+      "SelectKBest",
+      "None"
+    ],
+    "classifiers": [
+      "RandomForest",
+      "SVM",
+      "kNN",
+      "MLP",
+      "DecisionTree"
+    ],
+    "rf_estimators": 100,
+    "mlp_hidden": [
+      64,
+      32
+    ],
+    "mlp_max_iter": 200,
+    "decision_tree_max_depth": 10,
+    "classifier_knn_k": 5,
+    "selector_max_features": 10,
+    "pca_solver": "auto"
+  },
+  "config_sha256": "1b0d1e85dcbb9e3007b8fcf22d2fb625a639ad2940c19ce751ef66fa1d902d29",
+  "code_sha256": "531c03168801f834489ac9ca47c33112f44bfd31d930b2a3d795d917a488fc02",
+  "preprocessing_sha256": "7ee7ffd6b5ae6011e2f9126ed42c3ae5520c72bdc17c65a55cd386459278504f",
+  "python": "3.14.2",
+  "packages": {
+    "numpy": "2.4.3",
+    "pandas": "3.0.1",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "openml": "0.15.1"
+  },
+  "n_tasks": 193,
+  "n_groups": 165,
+  "n_pipelines": 60,
+  "n_fits": 57900,
+  "failed_fits": 0,
+  "convergence_warnings": 7703,
+  "missing_scores": 0,
+  "artifacts_sha256": {
+    "datasets.csv": "ec27fbf813f91e45d77a4e152401691bafde0a288dcba37fb7f17c7347ee6a16",
+    "task_ids.npy": "a8de3c1cd87bafc6d9f32a27ee63becf9012aca5cecaa12a2d956ae9351445d0",
+    "X_emb.npy": "c718b006b88743ea6006473415a76fa7deee7334abda37752b8a54a03d3256ab",
+    "Y_accuracy.npy": "06b0d9cb0ecd661559a3dcea8d50cec9ea0db0575e43746878c1751d469f4e88",
+    "pipelines_raw.csv": "a0352140aa12a75ed351525512c577d322b4f0535bfb8040140d4a6579b0009b"
+  },
+  "sampling": "all rows, same folds for all classifiers",
+  "preprocessing": "fitted exclusively on each training fold"
+}

@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+14,mfeat-fourier,0,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.7300000000000001,0.7280920902483454,,0.7548621000023559
+14,mfeat-fourier,1,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.6900000000000001,0.6847598900867445,,0.7605156999925384
+14,mfeat-fourier,2,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.7225,0.7172770944828217,,0.7175978000013856
+14,mfeat-fourier,3,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.7525000000000001,0.7515233869696156,,0.8612362999992911
+14,mfeat-fourier,4,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.7475,0.7425513206779354,,0.727387600010843
+14,mfeat-fourier,0,1,StandardScaler,PCA,SVM,1600,400,ok,,0.7375,0.7324099150198508,,0.13401760000851937
+14,mfeat-fourier,1,1,StandardScaler,PCA,SVM,1600,400,ok,,0.7,0.6966008277210534,,0.13851370000338648
+14,mfeat-fourier,2,1,StandardScaler,PCA,SVM,1600,400,ok,,0.74,0.7369424245405138,,0.1348479000007501
+14,mfeat-fourier,3,1,StandardScaler,PCA,SVM,1600,400,ok,,0.7575000000000001,0.755790350485084,,0.13567750000220258
+14,mfeat-fourier,4,1,StandardScaler,PCA,SVM,1600,400,ok,,0.76,0.7530464999017877,,0.1334262000018498
+14,mfeat-fourier,0,2,StandardScaler,PCA,kNN,1600,400,ok,,0.7074999999999999,0.7058935509097125,,0.021393900009570643
+14,mfeat-fourier,1,2,StandardScaler,PCA,kNN,1600,400,ok,,0.7125000000000001,0.7114505601113595,,0.021183300006669015
+14,mfeat-fourier,2,2,StandardScaler,PCA,kNN,1600,400,ok,,0.7075,0.7071614516901388,,0.01930109999375418
+14,mfeat-fourier,3,2,StandardScaler,PCA,kNN,1600,400,ok,,0.7475,0.7465878860605789,,0.020276299997931346
+14,mfeat-fourier,4,2,StandardScaler,PCA,kNN,1600,400,ok,,0.7575000000000001,0.7506275454381054,,0.02158449999114964
+14,mfeat-fourier,0,3,StandardScaler,PCA,MLP,1600,400,ok,,0.725,0.7223985079249534,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.6246268000104465
+14,mfeat-fourier,1,3,StandardScaler,PCA,MLP,1600,400,ok,,0.7274999999999999,0.7252655325540289,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9886600999889197
+14,mfeat-fourier,2,3,StandardScaler,PCA,MLP,1600,400,ok,,0.7475,0.7457184486657951,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8358254000049783
+14,mfeat-fourier,3,3,StandardScaler,PCA,MLP,1600,400,ok,,0.7274999999999999,0.7266693862733109,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.810112699997262
+14,mfeat-fourier,4,3,StandardScaler,PCA,MLP,1600,400,ok,,0.7675,0.7640490741289827,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9160198000026867
+14,mfeat-fourier,0,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.5925,0.5871532454380024,,0.0274753999983659
+14,mfeat-fourier,1,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.6225,0.6175855417218095,,0.026508400012971833
+14,mfeat-fourier,2,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.5900000000000001,0.5864808753068285,,0.025282100003096275
+14,mfeat-fourier,3,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.625,0.6271421720784656,,0.02713699999731034
+14,mfeat-fourier,4,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.6425000000000001,0.6397686294596465,,0.026547700006631203
+14,mfeat-fourier,0,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.8324999999999999,0.8308075684524718,,0.6829663999960758
+14,mfeat-fourier,1,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.8225,0.8236256063046674,,0.8675060999958077
+14,mfeat-fourier,2,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.8550000000000001,0.8545733922461803,,0.6696211999951629
+14,mfeat-fourier,3,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.8274999999999999,0.8284689256098975,,0.6884565000073053
+14,mfeat-fourier,4,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.86,0.8580548977037731,,0.7124033000000054
+14,mfeat-fourier,0,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.8574999999999999,0.8568752336341667,,0.08795620000455528
+14,mfeat-fourier,1,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.8600000000000001,0.860569352400329,,0.08279479999328032
+14,mfeat-fourier,2,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.8574999999999999,0.8562670202662781,,0.09466420000535436
+14,mfeat-fourier,3,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.8724999999999999,0.8721374959482849,,0.09156119999533985
+14,mfeat-fourier,4,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.85,0.8477472624220896,,0.11662210000213236
+14,mfeat-fourier,0,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.8525,0.8515786141968243,,0.01820319998660125
+14,mfeat-fourier,1,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.8275,0.829170304158246,,0.0193963000056101
+14,mfeat-fourier,2,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.8550000000000001,0.8536894491090221,,0.019356699995114468
+14,mfeat-fourier,3,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.8275,0.826850328972253,,0.02438619999156799
+14,mfeat-fourier,4,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.845,0.8448393481815428,,0.019777800000156276
+14,mfeat-fourier,0,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.8574999999999999,0.8537191337990881,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.16320860000269
+14,mfeat-fourier,1,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.8699999999999999,0.8701035041759448,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8980176999903051
+14,mfeat-fourier,2,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.875,0.8745926969274016,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.156145100001595
+14,mfeat-fourier,3,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.875,0.8742775023527741,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.45877909999399
+14,mfeat-fourier,4,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.8550000000000001,0.8527525407768518,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8814272999879904
+14,mfeat-fourier,0,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7925,0.7906705556389101,,0.027328700001817197
+14,mfeat-fourier,1,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7749999999999999,0.7740227243173756,,0.027327199990395457
+14,mfeat-fourier,2,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7649999999999999,0.7639652420354175,,0.02544789999956265
+14,mfeat-fourier,3,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.77,0.773901376638171,,0.025008299999171868
+14,mfeat-fourier,4,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7475,0.7470580415459672,,0.02613849999033846
+14,mfeat-fourier,0,10,StandardScaler,None,RandomForest,1600,400,ok,,0.835,0.8329275370151933,,1.297334699993371
+14,mfeat-fourier,1,10,StandardScaler,None,RandomForest,1600,400,ok,,0.8125,0.8116185627866127,,1.4227364999969723
+14,mfeat-fourier,2,10,StandardScaler,None,RandomForest,1600,400,ok,,0.8474999999999998,0.8469688099634114,,1.4924172000028193
+14,mfeat-fourier,3,10,StandardScaler,None,RandomForest,1600,400,ok,,0.8175000000000001,0.8135673370998573,,1.2909720000025118
+14,mfeat-fourier,4,10,StandardScaler,None,RandomForest,1600,400,ok,,0.8525,0.8512443766346118,,1.4767111999972258
+14,mfeat-fourier,0,11,StandardScaler,None,SVM,1600,400,ok,,0.82,0.8179304407779983,,0.30321810000168625
+14,mfeat-fourier,1,11,StandardScaler,None,SVM,1600,400,ok,,0.8025,0.7990779311480145,,0.31613809999544173
+14,mfeat-fourier,2,11,StandardScaler,None,SVM,1600,400,ok,,0.825,0.823552563010901,,0.3155989000078989
+14,mfeat-fourier,3,11,StandardScaler,None,SVM,1600,400,ok,,0.8374999999999998,0.8380249278965541,,0.3248934999865014
+14,mfeat-fourier,4,11,StandardScaler,None,SVM,1600,400,ok,,0.8424999999999999,0.8392620221533467,,0.28082410000206437
+14,mfeat-fourier,0,12,StandardScaler,None,kNN,1600,400,ok,,0.7875,0.7862570975469397,,0.01611379999667406
+14,mfeat-fourier,1,12,StandardScaler,None,kNN,1600,400,ok,,0.78,0.7796662955490065,,0.017530000011902303
+14,mfeat-fourier,2,12,StandardScaler,None,kNN,1600,400,ok,,0.795,0.796638713735602,,0.027801199990790337
+14,mfeat-fourier,3,12,StandardScaler,None,kNN,1600,400,ok,,0.795,0.7988107595498662,,0.0161184000025969
+14,mfeat-fourier,4,12,StandardScaler,None,kNN,1600,400,ok,,0.82,0.8204783954283241,,0.015140000003157184
+14,mfeat-fourier,0,13,StandardScaler,None,MLP,1600,400,ok,,0.8625,0.8621155527781857,,2.489188200008357
+14,mfeat-fourier,1,13,StandardScaler,None,MLP,1600,400,ok,,0.805,0.8043996167962305,,2.158191700000316
+14,mfeat-fourier,2,13,StandardScaler,None,MLP,1600,400,ok,,0.8175000000000001,0.8151199915511453,,2.410629300007713
+14,mfeat-fourier,3,13,StandardScaler,None,MLP,1600,400,ok,,0.8125,0.8155961940482694,,2.1612986999971326
+14,mfeat-fourier,4,13,StandardScaler,None,MLP,1600,400,ok,,0.825,0.8228044522088822,,2.522824400002719
+14,mfeat-fourier,0,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.76,0.7591844792238773,,0.2539854000060586
+14,mfeat-fourier,1,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.735,0.7348634074360357,,0.1512147999892477
+14,mfeat-fourier,2,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.73,0.7346982277171332,,0.16995690000476316
+14,mfeat-fourier,3,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.7250000000000001,0.7217692838062282,,0.2021653999981936
+14,mfeat-fourier,4,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.74,0.7414958675652599,,0.14655960000527557
+14,mfeat-fourier,0,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.74,0.7363794740526154,,0.9145674000028521
+14,mfeat-fourier,1,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.7300000000000001,0.7259814419560965,,0.672830099996645
+14,mfeat-fourier,2,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.76,0.7560443341433913,,0.7678958000033163
+14,mfeat-fourier,3,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.7474999999999999,0.7460210309068303,,0.845332299999427
+14,mfeat-fourier,4,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.7775000000000001,0.776928877848709,,0.716632000010577
+14,mfeat-fourier,0,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.76,0.7560161959365364,,0.12586179999925662
+14,mfeat-fourier,1,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.7325,0.727783038438259,,0.11643519999051932
+14,mfeat-fourier,2,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.795,0.7921829694142563,,0.12546789999760222
+14,mfeat-fourier,3,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.775,0.7749543661691273,,0.11752899999555666
+14,mfeat-fourier,4,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.7975,0.7952719999266363,,0.12565010000253096
+14,mfeat-fourier,0,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.7325,0.7282010062917237,,0.024446099996566772
+14,mfeat-fourier,1,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.7325,0.7309557170098187,,0.019529199998942204
+14,mfeat-fourier,2,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.735,0.7322543894046701,,0.02274429998942651
+14,mfeat-fourier,3,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.7449999999999999,0.7441756459960429,,0.018626799996127374
+14,mfeat-fourier,4,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.755,0.7514458179289557,,0.020719599997391924
+14,mfeat-fourier,0,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.7899999999999999,0.7886176825780117,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.1308310000022175
+14,mfeat-fourier,1,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.7424999999999999,0.7400379306634829,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7327138000109699
+14,mfeat-fourier,2,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.8074999999999999,0.8058991422903621,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9057976999902166
+14,mfeat-fourier,3,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.7625,0.7631783151847088,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8063301000074716
+14,mfeat-fourier,4,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.7625,0.7592855572467444,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8872727999987546
+14,mfeat-fourier,0,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.6275000000000001,0.6279480205456538,,0.027931300006457604
+14,mfeat-fourier,1,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.5975,0.6022752457728144,,0.02560079999966547
+14,mfeat-fourier,2,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.6900000000000001,0.6900966797619029,,0.02831410001090262
+14,mfeat-fourier,3,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.6475,0.6469571545428056,,0.024762500004726462
+14,mfeat-fourier,4,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.6,0.6049910980788308,,0.027686400004313327
+14,mfeat-fourier,0,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.8324999999999999,0.8308075684524718,,0.7143403000081889
+14,mfeat-fourier,1,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.8225,0.8236256063046674,,0.7035675000079209
+14,mfeat-fourier,2,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.8525,0.8522157740611835,,0.6937251999916043
+14,mfeat-fourier,3,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.8274999999999999,0.8284689256098975,,0.817713399999775
+14,mfeat-fourier,4,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.86,0.8580548977037731,,0.6515075000061188
+14,mfeat-fourier,0,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.8524999999999998,0.8520037530618593,,0.09922329999972135
+14,mfeat-fourier,1,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.8550000000000001,0.8556430528026608,,0.08675200000288896
+14,mfeat-fourier,2,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.8550000000000001,0.8530938010944731,,0.0840535000024829
+14,mfeat-fourier,3,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.8800000000000001,0.8798841352738715,,0.09208659999421798
+14,mfeat-fourier,4,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.8525,0.8502134926594508,,0.08966030000010505
+14,mfeat-fourier,0,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.85,0.8489298795080724,,0.022335999994538724
+14,mfeat-fourier,1,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.8275,0.8290220908796645,,0.02512929998920299
+14,mfeat-fourier,2,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.8649999999999999,0.8643300504072862,,0.01784570000017993
+14,mfeat-fourier,3,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.82,0.8195032050456845,,0.022663699986878783
+14,mfeat-fourier,4,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.845,0.8441369260352882,,0.017566399998031557
+14,mfeat-fourier,0,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.8275,0.8258919048451553,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8692069000098854
+14,mfeat-fourier,1,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.825,0.8237776349883292,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7653622000070754
+14,mfeat-fourier,2,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.825,0.8246173663841073,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6597716999967815
+14,mfeat-fourier,3,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.8400000000000001,0.840603631198692,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7313505999918561
+14,mfeat-fourier,4,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.8275,0.8249495765056547,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7285642999922857
+14,mfeat-fourier,0,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7925,0.7906705556389101,,0.02952969999751076
+14,mfeat-fourier,1,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7749999999999999,0.7740227243173756,,0.02483750000828877
+14,mfeat-fourier,2,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7649999999999999,0.7639652420354175,,0.030924100006814115
+14,mfeat-fourier,3,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.77,0.773901376638171,,0.02786740000010468
+14,mfeat-fourier,4,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7475,0.7470580415459672,,0.02697940000507515
+14,mfeat-fourier,0,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.835,0.8329275370151933,,1.5100206000061007
+14,mfeat-fourier,1,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.8125,0.8116185627866127,,1.5790676000033272
+14,mfeat-fourier,2,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.8474999999999998,0.8469688099634114,,1.3512406999943778
+14,mfeat-fourier,3,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.8175000000000001,0.8135673370998573,,1.3815980999934254
+14,mfeat-fourier,4,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.85,0.8489799102369829,,1.4835168999998132
+14,mfeat-fourier,0,26,MinMaxScaler,None,SVM,1600,400,ok,,0.8175000000000001,0.8156480182475718,,0.2431782000057865
+14,mfeat-fourier,1,26,MinMaxScaler,None,SVM,1600,400,ok,,0.8150000000000001,0.8137741703083712,,0.3941231000062544
+14,mfeat-fourier,2,26,MinMaxScaler,None,SVM,1600,400,ok,,0.8150000000000001,0.8132056946255812,,0.25589150001178496
+14,mfeat-fourier,3,26,MinMaxScaler,None,SVM,1600,400,ok,,0.8424999999999999,0.8408994824941105,,0.2431702000030782
+14,mfeat-fourier,4,26,MinMaxScaler,None,SVM,1600,400,ok,,0.8425,0.83984661650157,,0.28680780000286177
+14,mfeat-fourier,0,27,MinMaxScaler,None,kNN,1600,400,ok,,0.7899999999999999,0.7892552513809583,,0.016761799997766502
+14,mfeat-fourier,1,27,MinMaxScaler,None,kNN,1600,400,ok,,0.795,0.7927264798683554,,0.020537599993986078
+14,mfeat-fourier,2,27,MinMaxScaler,None,kNN,1600,400,ok,,0.8,0.8009781550260022,,0.017488800003775395
+14,mfeat-fourier,3,27,MinMaxScaler,None,kNN,1600,400,ok,,0.8074999999999999,0.8115658728650559,,0.0149643000040669
+14,mfeat-fourier,4,27,MinMaxScaler,None,kNN,1600,400,ok,,0.82,0.8207154706437294,,0.016316099994583055
+14,mfeat-fourier,0,28,MinMaxScaler,None,MLP,1600,400,ok,,0.82,0.818174676554607,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.1005524000065634
+14,mfeat-fourier,1,28,MinMaxScaler,None,MLP,1600,400,ok,,0.82,0.818503966172387,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.837923499988392
+14,mfeat-fourier,2,28,MinMaxScaler,None,MLP,1600,400,ok,,0.8200000000000001,0.8188085709591088,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.7332353000092553
+14,mfeat-fourier,3,28,MinMaxScaler,None,MLP,1600,400,ok,,0.8049999999999999,0.8067650461414815,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.2249241000099573
+14,mfeat-fourier,4,28,MinMaxScaler,None,MLP,1600,400,ok,,0.8074999999999999,0.807187447628624,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.376422699991963
+14,mfeat-fourier,0,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.76,0.7591844792238773,,0.15301479998743162
+14,mfeat-fourier,1,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.735,0.7348634074360357,,0.18135170001187362
+14,mfeat-fourier,2,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.73,0.7346982277171332,,0.2368739999947138
+14,mfeat-fourier,3,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.7250000000000001,0.7217692838062282,,0.14627739999559708
+14,mfeat-fourier,4,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.74,0.7414958675652599,,0.14815039999666624
+14,mfeat-fourier,0,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.6900000000000001,0.6868136502344925,,0.8023031000047922
+14,mfeat-fourier,1,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.6925,0.6913286909486411,,0.806728399998974
+14,mfeat-fourier,2,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.6975,0.6942453514656486,,0.841791300001205
+14,mfeat-fourier,3,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.735,0.7346643850458959,,0.731316199991852
+14,mfeat-fourier,4,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.71,0.7077205285230985,,0.7368436999968253
+14,mfeat-fourier,0,31,RobustScaler,PCA,SVM,1600,400,ok,,0.7175,0.7123941879610485,,0.1459164999978384
+14,mfeat-fourier,1,31,RobustScaler,PCA,SVM,1600,400,ok,,0.6950000000000001,0.6936731856228555,,0.16448210000817198
+14,mfeat-fourier,2,31,RobustScaler,PCA,SVM,1600,400,ok,,0.7575000000000001,0.7568922871016734,,0.12655950000043958
+14,mfeat-fourier,3,31,RobustScaler,PCA,SVM,1600,400,ok,,0.74,0.7393738235481575,,0.131347900009132
+14,mfeat-fourier,4,31,RobustScaler,PCA,SVM,1600,400,ok,,0.76,0.7556627686622981,,0.1283802999969339
+14,mfeat-fourier,0,32,RobustScaler,PCA,kNN,1600,400,ok,,0.6925,0.6904984671092327,,0.024157199994078837
+14,mfeat-fourier,1,32,RobustScaler,PCA,kNN,1600,400,ok,,0.68,0.6774103145799237,,0.028739999994286336
+14,mfeat-fourier,2,32,RobustScaler,PCA,kNN,1600,400,ok,,0.6925000000000001,0.6903419922529106,,0.02459830000589136
+14,mfeat-fourier,3,32,RobustScaler,PCA,kNN,1600,400,ok,,0.7150000000000001,0.7136639065575271,,0.02126670000143349
+14,mfeat-fourier,4,32,RobustScaler,PCA,kNN,1600,400,ok,,0.73,0.725596467824104,,0.023139599987189285
+14,mfeat-fourier,0,33,RobustScaler,PCA,MLP,1600,400,ok,,0.7375,0.7388390481299267,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.273648400005186
+14,mfeat-fourier,1,33,RobustScaler,PCA,MLP,1600,400,ok,,0.6900000000000001,0.6901892766886168,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.377508100005798
+14,mfeat-fourier,2,33,RobustScaler,PCA,MLP,1600,400,ok,,0.765,0.7617076757457714,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9469265999941854
+14,mfeat-fourier,3,33,RobustScaler,PCA,MLP,1600,400,ok,,0.7274999999999999,0.7280161333639659,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0863317000039387
+14,mfeat-fourier,4,33,RobustScaler,PCA,MLP,1600,400,ok,,0.7424999999999999,0.7377298036507216,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9714818999927957
+14,mfeat-fourier,0,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.5850000000000001,0.5877905578633198,,0.03074719999858644
+14,mfeat-fourier,1,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.5725,0.5798245802722533,,0.052387400006409734
+14,mfeat-fourier,2,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.5974999999999999,0.6003091522570086,,0.033804499995312653
+14,mfeat-fourier,3,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.5900000000000001,0.5925986147170301,,0.027681099993060343
+14,mfeat-fourier,4,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.58,0.5785581975281291,,0.06316510000033304
+14,mfeat-fourier,0,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.8324999999999999,0.8308075684524718,,0.7866218999988632
+14,mfeat-fourier,1,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.8225,0.8236256063046674,,1.3239446000079624
+14,mfeat-fourier,2,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.8550000000000001,0.8545733922461803,,0.7281031000020448
+14,mfeat-fourier,3,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.8274999999999999,0.8284689256098975,,0.6962366000079783
+14,mfeat-fourier,4,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.86,0.8580548977037731,,0.8435503999935463
+14,mfeat-fourier,0,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.8524999999999998,0.8518875532630267,,0.10350060000200756
+14,mfeat-fourier,1,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.86,0.859811584202664,,0.09813270000449847
+14,mfeat-fourier,2,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.8600000000000001,0.8582577671887804,,0.09285129999625497
+14,mfeat-fourier,3,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.8649999999999999,0.864703205235432,,0.09355570000479929
+14,mfeat-fourier,4,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.8574999999999999,0.8550282742934691,,0.09121309999318328
+14,mfeat-fourier,0,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.8525,0.8512042856861719,,0.020772100004251115
+14,mfeat-fourier,1,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.8450000000000001,0.8454057015369223,,0.020644399992306717
+14,mfeat-fourier,2,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.8525,0.8511675633127421,,0.020738100007292815
+14,mfeat-fourier,3,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.8375,0.8366285715057122,,0.019052000003284775
+14,mfeat-fourier,4,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.835,0.8347480293924388,,0.01836449999245815
+14,mfeat-fourier,0,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.8550000000000001,0.853873312615147,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.080565700001898
+14,mfeat-fourier,1,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.8574999999999999,0.8575375582245165,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.081226499998593
+14,mfeat-fourier,2,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.8649999999999999,0.8637484442548718,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.994550999996136
+14,mfeat-fourier,3,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.885,0.8849905372973165,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9537454000092112
+14,mfeat-fourier,4,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.8775000000000001,0.8750837755480643,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.873799200009671
+14,mfeat-fourier,0,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7925,0.7906705556389101,,0.026620100004947744
+14,mfeat-fourier,1,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7749999999999999,0.7740227243173756,,0.031746900000143796
+14,mfeat-fourier,2,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7649999999999999,0.7639652420354175,,0.029783499994664453
+14,mfeat-fourier,3,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.77,0.773901376638171,,0.03025039999920409
+14,mfeat-fourier,4,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.7475,0.7470580415459672,,0.026171299992711283
+14,mfeat-fourier,0,40,RobustScaler,None,RandomForest,1600,400,ok,,0.835,0.8329275370151933,,1.3352694000059273
+14,mfeat-fourier,1,40,RobustScaler,None,RandomForest,1600,400,ok,,0.8125,0.8116185627866127,,1.4312236000114353
+14,mfeat-fourier,2,40,RobustScaler,None,RandomForest,1600,400,ok,,0.8474999999999998,0.8469688099634114,,1.9205339000036474
+14,mfeat-fourier,3,40,RobustScaler,None,RandomForest,1600,400,ok,,0.8175000000000001,0.8135673370998573,,1.3394210999977076
+14,mfeat-fourier,4,40,RobustScaler,None,RandomForest,1600,400,ok,,0.8525,0.8512443766346118,,1.3639279000053648
+14,mfeat-fourier,0,41,RobustScaler,None,SVM,1600,400,ok,,0.8225,0.819696781907705,,0.296774499991443
+14,mfeat-fourier,1,41,RobustScaler,None,SVM,1600,400,ok,,0.805,0.8021748005595388,,0.33059129999310244
+14,mfeat-fourier,2,41,RobustScaler,None,SVM,1600,400,ok,,0.8275,0.8262929032951192,,0.3292767999955686
+14,mfeat-fourier,3,41,RobustScaler,None,SVM,1600,400,ok,,0.835,0.8357551934145461,,0.39767839999694843
+14,mfeat-fourier,4,41,RobustScaler,None,SVM,1600,400,ok,,0.8375,0.8339413637907602,,0.292189599989797
+14,mfeat-fourier,0,42,RobustScaler,None,kNN,1600,400,ok,,0.7899999999999999,0.7890736353119325,,0.017339300000458024
+14,mfeat-fourier,1,42,RobustScaler,None,kNN,1600,400,ok,,0.7749999999999999,0.7740087480659732,,0.01613760000327602
+14,mfeat-fourier,2,42,RobustScaler,None,kNN,1600,400,ok,,0.7975000000000001,0.7991070010708186,,0.02260319999186322
+14,mfeat-fourier,3,42,RobustScaler,None,kNN,1600,400,ok,,0.8074999999999999,0.8092777353783429,,0.028603900005691685
+14,mfeat-fourier,4,42,RobustScaler,None,kNN,1600,400,ok,,0.8074999999999999,0.8084078738974348,,0.01493970000592526
+14,mfeat-fourier,0,43,RobustScaler,None,MLP,1600,400,ok,,0.8425,0.8418257955686139,,2.5535681000037584
+14,mfeat-fourier,1,43,RobustScaler,None,MLP,1600,400,ok,,0.8125,0.8107010939079169,,2.7608087999979034
+14,mfeat-fourier,2,43,RobustScaler,None,MLP,1600,400,ok,,0.82,0.8189096875610371,,3.021054099997855
+14,mfeat-fourier,3,43,RobustScaler,None,MLP,1600,400,ok,,0.805,0.8092898796017556,,2.9363787999900524
+14,mfeat-fourier,4,43,RobustScaler,None,MLP,1600,400,ok,,0.8324999999999999,0.829074287790656,,2.418663699994795
+14,mfeat-fourier,0,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.76,0.7591844792238773,,0.2449485000106506
+14,mfeat-fourier,1,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.735,0.7348634074360357,,0.1551220999972429
+14,mfeat-fourier,2,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.73,0.7346982277171332,,0.21605290001025423
+14,mfeat-fourier,3,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.7250000000000001,0.7217692838062282,,0.15566940000280738
+14,mfeat-fourier,4,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.74,0.7414958675652599,,0.14764220001234207
+14,mfeat-fourier,0,45,None,PCA,RandomForest,1600,400,ok,,0.8574999999999999,0.8569633621571084,,0.6779023999988567
+14,mfeat-fourier,1,45,None,PCA,RandomForest,1600,400,ok,,0.8225,0.8229920303253122,,0.7706774999969639
+14,mfeat-fourier,2,45,None,PCA,RandomForest,1600,400,ok,,0.8324999999999999,0.8297820877341916,,0.8734419999964302
+14,mfeat-fourier,3,45,None,PCA,RandomForest,1600,400,ok,,0.8549999999999999,0.8543778900193522,,0.645597299997462
+14,mfeat-fourier,4,45,None,PCA,RandomForest,1600,400,ok,,0.8400000000000001,0.8385962617929581,,0.6637145999993663
+14,mfeat-fourier,0,46,None,PCA,SVM,1600,400,ok,,0.8525,0.8530204209841923,,0.10475939999741968
+14,mfeat-fourier,1,46,None,PCA,SVM,1600,400,ok,,0.8125,0.810273512640728,,0.08896009999443777
+14,mfeat-fourier,2,46,None,PCA,SVM,1600,400,ok,,0.8375,0.8350220569180331,,0.12775949999922886
+14,mfeat-fourier,3,46,None,PCA,SVM,1600,400,ok,,0.8550000000000001,0.855169206784306,,0.09901350000291131
+14,mfeat-fourier,4,46,None,PCA,SVM,1600,400,ok,,0.8549999999999999,0.8537813375366679,,0.11686320000444539
+14,mfeat-fourier,0,47,None,PCA,kNN,1600,400,ok,,0.8450000000000001,0.8437940917564962,,0.01849729999958072
+14,mfeat-fourier,1,47,None,PCA,kNN,1600,400,ok,,0.825,0.8246845471948513,,0.018499000012525357
+14,mfeat-fourier,2,47,None,PCA,kNN,1600,400,ok,,0.825,0.8242145562641925,,0.019162000011419877
+14,mfeat-fourier,3,47,None,PCA,kNN,1600,400,ok,,0.8400000000000001,0.8372711183958227,,0.019107600004645064
+14,mfeat-fourier,4,47,None,PCA,kNN,1600,400,ok,,0.8574999999999999,0.8561233821410343,,0.02129580000473652
+14,mfeat-fourier,0,48,None,PCA,MLP,1600,400,ok,,0.845,0.8439416074233111,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.4608116000017617
+14,mfeat-fourier,1,48,None,PCA,MLP,1600,400,ok,,0.8175000000000001,0.8169038114228442,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8980042000039248
+14,mfeat-fourier,2,48,None,PCA,MLP,1600,400,ok,,0.8175000000000001,0.8139397729722383,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.211291900006472
+14,mfeat-fourier,3,48,None,PCA,MLP,1600,400,ok,,0.8174999999999999,0.8174501146940045,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.921593999999459
+14,mfeat-fourier,4,48,None,PCA,MLP,1600,400,ok,,0.8399999999999999,0.8382852296409385,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0340423000016017
+14,mfeat-fourier,0,49,None,PCA,DecisionTree,1600,400,ok,,0.7725000000000001,0.7747560774484284,,0.11960779999208171
+14,mfeat-fourier,1,49,None,PCA,DecisionTree,1600,400,ok,,0.7649999999999999,0.7648632432568175,,0.0301982999953907
+14,mfeat-fourier,2,49,None,PCA,DecisionTree,1600,400,ok,,0.7725,0.7705762374047846,,0.026152300008106977
+14,mfeat-fourier,3,49,None,PCA,DecisionTree,1600,400,ok,,0.7875000000000001,0.7908587201312294,,0.03689750000194181
+14,mfeat-fourier,4,49,None,PCA,DecisionTree,1600,400,ok,,0.7825,0.7823054340788046,,0.02582129999063909
+14,mfeat-fourier,0,50,None,SelectKBest,RandomForest,1600,400,ok,,0.8324999999999999,0.8308075684524718,,1.7046386000001803
+14,mfeat-fourier,1,50,None,SelectKBest,RandomForest,1600,400,ok,,0.8225,0.8236256063046674,,0.885946900001727
+14,mfeat-fourier,2,50,None,SelectKBest,RandomForest,1600,400,ok,,0.8525,0.8522157740611835,,0.7019033999968087
+14,mfeat-fourier,3,50,None,SelectKBest,RandomForest,1600,400,ok,,0.8274999999999999,0.8284689256098975,,0.6702442000096198
+14,mfeat-fourier,4,50,None,SelectKBest,RandomForest,1600,400,ok,,0.86,0.8580548977037731,,0.6973345000005793
+14,mfeat-fourier,0,51,None,SelectKBest,SVM,1600,400,ok,,0.85,0.8499403277425653,,0.1515242000023136
+14,mfeat-fourier,1,51,None,SelectKBest,SVM,1600,400,ok,,0.8574999999999999,0.8575717672837861,,0.0831832999974722
+14,mfeat-fourier,2,51,None,SelectKBest,SVM,1600,400,ok,,0.8550000000000001,0.8536742108616414,,0.08629419999488164
+14,mfeat-fourier,3,51,None,SelectKBest,SVM,1600,400,ok,,0.8625,0.8623267321757485,,0.08436989999609068
+14,mfeat-fourier,4,51,None,SelectKBest,SVM,1600,400,ok,,0.8400000000000001,0.8381230259458381,,0.09030429999984335
+14,mfeat-fourier,0,52,None,SelectKBest,kNN,1600,400,ok,,0.8525,0.8517122866839258,,0.019922000006772578
+14,mfeat-fourier,1,52,None,SelectKBest,kNN,1600,400,ok,,0.835,0.8352705549522732,,0.020045900004333816
+14,mfeat-fourier,2,52,None,SelectKBest,kNN,1600,400,ok,,0.8550000000000001,0.8545204604180409,,0.01666960000875406
+14,mfeat-fourier,3,52,None,SelectKBest,kNN,1600,400,ok,,0.8324999999999999,0.8315072040264908,,0.015947899999446236
+14,mfeat-fourier,4,52,None,SelectKBest,kNN,1600,400,ok,,0.8400000000000001,0.8406020466132211,,0.019093199996859767
+14,mfeat-fourier,0,53,None,SelectKBest,MLP,1600,400,ok,,0.82,0.8170947302698149,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.2065898000000743
+14,mfeat-fourier,1,53,None,SelectKBest,MLP,1600,400,ok,,0.8074999999999999,0.8072457714575041,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.728560200004722
+14,mfeat-fourier,2,53,None,SelectKBest,MLP,1600,400,ok,,0.8025,0.801745088188364,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8758492000051774
+14,mfeat-fourier,3,53,None,SelectKBest,MLP,1600,400,ok,,0.8275,0.8276501619435461,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8913494000007631
+14,mfeat-fourier,4,53,None,SelectKBest,MLP,1600,400,ok,,0.8099999999999999,0.8081870242947634,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7822053999989294
+14,mfeat-fourier,0,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.7925,0.7906705556389101,,0.0252695999952266
+14,mfeat-fourier,1,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.7749999999999999,0.7740227243173756,,0.03826489999482874
+14,mfeat-fourier,2,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.7649999999999999,0.7639652420354175,,0.02741420001257211
+14,mfeat-fourier,3,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.77,0.773901376638171,,0.025976000004447997
+14,mfeat-fourier,4,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.7475,0.7470580415459672,,0.02618740001344122
+14,mfeat-fourier,0,55,None,None,RandomForest,1600,400,ok,,0.835,0.8329275370151933,,1.4748752000014065
+14,mfeat-fourier,1,55,None,None,RandomForest,1600,400,ok,,0.8125,0.8116185627866127,,1.3372764000087045
+14,mfeat-fourier,2,55,None,None,RandomForest,1600,400,ok,,0.8474999999999998,0.8469688099634114,,1.450831099995412
+14,mfeat-fourier,3,55,None,None,RandomForest,1600,400,ok,,0.8175000000000001,0.8135673370998573,,1.2974945999885676
+14,mfeat-fourier,4,55,None,None,RandomForest,1600,400,ok,,0.85,0.8489799102369829,,1.3213948000047822
+14,mfeat-fourier,0,56,None,None,SVM,1600,400,ok,,0.8550000000000001,0.8542640762072251,,0.19152549999125767
+14,mfeat-fourier,1,56,None,None,SVM,1600,400,ok,,0.8275,0.8275997054330195,,0.1864785999932792
+14,mfeat-fourier,2,56,None,None,SVM,1600,400,ok,,0.8475000000000001,0.8455222742009454,,0.17566209999495186
+14,mfeat-fourier,3,56,None,None,SVM,1600,400,ok,,0.8475000000000001,0.8467692949278627,,0.16905070000211708
+14,mfeat-fourier,4,56,None,None,SVM,1600,400,ok,,0.8675,0.8658219975790041,,0.17271569999866188
+14,mfeat-fourier,0,57,None,None,kNN,1600,400,ok,,0.82,0.817378379344748,,0.017069199995603412
+14,mfeat-fourier,1,57,None,None,kNN,1600,400,ok,,0.825,0.8251825310721255,,0.018766599998343736
+14,mfeat-fourier,2,57,None,None,kNN,1600,400,ok,,0.8524999999999998,0.8527384407600934,,0.016184000007342547
+14,mfeat-fourier,3,57,None,None,kNN,1600,400,ok,,0.825,0.8265391859028102,,0.02125809999415651
+14,mfeat-fourier,4,57,None,None,kNN,1600,400,ok,,0.8699999999999999,0.8694619429904604,,0.016131299998960458
+14,mfeat-fourier,0,58,None,None,MLP,1600,400,ok,,0.835,0.8327170485571717,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.506494200002635
+14,mfeat-fourier,1,58,None,None,MLP,1600,400,ok,,0.8150000000000001,0.8142550188863351,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.6977238999970723
+14,mfeat-fourier,2,58,None,None,MLP,1600,400,ok,,0.8425,0.8411207708349167,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.507461000001058
+14,mfeat-fourier,3,58,None,None,MLP,1600,400,ok,,0.82,0.8218688457943859,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.4005486000096425
+14,mfeat-fourier,4,58,None,None,MLP,1600,400,ok,,0.8375,0.8359543700794994,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.3953315999970073
+14,mfeat-fourier,0,59,None,None,DecisionTree,1600,400,ok,,0.76,0.7591844792238773,,0.14940169999317732
+14,mfeat-fourier,1,59,None,None,DecisionTree,1600,400,ok,,0.735,0.7348634074360357,,0.16972940000414383
+14,mfeat-fourier,2,59,None,None,DecisionTree,1600,400,ok,,0.73,0.7346982277171332,,0.14484989999618847
+14,mfeat-fourier,3,59,None,None,DecisionTree,1600,400,ok,,0.7250000000000001,0.7217692838062282,,0.1658157000056235
+14,mfeat-fourier,4,59,None,None,DecisionTree,1600,400,ok,,0.74,0.7414958675652599,,0.16624759999103844

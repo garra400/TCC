@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+9960,wall-robot-navigation,0,0,StandardScaler,PCA,RandomForest,4364,1092,ok,,0.8393489229165723,0.857207789229081,,1.9144464999990305
+9960,wall-robot-navigation,1,0,StandardScaler,PCA,RandomForest,4365,1091,ok,,0.8472747490604633,0.8701038891541795,,2.3996563000109745
+9960,wall-robot-navigation,2,0,StandardScaler,PCA,RandomForest,4365,1091,ok,,0.8705522651951223,0.8664259889750173,,1.606355199997779
+9960,wall-robot-navigation,3,0,StandardScaler,PCA,RandomForest,4365,1091,ok,,0.8391488431635039,0.8559070152308781,,1.5515105999947991
+9960,wall-robot-navigation,4,0,StandardScaler,PCA,RandomForest,4365,1091,ok,,0.8549958943583219,0.8739471082380228,,1.6732484999956796
+9960,wall-robot-navigation,0,1,StandardScaler,PCA,SVM,4364,1092,ok,,0.8231669621530121,0.8351449043244576,,1.0999669999873731
+9960,wall-robot-navigation,1,1,StandardScaler,PCA,SVM,4365,1091,ok,,0.8250666000666,0.8258516981234223,,0.7965894999942975
+9960,wall-robot-navigation,2,1,StandardScaler,PCA,SVM,4365,1091,ok,,0.847921324707039,0.8417552013503475,,0.7914602999953786
+9960,wall-robot-navigation,3,1,StandardScaler,PCA,SVM,4365,1091,ok,,0.8118034369312923,0.820617176415842,,0.8240856000047643
+9960,wall-robot-navigation,4,1,StandardScaler,PCA,SVM,4365,1091,ok,,0.8274692519663539,0.8375629510922412,,0.7762516000075266
+9960,wall-robot-navigation,0,2,StandardScaler,PCA,kNN,4364,1092,ok,,0.8660406448538178,0.8669132231645786,,0.048166099993977696
+9960,wall-robot-navigation,1,2,StandardScaler,PCA,kNN,4365,1091,ok,,0.8350320314606029,0.8400578521833842,,0.046242500000516884
+9960,wall-robot-navigation,2,2,StandardScaler,PCA,kNN,4365,1091,ok,,0.8586118246832533,0.8568353900353771,,0.04329720001260284
+9960,wall-robot-navigation,3,2,StandardScaler,PCA,kNN,4365,1091,ok,,0.840000437869514,0.8561569335998895,,0.05027690000133589
+9960,wall-robot-navigation,4,2,StandardScaler,PCA,kNN,4365,1091,ok,,0.8400948873076388,0.8493643618253318,,0.048344900002120994
+9960,wall-robot-navigation,0,3,StandardScaler,PCA,MLP,4364,1092,ok,,0.8644046958568256,0.8786823371946785,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.47023839999747
+9960,wall-robot-navigation,1,3,StandardScaler,PCA,MLP,4365,1091,ok,,0.8626546072974645,0.8695281971876279,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.6076271000056295
+9960,wall-robot-navigation,2,3,StandardScaler,PCA,MLP,4365,1091,ok,,0.8872472765329908,0.8722956007578968,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.034853499993915
+9960,wall-robot-navigation,3,3,StandardScaler,PCA,MLP,4365,1091,ok,,0.8576404048275852,0.8707371208203931,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.2808143999864114
+9960,wall-robot-navigation,4,3,StandardScaler,PCA,MLP,4365,1091,ok,,0.8561252533124337,0.8472985247136164,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.500404799997341
+9960,wall-robot-navigation,0,4,StandardScaler,PCA,DecisionTree,4364,1092,ok,,0.7645667449206529,0.7476031441829852,,0.061708299996098503
+9960,wall-robot-navigation,1,4,StandardScaler,PCA,DecisionTree,4365,1091,ok,,0.7646161378304236,0.7617576611521842,,0.05872810000437312
+9960,wall-robot-navigation,2,4,StandardScaler,PCA,DecisionTree,4365,1091,ok,,0.7361376718519577,0.743893713879569,,0.061674099997617304
+9960,wall-robot-navigation,3,4,StandardScaler,PCA,DecisionTree,4365,1091,ok,,0.7416793107638658,0.7554280867721916,,0.058013699992443435
+9960,wall-robot-navigation,4,4,StandardScaler,PCA,DecisionTree,4365,1091,ok,,0.7585607794864527,0.7681007767208566,,0.05623580000246875
+9960,wall-robot-navigation,0,5,StandardScaler,SelectKBest,RandomForest,4364,1092,ok,,0.9959424501702033,0.9929807770783812,,0.9719730000069831
+9960,wall-robot-navigation,1,5,StandardScaler,SelectKBest,RandomForest,4365,1091,ok,,0.987007238792953,0.9888895506261896,,1.049627500004135
+9960,wall-robot-navigation,2,5,StandardScaler,SelectKBest,RandomForest,4365,1091,ok,,0.9908884766027624,0.9863159347074157,,1.0130682999879355
+9960,wall-robot-navigation,3,5,StandardScaler,SelectKBest,RandomForest,4365,1091,ok,,0.9821675672510994,0.9839666039120649,,0.9036404999933438
+9960,wall-robot-navigation,4,5,StandardScaler,SelectKBest,RandomForest,4365,1091,ok,,0.982263800146514,0.9839412189070363,,0.9734484999935376
+9960,wall-robot-navigation,0,6,StandardScaler,SelectKBest,SVM,4364,1092,ok,,0.8045275869263604,0.8230980421302225,,0.9773421999998391
+9960,wall-robot-navigation,1,6,StandardScaler,SelectKBest,SVM,4365,1091,ok,,0.8599023991881136,0.8673870868104998,,0.9558356000052299
+9960,wall-robot-navigation,2,6,StandardScaler,SelectKBest,SVM,4365,1091,ok,,0.8309319648605363,0.8426365573110964,,0.812536999990698
+9960,wall-robot-navigation,3,6,StandardScaler,SelectKBest,SVM,4365,1091,ok,,0.8199487323677572,0.8274964804522126,,0.7909622000006493
+9960,wall-robot-navigation,4,6,StandardScaler,SelectKBest,SVM,4365,1091,ok,,0.8365312567494634,0.8395811043802606,,0.7808635999972466
+9960,wall-robot-navigation,0,7,StandardScaler,SelectKBest,kNN,4364,1092,ok,,0.8867428918535151,0.8987685037561828,,0.058853199996519834
+9960,wall-robot-navigation,1,7,StandardScaler,SelectKBest,kNN,4365,1091,ok,,0.9078177774606345,0.9034344432201336,,0.051216799998655915
+9960,wall-robot-navigation,2,7,StandardScaler,SelectKBest,kNN,4365,1091,ok,,0.897712604855462,0.8925043530613443,,0.05280230000789743
+9960,wall-robot-navigation,3,7,StandardScaler,SelectKBest,kNN,4365,1091,ok,,0.89128453941785,0.9018330666075134,,0.05355559999588877
+9960,wall-robot-navigation,4,7,StandardScaler,SelectKBest,kNN,4365,1091,ok,,0.8995440376193871,0.8923871022291028,,0.054828799999086186
+9960,wall-robot-navigation,0,8,StandardScaler,SelectKBest,MLP,4364,1092,ok,,0.9301733792561063,0.9352762933431944,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.0590102999995
+9960,wall-robot-navigation,1,8,StandardScaler,SelectKBest,MLP,4365,1091,ok,,0.9244132851275708,0.923659971549127,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.209961400003522
+9960,wall-robot-navigation,2,8,StandardScaler,SelectKBest,MLP,4365,1091,ok,,0.9489970347113204,0.946977106699409,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.717248799992376
+9960,wall-robot-navigation,3,8,StandardScaler,SelectKBest,MLP,4365,1091,ok,,0.9445573926395611,0.9461711517513457,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.0076514999964274
+9960,wall-robot-navigation,4,8,StandardScaler,SelectKBest,MLP,4365,1091,ok,,0.932643676549234,0.92992847334964,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.808641499999794
+9960,wall-robot-navigation,0,9,StandardScaler,SelectKBest,DecisionTree,4364,1092,ok,,0.9697391895473345,0.9703860003185374,,0.05538049999449868
+9960,wall-robot-navigation,1,9,StandardScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.9828035060177918,0.9800159195329591,,0.03643809999630321
+9960,wall-robot-navigation,2,9,StandardScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.9776978973407544,0.9730538613252251,,0.03527370000665542
+9960,wall-robot-navigation,3,9,StandardScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.970863461461825,0.9757273576432594,,0.0337026000051992
+9960,wall-robot-navigation,4,9,StandardScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.960512336850557,0.9682340866394894,,0.03566710000450257
+9960,wall-robot-navigation,0,10,StandardScaler,None,RandomForest,4364,1092,ok,,0.9977324263038548,0.9947425426177213,,1.3906583999923896
+9960,wall-robot-navigation,1,10,StandardScaler,None,RandomForest,4365,1091,ok,,0.9834815977673121,0.9892987522873288,,1.2932346000015968
+9960,wall-robot-navigation,2,10,StandardScaler,None,RandomForest,4365,1091,ok,,0.9967841682127396,0.9962870724239621,,1.451289300006465
+9960,wall-robot-navigation,3,10,StandardScaler,None,RandomForest,4365,1091,ok,,0.9889931165928438,0.9911846185942572,,1.2058353000029456
+9960,wall-robot-navigation,4,10,StandardScaler,None,RandomForest,4365,1091,ok,,0.9882303872586858,0.9907105656024839,,1.1568185999931302
+9960,wall-robot-navigation,0,11,StandardScaler,None,SVM,4364,1092,ok,,0.8697601506164432,0.8911865678290998,,0.892774100007955
+9960,wall-robot-navigation,1,11,StandardScaler,None,SVM,4365,1091,ok,,0.8615545169116597,0.8695849183663236,,0.8776503999979468
+9960,wall-robot-navigation,2,11,StandardScaler,None,SVM,4365,1091,ok,,0.875066798281084,0.8818948489773838,,0.9009174000093481
+9960,wall-robot-navigation,3,11,StandardScaler,None,SVM,4365,1091,ok,,0.8601677729021745,0.8767394439197718,,1.0087627000029897
+9960,wall-robot-navigation,4,11,StandardScaler,None,SVM,4365,1091,ok,,0.8655126591028398,0.8783453580817208,,0.8772186999995029
+9960,wall-robot-navigation,0,12,StandardScaler,None,kNN,4364,1092,ok,,0.8604187436497583,0.8619656883826925,,0.04996130001381971
+9960,wall-robot-navigation,1,12,StandardScaler,None,kNN,4365,1091,ok,,0.8325051932194789,0.8355968490007927,,0.0390966999984812
+9960,wall-robot-navigation,2,12,StandardScaler,None,kNN,4365,1091,ok,,0.8553882625311197,0.8653484315825417,,0.03941919999488164
+9960,wall-robot-navigation,3,12,StandardScaler,None,kNN,4365,1091,ok,,0.8536173433718609,0.8559407483123485,,0.04152909999538679
+9960,wall-robot-navigation,4,12,StandardScaler,None,kNN,4365,1091,ok,,0.8563206587328647,0.8567883708592893,,0.03971480000473093
+9960,wall-robot-navigation,0,13,StandardScaler,None,MLP,4364,1092,ok,,0.9195827793797922,0.9193133735157337,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.198278600000776
+9960,wall-robot-navigation,1,13,StandardScaler,None,MLP,4365,1091,ok,,0.9081022152450724,0.9191540496741487,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.3478146999987075
+9960,wall-robot-navigation,2,13,StandardScaler,None,MLP,4365,1091,ok,,0.9184434613006042,0.9189906481167991,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.516611299986835
+9960,wall-robot-navigation,3,13,StandardScaler,None,MLP,4365,1091,ok,,0.9134842654788102,0.9247850761834805,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.3665991999878315
+9960,wall-robot-navigation,4,13,StandardScaler,None,MLP,4365,1091,ok,,0.8897396226155176,0.8888921685232765,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.002806999997119
+9960,wall-robot-navigation,0,14,StandardScaler,None,DecisionTree,4364,1092,ok,,0.9982993197278911,0.9957700524430366,,0.06954559999576304
+9960,wall-robot-navigation,1,14,StandardScaler,None,DecisionTree,4365,1091,ok,,0.9944248212105355,0.9951242307811103,,0.06568940001307055
+9960,wall-robot-navigation,2,14,StandardScaler,None,DecisionTree,4365,1091,ok,,0.9940501958359101,0.9919612719042218,,0.061316399995121174
+9960,wall-robot-navigation,3,14,StandardScaler,None,DecisionTree,4365,1091,ok,,0.9906937968649527,0.9933862718944941,,0.08806680000270717
+9960,wall-robot-navigation,4,14,StandardScaler,None,DecisionTree,4365,1091,ok,,0.9982397891535293,0.9961851879501971,,0.06427239999175072
+9960,wall-robot-navigation,0,15,MinMaxScaler,PCA,RandomForest,4364,1092,ok,,0.8541575785921393,0.8677146310866113,,2.6125371999951312
+9960,wall-robot-navigation,1,15,MinMaxScaler,PCA,RandomForest,4365,1091,ok,,0.8241855366855366,0.840100299865062,,1.4430462000018451
+9960,wall-robot-navigation,2,15,MinMaxScaler,PCA,RandomForest,4365,1091,ok,,0.8654486386629244,0.8606569746745723,,1.4436968000081833
+9960,wall-robot-navigation,3,15,MinMaxScaler,PCA,RandomForest,4365,1091,ok,,0.853564885128131,0.8712623051335957,,1.6014998000027845
+9960,wall-robot-navigation,4,15,MinMaxScaler,PCA,RandomForest,4365,1091,ok,,0.8511742528789921,0.862697416722764,,1.4401825000095414
+9960,wall-robot-navigation,0,16,MinMaxScaler,PCA,SVM,4364,1092,ok,,0.8193342642758101,0.8207371473111477,,1.1218549000041094
+9960,wall-robot-navigation,1,16,MinMaxScaler,PCA,SVM,4365,1091,ok,,0.8202267970125113,0.8128785333812961,,0.7695454999920912
+9960,wall-robot-navigation,2,16,MinMaxScaler,PCA,SVM,4365,1091,ok,,0.8336917051202766,0.8259053377219113,,0.7394009999989066
+9960,wall-robot-navigation,3,16,MinMaxScaler,PCA,SVM,4365,1091,ok,,0.8097927179839898,0.8164388061481012,,0.7296545999997761
+9960,wall-robot-navigation,4,16,MinMaxScaler,PCA,SVM,4365,1091,ok,,0.82556107566336,0.8217057556859176,,0.8169029999990016
+9960,wall-robot-navigation,0,17,MinMaxScaler,PCA,kNN,4364,1092,ok,,0.8222121523200028,0.8336598214733563,,0.044588299992028624
+9960,wall-robot-navigation,1,17,MinMaxScaler,PCA,kNN,4365,1091,ok,,0.8045307866736437,0.8140127301219977,,0.05089799998677336
+9960,wall-robot-navigation,2,17,MinMaxScaler,PCA,kNN,4365,1091,ok,,0.8316790352504638,0.8382286929374525,,0.04666419999557547
+9960,wall-robot-navigation,3,17,MinMaxScaler,PCA,kNN,4365,1091,ok,,0.8017855113405745,0.8080645041682226,,0.0487379999976838
+9960,wall-robot-navigation,4,17,MinMaxScaler,PCA,kNN,4365,1091,ok,,0.8308430611703711,0.8337868468178239,,0.05020949999743607
+9960,wall-robot-navigation,0,18,MinMaxScaler,PCA,MLP,4364,1092,ok,,0.8544732742427031,0.852760350927843,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.365355000001728
+9960,wall-robot-navigation,1,18,MinMaxScaler,PCA,MLP,4365,1091,ok,,0.8498531230674088,0.8496865037427935,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.899134799998137
+9960,wall-robot-navigation,2,18,MinMaxScaler,PCA,MLP,4365,1091,ok,,0.8624058481201339,0.8530900885909452,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.72186989999318
+9960,wall-robot-navigation,3,18,MinMaxScaler,PCA,MLP,4365,1091,ok,,0.8581779634541311,0.8654944999588643,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.692889300000388
+9960,wall-robot-navigation,4,18,MinMaxScaler,PCA,MLP,4365,1091,ok,,0.8511587921492456,0.8450733418213704,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.996566999994684
+9960,wall-robot-navigation,0,19,MinMaxScaler,PCA,DecisionTree,4364,1092,ok,,0.7482360866458115,0.7528677557450507,,0.0775292000034824
+9960,wall-robot-navigation,1,19,MinMaxScaler,PCA,DecisionTree,4365,1091,ok,,0.7432145235716665,0.7488452336676584,,0.11479870000039227
+9960,wall-robot-navigation,2,19,MinMaxScaler,PCA,DecisionTree,4365,1091,ok,,0.7561486132914704,0.759113176974478,,0.06454609999491367
+9960,wall-robot-navigation,3,19,MinMaxScaler,PCA,DecisionTree,4365,1091,ok,,0.7425024316517668,0.7486066575460122,,0.05830669999704696
+9960,wall-robot-navigation,4,19,MinMaxScaler,PCA,DecisionTree,4365,1091,ok,,0.7393443469815786,0.7378613464470996,,0.06867480000073556
+9960,wall-robot-navigation,0,20,MinMaxScaler,SelectKBest,RandomForest,4364,1092,ok,,0.9959424501702033,0.9929807770783812,,0.9071201999904588
+9960,wall-robot-navigation,1,20,MinMaxScaler,SelectKBest,RandomForest,4365,1091,ok,,0.987007238792953,0.9888895506261896,,0.8537760000035632
+9960,wall-robot-navigation,2,20,MinMaxScaler,SelectKBest,RandomForest,4365,1091,ok,,0.9908884766027624,0.9863159347074157,,1.2395004999998491
+9960,wall-robot-navigation,3,20,MinMaxScaler,SelectKBest,RandomForest,4365,1091,ok,,0.983682718766251,0.985020732991722,,1.017625099993893
+9960,wall-robot-navigation,4,20,MinMaxScaler,SelectKBest,RandomForest,4365,1091,ok,,0.9807486486313626,0.9828953208936098,,1.012506700004451
+9960,wall-robot-navigation,0,21,MinMaxScaler,SelectKBest,SVM,4364,1092,ok,,0.7888877623544214,0.8130923159693071,,0.8105153999931645
+9960,wall-robot-navigation,1,21,MinMaxScaler,SelectKBest,SVM,4365,1091,ok,,0.8409011623297338,0.8501298007799862,,0.7345118000084767
+9960,wall-robot-navigation,2,21,MinMaxScaler,SelectKBest,SVM,4365,1091,ok,,0.8202842792128506,0.8279247932025681,,0.8090694999991683
+9960,wall-robot-navigation,3,21,MinMaxScaler,SelectKBest,SVM,4365,1091,ok,,0.8100480844684731,0.8262211555841078,,0.7974727999971947
+9960,wall-robot-navigation,4,21,MinMaxScaler,SelectKBest,SVM,4365,1091,ok,,0.8363777072266674,0.8437534526289233,,0.7633914000034565
+9960,wall-robot-navigation,0,22,MinMaxScaler,SelectKBest,kNN,4364,1092,ok,,0.8837336377685294,0.8968517443326169,,0.042567199998302385
+9960,wall-robot-navigation,1,22,MinMaxScaler,SelectKBest,kNN,4365,1091,ok,,0.900617636331922,0.9010300383135221,,0.04429350000282284
+9960,wall-robot-navigation,2,22,MinMaxScaler,SelectKBest,kNN,4365,1091,ok,,0.9011242725528439,0.8948564142095711,,0.04943859999184497
+9960,wall-robot-navigation,3,22,MinMaxScaler,SelectKBest,kNN,4365,1091,ok,,0.8795395383871347,0.8979370678198433,,0.04761389999475796
+9960,wall-robot-navigation,4,22,MinMaxScaler,SelectKBest,kNN,4365,1091,ok,,0.8983753319075515,0.8977389765231383,,0.046114099997794256
+9960,wall-robot-navigation,0,23,MinMaxScaler,SelectKBest,MLP,4364,1092,ok,,0.9071018081355373,0.9190170589366635,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.498243900001398
+9960,wall-robot-navigation,1,23,MinMaxScaler,SelectKBest,MLP,4365,1091,ok,,0.9352998192283907,0.9304149737598124,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.911690900000394
+9960,wall-robot-navigation,2,23,MinMaxScaler,SelectKBest,MLP,4365,1091,ok,,0.9282188050045193,0.9191322008087387,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.769502800001646
+9960,wall-robot-navigation,3,23,MinMaxScaler,SelectKBest,MLP,4365,1091,ok,,0.9351424355089544,0.9380056035097257,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.931243199986056
+9960,wall-robot-navigation,4,23,MinMaxScaler,SelectKBest,MLP,4365,1091,ok,,0.9344983368338295,0.9318127652228523,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.84502349999093
+9960,wall-robot-navigation,0,24,MinMaxScaler,SelectKBest,DecisionTree,4364,1092,ok,,0.9697391895473345,0.9703860003185374,,0.03766129999712575
+9960,wall-robot-navigation,1,24,MinMaxScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.9828035060177918,0.9800159195329591,,0.03882789998897351
+9960,wall-robot-navigation,2,24,MinMaxScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.9767496392496393,0.9730177081882527,,0.04681230000278447
+9960,wall-robot-navigation,3,24,MinMaxScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.970863461461825,0.9757273576432594,,0.0368878000008408
+9960,wall-robot-navigation,4,24,MinMaxScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.9589971853354056,0.9671767553765254,,0.03463650000048801
+9960,wall-robot-navigation,0,25,MinMaxScaler,None,RandomForest,4364,1092,ok,,0.9977324263038548,0.9947425426177213,,1.1677911000006134
+9960,wall-robot-navigation,1,25,MinMaxScaler,None,RandomForest,4365,1091,ok,,0.9834815977673121,0.9892987522873288,,1.335698399998364
+9960,wall-robot-navigation,2,25,MinMaxScaler,None,RandomForest,4365,1091,ok,,0.9929380143665858,0.9940659666122935,,1.1749171999981627
+9960,wall-robot-navigation,3,25,MinMaxScaler,None,RandomForest,4365,1091,ok,,0.9889931165928438,0.9911846185942572,,1.2078693999937968
+9960,wall-robot-navigation,4,25,MinMaxScaler,None,RandomForest,4365,1091,ok,,0.9882303872586858,0.9907105656024839,,2.271330700008548
+9960,wall-robot-navigation,0,26,MinMaxScaler,None,SVM,4364,1092,ok,,0.8622455144263481,0.88784084862505,,0.91178470000159
+9960,wall-robot-navigation,1,26,MinMaxScaler,None,SVM,4365,1091,ok,,0.8506112934684363,0.8627238310724157,,0.9020645999989938
+9960,wall-robot-navigation,2,26,MinMaxScaler,None,SVM,4365,1091,ok,,0.8763072245215102,0.8869361510878785,,0.9450870000000577
+9960,wall-robot-navigation,3,26,MinMaxScaler,None,SVM,4365,1091,ok,,0.8660502177293858,0.884561540439763,,0.9337357999902451
+9960,wall-robot-navigation,4,26,MinMaxScaler,None,SVM,4365,1091,ok,,0.8610862657061089,0.8759259535670325,,1.9035249000007752
+9960,wall-robot-navigation,0,27,MinMaxScaler,None,kNN,4364,1092,ok,,0.8521415472094083,0.8552608969891576,,0.04039049999846611
+9960,wall-robot-navigation,1,27,MinMaxScaler,None,kNN,4365,1091,ok,,0.8311507936507936,0.8330959994252513,,0.042579000000841916
+9960,wall-robot-navigation,2,27,MinMaxScaler,None,kNN,4365,1091,ok,,0.8541787577501864,0.8586529001328702,,0.04705749999266118
+9960,wall-robot-navigation,3,27,MinMaxScaler,None,kNN,4365,1091,ok,,0.8514041466734954,0.8556601599798975,,0.047769299999345094
+9960,wall-robot-navigation,4,27,MinMaxScaler,None,kNN,4365,1091,ok,,0.850903720857693,0.8507449681226373,,0.1448493000061717
+9960,wall-robot-navigation,0,28,MinMaxScaler,None,MLP,4364,1092,ok,,0.9272335518217444,0.9347879394952746,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.9321319999871776
+9960,wall-robot-navigation,1,28,MinMaxScaler,None,MLP,4365,1091,ok,,0.9385424099709815,0.9399622692569621,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.4390130000101635
+9960,wall-robot-navigation,2,28,MinMaxScaler,None,MLP,4365,1091,ok,,0.9350643404214832,0.9376876608520861,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.193262900007539
+9960,wall-robot-navigation,3,28,MinMaxScaler,None,MLP,4365,1091,ok,,0.920953483005989,0.9293818111324148,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.342684999995981
+9960,wall-robot-navigation,4,28,MinMaxScaler,None,MLP,4365,1091,ok,,0.9052868069915462,0.9073536780179292,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.025577299995348
+9960,wall-robot-navigation,0,29,MinMaxScaler,None,DecisionTree,4364,1092,ok,,0.9982993197278911,0.9957700524430366,,0.06218929999158718
+9960,wall-robot-navigation,1,29,MinMaxScaler,None,DecisionTree,4365,1091,ok,,0.9944248212105355,0.9951242307811103,,0.06636369999614544
+9960,wall-robot-navigation,2,29,MinMaxScaler,None,DecisionTree,4365,1091,ok,,0.9940501958359101,0.9919612719042218,,0.06039140000939369
+9960,wall-robot-navigation,3,29,MinMaxScaler,None,DecisionTree,4365,1091,ok,,0.9906937968649527,0.9933862718944941,,0.07602589999441989
+9960,wall-robot-navigation,4,29,MinMaxScaler,None,DecisionTree,4365,1091,ok,,0.9952094861232262,0.9940952310224078,,0.06331589999899734
+9960,wall-robot-navigation,0,30,RobustScaler,PCA,RandomForest,4364,1092,ok,,0.8716748035293955,0.8765160571530342,,1.7016328000026988
+9960,wall-robot-navigation,1,30,RobustScaler,PCA,RandomForest,4365,1091,ok,,0.8718099360956503,0.890493628656132,,1.6444600000104401
+9960,wall-robot-navigation,2,30,RobustScaler,PCA,RandomForest,4365,1091,ok,,0.9071823018251589,0.9098290706835708,,2.0099571000027936
+9960,wall-robot-navigation,3,30,RobustScaler,PCA,RandomForest,4365,1091,ok,,0.9086763721182406,0.9089237681764912,,1.6667374999960884
+9960,wall-robot-navigation,4,30,RobustScaler,PCA,RandomForest,4365,1091,ok,,0.8792128459107661,0.8822039717388555,,1.9208942999975989
+9960,wall-robot-navigation,0,31,RobustScaler,PCA,SVM,4364,1092,ok,,0.7876735472878655,0.8015982000170142,,0.951436699993792
+9960,wall-robot-navigation,1,31,RobustScaler,PCA,SVM,4365,1091,ok,,0.7766564784421928,0.783040065982839,,1.0277211000066018
+9960,wall-robot-navigation,2,31,RobustScaler,PCA,SVM,4365,1091,ok,,0.7900430918288062,0.79329909099527,,1.432181300013326
+9960,wall-robot-navigation,3,31,RobustScaler,PCA,SVM,4365,1091,ok,,0.792972526393938,0.7916029049553454,,1.1289958000124898
+9960,wall-robot-navigation,4,31,RobustScaler,PCA,SVM,4365,1091,ok,,0.7735676255025046,0.7739000497211173,,1.2604291000025114
+9960,wall-robot-navigation,0,32,RobustScaler,PCA,kNN,4364,1092,ok,,0.8591176141224615,0.8677073797014869,,0.03936769999563694
+9960,wall-robot-navigation,1,32,RobustScaler,PCA,kNN,4365,1091,ok,,0.8385081188652617,0.8469405395382392,,0.03819449999718927
+9960,wall-robot-navigation,2,32,RobustScaler,PCA,kNN,4365,1091,ok,,0.8867808778523064,0.88014119912476,,0.035531599991372786
+9960,wall-robot-navigation,3,32,RobustScaler,PCA,kNN,4365,1091,ok,,0.8719122081464392,0.8759151827170073,,0.03993469999113586
+9960,wall-robot-navigation,4,32,RobustScaler,PCA,kNN,4365,1091,ok,,0.8399532930985368,0.8382551307121111,,0.043005200001061894
+9960,wall-robot-navigation,0,33,RobustScaler,PCA,MLP,4364,1092,ok,,0.8706913909536538,0.8791582875696512,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.882732700003544
+9960,wall-robot-navigation,1,33,RobustScaler,PCA,MLP,4365,1091,ok,,0.8490283525997812,0.8534155637654725,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.51343910000287
+9960,wall-robot-navigation,2,33,RobustScaler,PCA,MLP,4365,1091,ok,,0.8774812489098204,0.8759828857104389,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.197487800003728
+9960,wall-robot-navigation,3,33,RobustScaler,PCA,MLP,4365,1091,ok,,0.8809836591033318,0.8754641671747119,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.7515338999946835
+9960,wall-robot-navigation,4,33,RobustScaler,PCA,MLP,4365,1091,ok,,0.8528360783815949,0.8585380447453628,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.710000299994135
+9960,wall-robot-navigation,0,34,RobustScaler,PCA,DecisionTree,4364,1092,ok,,0.7802522043635833,0.7800959440348675,,0.058667800010880455
+9960,wall-robot-navigation,1,34,RobustScaler,PCA,DecisionTree,4365,1091,ok,,0.7861832611832611,0.7899037158613853,,0.06384309999702964
+9960,wall-robot-navigation,2,34,RobustScaler,PCA,DecisionTree,4365,1091,ok,,0.8307357325214468,0.8105508391632699,,0.0661238000029698
+9960,wall-robot-navigation,3,34,RobustScaler,PCA,DecisionTree,4365,1091,ok,,0.7685819030005869,0.7939727528018117,,0.06661259999964386
+9960,wall-robot-navigation,4,34,RobustScaler,PCA,DecisionTree,4365,1091,ok,,0.7827081885043017,0.7845099053094267,,0.05819789999804925
+9960,wall-robot-navigation,0,35,RobustScaler,SelectKBest,RandomForest,4364,1092,ok,,0.9959424501702033,0.9929807770783812,,1.033791999987443
+9960,wall-robot-navigation,1,35,RobustScaler,SelectKBest,RandomForest,4365,1091,ok,,0.987007238792953,0.9888895506261896,,0.9859088999946835
+9960,wall-robot-navigation,2,35,RobustScaler,SelectKBest,RandomForest,4365,1091,ok,,0.9908884766027624,0.9863159347074157,,0.9242727000091691
+9960,wall-robot-navigation,3,35,RobustScaler,SelectKBest,RandomForest,4365,1091,ok,,0.983682718766251,0.985020732991722,,1.01501279999502
+9960,wall-robot-navigation,4,35,RobustScaler,SelectKBest,RandomForest,4365,1091,ok,,0.982263800146514,0.9839412189070363,,0.8824932999996236
+9960,wall-robot-navigation,0,36,RobustScaler,SelectKBest,SVM,4364,1092,ok,,0.752153697688308,0.7734727174317682,,0.9961444999935338
+9960,wall-robot-navigation,1,36,RobustScaler,SelectKBest,SVM,4365,1091,ok,,0.7749724481867339,0.7829196556493531,,0.9703019000007771
+9960,wall-robot-navigation,2,36,RobustScaler,SelectKBest,SVM,4365,1091,ok,,0.780217798074941,0.780332934835204,,0.927286300007836
+9960,wall-robot-navigation,3,36,RobustScaler,SelectKBest,SVM,4365,1091,ok,,0.7612762838555542,0.7621693427135836,,0.9801736999943387
+9960,wall-robot-navigation,4,36,RobustScaler,SelectKBest,SVM,4365,1091,ok,,0.7652203566029001,0.7692541227829234,,1.3978818000032334
+9960,wall-robot-navigation,0,37,RobustScaler,SelectKBest,kNN,4364,1092,ok,,0.8708579586032459,0.8842729188845487,,0.045404400007100776
+9960,wall-robot-navigation,1,37,RobustScaler,SelectKBest,kNN,4365,1091,ok,,0.9098663241520385,0.9088093415049956,,0.04748719999042805
+9960,wall-robot-navigation,2,37,RobustScaler,SelectKBest,kNN,4365,1091,ok,,0.9044164169164169,0.9084996954367452,,0.04370170000765938
+9960,wall-robot-navigation,3,37,RobustScaler,SelectKBest,kNN,4365,1091,ok,,0.9036636271634567,0.9018160074793592,,0.04444830000284128
+9960,wall-robot-navigation,4,37,RobustScaler,SelectKBest,kNN,4365,1091,ok,,0.8815359527770029,0.8789037514823865,,0.0440762999933213
+9960,wall-robot-navigation,0,38,RobustScaler,SelectKBest,MLP,4364,1092,ok,,0.9298733627662025,0.9393444561105982,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.044672900010482
+9960,wall-robot-navigation,1,38,RobustScaler,SelectKBest,MLP,4365,1091,ok,,0.9441948924091781,0.9444669724114529,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.816397100003087
+9960,wall-robot-navigation,2,38,RobustScaler,SelectKBest,MLP,4365,1091,ok,,0.943608375751233,0.9411623829997937,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.817695599995204
+9960,wall-robot-navigation,3,38,RobustScaler,SelectKBest,MLP,4365,1091,ok,,0.9359103184196945,0.9352705807453463,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.147272800008068
+9960,wall-robot-navigation,4,38,RobustScaler,SelectKBest,MLP,4365,1091,ok,,0.9387711807077644,0.9347971400953434,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.330718100012746
+9960,wall-robot-navigation,0,39,RobustScaler,SelectKBest,DecisionTree,4364,1092,ok,,0.9703358482585517,0.9709662276033518,,0.03566989999671932
+9960,wall-robot-navigation,1,39,RobustScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.9828035060177918,0.9800159195329591,,0.03507160001026932
+9960,wall-robot-navigation,2,39,RobustScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.9776978973407544,0.9730538613252251,,0.033622799994191155
+9960,wall-robot-navigation,3,39,RobustScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.9687516512354563,0.9740810563200305,,0.03346449999662582
+9960,wall-robot-navigation,4,39,RobustScaler,SelectKBest,DecisionTree,4365,1091,ok,,0.9599454434265209,0.9676547388011913,,0.03465269999287557
+9960,wall-robot-navigation,0,40,RobustScaler,None,RandomForest,4364,1092,ok,,0.9977324263038548,0.9947425426177213,,1.2779115000012098
+9960,wall-robot-navigation,1,40,RobustScaler,None,RandomForest,4365,1091,ok,,0.9834815977673121,0.9892987522873288,,1.1864028999989387
+9960,wall-robot-navigation,2,40,RobustScaler,None,RandomForest,4365,1091,ok,,0.9929380143665858,0.9940659666122935,,1.2207913999882294
+9960,wall-robot-navigation,3,40,RobustScaler,None,RandomForest,4365,1091,ok,,0.9889931165928438,0.9911846185942572,,1.2640132999949856
+9960,wall-robot-navigation,4,40,RobustScaler,None,RandomForest,4365,1091,ok,,0.9882303872586858,0.9907105656024839,,1.178633899995475
+9960,wall-robot-navigation,0,41,RobustScaler,None,SVM,4364,1092,ok,,0.8627000181804465,0.8785682064407283,,1.0707881999987876
+9960,wall-robot-navigation,1,41,RobustScaler,None,SVM,4365,1091,ok,,0.8333870494584781,0.8450929305495538,,0.9952384000062011
+9960,wall-robot-navigation,2,41,RobustScaler,None,SVM,4365,1091,ok,,0.857658016586588,0.8608558743852186,,1.032543799999985
+9960,wall-robot-navigation,3,41,RobustScaler,None,SVM,4365,1091,ok,,0.8666798765503164,0.8647676424503571,,1.022870899992995
+9960,wall-robot-navigation,4,41,RobustScaler,None,SVM,4365,1091,ok,,0.8413524583913266,0.8483974387920102,,1.0016409999952884
+9960,wall-robot-navigation,0,42,RobustScaler,None,kNN,4364,1092,ok,,0.8778066690449259,0.8850978820087563,,0.03840420000778977
+9960,wall-robot-navigation,1,42,RobustScaler,None,kNN,4365,1091,ok,,0.8431051091765378,0.854061498766399,,0.04100250000192318
+9960,wall-robot-navigation,2,42,RobustScaler,None,kNN,4365,1091,ok,,0.8674704263989979,0.8691187871231361,,0.04236969999328721
+9960,wall-robot-navigation,3,42,RobustScaler,None,kNN,4365,1091,ok,,0.8735067788596598,0.8751137063428485,,0.04249709998839535
+9960,wall-robot-navigation,4,42,RobustScaler,None,kNN,4365,1091,ok,,0.8518463948825353,0.8554504125616331,,0.038631399991572835
+9960,wall-robot-navigation,0,43,RobustScaler,None,MLP,4364,1092,ok,,0.9279047949094655,0.9400862799281774,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.2174737000023015
+9960,wall-robot-navigation,1,43,RobustScaler,None,MLP,4365,1091,ok,,0.9259232830661401,0.9372218132207386,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.899999600005685
+9960,wall-robot-navigation,2,43,RobustScaler,None,MLP,4365,1091,ok,,0.9458569208569209,0.9413092457228021,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.366546799996286
+9960,wall-robot-navigation,3,43,RobustScaler,None,MLP,4365,1091,ok,,0.9268932444605817,0.9324198989069207,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.991525899997214
+9960,wall-robot-navigation,4,43,RobustScaler,None,MLP,4365,1091,ok,,0.9201216416269264,0.9127036898337214,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.210793599995668
+9960,wall-robot-navigation,0,44,RobustScaler,None,DecisionTree,4364,1092,ok,,0.9982993197278911,0.9957700524430366,,0.06204640000942163
+9960,wall-robot-navigation,1,44,RobustScaler,None,DecisionTree,4365,1091,ok,,0.9944248212105355,0.9951242307811103,,0.07972880000306759
+9960,wall-robot-navigation,2,44,RobustScaler,None,DecisionTree,4365,1091,ok,,0.9940501958359101,0.9919612719042218,,0.06555300000763964
+9960,wall-robot-navigation,3,44,RobustScaler,None,DecisionTree,4365,1091,ok,,0.9891786453498013,0.992345203348292,,0.08171779999975115
+9960,wall-robot-navigation,4,44,RobustScaler,None,DecisionTree,4365,1091,ok,,0.9982397891535293,0.9961851879501971,,0.06239609999465756
+9960,wall-robot-navigation,0,45,None,PCA,RandomForest,4364,1092,ok,,0.8460748456815232,0.8634418075715675,,1.4265793999948073
+9960,wall-robot-navigation,1,45,None,PCA,RandomForest,4365,1091,ok,,0.8527426938141224,0.8708546101577183,,1.592107099990244
+9960,wall-robot-navigation,2,45,None,PCA,RandomForest,4365,1091,ok,,0.868304711161854,0.872685674713788,,1.4832252000051085
+9960,wall-robot-navigation,3,45,None,PCA,RandomForest,4365,1091,ok,,0.8434066567973829,0.862824153172735,,1.8439073999907123
+9960,wall-robot-navigation,4,45,None,PCA,RandomForest,4365,1091,ok,,0.8488144436917024,0.8642787560857491,,1.5104943000042113
+9960,wall-robot-navigation,0,46,None,PCA,SVM,4364,1092,ok,,0.8106259231484647,0.8165669052389165,,0.746972499997355
+9960,wall-robot-navigation,1,46,None,PCA,SVM,4365,1091,ok,,0.8146603396603397,0.8157252588514801,,0.7525365000037709
+9960,wall-robot-navigation,2,46,None,PCA,SVM,4365,1091,ok,,0.8399909614195329,0.8333332232966727,,0.742219899999327
+9960,wall-robot-navigation,3,46,None,PCA,SVM,4365,1091,ok,,0.8123872793494341,0.8190758815612662,,0.7904129000089597
+9960,wall-robot-navigation,4,46,None,PCA,SVM,4365,1091,ok,,0.8280141781164625,0.8263409119833268,,0.7769923999876482
+9960,wall-robot-navigation,0,47,None,PCA,kNN,4364,1092,ok,,0.8192143851225798,0.8313976937708876,,0.043571200003498234
+9960,wall-robot-navigation,1,47,None,PCA,kNN,4365,1091,ok,,0.8127110984253841,0.8204575926360373,,0.04379690000496339
+9960,wall-robot-navigation,2,47,None,PCA,kNN,4365,1091,ok,,0.8455494901923474,0.844512802219466,,0.04703250000602566
+9960,wall-robot-navigation,3,47,None,PCA,kNN,4365,1091,ok,,0.8198064124760339,0.8280379762800929,,0.04939879999437835
+9960,wall-robot-navigation,4,47,None,PCA,kNN,4365,1091,ok,,0.8291126156110814,0.8314785927494834,,0.04546039999695495
+9960,wall-robot-navigation,0,48,None,PCA,MLP,4364,1092,ok,,0.8648219900381633,0.8738355595229403,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.97196769999573
+9960,wall-robot-navigation,1,48,None,PCA,MLP,4365,1091,ok,,0.8644805591234163,0.8680553135359049,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.471181400003843
+9960,wall-robot-navigation,2,48,None,PCA,MLP,4365,1091,ok,,0.8801363319220462,0.8661832158340157,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.890451200000825
+9960,wall-robot-navigation,3,48,None,PCA,MLP,4365,1091,ok,,0.8871432777927835,0.8934127569644901,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.555756400004611
+9960,wall-robot-navigation,4,48,None,PCA,MLP,4365,1091,ok,,0.8663892960091392,0.86613345573556,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.783384900001693
+9960,wall-robot-navigation,0,49,None,PCA,DecisionTree,4364,1092,ok,,0.702578001812615,0.7263585673927313,,0.056091400008881465
+9960,wall-robot-navigation,1,49,None,PCA,DecisionTree,4365,1091,ok,,0.773458485958486,0.7639571516087251,,0.06188609999662731
+9960,wall-robot-navigation,2,49,None,PCA,DecisionTree,4365,1091,ok,,0.7725581957724815,0.7712993080062269,,0.06825640000170097
+9960,wall-robot-navigation,3,49,None,PCA,DecisionTree,4365,1091,ok,,0.738461400326385,0.7533721345257656,,0.055795099993702024
+9960,wall-robot-navigation,4,49,None,PCA,DecisionTree,4365,1091,ok,,0.7075948467186108,0.7189442033300131,,0.05699469998944551
+9960,wall-robot-navigation,0,50,None,SelectKBest,RandomForest,4364,1092,ok,,0.9959424501702033,0.9929807770783812,,0.9432382999948459
+9960,wall-robot-navigation,1,50,None,SelectKBest,RandomForest,4365,1091,ok,,0.987007238792953,0.9888895506261896,,0.8912331000028644
+9960,wall-robot-navigation,2,50,None,SelectKBest,RandomForest,4365,1091,ok,,0.9908884766027624,0.9863159347074157,,0.9378595000016503
+9960,wall-robot-navigation,3,50,None,SelectKBest,RandomForest,4365,1091,ok,,0.983682718766251,0.985020732991722,,1.0958968000049936
+9960,wall-robot-navigation,4,50,None,SelectKBest,RandomForest,4365,1091,ok,,0.982263800146514,0.9839412189070363,,0.9999414000049001
+9960,wall-robot-navigation,0,51,None,SelectKBest,SVM,4364,1092,ok,,0.7906027236218783,0.8131316166500424,,0.8029852000036044
+9960,wall-robot-navigation,1,51,None,SelectKBest,SVM,4365,1091,ok,,0.8430872698729841,0.8532801248542635,,0.800405399990268
+9960,wall-robot-navigation,2,51,None,SelectKBest,SVM,4365,1091,ok,,0.8186876615448043,0.8266163434495385,,0.7568172999890521
+9960,wall-robot-navigation,3,51,None,SelectKBest,SVM,4365,1091,ok,,0.8178145243777701,0.8316066664104577,,0.8821454999997513
+9960,wall-robot-navigation,4,51,None,SelectKBest,SVM,4365,1091,ok,,0.8367293066065654,0.8423210076368455,,0.7824190999963321
+9960,wall-robot-navigation,0,52,None,SelectKBest,kNN,4364,1092,ok,,0.8783944853052514,0.8918878498068562,,0.05836959999578539
+9960,wall-robot-navigation,1,52,None,SelectKBest,kNN,4365,1091,ok,,0.9094437308723022,0.9062656120085555,,0.05274460000509862
+9960,wall-robot-navigation,2,52,None,SelectKBest,kNN,4365,1091,ok,,0.9022580594009166,0.8974362083996426,,0.057984699989901856
+9960,wall-robot-navigation,3,52,None,SelectKBest,kNN,4365,1091,ok,,0.8774821051585455,0.8970641993999195,,0.06540229999518488
+9960,wall-robot-navigation,4,52,None,SelectKBest,kNN,4365,1091,ok,,0.8989719906187686,0.8964569129004876,,0.06219670000427868
+9960,wall-robot-navigation,0,53,None,SelectKBest,MLP,4364,1092,ok,,0.91330507640497,0.9202462926696683,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.089109300010023
+9960,wall-robot-navigation,1,53,None,SelectKBest,MLP,4365,1091,ok,,0.9194684283969998,0.9174303438484303,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.001302099990426
+9960,wall-robot-navigation,2,53,None,SelectKBest,MLP,4365,1091,ok,,0.9162696430553573,0.9208762869245658,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.039249900000868
+9960,wall-robot-navigation,3,53,None,SelectKBest,MLP,4365,1091,ok,,0.9348102942630729,0.940250932673275,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.400605800008634
+9960,wall-robot-navigation,4,53,None,SelectKBest,MLP,4365,1091,ok,,0.9347977731629282,0.9352836908448762,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.974712600000203
+9960,wall-robot-navigation,0,54,None,SelectKBest,DecisionTree,4364,1092,ok,,0.9703358482585517,0.9709662276033518,,0.03669929999159649
+9960,wall-robot-navigation,1,54,None,SelectKBest,DecisionTree,4365,1091,ok,,0.9828035060177918,0.9800159195329591,,0.03586999999242835
+9960,wall-robot-navigation,2,54,None,SelectKBest,DecisionTree,4365,1091,ok,,0.9782647907647908,0.9740749210073959,,0.035741300001973286
+9960,wall-robot-navigation,3,54,None,SelectKBest,DecisionTree,4365,1091,ok,,0.9693483099466734,0.974661272793141,,0.04487959999823943
+9960,wall-robot-navigation,4,54,None,SelectKBest,DecisionTree,4365,1091,ok,,0.9599454434265209,0.9676547388011913,,0.03707800000847783
+9960,wall-robot-navigation,0,55,None,None,RandomForest,4364,1092,ok,,0.9977324263038548,0.9947425426177213,,1.2342854000016814
+9960,wall-robot-navigation,1,55,None,None,RandomForest,4365,1091,ok,,0.9834815977673121,0.9892987522873288,,1.2044594999897527
+9960,wall-robot-navigation,2,55,None,None,RandomForest,4365,1091,ok,,0.9929380143665858,0.9940659666122935,,1.1803687999927206
+9960,wall-robot-navigation,3,55,None,None,RandomForest,4365,1091,ok,,0.9889931165928438,0.9911846185942572,,1.7667897999926936
+9960,wall-robot-navigation,4,55,None,None,RandomForest,4365,1091,ok,,0.9882303872586858,0.9907105656024839,,1.2012672999990173
+9960,wall-robot-navigation,0,56,None,None,SVM,4364,1092,ok,,0.8580996793855045,0.884689443629986,,0.954835099997581
+9960,wall-robot-navigation,1,56,None,None,SVM,4365,1091,ok,,0.8467435342435342,0.8585813505350688,,0.8816626999905566
+9960,wall-robot-navigation,2,56,None,None,SVM,4365,1091,ok,,0.8774410113695827,0.8885311390038987,,0.9339239999972051
+9960,wall-robot-navigation,3,56,None,None,SVM,4365,1091,ok,,0.866646876440603,0.885945077510284,,1.1654469999921275
+9960,wall-robot-navigation,4,56,None,None,SVM,4365,1091,ok,,0.8610565004189279,0.8778763909046928,,0.8819250999949872
+9960,wall-robot-navigation,0,57,None,None,kNN,4364,1092,ok,,0.8540198085541068,0.8571513139686899,,0.04176389999338426
+9960,wall-robot-navigation,1,57,None,None,kNN,4365,1091,ok,,0.8398696541553684,0.8409953059172507,,0.04765469999983907
+9960,wall-robot-navigation,2,57,None,None,kNN,4365,1091,ok,,0.8593477950620807,0.8646294389004409,,0.04619990001083352
+9960,wall-robot-navigation,3,57,None,None,kNN,4365,1091,ok,,0.8407734743568361,0.845625420852949,,0.04314919999160338
+9960,wall-robot-navigation,4,57,None,None,kNN,4365,1091,ok,,0.8498415551944362,0.8474260439102816,,0.046398099992075004
+9960,wall-robot-navigation,0,58,None,None,MLP,4364,1092,ok,,0.9279653361343231,0.9363596950461357,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.352063500002259
+9960,wall-robot-navigation,1,58,None,None,MLP,4365,1091,ok,,0.9163015555872699,0.9248096648638164,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.008884099996067
+9960,wall-robot-navigation,2,58,None,None,MLP,4365,1091,ok,,0.9241072419643849,0.916775504752026,,4.970318100007717
+9960,wall-robot-navigation,3,58,None,None,MLP,4365,1091,ok,,0.9141507619175536,0.9211114092581676,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.169445100007579
+9960,wall-robot-navigation,4,58,None,None,MLP,4365,1091,ok,,0.8975781141993212,0.8963989716451581,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.23067030000675
+9960,wall-robot-navigation,0,59,None,None,DecisionTree,4364,1092,ok,,0.9982993197278911,0.9957700524430366,,0.06646800000453368
+9960,wall-robot-navigation,1,59,None,None,DecisionTree,4365,1091,ok,,0.9944248212105355,0.9951242307811103,,0.07350069998938125
+9960,wall-robot-navigation,2,59,None,None,DecisionTree,4365,1091,ok,,0.9940501958359101,0.9919612719042218,,0.06357389999902807
+9960,wall-robot-navigation,3,59,None,None,DecisionTree,4365,1091,ok,,0.9891786453498013,0.992345203348292,,0.0700481999956537
+9960,wall-robot-navigation,4,59,None,None,DecisionTree,4365,1091,ok,,0.9982397891535293,0.9961851879501971,,0.0693535000027623

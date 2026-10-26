@@ -1,0 +1,15 @@
+{
+  "n_tasks": 193,
+  "n_pipelines": 60,
+  "n_fits": 57900,
+  "same_rows_all_classifiers": true,
+  "disjoint_train_test_rows": true,
+  "all_rows_tested_once": true,
+  "checksums_verified": true,
+  "matrix_matches_five_fold_scores": true,
+  "local_raw_caches_and_seeded_splits_verified": 193,
+  "note_local_cache": "A auditoria estrutural pode ser repetida sem caches; quando disponíveis, seus hashes e folds estratificados também são conferidos.",
+  "failed_fits": 0,
+  "missing_pipeline_scores": 0,
+  "signature": "4a075a53de898d588164d96ce261aaab362265fb36a6ddfb287bfcfbfb0b1282"
+}

@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,0,StandardScaler,PCA,RandomForest,1178,295,ok,,0.4443515382935927,0.4455055663004619,,0.5677937000000384
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,0,StandardScaler,PCA,RandomForest,1178,295,ok,,0.5085752377236135,0.5110686075941544,,0.4694938999891747
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,0,StandardScaler,PCA,RandomForest,1178,295,ok,,0.4632221428337933,0.46286279518192974,,0.6867576999939047
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,0,StandardScaler,PCA,RandomForest,1179,294,ok,,0.4625102566279036,0.4636630765663024,,0.5038687000051141
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,0,StandardScaler,PCA,RandomForest,1179,294,ok,,0.4453586967125158,0.446208386700405,,0.4375321999978041
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,1,StandardScaler,PCA,SVM,1178,295,ok,,0.484038723283675,0.48395481445505734,,0.1329091000079643
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,1,StandardScaler,PCA,SVM,1178,295,ok,,0.5653803810081247,0.570091980577914,,0.09481889999005944
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,1,StandardScaler,PCA,SVM,1178,295,ok,,0.4934154303086342,0.4934129051776111,,0.10946210000838619
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,1,StandardScaler,PCA,SVM,1179,294,ok,,0.4801799507681861,0.48568807339449543,,0.10159479999856558
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,1,StandardScaler,PCA,SVM,1179,294,ok,,0.5012724612232953,0.501060861998362,,0.13246789999539033
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,2,StandardScaler,PCA,kNN,1178,295,ok,,0.4539626795992029,0.45177956074516135,,0.023746299993945286
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,2,StandardScaler,PCA,kNN,1178,295,ok,,0.47324999651601934,0.46800015072017076,,0.012538500013761222
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,2,StandardScaler,PCA,kNN,1178,295,ok,,0.4611627135898981,0.4571762319564408,,0.017630900008953176
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,2,StandardScaler,PCA,kNN,1179,294,ok,,0.483631836573013,0.4838126875892415,,0.014642099995398894
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,2,StandardScaler,PCA,kNN,1179,294,ok,,0.4678107501707151,0.4691377098353842,,0.016351300000678748
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,3,StandardScaler,PCA,MLP,1178,295,ok,,0.48572729257540503,0.48581806480588696,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5970765999954892
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,3,StandardScaler,PCA,MLP,1178,295,ok,,0.5711057225543618,0.5692851708238228,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6011867000052007
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,3,StandardScaler,PCA,MLP,1178,295,ok,,0.5026011385234687,0.5039415318069954,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0147570999979507
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,3,StandardScaler,PCA,MLP,1179,294,ok,,0.510780069603599,0.5167216383422779,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6197398000076646
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,3,StandardScaler,PCA,MLP,1179,294,ok,,0.5207675348746464,0.5231215297630393,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.694815800001379
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,4,StandardScaler,PCA,DecisionTree,1178,295,ok,,0.44636992442084633,0.445867454080808,,0.017394499998772517
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,4,StandardScaler,PCA,DecisionTree,1178,295,ok,,0.47649938914205814,0.46767050776214586,,0.018975300001329742
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,4,StandardScaler,PCA,DecisionTree,1178,295,ok,,0.4387588319627154,0.438619186632601,,0.01951990000088699
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,4,StandardScaler,PCA,DecisionTree,1179,294,ok,,0.45011742070565597,0.4504612474017649,,0.017100999990361743
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,4,StandardScaler,PCA,DecisionTree,1179,294,ok,,0.45964608330894546,0.45947012365478485,,0.017796000000089407
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,5,StandardScaler,SelectKBest,RandomForest,1178,295,ok,,0.49133417877930613,0.4914602795040577,,0.3457968000002438
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,5,StandardScaler,SelectKBest,RandomForest,1178,295,ok,,0.5121683831078037,0.5145088461906476,,0.4032280000101309
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,5,StandardScaler,SelectKBest,RandomForest,1178,295,ok,,0.45745013706178755,0.4576723114547276,,0.34374430000025313
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,5,StandardScaler,SelectKBest,RandomForest,1179,294,ok,,0.4873100755453697,0.4904052065189506,,0.3638032999879215
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,5,StandardScaler,SelectKBest,RandomForest,1179,294,ok,,0.4900852599746366,0.49655620791785715,,0.3905786000104854
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,6,StandardScaler,SelectKBest,SVM,1178,295,ok,,0.5048775729197151,0.5065486749449013,,0.09230090001074132
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,6,StandardScaler,SelectKBest,SVM,1178,295,ok,,0.5922929702560958,0.5975021889139925,,0.11232569999992847
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,6,StandardScaler,SelectKBest,SVM,1178,295,ok,,0.5020524243825214,0.5026206016381104,,0.10997049999423325
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,6,StandardScaler,SelectKBest,SVM,1179,294,ok,,0.48639051580228054,0.49129563506760743,,0.09274449999793433
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,6,StandardScaler,SelectKBest,SVM,1179,294,ok,,0.5233846454004488,0.5274353151613718,,0.11233989999163896
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,7,StandardScaler,SelectKBest,kNN,1178,295,ok,,0.44214501721086447,0.43898262311630254,,0.014180300000589341
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,7,StandardScaler,SelectKBest,kNN,1178,295,ok,,0.4886608042885479,0.48569838148850725,,0.01673980000487063
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,7,StandardScaler,SelectKBest,kNN,1178,295,ok,,0.46577891723522796,0.46418561929088037,,0.01852810000127647
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,7,StandardScaler,SelectKBest,kNN,1179,294,ok,,0.44294485470956063,0.4428238224194107,,0.014102500004810281
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,7,StandardScaler,SelectKBest,kNN,1179,294,ok,,0.42407491952004683,0.4229285334548492,,0.017239100008737296
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,8,StandardScaler,SelectKBest,MLP,1178,295,ok,,0.4959934222445197,0.4963014452271166,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1319804999948246
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,8,StandardScaler,SelectKBest,MLP,1178,295,ok,,0.5754816022594776,0.5763804275310014,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2383947999915108
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,8,StandardScaler,SelectKBest,MLP,1178,295,ok,,0.4907956121548354,0.49129477204981997,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.458306000000448
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,8,StandardScaler,SelectKBest,MLP,1179,294,ok,,0.5049514755397109,0.5071120490402975,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1630514999997104
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,8,StandardScaler,SelectKBest,MLP,1179,294,ok,,0.531870841869086,0.5342114975546061,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.4157513999962248
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,9,StandardScaler,SelectKBest,DecisionTree,1178,295,ok,,0.5115180400518416,0.5072778551938787,,0.008675999997649342
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,9,StandardScaler,SelectKBest,DecisionTree,1178,295,ok,,0.5049820923394234,0.5046155458606821,,0.022410799996578135
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,9,StandardScaler,SelectKBest,DecisionTree,1178,295,ok,,0.48222166183331233,0.4812500803476159,,0.008484900012263097
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,9,StandardScaler,SelectKBest,DecisionTree,1179,294,ok,,0.46914523385111623,0.47113925151132235,,0.008587500007706694
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,9,StandardScaler,SelectKBest,DecisionTree,1179,294,ok,,0.5021792995805288,0.5016853809170828,,0.009379799987073056
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,10,StandardScaler,None,RandomForest,1178,295,ok,,0.4821620190364703,0.48249981785452173,,0.3253958999994211
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,10,StandardScaler,None,RandomForest,1178,295,ok,,0.5182328321046494,0.5194773475662093,,0.553800699999556
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,10,StandardScaler,None,RandomForest,1178,295,ok,,0.496609647095084,0.49686042103162736,,0.3319698999985121
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,10,StandardScaler,None,RandomForest,1179,294,ok,,0.48971507795037206,0.4935391096528537,,0.30860659999598283
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,10,StandardScaler,None,RandomForest,1179,294,ok,,0.508247390498488,0.5144441309458295,,0.39708700000483077
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,11,StandardScaler,None,SVM,1178,295,ok,,0.5051841632175259,0.5064159053708751,,0.09683660000155214
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,11,StandardScaler,None,SVM,1178,295,ok,,0.5772073340115482,0.5811755381704761,,0.11321440000028815
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,11,StandardScaler,None,SVM,1178,295,ok,,0.5004786655272092,0.5011751079646894,,0.15347389999078587
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,11,StandardScaler,None,SVM,1179,294,ok,,0.4971139971139971,0.504419131144331,,0.09934679999423679
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,11,StandardScaler,None,SVM,1179,294,ok,,0.5193690371671057,0.5220294464926866,,0.10760119999758899
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,12,StandardScaler,None,kNN,1178,295,ok,,0.4527177371777899,0.44840547743773546,,0.014661000008345582
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,12,StandardScaler,None,kNN,1178,295,ok,,0.4811772138374421,0.4762420677913635,,0.04067390000273008
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,12,StandardScaler,None,kNN,1178,295,ok,,0.4694074354268529,0.4668595202766452,,0.016158700003870763
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,12,StandardScaler,None,kNN,1179,294,ok,,0.45697875109639813,0.4602275362671402,,0.015197600005194545
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,12,StandardScaler,None,kNN,1179,294,ok,,0.4840538484050336,0.48607122142473286,,0.018507699991459958
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,13,StandardScaler,None,MLP,1178,295,ok,,0.5112253856766587,0.509621578099839,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3717830999958096
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,13,StandardScaler,None,MLP,1178,295,ok,,0.518379159292241,0.5181062243401123,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.307746299993596
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,13,StandardScaler,None,MLP,1178,295,ok,,0.5056856124817289,0.5063642242962132,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.503585700003896
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,13,StandardScaler,None,MLP,1179,294,ok,,0.48759301700478175,0.48952883102209904,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1914932999934535
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,13,StandardScaler,None,MLP,1179,294,ok,,0.5175963320651643,0.5201871872996972,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5393628999881912
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,14,StandardScaler,None,DecisionTree,1178,295,ok,,0.4941027820746873,0.4911417322834646,,0.00978160000522621
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,14,StandardScaler,None,DecisionTree,1178,295,ok,,0.5116922390846886,0.5124344769239316,,0.01083210000069812
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,14,StandardScaler,None,DecisionTree,1178,295,ok,,0.47913718787505205,0.47403161790959286,,0.011727399993105792
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,14,StandardScaler,None,DecisionTree,1179,294,ok,,0.4882862235803413,0.4892257662780051,,0.008841800008667633
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,14,StandardScaler,None,DecisionTree,1179,294,ok,,0.5107806067700712,0.5107682812735335,,0.011221799999475479
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,15,MinMaxScaler,PCA,RandomForest,1178,295,ok,,0.3982979593163965,0.3973904227725771,,0.45290030000614934
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,15,MinMaxScaler,PCA,RandomForest,1178,295,ok,,0.4270640262738595,0.42840206734867864,,0.4697380999859888
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,15,MinMaxScaler,PCA,RandomForest,1178,295,ok,,0.40348935494566557,0.40394998587674963,,0.4887419000006048
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,15,MinMaxScaler,PCA,RandomForest,1179,294,ok,,0.4291231644172821,0.4323868562998998,,0.4229003000073135
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,15,MinMaxScaler,PCA,RandomForest,1179,294,ok,,0.4016540825285338,0.40142655432978014,,0.4495431999966968
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,16,MinMaxScaler,PCA,SVM,1178,295,ok,,0.4865146722038733,0.48675803746372753,,0.1314178000029642
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,16,MinMaxScaler,PCA,SVM,1178,295,ok,,0.4955126329138621,0.49800317886085527,,0.14788699999917299
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,16,MinMaxScaler,PCA,SVM,1178,295,ok,,0.4245646478656187,0.4242698030829546,,0.15404950000811368
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,16,MinMaxScaler,PCA,SVM,1179,294,ok,,0.44273264861500156,0.44808924967285474,,0.09759750000375789
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,16,MinMaxScaler,PCA,SVM,1179,294,ok,,0.42376392547068575,0.42574949757387953,,0.10694090000470169
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,17,MinMaxScaler,PCA,kNN,1178,295,ok,,0.3779120271657585,0.3783808840269553,,0.014967700000852346
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,17,MinMaxScaler,PCA,kNN,1178,295,ok,,0.4301578010972216,0.4244250726845249,,0.01274030000786297
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,17,MinMaxScaler,PCA,kNN,1178,295,ok,,0.43353087042407434,0.43402279945413585,,0.014671800003270619
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,17,MinMaxScaler,PCA,kNN,1179,294,ok,,0.44667968197379965,0.4487876841179632,,0.012057600004482083
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,17,MinMaxScaler,PCA,kNN,1179,294,ok,,0.4148723051409618,0.4152082126698731,,0.014781999998376705
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,18,MinMaxScaler,PCA,MLP,1178,295,ok,,0.4966066028401411,0.4949130994882629,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5572258999891346
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,18,MinMaxScaler,PCA,MLP,1178,295,ok,,0.5006387297871056,0.5035574383962439,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.12110709999979
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,18,MinMaxScaler,PCA,MLP,1178,295,ok,,0.409805404951036,0.40905912041893644,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.409968599997228
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,18,MinMaxScaler,PCA,MLP,1179,294,ok,,0.45259315847551146,0.4533907595073021,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1092692999955034
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,18,MinMaxScaler,PCA,MLP,1179,294,ok,,0.4447702663154814,0.44599081302361004,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2719419000059133
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,19,MinMaxScaler,PCA,DecisionTree,1178,295,ok,,0.398769458031969,0.3969959937950221,,0.014992500000516884
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,19,MinMaxScaler,PCA,DecisionTree,1178,295,ok,,0.3932996084005742,0.3903967481051785,,0.014777700009290129
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,19,MinMaxScaler,PCA,DecisionTree,1178,295,ok,,0.42786860748025796,0.4288231132075471,,0.017467999990913086
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,19,MinMaxScaler,PCA,DecisionTree,1179,294,ok,,0.4178196531137708,0.41621461931740206,,0.015409300001920201
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,19,MinMaxScaler,PCA,DecisionTree,1179,294,ok,,0.4039106428641108,0.3967999511952815,,0.0173406999965664
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,20,MinMaxScaler,SelectKBest,RandomForest,1178,295,ok,,0.48479823106688774,0.4852461786366315,,0.32040470000356436
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,20,MinMaxScaler,SelectKBest,RandomForest,1178,295,ok,,0.5177659786966197,0.5204173929277859,,0.29720120001002215
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,20,MinMaxScaler,SelectKBest,RandomForest,1178,295,ok,,0.4576906373022878,0.45795504385964914,,0.3479107000021031
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,20,MinMaxScaler,SelectKBest,RandomForest,1179,294,ok,,0.4921200803553745,0.49584915710654004,,0.3378907000005711
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,20,MinMaxScaler,SelectKBest,RandomForest,1179,294,ok,,0.4814839527850941,0.4871536099339366,,0.41220479999901727
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,21,MinMaxScaler,SelectKBest,SVM,1178,295,ok,,0.4784318370797738,0.4791559664441021,,0.09745509999629576
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,21,MinMaxScaler,SelectKBest,SVM,1178,295,ok,,0.5838988995266432,0.5901218008579491,,0.09682739998970646
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,21,MinMaxScaler,SelectKBest,SVM,1178,295,ok,,0.5206806857292294,0.5202207129290463,,0.11370020000322256
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,21,MinMaxScaler,SelectKBest,SVM,1179,294,ok,,0.4611945788416376,0.4660270117778568,,0.1007604999904288
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,21,MinMaxScaler,SelectKBest,SVM,1179,294,ok,,0.5124748804994635,0.5182901920716511,,0.10857370001031086
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,22,MinMaxScaler,SelectKBest,kNN,1178,295,ok,,0.45226481969238774,0.450468238578845,,0.014242900011595339
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,22,MinMaxScaler,SelectKBest,kNN,1178,295,ok,,0.48911372177395007,0.48387324920531655,,0.014164399995934218
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,22,MinMaxScaler,SelectKBest,kNN,1178,295,ok,,0.4423406510785152,0.4409719461424972,,0.014570900006219745
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,22,MinMaxScaler,SelectKBest,kNN,1179,294,ok,,0.4312735195088136,0.4319311563281379,,0.013397400005487725
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,22,MinMaxScaler,SelectKBest,kNN,1179,294,ok,,0.43690371671056477,0.4362297822627752,,0.015224499991745688
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,23,MinMaxScaler,SelectKBest,MLP,1178,295,ok,,0.5233775102080633,0.5241662136824857,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1762279999966267
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,23,MinMaxScaler,SelectKBest,MLP,1178,295,ok,,0.5818479962465916,0.5820967535071772,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1742163000017172
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,23,MinMaxScaler,SelectKBest,MLP,1178,295,ok,,0.5282039068446835,0.5263724542753857,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.167228399994201
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,23,MinMaxScaler,SelectKBest,MLP,1179,294,ok,,0.4789915966386555,0.4817633022677241,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0523421999969287
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,23,MinMaxScaler,SelectKBest,MLP,1179,294,ok,,0.5242290508243098,0.5264357454010741,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2650118000019575
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,24,MinMaxScaler,SelectKBest,DecisionTree,1178,295,ok,,0.5164931644299511,0.511463991235657,,0.009126400007517077
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,24,MinMaxScaler,SelectKBest,DecisionTree,1178,295,ok,,0.5049820923394234,0.5046155458606821,,0.008031299992580898
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,24,MinMaxScaler,SelectKBest,DecisionTree,1178,295,ok,,0.48991766952932,0.48880297179410753,,0.008827800003928132
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,24,MinMaxScaler,SelectKBest,DecisionTree,1179,294,ok,,0.46976770506182275,0.4718904141618965,,0.008681599996634759
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,24,MinMaxScaler,SelectKBest,DecisionTree,1179,294,ok,,0.5021792995805288,0.5016853809170828,,0.009780199994565919
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,25,MinMaxScaler,None,RandomForest,1178,295,ok,,0.4762485425347585,0.4765660870728971,,0.3552734999975655
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,25,MinMaxScaler,None,RandomForest,1178,295,ok,,0.5364261790951871,0.5371373852667448,,0.33059789999970235
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,25,MinMaxScaler,None,RandomForest,1178,295,ok,,0.5024913956952791,0.5026595829591939,,0.41940709999471437
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,25,MinMaxScaler,None,RandomForest,1179,294,ok,,0.4852870441105735,0.4897871118189356,,0.4151835999946343
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,25,MinMaxScaler,None,RandomForest,1179,294,ok,,0.5088486976880304,0.514979992318522,,0.3219625000056112
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,26,MinMaxScaler,None,SVM,1178,295,ok,,0.4946114432506004,0.495219638242894,,0.09935220000625122
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,26,MinMaxScaler,None,SVM,1178,295,ok,,0.5370672315360638,0.5418724920146306,,0.0975765000039246
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,26,MinMaxScaler,None,SVM,1178,295,ok,,0.502993410760401,0.5029231595221,,0.1032922000013059
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,26,MinMaxScaler,None,SVM,1179,294,ok,,0.480859010270775,0.48606627017841975,,0.1132285000057891
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,26,MinMaxScaler,None,SVM,1179,294,ok,,0.4583154814164471,0.46250166967207645,,0.09911860000283923
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,27,MinMaxScaler,None,kNN,1178,295,ok,,0.45364679868630703,0.44966746695366616,,0.01553829999465961
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,27,MinMaxScaler,None,kNN,1178,295,ok,,0.4740187949143173,0.46843033509700177,,0.01401830000395421
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,27,MinMaxScaler,None,kNN,1178,295,ok,,0.4491213568883472,0.44906895298261446,,0.014525200007483363
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,27,MinMaxScaler,None,kNN,1179,294,ok,,0.4678437031378208,0.47173098094959376,,0.014172399998642504
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,27,MinMaxScaler,None,kNN,1179,294,ok,,0.49424719539557116,0.49652129111701476,,0.014665800001239404
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,28,MinMaxScaler,None,MLP,1178,295,ok,,0.5221279224791077,0.5195517722255607,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.170992400002433
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,28,MinMaxScaler,None,MLP,1178,295,ok,,0.6055019022534386,0.6069979936298628,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2431217999983346
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,28,MinMaxScaler,None,MLP,1178,295,ok,,0.5145631067961165,0.5152842031646123,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3632729000091786
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,28,MinMaxScaler,None,MLP,1179,294,ok,,0.5096200096200096,0.5135583195909595,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.243085299996892
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,28,MinMaxScaler,None,MLP,1179,294,ok,,0.542294410301434,0.546191652826724,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1143161999934819
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,29,MinMaxScaler,None,DecisionTree,1178,295,ok,,0.4941027820746873,0.4911417322834646,,0.020448699986445718
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,29,MinMaxScaler,None,DecisionTree,1178,295,ok,,0.5116922390846886,0.5124344769239316,,0.010215500005870126
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,29,MinMaxScaler,None,DecisionTree,1178,295,ok,,0.4785464445658621,0.47319540229885054,,0.008834899999783374
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,29,MinMaxScaler,None,DecisionTree,1179,294,ok,,0.48890869479104776,0.4900731089430271,,0.008948200003942475
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,29,MinMaxScaler,None,DecisionTree,1179,294,ok,,0.5107806067700712,0.5107682812735335,,0.010971099996822886
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,30,RobustScaler,PCA,RandomForest,1178,295,ok,,0.4770312768556842,0.4769949825627858,,0.6625714999972843
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,30,RobustScaler,PCA,RandomForest,1178,295,ok,,0.5135596527168081,0.5146605198361488,,0.42522800000733696
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,30,RobustScaler,PCA,RandomForest,1178,295,ok,,0.45639940785571853,0.45388069493792765,,0.4313511000073049
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,30,RobustScaler,PCA,RandomForest,1179,294,ok,,0.4803921568627451,0.483121201697053,,0.4361514000047464
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,30,RobustScaler,PCA,RandomForest,1179,294,ok,,0.4829167886059897,0.4884928220636781,,0.5807153999921866
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,31,RobustScaler,PCA,SVM,1178,295,ok,,0.5087726632941734,0.5078865625026522,,0.10059460000775289
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,31,RobustScaler,PCA,SVM,1178,295,ok,,0.577990068332474,0.5850296861747243,,0.09395799999765586
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,31,RobustScaler,PCA,SVM,1178,295,ok,,0.4998458930497765,0.5008267084402478,,0.10894200000620913
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,31,RobustScaler,PCA,SVM,1179,294,ok,,0.5053758877288289,0.511480397670364,,0.09839669999200851
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,31,RobustScaler,PCA,SVM,1179,294,ok,,0.5316932982148083,0.533275235766904,,0.10236200000508688
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,32,RobustScaler,PCA,kNN,1178,295,ok,,0.47014693107757194,0.4677613842504739,,0.01386409999395255
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,32,RobustScaler,PCA,kNN,1178,295,ok,,0.499540114553284,0.4953712706771662,,0.011625600003753789
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,32,RobustScaler,PCA,kNN,1178,295,ok,,0.46306570092977867,0.458504348604385,,0.013895500000216998
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,32,RobustScaler,PCA,kNN,1179,294,ok,,0.48689981042922215,0.486939026723973,,0.012157699995441362
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,32,RobustScaler,PCA,kNN,1179,294,ok,,0.472184567359282,0.47280816007407767,,0.014019599999301136
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,33,RobustScaler,PCA,MLP,1178,295,ok,,0.5400239697869198,0.5393648582411061,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1000975000060862
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,33,RobustScaler,PCA,MLP,1178,295,ok,,0.5375201490214659,0.5381246612785989,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1304700000036974
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,33,RobustScaler,PCA,MLP,1178,295,ok,,0.5028416387639688,0.5025414752075749,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3510260000039125
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,33,RobustScaler,PCA,MLP,1179,294,ok,,0.5118693942223355,0.5144397746180562,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3423531000007642
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,33,RobustScaler,PCA,MLP,1179,294,ok,,0.5286212076870549,0.5305641048269369,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3288117999909446
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,34,RobustScaler,PCA,DecisionTree,1178,295,ok,,0.4186931820821198,0.4159356513048665,,0.015955800001393072
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,34,RobustScaler,PCA,DecisionTree,1178,295,ok,,0.46485128047902413,0.46259146344389074,,0.01565120001032483
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,34,RobustScaler,PCA,DecisionTree,1178,295,ok,,0.4590075512405609,0.45954106280193235,,0.018058699992252514
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,34,RobustScaler,PCA,DecisionTree,1179,294,ok,,0.46041648982825456,0.46252705627705626,,0.028046199993696064
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,34,RobustScaler,PCA,DecisionTree,1179,294,ok,,0.4729138620622378,0.4718455361262819,,0.020154800004092976
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,35,RobustScaler,SelectKBest,RandomForest,1178,295,ok,,0.48479823106688774,0.4849954404699377,,0.31821369999670424
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,35,RobustScaler,SelectKBest,RandomForest,1178,295,ok,,0.5112300309842014,0.5136989505402153,,0.3179563000012422
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,35,RobustScaler,SelectKBest,RandomForest,1178,295,ok,,0.4653866449982955,0.4656784188034188,,0.33096669999940787
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,35,RobustScaler,SelectKBest,RandomForest,1179,294,ok,,0.5022210904563846,0.505476558933437,,0.3697127999912482
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,35,RobustScaler,SelectKBest,RandomForest,1179,294,ok,,0.4977270510194127,0.5037806624085656,,0.3605057999957353
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,36,RobustScaler,SelectKBest,SVM,1178,295,ok,,0.4986528608126501,0.499023717177513,,0.09547079999174457
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,36,RobustScaler,SelectKBest,SVM,1178,295,ok,,0.576745125911061,0.5820959682455901,,0.09977270000672434
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,36,RobustScaler,SelectKBest,SVM,1178,295,ok,,0.4940061736178241,0.49342681894113133,,0.1044184999918798
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,36,RobustScaler,SelectKBest,SVM,1179,294,ok,,0.47955747955747957,0.48295676925813913,,0.1306680999987293
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,36,RobustScaler,SelectKBest,SVM,1179,294,ok,,0.5395781874939031,0.5443821485222909,,0.1293331000051694
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,37,RobustScaler,SelectKBest,kNN,1178,295,ok,,0.4589517398999401,0.45857023260325175,,0.01649389999511186
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,37,RobustScaler,SelectKBest,kNN,1178,295,ok,,0.47233487093013,0.4715314094489191,,0.012800700002117082
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,37,RobustScaler,SelectKBest,kNN,1178,295,ok,,0.41802444229628694,0.4130316873499907,,0.012923899994348176
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,37,RobustScaler,SelectKBest,kNN,1179,294,ok,,0.4864188099482217,0.4871684202458118,,0.016134999998030253
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,37,RobustScaler,SelectKBest,kNN,1179,294,ok,,0.46273885474587845,0.46189547943933906,,0.01375959999859333
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,38,RobustScaler,SelectKBest,MLP,1178,295,ok,,0.518553358325088,0.5180705073834845,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2339045999979135
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,38,RobustScaler,SelectKBest,MLP,1178,295,ok,,0.5721996924806407,0.5728243707242929,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2172518000006676
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,38,RobustScaler,SelectKBest,MLP,1178,295,ok,,0.4859389082690054,0.4846206378181037,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2096522999927402
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,38,RobustScaler,SelectKBest,MLP,1179,294,ok,,0.5075120957473899,0.510389011261524,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7197296999947866
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,38,RobustScaler,SelectKBest,MLP,1179,294,ok,,0.5268957174909764,0.5300007324397568,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1226954000012483
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,39,RobustScaler,SelectKBest,DecisionTree,1178,295,ok,,0.5115180400518416,0.5072778551938787,,0.011440599992056377
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,39,RobustScaler,SelectKBest,DecisionTree,1178,295,ok,,0.5049820923394234,0.5046155458606821,,0.009260000006179325
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,39,RobustScaler,SelectKBest,DecisionTree,1178,295,ok,,0.48991766952932,0.48880297179410753,,0.008518900009221397
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,39,RobustScaler,SelectKBest,DecisionTree,1179,294,ok,,0.4730356789180319,0.47516319232025817,,0.010346299997763708
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,39,RobustScaler,SelectKBest,DecisionTree,1179,294,ok,,0.5021792995805288,0.5016853809170828,,0.008121600010781549
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,40,RobustScaler,None,RandomForest,1178,295,ok,,0.482468609334281,0.4829969229396551,,0.3237090999900829
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,40,RobustScaler,None,RandomForest,1178,295,ok,,0.5255375782153657,0.5263384657248463,,0.39785729999130126
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,40,RobustScaler,None,RandomForest,1178,295,ok,,0.502250895454779,0.5025032253667567,,0.3370450000074925
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,40,RobustScaler,None,RandomForest,1179,294,ok,,0.500679059502589,0.5054585189263133,,0.3455744999955641
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,40,RobustScaler,None,RandomForest,1179,294,ok,,0.503873573309921,0.5095547243653115,,0.3003333000087878
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,41,RobustScaler,None,SVM,1178,295,ok,,0.5120406371503825,0.5109678297757675,,0.0955755000031786
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,41,RobustScaler,None,SVM,1178,295,ok,,0.5856106953560861,0.5923757697497999,,0.11466269999800716
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,41,RobustScaler,None,SVM,1178,295,ok,,0.5054871414094715,0.5072767143592213,,0.10944479999307077
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,41,RobustScaler,None,SVM,1179,294,ok,,0.4958124664007017,0.5016913614556435,,0.10052020000875928
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,41,RobustScaler,None,SVM,1179,294,ok,,0.5372697297824602,0.5391059386939451,,0.09265799999411684
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,42,RobustScaler,None,kNN,1178,295,ok,,0.4870953356466965,0.4837936928971412,,0.014287300000432879
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,42,RobustScaler,None,kNN,1178,295,ok,,0.4874065712520497,0.4830997096914997,,0.016816200004541315
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,42,RobustScaler,None,kNN,1178,295,ok,,0.4479562149465062,0.4400394991507683,,0.016617800007225014
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,42,RobustScaler,None,kNN,1179,294,ok,,0.4902243725773137,0.49068620268620267,,0.01432270000805147
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,42,RobustScaler,None,kNN,1179,294,ok,,0.47872051507170027,0.4789756352313641,,0.01246990000072401
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,43,RobustScaler,None,MLP,1178,295,ok,,0.47686636843792246,0.47537147466367063,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1904412000003504
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,43,RobustScaler,None,MLP,1178,295,ok,,0.5614481281733257,0.557466492074138,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.288152799999807
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,43,RobustScaler,None,MLP,1178,295,ok,,0.5005463791871559,0.5015329942062117,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.218212100007804
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,43,RobustScaler,None,MLP,1179,294,ok,,0.5123503947033359,0.5144851598671965,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.226341700006742
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,43,RobustScaler,None,MLP,1179,294,ok,,0.534294410301434,0.5384382089262535,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3198416999948677
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,44,RobustScaler,None,DecisionTree,1178,295,ok,,0.49145727942918466,0.4885035304611786,,0.008214500005124137
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,44,RobustScaler,None,DecisionTree,1178,295,ok,,0.5116922390846886,0.5124344769239316,,0.012069200005498715
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,44,RobustScaler,None,DecisionTree,1178,295,ok,,0.4785464445658621,0.47319540229885054,,0.008061100001214072
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,44,RobustScaler,None,DecisionTree,1179,294,ok,,0.4921766686472569,0.4934129901960784,,0.011388700004317798
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,44,RobustScaler,None,DecisionTree,1179,294,ok,,0.5107806067700712,0.5107682812735335,,0.011506299997563474
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,45,None,PCA,RandomForest,1178,295,ok,,0.4915037325046105,0.4909762342096329,,0.4435875999915879
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,45,None,PCA,RandomForest,1178,295,ok,,0.5431409711479949,0.5467566802312566,,0.4862165000085952
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,45,None,PCA,RandomForest,1178,295,ok,,0.4706776502893008,0.47033016144238166,,0.40837200000532903
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,45,None,PCA,RandomForest,1179,294,ok,,0.5150666327136915,0.5199327918226176,,0.45840520001365803
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,45,None,PCA,RandomForest,1179,294,ok,,0.5445060969661496,0.5518206595081248,,0.49936109999543987
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,46,None,PCA,SVM,1178,295,ok,,0.5041134198289597,0.5024647656506064,,0.09278340000309981
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,46,None,PCA,SVM,1178,295,ok,,0.5396035694543158,0.5373709254412676,,0.10558990000572521
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,46,None,PCA,SVM,1178,295,ok,,0.4925888566665266,0.49311388144442164,,0.08828460000222549
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,46,None,PCA,SVM,1179,294,ok,,0.43853096794273266,0.43205591070186483,,0.09738200000720099
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,46,None,PCA,SVM,1179,294,ok,,0.5089798068481124,0.504747752402171,,0.09813589999976102
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,47,None,PCA,kNN,1178,295,ok,,0.48245467341165327,0.4822909950569525,,0.011449300000094809
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,47,None,PCA,kNN,1178,295,ok,,0.5049913829545085,0.503688954964446,,0.012558000002172776
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,47,None,PCA,kNN,1178,295,ok,,0.4869009092310063,0.4865613553113553,,0.010911000004853122
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,47,None,PCA,kNN,1179,294,ok,,0.5316752963811787,0.5290390954639372,,0.015108999999938533
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,47,None,PCA,kNN,1179,294,ok,,0.4996644229831236,0.5025244017109746,,0.010658999992301688
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,48,None,PCA,MLP,1178,295,ok,,0.50080828351241,0.5009109311740891,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.095066499998211
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,48,None,PCA,MLP,1178,295,ok,,0.5784197592801631,0.5789228705758422,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3550557999988087
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,48,None,PCA,MLP,1178,295,ok,,0.4969598901637737,0.49692752061025636,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0929295000096317
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,48,None,PCA,MLP,1179,294,ok,,0.5190419602184307,0.5224591628766202,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3742747000069357
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,48,None,PCA,MLP,1179,294,ok,,0.5213192859233245,0.5241953062521839,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.139582200004952
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,49,None,PCA,DecisionTree,1178,295,ok,,0.45851275833716576,0.4580714616294601,,0.015151100000366569
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,49,None,PCA,DecisionTree,1178,295,ok,,0.5017652168661826,0.5043007864831063,,0.018347700010053813
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,49,None,PCA,DecisionTree,1178,295,ok,,0.473019608941939,0.47323557771318964,,0.0167793000000529
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,49,None,PCA,DecisionTree,1179,294,ok,,0.48429674900263137,0.48525539286748115,,0.016905399999814108
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,49,None,PCA,DecisionTree,1179,294,ok,,0.5169766852014438,0.5192038786424752,,0.01671540000825189
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,50,None,SelectKBest,RandomForest,1178,295,ok,,0.4874437337123904,0.48758413863212063,,0.3544139000005089
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,50,None,SelectKBest,RandomForest,1178,295,ok,,0.513875533629704,0.5161435670097473,,0.35022290000051726
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,50,None,SelectKBest,RandomForest,1178,295,ok,,0.4603361399477905,0.46058852415336066,,0.33141990000149235
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,50,None,SelectKBest,RandomForest,1179,294,ok,,0.4936055230172877,0.4970164071033218,,0.37943000000086613
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,50,None,SelectKBest,RandomForest,1179,294,ok,,0.4894839527850941,0.4954611474219317,,0.29962790000718087
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,51,None,SelectKBest,SVM,1178,295,ok,,0.452536570183629,0.3947498468046413,,0.108515100000659
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,51,None,SelectKBest,SVM,1178,295,ok,,0.46358543417366943,0.40397448768676547,,0.10388139999122359
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,51,None,SelectKBest,SVM,1178,295,ok,,0.4681255457954487,0.4111537256955676,,0.15014439998776652
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,51,None,SelectKBest,SVM,1179,294,ok,,0.38951136009959536,0.3406619385342789,,0.09952679999696556
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,51,None,SelectKBest,SVM,1179,294,ok,,0.45129411764705885,0.39160035366931917,,0.09968579999986105
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,52,None,SelectKBest,kNN,1178,295,ok,,0.5131067352314059,0.5140609540118738,,0.011822400003438815
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,52,None,SelectKBest,kNN,1178,295,ok,,0.5194499026808069,0.5146705642208633,,0.014804499995079823
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,52,None,SelectKBest,kNN,1178,295,ok,,0.46870694928947354,0.4655013699545576,,0.014800000004470348
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,52,None,SelectKBest,kNN,1179,294,ok,,0.4974818210112328,0.49759328732724545,,0.015031999995699152
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,52,None,SelectKBest,kNN,1179,294,ok,,0.4754396644229832,0.4749966924194467,,0.01122169999871403
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,53,None,SelectKBest,MLP,1178,295,ok,,0.5113995847095056,0.5117273663424496,,0.620002800002112
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,53,None,SelectKBest,MLP,1178,295,ok,,0.5885581429918568,0.59508603244786,,0.6462456000008387
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,53,None,SelectKBest,MLP,1178,295,ok,,0.5012375255093701,0.49018549280177187,,0.6162435000005644
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,53,None,SelectKBest,MLP,1179,294,ok,,0.5238095238095237,0.5260297824664217,,0.5515255000063917
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,53,None,SelectKBest,MLP,1179,294,ok,,0.5301324748804994,0.5360621940682742,,0.6849524000135716
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,54,None,SelectKBest,DecisionTree,1178,295,ok,,0.5164931644299511,0.511463991235657,,0.007902500001364388
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,54,None,SelectKBest,DecisionTree,1178,295,ok,,0.5049820923394234,0.5046155458606821,,0.010674299992388114
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,54,None,SelectKBest,DecisionTree,1178,295,ok,,0.48991766952932,0.48880297179410753,,0.008659499988425523
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,54,None,SelectKBest,DecisionTree,1179,294,ok,,0.46976770506182275,0.4718904141618965,,0.009385400000610389
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,54,None,SelectKBest,DecisionTree,1179,294,ok,,0.5021792995805288,0.5016853809170828,,0.008922799999709241
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,55,None,None,RandomForest,1178,295,ok,,0.47951651639096765,0.47983628283076224,,0.31364900000335183
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,55,None,None,RandomForest,1178,295,ok,,0.5222696043591566,0.5230973327747521,,0.37876130000222474
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,55,None,None,RandomForest,1178,295,ok,,0.502250895454779,0.5028295635106781,,0.35579149999830406
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,55,None,None,RandomForest,1179,294,ok,,0.4903375491610786,0.49563506503530985,,0.3342452999931993
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,55,None,None,RandomForest,1179,294,ok,,0.5088486976880304,0.514979992318522,,0.348357799986843
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,56,None,None,SVM,1178,295,ok,,0.4617180205415499,0.40271359165777937,,0.10156060000008438
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,56,None,None,SVM,1178,295,ok,,0.46296296296296297,0.40355594956658786,,0.11288069999136496
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,56,None,None,SVM,1178,295,ok,,0.4681255457954487,0.41144032921810697,,0.1053020999970613
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,56,None,None,SVM,1179,294,ok,,0.39277933395580455,0.3436245572609209,,0.10285909999220166
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,56,None,None,SVM,1179,294,ok,,0.45903267973856215,0.39722336931941077,,0.1168757999985246
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,57,None,None,kNN,1178,295,ok,,0.4815163212880509,0.48069999719315665,,0.011594499999773689
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,57,None,None,kNN,1178,295,ok,,0.49721978343576234,0.49491908867908657,,0.014010500002768822
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,57,None,None,kNN,1178,295,ok,,0.4478721566100207,0.4457996416835426,,0.012869400001363829
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,57,None,None,kNN,1179,294,ok,,0.5282658517952635,0.5284422346631171,,0.012248400002135895
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,57,None,None,kNN,1179,294,ok,,0.5031938347478294,0.5054740536604818,,0.013081400000373833
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,58,None,None,MLP,1178,295,ok,,0.5173316424413879,0.5181524604580711,,0.977965400001267
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,58,None,None,MLP,1178,295,ok,,0.5673941218278357,0.5714528706045142,,1.0323949000012362
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,58,None,None,MLP,1178,295,ok,,0.5449128361749721,0.546475695063004,,0.7991706000029808
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,58,None,None,MLP,1179,294,ok,,0.5217157570098747,0.5249003442686919,,1.140383500009193
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,58,None,None,MLP,1179,294,ok,,0.5325872597795337,0.5397537962956706,,0.96810959999857
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,0,59,None,None,DecisionTree,1178,295,ok,,0.49145727942918466,0.4885035304611786,,0.009251299998140894
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,1,59,None,None,DecisionTree,1178,295,ok,,0.5116922390846886,0.5124344769239316,,0.01921030000085011
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,2,59,None,None,DecisionTree,1178,295,ok,,0.4785464445658621,0.47319540229885054,,0.0087311000097543
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,3,59,None,None,DecisionTree,1179,294,ok,,0.48890869479104776,0.4900731089430271,,0.011499000000185333
+362862,cmc_seed_4_nrows_2000_nclasses_10_ncols_100_stratify_True,4,59,None,None,DecisionTree,1179,294,ok,,0.5107806067700712,0.5107682812735335,,0.008715799995115958

@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+362413,mushroom,0,0,StandardScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,1.7970538999943528
+362413,mushroom,1,0,StandardScaler,PCA,RandomForest,6499,1625,ok,,0.9994061757719714,0.9993838304210315,,1.3503063999960432
+362413,mushroom,2,0,StandardScaler,PCA,RandomForest,6499,1625,ok,,0.9993614303959131,0.999383775277064,,1.3011838999955216
+362413,mushroom,3,0,StandardScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,1.6781161999970209
+362413,mushroom,4,0,StandardScaler,PCA,RandomForest,6500,1624,ok,,1.0,1.0,,1.695089699991513
+362413,mushroom,0,1,StandardScaler,PCA,SVM,6499,1625,ok,,0.9946060023295882,0.9944562899786781,,0.22003600001335144
+362413,mushroom,1,1,StandardScaler,PCA,SVM,6499,1625,ok,,0.996986133483799,0.9969194184316977,,0.2690860000002431
+362413,mushroom,2,1,StandardScaler,PCA,SVM,6499,1625,ok,,0.998812351543943,0.9987677145769127,,0.22894440000527538
+362413,mushroom,3,1,StandardScaler,PCA,SVM,6499,1625,ok,,0.9970308788598574,0.9969196753698001,,0.23395970001001842
+362413,mushroom,4,1,StandardScaler,PCA,SVM,6500,1624,ok,,1.0,1.0,,0.2617622000107076
+362413,mushroom,0,2,StandardScaler,PCA,kNN,6499,1625,ok,,1.0,1.0,,0.05477709999831859
+362413,mushroom,1,2,StandardScaler,PCA,kNN,6499,1625,ok,,1.0,1.0,,0.052269699997850694
+362413,mushroom,2,2,StandardScaler,PCA,kNN,6499,1625,ok,,1.0,1.0,,0.04786710000189487
+362413,mushroom,3,2,StandardScaler,PCA,kNN,6499,1625,ok,,0.9987228607918264,0.99876749400054,,0.05428550000942778
+362413,mushroom,4,2,StandardScaler,PCA,kNN,6500,1624,ok,,0.9993614303959131,0.999383422649726,,0.05943690000276547
+362413,mushroom,0,3,StandardScaler,PCA,MLP,6499,1625,ok,,0.9993622448979591,0.9993838304210315,,2.37892770000326
+362413,mushroom,1,3,StandardScaler,PCA,MLP,6499,1625,ok,,0.9994061757719714,0.9993838304210315,,2.2998797000036575
+362413,mushroom,2,3,StandardScaler,PCA,MLP,6499,1625,ok,,1.0,1.0,,2.1314157000015257
+362413,mushroom,3,3,StandardScaler,PCA,MLP,6499,1625,ok,,0.9994061757719714,0.9993838304210315,,2.271894899997278
+362413,mushroom,4,3,StandardScaler,PCA,MLP,6500,1624,ok,,1.0,1.0,,4.078701499995077
+362413,mushroom,0,4,StandardScaler,PCA,DecisionTree,6499,1625,ok,,0.9858503300249946,0.9858293247858095,,0.05394939999678172
+362413,mushroom,1,4,StandardScaler,PCA,DecisionTree,6499,1625,ok,,0.9883593766589917,0.9882937900404514,,0.08008249998965766
+362413,mushroom,2,4,StandardScaler,PCA,DecisionTree,6499,1625,ok,,0.9872612189550514,0.9870646766169154,,0.05258719999983441
+362413,mushroom,3,4,StandardScaler,PCA,DecisionTree,6499,1625,ok,,0.9826122502222101,0.9827416173570019,,0.06909769999037962
+362413,mushroom,4,4,StandardScaler,PCA,DecisionTree,6500,1624,ok,,0.9871185097106618,0.9870541169343037,,0.0936467999999877
+362413,mushroom,0,5,StandardScaler,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.3250833999918541
+362413,mushroom,1,5,StandardScaler,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.4114583000045968
+362413,mushroom,2,5,StandardScaler,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.42511589999776334
+362413,mushroom,3,5,StandardScaler,SelectKBest,RandomForest,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.4461810999928275
+362413,mushroom,4,5,StandardScaler,SelectKBest,RandomForest,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.4227373999892734
+362413,mushroom,0,6,StandardScaler,SelectKBest,SVM,6499,1625,ok,,0.9908659212793323,0.9907597687724539,Features [15] are constant. | invalid value encountered in divide,0.146403900012956
+362413,mushroom,1,6,StandardScaler,SelectKBest,SVM,6499,1625,ok,,0.991832831275046,0.9919867813185983,Features [15] are constant. | invalid value encountered in divide,0.1761663000070257
+362413,mushroom,2,6,StandardScaler,SelectKBest,SVM,6499,1625,ok,,0.9975352123357693,0.9975352123357693,Features [15] are constant. | invalid value encountered in divide,0.1587298000085866
+362413,mushroom,3,6,StandardScaler,SelectKBest,SVM,6499,1625,ok,,0.9880909044026416,0.9882871819851358,Features [15] are constant. | invalid value encountered in divide,0.1595932000054745
+362413,mushroom,4,6,StandardScaler,SelectKBest,SVM,6500,1624,ok,,0.9949354824503457,0.9950662291894519,Features [15] are constant. | invalid value encountered in divide,0.22608069999841973
+362413,mushroom,0,7,StandardScaler,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.05764449998969212
+362413,mushroom,1,7,StandardScaler,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.06718990000081249
+362413,mushroom,2,7,StandardScaler,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.0600443000002997
+362413,mushroom,3,7,StandardScaler,SelectKBest,kNN,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.06893969999509864
+362413,mushroom,4,7,StandardScaler,SelectKBest,kNN,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.06838199999765493
+362413,mushroom,0,8,StandardScaler,SelectKBest,MLP,6499,1625,ok,,0.9970273483947681,0.9969199229241512,Features [15] are constant. | invalid value encountered in divide,3.0281041999987792
+362413,mushroom,1,8,StandardScaler,SelectKBest,MLP,6499,1625,ok,,0.9975799577118276,0.9975354291538256,Features [15] are constant. | invalid value encountered in divide,2.0642010000010487
+362413,mushroom,2,8,StandardScaler,SelectKBest,MLP,6499,1625,ok,,0.9987228607918264,0.99876749400054,Features [15] are constant. | invalid value encountered in divide,2.059781200005091
+362413,mushroom,3,8,StandardScaler,SelectKBest,MLP,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,3.0839680999924894
+362413,mushroom,4,8,StandardScaler,SelectKBest,MLP,6500,1624,ok,,0.9987669000748667,0.9987669000748667,Features [15] are constant. | invalid value encountered in divide,3.537368699995568
+362413,mushroom,0,9,StandardScaler,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.012740699996356852
+362413,mushroom,1,9,StandardScaler,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.009909200001857243
+362413,mushroom,2,9,StandardScaler,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.012330500001553446
+362413,mushroom,3,9,StandardScaler,SelectKBest,DecisionTree,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.01189429999794811
+362413,mushroom,4,9,StandardScaler,SelectKBest,DecisionTree,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.01498130000254605
+362413,mushroom,0,10,StandardScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.3676746999990428
+362413,mushroom,1,10,StandardScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.38839619999635033
+362413,mushroom,2,10,StandardScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.34760939999250695
+362413,mushroom,3,10,StandardScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.4764858999988064
+362413,mushroom,4,10,StandardScaler,None,RandomForest,6500,1624,ok,,1.0,1.0,,0.39634969999315217
+362413,mushroom,0,11,StandardScaler,None,SVM,6499,1625,ok,,1.0,1.0,,0.25472609999997076
+362413,mushroom,1,11,StandardScaler,None,SVM,6499,1625,ok,,1.0,1.0,,0.2848210999945877
+362413,mushroom,2,11,StandardScaler,None,SVM,6499,1625,ok,,1.0,1.0,,0.24868350000178907
+362413,mushroom,3,11,StandardScaler,None,SVM,6499,1625,ok,,1.0,1.0,,0.33095080000930466
+362413,mushroom,4,11,StandardScaler,None,SVM,6500,1624,ok,,1.0,1.0,,0.26692650000040885
+362413,mushroom,0,12,StandardScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.07369330000074115
+362413,mushroom,1,12,StandardScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.06891760000144131
+362413,mushroom,2,12,StandardScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.06790379999438301
+362413,mushroom,3,12,StandardScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.10063929999887478
+362413,mushroom,4,12,StandardScaler,None,kNN,6500,1624,ok,,1.0,1.0,,0.08066690000123344
+362413,mushroom,0,13,StandardScaler,None,MLP,6499,1625,ok,,1.0,1.0,,1.1023560999892652
+362413,mushroom,1,13,StandardScaler,None,MLP,6499,1625,ok,,1.0,1.0,,1.0909977999981493
+362413,mushroom,2,13,StandardScaler,None,MLP,6499,1625,ok,,1.0,1.0,,0.9868852000072366
+362413,mushroom,3,13,StandardScaler,None,MLP,6499,1625,ok,,1.0,1.0,,1.4792217000067467
+362413,mushroom,4,13,StandardScaler,None,MLP,6500,1624,ok,,1.0,1.0,,1.314895899995463
+362413,mushroom,0,14,StandardScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.016285400008200668
+362413,mushroom,1,14,StandardScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.014699600011226721
+362413,mushroom,2,14,StandardScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.015628499997546896
+362413,mushroom,3,14,StandardScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.02328930000658147
+362413,mushroom,4,14,StandardScaler,None,DecisionTree,6500,1624,ok,,1.0,1.0,,0.01688579999608919
+362413,mushroom,0,15,MinMaxScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,1.4553790999925695
+362413,mushroom,1,15,MinMaxScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,1.2902637000079267
+362413,mushroom,2,15,MinMaxScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,1.3479650000081165
+362413,mushroom,3,15,MinMaxScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,1.6050880999973742
+362413,mushroom,4,15,MinMaxScaler,PCA,RandomForest,6500,1624,ok,,1.0,1.0,,1.545606300001964
+362413,mushroom,0,16,MinMaxScaler,PCA,SVM,6499,1625,ok,,0.9952437574316291,0.9950724426735562,,0.18892649999179412
+362413,mushroom,1,16,MinMaxScaler,PCA,SVM,6499,1625,ok,,0.9982185273159145,0.9981516510590187,,0.17215309999301098
+362413,mushroom,2,16,MinMaxScaler,PCA,SVM,6499,1625,ok,,0.9994061757719714,0.9993838304210315,,0.19122029999562073
+362413,mushroom,3,16,MinMaxScaler,PCA,SVM,6499,1625,ok,,0.997624703087886,0.9975356384592053,,0.2503599000046961
+362413,mushroom,4,16,MinMaxScaler,PCA,SVM,6500,1624,ok,,1.0,1.0,,0.20799220001208596
+362413,mushroom,0,17,MinMaxScaler,PCA,kNN,6499,1625,ok,,0.99757865393482,0.9975356384592053,,0.043677000008756295
+362413,mushroom,1,17,MinMaxScaler,PCA,kNN,6499,1625,ok,,0.9993614303959131,0.999383775277064,,0.041766599999391474
+362413,mushroom,2,17,MinMaxScaler,PCA,kNN,6499,1625,ok,,1.0,1.0,,0.04796590001205914
+362413,mushroom,3,17,MinMaxScaler,PCA,kNN,6499,1625,ok,,0.9980842911877394,0.9981511547602929,,0.07107139998697676
+362413,mushroom,4,17,MinMaxScaler,PCA,kNN,6500,1624,ok,,0.9993614303959131,0.999383422649726,,0.04793099999369588
+362413,mushroom,0,18,MinMaxScaler,PCA,MLP,6499,1625,ok,,1.0,1.0,,2.656841899995925
+362413,mushroom,1,18,MinMaxScaler,PCA,MLP,6499,1625,ok,,1.0,1.0,,2.145343900003354
+362413,mushroom,2,18,MinMaxScaler,PCA,MLP,6499,1625,ok,,1.0,1.0,,3.277454299997771
+362413,mushroom,3,18,MinMaxScaler,PCA,MLP,6499,1625,ok,,1.0,1.0,,2.403870200010715
+362413,mushroom,4,18,MinMaxScaler,PCA,MLP,6500,1624,ok,,1.0,1.0,,3.3322610999894096
+362413,mushroom,0,19,MinMaxScaler,PCA,DecisionTree,6499,1625,ok,,0.9837209408138998,0.9839711001781579,,0.0646468999912031
+362413,mushroom,1,19,MinMaxScaler,PCA,DecisionTree,6499,1625,ok,,0.9860409594622062,0.9864310721236909,,0.07399080001050606
+362413,mushroom,2,19,MinMaxScaler,PCA,DecisionTree,6499,1625,ok,,0.9867242744423512,0.9870500681365646,,0.15260220000345726
+362413,mushroom,3,19,MinMaxScaler,PCA,DecisionTree,6499,1625,ok,,0.9863989224706728,0.9864424340059403,,0.06759480001346674
+362413,mushroom,4,19,MinMaxScaler,PCA,DecisionTree,6500,1624,ok,,0.9803364601224291,0.9808613386038403,,0.08157890000438783
+362413,mushroom,0,20,MinMaxScaler,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.3714081000071019
+362413,mushroom,1,20,MinMaxScaler,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.41576989999157377
+362413,mushroom,2,20,MinMaxScaler,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.4487144000013359
+362413,mushroom,3,20,MinMaxScaler,SelectKBest,RandomForest,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.41017760000249837
+362413,mushroom,4,20,MinMaxScaler,SelectKBest,RandomForest,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.5953025000053458
+362413,mushroom,0,21,MinMaxScaler,SelectKBest,SVM,6499,1625,ok,,0.984488370258924,0.9845929563357746,Features [15] are constant. | invalid value encountered in divide,0.1714947000000393
+362413,mushroom,1,21,MinMaxScaler,SelectKBest,SVM,6499,1625,ok,,0.982478014094035,0.9827362740098589,Features [15] are constant. | invalid value encountered in divide,0.1615793999953894
+362413,mushroom,2,21,MinMaxScaler,SelectKBest,SVM,6499,1625,ok,,0.9912390070470175,0.991370808678501,Features [15] are constant. | invalid value encountered in divide,0.18822939999517985
+362413,mushroom,3,21,MinMaxScaler,SelectKBest,SVM,6499,1625,ok,,0.9863094317185561,0.986439842209073,Features [15] are constant. | invalid value encountered in divide,0.2059154999878956
+362413,mushroom,4,21,MinMaxScaler,SelectKBest,SVM,6500,1624,ok,,0.9930638129211257,0.9932157327855485,Features [15] are constant. | invalid value encountered in divide,0.39353200000186916
+362413,mushroom,0,22,MinMaxScaler,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.07718360000581015
+362413,mushroom,1,22,MinMaxScaler,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.06771479999588337
+362413,mushroom,2,22,MinMaxScaler,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.06966389999433886
+362413,mushroom,3,22,MinMaxScaler,SelectKBest,kNN,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.0890054999908898
+362413,mushroom,4,22,MinMaxScaler,SelectKBest,kNN,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.09130429998913314
+362413,mushroom,0,23,MinMaxScaler,SelectKBest,MLP,6499,1625,ok,,0.9970273483947681,0.9969199229241512,Features [15] are constant. | invalid value encountered in divide,3.034840299995267
+362413,mushroom,1,23,MinMaxScaler,SelectKBest,MLP,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,5.308537700009765
+362413,mushroom,2,23,MinMaxScaler,SelectKBest,MLP,6499,1625,ok,,0.998812351543943,0.9987677145769127,Features [15] are constant. | invalid value encountered in divide,2.573487700006808
+362413,mushroom,3,23,MinMaxScaler,SelectKBest,MLP,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,4.626885400008177
+362413,mushroom,4,23,MinMaxScaler,SelectKBest,MLP,6500,1624,ok,,0.9980842911877394,0.9981500993865939,Features [15] are constant. | invalid value encountered in divide,4.1835952999972505
+362413,mushroom,0,24,MinMaxScaler,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.013284499989822507
+362413,mushroom,1,24,MinMaxScaler,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.012375499994959682
+362413,mushroom,2,24,MinMaxScaler,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.00970890000462532
+362413,mushroom,3,24,MinMaxScaler,SelectKBest,DecisionTree,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.01367680000839755
+362413,mushroom,4,24,MinMaxScaler,SelectKBest,DecisionTree,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.014530799991916865
+362413,mushroom,0,25,MinMaxScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.3721828999987338
+362413,mushroom,1,25,MinMaxScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.4194734999909997
+362413,mushroom,2,25,MinMaxScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.4064256999990903
+362413,mushroom,3,25,MinMaxScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.4456709000078263
+362413,mushroom,4,25,MinMaxScaler,None,RandomForest,6500,1624,ok,,1.0,1.0,,0.4631890000018757
+362413,mushroom,0,26,MinMaxScaler,None,SVM,6499,1625,ok,,0.9952437574316291,0.9950724426735562,,0.23583239999425132
+362413,mushroom,1,26,MinMaxScaler,None,SVM,6499,1625,ok,,1.0,1.0,,0.2805743000062648
+362413,mushroom,2,26,MinMaxScaler,None,SVM,6499,1625,ok,,1.0,1.0,,0.741293900005985
+362413,mushroom,3,26,MinMaxScaler,None,SVM,6499,1625,ok,,1.0,1.0,,0.2704667999933008
+362413,mushroom,4,26,MinMaxScaler,None,SVM,6500,1624,ok,,1.0,1.0,,0.24405079999996815
+362413,mushroom,0,27,MinMaxScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.0742181000096025
+362413,mushroom,1,27,MinMaxScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.07571760000428185
+362413,mushroom,2,27,MinMaxScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.17654649999167304
+362413,mushroom,3,27,MinMaxScaler,None,kNN,6499,1625,ok,,0.9993614303959131,0.999383775277064,,0.07648420000623446
+362413,mushroom,4,27,MinMaxScaler,None,kNN,6500,1624,ok,,1.0,1.0,,0.07315440000093076
+362413,mushroom,0,28,MinMaxScaler,None,MLP,6499,1625,ok,,1.0,1.0,,1.7089014000084717
+362413,mushroom,1,28,MinMaxScaler,None,MLP,6499,1625,ok,,1.0,1.0,,1.8399293999973452
+362413,mushroom,2,28,MinMaxScaler,None,MLP,6499,1625,ok,,1.0,1.0,,2.3545438000001013
+362413,mushroom,3,28,MinMaxScaler,None,MLP,6499,1625,ok,,1.0,1.0,,2.388472999999067
+362413,mushroom,4,28,MinMaxScaler,None,MLP,6500,1624,ok,,1.0,1.0,,2.002510500009521
+362413,mushroom,0,29,MinMaxScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.016892800005734898
+362413,mushroom,1,29,MinMaxScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.016294300003210083
+362413,mushroom,2,29,MinMaxScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.016444000008050352
+362413,mushroom,3,29,MinMaxScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.09054819999437314
+362413,mushroom,4,29,MinMaxScaler,None,DecisionTree,6500,1624,ok,,1.0,1.0,,0.020132800011197105
+362413,mushroom,0,30,RobustScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,1.312326999992365
+362413,mushroom,1,30,RobustScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,1.3345569999946747
+362413,mushroom,2,30,RobustScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,1.4484289999963949
+362413,mushroom,3,30,RobustScaler,PCA,RandomForest,6499,1625,ok,,1.0,1.0,,2.2655110000050627
+362413,mushroom,4,30,RobustScaler,PCA,RandomForest,6500,1624,ok,,1.0,1.0,,1.487666500004707
+362413,mushroom,0,31,RobustScaler,PCA,SVM,6499,1625,ok,,0.9854286988279259,0.9852184037695344,,0.4407733999978518
+362413,mushroom,1,31,RobustScaler,PCA,SVM,6499,1625,ok,,0.987216473578993,0.9870636762814353,,0.41791629999352153
+362413,mushroom,2,31,RobustScaler,PCA,SVM,6499,1625,ok,,0.9926503823833662,0.9926062874614768,,0.5667380000086268
+362413,mushroom,3,31,RobustScaler,PCA,SVM,6499,1625,ok,,0.9829254678546184,0.9827522418294905,,0.902974800002994
+362413,mushroom,4,31,RobustScaler,PCA,SVM,6500,1624,ok,,0.9925133218831197,0.9926000519454482,,0.5180737000046065
+362413,mushroom,0,32,RobustScaler,PCA,kNN,6499,1625,ok,,1.0,1.0,,0.03974300000118092
+362413,mushroom,1,32,RobustScaler,PCA,kNN,6499,1625,ok,,1.0,1.0,,0.037764100008644164
+362413,mushroom,2,32,RobustScaler,PCA,kNN,6499,1625,ok,,1.0,1.0,,0.05218109999259468
+362413,mushroom,3,32,RobustScaler,PCA,kNN,6499,1625,ok,,1.0,1.0,,0.04663529999379534
+362413,mushroom,4,32,RobustScaler,PCA,kNN,6500,1624,ok,,1.0,1.0,,0.04165430000284687
+362413,mushroom,0,33,RobustScaler,PCA,MLP,6499,1625,ok,,1.0,1.0,,1.836746700006188
+362413,mushroom,1,33,RobustScaler,PCA,MLP,6499,1625,ok,,1.0,1.0,,2.008338500003447
+362413,mushroom,2,33,RobustScaler,PCA,MLP,6499,1625,ok,,1.0,1.0,,2.9983240999863483
+362413,mushroom,3,33,RobustScaler,PCA,MLP,6499,1625,ok,,1.0,1.0,,2.4632739999942714
+362413,mushroom,4,33,RobustScaler,PCA,MLP,6500,1624,ok,,1.0,1.0,,2.942255000001751
+362413,mushroom,0,34,RobustScaler,PCA,DecisionTree,6499,1625,ok,,0.9950708583076513,0.9950708583076513,,0.07269639999140054
+362413,mushroom,1,34,RobustScaler,PCA,DecisionTree,6499,1625,ok,,0.9848980563822074,0.9852009034279261,,0.07215680000081193
+362413,mushroom,2,34,RobustScaler,PCA,DecisionTree,6499,1625,ok,,0.9981737819398562,0.9981514912630945,,0.06354219999047928
+362413,mushroom,3,34,RobustScaler,PCA,DecisionTree,6499,1625,ok,,0.9980842911877394,0.9981511547602929,,0.07162649999372661
+362413,mushroom,4,34,RobustScaler,PCA,DecisionTree,6500,1624,ok,,0.9944730699784208,0.9944512925914355,,0.07646820000081789
+362413,mushroom,0,35,RobustScaler,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.32220980001147836
+362413,mushroom,1,35,RobustScaler,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.5928449000057299
+362413,mushroom,2,35,RobustScaler,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.3396762000047602
+362413,mushroom,3,35,RobustScaler,SelectKBest,RandomForest,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.3840286000049673
+362413,mushroom,4,35,RobustScaler,SelectKBest,RandomForest,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.4794667000096524
+362413,mushroom,0,36,RobustScaler,SelectKBest,SVM,6499,1625,ok,,0.993838572884564,0.993838572884564,Features [15] are constant. | invalid value encountered in divide,0.1849713999981759
+362413,mushroom,1,36,RobustScaler,SelectKBest,SVM,6499,1625,ok,,0.991832831275046,0.9919867813185983,Features [15] are constant. | invalid value encountered in divide,0.20366769999964163
+362413,mushroom,2,36,RobustScaler,SelectKBest,SVM,6499,1625,ok,,0.9968966427316824,0.9969188763853205,Features [15] are constant. | invalid value encountered in divide,0.23082789999898523
+362413,mushroom,3,36,RobustScaler,SelectKBest,SVM,6499,1625,ok,,0.9912837524230759,0.9913716465098216,Features [15] are constant. | invalid value encountered in divide,0.21302349999314174
+362413,mushroom,4,36,RobustScaler,SelectKBest,SVM,6500,1624,ok,,0.9955740520544325,0.9956831587369518,Features [15] are constant. | invalid value encountered in divide,0.29954419999558013
+362413,mushroom,0,37,RobustScaler,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.06368030000885483
+362413,mushroom,1,37,RobustScaler,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.06642509999801405
+362413,mushroom,2,37,RobustScaler,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.06903120000788476
+362413,mushroom,3,37,RobustScaler,SelectKBest,kNN,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.06858890000148676
+362413,mushroom,4,37,RobustScaler,SelectKBest,kNN,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.08901600001263432
+362413,mushroom,0,38,RobustScaler,SelectKBest,MLP,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,3.0563901999994414
+362413,mushroom,1,38,RobustScaler,SelectKBest,MLP,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,2.837752500010538
+362413,mushroom,2,38,RobustScaler,SelectKBest,MLP,6499,1625,ok,,0.9987228607918264,0.99876749400054,Features [15] are constant. | invalid value encountered in divide,2.866304900002433
+362413,mushroom,3,38,RobustScaler,SelectKBest,MLP,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,3.3786347999994177
+362413,mushroom,4,38,RobustScaler,SelectKBest,MLP,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,3.9559917000005953
+362413,mushroom,0,39,RobustScaler,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.011278199992375448
+362413,mushroom,1,39,RobustScaler,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.010427000001072884
+362413,mushroom,2,39,RobustScaler,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.011516000013216399
+362413,mushroom,3,39,RobustScaler,SelectKBest,DecisionTree,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.011751199999707751
+362413,mushroom,4,39,RobustScaler,SelectKBest,DecisionTree,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.012566199991852045
+362413,mushroom,0,40,RobustScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.38248320001002867
+362413,mushroom,1,40,RobustScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.3285380000015721
+362413,mushroom,2,40,RobustScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.3835638000018662
+362413,mushroom,3,40,RobustScaler,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.38118300000496674
+362413,mushroom,4,40,RobustScaler,None,RandomForest,6500,1624,ok,,1.0,1.0,,0.408165500004543
+362413,mushroom,0,41,RobustScaler,None,SVM,6499,1625,ok,,0.9932440425635176,0.993222720549735,,0.365419000008842
+362413,mushroom,1,41,RobustScaler,None,SVM,6499,1625,ok,,0.9993614303959131,0.999383775277064,,0.33584559999872
+362413,mushroom,2,41,RobustScaler,None,SVM,6499,1625,ok,,0.9993614303959131,0.999383775277064,,0.384474999998929
+362413,mushroom,3,41,RobustScaler,None,SVM,6499,1625,ok,,0.9987228607918264,0.99876749400054,,0.35799520000000484
+362413,mushroom,4,41,RobustScaler,None,SVM,6500,1624,ok,,0.9987228607918264,0.9987667895827133,,0.3961598000023514
+362413,mushroom,0,42,RobustScaler,None,kNN,6499,1625,ok,,0.9994054696789536,0.9993838836863396,,0.07175390000338666
+362413,mushroom,1,42,RobustScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.07885640001040883
+362413,mushroom,2,42,RobustScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.0711040000023786
+362413,mushroom,3,42,RobustScaler,None,kNN,6499,1625,ok,,1.0,1.0,,0.07797300000675023
+362413,mushroom,4,42,RobustScaler,None,kNN,6500,1624,ok,,1.0,1.0,,0.07826840000052471
+362413,mushroom,0,43,RobustScaler,None,MLP,6499,1625,ok,,1.0,1.0,,1.1848407000070438
+362413,mushroom,1,43,RobustScaler,None,MLP,6499,1625,ok,,1.0,1.0,,1.2561038000130793
+362413,mushroom,2,43,RobustScaler,None,MLP,6499,1625,ok,,1.0,1.0,,1.3187674000073457
+362413,mushroom,3,43,RobustScaler,None,MLP,6499,1625,ok,,1.0,1.0,,1.7273200999916298
+362413,mushroom,4,43,RobustScaler,None,MLP,6500,1624,ok,,1.0,1.0,,1.363187700000708
+362413,mushroom,0,44,RobustScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.01673980000487063
+362413,mushroom,1,44,RobustScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.015366899999207817
+362413,mushroom,2,44,RobustScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.01704870001412928
+362413,mushroom,3,44,RobustScaler,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.017181600007461384
+362413,mushroom,4,44,RobustScaler,None,DecisionTree,6500,1624,ok,,1.0,1.0,,0.019183500000508502
+362413,mushroom,0,45,None,PCA,RandomForest,6499,1625,ok,,0.9974922043728311,0.9975352123357693,,1.7305561999964993
+362413,mushroom,1,45,None,PCA,RandomForest,6499,1625,ok,,0.9956642488995671,0.9956864269394488,,1.5626579000090715
+362413,mushroom,2,45,None,PCA,RandomForest,6499,1625,ok,,0.9994061757719714,0.9993838304210315,,1.7343764999968698
+362413,mushroom,3,45,None,PCA,RandomForest,6499,1625,ok,,0.9955747581474504,0.9956856154436382,,1.8457733999966877
+362413,mushroom,4,45,None,PCA,RandomForest,6500,1624,ok,,0.9987228607918264,0.9987667895827133,,1.8735201000090456
+362413,mushroom,0,46,None,PCA,SVM,6499,1625,ok,,0.9924766131184934,0.9926042684369899,,0.4308615999907488
+362413,mushroom,1,46,None,PCA,SVM,6499,1625,ok,,0.9906004374429307,0.9907539784445365,,0.4046010000020033
+362413,mushroom,2,46,None,PCA,SVM,6499,1625,ok,,0.9923371647509578,0.9926012602899396,,0.7831524999928661
+362413,mushroom,3,46,None,PCA,SVM,6499,1625,ok,,0.9872733532943214,0.9876646110215372,,0.4228962000051979
+362413,mushroom,4,46,None,PCA,SVM,6500,1624,ok,,0.9885497864094772,0.9888931950302063,,0.48270100000081584
+362413,mushroom,0,47,None,PCA,kNN,6499,1625,ok,,0.9963031437307384,0.9963031437307384,,0.05524570000125095
+362413,mushroom,1,47,None,PCA,kNN,6499,1625,ok,,0.9915969700554843,0.9913767746787232,,0.052409399999305606
+362413,mushroom,2,47,None,PCA,kNN,6499,1625,ok,,0.9938827762154816,0.993838572884564,,0.05353770000510849
+362413,mushroom,3,47,None,PCA,kNN,6499,1625,ok,,0.990779418947164,0.9907574563154727,,0.058137599990004674
+362413,mushroom,4,47,None,PCA,kNN,6500,1624,ok,,0.993746421808253,0.9938333766212069,,0.05431910000334028
+362413,mushroom,0,48,None,PCA,MLP,6499,1625,ok,,1.0,1.0,,3.305121600002167
+362413,mushroom,1,48,None,PCA,MLP,6499,1625,ok,,0.998812351543943,0.9987677145769127,,3.5669183999998495
+362413,mushroom,2,48,None,PCA,MLP,6499,1625,ok,,1.0,1.0,,2.7800867999903858
+362413,mushroom,3,48,None,PCA,MLP,6499,1625,ok,,1.0,1.0,,3.4852215999999316
+362413,mushroom,4,48,None,PCA,MLP,6500,1624,ok,,1.0,1.0,,3.397398700006306
+362413,mushroom,0,49,None,PCA,DecisionTree,6499,1625,ok,,0.9900984918343081,0.9901408493430772,,0.06780379998963326
+362413,mushroom,1,49,None,PCA,DecisionTree,6499,1625,ok,,0.9858498436187026,0.9858280996837249,,0.18966099999670405
+362413,mushroom,2,49,None,PCA,DecisionTree,6499,1625,ok,,0.9901855947191356,0.9901417166153025,,0.09589739999501035
+362413,mushroom,3,49,None,PCA,DecisionTree,6499,1625,ok,,0.9855366259862943,0.9858183127605589,,0.07323470000119414
+362413,mushroom,4,49,None,PCA,DecisionTree,6500,1624,ok,,0.9839256616902277,0.9839682645752714,,0.08919340001011733
+362413,mushroom,0,50,None,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.3490514000004623
+362413,mushroom,1,50,None,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.40931150001415517
+362413,mushroom,2,50,None,SelectKBest,RandomForest,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.5157079000055091
+362413,mushroom,3,50,None,SelectKBest,RandomForest,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.35286359999736305
+362413,mushroom,4,50,None,SelectKBest,RandomForest,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.42369280000275467
+362413,mushroom,0,51,None,SelectKBest,SVM,6499,1625,ok,,0.9745330206993618,0.9753001975984192,Features [15] are constant. | invalid value encountered in divide,0.6370204999984708
+362413,mushroom,1,51,None,SelectKBest,SVM,6499,1625,ok,,0.9784676149652807,0.9790195184932027,Features [15] are constant. | invalid value encountered in divide,0.563349100004416
+362413,mushroom,2,51,None,SelectKBest,SVM,6499,1625,ok,,0.9816604629857149,0.9821104879044121,Features [15] are constant. | invalid value encountered in divide,0.6279278000001796
+362413,mushroom,3,51,None,SelectKBest,SVM,6499,1625,ok,,0.9671970889720092,0.9678948440259334,Features [15] are constant. | invalid value encountered in divide,0.5872231999965152
+362413,mushroom,4,51,None,SelectKBest,SVM,6500,1624,ok,,0.9783326727440878,0.9789995420792644,Features [15] are constant. | invalid value encountered in divide,0.83134710000013
+362413,mushroom,0,52,None,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.06639410000934731
+362413,mushroom,1,52,None,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.05773479999334086
+362413,mushroom,2,52,None,SelectKBest,kNN,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.055133400004706345
+362413,mushroom,3,52,None,SelectKBest,kNN,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.05959249999432359
+362413,mushroom,4,52,None,SelectKBest,kNN,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.09747250001237262
+362413,mushroom,0,53,None,SelectKBest,MLP,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,3.7025982000050135
+362413,mushroom,1,53,None,SelectKBest,MLP,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,3.6192562999931397
+362413,mushroom,2,53,None,SelectKBest,MLP,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,3.4872684000001755
+362413,mushroom,3,53,None,SelectKBest,MLP,6499,1625,ok,,0.9904214559386972,0.9907500486689746,Features [15] are constant. | invalid value encountered in divide,3.7532236999977613
+362413,mushroom,4,53,None,SelectKBest,MLP,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,3.753819299992756
+362413,mushroom,0,54,None,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.011360699994838797
+362413,mushroom,1,54,None,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.010284699994372204
+362413,mushroom,2,54,None,SelectKBest,DecisionTree,6499,1625,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.012121599997044541
+362413,mushroom,3,54,None,SelectKBest,DecisionTree,6499,1625,ok,,0.9925608916312496,0.9926049640032402,Features [15] are constant. | invalid value encountered in divide,0.013771799989626743
+362413,mushroom,4,54,None,SelectKBest,DecisionTree,6500,1624,ok,,1.0,1.0,Features [15] are constant. | invalid value encountered in divide,0.013992799998959526
+362413,mushroom,0,55,None,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.3820957999996608
+362413,mushroom,1,55,None,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.36432890000287443
+362413,mushroom,2,55,None,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.4586116000136826
+362413,mushroom,3,55,None,None,RandomForest,6499,1625,ok,,1.0,1.0,,0.4070627000037348
+362413,mushroom,4,55,None,None,RandomForest,6500,1624,ok,,1.0,1.0,,0.3879874000122072
+362413,mushroom,0,56,None,None,SVM,6499,1625,ok,,0.9904768982503822,0.9907520701135362,,0.53265160000592
+362413,mushroom,1,56,None,None,SVM,6499,1625,ok,,0.9898723770867272,0.9901350137199194,,0.4862606000097003
+362413,mushroom,2,56,None,None,SVM,6499,1625,ok,,0.9948914431673053,0.9950685397111529,,0.7021752000000561
+362413,mushroom,3,56,None,None,SVM,6499,1625,ok,,0.9841252506499456,0.9845780068141483,,0.6353733999858378
+362413,mushroom,4,56,None,None,SVM,6500,1624,ok,,0.9897828863346105,0.9901272844712945,,0.7469217000034405
+362413,mushroom,0,57,None,None,kNN,6499,1625,ok,,0.9987244897959184,0.9987676061678846,,0.0742723000003025
+362413,mushroom,1,57,None,None,kNN,6499,1625,ok,,0.9981737819398562,0.9981514912630945,,0.07033450000744779
+362413,mushroom,2,57,None,None,kNN,6499,1625,ok,,1.0,1.0,,0.07958209999196697
+362413,mushroom,3,57,None,None,kNN,6499,1625,ok,,0.9993614303959131,0.999383775277064,,0.07865149999270216
+362413,mushroom,4,57,None,None,kNN,6500,1624,ok,,0.9993614303959131,0.999383422649726,,0.07925589999649674
+362413,mushroom,0,58,None,None,MLP,6499,1625,ok,,1.0,1.0,,1.5283486000116682
+362413,mushroom,1,58,None,None,MLP,6499,1625,ok,,1.0,1.0,,1.5299988000042504
+362413,mushroom,2,58,None,None,MLP,6499,1625,ok,,1.0,1.0,,2.6559177999879466
+362413,mushroom,3,58,None,None,MLP,6499,1625,ok,,1.0,1.0,,2.014092099998379
+362413,mushroom,4,58,None,None,MLP,6500,1624,ok,,1.0,1.0,,1.999551100001554
+362413,mushroom,0,59,None,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.017436600013752468
+362413,mushroom,1,59,None,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.01751160000276286
+362413,mushroom,2,59,None,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.10556709999218583
+362413,mushroom,3,59,None,None,DecisionTree,6499,1625,ok,,1.0,1.0,,0.02145310000923928
+362413,mushroom,4,59,None,None,DecisionTree,6500,1624,ok,,1.0,1.0,,0.42431800000485964

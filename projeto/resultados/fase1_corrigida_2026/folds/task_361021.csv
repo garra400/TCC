@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+361021,ibm-employee-attrition,0,0,StandardScaler,PCA,RandomForest,1176,294,ok,,0.5523373983739837,0.5572714748005512,,0.7001410999946529
+361021,ibm-employee-attrition,1,0,StandardScaler,PCA,RandomForest,1176,294,ok,,0.5546239837398373,0.5616650763358779,,0.5745624999981374
+361021,ibm-employee-attrition,2,0,StandardScaler,PCA,RandomForest,1176,294,ok,,0.5597812042380912,0.5687531980214907,,0.48871379999036435
+361021,ibm-employee-attrition,3,0,StandardScaler,PCA,RandomForest,1176,294,ok,,0.5724437936084072,0.5888111888111889,,0.5524035999987973
+361021,ibm-employee-attrition,4,0,StandardScaler,PCA,RandomForest,1176,294,ok,,0.5597812042380912,0.5687531980214907,,0.563085100002354
+361021,ibm-employee-attrition,0,1,StandardScaler,PCA,SVM,1176,294,ok,,0.5,0.45555555555555555,,0.06623599999875296
+361021,ibm-employee-attrition,1,1,StandardScaler,PCA,SVM,1176,294,ok,,0.5188008130081301,0.495454047540804,,0.06030319999263156
+361021,ibm-employee-attrition,2,1,StandardScaler,PCA,SVM,1176,294,ok,,0.5319148936170213,0.5191078066914498,,0.06337960000382736
+361021,ibm-employee-attrition,3,1,StandardScaler,PCA,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.06794789999548811
+361021,ibm-employee-attrition,4,1,StandardScaler,PCA,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.06866679999802727
+361021,ibm-employee-attrition,0,2,StandardScaler,PCA,kNN,1176,294,ok,,0.5421747967479675,0.544131679389313,,0.019946700005675666
+361021,ibm-employee-attrition,1,2,StandardScaler,PCA,kNN,1176,294,ok,,0.5940040650406504,0.6177777777777778,,0.017896499994094484
+361021,ibm-employee-attrition,2,2,StandardScaler,PCA,kNN,1176,294,ok,,0.5390214488758721,0.5384319630899362,,0.019380900004762225
+361021,ibm-employee-attrition,3,2,StandardScaler,PCA,kNN,1176,294,ok,,0.547118614867775,0.5486952072317925,,0.020608000006177463
+361021,ibm-employee-attrition,4,2,StandardScaler,PCA,kNN,1176,294,ok,,0.5096476871392885,0.49699816468099667,,0.01937490000273101
+361021,ibm-employee-attrition,0,3,StandardScaler,PCA,MLP,1176,294,ok,,0.6300813008130082,0.6457148365950063,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.567870300001232
+361021,ibm-employee-attrition,1,3,StandardScaler,PCA,MLP,1176,294,ok,,0.6049288617886178,0.6222245065789473,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.327199399995152
+361021,ibm-employee-attrition,2,3,StandardScaler,PCA,MLP,1176,294,ok,,0.5886811956240847,0.604328165374677,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.15819129999727
+361021,ibm-employee-attrition,3,3,StandardScaler,PCA,MLP,1176,294,ok,,0.5957877508829357,0.6062531959967857,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.118045399998664
+361021,ibm-employee-attrition,4,3,StandardScaler,PCA,MLP,1176,294,ok,,0.5912223275045223,0.6039850560398505,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5544240999879548
+361021,ibm-employee-attrition,0,4,StandardScaler,PCA,DecisionTree,1176,294,ok,,0.5698678861788617,0.577617064796552,,0.028042999998433515
+361021,ibm-employee-attrition,1,4,StandardScaler,PCA,DecisionTree,1176,294,ok,,0.5553861788617886,0.5606863973778078,,0.021370400005253032
+361021,ibm-employee-attrition,2,4,StandardScaler,PCA,DecisionTree,1176,294,ok,,0.5780428977517443,0.5915220530144114,,0.019541999994544312
+361021,ibm-employee-attrition,3,4,StandardScaler,PCA,DecisionTree,1176,294,ok,,0.5805840296321819,0.5920024671052632,,0.018791199996485375
+361021,ibm-employee-attrition,4,4,StandardScaler,PCA,DecisionTree,1176,294,ok,,0.5522008786286502,0.5589351375202236,,0.018577300012111664
+361021,ibm-employee-attrition,0,5,StandardScaler,SelectKBest,RandomForest,1176,294,ok,,0.5985772357723578,0.6168107461098551,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.3628169000003254
+361021,ibm-employee-attrition,1,5,StandardScaler,SelectKBest,RandomForest,1176,294,ok,,0.6089939024390244,0.6289830686717847,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.3521256999956677
+361021,ibm-employee-attrition,2,5,StandardScaler,SelectKBest,RandomForest,1176,294,ok,,0.6134895339822551,0.6415882967607105,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.32622149999951944
+361021,ibm-employee-attrition,3,5,StandardScaler,SelectKBest,RandomForest,1176,294,ok,,0.6003101042294772,0.6287878787878788,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.3091321000101743
+361021,ibm-employee-attrition,4,5,StandardScaler,SelectKBest,RandomForest,1176,294,ok,,0.6033680764923766,0.6235595390524968,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.34792519999609794
+361021,ibm-employee-attrition,0,6,StandardScaler,SelectKBest,SVM,1176,294,ok,,0.5792682926829268,0.5983083929733246,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.055876700003864244
+361021,ibm-employee-attrition,1,6,StandardScaler,SelectKBest,SVM,1176,294,ok,,0.5627540650406504,0.5731060606060606,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.058752900004037656
+361021,ibm-employee-attrition,2,6,StandardScaler,SelectKBest,SVM,1176,294,ok,,0.5851063829787234,0.6088691796008869,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.05469150000135414
+361021,ibm-employee-attrition,3,6,StandardScaler,SelectKBest,SVM,1176,294,ok,,0.5851063829787234,0.6088691796008869,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.059007799995015375
+361021,ibm-employee-attrition,4,6,StandardScaler,SelectKBest,SVM,1176,294,ok,,0.5557326212421397,0.5628902765388046,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.06787690000783186
+361021,ibm-employee-attrition,0,7,StandardScaler,SelectKBest,kNN,1176,294,ok,,0.6402439024390244,0.663760896637609,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.016511800000444055
+361021,ibm-employee-attrition,1,7,StandardScaler,SelectKBest,kNN,1176,294,ok,,0.6173780487804879,0.6373355263157895,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.020603400000254624
+361021,ibm-employee-attrition,2,7,StandardScaler,SelectKBest,kNN,1176,294,ok,,0.5582737531225773,0.567275849380596,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.019817399996099994
+361021,ibm-employee-attrition,3,7,StandardScaler,SelectKBest,kNN,1176,294,ok,,0.6089241106038419,0.6393965411504967,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.017917100005433895
+361021,ibm-employee-attrition,4,7,StandardScaler,SelectKBest,kNN,1176,294,ok,,0.6134895339822551,0.6415882967607105,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.01834239999880083
+361021,ibm-employee-attrition,0,8,StandardScaler,SelectKBest,MLP,1176,294,ok,,0.6504065040650406,0.6834625322997416,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.5544174000096973
+361021,ibm-employee-attrition,1,8,StandardScaler,SelectKBest,MLP,1176,294,ok,,0.6402439024390244,0.663760896637609,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.2750649000081467
+361021,ibm-employee-attrition,2,8,StandardScaler,SelectKBest,MLP,1176,294,ok,,0.6327418382289602,0.6633995141157745,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.112836000000243
+361021,ibm-employee-attrition,3,8,StandardScaler,SelectKBest,MLP,1176,294,ok,,0.6180549573606684,0.6432432432432432,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.1959086999995634
+361021,ibm-employee-attrition,4,8,StandardScaler,SelectKBest,MLP,1176,294,ok,,0.6352829701093978,0.6599011462824692,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.18509769999946
+361021,ibm-employee-attrition,0,9,StandardScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6034044715447154,0.6094210893697507,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.014303600008133799
+361021,ibm-employee-attrition,1,9,StandardScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6117886178861789,0.6164680390032503,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.013190199999371544
+361021,ibm-employee-attrition,2,9,StandardScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6449306572486864,0.6525454545454545,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.0104525999922771
+361021,ibm-employee-attrition,3,9,StandardScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6783530019812215,0.6944444444444444,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.011900600002263673
+361021,ibm-employee-attrition,4,9,StandardScaler,SelectKBest,DecisionTree,1176,294,ok,,0.5730037040227409,0.5777818956731214,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.011064200007240288
+361021,ibm-employee-attrition,0,10,StandardScaler,None,RandomForest,1176,294,ok,,0.5564024390243902,0.5628902765388046,,0.4595132999966154
+361021,ibm-employee-attrition,1,10,StandardScaler,None,RandomForest,1176,294,ok,,0.5835873983739837,0.6033361952655464,,0.4493267000070773
+361021,ibm-employee-attrition,2,10,StandardScaler,None,RandomForest,1176,294,ok,,0.5957446808510638,0.625,,0.35141010000370443
+361021,ibm-employee-attrition,3,10,StandardScaler,None,RandomForest,1176,294,ok,,0.5531914893617021,0.5569747416762343,,0.3993562999967253
+361021,ibm-employee-attrition,4,10,StandardScaler,None,RandomForest,1176,294,ok,,0.6023343957274528,0.6326295216430105,,0.36191050001070835
+361021,ibm-employee-attrition,0,11,StandardScaler,None,SVM,1176,294,ok,,0.5564024390243902,0.5628902765388046,,0.07765859999926761
+361021,ibm-employee-attrition,1,11,StandardScaler,None,SVM,1176,294,ok,,0.5960365853658537,0.6213663682080216,,0.07524990000820253
+361021,ibm-employee-attrition,2,11,StandardScaler,None,SVM,1176,294,ok,,0.5511671978637264,0.554152706753659,,0.060311100009130314
+361021,ibm-employee-attrition,3,11,StandardScaler,None,SVM,1176,294,ok,,0.5937203893530881,0.6211715730002974,,0.07345870000426657
+361021,ibm-employee-attrition,4,11,StandardScaler,None,SVM,1176,294,ok,,0.6322249978464984,0.6711111111111111,,0.07209850000799634
+361021,ibm-employee-attrition,0,12,StandardScaler,None,kNN,1176,294,ok,,0.5482723577235773,0.5518710921703425,,0.011486300005344674
+361021,ibm-employee-attrition,1,12,StandardScaler,None,kNN,1176,294,ok,,0.5668191056910569,0.5791802212101497,,0.010468099993886426
+361021,ibm-employee-attrition,2,12,StandardScaler,None,kNN,1176,294,ok,,0.5324317339994832,0.5263157894736842,,0.008993800001917407
+361021,ibm-employee-attrition,3,12,StandardScaler,None,kNN,1176,294,ok,,0.5638297872340425,0.5748897901604655,,0.011315399999148212
+361021,ibm-employee-attrition,4,12,StandardScaler,None,kNN,1176,294,ok,,0.5177448531311913,0.5046089800773119,,0.010608700002194382
+361021,ibm-employee-attrition,0,13,StandardScaler,None,MLP,1176,294,ok,,0.6199186991869918,0.6290178264161332,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.349316199994064
+361021,ibm-employee-attrition,1,13,StandardScaler,None,MLP,1176,294,ok,,0.646849593495935,0.6595015287686463,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2439158000051975
+361021,ibm-employee-attrition,2,13,StandardScaler,None,MLP,1176,294,ok,,0.621112929623568,0.6348893271970195,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2824285999959102
+361021,ibm-employee-attrition,3,13,StandardScaler,None,MLP,1176,294,ok,,0.7122921870962184,0.727601223014917,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.360439199997927
+361021,ibm-employee-attrition,4,13,StandardScaler,None,MLP,1176,294,ok,,0.6844258764751486,0.7064796551976039,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2526204000023426
+361021,ibm-employee-attrition,0,14,StandardScaler,None,DecisionTree,1176,294,ok,,0.5604674796747967,0.5561029879211697,,0.020998199994210154
+361021,ibm-employee-attrition,1,14,StandardScaler,None,DecisionTree,1176,294,ok,,0.6290650406504065,0.6172693182038976,,0.02028079998854082
+361021,ibm-employee-attrition,2,14,StandardScaler,None,DecisionTree,1176,294,ok,,0.5978120423809113,0.6093503937007874,,0.024409100005868822
+361021,ibm-employee-attrition,3,14,StandardScaler,None,DecisionTree,1176,294,ok,,0.6601343784994401,0.6615184099055067,,0.018652800004929304
+361021,ibm-employee-attrition,4,14,StandardScaler,None,DecisionTree,1176,294,ok,,0.634292359376346,0.6425080872737284,,0.019908999995095655
+361021,ibm-employee-attrition,0,15,MinMaxScaler,PCA,RandomForest,1176,294,ok,,0.5795223577235773,0.5967318702290076,,0.5266172999981791
+361021,ibm-employee-attrition,1,15,MinMaxScaler,PCA,RandomForest,1176,294,ok,,0.6003556910569106,0.6245210727969348,,0.4534048000059556
+361021,ibm-employee-attrition,2,15,MinMaxScaler,PCA,RandomForest,1176,294,ok,,0.5916960978551125,0.6174365647364997,,0.5249449999973876
+361021,ibm-employee-attrition,3,15,MinMaxScaler,PCA,RandomForest,1176,294,ok,,0.5916960978551125,0.6174365647364997,,0.44828189999680035
+361021,ibm-employee-attrition,4,15,MinMaxScaler,PCA,RandomForest,1176,294,ok,,0.59423722973555,0.6177777777777778,,0.45587619999423623
+361021,ibm-employee-attrition,0,16,MinMaxScaler,PCA,SVM,1176,294,ok,,0.5231199186991871,0.5085792256523963,,0.07892440000432543
+361021,ibm-employee-attrition,1,16,MinMaxScaler,PCA,SVM,1176,294,ok,,0.5879065040650406,0.6074538488331592,,0.05611750000389293
+361021,ibm-employee-attrition,2,16,MinMaxScaler,PCA,SVM,1176,294,ok,,0.5597812042380912,0.5687531980214907,,0.060911799999303184
+361021,ibm-employee-attrition,3,16,MinMaxScaler,PCA,SVM,1176,294,ok,,0.5638297872340425,0.5748897901604655,,0.051618199999211356
+361021,ibm-employee-attrition,4,16,MinMaxScaler,PCA,SVM,1176,294,ok,,0.581057799982772,0.6017444741797997,,0.051991100001032464
+361021,ibm-employee-attrition,0,17,MinMaxScaler,PCA,kNN,1176,294,ok,,0.5442073170731707,0.5466666666666666,,0.031675299993366934
+361021,ibm-employee-attrition,1,17,MinMaxScaler,PCA,kNN,1176,294,ok,,0.5858739837398373,0.6041481651244736,,0.02064740000059828
+361021,ibm-employee-attrition,2,17,MinMaxScaler,PCA,kNN,1176,294,ok,,0.566887759496942,0.5791984732824427,,0.0193680999946082
+361021,ibm-employee-attrition,3,17,MinMaxScaler,PCA,kNN,1176,294,ok,,0.5587905935050391,0.5676470588235294,,0.016467699999338947
+361021,ibm-employee-attrition,4,17,MinMaxScaler,PCA,kNN,1176,294,ok,,0.5714531828753553,0.5842760180995475,,0.02012460000696592
+361021,ibm-employee-attrition,0,18,MinMaxScaler,PCA,MLP,1176,294,ok,,0.5988313008130082,0.6124940936559649,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3859176999976626
+361021,ibm-employee-attrition,1,18,MinMaxScaler,PCA,MLP,1176,294,ok,,0.6986788617886178,0.7180680622149456,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2998475000058534
+361021,ibm-employee-attrition,2,18,MinMaxScaler,PCA,MLP,1176,294,ok,,0.6104746317512275,0.6238188976377952,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3109173999982886
+361021,ibm-employee-attrition,3,18,MinMaxScaler,PCA,MLP,1176,294,ok,,0.6712464467223705,0.7019883040935673,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1037755999859655
+361021,ibm-employee-attrition,4,18,MinMaxScaler,PCA,MLP,1176,294,ok,,0.6778361615987596,0.7043740573152337,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2021919999970123
+361021,ibm-employee-attrition,0,19,MinMaxScaler,PCA,DecisionTree,1176,294,ok,,0.5492886178861789,0.5530347327797919,,0.02071329999307636
+361021,ibm-employee-attrition,1,19,MinMaxScaler,PCA,DecisionTree,1176,294,ok,,0.5967987804878049,0.6093503937007874,,0.020344799995655194
+361021,ibm-employee-attrition,2,19,MinMaxScaler,PCA,DecisionTree,1176,294,ok,,0.5633990869153244,0.5617191928947866,,0.018810599998687394
+361021,ibm-employee-attrition,3,19,MinMaxScaler,PCA,DecisionTree,1176,294,ok,,0.6707726763717805,0.6707726763717805,,0.019241000001784414
+361021,ibm-employee-attrition,4,19,MinMaxScaler,PCA,DecisionTree,1176,294,ok,,0.634292359376346,0.6425080872737284,,0.018048400001134723
+361021,ibm-employee-attrition,0,20,MinMaxScaler,SelectKBest,RandomForest,1176,294,ok,,0.6069613821138211,0.6255750487329435,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.3137021000002278
+361021,ibm-employee-attrition,1,20,MinMaxScaler,SelectKBest,RandomForest,1176,294,ok,,0.6089939024390244,0.6289830686717847,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.33581740000227
+361021,ibm-employee-attrition,2,20,MinMaxScaler,SelectKBest,RandomForest,1176,294,ok,,0.6241278318545955,0.654682441917094,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.2864376999932574
+361021,ibm-employee-attrition,3,20,MinMaxScaler,SelectKBest,RandomForest,1176,294,ok,,0.5896718063571367,0.6137900099323956,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.3200700000015786
+361021,ibm-employee-attrition,4,20,MinMaxScaler,SelectKBest,RandomForest,1176,294,ok,,0.6033680764923766,0.6235595390524968,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.36555139999836683
+361021,ibm-employee-attrition,0,21,MinMaxScaler,SelectKBest,SVM,1176,294,ok,,0.5668191056910569,0.5791802212101497,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.06310240000311751
+361021,ibm-employee-attrition,1,21,MinMaxScaler,SelectKBest,SVM,1176,294,ok,,0.5752032520325203,0.5916666666666667,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.07774029999563936
+361021,ibm-employee-attrition,2,21,MinMaxScaler,SelectKBest,SVM,1176,294,ok,,0.5704195021104316,0.5855263157894737,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.04880189998948481
+361021,ibm-employee-attrition,3,21,MinMaxScaler,SelectKBest,SVM,1176,294,ok,,0.5724437936084072,0.5888111888111889,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.05896510000457056
+361021,ibm-employee-attrition,4,21,MinMaxScaler,SelectKBest,SVM,1176,294,ok,,0.5537083297441641,0.5600520494469746,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.06179279999923892
+361021,ibm-employee-attrition,0,22,MinMaxScaler,SelectKBest,kNN,1176,294,ok,,0.619410569105691,0.6408576998050682,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.014630999998189509
+361021,ibm-employee-attrition,1,22,MinMaxScaler,SelectKBest,kNN,1176,294,ok,,0.6382113821138211,0.6600301659125188,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.014798899996094406
+361021,ibm-employee-attrition,2,22,MinMaxScaler,SelectKBest,kNN,1176,294,ok,,0.5648634679989663,0.5762317987939403,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.014882200004649349
+361021,ibm-employee-attrition,3,22,MinMaxScaler,SelectKBest,kNN,1176,294,ok,,0.59423722973555,0.6177777777777778,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.01654580001195427
+361021,ibm-employee-attrition,4,22,MinMaxScaler,SelectKBest,kNN,1176,294,ok,,0.6241278318545955,0.654682441917094,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.015412099994136952
+361021,ibm-employee-attrition,0,23,MinMaxScaler,SelectKBest,MLP,1176,294,ok,,0.600609756097561,0.6201550387596899,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.239753000001656
+361021,ibm-employee-attrition,1,23,MinMaxScaler,SelectKBest,MLP,1176,294,ok,,0.6234756097560976,0.6480915015294587,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.0576446000050055
+361021,ibm-employee-attrition,2,23,MinMaxScaler,SelectKBest,MLP,1176,294,ok,,0.5962615212335257,0.6213663682080216,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.995824800003902
+361021,ibm-employee-attrition,3,23,MinMaxScaler,SelectKBest,MLP,1176,294,ok,,0.5830820914807476,0.6052631578947368,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.079842599996482
+361021,ibm-employee-attrition,4,23,MinMaxScaler,SelectKBest,MLP,1176,294,ok,,0.5922129382375743,0.6142652671755725,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.2509069999941858
+361021,ibm-employee-attrition,0,24,MinMaxScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6013719512195121,0.606425702811245,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.01315969999996014
+361021,ibm-employee-attrition,1,24,MinMaxScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6117886178861789,0.6164680390032503,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.010593899991363287
+361021,ibm-employee-attrition,2,24,MinMaxScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6469549487466622,0.6559983481313235,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.010007200005929917
+361021,ibm-employee-attrition,3,24,MinMaxScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6783530019812215,0.6944444444444444,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.01075259999197442
+361021,ibm-employee-attrition,4,24,MinMaxScaler,SelectKBest,DecisionTree,1176,294,ok,,0.5770522870186924,0.5833333333333333,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.012389399998937733
+361021,ibm-employee-attrition,0,25,MinMaxScaler,None,RandomForest,1176,294,ok,,0.5459857723577236,0.5460526315789473,,0.3806412999983877
+361021,ibm-employee-attrition,1,25,MinMaxScaler,None,RandomForest,1176,294,ok,,0.5835873983739837,0.6033361952655464,,0.39865719999943394
+361021,ibm-employee-attrition,2,25,MinMaxScaler,None,RandomForest,1176,294,ok,,0.5851063829787234,0.6088691796008869,,0.33143220000783913
+361021,ibm-employee-attrition,3,25,MinMaxScaler,None,RandomForest,1176,294,ok,,0.5531914893617021,0.5569747416762343,,0.34311909999814816
+361021,ibm-employee-attrition,4,25,MinMaxScaler,None,RandomForest,1176,294,ok,,0.6023343957274528,0.6326295216430105,,0.39701610000338405
+361021,ibm-employee-attrition,0,26,MinMaxScaler,None,SVM,1176,294,ok,,0.5292174796747968,0.5147818599311137,,0.06138250000367407
+361021,ibm-employee-attrition,1,26,MinMaxScaler,None,SVM,1176,294,ok,,0.5896849593495934,0.6137900099323956,,0.05777020000095945
+361021,ibm-employee-attrition,2,26,MinMaxScaler,None,SVM,1176,294,ok,,0.5638297872340425,0.5748897901604655,,0.07177409999712836
+361021,ibm-employee-attrition,3,26,MinMaxScaler,None,SVM,1176,294,ok,,0.5937203893530881,0.6211715730002974,,0.060345200006850064
+361021,ibm-employee-attrition,4,26,MinMaxScaler,None,SVM,1176,294,ok,,0.6236109914721337,0.6616169471490341,,0.060064400007831864
+361021,ibm-employee-attrition,0,27,MinMaxScaler,None,kNN,1176,294,ok,,0.5543699186991871,0.5600520494469746,,0.009109800012083724
+361021,ibm-employee-attrition,1,27,MinMaxScaler,None,kNN,1176,294,ok,,0.6128048780487805,0.6415882967607105,,0.010341099987272173
+361021,ibm-employee-attrition,2,27,MinMaxScaler,None,kNN,1176,294,ok,,0.560298044620553,0.5701620680001244,,0.011897599993972108
+361021,ibm-employee-attrition,3,27,MinMaxScaler,None,kNN,1176,294,ok,,0.6089241106038419,0.6393965411504967,,0.009880999990855344
+361021,ibm-employee-attrition,4,27,MinMaxScaler,None,kNN,1176,294,ok,,0.5435868722542855,0.5466666666666666,,0.017152200001874007
+361021,ibm-employee-attrition,0,28,MinMaxScaler,None,MLP,1176,294,ok,,0.7116361788617886,0.7098704516345771,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2968325999972876
+361021,ibm-employee-attrition,1,28,MinMaxScaler,None,MLP,1176,294,ok,,0.6821646341463414,0.696469130704109,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1724342000088654
+361021,ibm-employee-attrition,2,28,MinMaxScaler,None,MLP,1176,294,ok,,0.6064260487552761,0.6173720235226068,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2333308999950532
+361021,ibm-employee-attrition,3,28,MinMaxScaler,None,MLP,1176,294,ok,,0.6996295977259024,0.713981284165663,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1928029999980936
+361021,ibm-employee-attrition,4,28,MinMaxScaler,None,MLP,1176,294,ok,,0.6444138168662245,0.659886243131206,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8213956000108737
+361021,ibm-employee-attrition,0,29,MinMaxScaler,None,DecisionTree,1176,294,ok,,0.5604674796747967,0.5561029879211697,,0.01938289999088738
+361021,ibm-employee-attrition,1,29,MinMaxScaler,None,DecisionTree,1176,294,ok,,0.6290650406504065,0.6172693182038976,,0.019965799991041422
+361021,ibm-employee-attrition,2,29,MinMaxScaler,None,DecisionTree,1176,294,ok,,0.587173744508571,0.5978712292656239,,0.0209166999993613
+361021,ibm-employee-attrition,3,29,MinMaxScaler,None,DecisionTree,1176,294,ok,,0.6601343784994401,0.6615184099055067,,0.020438999999896623
+361021,ibm-employee-attrition,4,29,MinMaxScaler,None,DecisionTree,1176,294,ok,,0.634292359376346,0.6425080872737284,,0.021449799998663366
+361021,ibm-employee-attrition,0,30,RobustScaler,PCA,RandomForest,1176,294,ok,,0.5566565040650406,0.5644444444444444,,0.5977839999977732
+361021,ibm-employee-attrition,1,30,RobustScaler,PCA,RandomForest,1176,294,ok,,0.5711382113821138,0.5853060223230713,,0.47684899999876507
+361021,ibm-employee-attrition,2,30,RobustScaler,PCA,RandomForest,1176,294,ok,,0.574468085106383,0.5921764461090304,,0.46706549999362323
+361021,ibm-employee-attrition,3,30,RobustScaler,PCA,RandomForest,1176,294,ok,,0.5724437936084072,0.5888111888111889,,0.45966049999697134
+361021,ibm-employee-attrition,4,30,RobustScaler,PCA,RandomForest,1176,294,ok,,0.5896718063571367,0.6137900099323956,,0.5711661999957869
+361021,ibm-employee-attrition,0,31,RobustScaler,PCA,SVM,1176,294,ok,,0.5167682926829268,0.49368541905855334,,0.1755501000006916
+361021,ibm-employee-attrition,1,31,RobustScaler,PCA,SVM,1176,294,ok,,0.5,0.45555555555555555,,0.05814539999119006
+361021,ibm-employee-attrition,2,31,RobustScaler,PCA,SVM,1176,294,ok,,0.5106382978723404,0.47824074074074074,,0.05479660000128206
+361021,ibm-employee-attrition,3,31,RobustScaler,PCA,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.05461300000024494
+361021,ibm-employee-attrition,4,31,RobustScaler,PCA,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.05677609999838751
+361021,ibm-employee-attrition,0,32,RobustScaler,PCA,kNN,1176,294,ok,,0.5523373983739837,0.5572714748005512,,0.0865924000099767
+361021,ibm-employee-attrition,1,32,RobustScaler,PCA,kNN,1176,294,ok,,0.5523373983739837,0.5572714748005512,,0.015511100005824119
+361021,ibm-employee-attrition,2,32,RobustScaler,PCA,kNN,1176,294,ok,,0.5430700318718236,0.543463177718307,,0.01600740000139922
+361021,ibm-employee-attrition,3,32,RobustScaler,PCA,kNN,1176,294,ok,,0.5623223361185288,0.5731060606060606,,0.016134999998030253
+361021,ibm-employee-attrition,4,32,RobustScaler,PCA,kNN,1176,294,ok,,0.5136962701352399,0.5007529396687066,,0.015513500009546988
+361021,ibm-employee-attrition,0,33,RobustScaler,PCA,MLP,1176,294,ok,,0.5942581300813008,0.6141409064254,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9406775000097696
+361021,ibm-employee-attrition,1,33,RobustScaler,PCA,MLP,1176,294,ok,,0.5922256097560976,0.6108108108108108,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.4820981999946525
+361021,ibm-employee-attrition,2,33,RobustScaler,PCA,MLP,1176,294,ok,,0.5582737531225773,0.567275849380596,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1684154999966267
+361021,ibm-employee-attrition,3,33,RobustScaler,PCA,MLP,1176,294,ok,,0.5972952019984494,0.6135240298664424,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2292001000023447
+361021,ibm-employee-attrition,4,33,RobustScaler,PCA,MLP,1176,294,ok,,0.6013437849944009,0.6201550387596899,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2051792999991449
+361021,ibm-employee-attrition,0,34,RobustScaler,PCA,DecisionTree,1176,294,ok,,0.5871443089430894,0.5864110693514184,,0.02054169999610167
+361021,ibm-employee-attrition,1,34,RobustScaler,PCA,DecisionTree,1176,294,ok,,0.5370934959349594,0.5384615384615384,,0.01796959999774117
+361021,ibm-employee-attrition,2,34,RobustScaler,PCA,DecisionTree,1176,294,ok,,0.5360065466448445,0.5386088575608459,,0.019785199998295866
+361021,ibm-employee-attrition,3,34,RobustScaler,PCA,DecisionTree,1176,294,ok,,0.5633560168834525,0.5726744186046512,,0.018829799999366514
+361021,ibm-employee-attrition,4,34,RobustScaler,PCA,DecisionTree,1176,294,ok,,0.5284262210354036,0.5300489085053084,,0.02449749999505002
+361021,ibm-employee-attrition,0,35,RobustScaler,SelectKBest,RandomForest,1176,294,ok,,0.6069613821138211,0.6255750487329435,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.34850429999642074
+361021,ibm-employee-attrition,1,35,RobustScaler,SelectKBest,RandomForest,1176,294,ok,,0.6089939024390244,0.6289830686717847,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.3301226999901701
+361021,ibm-employee-attrition,2,35,RobustScaler,SelectKBest,RandomForest,1176,294,ok,,0.6155138254802308,0.6454184438888072,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.35951379999460187
+361021,ibm-employee-attrition,3,35,RobustScaler,SelectKBest,RandomForest,1176,294,ok,,0.6003101042294772,0.6287878787878788,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.32714320000377484
+361021,ibm-employee-attrition,4,35,RobustScaler,SelectKBest,RandomForest,1176,294,ok,,0.6053923679903523,0.6270270270270271,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.46809249999932945
+361021,ibm-employee-attrition,0,36,RobustScaler,SelectKBest,SVM,1176,294,ok,,0.5688516260162602,0.5823173753593023,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.05713070000638254
+361021,ibm-employee-attrition,1,36,RobustScaler,SelectKBest,SVM,1176,294,ok,,0.5584349593495934,0.5657894736842105,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.05788990001019556
+361021,ibm-employee-attrition,2,36,RobustScaler,SelectKBest,SVM,1176,294,ok,,0.5638297872340425,0.5748897901604655,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.06023419999110047
+361021,ibm-employee-attrition,3,36,RobustScaler,SelectKBest,SVM,1176,294,ok,,0.574468085106383,0.5921764461090304,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.05730020000191871
+361021,ibm-employee-attrition,4,36,RobustScaler,SelectKBest,SVM,1176,294,ok,,0.5557326212421397,0.5628902765388046,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.057732999994186684
+361021,ibm-employee-attrition,0,37,RobustScaler,SelectKBest,kNN,1176,294,ok,,0.6112804878048781,0.6271169580463057,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.0230293999920832
+361021,ibm-employee-attrition,1,37,RobustScaler,SelectKBest,kNN,1176,294,ok,,0.6153455284552846,0.6338729763387297,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.016177400000742637
+361021,ibm-employee-attrition,2,37,RobustScaler,SelectKBest,kNN,1176,294,ok,,0.5516840382461883,0.5572714748005512,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.016203800012590364
+361021,ibm-employee-attrition,3,37,RobustScaler,SelectKBest,kNN,1176,294,ok,,0.6129726935997932,0.6473484848484848,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.01991180000186432
+361021,ibm-employee-attrition,4,37,RobustScaler,SelectKBest,kNN,1176,294,ok,,0.5861400637436471,0.6041481651244736,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.01524789999530185
+361021,ibm-employee-attrition,0,38,RobustScaler,SelectKBest,MLP,1176,294,ok,,0.6504065040650406,0.6834625322997416,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.2236929000064265
+361021,ibm-employee-attrition,1,38,RobustScaler,SelectKBest,MLP,1176,294,ok,,0.6092479674796748,0.6238188976377952,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.1593895999976667
+361021,ibm-employee-attrition,2,38,RobustScaler,SelectKBest,MLP,1176,294,ok,,0.607416659488328,0.6305604423221915,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.1511408999940613
+361021,ibm-employee-attrition,3,38,RobustScaler,SelectKBest,MLP,1176,294,ok,,0.587647514859161,0.6102272727272727,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.2864855000079842
+361021,ibm-employee-attrition,4,38,RobustScaler,SelectKBest,MLP,1176,294,ok,,0.6317512274959084,0.6457148365950063,Features [ 4 17 32] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.138543600012781
+361021,ibm-employee-attrition,0,39,RobustScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6013719512195121,0.606425702811245,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.025502899996354245
+361021,ibm-employee-attrition,1,39,RobustScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6117886178861789,0.6164680390032503,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.011161500005982816
+361021,ibm-employee-attrition,2,39,RobustScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6469549487466622,0.6559983481313235,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.009819900005823001
+361021,ibm-employee-attrition,3,39,RobustScaler,SelectKBest,DecisionTree,1176,294,ok,,0.6783530019812215,0.6944444444444444,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.01177070000267122
+361021,ibm-employee-attrition,4,39,RobustScaler,SelectKBest,DecisionTree,1176,294,ok,,0.5730037040227409,0.5777818956731214,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.010550700011663139
+361021,ibm-employee-attrition,0,40,RobustScaler,None,RandomForest,1176,294,ok,,0.5459857723577236,0.5460526315789473,,0.7589392999943811
+361021,ibm-employee-attrition,1,40,RobustScaler,None,RandomForest,1176,294,ok,,0.5835873983739837,0.6033361952655464,,0.37760269999853335
+361021,ibm-employee-attrition,2,40,RobustScaler,None,RandomForest,1176,294,ok,,0.5851063829787234,0.6088691796008869,,0.3719003000005614
+361021,ibm-employee-attrition,3,40,RobustScaler,None,RandomForest,1176,294,ok,,0.5531914893617021,0.5569747416762343,,0.3519917999947211
+361021,ibm-employee-attrition,4,40,RobustScaler,None,RandomForest,1176,294,ok,,0.6023343957274528,0.6326295216430105,,0.3574262999900384
+361021,ibm-employee-attrition,0,41,RobustScaler,None,SVM,1176,294,ok,,0.5335365853658537,0.5263157894736842,,0.3836924000061117
+361021,ibm-employee-attrition,1,41,RobustScaler,None,SVM,1176,294,ok,,0.5772357723577236,0.5949504982217808,,0.07054339999740478
+361021,ibm-employee-attrition,2,41,RobustScaler,None,SVM,1176,294,ok,,0.5511671978637264,0.554152706753659,,0.0710246999951778
+361021,ibm-employee-attrition,3,41,RobustScaler,None,SVM,1176,294,ok,,0.574468085106383,0.5921764461090304,,0.06895449999137782
+361021,ibm-employee-attrition,4,41,RobustScaler,None,SVM,1176,294,ok,,0.6276595744680851,0.6703085450642402,,0.06360780000977684
+361021,ibm-employee-attrition,0,42,RobustScaler,None,kNN,1176,294,ok,,0.5627540650406504,0.5731060606060606,,0.01497160000144504
+361021,ibm-employee-attrition,1,42,RobustScaler,None,kNN,1176,294,ok,,0.5543699186991871,0.5600520494469746,,0.010685100001865067
+361021,ibm-employee-attrition,2,42,RobustScaler,None,kNN,1176,294,ok,,0.5385046084934103,0.5334156233468524,,0.010326500007067807
+361021,ibm-employee-attrition,3,42,RobustScaler,None,kNN,1176,294,ok,,0.5491429063657507,0.5513940907199334,,0.010579599998891354
+361021,ibm-employee-attrition,4,42,RobustScaler,None,kNN,1176,294,ok,,0.5116719786372642,0.49886363636363634,,0.011587500004679896
+361021,ibm-employee-attrition,0,43,RobustScaler,None,MLP,1176,294,ok,,0.6427845528455285,0.6525454545454545,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.614076300000306
+361021,ibm-employee-attrition,1,43,RobustScaler,None,MLP,1176,294,ok,,0.6636178861788617,0.6720214190093707,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3648222999909194
+361021,ibm-employee-attrition,2,43,RobustScaler,None,MLP,1176,294,ok,,0.621112929623568,0.6348893271970195,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.702470699994592
+361021,ibm-employee-attrition,3,43,RobustScaler,None,MLP,1176,294,ok,,0.7122921870962184,0.727601223014917,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.4043671999970684
+361021,ibm-employee-attrition,4,43,RobustScaler,None,MLP,1176,294,ok,,0.6292100956154707,0.6488169364881693,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3650774999987334
+361021,ibm-employee-attrition,0,44,RobustScaler,None,DecisionTree,1176,294,ok,,0.5604674796747967,0.5561029879211697,,0.020720499989693053
+361021,ibm-employee-attrition,1,44,RobustScaler,None,DecisionTree,1176,294,ok,,0.6310975609756098,0.6202145149925624,,0.022316299990052357
+361021,ibm-employee-attrition,2,44,RobustScaler,None,DecisionTree,1176,294,ok,,0.587173744508571,0.5978712292656239,,0.024570800000219606
+361021,ibm-employee-attrition,3,44,RobustScaler,None,DecisionTree,1176,294,ok,,0.6601343784994401,0.6615184099055067,,0.02121380000608042
+361021,ibm-employee-attrition,4,44,RobustScaler,None,DecisionTree,1176,294,ok,,0.6322680678783702,0.6391818181818182,,0.018792199989547953
+361021,ibm-employee-attrition,0,45,None,PCA,RandomForest,1176,294,ok,,0.5378556910569106,0.5359848484848485,,0.5108008999959566
+361021,ibm-employee-attrition,1,45,None,PCA,RandomForest,1176,294,ok,,0.5480182926829268,0.5486952072317925,,0.5170060999953421
+361021,ibm-employee-attrition,2,45,None,PCA,RandomForest,1176,294,ok,,0.5298906021190456,0.5169240880709826,,0.5187183000089135
+361021,ibm-employee-attrition,3,45,None,PCA,RandomForest,1176,294,ok,,0.5172280127487294,0.495454047540804,,0.5612017000094056
+361021,ibm-employee-attrition,4,45,None,PCA,RandomForest,1176,294,ok,,0.5298906021190456,0.5169240880709826,,0.4632505999907153
+361021,ibm-employee-attrition,0,46,None,PCA,SVM,1176,294,ok,,0.5,0.45555555555555555,,0.0885427999892272
+361021,ibm-employee-attrition,1,46,None,PCA,SVM,1176,294,ok,,0.5,0.45555555555555555,,0.07343829999445006
+361021,ibm-employee-attrition,2,46,None,PCA,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.11032059999706689
+361021,ibm-employee-attrition,3,46,None,PCA,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.07887789999949746
+361021,ibm-employee-attrition,4,46,None,PCA,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.07704360000207089
+361021,ibm-employee-attrition,0,47,None,PCA,kNN,1176,294,ok,,0.5111788617886178,0.5030796115392328,,0.01638900001125876
+361021,ibm-employee-attrition,1,47,None,PCA,kNN,1176,294,ok,,0.5088922764227642,0.49515515761069545,,0.011885799991432577
+361021,ibm-employee-attrition,2,47,None,PCA,kNN,1176,294,ok,,0.532948574381945,0.5312155034956458,,0.013883499996154569
+361021,ibm-employee-attrition,3,47,None,PCA,kNN,1176,294,ok,,0.526358859505556,0.5195924513793214,,0.012932100013131276
+361021,ibm-employee-attrition,4,47,None,PCA,kNN,1176,294,ok,,0.5157205616332157,0.5026675341574496,,0.010907099989708513
+361021,ibm-employee-attrition,0,48,None,PCA,MLP,1176,294,ok,,0.5739329268292683,0.5506114130434783,,0.32276169999386184
+361021,ibm-employee-attrition,1,48,None,PCA,MLP,1176,294,ok,,0.5403963414634146,0.5434658239572834,,0.3452190999960294
+361021,ibm-employee-attrition,2,48,None,PCA,MLP,1176,294,ok,,0.5233439572745284,0.522968479851044,,0.34164590000000317
+361021,ibm-employee-attrition,3,48,None,PCA,MLP,1176,294,ok,,0.46106469118787147,0.45676529060928545,,0.4638115999987349
+361021,ibm-employee-attrition,4,48,None,PCA,MLP,1176,294,ok,,0.5248944784219141,0.5254604550379198,,0.24789089999103453
+361021,ibm-employee-attrition,0,49,None,PCA,DecisionTree,1176,294,ok,,0.5330284552845528,0.5337895079830564,,0.022356199988280423
+361021,ibm-employee-attrition,1,49,None,PCA,DecisionTree,1176,294,ok,,0.532520325203252,0.5346628679962013,,0.020550399989588186
+361021,ibm-employee-attrition,2,49,None,PCA,DecisionTree,1176,294,ok,,0.5755448359031786,0.5774647887323944,,0.01893359998939559
+361021,ibm-employee-attrition,3,49,None,PCA,DecisionTree,1176,294,ok,,0.5512102678955982,0.5565610859728507,,0.021029499999713153
+361021,ibm-employee-attrition,4,49,None,PCA,DecisionTree,1176,294,ok,,0.5775691274011543,0.5801874163319947,,0.018229599998448975
+361021,ibm-employee-attrition,0,50,None,SelectKBest,RandomForest,1176,294,ok,,0.6153455284552846,0.6338729763387297,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.38326830000733025
+361021,ibm-employee-attrition,1,50,None,SelectKBest,RandomForest,1176,294,ok,,0.6089939024390244,0.6289830686717847,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.3239984999963781
+361021,ibm-employee-attrition,2,50,None,SelectKBest,RandomForest,1176,294,ok,,0.6134895339822551,0.6415882967607105,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.34335499998996966
+361021,ibm-employee-attrition,3,50,None,SelectKBest,RandomForest,1176,294,ok,,0.6003101042294772,0.6287878787878788,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.3967245000094408
+361021,ibm-employee-attrition,4,50,None,SelectKBest,RandomForest,1176,294,ok,,0.6033680764923766,0.6235595390524968,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.32537669999874197
+361021,ibm-employee-attrition,0,51,None,SelectKBest,SVM,1176,294,ok,,0.5,0.45555555555555555,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.047618600001442246
+361021,ibm-employee-attrition,1,51,None,SelectKBest,SVM,1176,294,ok,,0.5,0.45555555555555555,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.0400383999949554
+361021,ibm-employee-attrition,2,51,None,SelectKBest,SVM,1176,294,ok,,0.5,0.4565619223659889,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.04334230000677053
+361021,ibm-employee-attrition,3,51,None,SelectKBest,SVM,1176,294,ok,,0.5,0.4565619223659889,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.08139790000859648
+361021,ibm-employee-attrition,4,51,None,SelectKBest,SVM,1176,294,ok,,0.5,0.4565619223659889,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.03977530001429841
+361021,ibm-employee-attrition,0,52,None,SelectKBest,kNN,1176,294,ok,,0.5025406504065041,0.4819134279580917,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.012632700003450736
+361021,ibm-employee-attrition,1,52,None,SelectKBest,kNN,1176,294,ok,,0.514989837398374,0.5007529396687066,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.02804150000156369
+361021,ibm-employee-attrition,2,52,None,SelectKBest,kNN,1176,294,ok,,0.5096476871392885,0.49699816468099667,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.01335069999913685
+361021,ibm-employee-attrition,3,52,None,SelectKBest,kNN,1176,294,ok,,0.5055991041433371,0.49333333333333335,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.012070599987055175
+361021,ibm-employee-attrition,4,52,None,SelectKBest,kNN,1176,294,ok,,0.5101645275217503,0.5030796115392328,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.011122099997010082
+361021,ibm-employee-attrition,0,53,None,SelectKBest,MLP,1176,294,ok,,0.5,0.45555555555555555,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.19524239999009296
+361021,ibm-employee-attrition,1,53,None,SelectKBest,MLP,1176,294,ok,,0.5,0.14035087719298245,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.1290997000032803
+361021,ibm-employee-attrition,2,53,None,SelectKBest,MLP,1176,294,ok,,0.5298906021190456,0.5169240880709826,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.18110190000152215
+361021,ibm-employee-attrition,3,53,None,SelectKBest,MLP,1176,294,ok,,0.5,0.4565619223659889,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.22509949999221135
+361021,ibm-employee-attrition,4,53,None,SelectKBest,MLP,1176,294,ok,,0.5933327590662417,0.5656565656565656,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.22489310000673868
+361021,ibm-employee-attrition,0,54,None,SelectKBest,DecisionTree,1176,294,ok,,0.6013719512195121,0.606425702811245,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.01101339999877382
+361021,ibm-employee-attrition,1,54,None,SelectKBest,DecisionTree,1176,294,ok,,0.6117886178861789,0.6164680390032503,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.010138600002392195
+361021,ibm-employee-attrition,2,54,None,SelectKBest,DecisionTree,1176,294,ok,,0.6469549487466622,0.6559983481313235,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.010537100009969436
+361021,ibm-employee-attrition,3,54,None,SelectKBest,DecisionTree,1176,294,ok,,0.6783530019812215,0.6944444444444444,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.011110799998277798
+361021,ibm-employee-attrition,4,54,None,SelectKBest,DecisionTree,1176,294,ok,,0.5770522870186924,0.5833333333333333,Features [ 4 17 32] are constant. | invalid value encountered in divide,0.012331299993093126
+361021,ibm-employee-attrition,0,55,None,None,RandomForest,1176,294,ok,,0.5459857723577236,0.5460526315789473,,0.4249472999945283
+361021,ibm-employee-attrition,1,55,None,None,RandomForest,1176,294,ok,,0.5835873983739837,0.6033361952655464,,0.3452346999984002
+361021,ibm-employee-attrition,2,55,None,None,RandomForest,1176,294,ok,,0.5957446808510638,0.625,,0.3492053000081796
+361021,ibm-employee-attrition,3,55,None,None,RandomForest,1176,294,ok,,0.5531914893617021,0.5569747416762343,,0.36454959999537095
+361021,ibm-employee-attrition,4,55,None,None,RandomForest,1176,294,ok,,0.6023343957274528,0.6326295216430105,,0.36539530000300147
+361021,ibm-employee-attrition,0,56,None,None,SVM,1176,294,ok,,0.5,0.45555555555555555,,0.09046929999021813
+361021,ibm-employee-attrition,1,56,None,None,SVM,1176,294,ok,,0.5,0.45555555555555555,,0.08703310000419151
+361021,ibm-employee-attrition,2,56,None,None,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.06238879999727942
+361021,ibm-employee-attrition,3,56,None,None,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.05641789999208413
+361021,ibm-employee-attrition,4,56,None,None,SVM,1176,294,ok,,0.5,0.4565619223659889,,0.06445499999972526
+361021,ibm-employee-attrition,0,57,None,None,kNN,1176,294,ok,,0.5111788617886178,0.5030796115392328,,0.01815700001316145
+361021,ibm-employee-attrition,1,57,None,None,kNN,1176,294,ok,,0.5088922764227642,0.49515515761069545,,0.011323699989588931
+361021,ibm-employee-attrition,2,57,None,None,kNN,1176,294,ok,,0.532948574381945,0.5312155034956458,,0.009503399996901862
+361021,ibm-employee-attrition,3,57,None,None,kNN,1176,294,ok,,0.526358859505556,0.5195924513793214,,0.009424999996554106
+361021,ibm-employee-attrition,4,57,None,None,kNN,1176,294,ok,,0.5157205616332157,0.5026675341574496,,0.009768600008101203
+361021,ibm-employee-attrition,0,58,None,None,MLP,1176,294,ok,,0.49415650406504064,0.3513303049967553,,0.18932669999776408
+361021,ibm-employee-attrition,1,58,None,None,MLP,1176,294,ok,,0.5876524390243902,0.5776752025435253,,0.16044599999440834
+361021,ibm-employee-attrition,2,58,None,None,MLP,1176,294,ok,,0.5780428977517443,0.5915220530144114,,0.1291308000072604
+361021,ibm-employee-attrition,3,58,None,None,MLP,1176,294,ok,,0.5671461796881729,0.44899795092208505,,0.1930858999985503
+361021,ibm-employee-attrition,4,58,None,None,MLP,1176,294,ok,,0.5502196571625463,0.551462621885157,,0.22319750000315253
+361021,ibm-employee-attrition,0,59,None,None,DecisionTree,1176,294,ok,,0.5604674796747967,0.5561029879211697,,0.025212599997757934
+361021,ibm-employee-attrition,1,59,None,None,DecisionTree,1176,294,ok,,0.6290650406504065,0.6172693182038976,,0.01983190000464674
+361021,ibm-employee-attrition,2,59,None,None,DecisionTree,1176,294,ok,,0.587173744508571,0.5978712292656239,,0.028332300003967248
+361021,ibm-employee-attrition,3,59,None,None,DecisionTree,1176,294,ok,,0.6601343784994401,0.6615184099055067,,0.020156800004770048
+361021,ibm-employee-attrition,4,59,None,None,DecisionTree,1176,294,ok,,0.6363166508743217,0.6458815899193922,,0.043214099991018884

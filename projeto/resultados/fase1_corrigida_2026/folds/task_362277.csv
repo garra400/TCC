@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+362277,dataset_credit-approval,0,0,StandardScaler,PCA,RandomForest,552,138,ok,,0.7971137521222411,0.7997097242380262,,0.2996805000002496
+362277,dataset_credit-approval,1,0,StandardScaler,PCA,RandomForest,552,138,ok,,0.8060271646859083,0.8035121025154248,,0.30739460000768304
+362277,dataset_credit-approval,2,0,StandardScaler,PCA,RandomForest,552,138,ok,,0.7892271662763466,0.7918103448275862,,0.29945270001189783
+362277,dataset_credit-approval,3,0,StandardScaler,PCA,RandomForest,552,138,ok,,0.7629337875239515,0.7664209664209665,,0.36281550000421703
+362277,dataset_credit-approval,4,0,StandardScaler,PCA,RandomForest,552,138,ok,,0.8285075580157547,0.830112936894503,,0.3088735000055749
+362277,dataset_credit-approval,0,1,StandardScaler,PCA,SVM,552,138,ok,,0.7920203735144312,0.7935897435897437,,0.020250999994459562
+362277,dataset_credit-approval,1,1,StandardScaler,PCA,SVM,552,138,ok,,0.8550509337860781,0.853968253968254,,0.019749500002944842
+362277,dataset_credit-approval,2,1,StandardScaler,PCA,SVM,552,138,ok,,0.8251011283798169,0.8285714285714285,,0.01947670000663493
+362277,dataset_credit-approval,3,1,StandardScaler,PCA,SVM,552,138,ok,,0.767724079199489,0.7718253968253967,,0.019930299997213297
+362277,dataset_credit-approval,4,1,StandardScaler,PCA,SVM,552,138,ok,,0.8561847988077496,0.8590549911304628,,0.022636300011072308
+362277,dataset_credit-approval,0,2,StandardScaler,PCA,kNN,552,138,ok,,0.8198217317487266,0.8223557176571551,,0.011841900006402284
+362277,dataset_credit-approval,1,2,StandardScaler,PCA,kNN,552,138,ok,,0.7971137521222411,0.7997097242380262,,0.012259199997060932
+362277,dataset_credit-approval,2,2,StandardScaler,PCA,kNN,552,138,ok,,0.8022141792633596,0.8057179987004548,,0.011237600003369153
+362277,dataset_credit-approval,3,2,StandardScaler,PCA,kNN,552,138,ok,,0.767724079199489,0.7718253968253967,,0.013099600007990375
+362277,dataset_credit-approval,4,2,StandardScaler,PCA,kNN,552,138,ok,,0.8479880774962743,0.8512931034482758,,0.012233700006618164
+362277,dataset_credit-approval,0,3,StandardScaler,PCA,MLP,552,138,ok,,0.8389219015280136,0.8389219015280136,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6556543999904534
+362277,dataset_credit-approval,1,3,StandardScaler,PCA,MLP,552,138,ok,,0.7928692699490663,0.7893129770992366,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5661210999969626
+362277,dataset_credit-approval,2,3,StandardScaler,PCA,MLP,552,138,ok,,0.8384074941451991,0.8384074941451991,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5571633000072325
+362277,dataset_credit-approval,3,3,StandardScaler,PCA,MLP,552,138,ok,,0.7581434958484139,0.7608836907082521,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6272922000061953
+362277,dataset_credit-approval,4,3,StandardScaler,PCA,MLP,552,138,ok,,0.8728975942090695,0.8688766891891893,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5542685999971582
+362277,dataset_credit-approval,0,4,StandardScaler,PCA,DecisionTree,552,138,ok,,0.6835738539898133,0.6844512195121951,,0.01111720000335481
+362277,dataset_credit-approval,1,4,StandardScaler,PCA,DecisionTree,552,138,ok,,0.747453310696095,0.7452934662236987,,0.01203870000608731
+362277,dataset_credit-approval,2,4,StandardScaler,PCA,DecisionTree,552,138,ok,,0.7335533319139876,0.7362817362817362,,0.01327879999007564
+362277,dataset_credit-approval,3,4,StandardScaler,PCA,DecisionTree,552,138,ok,,0.7041728763040238,0.7061425061425062,,0.010542100004386157
+362277,dataset_credit-approval,4,4,StandardScaler,PCA,DecisionTree,552,138,ok,,0.7635724930806898,0.7598481252966303,,0.010777300005429424
+362277,dataset_credit-approval,0,5,StandardScaler,SelectKBest,RandomForest,552,138,ok,,0.8440152801358234,0.8454812050119969,,0.3045699000067543
+362277,dataset_credit-approval,1,5,StandardScaler,SelectKBest,RandomForest,552,138,ok,,0.8448641765704584,0.8402777777777778,,0.2545682000054512
+362277,dataset_credit-approval,2,5,StandardScaler,SelectKBest,RandomForest,552,138,ok,,0.8954651905471578,0.8967948717948717,,0.26282780000474304
+362277,dataset_credit-approval,3,5,StandardScaler,SelectKBest,RandomForest,552,138,ok,,0.8121141153928039,0.8145460409611354,,0.24904989999777172
+362277,dataset_credit-approval,4,5,StandardScaler,SelectKBest,RandomForest,552,138,ok,,0.9217585692995529,0.9195761589403973,,0.22330159999546595
+362277,dataset_credit-approval,0,6,StandardScaler,SelectKBest,SVM,552,138,ok,,0.8535653650254669,0.8535653650254669,,0.01902900000277441
+362277,dataset_credit-approval,1,6,StandardScaler,SelectKBest,SVM,552,138,ok,,0.8083616298811545,0.7969308387639269,,0.0252693999937037
+362277,dataset_credit-approval,2,6,StandardScaler,SelectKBest,SVM,552,138,ok,,0.8763040238450075,0.8693181818181819,,0.019141900003887713
+362277,dataset_credit-approval,3,6,StandardScaler,SelectKBest,SVM,552,138,ok,,0.8496912923142431,0.8519630980476293,,0.017658799988566898
+362277,dataset_credit-approval,4,6,StandardScaler,SelectKBest,SVM,552,138,ok,,0.9039812646370022,0.8982086406743941,,0.01711339999746997
+362277,dataset_credit-approval,0,7,StandardScaler,SelectKBest,kNN,552,138,ok,,0.8081494057724957,0.8090270385352353,,0.011081399992690422
+362277,dataset_credit-approval,1,7,StandardScaler,SelectKBest,kNN,552,138,ok,,0.8075127334465195,0.803843116609634,,0.034991799999261275
+362277,dataset_credit-approval,2,7,StandardScaler,SelectKBest,kNN,552,138,ok,,0.8626783053012561,0.8661637931034483,,0.012080500004230998
+362277,dataset_credit-approval,3,7,StandardScaler,SelectKBest,kNN,552,138,ok,,0.8578880136257185,0.8596585130867633,,0.010475300005055033
+362277,dataset_credit-approval,4,7,StandardScaler,SelectKBest,kNN,552,138,ok,,0.907068341494571,0.904953642384106,,0.012734100004308857
+362277,dataset_credit-approval,0,8,StandardScaler,SelectKBest,MLP,552,138,ok,,0.8308573853989814,0.83134066634784,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0284243000060087
+362277,dataset_credit-approval,1,8,StandardScaler,SelectKBest,MLP,552,138,ok,,0.8089983022071308,0.8040906461959093,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5963801000034437
+362277,dataset_credit-approval,2,8,StandardScaler,SelectKBest,MLP,552,138,ok,,0.8595912284436875,0.8601972807251399,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7250333999982104
+362277,dataset_credit-approval,3,8,StandardScaler,SelectKBest,MLP,552,138,ok,,0.8237172663402171,0.8237172663402171,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5790166000078898
+362277,dataset_credit-approval,4,8,StandardScaler,SelectKBest,MLP,552,138,ok,,0.9087715563125399,0.9051947365639698,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7019730000029085
+362277,dataset_credit-approval,0,9,StandardScaler,SelectKBest,DecisionTree,552,138,ok,,0.8550509337860781,0.853968253968254,,0.01053130000946112
+362277,dataset_credit-approval,1,9,StandardScaler,SelectKBest,DecisionTree,552,138,ok,,0.7680390492359932,0.7608570078243975,,0.009148800003458746
+362277,dataset_credit-approval,2,9,StandardScaler,SelectKBest,DecisionTree,552,138,ok,,0.8431977858207367,0.8448857249906332,,0.013705400007893331
+362277,dataset_credit-approval,3,9,StandardScaler,SelectKBest,DecisionTree,552,138,ok,,0.7567596338088142,0.7571847507331378,,0.007913800000096671
+362277,dataset_credit-approval,4,9,StandardScaler,SelectKBest,DecisionTree,552,138,ok,,0.8807749627421758,0.882051282051282,,0.010647999995853752
+362277,dataset_credit-approval,0,10,StandardScaler,None,RandomForest,552,138,ok,,0.8652376910016979,0.8673076923076923,,0.32218460000876803
+362277,dataset_credit-approval,1,10,StandardScaler,None,RandomForest,552,138,ok,,0.8529286926994907,0.8476260581523739,,0.23844020000251476
+362277,dataset_credit-approval,2,10,StandardScaler,None,RandomForest,552,138,ok,,0.9101554183521396,0.9115384615384616,,0.46900640000239946
+362277,dataset_credit-approval,3,10,StandardScaler,None,RandomForest,552,138,ok,,0.8462848626783053,0.8505523066926576,,0.3552730000083102
+362277,dataset_credit-approval,4,10,StandardScaler,None,RandomForest,552,138,ok,,0.9282520757930595,0.9267826825127334,,0.2550254999950994
+362277,dataset_credit-approval,0,11,StandardScaler,None,SVM,552,138,ok,,0.8565365025466893,0.8543074324324325,,0.021561899993685074
+362277,dataset_credit-approval,1,11,StandardScaler,None,SVM,552,138,ok,,0.8200339558573854,0.8115942028985508,,0.020517700002528727
+362277,dataset_credit-approval,2,11,StandardScaler,None,SVM,552,138,ok,,0.894081328507558,0.8906093114199651,,0.04409440000017639
+362277,dataset_credit-approval,3,11,StandardScaler,None,SVM,552,138,ok,,0.8431977858207367,0.8448857249906332,,0.03508719999808818
+362277,dataset_credit-approval,4,11,StandardScaler,None,SVM,552,138,ok,,0.9022780498190335,0.8980152027027026,,0.0234405999945011
+362277,dataset_credit-approval,0,12,StandardScaler,None,kNN,552,138,ok,,0.8440152801358234,0.8454812050119969,,0.014310300000943244
+362277,dataset_credit-approval,1,12,StandardScaler,None,kNN,552,138,ok,,0.8308573853989814,0.83134066634784,,0.011386700003640726
+362277,dataset_credit-approval,2,12,StandardScaler,None,kNN,552,138,ok,,0.8889716840536512,0.8896294321514262,,0.014792600006330758
+362277,dataset_credit-approval,3,12,StandardScaler,None,kNN,552,138,ok,,0.8134979774324036,0.8186199342825848,,0.019278199994005263
+362277,dataset_credit-approval,4,12,StandardScaler,None,kNN,552,138,ok,,0.8971684053651267,0.8971684053651267,,0.012254100001882762
+362277,dataset_credit-approval,0,13,StandardScaler,None,MLP,552,138,ok,,0.8374363327674024,0.8384074941451991,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6657705000106944
+362277,dataset_credit-approval,1,13,StandardScaler,None,MLP,552,138,ok,,0.8397707979626485,0.8332545311268715,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6103776000090875
+362277,dataset_credit-approval,2,13,StandardScaler,None,MLP,552,138,ok,,0.8824781775601447,0.8824781775601447,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.670309900000575
+362277,dataset_credit-approval,3,13,StandardScaler,None,MLP,552,138,ok,,0.8155205450287417,0.8160490535857106,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7419306999945547
+362277,dataset_credit-approval,4,13,StandardScaler,None,MLP,552,138,ok,,0.9152650628060464,0.9123809523809524,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6611027000035392
+362277,dataset_credit-approval,0,14,StandardScaler,None,DecisionTree,552,138,ok,,0.8066638370118846,0.8083333333333333,,0.009471400000620633
+362277,dataset_credit-approval,1,14,StandardScaler,None,DecisionTree,552,138,ok,,0.7907470288624787,0.782608695652174,,0.009472799996729009
+362277,dataset_credit-approval,2,14,StandardScaler,None,DecisionTree,552,138,ok,,0.8141366829891421,0.8105996621621622,,0.009442199996556155
+362277,dataset_credit-approval,3,14,StandardScaler,None,DecisionTree,552,138,ok,,0.7731530764317649,0.7726765502949147,,0.00836429999617394
+362277,dataset_credit-approval,4,14,StandardScaler,None,DecisionTree,552,138,ok,,0.7991271024057909,0.8005673607022428,,0.008254100001067854
+362277,dataset_credit-approval,0,15,MinMaxScaler,PCA,RandomForest,552,138,ok,,0.8550509337860781,0.853968253968254,,0.31024050000996795
+362277,dataset_credit-approval,1,15,MinMaxScaler,PCA,RandomForest,552,138,ok,,0.8367996604414262,0.832903395630429,,0.2928210999962175
+362277,dataset_credit-approval,2,15,MinMaxScaler,PCA,RandomForest,552,138,ok,,0.8759846710666382,0.8753387533875339,,0.31676010000228416
+362277,dataset_credit-approval,3,15,MinMaxScaler,PCA,RandomForest,552,138,ok,,0.823397913561848,0.8276779412563114,,0.27608219999819994
+362277,dataset_credit-approval,4,15,MinMaxScaler,PCA,RandomForest,552,138,ok,,0.8988716201830955,0.8974957555178269,,0.273569500001031
+362277,dataset_credit-approval,0,16,MinMaxScaler,PCA,SVM,552,138,ok,,0.8696943972835314,0.8685714285714285,,0.03526360000250861
+362277,dataset_credit-approval,1,16,MinMaxScaler,PCA,SVM,552,138,ok,,0.8251273344651953,0.8187549251379038,,0.01903429999947548
+362277,dataset_credit-approval,2,16,MinMaxScaler,PCA,SVM,552,138,ok,,0.8776878858846071,0.8757086092715232,,0.019791700004134327
+362277,dataset_credit-approval,3,16,MinMaxScaler,PCA,SVM,552,138,ok,,0.8216946987438791,0.8266994266994268,,0.019792899998719804
+362277,dataset_credit-approval,4,16,MinMaxScaler,PCA,SVM,552,138,ok,,0.8923781136895891,0.8903311258278146,,0.018523300008382648
+362277,dataset_credit-approval,0,17,MinMaxScaler,PCA,kNN,552,138,ok,,0.8374363327674024,0.8384074941451991,,0.013126399993780069
+362277,dataset_credit-approval,1,17,MinMaxScaler,PCA,kNN,552,138,ok,,0.8448641765704584,0.8402777777777778,,0.011300500002107583
+362277,dataset_credit-approval,2,17,MinMaxScaler,PCA,kNN,552,138,ok,,0.8742814562486694,0.8749133564382832,,0.015743099997052923
+362277,dataset_credit-approval,3,17,MinMaxScaler,PCA,kNN,552,138,ok,,0.8298914200553544,0.834712543554007,,0.009858199991867878
+362277,dataset_credit-approval,4,17,MinMaxScaler,PCA,kNN,552,138,ok,,0.8923781136895891,0.8903311258278146,,0.012090099990018643
+362277,dataset_credit-approval,0,18,MinMaxScaler,PCA,MLP,552,138,ok,,0.8440152801358234,0.8454812050119969,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6695984000107273
+362277,dataset_credit-approval,1,18,MinMaxScaler,PCA,MLP,552,138,ok,,0.8367996604414262,0.832903395630429,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7157564999943133
+362277,dataset_credit-approval,2,18,MinMaxScaler,PCA,MLP,552,138,ok,,0.866084734937194,0.8673076923076923,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.565239899995504
+362277,dataset_credit-approval,3,18,MinMaxScaler,PCA,MLP,552,138,ok,,0.8216946987438791,0.8266994266994268,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6171175000054063
+362277,dataset_credit-approval,4,18,MinMaxScaler,PCA,MLP,552,138,ok,,0.8776878858846071,0.8757086092715232,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6388802000001306
+362277,dataset_credit-approval,0,19,MinMaxScaler,PCA,DecisionTree,552,138,ok,,0.7935059422750425,0.7943368107302533,,0.047401699994225055
+362277,dataset_credit-approval,1,19,MinMaxScaler,PCA,DecisionTree,552,138,ok,,0.7964770797962648,0.7955555555555556,,0.014423899992834777
+362277,dataset_credit-approval,2,19,MinMaxScaler,PCA,DecisionTree,552,138,ok,,0.8237172663402171,0.8237172663402171,,0.011215600010473281
+362277,dataset_credit-approval,3,19,MinMaxScaler,PCA,DecisionTree,552,138,ok,,0.7988077496274217,0.8035049288061337,,0.012768600005074404
+362277,dataset_credit-approval,4,19,MinMaxScaler,PCA,DecisionTree,552,138,ok,,0.851394507132212,0.8525641025641026,,0.01325959998939652
+362277,dataset_credit-approval,0,20,MinMaxScaler,SelectKBest,RandomForest,552,138,ok,,0.8440152801358234,0.8454812050119969,,0.27365680001094006
+362277,dataset_credit-approval,1,20,MinMaxScaler,SelectKBest,RandomForest,552,138,ok,,0.8448641765704584,0.8402777777777778,,0.4155876000004355
+362277,dataset_credit-approval,2,20,MinMaxScaler,SelectKBest,RandomForest,552,138,ok,,0.8954651905471578,0.8967948717948717,,0.23999600000388455
+362277,dataset_credit-approval,3,20,MinMaxScaler,SelectKBest,RandomForest,552,138,ok,,0.8121141153928039,0.8145460409611354,,0.2814141999988351
+362277,dataset_credit-approval,4,20,MinMaxScaler,SelectKBest,RandomForest,552,138,ok,,0.9217585692995529,0.9195761589403973,,0.2985581000102684
+362277,dataset_credit-approval,0,21,MinMaxScaler,SelectKBest,SVM,552,138,ok,,0.8873089983022071,0.8836670179135933,,0.020228299996233545
+362277,dataset_credit-approval,1,21,MinMaxScaler,SelectKBest,SVM,552,138,ok,,0.8266129032258065,0.8188310665336345,,0.030835700003081
+362277,dataset_credit-approval,2,21,MinMaxScaler,SelectKBest,SVM,552,138,ok,,0.8647008728975942,0.8614384611319559,,0.016603000010945834
+362277,dataset_credit-approval,3,21,MinMaxScaler,SelectKBest,SVM,552,138,ok,,0.8496912923142431,0.8519630980476293,,0.03471139998873696
+362277,dataset_credit-approval,4,21,MinMaxScaler,SelectKBest,SVM,552,138,ok,,0.9039812646370022,0.8982086406743941,,0.01713459999882616
+362277,dataset_credit-approval,0,22,MinMaxScaler,SelectKBest,kNN,552,138,ok,,0.8308573853989814,0.83134066634784,,0.012414500000886619
+362277,dataset_credit-approval,1,22,MinMaxScaler,SelectKBest,kNN,552,138,ok,,0.8397707979626485,0.8332545311268715,,0.01405289999092929
+362277,dataset_credit-approval,2,22,MinMaxScaler,SelectKBest,kNN,552,138,ok,,0.8544815839897807,0.8583850931677018,,0.010522700002184138
+362277,dataset_credit-approval,3,22,MinMaxScaler,SelectKBest,kNN,552,138,ok,,0.8578880136257185,0.8596585130867633,,0.011864100000821054
+362277,dataset_credit-approval,4,22,MinMaxScaler,SelectKBest,kNN,552,138,ok,,0.8776878858846071,0.8757086092715232,,0.009833900010562502
+362277,dataset_credit-approval,0,23,MinMaxScaler,SelectKBest,MLP,552,138,ok,,0.8455008488964346,0.8460066953610712,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6491630000091391
+362277,dataset_credit-approval,1,23,MinMaxScaler,SelectKBest,MLP,552,138,ok,,0.817062818336163,0.8114357788522177,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6089215999963926
+362277,dataset_credit-approval,2,23,MinMaxScaler,SelectKBest,MLP,552,138,ok,,0.8957845433255269,0.8908400569530137,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5962503000046127
+362277,dataset_credit-approval,3,23,MinMaxScaler,SelectKBest,MLP,552,138,ok,,0.8595912284436875,0.8601972807251399,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5452802000072552
+362277,dataset_credit-approval,4,23,MinMaxScaler,SelectKBest,MLP,552,138,ok,,0.9316585054289972,0.9271537162162162,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5520350000006147
+362277,dataset_credit-approval,0,24,MinMaxScaler,SelectKBest,DecisionTree,552,138,ok,,0.8550509337860781,0.853968253968254,,0.008981299994047731
+362277,dataset_credit-approval,1,24,MinMaxScaler,SelectKBest,DecisionTree,552,138,ok,,0.7746179966044142,0.7680672268907562,,0.00985479999508243
+362277,dataset_credit-approval,2,24,MinMaxScaler,SelectKBest,DecisionTree,552,138,ok,,0.8431977858207367,0.8448857249906332,,0.008295699997688644
+362277,dataset_credit-approval,3,24,MinMaxScaler,SelectKBest,DecisionTree,552,138,ok,,0.7567596338088142,0.7571847507331378,,0.008053099998505786
+362277,dataset_credit-approval,4,24,MinMaxScaler,SelectKBest,DecisionTree,552,138,ok,,0.8872684692356823,0.8892040892790237,,0.007734900005743839
+362277,dataset_credit-approval,0,25,MinMaxScaler,None,RandomForest,552,138,ok,,0.8652376910016979,0.8673076923076923,,0.2555121000041254
+362277,dataset_credit-approval,1,25,MinMaxScaler,None,RandomForest,552,138,ok,,0.8529286926994907,0.8476260581523739,,0.24687409999023657
+362277,dataset_credit-approval,2,25,MinMaxScaler,None,RandomForest,552,138,ok,,0.9101554183521396,0.9115384615384616,,0.23189840000122786
+362277,dataset_credit-approval,3,25,MinMaxScaler,None,RandomForest,552,138,ok,,0.8462848626783053,0.8505523066926576,,0.2311935000034282
+362277,dataset_credit-approval,4,25,MinMaxScaler,None,RandomForest,552,138,ok,,0.9282520757930595,0.9267826825127334,,0.244837499994901
+362277,dataset_credit-approval,0,26,MinMaxScaler,None,SVM,552,138,ok,,0.8777589134125636,0.8760238862759605,,0.02244270000664983
+362277,dataset_credit-approval,1,26,MinMaxScaler,None,SVM,552,138,ok,,0.8068760611205432,0.7970588235294118,,0.028072699991753325
+362277,dataset_credit-approval,2,26,MinMaxScaler,None,SVM,552,138,ok,,0.8711943793911007,0.8685714285714285,,0.018205000000307336
+362277,dataset_credit-approval,3,26,MinMaxScaler,None,SVM,552,138,ok,,0.8544815839897807,0.8583850931677018,,0.018503400002373382
+362277,dataset_credit-approval,4,26,MinMaxScaler,None,SVM,552,138,ok,,0.9087715563125399,0.9051947365639698,,0.020522099992376752
+362277,dataset_credit-approval,0,27,MinMaxScaler,None,kNN,552,138,ok,,0.8374363327674024,0.8384074941451991,,0.012676900005317293
+362277,dataset_credit-approval,1,27,MinMaxScaler,None,kNN,552,138,ok,,0.8448641765704584,0.8402777777777778,,0.013366600003791973
+362277,dataset_credit-approval,2,27,MinMaxScaler,None,kNN,552,138,ok,,0.8824781775601447,0.8824781775601447,,0.011016000004019588
+362277,dataset_credit-approval,3,27,MinMaxScaler,None,kNN,552,138,ok,,0.8216946987438791,0.8266994266994268,,0.011251300005824305
+362277,dataset_credit-approval,4,27,MinMaxScaler,None,kNN,552,138,ok,,0.8923781136895891,0.8903311258278146,,0.01105880000977777
+362277,dataset_credit-approval,0,28,MinMaxScaler,None,MLP,552,138,ok,,0.8601443123938879,0.8606727243743026,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7242785999987973
+362277,dataset_credit-approval,1,28,MinMaxScaler,None,MLP,552,138,ok,,0.8185483870967742,0.8115546218487395,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6181446999980835
+362277,dataset_credit-approval,2,28,MinMaxScaler,None,MLP,552,138,ok,,0.8971684053651267,0.8971684053651267,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5410917999979574
+362277,dataset_credit-approval,3,28,MinMaxScaler,None,MLP,552,138,ok,,0.8544815839897807,0.8583850931677018,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5810748000076273
+362277,dataset_credit-approval,4,28,MinMaxScaler,None,MLP,552,138,ok,,0.8988716201830955,0.8974957555178269,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5235820999951102
+362277,dataset_credit-approval,0,29,MinMaxScaler,None,DecisionTree,552,138,ok,,0.8066638370118846,0.8083333333333333,,0.01879650000773836
+362277,dataset_credit-approval,1,29,MinMaxScaler,None,DecisionTree,552,138,ok,,0.7907470288624787,0.782608695652174,,0.011293799994746223
+362277,dataset_credit-approval,2,29,MinMaxScaler,None,DecisionTree,552,138,ok,,0.8141366829891421,0.8105996621621622,,0.01662370000849478
+362277,dataset_credit-approval,3,29,MinMaxScaler,None,DecisionTree,552,138,ok,,0.7731530764317649,0.7726765502949147,,0.009337399998912588
+362277,dataset_credit-approval,4,29,MinMaxScaler,None,DecisionTree,552,138,ok,,0.8056206088992974,0.8075520274619181,,0.009744199996930547
+362277,dataset_credit-approval,0,30,RobustScaler,PCA,RandomForest,552,138,ok,,0.7729202037351444,0.7758284600389863,,0.3801905000000261
+362277,dataset_credit-approval,1,30,RobustScaler,PCA,RandomForest,552,138,ok,,0.8132427843803056,0.8153401487983729,,0.2968191999971168
+362277,dataset_credit-approval,2,30,RobustScaler,PCA,RandomForest,552,138,ok,,0.7940174579518842,0.7977088875617568,,0.2965338000067277
+362277,dataset_credit-approval,3,30,RobustScaler,PCA,RandomForest,552,138,ok,,0.7321694698743879,0.7335335764857327,,0.29482899999129586
+362277,dataset_credit-approval,4,30,RobustScaler,PCA,RandomForest,552,138,ok,,0.8694911645731318,0.8682088285229201,,0.3447900000028312
+362277,dataset_credit-approval,0,31,RobustScaler,PCA,SVM,552,138,ok,,0.7442699490662139,0.7463659147869675,,0.03276000000187196
+362277,dataset_credit-approval,1,31,RobustScaler,PCA,SVM,552,138,ok,,0.7684634974533107,0.7718253968253967,,0.02060679999704007
+362277,dataset_credit-approval,2,31,RobustScaler,PCA,SVM,552,138,ok,,0.7561209282520758,0.7599191873842528,,0.022091000006184913
+362277,dataset_credit-approval,3,31,RobustScaler,PCA,SVM,552,138,ok,,0.7185437513306365,0.7200811359026369,,0.022456100006820634
+362277,dataset_credit-approval,4,31,RobustScaler,PCA,SVM,552,138,ok,,0.8018948264849903,0.8078529657477025,,0.02442729999893345
+362277,dataset_credit-approval,0,32,RobustScaler,PCA,kNN,552,138,ok,,0.7355687606112054,0.7377707801726479,,0.010794500005431473
+362277,dataset_credit-approval,1,32,RobustScaler,PCA,kNN,552,138,ok,,0.7648556876061121,0.7677398338672023,,0.011212399986106902
+362277,dataset_credit-approval,2,32,RobustScaler,PCA,kNN,552,138,ok,,0.767724079199489,0.7718253968253967,,0.010700300001190044
+362277,dataset_credit-approval,3,32,RobustScaler,PCA,kNN,552,138,ok,,0.7075793059399618,0.7093167701863354,,0.02269660000456497
+362277,dataset_credit-approval,4,32,RobustScaler,PCA,kNN,552,138,ok,,0.8332978496912923,0.8364224137931034,,0.009855099997366779
+362277,dataset_credit-approval,0,33,RobustScaler,PCA,MLP,552,138,ok,,0.7678268251273345,0.7700370907918078,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7662598999886541
+362277,dataset_credit-approval,1,33,RobustScaler,PCA,MLP,552,138,ok,,0.7905348047538201,0.792748337266681,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6003788999951212
+362277,dataset_credit-approval,2,33,RobustScaler,PCA,MLP,552,138,ok,,0.7581434958484139,0.7608836907082521,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6687407999997959
+362277,dataset_credit-approval,3,33,RobustScaler,PCA,MLP,552,138,ok,,0.7222695337449436,0.724223602484472,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5606243999936851
+362277,dataset_credit-approval,4,33,RobustScaler,PCA,MLP,552,138,ok,,0.8496912923142431,0.8519630980476293,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5596637999988161
+362277,dataset_credit-approval,0,34,RobustScaler,PCA,DecisionTree,552,138,ok,,0.7122241086587436,0.7130365235937084,,0.010827099991729483
+362277,dataset_credit-approval,1,34,RobustScaler,PCA,DecisionTree,552,138,ok,,0.7722835314091681,0.7726765502949147,,0.01088389998767525
+362277,dataset_credit-approval,2,34,RobustScaler,PCA,DecisionTree,552,138,ok,,0.7010857994464552,0.7025862068965517,,0.011796299993875436
+362277,dataset_credit-approval,3,34,RobustScaler,PCA,DecisionTree,552,138,ok,,0.6638279753033851,0.6632003395585738,,0.010455800002091564
+362277,dataset_credit-approval,4,34,RobustScaler,PCA,DecisionTree,552,138,ok,,0.7991271024057909,0.8005673607022428,,0.016973500009044074
+362277,dataset_credit-approval,0,35,RobustScaler,SelectKBest,RandomForest,552,138,ok,,0.8440152801358234,0.8454812050119969,,0.26016710000112653
+362277,dataset_credit-approval,1,35,RobustScaler,SelectKBest,RandomForest,552,138,ok,,0.8448641765704584,0.8402777777777778,,0.2482289000035962
+362277,dataset_credit-approval,2,35,RobustScaler,SelectKBest,RandomForest,552,138,ok,,0.8954651905471578,0.8967948717948717,,0.2612294999998994
+362277,dataset_credit-approval,3,35,RobustScaler,SelectKBest,RandomForest,552,138,ok,,0.8121141153928039,0.8145460409611354,,0.23302810000313912
+362277,dataset_credit-approval,4,35,RobustScaler,SelectKBest,RandomForest,552,138,ok,,0.9217585692995529,0.9195761589403973,,0.28282510000281036
+362277,dataset_credit-approval,0,36,RobustScaler,SelectKBest,SVM,552,138,ok,,0.8652376910016979,0.8673076923076923,,0.01949140000215266
+362277,dataset_credit-approval,1,36,RobustScaler,SelectKBest,SVM,552,138,ok,,0.823641765704584,0.8186024501813975,,0.020674700004747137
+362277,dataset_credit-approval,2,36,RobustScaler,SelectKBest,SVM,552,138,ok,,0.8298914200553544,0.834712543554007,,0.023181600001407787
+362277,dataset_credit-approval,3,36,RobustScaler,SelectKBest,SVM,552,138,ok,,0.7612305727059825,0.7649837938801296,,0.019704099991940893
+362277,dataset_credit-approval,4,36,RobustScaler,SelectKBest,SVM,552,138,ok,,0.836384926548861,0.8417690417690418,,0.026627699990058318
+362277,dataset_credit-approval,0,37,RobustScaler,SelectKBest,kNN,552,138,ok,,0.8117572156196944,0.8145460409611354,,0.010816299996804446
+362277,dataset_credit-approval,1,37,RobustScaler,SelectKBest,kNN,552,138,ok,,0.8338285229202038,0.8322676108439465,,0.009977599998819642
+362277,dataset_credit-approval,2,37,RobustScaler,SelectKBest,kNN,552,138,ok,,0.8414945710027677,0.8442186744073537,,0.01876550000451971
+362277,dataset_credit-approval,3,37,RobustScaler,SelectKBest,kNN,552,138,ok,,0.7731530764317649,0.7726765502949147,,0.009891800000332296
+362277,dataset_credit-approval,4,37,RobustScaler,SelectKBest,kNN,552,138,ok,,0.8875878220140515,0.8834459459459459,,0.012325299991061911
+362277,dataset_credit-approval,0,38,RobustScaler,SelectKBest,MLP,552,138,ok,,0.8440152801358234,0.8454812050119969,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6585519000072964
+362277,dataset_credit-approval,1,38,RobustScaler,SelectKBest,MLP,552,138,ok,,0.8075127334465195,0.803843116609634,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5619691000028979
+362277,dataset_credit-approval,2,38,RobustScaler,SelectKBest,MLP,552,138,ok,,0.8807749627421758,0.882051282051282,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5989840000111144
+362277,dataset_credit-approval,3,38,RobustScaler,SelectKBest,MLP,552,138,ok,,0.8268043431977858,0.8293823576842445,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6138865999964764
+362277,dataset_credit-approval,4,38,RobustScaler,SelectKBest,MLP,552,138,ok,,0.9299552906110282,0.926984126984127,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6204201999935322
+362277,dataset_credit-approval,0,39,RobustScaler,SelectKBest,DecisionTree,552,138,ok,,0.8550509337860781,0.853968253968254,,0.008176999996067025
+362277,dataset_credit-approval,1,39,RobustScaler,SelectKBest,DecisionTree,552,138,ok,,0.7680390492359932,0.7608570078243975,,0.011889500005054288
+362277,dataset_credit-approval,2,39,RobustScaler,SelectKBest,DecisionTree,552,138,ok,,0.8431977858207367,0.8448857249906332,,0.012703600004897453
+362277,dataset_credit-approval,3,39,RobustScaler,SelectKBest,DecisionTree,552,138,ok,,0.7632531403023206,0.764102564102564,,0.008502800003043376
+362277,dataset_credit-approval,4,39,RobustScaler,SelectKBest,DecisionTree,552,138,ok,,0.8807749627421758,0.882051282051282,,0.008379700011573732
+362277,dataset_credit-approval,0,40,RobustScaler,None,RandomForest,552,138,ok,,0.8652376910016979,0.8673076923076923,,0.26329529999929946
+362277,dataset_credit-approval,1,40,RobustScaler,None,RandomForest,552,138,ok,,0.8463497453310695,0.8404456590287996,,0.27754140000615735
+362277,dataset_credit-approval,2,40,RobustScaler,None,RandomForest,552,138,ok,,0.9101554183521396,0.9115384615384616,,0.3692925999930594
+362277,dataset_credit-approval,3,40,RobustScaler,None,RandomForest,552,138,ok,,0.8462848626783053,0.8505523066926576,,0.24926709999272134
+362277,dataset_credit-approval,4,40,RobustScaler,None,RandomForest,552,138,ok,,0.9282520757930595,0.9267826825127334,,0.27174169999489095
+362277,dataset_credit-approval,0,41,RobustScaler,None,SVM,552,138,ok,,0.8491086587436333,0.8519630980476293,,0.021353299991460517
+362277,dataset_credit-approval,1,41,RobustScaler,None,SVM,552,138,ok,,0.8075127334465195,0.803843116609634,,0.024717099993722513
+362277,dataset_credit-approval,2,41,RobustScaler,None,SVM,552,138,ok,,0.8298914200553544,0.834712543554007,,0.03008080000290647
+362277,dataset_credit-approval,3,41,RobustScaler,None,SVM,552,138,ok,,0.7595273578880136,0.7634242105845268,,0.021461399999679998
+362277,dataset_credit-approval,4,41,RobustScaler,None,SVM,552,138,ok,,0.8281882052373856,0.8337349397590361,,0.026020899997092783
+362277,dataset_credit-approval,0,42,RobustScaler,None,kNN,552,138,ok,,0.8102716468590832,0.813664596273292,,0.013704500001040287
+362277,dataset_credit-approval,1,42,RobustScaler,None,kNN,552,138,ok,,0.8066638370118846,0.8083333333333333,,0.012222999997902662
+362277,dataset_credit-approval,2,42,RobustScaler,None,kNN,552,138,ok,,0.8216946987438791,0.8266994266994268,,0.011534700010088272
+362277,dataset_credit-approval,3,42,RobustScaler,None,kNN,552,138,ok,,0.7533532041728763,0.7552007740686986,,0.011169000004883856
+362277,dataset_credit-approval,4,42,RobustScaler,None,kNN,552,138,ok,,0.8319139876516926,0.83134066634784,,0.013448199999402277
+362277,dataset_credit-approval,0,43,RobustScaler,None,MLP,552,138,ok,,0.8314940577249575,0.8356075373619233,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5978528000123333
+362277,dataset_credit-approval,1,43,RobustScaler,None,MLP,552,138,ok,,0.8140916808149405,0.810958904109589,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6189356999966549
+362277,dataset_credit-approval,2,43,RobustScaler,None,MLP,552,138,ok,,0.8643815201192251,0.8667667882428662,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8549331999965943
+362277,dataset_credit-approval,3,43,RobustScaler,None,MLP,552,138,ok,,0.8268043431977858,0.8293823576842445,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.5621891000046162
+362277,dataset_credit-approval,4,43,RobustScaler,None,MLP,552,138,ok,,0.9087715563125399,0.9051947365639698,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6059996999974828
+362277,dataset_credit-approval,0,44,RobustScaler,None,DecisionTree,552,138,ok,,0.8066638370118846,0.8083333333333333,,0.008808700004010461
+362277,dataset_credit-approval,1,44,RobustScaler,None,DecisionTree,552,138,ok,,0.7907470288624787,0.782608695652174,,0.009732599995913915
+362277,dataset_credit-approval,2,44,RobustScaler,None,DecisionTree,552,138,ok,,0.8141366829891421,0.8105996621621622,,0.010519799994654022
+362277,dataset_credit-approval,3,44,RobustScaler,None,DecisionTree,552,138,ok,,0.7731530764317649,0.7726765502949147,,0.00822649999463465
+362277,dataset_credit-approval,4,44,RobustScaler,None,DecisionTree,552,138,ok,,0.7991271024057909,0.8005673607022428,,0.01153360000171233
+362277,dataset_credit-approval,0,45,None,PCA,RandomForest,552,138,ok,,0.777376910016978,0.7788461538461539,,0.35429129999829456
+362277,dataset_credit-approval,1,45,None,PCA,RandomForest,552,138,ok,,0.809634974533107,0.809634974533107,,0.315082999994047
+362277,dataset_credit-approval,2,45,None,PCA,RandomForest,552,138,ok,,0.7926335959122844,0.7935897435897437,,0.34488649999548215
+362277,dataset_credit-approval,3,45,None,PCA,RandomForest,552,138,ok,,0.7304662550564189,0.7323275862068965,,0.3006331000069622
+362277,dataset_credit-approval,4,45,None,PCA,RandomForest,552,138,ok,,0.8872684692356823,0.8892040892790237,,0.3207261999923503
+362277,dataset_credit-approval,0,46,None,PCA,SVM,552,138,ok,,0.6283955857385399,0.60554643313264,,0.028819400002248585
+362277,dataset_credit-approval,1,46,None,PCA,SVM,552,138,ok,,0.6173599320882852,0.5836057329645461,,0.028239900013431907
+362277,dataset_credit-approval,2,46,None,PCA,SVM,552,138,ok,,0.6721311475409836,0.653004777470455,,0.030522300003212877
+362277,dataset_credit-approval,3,46,None,PCA,SVM,552,138,ok,,0.5662124760485416,0.5384054004743659,,0.02338719999534078
+362277,dataset_credit-approval,4,46,None,PCA,SVM,552,138,ok,,0.6201830955929316,0.6043010752688172,,0.027224800011026673
+362277,dataset_credit-approval,0,47,None,PCA,kNN,552,138,ok,,0.6865449915110357,0.6877155172413794,,0.010398200000054203
+362277,dataset_credit-approval,1,47,None,PCA,kNN,552,138,ok,,0.7179541595925297,0.7194967862440258,,0.009790600000997074
+362277,dataset_credit-approval,2,47,None,PCA,kNN,552,138,ok,,0.676495635512029,0.6778326727835386,,0.008939599996665493
+362277,dataset_credit-approval,3,47,None,PCA,kNN,552,138,ok,,0.6109218650202257,0.6080200501253132,,0.010740600002463907
+362277,dataset_credit-approval,4,47,None,PCA,kNN,552,138,ok,,0.7140728124334682,0.7160493827160493,,0.010455899988301098
+362277,dataset_credit-approval,0,48,None,PCA,MLP,552,138,ok,,0.7480899830220713,0.7493589743589744,,0.17926280001120176
+362277,dataset_credit-approval,1,48,None,PCA,MLP,552,138,ok,,0.7355687606112054,0.7377707801726479,,0.21279910000157543
+362277,dataset_credit-approval,2,48,None,PCA,MLP,552,138,ok,,0.7321694698743879,0.7335335764857327,,0.11270040000090376
+362277,dataset_credit-approval,3,48,None,PCA,MLP,552,138,ok,,0.6795827123695977,0.6805555555555556,,0.12172170000849292
+362277,dataset_credit-approval,4,48,None,PCA,MLP,552,138,ok,,0.786140089418778,0.7866169021594241,,0.12797230000433046
+362277,dataset_credit-approval,0,49,None,PCA,DecisionTree,552,138,ok,,0.637521222410866,0.6380666916448108,,0.01119579999067355
+362277,dataset_credit-approval,1,49,None,PCA,DecisionTree,552,138,ok,,0.7190152801358234,0.7100840336134454,,0.01966540000285022
+362277,dataset_credit-approval,2,49,None,PCA,DecisionTree,552,138,ok,,0.7031083670427933,0.7009987845479047,,0.01276779999898281
+362277,dataset_credit-approval,3,49,None,PCA,DecisionTree,552,138,ok,,0.6979987225888865,0.6983204478805651,,0.010472900001332164
+362277,dataset_credit-approval,4,49,None,PCA,DecisionTree,552,138,ok,,0.7208856717053438,0.7208856717053438,,0.012406299996655434
+362277,dataset_credit-approval,0,50,None,SelectKBest,RandomForest,552,138,ok,,0.8440152801358234,0.8454812050119969,,0.23903989999962505
+362277,dataset_credit-approval,1,50,None,SelectKBest,RandomForest,552,138,ok,,0.8448641765704584,0.8402777777777778,,0.3101875000138534
+362277,dataset_credit-approval,2,50,None,SelectKBest,RandomForest,552,138,ok,,0.8954651905471578,0.8967948717948717,,0.25177200000325684
+362277,dataset_credit-approval,3,50,None,SelectKBest,RandomForest,552,138,ok,,0.8121141153928039,0.8145460409611354,,0.24310430001060013
+362277,dataset_credit-approval,4,50,None,SelectKBest,RandomForest,552,138,ok,,0.9217585692995529,0.9195761589403973,,0.23601809999672696
+362277,dataset_credit-approval,0,51,None,SelectKBest,SVM,552,138,ok,,0.6283955857385399,0.60554643313264,,0.024916599999414757
+362277,dataset_credit-approval,1,51,None,SelectKBest,SVM,552,138,ok,,0.6173599320882852,0.5836057329645461,,0.02782969998952467
+362277,dataset_credit-approval,2,51,None,SelectKBest,SVM,552,138,ok,,0.6721311475409836,0.653004777470455,,0.02696499999728985
+362277,dataset_credit-approval,3,51,None,SelectKBest,SVM,552,138,ok,,0.5662124760485416,0.5384054004743659,,0.02620540000498295
+362277,dataset_credit-approval,4,51,None,SelectKBest,SVM,552,138,ok,,0.6119863742814562,0.5937030583428469,,0.025669199996627867
+362277,dataset_credit-approval,0,52,None,SelectKBest,kNN,552,138,ok,,0.6799660441426146,0.6810191904531526,,0.009922500001266599
+362277,dataset_credit-approval,1,52,None,SelectKBest,kNN,552,138,ok,,0.6498302207130731,0.6477247502774695,,0.011694499989971519
+362277,dataset_credit-approval,2,52,None,SelectKBest,kNN,552,138,ok,,0.7369597615499255,0.7391304347826086,,0.009557700002915226
+362277,dataset_credit-approval,3,52,None,SelectKBest,kNN,552,138,ok,,0.6696827762401534,0.6695071010860485,,0.010438500001328066
+362277,dataset_credit-approval,4,52,None,SelectKBest,kNN,552,138,ok,,0.7485629124973388,0.7493589743589744,,0.010224300000118092
+362277,dataset_credit-approval,0,53,None,SelectKBest,MLP,552,138,ok,,0.7281409168081494,0.728941018014479,,0.08842689999437425
+362277,dataset_credit-approval,1,53,None,SelectKBest,MLP,552,138,ok,,0.797962648556876,0.7960304054054055,,0.17481109999062028
+362277,dataset_credit-approval,2,53,None,SelectKBest,MLP,552,138,ok,,0.7841175218224399,0.7883899233296824,,0.10125269999844022
+362277,dataset_credit-approval,3,53,None,SelectKBest,MLP,552,138,ok,,0.6880987864594422,0.6891225059000214,,0.11823110000113957
+362277,dataset_credit-approval,4,53,None,SelectKBest,MLP,552,138,ok,,0.7830530125612093,0.780952380952381,,0.10235249999095686
+362277,dataset_credit-approval,0,54,None,SelectKBest,DecisionTree,552,138,ok,,0.8550509337860781,0.853968253968254,,0.008347499999217689
+362277,dataset_credit-approval,1,54,None,SelectKBest,DecisionTree,552,138,ok,,0.7680390492359932,0.7608570078243975,,0.012736200005747378
+362277,dataset_credit-approval,2,54,None,SelectKBest,DecisionTree,552,138,ok,,0.8431977858207367,0.8448857249906332,,0.010687500005587935
+362277,dataset_credit-approval,3,54,None,SelectKBest,DecisionTree,552,138,ok,,0.7502661273153077,0.7502661273153077,,0.010595200001262128
+362277,dataset_credit-approval,4,54,None,SelectKBest,DecisionTree,552,138,ok,,0.8807749627421758,0.882051282051282,,0.008382100000744686
+362277,dataset_credit-approval,0,55,None,None,RandomForest,552,138,ok,,0.8652376910016979,0.8673076923076923,,0.2299873000010848
+362277,dataset_credit-approval,1,55,None,None,RandomForest,552,138,ok,,0.8529286926994907,0.8476260581523739,,0.25047660000564065
+362277,dataset_credit-approval,2,55,None,None,RandomForest,552,138,ok,,0.9101554183521396,0.9115384615384616,,0.2659769000019878
+362277,dataset_credit-approval,3,55,None,None,RandomForest,552,138,ok,,0.8462848626783053,0.8505523066926576,,0.30865649999759626
+362277,dataset_credit-approval,4,55,None,None,RandomForest,552,138,ok,,0.9282520757930595,0.9267826825127334,,0.24910349999845494
+362277,dataset_credit-approval,0,56,None,None,SVM,552,138,ok,,0.6283955857385399,0.60554643313264,,0.027707799992640503
+362277,dataset_credit-approval,1,56,None,None,SVM,552,138,ok,,0.6173599320882852,0.5836057329645461,,0.02706590000889264
+362277,dataset_credit-approval,2,56,None,None,SVM,552,138,ok,,0.6721311475409836,0.653004777470455,,0.02903859999787528
+362277,dataset_credit-approval,3,56,None,None,SVM,552,138,ok,,0.5662124760485416,0.5384054004743659,,0.028863500003353693
+362277,dataset_credit-approval,4,56,None,None,SVM,552,138,ok,,0.6119863742814562,0.5937030583428469,,0.02889800000411924
+362277,dataset_credit-approval,0,57,None,None,kNN,552,138,ok,,0.6931239388794568,0.6944099378881987,,0.01087940001161769
+362277,dataset_credit-approval,1,57,None,None,kNN,552,138,ok,,0.7245331069609509,0.7261904761904762,,0.010711099996115081
+362277,dataset_credit-approval,2,57,None,None,kNN,552,138,ok,,0.676495635512029,0.6778326727835386,,0.016904699994483963
+362277,dataset_credit-approval,3,57,None,None,kNN,552,138,ok,,0.6174153715137322,0.6142665474060823,,0.012031299993395805
+362277,dataset_credit-approval,4,57,None,None,kNN,552,138,ok,,0.7140728124334682,0.7160493827160493,,0.010646400012774393
+362277,dataset_credit-approval,0,58,None,None,MLP,552,138,ok,,0.6417657045840407,0.6387635756056809,,0.12028630000713747
+362277,dataset_credit-approval,1,58,None,None,MLP,552,138,ok,,0.7349320882852293,0.7355758995103258,,0.10821389999182429
+362277,dataset_credit-approval,2,58,None,None,MLP,552,138,ok,,0.743453268043432,0.7459389213775178,,0.2029095000034431
+362277,dataset_credit-approval,3,58,None,None,MLP,552,138,ok,,0.6423248882265276,0.643103448275862,,0.14932799999951385
+362277,dataset_credit-approval,4,58,None,None,MLP,552,138,ok,,0.7259953161592506,0.7231841216216216,,0.09808590001193807
+362277,dataset_credit-approval,0,59,None,None,DecisionTree,552,138,ok,,0.8066638370118846,0.8083333333333333,,0.008757699994021095
+362277,dataset_credit-approval,1,59,None,None,DecisionTree,552,138,ok,,0.7907470288624787,0.782608695652174,,0.008737400014069863
+362277,dataset_credit-approval,2,59,None,None,DecisionTree,552,138,ok,,0.8141366829891421,0.8105996621621622,,0.008219499999540858
+362277,dataset_credit-approval,3,59,None,None,DecisionTree,552,138,ok,,0.7731530764317649,0.7726765502949147,,0.00977569998940453
+362277,dataset_credit-approval,4,59,None,None,DecisionTree,552,138,ok,,0.7991271024057909,0.8005673607022428,,0.01006680000864435

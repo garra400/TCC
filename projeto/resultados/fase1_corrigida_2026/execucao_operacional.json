@@ -1,0 +1,10 @@
+{
+  "initial_workers": 4,
+  "resumed_workers": 6,
+  "priority": "BelowNormal",
+  "checkpoints_reused_at_resume": 13,
+  "signature_unchanged": "4a075a53de898d588164d96ce261aaab362265fb36a6ddfb287bfcfbfb0b1282",
+  "resume_utc": "2026-10-26T11:01:22.369912+00:00",
+  "discarded_incomplete_work": "Recomputed; no incomplete fold records reused",
+  "reason": "Use available six cores while preserving training parameters and completed checkpoints"
+}

@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+362203,German-Credit-Data-Creditability,0,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.5476190476190477,0.5412186379928315,,1.3933709999982966
+362203,German-Credit-Data-Creditability,1,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.6130952380952381,0.6203623813632442,,0.44204769999487326
+362203,German-Credit-Data-Creditability,2,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.611904761904762,0.6188594014680971,,0.7756744000071194
+362203,German-Credit-Data-Creditability,3,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.6166666666666667,0.6232670283303194,,0.4586468000052264
+362203,German-Credit-Data-Creditability,4,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.5797619047619048,0.5803549201607454,,0.4178249999968102
+362203,German-Credit-Data-Creditability,0,1,StandardScaler,PCA,SVM,800,200,ok,,0.5392857142857143,0.5303298529571154,,0.0636223999899812
+362203,German-Credit-Data-Creditability,1,1,StandardScaler,PCA,SVM,800,200,ok,,0.6,0.6011658229789845,,0.04420399999071378
+362203,German-Credit-Data-Creditability,2,1,StandardScaler,PCA,SVM,800,200,ok,,0.6226190476190476,0.6314895769355829,,0.05458149999321904
+362203,German-Credit-Data-Creditability,3,1,StandardScaler,PCA,SVM,800,200,ok,,0.5821428571428572,0.5738008121909051,,0.04909780000161845
+362203,German-Credit-Data-Creditability,4,1,StandardScaler,PCA,SVM,800,200,ok,,0.5869047619047619,0.5881354095162398,,0.04080430000612978
+362203,German-Credit-Data-Creditability,0,2,StandardScaler,PCA,kNN,800,200,ok,,0.5023809523809524,0.49942241047362346,,0.017739600007189438
+362203,German-Credit-Data-Creditability,1,2,StandardScaler,PCA,kNN,800,200,ok,,0.6190476190476191,0.6238244514106583,,0.014010300001245923
+362203,German-Credit-Data-Creditability,2,2,StandardScaler,PCA,kNN,800,200,ok,,0.5702380952380952,0.5712973359191589,,0.016175999990082346
+362203,German-Credit-Data-Creditability,3,2,StandardScaler,PCA,kNN,800,200,ok,,0.5773809523809523,0.5742296918767507,,0.01589629999944009
+362203,German-Credit-Data-Creditability,4,2,StandardScaler,PCA,kNN,800,200,ok,,0.5464285714285714,0.5470638895091066,,0.0144367000029888
+362203,German-Credit-Data-Creditability,0,3,StandardScaler,PCA,MLP,800,200,ok,,0.5714285714285714,0.5736677115987461,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2272746999951778
+362203,German-Credit-Data-Creditability,1,3,StandardScaler,PCA,MLP,800,200,ok,,0.6452380952380953,0.647887323943662,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.930217500004801
+362203,German-Credit-Data-Creditability,2,3,StandardScaler,PCA,MLP,800,200,ok,,0.6357142857142857,0.6343908479773559,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0237099999940256
+362203,German-Credit-Data-Creditability,3,3,StandardScaler,PCA,MLP,800,200,ok,,0.5976190476190476,0.6021049929405724,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8637373000092339
+362203,German-Credit-Data-Creditability,4,3,StandardScaler,PCA,MLP,800,200,ok,,0.5738095238095238,0.5750364254492473,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.849785400001565
+362203,German-Credit-Data-Creditability,0,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.5452380952380953,0.544179523141655,,0.025751499997568317
+362203,German-Credit-Data-Creditability,1,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.594047619047619,0.5980989442123058,,0.014977699989685789
+362203,German-Credit-Data-Creditability,2,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.5273809523809524,0.5274978318729627,,0.016675999999279156
+362203,German-Credit-Data-Creditability,3,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.6476190476190476,0.6527777777777778,,0.014442799991229549
+362203,German-Credit-Data-Creditability,4,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.5785714285714285,0.5814307458143074,,0.01683920000505168
+362203,German-Credit-Data-Creditability,0,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6285714285714286,0.631947000368053,,0.3857346000004327
+362203,German-Credit-Data-Creditability,1,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6857142857142857,0.69558599695586,,0.28954080000403337
+362203,German-Credit-Data-Creditability,2,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6785714285714286,0.6865203761755485,,0.41395770000235643
+362203,German-Credit-Data-Creditability,3,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6142857142857143,0.6215704824976348,,0.4859310000028927
+362203,German-Credit-Data-Creditability,4,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6476190476190476,0.6527777777777778,,0.2988432999991346
+362203,German-Credit-Data-Creditability,0,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.6023809523809524,0.6066433566433567,,0.042654100005165674
+362203,German-Credit-Data-Creditability,1,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.6630952380952381,0.6695657595311575,,0.04282220000459347
+362203,German-Credit-Data-Creditability,2,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.6773809523809524,0.6874102899429044,,0.06444899999769405
+362203,German-Credit-Data-Creditability,3,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.6214285714285714,0.629684491186491,,0.04233520000707358
+362203,German-Credit-Data-Creditability,4,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.6547619047619048,0.6666666666666667,,0.06582389998948202
+362203,German-Credit-Data-Creditability,0,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.6023809523809524,0.6080551425868361,,0.017383099999278784
+362203,German-Credit-Data-Creditability,1,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.638095238095238,0.6448503297818367,,0.013607700006105006
+362203,German-Credit-Data-Creditability,2,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.6821428571428572,0.6910369179356222,,0.019465899997157976
+362203,German-Credit-Data-Creditability,3,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.5964285714285714,0.6007145108752758,,0.013748600002145395
+362203,German-Credit-Data-Creditability,4,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.6178571428571429,0.6236164715639054,,0.012452199996914715
+362203,German-Credit-Data-Creditability,0,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6607142857142857,0.6707021791767553,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0534830999968108
+362203,German-Credit-Data-Creditability,1,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6678571428571429,0.6731522308901976,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9269605000008596
+362203,German-Credit-Data-Creditability,2,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6857142857142857,0.69558599695586,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0816916000039782
+362203,German-Credit-Data-Creditability,3,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6107142857142858,0.6174368267391523,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0343006000039168
+362203,German-Credit-Data-Creditability,4,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6583333333333333,0.6658154418487342,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9233262000052491
+362203,German-Credit-Data-Creditability,0,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.6904761904761905,0.6990595611285266,,0.019450600011623465
+362203,German-Credit-Data-Creditability,1,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.5726190476190476,0.5744812062532761,,0.009045099999639206
+362203,German-Credit-Data-Creditability,2,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.6547619047619048,0.6547619047619048,,0.014075600003707223
+362203,German-Credit-Data-Creditability,3,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.5857142857142856,0.5892696701322038,,0.008447200001683086
+362203,German-Credit-Data-Creditability,4,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.6202380952380953,0.6273413749141905,,0.008980600003269501
+362203,German-Credit-Data-Creditability,0,10,StandardScaler,None,RandomForest,800,200,ok,,0.6095238095238095,0.6162280701754386,,0.47612979999394156
+362203,German-Credit-Data-Creditability,1,10,StandardScaler,None,RandomForest,800,200,ok,,0.7321428571428572,0.7481840193704601,,0.3051749000005657
+362203,German-Credit-Data-Creditability,2,10,StandardScaler,None,RandomForest,800,200,ok,,0.6511904761904762,0.6657064618229667,,0.33032269999966957
+362203,German-Credit-Data-Creditability,3,10,StandardScaler,None,RandomForest,800,200,ok,,0.6202380952380953,0.6275322108623769,,0.381775200003176
+362203,German-Credit-Data-Creditability,4,10,StandardScaler,None,RandomForest,800,200,ok,,0.6488095238095238,0.6617773943054357,,0.32653320000099484
+362203,German-Credit-Data-Creditability,0,11,StandardScaler,None,SVM,800,200,ok,,0.6190476190476191,0.6272401433691757,,0.07093510001141112
+362203,German-Credit-Data-Creditability,1,11,StandardScaler,None,SVM,800,200,ok,,0.7261904761904763,0.7466666666666666,,0.05984780000289902
+362203,German-Credit-Data-Creditability,2,11,StandardScaler,None,SVM,800,200,ok,,0.6428571428571428,0.6559139784946237,,0.06372550000378396
+362203,German-Credit-Data-Creditability,3,11,StandardScaler,None,SVM,800,200,ok,,0.6535714285714286,0.6694943263192685,,0.06293659999209922
+362203,German-Credit-Data-Creditability,4,11,StandardScaler,None,SVM,800,200,ok,,0.6523809523809524,0.6662494785148102,,0.058350600011181086
+362203,German-Credit-Data-Creditability,0,12,StandardScaler,None,kNN,800,200,ok,,0.5535714285714286,0.551337359792925,,0.011443199997302145
+362203,German-Credit-Data-Creditability,1,12,StandardScaler,None,kNN,800,200,ok,,0.6535714285714286,0.6665645946037904,,0.008961800005636178
+362203,German-Credit-Data-Creditability,2,12,StandardScaler,None,kNN,800,200,ok,,0.5738095238095238,0.575109649122807,,0.011222100001759827
+362203,German-Credit-Data-Creditability,3,12,StandardScaler,None,kNN,800,200,ok,,0.594047619047619,0.5985165526861964,,0.009068800005479716
+362203,German-Credit-Data-Creditability,4,12,StandardScaler,None,kNN,800,200,ok,,0.5869047619047618,0.5905902882647068,,0.009403300005942583
+362203,German-Credit-Data-Creditability,0,13,StandardScaler,None,MLP,800,200,ok,,0.6273809523809524,0.6357495281300706,,1.0571949999866774
+362203,German-Credit-Data-Creditability,1,13,StandardScaler,None,MLP,800,200,ok,,0.7,0.6961196820944366,,0.8552921000082279
+362203,German-Credit-Data-Creditability,2,13,StandardScaler,None,MLP,800,200,ok,,0.6321428571428571,0.6301840274720436,,0.8863199000043096
+362203,German-Credit-Data-Creditability,3,13,StandardScaler,None,MLP,800,200,ok,,0.6369047619047619,0.6399694889397407,,0.8265582000021823
+362203,German-Credit-Data-Creditability,4,13,StandardScaler,None,MLP,800,200,ok,,0.6714285714285715,0.6775793650793651,,0.8026653999986593
+362203,German-Credit-Data-Creditability,0,14,StandardScaler,None,DecisionTree,800,200,ok,,0.638095238095238,0.6448503297818367,,0.013617400007206015
+362203,German-Credit-Data-Creditability,1,14,StandardScaler,None,DecisionTree,800,200,ok,,0.5916666666666667,0.5856863134595193,,0.016569300001719967
+362203,German-Credit-Data-Creditability,2,14,StandardScaler,None,DecisionTree,800,200,ok,,0.5678571428571428,0.5695221696082652,,0.016342499991878867
+362203,German-Credit-Data-Creditability,3,14,StandardScaler,None,DecisionTree,800,200,ok,,0.6261904761904762,0.6321664129883308,,0.014377699990291148
+362203,German-Credit-Data-Creditability,4,14,StandardScaler,None,DecisionTree,800,200,ok,,0.638095238095238,0.6323529411764706,,0.017385600003763102
+362203,German-Credit-Data-Creditability,0,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.594047619047619,0.5985165526861964,,0.41784650000045076
+362203,German-Credit-Data-Creditability,1,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.6214285714285714,0.6299342105263157,,0.4621101000084309
+362203,German-Credit-Data-Creditability,2,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.6476190476190476,0.6612083568605307,,0.38651820000086445
+362203,German-Credit-Data-Creditability,3,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.6035714285714285,0.6088054340481525,,0.3932234999956563
+362203,German-Credit-Data-Creditability,4,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.6452380952380953,0.6593097318915716,,0.39337659999728203
+362203,German-Credit-Data-Creditability,0,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.5595238095238095,0.5555555555555556,,0.05990860000019893
+362203,German-Credit-Data-Creditability,1,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.6380952380952382,0.6486011623192324,,0.0498068000015337
+362203,German-Credit-Data-Creditability,2,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.6226190476190476,0.6314895769355829,,0.0402788000064902
+362203,German-Credit-Data-Creditability,3,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.5988095238095238,0.5977759375369691,,0.04105909999634605
+362203,German-Credit-Data-Creditability,4,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.625,0.6339869281045751,,0.06343370000831783
+362203,German-Credit-Data-Creditability,0,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.5678571428571428,0.5695221696082652,,0.015478100001928397
+362203,German-Credit-Data-Creditability,1,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.5988095238095238,0.6027617516315142,,0.026329800006351434
+362203,German-Credit-Data-Creditability,2,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.5666666666666667,0.5675091228544398,,0.012150099995778874
+362203,German-Credit-Data-Creditability,3,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.5976190476190476,0.6025219298245614,,0.013807499999529682
+362203,German-Credit-Data-Creditability,4,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.6035714285714285,0.6092585847213484,,0.015669500004150905
+362203,German-Credit-Data-Creditability,0,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.580952380952381,0.5828732670837934,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9367976000066847
+362203,German-Credit-Data-Creditability,1,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.6511904761904762,0.6504635800823484,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8682242000068072
+362203,German-Credit-Data-Creditability,2,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.6285714285714286,0.631947000368053,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.861496099998476
+362203,German-Credit-Data-Creditability,3,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.6726190476190477,0.6765827612509534,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8363112000079127
+362203,German-Credit-Data-Creditability,4,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.5964285714285714,0.5991489624125066,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8590866000013193
+362203,German-Credit-Data-Creditability,0,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.6404761904761904,0.6442154336891179,,0.018460399995092303
+362203,German-Credit-Data-Creditability,1,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.5630952380952381,0.5649295375011822,,0.015459200003533624
+362203,German-Credit-Data-Creditability,2,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.569047619047619,0.5706048337627285,,0.016105799993965775
+362203,German-Credit-Data-Creditability,3,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.5678571428571428,0.5695221696082652,,0.014870700004394166
+362203,German-Credit-Data-Creditability,4,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.6190476190476191,0.6266666666666667,,0.015091799999936484
+362203,German-Credit-Data-Creditability,0,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6285714285714286,0.631947000368053,,0.36052299999573734
+362203,German-Credit-Data-Creditability,1,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6773809523809524,0.6874102899429044,,0.30017610000504646
+362203,German-Credit-Data-Creditability,2,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6785714285714286,0.6865203761755485,,0.47380210000847
+362203,German-Credit-Data-Creditability,3,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6059523809523809,0.6121261610697153,,0.27684900000167545
+362203,German-Credit-Data-Creditability,4,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6357142857142857,0.6403769841269842,,0.2830984000029275
+362203,German-Credit-Data-Creditability,0,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.6261904761904762,0.6350858224084336,,0.038004699992598034
+362203,German-Credit-Data-Creditability,1,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.6333333333333333,0.6406109613656783,,0.04102000000420958
+362203,German-Credit-Data-Creditability,2,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.6928571428571428,0.6964545896066052,,0.05425840000680182
+362203,German-Credit-Data-Creditability,3,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.6,0.6011658229789845,,0.036421400000108406
+362203,German-Credit-Data-Creditability,4,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.5928571428571429,0.5971933471933473,,0.03546970000024885
+362203,German-Credit-Data-Creditability,0,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.5857142857142857,0.5888157894736843,,0.012411699994117953
+362203,German-Credit-Data-Creditability,1,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.6357142857142857,0.6403769841269842,,0.0134330000000773
+362203,German-Credit-Data-Creditability,2,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.6702380952380952,0.6784261798921782,,0.026144100003875792
+362203,German-Credit-Data-Creditability,3,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.5726190476190476,0.5726944765507338,,0.012093299999833107
+362203,German-Credit-Data-Creditability,4,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.6285714285714286,0.6361746361746362,,0.011919700002181344
+362203,German-Credit-Data-Creditability,0,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6226190476190476,0.630860095976375,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9248239999869838
+362203,German-Credit-Data-Creditability,1,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6678571428571429,0.6731522308901976,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8546717000135686
+362203,German-Credit-Data-Creditability,2,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6952380952380952,0.7023809523809523,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0179051000013715
+362203,German-Credit-Data-Creditability,3,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6476190476190476,0.6612083568605307,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.828901600005338
+362203,German-Credit-Data-Creditability,4,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6392857142857143,0.6446273262882259,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8864642999978969
+362203,German-Credit-Data-Creditability,0,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.6904761904761905,0.6990595611285266,,0.00909039999532979
+362203,German-Credit-Data-Creditability,1,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.5726190476190476,0.5744812062532761,,0.008518799993908033
+362203,German-Credit-Data-Creditability,2,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.6583333333333334,0.6590807141361883,,0.009573499992256984
+362203,German-Credit-Data-Creditability,3,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.5857142857142856,0.5892696701322038,,0.009812599993892945
+362203,German-Credit-Data-Creditability,4,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.6285714285714286,0.6361746361746362,,0.00982819999626372
+362203,German-Credit-Data-Creditability,0,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.6095238095238095,0.6162280701754386,,0.576006100003724
+362203,German-Credit-Data-Creditability,1,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.7321428571428572,0.7481840193704601,,0.32362370000919327
+362203,German-Credit-Data-Creditability,2,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.6595238095238095,0.6753246753246753,,0.31215910000901204
+362203,German-Credit-Data-Creditability,3,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.611904761904762,0.6165055990182544,,0.37432309999712743
+362203,German-Credit-Data-Creditability,4,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.6488095238095238,0.6617773943054357,,0.3171886999916751
+362203,German-Credit-Data-Creditability,0,26,MinMaxScaler,None,SVM,800,200,ok,,0.5904761904761905,0.592074592074592,,0.09876850000000559
+362203,German-Credit-Data-Creditability,1,26,MinMaxScaler,None,SVM,800,200,ok,,0.7083333333333334,0.7223567393058918,,0.05793939999421127
+362203,German-Credit-Data-Creditability,2,26,MinMaxScaler,None,SVM,800,200,ok,,0.644047619047619,0.6567545795243599,,0.05833999998867512
+362203,German-Credit-Data-Creditability,3,26,MinMaxScaler,None,SVM,800,200,ok,,0.6285714285714286,0.6383363471971066,,0.05676880000100937
+362203,German-Credit-Data-Creditability,4,26,MinMaxScaler,None,SVM,800,200,ok,,0.6011904761904762,0.6065573770491803,,0.057599599997047335
+362203,German-Credit-Data-Creditability,0,27,MinMaxScaler,None,kNN,800,200,ok,,0.5630952380952381,0.5592326312366775,,0.02867879999394063
+362203,German-Credit-Data-Creditability,1,27,MinMaxScaler,None,kNN,800,200,ok,,0.6059523809523809,0.6121261610697153,,0.008640300002298318
+362203,German-Credit-Data-Creditability,2,27,MinMaxScaler,None,kNN,800,200,ok,,0.5988095238095238,0.6040135575019296,,0.009255400000256486
+362203,German-Credit-Data-Creditability,3,27,MinMaxScaler,None,kNN,800,200,ok,,0.5642857142857143,0.562394127611519,,0.012407200003508478
+362203,German-Credit-Data-Creditability,4,27,MinMaxScaler,None,kNN,800,200,ok,,0.6071428571428572,0.6133333333333333,,0.009575200005201623
+362203,German-Credit-Data-Creditability,0,28,MinMaxScaler,None,MLP,800,200,ok,,0.6047619047619047,0.6101871101871101,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8387156999961007
+362203,German-Credit-Data-Creditability,1,28,MinMaxScaler,None,MLP,800,200,ok,,0.719047619047619,0.7169477532727916,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0072139999974752
+362203,German-Credit-Data-Creditability,2,28,MinMaxScaler,None,MLP,800,200,ok,,0.6214285714285714,0.6176572818908586,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0409420999931172
+362203,German-Credit-Data-Creditability,3,28,MinMaxScaler,None,MLP,800,200,ok,,0.6654761904761906,0.6746515262671047,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9860475000023143
+362203,German-Credit-Data-Creditability,4,28,MinMaxScaler,None,MLP,800,200,ok,,0.6202380952380953,0.6273413749141905,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0701203000062378
+362203,German-Credit-Data-Creditability,0,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.638095238095238,0.6448503297818367,,0.014101799999480136
+362203,German-Credit-Data-Creditability,1,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.5916666666666667,0.5856863134595193,,0.014611399994464591
+362203,German-Credit-Data-Creditability,2,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.5642857142857143,0.5657323332017371,,0.01450279999698978
+362203,German-Credit-Data-Creditability,3,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.6261904761904762,0.6321664129883308,,0.014055899999220856
+362203,German-Credit-Data-Creditability,4,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.638095238095238,0.6323529411764706,,0.014959200008888729
+362203,German-Credit-Data-Creditability,0,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.6023809523809524,0.6080551425868361,,0.9405148999940138
+362203,German-Credit-Data-Creditability,1,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.6785714285714286,0.6933333333333334,,0.36148139998840634
+362203,German-Credit-Data-Creditability,2,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.5952380952380952,0.6000000000000001,,0.4101213999965694
+362203,German-Credit-Data-Creditability,3,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.5773809523809523,0.5742296918767507,,0.3954701000038767
+362203,German-Credit-Data-Creditability,4,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.611904761904762,0.6188594014680971,,0.37444820000382606
+362203,German-Credit-Data-Creditability,0,31,RobustScaler,PCA,SVM,800,200,ok,,0.6178571428571429,0.6254269031618376,,0.059633700002450496
+362203,German-Credit-Data-Creditability,1,31,RobustScaler,PCA,SVM,800,200,ok,,0.6142857142857143,0.6212121212121212,,0.04134479998901952
+362203,German-Credit-Data-Creditability,2,31,RobustScaler,PCA,SVM,800,200,ok,,0.65,0.662116502230031,,0.040697599994018674
+362203,German-Credit-Data-Creditability,3,31,RobustScaler,PCA,SVM,800,200,ok,,0.5654761904761905,0.5487179487179488,,0.04275249999773223
+362203,German-Credit-Data-Creditability,4,31,RobustScaler,PCA,SVM,800,200,ok,,0.5761904761904761,0.5704862709004449,,0.07665849999466445
+362203,German-Credit-Data-Creditability,0,32,RobustScaler,PCA,kNN,800,200,ok,,0.5952380952380952,0.6000000000000001,,0.015011800001957454
+362203,German-Credit-Data-Creditability,1,32,RobustScaler,PCA,kNN,800,200,ok,,0.638095238095238,0.6448503297818367,,0.01161290000891313
+362203,German-Credit-Data-Creditability,2,32,RobustScaler,PCA,kNN,800,200,ok,,0.5857142857142856,0.5892696701322038,,0.015889700007392094
+362203,German-Credit-Data-Creditability,3,32,RobustScaler,PCA,kNN,800,200,ok,,0.575,0.5736840203764587,,0.014066799994907342
+362203,German-Credit-Data-Creditability,4,32,RobustScaler,PCA,kNN,800,200,ok,,0.6023809523809524,0.6080551425868361,,0.015231000012136064
+362203,German-Credit-Data-Creditability,0,33,RobustScaler,PCA,MLP,800,200,ok,,0.6607142857142857,0.6707021791767553,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.421699600003194
+362203,German-Credit-Data-Creditability,1,33,RobustScaler,PCA,MLP,800,200,ok,,0.6833333333333333,0.6815662224318906,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.827231599992956
+362203,German-Credit-Data-Creditability,2,33,RobustScaler,PCA,MLP,800,200,ok,,0.6095238095238096,0.6114618746964546,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7811278000008315
+362203,German-Credit-Data-Creditability,3,33,RobustScaler,PCA,MLP,800,200,ok,,0.6023809523809524,0.6080551425868361,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8726638999942224
+362203,German-Credit-Data-Creditability,4,33,RobustScaler,PCA,MLP,800,200,ok,,0.5857142857142856,0.5892696701322038,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9916429000004428
+362203,German-Credit-Data-Creditability,0,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.5785714285714286,0.5749080882352942,,0.019103200000245124
+362203,German-Credit-Data-Creditability,1,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.6452380952380953,0.647887323943662,,0.015698100003646687
+362203,German-Credit-Data-Creditability,2,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.5833333333333334,0.5833333333333334,,0.016662299996824004
+362203,German-Credit-Data-Creditability,3,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.6345238095238095,0.6405939657618462,,0.015216400002827868
+362203,German-Credit-Data-Creditability,4,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.6035714285714286,0.6072196764238287,,0.017226099997060373
+362203,German-Credit-Data-Creditability,0,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6285714285714286,0.631947000368053,,0.4297670000087237
+362203,German-Credit-Data-Creditability,1,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6773809523809524,0.6874102899429044,,0.2699617999896873
+362203,German-Credit-Data-Creditability,2,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6785714285714286,0.6865203761755485,,0.2820899000071222
+362203,German-Credit-Data-Creditability,3,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6023809523809524,0.6080551425868361,,0.2778761000081431
+362203,German-Credit-Data-Creditability,4,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6476190476190476,0.6527777777777778,,0.28068539999367204
+362203,German-Credit-Data-Creditability,0,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.6357142857142857,0.6470920383963862,,0.04864660000021104
+362203,German-Credit-Data-Creditability,1,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.6416666666666667,0.6529549862202715,,0.04104979999829084
+362203,German-Credit-Data-Creditability,2,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.6678571428571428,0.6796443398385146,,0.04091159999370575
+362203,German-Credit-Data-Creditability,3,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.6023809523809524,0.6018474279343845,,0.04280129999096971
+362203,German-Credit-Data-Creditability,4,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.625,0.634167385677308,,0.03526769999007229
+362203,German-Credit-Data-Creditability,0,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.6119047619047618,0.6183708382681932,,0.010531099993386306
+362203,German-Credit-Data-Creditability,1,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.6226190476190476,0.6279832277184023,,0.014036399996257387
+362203,German-Credit-Data-Creditability,2,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.6595238095238095,0.6651785714285714,,0.012894899991806597
+362203,German-Credit-Data-Creditability,3,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.5523809523809524,0.5482778091473743,,0.012263500000699423
+362203,German-Credit-Data-Creditability,4,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.6142857142857143,0.6194824961948249,,0.011707300000125542
+362203,German-Credit-Data-Creditability,0,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.6642857142857143,0.6751559251559252,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2746320000005653
+362203,German-Credit-Data-Creditability,1,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.6321428571428571,0.6361505966513521,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8430500000104075
+362203,German-Credit-Data-Creditability,2,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.6845238095238095,0.6965294592413236,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.930822000009357
+362203,German-Credit-Data-Creditability,3,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.6142857142857143,0.6215704824976348,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8532505000039237
+362203,German-Credit-Data-Creditability,4,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.644047619047619,0.6484844747309673,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7793662000040058
+362203,German-Credit-Data-Creditability,0,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.6904761904761905,0.6990595611285266,,0.010068300005514175
+362203,German-Credit-Data-Creditability,1,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.5726190476190476,0.5744812062532761,,0.009066700004041195
+362203,German-Credit-Data-Creditability,2,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.6583333333333334,0.6590807141361883,,0.009576500000548549
+362203,German-Credit-Data-Creditability,3,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.5857142857142856,0.5892696701322038,,0.009553399999276735
+362203,German-Credit-Data-Creditability,4,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.6285714285714286,0.6361746361746362,,0.010436799988383427
+362203,German-Credit-Data-Creditability,0,40,RobustScaler,None,RandomForest,800,200,ok,,0.6095238095238095,0.6162280701754386,,0.3372333999868715
+362203,German-Credit-Data-Creditability,1,40,RobustScaler,None,RandomForest,800,200,ok,,0.7238095238095238,0.7401247401247402,,0.3309236999921268
+362203,German-Credit-Data-Creditability,2,40,RobustScaler,None,RandomForest,800,200,ok,,0.6595238095238095,0.6753246753246753,,0.3006647000001976
+362203,German-Credit-Data-Creditability,3,40,RobustScaler,None,RandomForest,800,200,ok,,0.6202380952380953,0.6275322108623769,,0.33356620000267867
+362203,German-Credit-Data-Creditability,4,40,RobustScaler,None,RandomForest,800,200,ok,,0.6488095238095238,0.6617773943054357,,0.3766146999987541
+362203,German-Credit-Data-Creditability,0,41,RobustScaler,None,SVM,800,200,ok,,0.6404761904761905,0.6491683991683992,,0.058455300008063205
+362203,German-Credit-Data-Creditability,1,41,RobustScaler,None,SVM,800,200,ok,,0.7238095238095238,0.7401247401247402,,0.06057639999198727
+362203,German-Credit-Data-Creditability,2,41,RobustScaler,None,SVM,800,200,ok,,0.6476190476190476,0.6578497170680353,,0.054195000004256144
+362203,German-Credit-Data-Creditability,3,41,RobustScaler,None,SVM,800,200,ok,,0.6285714285714286,0.6383363471971066,,0.06818239999120124
+362203,German-Credit-Data-Creditability,4,41,RobustScaler,None,SVM,800,200,ok,,0.6535714285714286,0.6665645946037904,,0.06293569999979809
+362203,German-Credit-Data-Creditability,0,42,RobustScaler,None,kNN,800,200,ok,,0.5630952380952381,0.5592326312366775,,0.01086169999325648
+362203,German-Credit-Data-Creditability,1,42,RobustScaler,None,kNN,800,200,ok,,0.6321428571428571,0.6404171161452714,,0.00991329998942092
+362203,German-Credit-Data-Creditability,2,42,RobustScaler,None,kNN,800,200,ok,,0.5809523809523809,0.5828118481435127,,0.008299399996758439
+362203,German-Credit-Data-Creditability,3,42,RobustScaler,None,kNN,800,200,ok,,0.5952380952380952,0.5985663082437276,,0.013196200001402758
+362203,German-Credit-Data-Creditability,4,42,RobustScaler,None,kNN,800,200,ok,,0.6369047619047619,0.6479723899913719,,0.011116199995740317
+362203,German-Credit-Data-Creditability,0,43,RobustScaler,None,MLP,800,200,ok,,0.6178571428571429,0.6236164715639054,,1.0649395000073127
+362203,German-Credit-Data-Creditability,1,43,RobustScaler,None,MLP,800,200,ok,,0.7011904761904761,0.7040258524357464,,1.4733863000001293
+362203,German-Credit-Data-Creditability,2,43,RobustScaler,None,MLP,800,200,ok,,0.6345238095238095,0.6281358162418833,,0.8874784999934491
+362203,German-Credit-Data-Creditability,3,43,RobustScaler,None,MLP,800,200,ok,,0.6773809523809524,0.6874102899429044,,1.0951897999912035
+362203,German-Credit-Data-Creditability,4,43,RobustScaler,None,MLP,800,200,ok,,0.6261904761904762,0.6321664129883308,,1.481256500002928
+362203,German-Credit-Data-Creditability,0,44,RobustScaler,None,DecisionTree,800,200,ok,,0.638095238095238,0.6448503297818367,,0.020133500001975335
+362203,German-Credit-Data-Creditability,1,44,RobustScaler,None,DecisionTree,800,200,ok,,0.5916666666666667,0.5856863134595193,,0.016985500013106503
+362203,German-Credit-Data-Creditability,2,44,RobustScaler,None,DecisionTree,800,200,ok,,0.5642857142857143,0.5657323332017371,,0.01655640000535641
+362203,German-Credit-Data-Creditability,3,44,RobustScaler,None,DecisionTree,800,200,ok,,0.6261904761904762,0.6321664129883308,,0.014614100000471808
+362203,German-Credit-Data-Creditability,4,44,RobustScaler,None,DecisionTree,800,200,ok,,0.6416666666666666,0.6365838885523925,,0.015865599998505786
+362203,German-Credit-Data-Creditability,0,45,None,PCA,RandomForest,800,200,ok,,0.6107142857142857,0.6170381877958019,,0.41765879999729805
+362203,German-Credit-Data-Creditability,1,45,None,PCA,RandomForest,800,200,ok,,0.6976190476190476,0.7082699137493658,,0.4999508000037167
+362203,German-Credit-Data-Creditability,2,45,None,PCA,RandomForest,800,200,ok,,0.6273809523809524,0.6357495281300706,,0.456722400005674
+362203,German-Credit-Data-Creditability,3,45,None,PCA,RandomForest,800,200,ok,,0.5869047619047619,0.5881354095162398,,0.3846188000024995
+362203,German-Credit-Data-Creditability,4,45,None,PCA,RandomForest,800,200,ok,,0.6964285714285714,0.7169974115616911,,0.4646051999880001
+362203,German-Credit-Data-Creditability,0,46,None,PCA,SVM,800,200,ok,,0.5130952380952382,0.44420893975790116,,0.05177979999280069
+362203,German-Credit-Data-Creditability,1,46,None,PCA,SVM,800,200,ok,,0.5273809523809524,0.48333990104645563,,0.06625720000010915
+362203,German-Credit-Data-Creditability,2,46,None,PCA,SVM,800,200,ok,,0.5345238095238095,0.4890412800860562,,0.05584479999379255
+362203,German-Credit-Data-Creditability,3,46,None,PCA,SVM,800,200,ok,,0.5166666666666667,0.44645924794808167,,0.052630099991802126
+362203,German-Credit-Data-Creditability,4,46,None,PCA,SVM,800,200,ok,,0.5428571428571429,0.5038979447200567,,0.05492870000307448
+362203,German-Credit-Data-Creditability,0,47,None,PCA,kNN,800,200,ok,,0.5571428571428572,0.5549993046864136,,0.009541999999783002
+362203,German-Credit-Data-Creditability,1,47,None,PCA,kNN,800,200,ok,,0.49642857142857144,0.4900493393820987,,0.013007899993681349
+362203,German-Credit-Data-Creditability,2,47,None,PCA,kNN,800,200,ok,,0.5107142857142857,0.5032492940015652,,0.010476900002686307
+362203,German-Credit-Data-Creditability,3,47,None,PCA,kNN,800,200,ok,,0.5178571428571428,0.5157384987893463,,0.01010590000078082
+362203,German-Credit-Data-Creditability,4,47,None,PCA,kNN,800,200,ok,,0.5547619047619048,0.5483682983682984,,0.010727399989264086
+362203,German-Credit-Data-Creditability,0,48,None,PCA,MLP,800,200,ok,,0.5,0.46875,,0.11723930000152905
+362203,German-Credit-Data-Creditability,1,48,None,PCA,MLP,800,200,ok,,0.6892857142857143,0.6612083568605307,,0.27364899999520276
+362203,German-Credit-Data-Creditability,2,48,None,PCA,MLP,800,200,ok,,0.5178571428571429,0.48307692307692307,,0.21577179999439977
+362203,German-Credit-Data-Creditability,3,48,None,PCA,MLP,800,200,ok,,0.580952380952381,0.5735607675906184,,0.1339975000009872
+362203,German-Credit-Data-Creditability,4,48,None,PCA,MLP,800,200,ok,,0.5857142857142857,0.5888157894736843,,0.10024349999730475
+362203,German-Credit-Data-Creditability,0,49,None,PCA,DecisionTree,800,200,ok,,0.6011904761904762,0.606133979015335,,0.015612499992130324
+362203,German-Credit-Data-Creditability,1,49,None,PCA,DecisionTree,800,200,ok,,0.5678571428571428,0.56752273467816,,0.03174389999185223
+362203,German-Credit-Data-Creditability,2,49,None,PCA,DecisionTree,800,200,ok,,0.6023809523809524,0.6067985794013191,,0.016207699998631142
+362203,German-Credit-Data-Creditability,3,49,None,PCA,DecisionTree,800,200,ok,,0.5952380952380952,0.5952380952380952,,0.0132372999942163
+362203,German-Credit-Data-Creditability,4,49,None,PCA,DecisionTree,800,200,ok,,0.6523809523809524,0.6493688639551192,,0.017126599996117875
+362203,German-Credit-Data-Creditability,0,50,None,SelectKBest,RandomForest,800,200,ok,,0.6285714285714286,0.631947000368053,,0.26791229999798816
+362203,German-Credit-Data-Creditability,1,50,None,SelectKBest,RandomForest,800,200,ok,,0.6773809523809524,0.6874102899429044,,0.38202479999745265
+362203,German-Credit-Data-Creditability,2,50,None,SelectKBest,RandomForest,800,200,ok,,0.6785714285714286,0.6865203761755485,,0.29034069999761414
+362203,German-Credit-Data-Creditability,3,50,None,SelectKBest,RandomForest,800,200,ok,,0.6023809523809524,0.6080551425868361,,0.2792951000010362
+362203,German-Credit-Data-Creditability,4,50,None,SelectKBest,RandomForest,800,200,ok,,0.6476190476190476,0.6527777777777778,,0.2886186999967322
+362203,German-Credit-Data-Creditability,0,51,None,SelectKBest,SVM,800,200,ok,,0.5178571428571429,0.4580941446613088,,0.048673100012820214
+362203,German-Credit-Data-Creditability,1,51,None,SelectKBest,SVM,800,200,ok,,0.5273809523809524,0.48333990104645563,,0.07253389999095816
+362203,German-Credit-Data-Creditability,2,51,None,SelectKBest,SVM,800,200,ok,,0.5380952380952381,0.49192524042823443,,0.050628500001039356
+362203,German-Credit-Data-Creditability,3,51,None,SelectKBest,SVM,800,200,ok,,0.5166666666666667,0.44645924794808167,,0.050785900006303564
+362203,German-Credit-Data-Creditability,4,51,None,SelectKBest,SVM,800,200,ok,,0.5345238095238095,0.4890412800860562,,0.058915200002957135
+362203,German-Credit-Data-Creditability,0,52,None,SelectKBest,kNN,800,200,ok,,0.5726190476190476,0.5726944765507338,,0.010714400006690994
+362203,German-Credit-Data-Creditability,1,52,None,SelectKBest,kNN,800,200,ok,,0.5273809523809524,0.5270973233708502,,0.011505000002216548
+362203,German-Credit-Data-Creditability,2,52,None,SelectKBest,kNN,800,200,ok,,0.5476190476190477,0.5412186379928315,,0.01174170000012964
+362203,German-Credit-Data-Creditability,3,52,None,SelectKBest,kNN,800,200,ok,,0.5488095238095239,0.5488869275277042,,0.014188600005581975
+362203,German-Credit-Data-Creditability,4,52,None,SelectKBest,kNN,800,200,ok,,0.5511904761904762,0.5447812420968966,,0.011161500005982816
+362203,German-Credit-Data-Creditability,0,53,None,SelectKBest,MLP,800,200,ok,,0.5,0.23076923076923078,,0.17023089999565855
+362203,German-Credit-Data-Creditability,1,53,None,SelectKBest,MLP,800,200,ok,,0.5,0.23076923076923078,,0.1621276000078069
+362203,German-Credit-Data-Creditability,2,53,None,SelectKBest,MLP,800,200,ok,,0.5,0.23076923076923078,,0.27207749999070074
+362203,German-Credit-Data-Creditability,3,53,None,SelectKBest,MLP,800,200,ok,,0.5202380952380953,0.47771736803801534,,0.1471466000075452
+362203,German-Credit-Data-Creditability,4,53,None,SelectKBest,MLP,800,200,ok,,0.5,0.23076923076923078,,0.18606539999018423
+362203,German-Credit-Data-Creditability,0,54,None,SelectKBest,DecisionTree,800,200,ok,,0.6904761904761905,0.6990595611285266,,0.008810900006210431
+362203,German-Credit-Data-Creditability,1,54,None,SelectKBest,DecisionTree,800,200,ok,,0.5726190476190476,0.5744812062532761,,0.009695600005215965
+362203,German-Credit-Data-Creditability,2,54,None,SelectKBest,DecisionTree,800,200,ok,,0.6583333333333334,0.6590807141361883,,0.015688099985709414
+362203,German-Credit-Data-Creditability,3,54,None,SelectKBest,DecisionTree,800,200,ok,,0.5857142857142856,0.5892696701322038,,0.009227100003045052
+362203,German-Credit-Data-Creditability,4,54,None,SelectKBest,DecisionTree,800,200,ok,,0.6285714285714286,0.6361746361746362,,0.009755200007930398
+362203,German-Credit-Data-Creditability,0,55,None,None,RandomForest,800,200,ok,,0.6095238095238095,0.6162280701754386,,0.3019224000017857
+362203,German-Credit-Data-Creditability,1,55,None,None,RandomForest,800,200,ok,,0.7238095238095238,0.7401247401247402,,1.2356746000004932
+362203,German-Credit-Data-Creditability,2,55,None,None,RandomForest,800,200,ok,,0.6595238095238095,0.6753246753246753,,0.3349959999904968
+362203,German-Credit-Data-Creditability,3,55,None,None,RandomForest,800,200,ok,,0.6202380952380953,0.6275322108623769,,0.35564090000116266
+362203,German-Credit-Data-Creditability,4,55,None,None,RandomForest,800,200,ok,,0.6488095238095238,0.6617773943054357,,0.3148308000090765
+362203,German-Credit-Data-Creditability,0,56,None,None,SVM,800,200,ok,,0.5178571428571429,0.4580941446613088,,0.06613870000001043
+362203,German-Credit-Data-Creditability,1,56,None,None,SVM,800,200,ok,,0.5273809523809524,0.48333990104645563,,0.07369390000530984
+362203,German-Credit-Data-Creditability,2,56,None,None,SVM,800,200,ok,,0.5380952380952381,0.49192524042823443,,0.11592260000179522
+362203,German-Credit-Data-Creditability,3,56,None,None,SVM,800,200,ok,,0.5166666666666667,0.44645924794808167,,0.06944530000328086
+362203,German-Credit-Data-Creditability,4,56,None,None,SVM,800,200,ok,,0.5345238095238095,0.4890412800860562,,0.06518299999879673
+362203,German-Credit-Data-Creditability,0,57,None,None,kNN,800,200,ok,,0.5654761904761905,0.5651423641069888,,0.01032159999886062
+362203,German-Credit-Data-Creditability,1,57,None,None,kNN,800,200,ok,,0.49642857142857144,0.4900493393820987,,0.01229800000146497
+362203,German-Credit-Data-Creditability,2,57,None,None,kNN,800,200,ok,,0.5107142857142857,0.5032492940015652,,0.008403500003623776
+362203,German-Credit-Data-Creditability,3,57,None,None,kNN,800,200,ok,,0.5178571428571428,0.5157384987893463,,0.009451200006878935
+362203,German-Credit-Data-Creditability,4,57,None,None,kNN,800,200,ok,,0.5511904761904762,0.5447812420968966,,0.009529000002657995
+362203,German-Credit-Data-Creditability,0,58,None,None,MLP,800,200,ok,,0.5297619047619048,0.4546591619762351,,0.27979749999940395
+362203,German-Credit-Data-Creditability,1,58,None,None,MLP,800,200,ok,,0.6547619047619048,0.568922305764411,,0.24011070000415202
+362203,German-Credit-Data-Creditability,2,58,None,None,MLP,800,200,ok,,0.5904761904761904,0.548440065681445,,0.1898117000091588
+362203,German-Credit-Data-Creditability,3,58,None,None,MLP,800,200,ok,,0.5,0.4117647058823529,,0.14058540000405628
+362203,German-Credit-Data-Creditability,4,58,None,None,MLP,800,200,ok,,0.6214285714285714,0.5901639344262295,,0.1707894999999553
+362203,German-Credit-Data-Creditability,0,59,None,None,DecisionTree,800,200,ok,,0.638095238095238,0.6448503297818367,,0.021407399995950982
+362203,German-Credit-Data-Creditability,1,59,None,None,DecisionTree,800,200,ok,,0.5916666666666667,0.5856863134595193,,0.023310999997192994
+362203,German-Credit-Data-Creditability,2,59,None,None,DecisionTree,800,200,ok,,0.5642857142857143,0.5657323332017371,,0.014602499999455176
+362203,German-Credit-Data-Creditability,3,59,None,None,DecisionTree,800,200,ok,,0.6261904761904762,0.6321664129883308,,0.01583379998919554
+362203,German-Credit-Data-Creditability,4,59,None,None,DecisionTree,800,200,ok,,0.6416666666666666,0.6365838885523925,,0.01560879999306053

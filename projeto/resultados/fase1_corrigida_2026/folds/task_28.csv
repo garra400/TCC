@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+28,optdigits,0,0,StandardScaler,PCA,RandomForest,4496,1124,ok,,0.9350948767237167,0.9356046999451735,,2.1481329999951413
+28,optdigits,1,0,StandardScaler,PCA,RandomForest,4496,1124,ok,,0.935098846434431,0.9351888987337151,,1.6973666999983834
+28,optdigits,2,0,StandardScaler,PCA,RandomForest,4496,1124,ok,,0.9296457442038486,0.9298742131459387,,1.798027099997853
+28,optdigits,3,0,StandardScaler,PCA,RandomForest,4496,1124,ok,,0.9378935537266676,0.9376330305193832,,1.6209100999985822
+28,optdigits,4,0,StandardScaler,PCA,RandomForest,4496,1124,ok,,0.9369301128472418,0.9371377549744103,,1.7087266000016825
+28,optdigits,0,1,StandardScaler,PCA,SVM,4496,1124,ok,,0.9502850333045652,0.9504172497859059,,0.5962279999948805
+28,optdigits,1,1,StandardScaler,PCA,SVM,4496,1124,ok,,0.9511722531634035,0.9512679812040812,,0.45293369999853894
+28,optdigits,2,1,StandardScaler,PCA,SVM,4496,1124,ok,,0.9501364441659039,0.9506757188201755,,0.43742740000016056
+28,optdigits,3,1,StandardScaler,PCA,SVM,4496,1124,ok,,0.9582741370339839,0.9581612193253093,,0.42687549999391194
+28,optdigits,4,1,StandardScaler,PCA,SVM,4496,1124,ok,,0.9537848805606648,0.9538223374296029,,0.436244299999089
+28,optdigits,0,2,StandardScaler,PCA,kNN,4496,1124,ok,,0.9503248399845523,0.9506216234549599,,0.08135480000055395
+28,optdigits,1,2,StandardScaler,PCA,kNN,4496,1124,ok,,0.9432306587144733,0.9428948266036304,,0.07287420000648126
+28,optdigits,2,2,StandardScaler,PCA,kNN,4496,1124,ok,,0.9448497169736108,0.9446483945857939,,0.06679250000161119
+28,optdigits,3,2,StandardScaler,PCA,kNN,4496,1124,ok,,0.9475285045269706,0.9473825048507362,,0.0665207999991253
+28,optdigits,4,2,StandardScaler,PCA,kNN,4496,1124,ok,,0.9520004216165949,0.9520158277415554,,0.06834789999993518
+28,optdigits,0,3,StandardScaler,PCA,MLP,4496,1124,ok,,0.9581958650254654,0.9581762497456701,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.024039700001595
+28,optdigits,1,3,StandardScaler,PCA,MLP,4496,1124,ok,,0.9555892691547092,0.9554764854406109,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.566841899999417
+28,optdigits,2,3,StandardScaler,PCA,MLP,4496,1124,ok,,0.9572255313900634,0.9573558538074212,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.337509700009832
+28,optdigits,3,3,StandardScaler,PCA,MLP,4496,1124,ok,,0.9600455848683405,0.9598434042292248,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.556353500011028
+28,optdigits,4,3,StandardScaler,PCA,MLP,4496,1124,ok,,0.9574271445364326,0.9575085894834979,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.379753800007165
+28,optdigits,0,4,StandardScaler,PCA,DecisionTree,4496,1124,ok,,0.8192716048057423,0.8205494411914271,,0.07160939999448601
+28,optdigits,1,4,StandardScaler,PCA,DecisionTree,4496,1124,ok,,0.8153247190566706,0.819894753269572,,0.07055199999012984
+28,optdigits,2,4,StandardScaler,PCA,DecisionTree,4496,1124,ok,,0.8185642292768515,0.819214769676887,,0.06910350000543986
+28,optdigits,3,4,StandardScaler,PCA,DecisionTree,4496,1124,ok,,0.8212226029741118,0.8210941877787734,,0.07537820001016371
+28,optdigits,4,4,StandardScaler,PCA,DecisionTree,4496,1124,ok,,0.8553878669087454,0.8552200894040375,,0.09737719999975525
+28,optdigits,0,5,StandardScaler,SelectKBest,RandomForest,4496,1124,ok,,0.905230713934188,0.9049215480875782,Features [ 0 39] are constant. | invalid value encountered in divide,0.8136329999979353
+28,optdigits,1,5,StandardScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9201879706741142,0.9202590252712415,Features [ 0 39] are constant. | invalid value encountered in divide,0.6918996000022162
+28,optdigits,2,5,StandardScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9058616067494734,0.9060296509008554,Features [ 0 39] are constant. | invalid value encountered in divide,0.7086894999956712
+28,optdigits,3,5,StandardScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9103792180788901,0.9097336231840515,Features [ 0 39] are constant. | invalid value encountered in divide,0.7130625999998301
+28,optdigits,4,5,StandardScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9174576922147597,0.917377007531706,Features [ 0 39] are constant. | invalid value encountered in divide,0.8443011000053957
+28,optdigits,0,6,StandardScaler,SelectKBest,SVM,4496,1124,ok,,0.9131881297725701,0.9132564000373475,Features [ 0 39] are constant. | invalid value encountered in divide,0.49023049999959767
+28,optdigits,1,6,StandardScaler,SelectKBest,SVM,4496,1124,ok,,0.917533103417477,0.9177687256212279,Features [ 0 39] are constant. | invalid value encountered in divide,0.5137728999980027
+28,optdigits,2,6,StandardScaler,SelectKBest,SVM,4496,1124,ok,,0.91287830764426,0.912880273861643,Features [ 0 39] are constant. | invalid value encountered in divide,0.5363916999922367
+28,optdigits,3,6,StandardScaler,SelectKBest,SVM,4496,1124,ok,,0.9138576139531466,0.913514931953542,Features [ 0 39] are constant. | invalid value encountered in divide,0.457483800011687
+28,optdigits,4,6,StandardScaler,SelectKBest,SVM,4496,1124,ok,,0.9192281509703444,0.9188419117681648,Features [ 0 39] are constant. | invalid value encountered in divide,0.5044041000073776
+28,optdigits,0,7,StandardScaler,SelectKBest,kNN,4496,1124,ok,,0.9032774697372163,0.9031550011629029,Features [ 0 39] are constant. | invalid value encountered in divide,0.0664351000013994
+28,optdigits,1,7,StandardScaler,SelectKBest,kNN,4496,1124,ok,,0.9014841052044126,0.9016743097461279,Features [ 0 39] are constant. | invalid value encountered in divide,0.06488639999588486
+28,optdigits,2,7,StandardScaler,SelectKBest,kNN,4496,1124,ok,,0.8942617883203583,0.8945478267399759,Features [ 0 39] are constant. | invalid value encountered in divide,0.06183500000042841
+28,optdigits,3,7,StandardScaler,SelectKBest,kNN,4496,1124,ok,,0.9093845912460612,0.909078952865765,Features [ 0 39] are constant. | invalid value encountered in divide,0.06292719999328256
+28,optdigits,4,7,StandardScaler,SelectKBest,kNN,4496,1124,ok,,0.9058973921087132,0.9057171009602522,Features [ 0 39] are constant. | invalid value encountered in divide,0.07116459999815561
+28,optdigits,0,8,StandardScaler,SelectKBest,MLP,4496,1124,ok,,0.9016330589955313,0.9016861972998843,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.008709700006875
+28,optdigits,1,8,StandardScaler,SelectKBest,MLP,4496,1124,ok,,0.9280748061255748,0.9281502745558852,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.578200299991295
+28,optdigits,2,8,StandardScaler,SelectKBest,MLP,4496,1124,ok,,0.918221052661551,0.918238369985173,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.778939199997694
+28,optdigits,3,8,StandardScaler,SelectKBest,MLP,4496,1124,ok,,0.9128618851249772,0.9124573199440258,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.823815099996864
+28,optdigits,4,8,StandardScaler,SelectKBest,MLP,4496,1124,ok,,0.9174730824830306,0.9172569391283917,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.71851790000801
+28,optdigits,0,9,StandardScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8384987053167375,0.83780224438026,Features [ 0 39] are constant. | invalid value encountered in divide,0.02042010000150185
+28,optdigits,1,9,StandardScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8596578222043988,0.8597921474204355,Features [ 0 39] are constant. | invalid value encountered in divide,0.02025109999522101
+28,optdigits,2,9,StandardScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8454336256210965,0.8455817570900168,Features [ 0 39] are constant. | invalid value encountered in divide,0.025349500006996095
+28,optdigits,3,9,StandardScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8579706344011188,0.8580031371785866,Features [ 0 39] are constant. | invalid value encountered in divide,0.022243600004003383
+28,optdigits,4,9,StandardScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8492365075131474,0.8489610357466788,Features [ 0 39] are constant. | invalid value encountered in divide,0.02072339999722317
+28,optdigits,0,10,StandardScaler,None,RandomForest,4496,1124,ok,,0.9911105159154763,0.9911455368893047,,1.0981671000045026
+28,optdigits,1,10,StandardScaler,None,RandomForest,4496,1124,ok,,0.9804576130292247,0.9805356322609496,,1.041266899992479
+28,optdigits,2,10,StandardScaler,None,RandomForest,4496,1124,ok,,0.9759615718919399,0.9759766874148073,,1.0685289000102784
+28,optdigits,3,10,StandardScaler,None,RandomForest,4496,1124,ok,,0.9848990560083642,0.9848474496969114,,1.0483109000051627
+28,optdigits,4,10,StandardScaler,None,RandomForest,4496,1124,ok,,0.9910869503644305,0.9910934164620707,,1.3397172999975737
+28,optdigits,0,11,StandardScaler,None,SVM,4496,1124,ok,,0.9839418260436974,0.984033626404907,,0.6788957999960985
+28,optdigits,1,11,StandardScaler,None,SVM,4496,1124,ok,,0.9849066579387958,0.9849425646628177,,0.6122369000077015
+28,optdigits,2,11,StandardScaler,None,SVM,4496,1124,ok,,0.9848513407112616,0.9849059707470957,,0.6244811000069603
+28,optdigits,3,11,StandardScaler,None,SVM,4496,1124,ok,,0.98934753519485,0.989378631503187,,0.8140313999901991
+28,optdigits,4,11,StandardScaler,None,SVM,4496,1124,ok,,0.986659930793226,0.9867194140823562,,0.677284299992607
+28,optdigits,0,12,StandardScaler,None,kNN,4496,1124,ok,,0.9759921989459412,0.9760152872300395,,0.05452860001241788
+28,optdigits,1,12,StandardScaler,None,kNN,4496,1124,ok,,0.972555533026539,0.9725228456887308,,0.0547359000047436
+28,optdigits,2,12,StandardScaler,None,kNN,4496,1124,ok,,0.975992900212742,0.9759716618971626,,0.05221209999581333
+28,optdigits,3,12,StandardScaler,None,kNN,4496,1124,ok,,0.9804256098152788,0.980463679539682,,0.0565956000064034
+28,optdigits,4,12,StandardScaler,None,kNN,4496,1124,ok,,0.9732898037354965,0.9732872206458538,,0.05240899999625981
+28,optdigits,0,13,StandardScaler,None,MLP,4496,1124,ok,,0.983110789673739,0.9831710421640507,,2.6206781000073534
+28,optdigits,1,13,StandardScaler,None,MLP,4496,1124,ok,,0.984005757037895,0.9840266984281435,,2.4179812999936985
+28,optdigits,2,13,StandardScaler,None,MLP,4496,1124,ok,,0.9821723459270035,0.9822245541463305,,2.2887031999998726
+28,optdigits,3,13,StandardScaler,None,MLP,4496,1124,ok,,0.9777320600983549,0.9776648546606456,,2.431131000004825
+28,optdigits,4,13,StandardScaler,None,MLP,4496,1124,ok,,0.987506211447859,0.987551906825264,,2.643504199993913
+28,optdigits,0,14,StandardScaler,None,DecisionTree,4496,1124,ok,,0.879836421525963,0.8802355450725212,,0.1412288000137778
+28,optdigits,1,14,StandardScaler,None,DecisionTree,4496,1124,ok,,0.8889409341639197,0.8892422443344756,,0.07921680000436027
+28,optdigits,2,14,StandardScaler,None,DecisionTree,4496,1124,ok,,0.8595775344843812,0.8600373930885314,,0.07243139999627601
+28,optdigits,3,14,StandardScaler,None,DecisionTree,4496,1124,ok,,0.8950357748749337,0.8954429718790587,,0.07738390000304207
+28,optdigits,4,14,StandardScaler,None,DecisionTree,4496,1124,ok,,0.9066092060974962,0.9069665345045674,,0.08245969998824876
+28,optdigits,0,15,MinMaxScaler,PCA,RandomForest,4496,1124,ok,,0.9662087185068948,0.9664330716581487,,2.120036500011338
+28,optdigits,1,15,MinMaxScaler,PCA,RandomForest,4496,1124,ok,,0.9653639899797328,0.9653484108047351,,1.6584766000014497
+28,optdigits,2,15,MinMaxScaler,PCA,RandomForest,4496,1124,ok,,0.9625665979706503,0.9627259223205777,,1.7839579999999842
+28,optdigits,3,15,MinMaxScaler,PCA,RandomForest,4496,1124,ok,,0.9652446627081103,0.9652455888262154,,1.4953173999965657
+28,optdigits,4,15,MinMaxScaler,PCA,RandomForest,4496,1124,ok,,0.9679704963607174,0.9680835525386968,,1.5646037999977125
+28,optdigits,0,16,MinMaxScaler,PCA,SVM,4496,1124,ok,,0.9795495185616133,0.9795459431989748,,0.3317603999894345
+28,optdigits,1,16,MinMaxScaler,PCA,SVM,4496,1124,ok,,0.9769018448716865,0.9769249691640617,,0.31084000000555534
+28,optdigits,2,16,MinMaxScaler,PCA,SVM,4496,1124,ok,,0.9759612909036524,0.9760897389322105,,0.3155752000020584
+28,optdigits,3,16,MinMaxScaler,PCA,SVM,4496,1124,ok,,0.9840132682701942,0.9839847228172165,,0.3202610000007553
+28,optdigits,4,16,MinMaxScaler,PCA,SVM,4496,1124,ok,,0.9840680308838609,0.9840878471788101,,0.30575100000714883
+28,optdigits,0,17,MinMaxScaler,PCA,kNN,4496,1124,ok,,0.9795963797846353,0.9795776372493187,,0.06945850000192877
+28,optdigits,1,17,MinMaxScaler,PCA,kNN,4496,1124,ok,,0.9733064236470153,0.9733026469512878,,0.05828670000482816
+28,optdigits,2,17,MinMaxScaler,PCA,kNN,4496,1124,ok,,0.9724055227461144,0.9725047057774914,,0.06099260000337381
+28,optdigits,3,17,MinMaxScaler,PCA,kNN,4496,1124,ok,,0.9777391369960627,0.9776763286262238,,0.06187240000872407
+28,optdigits,4,17,MinMaxScaler,PCA,kNN,4496,1124,ok,,0.9795724094860656,0.9795769829141581,,0.05908519998774864
+28,optdigits,0,18,MinMaxScaler,PCA,MLP,4496,1124,ok,,0.968926826736384,0.9689988113575037,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.103422400003183
+28,optdigits,1,18,MinMaxScaler,PCA,MLP,4496,1124,ok,,0.9750840979211961,0.9751299857549682,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.2599920999928145
+28,optdigits,2,18,MinMaxScaler,PCA,MLP,4496,1124,ok,,0.9679488536876752,0.967979675568772,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.876766100001987
+28,optdigits,3,18,MinMaxScaler,PCA,MLP,4496,1124,ok,,0.968002540270948,0.9678904592182004,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.923864700002014
+28,optdigits,4,18,MinMaxScaler,PCA,MLP,4496,1124,ok,,0.9777545201681763,0.9777855971794732,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.79662379999354
+28,optdigits,0,19,MinMaxScaler,PCA,DecisionTree,4496,1124,ok,,0.8968670434941876,0.8977469595466502,,0.07507479999912903
+28,optdigits,1,19,MinMaxScaler,PCA,DecisionTree,4496,1124,ok,,0.8827535833125028,0.8833090037016851,,0.06825640000170097
+28,optdigits,2,19,MinMaxScaler,PCA,DecisionTree,4496,1124,ok,,0.8854013921433577,0.8868806370861394,,0.06520850000379141
+28,optdigits,3,19,MinMaxScaler,PCA,DecisionTree,4496,1124,ok,,0.8771250597519558,0.8765974555049489,,0.0692064000031678
+28,optdigits,4,19,MinMaxScaler,PCA,DecisionTree,4496,1124,ok,,0.8773672367347567,0.8781555444047637,,0.12274540000362322
+28,optdigits,0,20,MinMaxScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9051914768600335,0.9049471637811987,Features [ 0 39] are constant. | invalid value encountered in divide,0.7481206999946153
+28,optdigits,1,20,MinMaxScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9201879706741142,0.9202618626948086,Features [ 0 39] are constant. | invalid value encountered in divide,0.7264741999970283
+28,optdigits,2,20,MinMaxScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9058775518981619,0.9061024774838982,Features [ 0 39] are constant. | invalid value encountered in divide,0.8433555999945384
+28,optdigits,3,20,MinMaxScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9094863609360327,0.9087932009943162,Features [ 0 39] are constant. | invalid value encountered in divide,0.7183092999912333
+28,optdigits,4,20,MinMaxScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9174890205355617,0.9172789437427866,Features [ 0 39] are constant. | invalid value encountered in divide,1.2650425000028918
+28,optdigits,0,21,MinMaxScaler,SelectKBest,SVM,4496,1124,ok,,0.9114180646552914,0.9114255930678189,Features [ 0 39] are constant. | invalid value encountered in divide,0.43859779999183957
+28,optdigits,1,21,MinMaxScaler,SelectKBest,SVM,4496,1124,ok,,0.9192949711638579,0.9194732285973964,Features [ 0 39] are constant. | invalid value encountered in divide,0.4495196999923792
+28,optdigits,2,21,MinMaxScaler,SelectKBest,SVM,4496,1124,ok,,0.9137794895334486,0.9138451145649673,Features [ 0 39] are constant. | invalid value encountered in divide,0.4470294999919133
+28,optdigits,3,21,MinMaxScaler,SelectKBest,SVM,4496,1124,ok,,0.9146875261034048,0.9143573296154273,Features [ 0 39] are constant. | invalid value encountered in divide,0.46852389999548905
+28,optdigits,4,21,MinMaxScaler,SelectKBest,SVM,4496,1124,ok,,0.9183196296670862,0.9180207096032532,Features [ 0 39] are constant. | invalid value encountered in divide,0.45423160000063945
+28,optdigits,0,22,MinMaxScaler,SelectKBest,kNN,4496,1124,ok,,0.9068565187110021,0.9066086306132431,Features [ 0 39] are constant. | invalid value encountered in divide,0.055723700002999976
+28,optdigits,1,22,MinMaxScaler,SelectKBest,kNN,4496,1124,ok,,0.9049766509972612,0.9050661777558329,Features [ 0 39] are constant. | invalid value encountered in divide,0.06027889999677427
+28,optdigits,2,22,MinMaxScaler,SelectKBest,kNN,4496,1124,ok,,0.889883443810435,0.8903002665390689,Features [ 0 39] are constant. | invalid value encountered in divide,0.06195050000678748
+28,optdigits,3,22,MinMaxScaler,SelectKBest,kNN,4496,1124,ok,,0.9057741954795479,0.9054762792950358,Features [ 0 39] are constant. | invalid value encountered in divide,0.06150049999996554
+28,optdigits,4,22,MinMaxScaler,SelectKBest,kNN,4496,1124,ok,,0.9067901179933895,0.9066271434406505,Features [ 0 39] are constant. | invalid value encountered in divide,0.062274099997011945
+28,optdigits,0,23,MinMaxScaler,SelectKBest,MLP,4496,1124,ok,,0.8936839788823854,0.8937127193055785,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.965931600003387
+28,optdigits,1,23,MinMaxScaler,SelectKBest,MLP,4496,1124,ok,,0.9281699187876411,0.9281762862511524,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.81674799999746
+28,optdigits,2,23,MinMaxScaler,SelectKBest,MLP,4496,1124,ok,,0.9085247950059314,0.9084233210149936,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.412274499991327
+28,optdigits,3,23,MinMaxScaler,SelectKBest,MLP,4496,1124,ok,,0.9075754353047746,0.9069920692482608,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.70714389999921
+28,optdigits,4,23,MinMaxScaler,SelectKBest,MLP,4496,1124,ok,,0.9131655883694118,0.912444885135994,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.158020200004103
+28,optdigits,0,24,MinMaxScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8393360989819142,0.8387160100948424,Features [ 0 39] are constant. | invalid value encountered in divide,0.025250499995308928
+28,optdigits,1,24,MinMaxScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8597052380412883,0.8596770889777681,Features [ 0 39] are constant. | invalid value encountered in divide,0.020923299991409294
+28,optdigits,2,24,MinMaxScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8454336256210965,0.845547697742204,Features [ 0 39] are constant. | invalid value encountered in divide,0.025030500008142553
+28,optdigits,3,24,MinMaxScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8579706344011188,0.8580031371785866,Features [ 0 39] are constant. | invalid value encountered in divide,0.023756999988108873
+28,optdigits,4,24,MinMaxScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8483752596793798,0.8480277120314558,Features [ 0 39] are constant. | invalid value encountered in divide,0.020714199999929406
+28,optdigits,0,25,MinMaxScaler,None,RandomForest,4496,1124,ok,,0.9902014250063855,0.9902597473521219,,1.3910568999999668
+28,optdigits,1,25,MinMaxScaler,None,RandomForest,4496,1124,ok,,0.9804576130292247,0.9805356322609496,,1.1407048999972176
+28,optdigits,2,25,MinMaxScaler,None,RandomForest,4496,1124,ok,,0.9759615718919399,0.9759766874148073,,1.2803638999903342
+28,optdigits,3,25,MinMaxScaler,None,RandomForest,4496,1124,ok,,0.9857919131512214,0.9857402707691048,,1.0094716000021435
+28,optdigits,4,25,MinMaxScaler,None,RandomForest,4496,1124,ok,,0.9910869503644305,0.9910934164620707,,1.11478079999506
+28,optdigits,0,26,MinMaxScaler,None,SVM,4496,1124,ok,,0.9893077246321157,0.9893463836706735,,0.47873480000998825
+28,optdigits,1,26,MinMaxScaler,None,SVM,4496,1124,ok,,0.9875537624256767,0.9876219023351902,,0.47479869998642243
+28,optdigits,2,26,MinMaxScaler,None,SVM,4496,1124,ok,,0.9875221531165872,0.9876050557405851,,0.45642790000420064
+28,optdigits,3,26,MinMaxScaler,None,SVM,4496,1124,ok,,0.9902168267866613,0.990227795932532,,0.46779650000098627
+28,optdigits,4,26,MinMaxScaler,None,SVM,4496,1124,ok,,0.9920104462095309,0.9920102325953206,,0.47697259999404196
+28,optdigits,0,27,MinMaxScaler,None,kNN,4496,1124,ok,,0.9884227688799033,0.9884883623805051,,0.056259499993757345
+28,optdigits,1,27,MinMaxScaler,None,kNN,4496,1124,ok,,0.9839898118892062,0.984109668010535,,0.05895059999602381
+28,optdigits,2,27,MinMaxScaler,None,kNN,4496,1124,ok,,0.9857756685423196,0.9858034247950174,,0.05410439999832306
+28,optdigits,3,27,MinMaxScaler,None,kNN,4496,1124,ok,,0.9875382553580898,0.9875885884525438,,0.05469900000025518
+28,optdigits,4,27,MinMaxScaler,None,kNN,4496,1124,ok,,0.9883994958291499,0.9884414765798265,,0.05641200000536628
+28,optdigits,0,28,MinMaxScaler,None,MLP,4496,1124,ok,,0.9822416516947815,0.9822710987014576,,5.5498288000089815
+28,optdigits,1,28,MinMaxScaler,None,MLP,4496,1124,ok,,0.9822591338427389,0.9822266819000701,,5.803243900008965
+28,optdigits,2,28,MinMaxScaler,None,MLP,4496,1124,ok,,0.9777393847870094,0.9777386822383356,,6.322045000008075
+28,optdigits,3,28,MinMaxScaler,None,MLP,4496,1124,ok,,0.9812950364117817,0.9812571882655746,,6.770474100005231
+28,optdigits,4,28,MinMaxScaler,None,MLP,4496,1124,ok,,0.9822259951636383,0.9822385573890051,,5.495109700001194
+28,optdigits,0,29,MinMaxScaler,None,DecisionTree,4496,1124,ok,,0.8807292786688201,0.8811308960855613,,0.0723028000065824
+28,optdigits,1,29,MinMaxScaler,None,DecisionTree,4496,1124,ok,,0.8889409341639197,0.8892683441024232,,0.07447979999415111
+28,optdigits,2,29,MinMaxScaler,None,DecisionTree,4496,1124,ok,,0.8622562482803516,0.8626908834666136,,0.07422240001324099
+28,optdigits,3,29,MinMaxScaler,None,DecisionTree,4496,1124,ok,,0.89502773111689,0.8953612287422377,,0.09393880001152866
+28,optdigits,4,29,MinMaxScaler,None,DecisionTree,4496,1124,ok,,0.9057242503452837,0.9060461858372797,,0.06452540001191664
+28,optdigits,0,30,RobustScaler,PCA,RandomForest,4496,1124,ok,,0.8243230823101877,0.822930886017204,,1.8981521999958204
+28,optdigits,1,30,RobustScaler,PCA,RandomForest,4496,1124,ok,,0.8568581785425055,0.8570032873560527,,1.8455682000058005
+28,optdigits,2,30,RobustScaler,PCA,RandomForest,4496,1124,ok,,0.8556318669790957,0.8535276822253607,,1.9904757000040263
+28,optdigits,3,30,RobustScaler,PCA,RandomForest,4496,1124,ok,,0.8505733740789481,0.850082838536642,,1.920063500001561
+28,optdigits,4,30,RobustScaler,PCA,RandomForest,4496,1124,ok,,0.8452745370985179,0.8448348008264042,,1.526276599994162
+28,optdigits,0,31,RobustScaler,PCA,SVM,4496,1124,ok,,0.8386363532705243,0.8380852826607669,,0.8437817000085488
+28,optdigits,1,31,RobustScaler,PCA,SVM,4496,1124,ok,,0.8549223116089675,0.8555819083512282,,0.748014199998579
+28,optdigits,2,31,RobustScaler,PCA,SVM,4496,1124,ok,,0.8635824905183312,0.8633631714701595,,0.7501721000007819
+28,optdigits,3,31,RobustScaler,PCA,SVM,4496,1124,ok,,0.8701165709475586,0.8698592394844663,,0.9214710999949602
+28,optdigits,4,31,RobustScaler,PCA,SVM,4496,1124,ok,,0.8595102371809,0.859455011618825,,0.6666557999997167
+28,optdigits,0,32,RobustScaler,PCA,kNN,4496,1124,ok,,0.8098792656604618,0.8080180625688316,,0.05095869999786373
+28,optdigits,1,32,RobustScaler,PCA,kNN,4496,1124,ok,,0.8310182258744205,0.8294480466194116,,0.05010229999606963
+28,optdigits,2,32,RobustScaler,PCA,kNN,4496,1124,ok,,0.8441037342818898,0.841840291769428,,0.05696860000898596
+28,optdigits,3,32,RobustScaler,PCA,kNN,4496,1124,ok,,0.830044009998218,0.8286861316479263,,0.05806430001393892
+28,optdigits,4,32,RobustScaler,PCA,kNN,4496,1124,ok,,0.8282485324186839,0.8274154276968083,,0.04273119999561459
+28,optdigits,0,33,RobustScaler,PCA,MLP,4496,1124,ok,,0.883243925638293,0.8835172868392839,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.508964699998614
+28,optdigits,1,33,RobustScaler,PCA,MLP,4496,1124,ok,,0.8853069800787546,0.8856311556109387,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.206623299993225
+28,optdigits,2,33,RobustScaler,PCA,MLP,4496,1124,ok,,0.8858192479524571,0.8845694966262416,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.89609229999769
+28,optdigits,3,33,RobustScaler,PCA,MLP,4496,1124,ok,,0.9022467200571127,0.9020639595335009,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.7679666000040015
+28,optdigits,4,33,RobustScaler,PCA,MLP,4496,1124,ok,,0.8916156965197082,0.891372705735425,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.333169100005762
+28,optdigits,0,34,RobustScaler,PCA,DecisionTree,4496,1124,ok,,0.7327273994511394,0.7332073710485385,,0.08352309999463614
+28,optdigits,1,34,RobustScaler,PCA,DecisionTree,4496,1124,ok,,0.7499019912853169,0.7575957897075034,,0.07163930000388063
+28,optdigits,2,34,RobustScaler,PCA,DecisionTree,4496,1124,ok,,0.7412385903769229,0.747402779255332,,0.06546440000238363
+28,optdigits,3,34,RobustScaler,PCA,DecisionTree,4496,1124,ok,,0.7216702979149567,0.7228825888925735,,0.06958540000778157
+28,optdigits,4,34,RobustScaler,PCA,DecisionTree,4496,1124,ok,,0.7447620160821342,0.7444720939517202,,0.06761589999950957
+28,optdigits,0,35,RobustScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9078861358046926,0.9075693098251045,Features [ 0 39] are constant. | invalid value encountered in divide,0.7923663999972632
+28,optdigits,1,35,RobustScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9175014941083874,0.9176783571946647,Features [ 0 39] are constant. | invalid value encountered in divide,1.2280319999990752
+28,optdigits,2,35,RobustScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9085168936152866,0.9086781229494768,Features [ 0 39] are constant. | invalid value encountered in divide,0.6866557000030298
+28,optdigits,3,35,RobustScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9077235225828055,0.907013487280637,Features [ 0 39] are constant. | invalid value encountered in divide,0.7744732999999542
+28,optdigits,4,35,RobustScaler,SelectKBest,RandomForest,4496,1124,ok,,0.9157112076404921,0.9154776489117836,Features [ 0 39] are constant. | invalid value encountered in divide,0.8445294999983162
+28,optdigits,0,36,RobustScaler,SelectKBest,SVM,4496,1124,ok,,0.905175115451816,0.9052522099419423,Features [ 0 39] are constant. | invalid value encountered in divide,0.48247790000459645
+28,optdigits,1,36,RobustScaler,SelectKBest,SVM,4496,1124,ok,,0.9158025677384085,0.9158279770151084,Features [ 0 39] are constant. | invalid value encountered in divide,0.6991485999897122
+28,optdigits,2,36,RobustScaler,SelectKBest,SVM,4496,1124,ok,,0.9058220923032287,0.9059622250996796,Features [ 0 39] are constant. | invalid value encountered in divide,0.45474909999757074
+28,optdigits,3,36,RobustScaler,SelectKBest,SVM,4496,1124,ok,,0.9094870505545917,0.9089846703336375,Features [ 0 39] are constant. | invalid value encountered in divide,0.4716676000098232
+28,optdigits,4,36,RobustScaler,SelectKBest,SVM,4496,1124,ok,,0.9121783117992439,0.9116803067134839,Features [ 0 39] are constant. | invalid value encountered in divide,0.6037010000000009
+28,optdigits,0,37,RobustScaler,SelectKBest,kNN,4496,1124,ok,,0.8997142125658154,0.899525677945469,Features [ 0 39] are constant. | invalid value encountered in divide,0.05902250000508502
+28,optdigits,1,37,RobustScaler,SelectKBest,kNN,4496,1124,ok,,0.9050559571315278,0.9053269305962433,Features [ 0 39] are constant. | invalid value encountered in divide,0.0674247999995714
+28,optdigits,2,37,RobustScaler,SelectKBest,kNN,4496,1124,ok,,0.886209001186295,0.8859332359594214,Features [ 0 39] are constant. | invalid value encountered in divide,0.051284899993333966
+28,optdigits,3,37,RobustScaler,SelectKBest,kNN,4496,1124,ok,,0.9111088820133796,0.9108611352065281,Features [ 0 39] are constant. | invalid value encountered in divide,0.05639009999867994
+28,optdigits,4,37,RobustScaler,SelectKBest,kNN,4496,1124,ok,,0.9085919086859733,0.9083523163821132,Features [ 0 39] are constant. | invalid value encountered in divide,0.05719749999116175
+28,optdigits,0,38,RobustScaler,SelectKBest,MLP,4496,1124,ok,,0.8999675820103212,0.899688721443504,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.22399499999301
+28,optdigits,1,38,RobustScaler,SelectKBest,MLP,4496,1124,ok,,0.9228515822862586,0.9229767842505128,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.213999999992666
+28,optdigits,2,38,RobustScaler,SelectKBest,MLP,4496,1124,ok,,0.9173596699534053,0.9175839470616858,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.157722699994338
+28,optdigits,3,38,RobustScaler,SelectKBest,MLP,4496,1124,ok,,0.9137713770350817,0.9135560380822063,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.887156500000856
+28,optdigits,4,38,RobustScaler,SelectKBest,MLP,4496,1124,ok,,0.9184606439242332,0.9181672785302449,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.925112800003262
+28,optdigits,0,39,RobustScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8375739502472456,0.8368964871634791,Features [ 0 39] are constant. | invalid value encountered in divide,0.021674799994798377
+28,optdigits,1,39,RobustScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8606061389421893,0.8606699795530505,Features [ 0 39] are constant. | invalid value encountered in divide,0.0193884999898728
+28,optdigits,2,39,RobustScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8445327247201956,0.8446515245318773,Features [ 0 39] are constant. | invalid value encountered in divide,0.02193740000075195
+28,optdigits,3,39,RobustScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8570777772582616,0.8571455026793592,Features [ 0 39] are constant. | invalid value encountered in divide,0.024080199989839457
+28,optdigits,4,39,RobustScaler,SelectKBest,DecisionTree,4496,1124,ok,,0.8483676319143149,0.8478646624588025,Features [ 0 39] are constant. | invalid value encountered in divide,0.019683100006659515
+28,optdigits,0,40,RobustScaler,None,RandomForest,4496,1124,ok,,0.9902014250063855,0.9902597473521219,,1.3002882000000682
+28,optdigits,1,40,RobustScaler,None,RandomForest,4496,1124,ok,,0.9804655144198694,0.9805120712943183,,1.050373700010823
+28,optdigits,2,40,RobustScaler,None,RandomForest,4496,1124,ok,,0.975060670991039,0.97509556807253,,1.1020442000008188
+28,optdigits,3,40,RobustScaler,None,RandomForest,4496,1124,ok,,0.9849223479338299,0.9848474979790411,,1.0457302000140771
+28,optdigits,4,40,RobustScaler,None,RandomForest,4496,1124,ok,,0.9910869503644305,0.9910934164620707,,1.046889099990949
+28,optdigits,0,41,RobustScaler,None,SVM,4496,1124,ok,,0.9795393537396029,0.9796030631622333,,0.8618914000107907
+28,optdigits,1,41,RobustScaler,None,SVM,4496,1124,ok,,0.9760645859446511,0.976024314115637,,1.0317951000033645
+28,optdigits,2,41,RobustScaler,None,SVM,4496,1124,ok,,0.9759291196179877,0.9759904501460188,,0.7766122000030009
+28,optdigits,3,41,RobustScaler,None,SVM,4496,1124,ok,,0.9787505299846331,0.9787658435650203,,0.7419220000010682
+28,optdigits,4,41,RobustScaler,None,SVM,4496,1124,ok,,0.9777619943203872,0.977793913857193,,0.7139661999972304
+28,optdigits,0,42,RobustScaler,None,kNN,4496,1124,ok,,0.9429484200194596,0.9427759796057105,,0.05701620000763796
+28,optdigits,1,42,RobustScaler,None,kNN,4496,1124,ok,,0.9475462042153937,0.9471738458955301,,0.05264110000280198
+28,optdigits,2,42,RobustScaler,None,kNN,4496,1124,ok,,0.9402666106788139,0.9398570566321537,,0.0713396999926772
+28,optdigits,3,42,RobustScaler,None,kNN,4496,1124,ok,,0.9422194633787656,0.9420575729087334,,0.0524297999945702
+28,optdigits,4,42,RobustScaler,None,kNN,4496,1124,ok,,0.9555647549487032,0.9555028297117936,,0.05084100000385661
+28,optdigits,0,43,RobustScaler,None,MLP,4496,1124,ok,,0.9840517785094647,0.9840589370240016,,3.3185004999977536
+28,optdigits,1,43,RobustScaler,None,MLP,4496,1124,ok,,0.9777705744869231,0.9777154935902169,,3.3462306000001263
+28,optdigits,2,43,RobustScaler,None,MLP,4496,1124,ok,,0.9830495389094598,0.9831134205900078,,2.925071099991328
+28,optdigits,3,43,RobustScaler,None,MLP,4496,1124,ok,,0.9768383673533428,0.9768366032929887,,3.9107293999986723
+28,optdigits,4,43,RobustScaler,None,MLP,4496,1124,ok,,0.9866599381559336,0.9866838278215464,,3.0958507000032114
+28,optdigits,0,44,RobustScaler,None,DecisionTree,4496,1124,ok,,0.8807292786688201,0.8811308960855613,,0.08159909999812953
+28,optdigits,1,44,RobustScaler,None,DecisionTree,4496,1124,ok,,0.888932890405876,0.8892671980035246,,0.072573099998408
+28,optdigits,2,44,RobustScaler,None,DecisionTree,4496,1124,ok,,0.8622562482803516,0.8626638275987233,,0.0729146999947261
+28,optdigits,3,44,RobustScaler,None,DecisionTree,4496,1124,ok,,0.89502773111689,0.8953612287422377,,0.06872890000522602
+28,optdigits,4,44,RobustScaler,None,DecisionTree,4496,1124,ok,,0.9057242503452837,0.9060461858372797,,0.07039520000398625
+28,optdigits,0,45,None,PCA,RandomForest,4496,1124,ok,,0.9617836551413484,0.9619716899036664,,1.6508376999991015
+28,optdigits,1,45,None,PCA,RandomForest,4496,1124,ok,,0.9609071823004054,0.9608833653513138,,1.6708157999964897
+28,optdigits,2,45,None,PCA,RandomForest,4496,1124,ok,,0.9643446918540072,0.9645391052927572,,1.5652331999881426
+28,optdigits,3,45,None,PCA,RandomForest,4496,1124,ok,,0.9652366189500665,0.9651153994961159,,2.3151245000044582
+28,optdigits,4,45,None,PCA,RandomForest,4496,1124,ok,,0.9626208315385327,0.9627689076839424,,1.4218267999967793
+28,optdigits,0,46,None,PCA,SVM,4496,1124,ok,,0.9804423757044705,0.9804499440068895,,0.3188307999953395
+28,optdigits,1,46,None,PCA,SVM,4496,1124,ok,,0.9769018448716865,0.9769249691640617,,0.3218653999938397
+28,optdigits,2,46,None,PCA,SVM,4496,1124,ok,,0.9759612909036524,0.9760897389322105,,0.3024349999905098
+28,optdigits,3,46,None,PCA,SVM,4496,1124,ok,,0.9840132682701942,0.9839847228172165,,0.39417490000778344
+28,optdigits,4,46,None,PCA,SVM,4496,1124,ok,,0.9831830751316486,0.9832027363991841,,0.2772238000034122
+28,optdigits,0,47,None,PCA,kNN,4496,1124,ok,,0.9795807156242343,0.9795373047371083,,0.061671100003877655
+28,optdigits,1,47,None,PCA,kNN,4496,1124,ok,,0.974207324547916,0.9741992362521008,,0.06880280000041239
+28,optdigits,2,47,None,PCA,kNN,4496,1124,ok,,0.9732904784983267,0.9734089487638118,,0.05990829999791458
+28,optdigits,3,47,None,PCA,kNN,4496,1124,ok,,0.9786319941389199,0.9785773940485237,,0.10505009999906179
+28,optdigits,4,47,None,PCA,kNN,4496,1124,ok,,0.980457365238278,0.9804610355822044,,0.05608740000752732
+28,optdigits,0,48,None,PCA,MLP,4496,1124,ok,,0.9707347160905716,0.9706958394379726,,4.081016300013289
+28,optdigits,1,48,None,PCA,MLP,4496,1124,ok,,0.9715912711400602,0.971544472736117,,4.054071100006695
+28,optdigits,2,48,None,PCA,MLP,4496,1124,ok,,0.9590030670433556,0.9590079533592302,,3.9373532999888994
+28,optdigits,3,48,None,PCA,MLP,4496,1124,ok,,0.9705865500351234,0.9703759978066774,,5.4709673000033945
+28,optdigits,4,48,None,PCA,MLP,4496,1124,ok,,0.9733122597922572,0.9733209616919287,,4.0930135999951744
+28,optdigits,0,49,None,PCA,DecisionTree,4496,1124,ok,,0.8850367134779914,0.8863947795966773,,0.07580500000040047
+28,optdigits,1,49,None,PCA,DecisionTree,4496,1124,ok,,0.8979111255776371,0.8976717063083974,,0.06715550000080839
+28,optdigits,2,49,None,PCA,DecisionTree,4496,1124,ok,,0.8800047273469491,0.8806682062508265,,0.0947260999964783
+28,optdigits,3,49,None,PCA,DecisionTree,4496,1124,ok,,0.8860223177154538,0.8860439876294567,,0.09403919999022037
+28,optdigits,4,49,None,PCA,DecisionTree,4496,1124,ok,,0.8836342540251685,0.884438072364399,,0.06868989999929909
+28,optdigits,0,50,None,SelectKBest,RandomForest,4496,1124,ok,,0.9051914768600335,0.9049471637811987,Features [ 0 39] are constant. | invalid value encountered in divide,0.7877762999996776
+28,optdigits,1,50,None,SelectKBest,RandomForest,4496,1124,ok,,0.9193030149219018,0.9193847039095762,Features [ 0 39] are constant. | invalid value encountered in divide,0.6886040999961551
+28,optdigits,2,50,None,SelectKBest,RandomForest,4496,1124,ok,,0.9058775518981619,0.9061024774838982,Features [ 0 39] are constant. | invalid value encountered in divide,0.7692812000022968
+28,optdigits,3,50,None,SelectKBest,RandomForest,4496,1124,ok,,0.9094863609360327,0.9087932009943162,Features [ 0 39] are constant. | invalid value encountered in divide,0.6609213999909116
+28,optdigits,4,50,None,SelectKBest,RandomForest,4496,1124,ok,,0.9174890205355617,0.9172789437427866,Features [ 0 39] are constant. | invalid value encountered in divide,0.6884506999922451
+28,optdigits,0,51,None,SelectKBest,SVM,4496,1124,ok,,0.9122876298726827,0.9122975177399987,Features [ 0 39] are constant. | invalid value encountered in divide,0.4516812000074424
+28,optdigits,1,51,None,SelectKBest,SVM,4496,1124,ok,,0.9184021140210008,0.9185523632568444,Features [ 0 39] are constant. | invalid value encountered in divide,0.425232399997185
+28,optdigits,2,51,None,SelectKBest,SVM,4496,1124,ok,,0.9128785886325478,0.9129851063718016,Features [ 0 39] are constant. | invalid value encountered in divide,0.44435749998956453
+28,optdigits,3,51,None,SelectKBest,SVM,4496,1124,ok,,0.9146875261034048,0.9143573296154273,Features [ 0 39] are constant. | invalid value encountered in divide,0.45288349999464117
+28,optdigits,4,51,None,SelectKBest,SVM,4496,1124,ok,,0.9183273924368425,0.9179726128813585,Features [ 0 39] are constant. | invalid value encountered in divide,0.4338096999999834
+28,optdigits,0,52,None,SelectKBest,kNN,4496,1124,ok,,0.9077493758538594,0.9075188025876395,Features [ 0 39] are constant. | invalid value encountered in divide,0.05876400000124704
+28,optdigits,1,52,None,SelectKBest,kNN,4496,1124,ok,,0.9049766509972612,0.9050661777558329,Features [ 0 39] are constant. | invalid value encountered in divide,0.054046600009314716
+28,optdigits,2,52,None,SelectKBest,kNN,4496,1124,ok,,0.8890062508279788,0.88932537335683,Features [ 0 39] are constant. | invalid value encountered in divide,0.0589239999972051
+28,optdigits,3,52,None,SelectKBest,kNN,4496,1124,ok,,0.9066750963804486,0.9064437638424476,Features [ 0 39] are constant. | invalid value encountered in divide,0.07409480000205804
+28,optdigits,4,52,None,SelectKBest,kNN,4496,1124,ok,,0.908552266728058,0.9083625748515827,Features [ 0 39] are constant. | invalid value encountered in divide,0.07730779999110382
+28,optdigits,0,53,None,SelectKBest,MLP,4496,1124,ok,,0.9085597928930891,0.9086357235138308,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.271325699999579
+28,optdigits,1,53,None,SelectKBest,MLP,4496,1124,ok,,0.920132091470005,0.9200612310275835,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.759502600005362
+28,optdigits,2,53,None,SelectKBest,MLP,4496,1124,ok,,0.9049372789184155,0.905240219956988,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,4.9095630000083474
+28,optdigits,3,53,None,SelectKBest,MLP,4496,1124,ok,,0.9058833083300997,0.9056557410661282,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,6.976337000000058
+28,optdigits,4,53,None,SelectKBest,MLP,4496,1124,ok,,0.9123124026353002,0.9119323239010872,Features [ 0 39] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,5.718916900004842
+28,optdigits,0,54,None,SelectKBest,DecisionTree,4496,1124,ok,,0.8393360989819142,0.8387160100948424,Features [ 0 39] are constant. | invalid value encountered in divide,0.02004109999688808
+28,optdigits,1,54,None,SelectKBest,DecisionTree,4496,1124,ok,,0.8597052380412883,0.8596770889777681,Features [ 0 39] are constant. | invalid value encountered in divide,0.0411008000082802
+28,optdigits,2,54,None,SelectKBest,DecisionTree,4496,1124,ok,,0.8454336256210965,0.845547697742204,Features [ 0 39] are constant. | invalid value encountered in divide,0.023054399993270636
+28,optdigits,3,54,None,SelectKBest,DecisionTree,4496,1124,ok,,0.8579706344011188,0.8580031371785866,Features [ 0 39] are constant. | invalid value encountered in divide,0.0204232999967644
+28,optdigits,4,54,None,SelectKBest,DecisionTree,4496,1124,ok,,0.8483752596793798,0.8480277120314558,Features [ 0 39] are constant. | invalid value encountered in divide,0.022585599988815375
+28,optdigits,0,55,None,None,RandomForest,4496,1124,ok,,0.9902014250063855,0.9902597473521219,,1.019256999992649
+28,optdigits,1,55,None,None,RandomForest,4496,1124,ok,,0.9804576130292247,0.9805356322609496,,1.1775542999967001
+28,optdigits,2,55,None,None,RandomForest,4496,1124,ok,,0.9759615718919399,0.9759766874148073,,1.1568394000059925
+28,optdigits,3,55,None,None,RandomForest,4496,1124,ok,,0.9857919131512214,0.9857402707691048,,0.9861534000083338
+28,optdigits,4,55,None,None,RandomForest,4496,1124,ok,,0.9910869503644305,0.9910934164620707,,1.3623713999986649
+28,optdigits,0,56,None,None,SVM,4496,1124,ok,,0.9893077246321157,0.9893463836706735,,0.5137111999938497
+28,optdigits,1,56,None,None,SVM,4496,1124,ok,,0.9875537624256767,0.9876219023351902,,0.49233630001253914
+28,optdigits,2,56,None,None,SVM,4496,1124,ok,,0.9866371973643748,0.986734849298483,,0.4982447999936994
+28,optdigits,3,56,None,None,SVM,4496,1124,ok,,0.9902168267866613,0.990227795932532,,0.5447119000018574
+28,optdigits,4,56,None,None,SVM,4496,1124,ok,,0.99110954530863,0.9911248781930094,,0.5148812999977963
+28,optdigits,0,57,None,None,kNN,4496,1124,ok,,0.9884148674892586,0.988473539078672,,0.05369810000411235
+28,optdigits,1,57,None,None,kNN,4496,1124,ok,,0.9839898118892062,0.984109668010535,,0.055044699998688884
+28,optdigits,2,57,None,None,kNN,4496,1124,ok,,0.9866528615247757,0.9866805151858028,,0.05579989998659585
+28,optdigits,3,57,None,None,kNN,4496,1124,ok,,0.9875382553580898,0.9875885884525438,,0.06473269998969045
+28,optdigits,4,57,None,None,kNN,4496,1124,ok,,0.9883994958291499,0.9884414765798265,,0.05571090000739787
+28,optdigits,0,58,None,None,MLP,4496,1124,ok,,0.9840201615711175,0.9840701923516226,,4.090271500012022
+28,optdigits,1,58,None,None,MLP,4496,1124,ok,,0.9795171976820789,0.9795363174961885,,4.2217017999937525
+28,optdigits,2,58,None,None,MLP,4496,1124,ok,,0.977786800623899,0.9778066986145075,,3.221422000002349
+28,optdigits,3,58,None,None,MLP,4496,1124,ok,,0.976799411267476,0.9767272249495675,,3.1456475000013597
+28,optdigits,4,58,None,None,MLP,4496,1124,ok,,0.9839740199505849,0.9840022986969057,,3.530946300001233
+28,optdigits,0,59,None,None,DecisionTree,4496,1124,ok,,0.8807292786688201,0.8811308960855613,,0.07157030000234954
+28,optdigits,1,59,None,None,DecisionTree,4496,1124,ok,,0.8889409341639197,0.8892683441024232,,0.07813749999331776
+28,optdigits,2,59,None,None,DecisionTree,4496,1124,ok,,0.8622562482803516,0.8626908834666136,,0.07163969999237452
+28,optdigits,3,59,None,None,DecisionTree,4496,1124,ok,,0.89502773111689,0.8953612287422377,,0.0718161999975564
+28,optdigits,4,59,None,None,DecisionTree,4496,1124,ok,,0.9057242503452837,0.9060461858372797,,0.08098899999458808

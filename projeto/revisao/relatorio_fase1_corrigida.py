@@ -36,6 +36,7 @@ def run():
     correlations = pd.read_csv(primary/"correlacoes_erros.csv")
     catalog = pd.read_csv(OUTPUT/"datasets.csv")
     quality = pd.read_csv(OUTPUT/"qualidade_atributos.csv")
+    classifier_changes = pd.read_csv(OUTPUT/"comparacao_escores_classificador.csv")
     selected_k = pd.read_csv(primary/"selecao_k_interna.csv")
     labels = {"aleatorio": "Aleatório", "media_global": "Média global", "knn_ajustado": "k-NN ajustado",
               "knn_padronizado_ajustado": "k-NN padronizado", "random_forest": "Random Forest"}
@@ -52,6 +53,11 @@ def run():
               "N_NAMES": catalog.loc[catalog.elegivel, "nome_dataset"].nunique()}
     fields.update(N_CATEGORICAL_ONLY=int(quality.somente_categoricos.sum()),
                   N_POSSIBLE_IDENTIFIERS=int(quality.possivel_identificador_ou_caminho.sum()))
+    classifier_labels = {"DecisionTree": "árvore de decisão", "MLP": "MLP", "RandomForest": "Random Forest",
+                         "SVM": "SVM", "kNN": "k-NN"}
+    fields["CLASSIFIER_SCORE_CHANGES"] = "; ".join(
+        classifier_labels[row.classifier]+f": ${number(100*row.diferenca_media, 2)}$ p.p."
+        for row in classifier_changes.itertuples())
     operational_path = OUTPUT/"execucao_operacional.json"
     fields["WORKER_DESCRIPTION"] = "quatro processos"
     if operational_path.exists():
@@ -65,6 +71,20 @@ def run():
         fields[f"OLD_TAU_{short}"] = number(score(model, "kendall_ponderado", "historico_mesmos_folds"))
     rf_knn = paired[(paired.comparacao == "random_forest - knn_ajustado") & (paired.metrica == "kendall_ponderado")].iloc[0]
     fields.update(RF_KNN_DELTA=number(rf_knn.diferenca_media_grupos), RF_KNN_LO=number(rf_knn.ic95_inferior), RF_KNN_HI=number(rf_knn.ic95_superior))
+    protocol_interpretations = []
+    for short, model in [("KNN", "knn_ajustado"), ("RF", "random_forest")]:
+        change = differences[(differences.condicao == "reconstrucao_completa") &
+                             (differences.modelo == model) & (differences.metrica == "kendall_ponderado")].iloc[0]
+        fields.update({f"PROTOCOL_DELTA_{short}": number(change.diferenca_media_grupos),
+                       f"PROTOCOL_LO_{short}": number(change.ic95_inferior),
+                       f"PROTOCOL_HI_{short}": number(change.ic95_superior),
+                       f"PROTOCOL_GROUPS_{short}": int(change.n_grupos_pareados)})
+        if change.ic95_inferior <= 0 <= change.ic95_superior:
+            protocol_interpretations.append("O intervalo da mudança do "+labels[model]+" abrange zero.")
+        else:
+            direction = "aumento" if change.ic95_inferior > 0 else "redução"
+            protocol_interpretations.append("O intervalo descritivo sugere "+direction+" da métrica do "+labels[model]+" sob o benchmark reconstruído.")
+    fields["PROTOCOL_INTERPRETATION"] = " ".join(protocol_interpretations)
     if rf_knn.ic95_inferior > 0:
         fields["MODEL_INTERPRETATION"] = "O intervalo descritivo sugere vantagem do Random Forest sobre o k-NN neste acervo."
     elif rf_knn.ic95_superior < 0:
@@ -78,7 +98,8 @@ def run():
     corr_text = []
     for row in correlations.itertuples():
         if pd.notna(row.q_bh) and row.q_bh < .05:
-            corr_text.append(row.variavel.replace("_", r"\_")+f" ($\\rho={number(row.spearman)}$, $q={number(row.q_bh)}$)")
+            q_text = r"q<0{,}0001" if row.q_bh < .0001 else "q="+number(row.q_bh)
+            corr_text.append(row.variavel.replace("_", r"\_")+f" ($\\rho={number(row.spearman)}$, ${q_text}$)")
     fields["CORRELATIONS"] = ("Após ajuste Benjamini--Hochberg das cinco comparações, foram observadas associações para: "+"; ".join(corr_text)+"."
                                if corr_text else "Nenhuma das cinco associações exploratórias permaneceu abaixo de $q=0{,}05$ após ajuste Benjamini--Hochberg.")
     worst = errors.dropna(subset=["kendall_ponderado"]).nsmallest(3, "kendall_ponderado")
@@ -90,10 +111,12 @@ def run():
     fields["WORST_CASES"] = ("Entre as menores correlações definidas estão: "+"; ".join(examples)+"."
                              if examples else "Não houve correlações definidas para detalhar exemplos de ordenação.")
     # Tabelas pequenas geradas a partir das mesmas linhas que alimentam o texto.
-    table = [r"\begin{tabular}{lrrrr}", r"\toprule", r"Método & Spearman & $\tau_w$ & NDCG@5 & Regret@1 \\", r"\midrule"]
+    table = [r"\begin{tabular}{lrrrrr}", r"\toprule", r"Método & Spearman & $\tau_w$ & NDCG@5 & Regret@1 & Tarefas/grupos ($\tau_w$) \\", r"\midrule"]
     comparison = [r"\begin{tabular}{lrrr}", r"\toprule", r"Método & $\tau_w$ histórico & $\tau_w$ reconstruído & Diferença pareada \\", r"\midrule"]
     for model, label in labels.items():
-        table.append(label+" & "+" & ".join("$"+number(score(model, metric))+"$" for metric in ["spearman", "kendall_ponderado", "ndcg_5", "regret_1"])+r" \\")
+        support = summary[(summary.modelo == model) & (summary.metrica == "kendall_ponderado")].iloc[0]
+        table.append(label+" & "+" & ".join("$"+number(score(model, metric))+"$" for metric in ["spearman", "kendall_ponderado", "ndcg_5", "regret_1"])+
+                     f" & {int(support.n_validos)}/{int(support.n_grupos_validos)}"+r" \\")
         delta = differences[(differences.condicao == "reconstrucao_completa") & (differences.modelo == model) & (differences.metrica == "kendall_ponderado")].iloc[0]
         comparison.append(label+" & "+" & ".join("$"+number(v)+"$" for v in [score(model, "kendall_ponderado", "historico_mesmos_folds"), score(model, "kendall_ponderado"), delta.diferenca_media_grupos])+r" \\")
     for lines, name in [(table, "tabela_tcc.tex"), (comparison, "tabela_condicoes.tex")]:
@@ -112,6 +135,8 @@ Foram executados @@N_FITS@@ ajustes de classificadores, correspondentes a @@N_TA
 
 O processo registrou @@N_FAILURES@@ falhas de ajuste, @@N_MISSING@@ escores agregados ausentes e @@N_WARNINGS@@ avisos de convergência. Avisos de convergência são preservados como limitação do orçamento fixo, sobretudo do MLP com até 200 iterações; não são convertidos em convergência bem-sucedida. Um escore médio só é disponibilizado se os cinco folds foram avaliados. A matriz reconstruída possui @@N_PIPELINE_SCORES@@ posições de desempenho.
 
+Nos pares tarefa/pipeline com escore observado nas duas versões, a variação média de acurácia balanceada dos classificadores da Fase 1, em pontos percentuais, foi: @@CLASSIFIER_SCORE_CHANGES@@. Trata-se de uma média descritiva por par tarefa/pipeline, sem imputar os escores históricos ausentes ou atribuir peso igual aos grupos. Esses valores caracterizam a revisão da estimativa de desempenho dos classificadores; não devem ser confundidos com as métricas de ranqueamento dos metamodelos da Fase 2.
+
 A validação dos artefatos verificou ausência de sobreposição entre treino e teste, cobertura de todas as linhas uma vez no teste e igualdade de amostras entre os 60 pipelines. Configuração, versões, hashes e índices de cada fold foram preservados em arquivos separados. Isso atende à reconstrução antes pendente; os escores históricos permanecem disponíveis para comparação, sem substituição silenciosa.
 
 \section{Comparação Controlada das Condições}
@@ -129,6 +154,8 @@ A \autoref{tab:condicoesFaseUm} apresenta a comparação de Kendall ponderado. A
 \end{table}
 
 O k-NN apresentou $\tau_w=@@OLD_TAU_KNN@@$ com escores históricos e $\tau_w=@@TAU_KNN@@$ após reconstrução completa; Random Forest passou de $@@OLD_TAU_RF@@$ para $@@TAU_RF@@$. Esses resultados caracterizam a mudança no benchmark sob partições equivalentes. Não isolam causalmente apenas a imputação: também mudam a codificação por fold, a amostra da SVM, a semente explícita da PCA e, na condição principal, a recomputação dos vetores. A análise com vetor histórico fixo ajuda a distinguir o efeito dos escores daquele da representação. Os próprios rankings reais são recalculados e a cobertura pode mudar quando pipelines antes ausentes passam a ter escore; portanto, a diferença não isola ganho de capacidade preditiva sob uma única verdade de referência e um conjunto idêntico de itens avaliáveis.
+
+Nos casos avaliáveis em ambas as versões, a mudança pareada de Kendall ponderado foi $@@PROTOCOL_DELTA_KNN@@$ para k-NN, com intervalo descritivo $[@@PROTOCOL_LO_KNN@@;@@PROTOCOL_HI_KNN@@]$ em @@PROTOCOL_GROUPS_KNN@@ grupos, e $@@PROTOCOL_DELTA_RF@@$ para Random Forest, com intervalo $[@@PROTOCOL_LO_RF@@;@@PROTOCOL_HI_RF@@]$ em @@PROTOCOL_GROUPS_RF@@ grupos. @@PROTOCOL_INTERPRETATION@@ Assim, o aumento das médias gerais não deve ser interpretado isoladamente como melhoria da predição: também mudou o conjunto de casos com correlação definida.
 
 O antigo valor de aproximadamente $0{,}5222$ para k-NN no LOO por tarefa não é a referência controlada desta seção. Ele usava outro protocolo e potencialmente mantinha tarefas relacionadas no treino; compará-lo diretamente aos resultados atuais atribuiria à Fase 1 diferenças de desenho da avaliação.
 
@@ -189,6 +216,8 @@ O acervo histórico continha 201 tarefas. Os critérios de qualidade delimitaram
 Na avaliação principal, o Kendall ponderado médio por grupo foi $@@TAU_KNN@@$ para k-NN, $@@TAU_RF@@$ para Random Forest e $@@TAU_GLOBAL@@$ para média global. A diferença Random Forest menos k-NN foi $@@RF_KNN_DELTA@@$, com intervalo descritivo $[@@RF_KNN_LO@@;@@RF_KNN_HI@@]$. @@MODEL_INTERPRETATION@@ O diagnóstico encontrou @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não positivo e @@N_UNDEFINED@@ com correlação indefinida.
 
 A comparação com escores históricos usou as mesmas tarefas e partições, distinguindo a reconstrução de escores da recomputação da representação. Os valores de LOO por tarefa divulgados inicialmente não constituem uma comparação direta com a validação revisada por grupos. A melhoria do protocolo deve ser distinguida de qualquer alteração numérica de desempenho.
+
+Na comparação pareada com a referência revisada, a mudança de Kendall ponderado foi $@@PROTOCOL_DELTA_KNN@@$ para k-NN e $@@PROTOCOL_DELTA_RF@@$ para Random Forest. @@PROTOCOL_INTERPRETATION@@ A elevação das médias gerais, calculadas sobre suportes diferentes, não estabelece melhoria geral da predição.
 
 \section{Atendimento dos Objetivos}\label{sec:objetivosAtendidos}
 
@@ -371,6 +400,8 @@ Esta seção compara a referência revisada com a reconstrução e apresenta met
 
 A Tabela~\ref{tab:condicoes} apresenta Kendall ponderado nas mesmas tarefas e partições por grupos. O k-NN passa de $@@OLD_TAU_KNN@@$ com escores históricos para $@@TAU_KNN@@$ na reconstrução completa; Random Forest passa de $@@OLD_TAU_RF@@$ para $@@TAU_RF@@$. Os intervalos pareados e a condição de vetores históricos com novos escores estão nos CSVs. Médias e diferenças pareadas podem usar suportes distintos quando uma correlação é indefinida.
 
+A mudança pareada foi $@@PROTOCOL_DELTA_KNN@@$ para k-NN, com intervalo descritivo $[@@PROTOCOL_LO_KNN@@;@@PROTOCOL_HI_KNN@@]$, e $@@PROTOCOL_DELTA_RF@@$ para Random Forest, com intervalo $[@@PROTOCOL_LO_RF@@;@@PROTOCOL_HI_RF@@]$. @@PROTOCOL_INTERPRETATION@@ A elevação das médias gerais não estabelece melhoria uniforme, pois também muda o suporte de correlações definidas.
+
 \begin{table}[htbp]
 \centering
 \caption{Referência revisada e reconstrução da Fase 1.}
@@ -498,6 +529,19 @@ reconstruir escores altera os rankings reais e pode recuperar itens antes
 ausentes; isso não isola ganho preditivo sob uma única verdade de referência.
 Uma condição adicional mantém os vetores históricos ao trocar somente os escores.
 Os CSVs preservam as três condições, seus suportes e diferenças pareadas.
+
+Na Fase 1, a variação média de acurácia balanceada dos classificadores nos pares
+tarefa/pipeline com escore disponível nas duas versões foi, em pontos percentuais:
+@@CLASSIFIER_SCORE_CHANGES@@. É uma média descritiva por par, sem peso igual entre
+grupos; ela difere das métricas de ranqueamento dos metamodelos.
+
+Considerando somente os casos avaliáveis nas duas versões, a mudança de Kendall
+ponderado foi **@@PROTOCOL_DELTA_KNN@@** para k-NN (intervalo descritivo
+**[@@PROTOCOL_LO_KNN@@; @@PROTOCOL_HI_KNN@@]**, @@PROTOCOL_GROUPS_KNN@@ grupos) e
+**@@PROTOCOL_DELTA_RF@@** para Random Forest (intervalo
+**[@@PROTOCOL_LO_RF@@; @@PROTOCOL_HI_RF@@]**, @@PROTOCOL_GROUPS_RF@@ grupos).
+@@PROTOCOL_INTERPRETATION@@ O aumento das médias gerais, com suportes distintos,
+não estabelece melhoria geral da predição.
 
 ## Onde conferir e editar
 

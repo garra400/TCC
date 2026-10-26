@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+363666,students_dropout_and_academic_success,0,0,StandardScaler,PCA,RandomForest,3539,885,ok,,0.6135458748869512,0.6107652807746725,,1.5964638000004925
+363666,students_dropout_and_academic_success,1,0,StandardScaler,PCA,RandomForest,3539,885,ok,,0.6002155156576691,0.5988008959679951,,1.519565299997339
+363666,students_dropout_and_academic_success,2,0,StandardScaler,PCA,RandomForest,3539,885,ok,,0.60800934504644,0.6051187799821679,,1.9416992000042228
+363666,students_dropout_and_academic_success,3,0,StandardScaler,PCA,RandomForest,3539,885,ok,,0.6316503259600018,0.642001086425387,,1.2914078000030713
+363666,students_dropout_and_academic_success,4,0,StandardScaler,PCA,RandomForest,3540,884,ok,,0.5824407862770112,0.5831457890592041,,1.6737876999977743
+363666,students_dropout_and_academic_success,0,1,StandardScaler,PCA,SVM,3539,885,ok,,0.6174812518546399,0.6173224953501676,,1.119996399997035
+363666,students_dropout_and_academic_success,1,1,StandardScaler,PCA,SVM,3539,885,ok,,0.6063297311401922,0.6043098573569745,,0.854471900005592
+363666,students_dropout_and_academic_success,2,1,StandardScaler,PCA,SVM,3539,885,ok,,0.6036425827034071,0.6002919428528991,,2.0392180000053486
+363666,students_dropout_and_academic_success,3,1,StandardScaler,PCA,SVM,3539,885,ok,,0.609589484335732,0.6084998102534055,,0.8685340999945765
+363666,students_dropout_and_academic_success,4,1,StandardScaler,PCA,SVM,3540,884,ok,,0.6078746111489743,0.6091691798011502,,0.7988432000129251
+363666,students_dropout_and_academic_success,0,2,StandardScaler,PCA,kNN,3539,885,ok,,0.6230448706258057,0.6249741814607507,,0.11106429999927059
+363666,students_dropout_and_academic_success,1,2,StandardScaler,PCA,kNN,3539,885,ok,,0.5798612405434247,0.5786557708250224,,0.05762170000525657
+363666,students_dropout_and_academic_success,2,2,StandardScaler,PCA,kNN,3539,885,ok,,0.5803618346293934,0.5812581959950381,,0.0701489000057336
+363666,students_dropout_and_academic_success,3,2,StandardScaler,PCA,kNN,3539,885,ok,,0.5804428018324637,0.5833821236095426,,0.08878120000008494
+363666,students_dropout_and_academic_success,4,2,StandardScaler,PCA,kNN,3540,884,ok,,0.5641119854798151,0.5659042019018995,,0.07095229999686126
+363666,students_dropout_and_academic_success,0,3,StandardScaler,PCA,MLP,3539,885,ok,,0.648603493810697,0.6552186363927698,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.500929300003918
+363666,students_dropout_and_academic_success,1,3,StandardScaler,PCA,MLP,3539,885,ok,,0.6547319384972384,0.6587839606406213,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.7423848000034923
+363666,students_dropout_and_academic_success,2,3,StandardScaler,PCA,MLP,3539,885,ok,,0.6491916342434546,0.6553683251618286,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.4591786000091815
+363666,students_dropout_and_academic_success,3,3,StandardScaler,PCA,MLP,3539,885,ok,,0.6512840610030719,0.6559287953969924,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.628181499996572
+363666,students_dropout_and_academic_success,4,3,StandardScaler,PCA,MLP,3540,884,ok,,0.6254375609753159,0.6279592872379779,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.20166109999991
+363666,students_dropout_and_academic_success,0,4,StandardScaler,PCA,DecisionTree,3539,885,ok,,0.5817233289603582,0.5835183810602805,,0.0432994000002509
+363666,students_dropout_and_academic_success,1,4,StandardScaler,PCA,DecisionTree,3539,885,ok,,0.5350132612173225,0.5385793520270149,,0.052697899998747744
+363666,students_dropout_and_academic_success,2,4,StandardScaler,PCA,DecisionTree,3539,885,ok,,0.5827193732416411,0.5861202993477842,,0.05033949999778997
+363666,students_dropout_and_academic_success,3,4,StandardScaler,PCA,DecisionTree,3539,885,ok,,0.5806849397200927,0.5853254299077609,,0.04645639999944251
+363666,students_dropout_and_academic_success,4,4,StandardScaler,PCA,DecisionTree,3540,884,ok,,0.5469084849518394,0.5503585659886762,,0.050239599993801676
+363666,students_dropout_and_academic_success,0,5,StandardScaler,SelectKBest,RandomForest,3539,885,ok,,0.6484311400718835,0.651345966488509,,0.5588876999972854
+363666,students_dropout_and_academic_success,1,5,StandardScaler,SelectKBest,RandomForest,3539,885,ok,,0.6473408690663384,0.6559409054544078,,0.745954799989704
+363666,students_dropout_and_academic_success,2,5,StandardScaler,SelectKBest,RandomForest,3539,885,ok,,0.6547165068252748,0.6613522019992456,,0.648730600005365
+363666,students_dropout_and_academic_success,3,5,StandardScaler,SelectKBest,RandomForest,3539,885,ok,,0.6353362547977902,0.6403059594919812,,0.6324503999931039
+363666,students_dropout_and_academic_success,4,5,StandardScaler,SelectKBest,RandomForest,3540,884,ok,,0.6428222926457617,0.6503560195395552,,0.6195819999993546
+363666,students_dropout_and_academic_success,0,6,StandardScaler,SelectKBest,SVM,3539,885,ok,,0.6634316938751761,0.6726900314629347,,0.5426322999992408
+363666,students_dropout_and_academic_success,1,6,StandardScaler,SelectKBest,SVM,3539,885,ok,,0.6401236898610708,0.6487284342713665,,0.7197925999935251
+363666,students_dropout_and_academic_success,2,6,StandardScaler,SelectKBest,SVM,3539,885,ok,,0.657394569948696,0.6680972802373554,,0.7017947999993339
+363666,students_dropout_and_academic_success,3,6,StandardScaler,SelectKBest,SVM,3539,885,ok,,0.6372355751436364,0.6438313702950705,,0.586469699992449
+363666,students_dropout_and_academic_success,4,6,StandardScaler,SelectKBest,SVM,3540,884,ok,,0.6381431747116421,0.6467417403014667,,0.63640880001185
+363666,students_dropout_and_academic_success,0,7,StandardScaler,SelectKBest,kNN,3539,885,ok,,0.6469307272913595,0.6479889093895609,,0.038601599997491576
+363666,students_dropout_and_academic_success,1,7,StandardScaler,SelectKBest,kNN,3539,885,ok,,0.6170810638420962,0.6175474096646473,,0.04104740000911988
+363666,students_dropout_and_academic_success,2,7,StandardScaler,SelectKBest,kNN,3539,885,ok,,0.6304189718979233,0.6325812234385948,,0.08166630000050645
+363666,students_dropout_and_academic_success,3,7,StandardScaler,SelectKBest,kNN,3539,885,ok,,0.6241450228086588,0.6247297522488928,,0.04363000000012107
+363666,students_dropout_and_academic_success,4,7,StandardScaler,SelectKBest,kNN,3540,884,ok,,0.6292154946249324,0.632662632497663,,0.04168969999591354
+363666,students_dropout_and_academic_success,0,8,StandardScaler,SelectKBest,MLP,3539,885,ok,,0.6548787397922162,0.65866037122282,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.766810000000987
+363666,students_dropout_and_academic_success,1,8,StandardScaler,SelectKBest,MLP,3539,885,ok,,0.6147219887430295,0.6134527525142587,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.391630199999781
+363666,students_dropout_and_academic_success,2,8,StandardScaler,SelectKBest,MLP,3539,885,ok,,0.6660415837464813,0.6746742783505558,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.195868800001335
+363666,students_dropout_and_academic_success,3,8,StandardScaler,SelectKBest,MLP,3539,885,ok,,0.6415118930265695,0.647761496967211,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.7057841000059852
+363666,students_dropout_and_academic_success,4,8,StandardScaler,SelectKBest,MLP,3540,884,ok,,0.6502853097420501,0.6569372540226314,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.196448300004704
+363666,students_dropout_and_academic_success,0,9,StandardScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6275581002449427,0.6286463172044101,,0.01678449999599252
+363666,students_dropout_and_academic_success,1,9,StandardScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6017313601101568,0.6042006149562874,,0.01902959999279119
+363666,students_dropout_and_academic_success,2,9,StandardScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6366142203591986,0.6410716108785474,,0.01645920000737533
+363666,students_dropout_and_academic_success,3,9,StandardScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6197049461578991,0.6201451870273523,,0.01825470000039786
+363666,students_dropout_and_academic_success,4,9,StandardScaler,SelectKBest,DecisionTree,3540,884,ok,,0.6141482015784434,0.6137749533688611,,0.01859839999815449
+363666,students_dropout_and_academic_success,0,10,StandardScaler,None,RandomForest,3539,885,ok,,0.6932865012150938,0.7014493649355044,,0.9476735999924131
+363666,students_dropout_and_academic_success,1,10,StandardScaler,None,RandomForest,3539,885,ok,,0.6567253965371863,0.6640998632819913,,0.8246049000008497
+363666,students_dropout_and_academic_success,2,10,StandardScaler,None,RandomForest,3539,885,ok,,0.6783565255998077,0.6891054235902011,,0.8634209999872837
+363666,students_dropout_and_academic_success,3,10,StandardScaler,None,RandomForest,3539,885,ok,,0.7094355062102055,0.7215210654840437,,0.8478680999978678
+363666,students_dropout_and_academic_success,4,10,StandardScaler,None,RandomForest,3540,884,ok,,0.680157364271483,0.6927299620032471,,0.897713999991538
+363666,students_dropout_and_academic_success,0,11,StandardScaler,None,SVM,3539,885,ok,,0.6818800572962616,0.6922134114979115,,0.7454142000060529
+363666,students_dropout_and_academic_success,1,11,StandardScaler,None,SVM,3539,885,ok,,0.6580726616641328,0.6678186876125021,,0.8910908999969251
+363666,students_dropout_and_academic_success,2,11,StandardScaler,None,SVM,3539,885,ok,,0.668883082304789,0.6830926195485646,,0.8270958999928553
+363666,students_dropout_and_academic_success,3,11,StandardScaler,None,SVM,3539,885,ok,,0.687726030811033,0.6988243517319397,,0.8660304000077303
+363666,students_dropout_and_academic_success,4,11,StandardScaler,None,SVM,3540,884,ok,,0.6807492654840895,0.693015244399605,,1.0007599999953527
+363666,students_dropout_and_academic_success,0,12,StandardScaler,None,kNN,3539,885,ok,,0.6149034277952068,0.6176671817748306,,0.030191300000296906
+363666,students_dropout_and_academic_success,1,12,StandardScaler,None,kNN,3539,885,ok,,0.6159083903804168,0.6218203939872953,,0.03099730001122225
+363666,students_dropout_and_academic_success,2,12,StandardScaler,None,kNN,3539,885,ok,,0.598968322585274,0.6041402000386301,,0.03847179999866057
+363666,students_dropout_and_academic_success,3,12,StandardScaler,None,kNN,3539,885,ok,,0.5927814170475926,0.5948277501612984,,0.036432700013392605
+363666,students_dropout_and_academic_success,4,12,StandardScaler,None,kNN,3540,884,ok,,0.6064870806148662,0.6124359253415393,,0.034957800002302974
+363666,students_dropout_and_academic_success,0,13,StandardScaler,None,MLP,3539,885,ok,,0.6347817928182468,0.6342725666065537,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.8925385999900755
+363666,students_dropout_and_academic_success,1,13,StandardScaler,None,MLP,3539,885,ok,,0.6278217747438175,0.6298773216973054,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.256507300000521
+363666,students_dropout_and_academic_success,2,13,StandardScaler,None,MLP,3539,885,ok,,0.6588398362131773,0.6642767344202118,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.31128809999791
+363666,students_dropout_and_academic_success,3,13,StandardScaler,None,MLP,3539,885,ok,,0.6470677667879533,0.6464937141925842,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.910175800003344
+363666,students_dropout_and_academic_success,4,13,StandardScaler,None,MLP,3540,884,ok,,0.6360895230623032,0.6383895547550359,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.483633800002281
+363666,students_dropout_and_academic_success,0,14,StandardScaler,None,DecisionTree,3539,885,ok,,0.6585064519753675,0.6620991097566137,,0.03962350000801962
+363666,students_dropout_and_academic_success,1,14,StandardScaler,None,DecisionTree,3539,885,ok,,0.6347776843861007,0.6395643981075451,,0.03702210000483319
+363666,students_dropout_and_academic_success,2,14,StandardScaler,None,DecisionTree,3539,885,ok,,0.6517114058226438,0.6559397662490446,,0.04264230000262614
+363666,students_dropout_and_academic_success,3,14,StandardScaler,None,DecisionTree,3539,885,ok,,0.6293909975886698,0.6338573439240576,,0.043329299995093606
+363666,students_dropout_and_academic_success,4,14,StandardScaler,None,DecisionTree,3540,884,ok,,0.6621865564958082,0.6667603964948582,,0.04101050000463147
+363666,students_dropout_and_academic_success,0,15,MinMaxScaler,PCA,RandomForest,3539,885,ok,,0.6105292836350659,0.6049470601486822,,1.344495299999835
+363666,students_dropout_and_academic_success,1,15,MinMaxScaler,PCA,RandomForest,3539,885,ok,,0.5943509124794395,0.5922917982718647,,1.442253899993375
+363666,students_dropout_and_academic_success,2,15,MinMaxScaler,PCA,RandomForest,3539,885,ok,,0.5893149767248969,0.5889770546411407,,1.5018997999868589
+363666,students_dropout_and_academic_success,3,15,MinMaxScaler,PCA,RandomForest,3539,885,ok,,0.5843211279626219,0.5806567393927575,,1.4284077000047546
+363666,students_dropout_and_academic_success,4,15,MinMaxScaler,PCA,RandomForest,3540,884,ok,,0.5742873935235653,0.5682173492229973,,1.419744200000423
+363666,students_dropout_and_academic_success,0,16,MinMaxScaler,PCA,SVM,3539,885,ok,,0.5768934494489825,0.55536680968643,,0.6718197000009241
+363666,students_dropout_and_academic_success,1,16,MinMaxScaler,PCA,SVM,3539,885,ok,,0.5846060788495642,0.5670902012919414,,0.7218021000007866
+363666,students_dropout_and_academic_success,2,16,MinMaxScaler,PCA,SVM,3539,885,ok,,0.5632207876779636,0.5335914925766744,,0.7021765999961644
+363666,students_dropout_and_academic_success,3,16,MinMaxScaler,PCA,SVM,3539,885,ok,,0.5636253893415786,0.5346898952832437,,0.6791249999951106
+363666,students_dropout_and_academic_success,4,16,MinMaxScaler,PCA,SVM,3540,884,ok,,0.5473305039380739,0.5249447980185307,,0.7432057999976678
+363666,students_dropout_and_academic_success,0,17,MinMaxScaler,PCA,kNN,3539,885,ok,,0.5742579069281794,0.5732595872416782,,0.03868579999834765
+363666,students_dropout_and_academic_success,1,17,MinMaxScaler,PCA,kNN,3539,885,ok,,0.5701474372669133,0.5697570575170064,,0.05674810000346042
+363666,students_dropout_and_academic_success,2,17,MinMaxScaler,PCA,kNN,3539,885,ok,,0.5546253797961603,0.5548199414720757,,0.04389620000438299
+363666,students_dropout_and_academic_success,3,17,MinMaxScaler,PCA,kNN,3539,885,ok,,0.5958349201755558,0.5965316876971173,,0.04210539998894092
+363666,students_dropout_and_academic_success,4,17,MinMaxScaler,PCA,kNN,3540,884,ok,,0.5584130218065907,0.555392350843286,,0.04388330000801943
+363666,students_dropout_and_academic_success,0,18,MinMaxScaler,PCA,MLP,3539,885,ok,,0.6238593088454745,0.6264005205516129,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.807441500001005
+363666,students_dropout_and_academic_success,1,18,MinMaxScaler,PCA,MLP,3539,885,ok,,0.6084558280748742,0.6126449561905845,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.975216200007708
+363666,students_dropout_and_academic_success,2,18,MinMaxScaler,PCA,MLP,3539,885,ok,,0.6251229690483414,0.6357314488917581,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.252285299997311
+363666,students_dropout_and_academic_success,3,18,MinMaxScaler,PCA,MLP,3539,885,ok,,0.6276073366875577,0.634600932842123,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.875689100008458
+363666,students_dropout_and_academic_success,4,18,MinMaxScaler,PCA,MLP,3540,884,ok,,0.6133680891378018,0.6171390744844123,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.198211499999161
+363666,students_dropout_and_academic_success,0,19,MinMaxScaler,PCA,DecisionTree,3539,885,ok,,0.5709002156025026,0.570478498226212,,0.044400800004950725
+363666,students_dropout_and_academic_success,1,19,MinMaxScaler,PCA,DecisionTree,3539,885,ok,,0.541213820578689,0.5429696272060826,,0.05826150000211783
+363666,students_dropout_and_academic_success,2,19,MinMaxScaler,PCA,DecisionTree,3539,885,ok,,0.5638476743000668,0.5627196113623679,,0.04932510000071488
+363666,students_dropout_and_academic_success,3,19,MinMaxScaler,PCA,DecisionTree,3539,885,ok,,0.5617956388383947,0.5599410618670221,,0.053442200005520135
+363666,students_dropout_and_academic_success,4,19,MinMaxScaler,PCA,DecisionTree,3540,884,ok,,0.5707379446891995,0.5729610399063608,,0.10543779999716207
+363666,students_dropout_and_academic_success,0,20,MinMaxScaler,SelectKBest,RandomForest,3539,885,ok,,0.6505275761305837,0.653774812211863,,0.6126957999949809
+363666,students_dropout_and_academic_success,1,20,MinMaxScaler,SelectKBest,RandomForest,3539,885,ok,,0.6404659924028074,0.648337700728641,,0.8220708999870112
+363666,students_dropout_and_academic_success,2,20,MinMaxScaler,SelectKBest,RandomForest,3539,885,ok,,0.6587407996171342,0.6654880707222753,,0.6087352000031387
+363666,students_dropout_and_academic_success,3,20,MinMaxScaler,SelectKBest,RandomForest,3539,885,ok,,0.6329970735112406,0.6380819755311675,,0.6427067000040552
+363666,students_dropout_and_academic_success,4,20,MinMaxScaler,SelectKBest,RandomForest,3540,884,ok,,0.6453365797259347,0.653015399762789,,1.1340383000060683
+363666,students_dropout_and_academic_success,0,21,MinMaxScaler,SelectKBest,SVM,3539,885,ok,,0.6459072600605483,0.6528601916213189,,0.5509885999927064
+363666,students_dropout_and_academic_success,1,21,MinMaxScaler,SelectKBest,SVM,3539,885,ok,,0.616226342946263,0.6185182227139634,,0.6549302999919746
+363666,students_dropout_and_academic_success,2,21,MinMaxScaler,SelectKBest,SVM,3539,885,ok,,0.6440642107194138,0.6558250755008208,,0.6135094999917783
+363666,students_dropout_and_academic_success,3,21,MinMaxScaler,SelectKBest,SVM,3539,885,ok,,0.6270914747969261,0.633753090927999,,0.6721124000032432
+363666,students_dropout_and_academic_success,4,21,MinMaxScaler,SelectKBest,SVM,3540,884,ok,,0.6361324079045502,0.645442535702511,,0.7656186999956844
+363666,students_dropout_and_academic_success,0,22,MinMaxScaler,SelectKBest,kNN,3539,885,ok,,0.6423979575681128,0.643793594168842,,0.04270879999967292
+363666,students_dropout_and_academic_success,1,22,MinMaxScaler,SelectKBest,kNN,3539,885,ok,,0.619261104824876,0.620802126797576,,0.052789499997743405
+363666,students_dropout_and_academic_success,2,22,MinMaxScaler,SelectKBest,kNN,3539,885,ok,,0.6399732811622575,0.6435273974603954,,0.05349019999266602
+363666,students_dropout_and_academic_success,3,22,MinMaxScaler,SelectKBest,kNN,3539,885,ok,,0.6289651042090593,0.6300576154679226,,0.046480700009851716
+363666,students_dropout_and_academic_success,4,22,MinMaxScaler,SelectKBest,kNN,3540,884,ok,,0.6270363018683128,0.629171829759533,,0.07887289999052882
+363666,students_dropout_and_academic_success,0,23,MinMaxScaler,SelectKBest,MLP,3539,885,ok,,0.6635140963313103,0.6716378689392698,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.3287225999956718
+363666,students_dropout_and_academic_success,1,23,MinMaxScaler,SelectKBest,MLP,3539,885,ok,,0.6466742676001559,0.653710854341636,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.492333600006532
+363666,students_dropout_and_academic_success,2,23,MinMaxScaler,SelectKBest,MLP,3539,885,ok,,0.6543754067514834,0.662650659775334,,3.4796921999950428
+363666,students_dropout_and_academic_success,3,23,MinMaxScaler,SelectKBest,MLP,3539,885,ok,,0.6473163357828483,0.6528764968689986,,3.0733572999888565
+363666,students_dropout_and_academic_success,4,23,MinMaxScaler,SelectKBest,MLP,3540,884,ok,,0.6616189098251283,0.6719941979815859,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.151933500004816
+363666,students_dropout_and_academic_success,0,24,MinMaxScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6275581002449427,0.6286463172044101,,0.015919500001473352
+363666,students_dropout_and_academic_success,1,24,MinMaxScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6032396557360995,0.6057757238331198,,0.020110299999942072
+363666,students_dropout_and_academic_success,2,24,MinMaxScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6366142203591986,0.6410716108785474,,0.0191527999995742
+363666,students_dropout_and_academic_success,3,24,MinMaxScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6208745368011739,0.6212662688477459,,0.01855910000449512
+363666,students_dropout_and_academic_success,4,24,MinMaxScaler,SelectKBest,DecisionTree,3540,884,ok,,0.6129744926582555,0.6127193649827551,,0.016387800002121367
+363666,students_dropout_and_academic_success,0,25,MinMaxScaler,None,RandomForest,3539,885,ok,,0.6932865012150938,0.7013914898214576,,0.8792447999876458
+363666,students_dropout_and_academic_success,1,25,MinMaxScaler,None,RandomForest,3539,885,ok,,0.6589904119214275,0.6672698727383777,,1.0072788999968907
+363666,students_dropout_and_academic_success,2,25,MinMaxScaler,None,RandomForest,3539,885,ok,,0.6776023777868364,0.6877024628785325,,0.910985399998026
+363666,students_dropout_and_academic_success,3,25,MinMaxScaler,None,RandomForest,3539,885,ok,,0.7140703583232093,0.7262076065091118,,0.8990855000010924
+363666,students_dropout_and_academic_success,4,25,MinMaxScaler,None,RandomForest,3540,884,ok,,0.6780609282127826,0.6905631072520909,,0.829938900002162
+363666,students_dropout_and_academic_success,0,26,MinMaxScaler,None,SVM,3539,885,ok,,0.6591538473563141,0.6676145107061875,,0.8362136999930954
+363666,students_dropout_and_academic_success,1,26,MinMaxScaler,None,SVM,3539,885,ok,,0.6485094340958717,0.6561136211426214,,0.9355780000041705
+363666,students_dropout_and_academic_success,2,26,MinMaxScaler,None,SVM,3539,885,ok,,0.6679615576342218,0.6823396393648871,,0.8259880999976303
+363666,students_dropout_and_academic_success,3,26,MinMaxScaler,None,SVM,3539,885,ok,,0.6513253607700448,0.6604824572971656,,0.9112503999931505
+363666,students_dropout_and_academic_success,4,26,MinMaxScaler,None,SVM,3540,884,ok,,0.6429293038856078,0.6517271098564023,,0.9048941999935778
+363666,students_dropout_and_academic_success,0,27,MinMaxScaler,None,kNN,3539,885,ok,,0.5907629819441421,0.5905735705735705,,0.030525399997713976
+363666,students_dropout_and_academic_success,1,27,MinMaxScaler,None,kNN,3539,885,ok,,0.5614217954262662,0.5618615286722619,,0.03245790000073612
+363666,students_dropout_and_academic_success,2,27,MinMaxScaler,None,kNN,3539,885,ok,,0.5772626739119369,0.5828236679282301,,0.031291999999666587
+363666,students_dropout_and_academic_success,3,27,MinMaxScaler,None,kNN,3539,885,ok,,0.5597279708617248,0.5565616062543494,,0.06887380000262056
+363666,students_dropout_and_academic_success,4,27,MinMaxScaler,None,kNN,3540,884,ok,,0.5577500141108205,0.5606451416371608,,0.036356199998408556
+363666,students_dropout_and_academic_success,0,28,MinMaxScaler,None,MLP,3539,885,ok,,0.6689865613518519,0.6670223954124276,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.0903548000060255
+363666,students_dropout_and_academic_success,1,28,MinMaxScaler,None,MLP,3539,885,ok,,0.6741792521638077,0.6771524566008381,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.194843799996306
+363666,students_dropout_and_academic_success,2,28,MinMaxScaler,None,MLP,3539,885,ok,,0.6777053558055887,0.6820503859765465,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.9200213000003714
+363666,students_dropout_and_academic_success,3,28,MinMaxScaler,None,MLP,3539,885,ok,,0.6828426097031342,0.6853454607949443,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.322851699995226
+363666,students_dropout_and_academic_success,4,28,MinMaxScaler,None,MLP,3540,884,ok,,0.6334095217205198,0.6305021727997597,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.522692500002449
+363666,students_dropout_and_academic_success,0,29,MinMaxScaler,None,DecisionTree,3539,885,ok,,0.6585064519753675,0.6620991097566137,,0.04488659999333322
+363666,students_dropout_and_academic_success,1,29,MinMaxScaler,None,DecisionTree,3539,885,ok,,0.633603975465913,0.6383491799931392,,0.045498500010580756
+363666,students_dropout_and_academic_success,2,29,MinMaxScaler,None,DecisionTree,3539,885,ok,,0.6524655536356151,0.6569268264375657,,0.04051910000271164
+363666,students_dropout_and_academic_success,3,29,MinMaxScaler,None,DecisionTree,3539,885,ok,,0.6249421116607699,0.6294157045197142,,0.04695400000491645
+363666,students_dropout_and_academic_success,4,29,MinMaxScaler,None,DecisionTree,3540,884,ok,,0.6621865564958082,0.6667603964948582,,0.038538699998753145
+363666,students_dropout_and_academic_success,0,30,RobustScaler,PCA,RandomForest,3539,885,ok,,0.6179097312657832,0.6208461698564076,,1.360606900008861
+363666,students_dropout_and_academic_success,1,30,RobustScaler,PCA,RandomForest,3539,885,ok,,0.5865555466038498,0.5902267851475352,,1.4217070000013337
+363666,students_dropout_and_academic_success,2,30,RobustScaler,PCA,RandomForest,3539,885,ok,,0.61925065003413,0.6240101672885678,,1.5870016000117175
+363666,students_dropout_and_academic_success,3,30,RobustScaler,PCA,RandomForest,3539,885,ok,,0.637521223491361,0.6465580965616998,,1.7457941999891773
+363666,students_dropout_and_academic_success,4,30,RobustScaler,PCA,RandomForest,3540,884,ok,,0.6126252372978009,0.6198297468114542,,1.3676990999956615
+363666,students_dropout_and_academic_success,0,31,RobustScaler,PCA,SVM,3539,885,ok,,0.6174886336717479,0.6266663804762783,,0.7226037999935215
+363666,students_dropout_and_academic_success,1,31,RobustScaler,PCA,SVM,3539,885,ok,,0.5754000844666928,0.5813907458416973,,0.8626529000030132
+363666,students_dropout_and_academic_success,2,31,RobustScaler,PCA,SVM,3539,885,ok,,0.606423289826707,0.6170446669904716,,0.7552051999955438
+363666,students_dropout_and_academic_success,3,31,RobustScaler,PCA,SVM,3539,885,ok,,0.616347606706975,0.6278378566250583,,0.7460378999967361
+363666,students_dropout_and_academic_success,4,31,RobustScaler,PCA,SVM,3540,884,ok,,0.6065400589621386,0.6165610578227315,,0.6889039000088815
+363666,students_dropout_and_academic_success,0,32,RobustScaler,PCA,kNN,3539,885,ok,,0.5988141394731882,0.5986516099366855,,0.0421762000041781
+363666,students_dropout_and_academic_success,1,32,RobustScaler,PCA,kNN,3539,885,ok,,0.5572222429313923,0.5564999041594786,,0.0710459000110859
+363666,students_dropout_and_academic_success,2,32,RobustScaler,PCA,kNN,3539,885,ok,,0.5983944113565348,0.6013198593658364,,0.03751609999744687
+363666,students_dropout_and_academic_success,3,32,RobustScaler,PCA,kNN,3539,885,ok,,0.6208761780733408,0.6245250347342849,,0.04175209999084473
+363666,students_dropout_and_academic_success,4,32,RobustScaler,PCA,kNN,3540,884,ok,,0.602288383390088,0.6031429686623432,,0.041923299999325536
+363666,students_dropout_and_academic_success,0,33,RobustScaler,PCA,MLP,3539,885,ok,,0.6019823418918322,0.6049482350735276,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.553658100005123
+363666,students_dropout_and_academic_success,1,33,RobustScaler,PCA,MLP,3539,885,ok,,0.591517998206185,0.5974214602439557,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.044680499995593
+363666,students_dropout_and_academic_success,2,33,RobustScaler,PCA,MLP,3539,885,ok,,0.6107890167112314,0.6150160370193523,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.0265785999945365
+363666,students_dropout_and_academic_success,3,33,RobustScaler,PCA,MLP,3539,885,ok,,0.634681052249732,0.6395962562401621,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.155013299998245
+363666,students_dropout_and_academic_success,4,33,RobustScaler,PCA,MLP,3540,884,ok,,0.6106014644319947,0.615272889923845,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.8279134999902453
+363666,students_dropout_and_academic_success,0,34,RobustScaler,PCA,DecisionTree,3539,885,ok,,0.5507013260682893,0.551753173340679,,0.055157900002086535
+363666,students_dropout_and_academic_success,1,34,RobustScaler,PCA,DecisionTree,3539,885,ok,,0.5652955125098753,0.5646489264547138,,0.04878299999109004
+363666,students_dropout_and_academic_success,2,34,RobustScaler,PCA,DecisionTree,3539,885,ok,,0.5678705976145441,0.5656628051225587,,0.05956009999499656
+363666,students_dropout_and_academic_success,3,34,RobustScaler,PCA,DecisionTree,3539,885,ok,,0.5613818372802579,0.5634620725484242,,0.050231600005645305
+363666,students_dropout_and_academic_success,4,34,RobustScaler,PCA,DecisionTree,3540,884,ok,,0.5841637124333301,0.5888295585535905,,0.051996099995449185
+363666,students_dropout_and_academic_success,0,35,RobustScaler,SelectKBest,RandomForest,3539,885,ok,,0.6465032833387244,0.6491605192152424,,0.5812191000004532
+363666,students_dropout_and_academic_success,1,35,RobustScaler,SelectKBest,RandomForest,3539,885,ok,,0.6428134102431832,0.6506561496573079,,0.7995108999894001
+363666,students_dropout_and_academic_success,2,35,RobustScaler,SelectKBest,RandomForest,3539,885,ok,,0.6572325039911915,0.66375035767644,,0.8174580999911996
+363666,students_dropout_and_academic_success,3,35,RobustScaler,SelectKBest,RandomForest,3539,885,ok,,0.6360904026107616,0.6413507208434258,,0.6406346000003396
+363666,students_dropout_and_academic_success,4,35,RobustScaler,SelectKBest,RandomForest,3540,884,ok,,0.6437450197842741,0.6514214283873296,,0.6382899000018369
+363666,students_dropout_and_academic_success,0,36,RobustScaler,SelectKBest,SVM,3539,885,ok,,0.6612528553603415,0.6694263221622839,,0.5558083999931114
+363666,students_dropout_and_academic_success,1,36,RobustScaler,SelectKBest,SVM,3539,885,ok,,0.6309039673024915,0.6375570337128399,,0.5653892999980599
+363666,students_dropout_and_academic_success,2,36,RobustScaler,SelectKBest,SVM,3539,885,ok,,0.6658639191075764,0.6770406238151369,,0.6488280999910785
+363666,students_dropout_and_academic_success,3,36,RobustScaler,SelectKBest,SVM,3539,885,ok,,0.650256189187098,0.6597824082796085,,0.6494463999988511
+363666,students_dropout_and_academic_success,4,36,RobustScaler,SelectKBest,SVM,3540,884,ok,,0.634867405491148,0.6438393094750483,,0.548404400004074
+363666,students_dropout_and_academic_success,0,37,RobustScaler,SelectKBest,kNN,3539,885,ok,,0.6369515460197176,0.6393537775558628,,0.03947749998769723
+363666,students_dropout_and_academic_success,1,37,RobustScaler,SelectKBest,kNN,3539,885,ok,,0.6128959075606776,0.6156984161634526,,0.052383699992788024
+363666,students_dropout_and_academic_success,2,37,RobustScaler,SelectKBest,kNN,3539,885,ok,,0.630080443769459,0.6336353885232944,,0.04171879999921657
+363666,students_dropout_and_academic_success,3,37,RobustScaler,SelectKBest,kNN,3539,885,ok,,0.635370219083038,0.6386326454953907,,0.03918100000009872
+363666,students_dropout_and_academic_success,4,37,RobustScaler,SelectKBest,kNN,3540,884,ok,,0.6498546535276347,0.6555479031336578,,0.04068449999613222
+363666,students_dropout_and_academic_success,0,38,RobustScaler,SelectKBest,MLP,3539,885,ok,,0.6637678170677499,0.6673641234174835,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.935785500012571
+363666,students_dropout_and_academic_success,1,38,RobustScaler,SelectKBest,MLP,3539,885,ok,,0.6252055385139127,0.6255068028129526,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.29481510000187
+363666,students_dropout_and_academic_success,2,38,RobustScaler,SelectKBest,MLP,3539,885,ok,,0.6569789502641888,0.6643471351502245,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.014102000001003
+363666,students_dropout_and_academic_success,3,38,RobustScaler,SelectKBest,MLP,3539,885,ok,,0.6478180626356352,0.6548435629079274,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.035617499990622
+363666,students_dropout_and_academic_success,4,38,RobustScaler,SelectKBest,MLP,3540,884,ok,,0.6573219390215709,0.6639190969979226,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.876905600001919
+363666,students_dropout_and_academic_success,0,39,RobustScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6254616641862425,0.6261024197978006,,0.01612659999227617
+363666,students_dropout_and_academic_success,1,39,RobustScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6024855079231282,0.6049871146485374,,0.01956479999353178
+363666,students_dropout_and_academic_success,2,39,RobustScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6377879292793863,0.6421262764984715,,0.019315500001539476
+363666,students_dropout_and_academic_success,3,39,RobustScaler,SelectKBest,DecisionTree,3539,885,ok,,0.6220441274444487,0.6223877203254308,,0.018143400011467747
+363666,students_dropout_and_academic_success,4,39,RobustScaler,SelectKBest,DecisionTree,3540,884,ok,,0.6141482015784434,0.6137749533688611,,0.019842900001094677
+363666,students_dropout_and_academic_success,0,40,RobustScaler,None,RandomForest,3539,885,ok,,0.691944212969365,0.6996667368128596,,0.825767000002088
+363666,students_dropout_and_academic_success,1,40,RobustScaler,None,RandomForest,3539,885,ok,,0.6570625551882684,0.66514780856428,,0.9374215999996522
+363666,students_dropout_and_academic_success,2,40,RobustScaler,None,RandomForest,3539,885,ok,,0.6783565255998077,0.6891054235902011,,1.117226300004404
+363666,students_dropout_and_academic_success,3,40,RobustScaler,None,RandomForest,3539,885,ok,,0.7148245061361806,0.7272532082024838,,1.007576699994388
+363666,students_dropout_and_academic_success,4,40,RobustScaler,None,RandomForest,3540,884,ok,,0.6788167861114976,0.6917128605059725,,0.8784370999928797
+363666,students_dropout_and_academic_success,0,41,RobustScaler,None,SVM,3539,885,ok,,0.6735830618761947,0.6841906948699011,,0.8131299999949988
+363666,students_dropout_and_academic_success,1,41,RobustScaler,None,SVM,3539,885,ok,,0.6485106365638169,0.657588024263744,,0.8414660999987973
+363666,students_dropout_and_academic_success,2,41,RobustScaler,None,SVM,3539,885,ok,,0.6640208697664419,0.678168637290662,,0.9588622000010218
+363666,students_dropout_and_academic_success,3,41,RobustScaler,None,SVM,3539,885,ok,,0.6832661249128703,0.6964383901631792,,0.8261090000014519
+363666,students_dropout_and_academic_success,4,41,RobustScaler,None,SVM,3540,884,ok,,0.6691862264733454,0.6833672959302627,,0.8588397999992594
+363666,students_dropout_and_academic_success,0,42,RobustScaler,None,kNN,3539,885,ok,,0.601824217357037,0.6029494745846115,,0.02887219999684021
+363666,students_dropout_and_academic_success,1,42,RobustScaler,None,kNN,3539,885,ok,,0.5881525910445264,0.5926676217353899,,0.051393699992331676
+363666,students_dropout_and_academic_success,2,42,RobustScaler,None,kNN,3539,885,ok,,0.6305769294232816,0.6399068109412936,,0.02886380000563804
+363666,students_dropout_and_academic_success,3,42,RobustScaler,None,kNN,3539,885,ok,,0.6042590342821561,0.6085595146274884,,0.03209340000466909
+363666,students_dropout_and_academic_success,4,42,RobustScaler,None,kNN,3540,884,ok,,0.6016267315382763,0.6050946539769594,,0.03704120000475086
+363666,students_dropout_and_academic_success,0,43,RobustScaler,None,MLP,3539,885,ok,,0.6638745694997747,0.6650998674266976,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.762357100000372
+363666,students_dropout_and_academic_success,1,43,RobustScaler,None,MLP,3539,885,ok,,0.6354470248070473,0.6377135987456108,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.476912199999788
+363666,students_dropout_and_academic_success,2,43,RobustScaler,None,MLP,3539,885,ok,,0.6616119590514238,0.6650719871906061,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.409679200005485
+363666,students_dropout_and_academic_success,3,43,RobustScaler,None,MLP,3539,885,ok,,0.6726136991293554,0.6699063348939821,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.500652800008538
+363666,students_dropout_and_academic_success,4,43,RobustScaler,None,MLP,3540,884,ok,,0.6456460636636029,0.6482600428912939,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.4980380999913905
+363666,students_dropout_and_academic_success,0,44,RobustScaler,None,DecisionTree,3539,885,ok,,0.6585064519753675,0.6620991097566137,,0.03758669999660924
+363666,students_dropout_and_academic_success,1,44,RobustScaler,None,DecisionTree,3539,885,ok,,0.633603975465913,0.6383491799931392,,0.037929699989035726
+363666,students_dropout_and_academic_success,2,44,RobustScaler,None,DecisionTree,3539,885,ok,,0.6528851147428315,0.6571584291008752,,0.04030829999828711
+363666,students_dropout_and_academic_success,3,44,RobustScaler,None,DecisionTree,3539,885,ok,,0.6272812929473196,0.6318081834282951,,0.039041800002451055
+363666,students_dropout_and_academic_success,4,44,RobustScaler,None,DecisionTree,3540,884,ok,,0.6642829925545085,0.6689527731580475,,0.0489536999957636
+363666,students_dropout_and_academic_success,0,45,None,PCA,RandomForest,3539,885,ok,,0.5621514262539101,0.5500084316773519,,1.399393500003498
+363666,students_dropout_and_academic_success,1,45,None,PCA,RandomForest,3539,885,ok,,0.5642411819351371,0.5575315970487984,,1.286223199989763
+363666,students_dropout_and_academic_success,2,45,None,PCA,RandomForest,3539,885,ok,,0.5713696123256705,0.5668314412562201,,1.4292769000021508
+363666,students_dropout_and_academic_success,3,45,None,PCA,RandomForest,3539,885,ok,,0.5517569148638631,0.5385779211849674,,1.381805400000303
+363666,students_dropout_and_academic_success,4,45,None,PCA,RandomForest,3540,884,ok,,0.5305405860339234,0.5162689875018138,,1.3916520000057062
+363666,students_dropout_and_academic_success,0,46,None,PCA,SVM,3539,885,ok,,0.5384096319285702,0.5044141252006421,,1.0770539999939501
+363666,students_dropout_and_academic_success,1,46,None,PCA,SVM,3539,885,ok,,0.5398302141982873,0.5131272552962868,,0.8981846999959089
+363666,students_dropout_and_academic_success,2,46,None,PCA,SVM,3539,885,ok,,0.5464542760895795,0.5150867594504264,,0.9179740999970818
+363666,students_dropout_and_academic_success,3,46,None,PCA,SVM,3539,885,ok,,0.5092773411658861,0.4700350709501486,,0.7368470000074012
+363666,students_dropout_and_academic_success,4,46,None,PCA,SVM,3540,884,ok,,0.532079468926969,0.5109196453501221,,0.9044856000109576
+363666,students_dropout_and_academic_success,0,47,None,PCA,kNN,3539,885,ok,,0.5314229257461346,0.5329024762517761,,0.04484069999307394
+363666,students_dropout_and_academic_success,1,47,None,PCA,kNN,3539,885,ok,,0.5210964650515385,0.5181017337779382,,0.06266579999646638
+363666,students_dropout_and_academic_success,2,47,None,PCA,kNN,3539,885,ok,,0.523522343925339,0.5179261209784589,,0.048515299989958294
+363666,students_dropout_and_academic_success,3,47,None,PCA,kNN,3539,885,ok,,0.5116146802081669,0.5145360830015261,,0.048430099996039644
+363666,students_dropout_and_academic_success,4,47,None,PCA,kNN,3540,884,ok,,0.5159625517907284,0.5152852217569808,,0.045606100000441074
+363666,students_dropout_and_academic_success,0,48,None,PCA,MLP,3539,885,ok,,0.5589928435788278,0.5628571428571428,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.086642599999323
+363666,students_dropout_and_academic_success,1,48,None,PCA,MLP,3539,885,ok,,0.5818081363523829,0.5826508219968344,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.222539899987169
+363666,students_dropout_and_academic_success,2,48,None,PCA,MLP,3539,885,ok,,0.5838865687937923,0.5871189622621498,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.8937967000092613
+363666,students_dropout_and_academic_success,3,48,None,PCA,MLP,3539,885,ok,,0.5380658578879373,0.5378376766063514,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.301147099991795
+363666,students_dropout_and_academic_success,4,48,None,PCA,MLP,3540,884,ok,,0.558414578516321,0.5600190482099706,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.856993199995486
+363666,students_dropout_and_academic_success,0,49,None,PCA,DecisionTree,3539,885,ok,,0.5433181394828078,0.5439666129060533,,0.1182624999928521
+363666,students_dropout_and_academic_success,1,49,None,PCA,DecisionTree,3539,885,ok,,0.520340947761185,0.5181321753333178,,0.05384740000590682
+363666,students_dropout_and_academic_success,2,49,None,PCA,DecisionTree,3539,885,ok,,0.51967057188173,0.5138673850759257,,0.06305989999964368
+363666,students_dropout_and_academic_success,3,49,None,PCA,DecisionTree,3539,885,ok,,0.5196911125782074,0.5208142459205624,,0.04586540001037065
+363666,students_dropout_and_academic_success,4,49,None,PCA,DecisionTree,3540,884,ok,,0.5020989468808458,0.4999589341530451,,0.05222700000740588
+363666,students_dropout_and_academic_success,0,50,None,SelectKBest,RandomForest,3539,885,ok,,0.6484311400718835,0.6511908328836976,,1.316394699999364
+363666,students_dropout_and_academic_success,1,50,None,SelectKBest,RandomForest,3539,885,ok,,0.640885553510024,0.648501750774478,,0.688493900001049
+363666,students_dropout_and_academic_success,2,50,None,SelectKBest,RandomForest,3539,885,ok,,0.656644363558434,0.6629012216648086,,0.6945926000043983
+363666,students_dropout_and_academic_success,3,50,None,SelectKBest,RandomForest,3539,885,ok,,0.6345053691371833,0.6395314393695347,,0.6989388000074541
+363666,students_dropout_and_academic_success,4,50,None,SelectKBest,RandomForest,3540,884,ok,,0.6432401436672345,0.6507129552646599,,0.6900444000057178
+363666,students_dropout_and_academic_success,0,51,None,SelectKBest,SVM,3539,885,ok,,0.6341688013812883,0.6428108356290174,,0.7340782999963267
+363666,students_dropout_and_academic_success,1,51,None,SelectKBest,SVM,3539,885,ok,,0.6148014852349629,0.6215951086442091,,0.6224693999974988
+363666,students_dropout_and_academic_success,2,51,None,SelectKBest,SVM,3539,885,ok,,0.6197445637426253,0.627398428597472,,1.0240158999949927
+363666,students_dropout_and_academic_success,3,51,None,SelectKBest,SVM,3539,885,ok,,0.6381876134864338,0.650280543173428,,0.6177346000040416
+363666,students_dropout_and_academic_success,4,51,None,SelectKBest,SVM,3540,884,ok,,0.6053647933322206,0.6125397083574265,,0.6843202000018209
+363666,students_dropout_and_academic_success,0,52,None,SelectKBest,kNN,3539,885,ok,,0.6405562777043604,0.6429461392899056,,0.040309899995918386
+363666,students_dropout_and_academic_success,1,52,None,SelectKBest,kNN,3539,885,ok,,0.6252170287631669,0.6299421279437835,,0.035732000003918074
+363666,students_dropout_and_academic_success,2,52,None,SelectKBest,kNN,3539,885,ok,,0.6303314255511344,0.6358806695284683,,0.04258160000608768
+363666,students_dropout_and_academic_success,3,52,None,SelectKBest,kNN,3539,885,ok,,0.6156074264550966,0.6186467813132317,,0.036034099990502
+363666,students_dropout_and_academic_success,4,52,None,SelectKBest,kNN,3540,884,ok,,0.615968045469583,0.6191968992702533,,0.033476700002211146
+363666,students_dropout_and_academic_success,0,53,None,SelectKBest,MLP,3539,885,ok,,0.6449834974635275,0.6442669121134679,,2.326570199991693
+363666,students_dropout_and_academic_success,1,53,None,SelectKBest,MLP,3539,885,ok,,0.6213472531022671,0.6211555804140478,,2.9752278000087244
+363666,students_dropout_and_academic_success,2,53,None,SelectKBest,MLP,3539,885,ok,,0.6603339026351016,0.6709967775918696,,2.404743099992629
+363666,students_dropout_and_academic_success,3,53,None,SelectKBest,MLP,3539,885,ok,,0.6330066196860883,0.6388064258650202,,2.4955473999871174
+363666,students_dropout_and_academic_success,4,53,None,SelectKBest,MLP,3540,884,ok,,0.6672265800051381,0.6756917111411594,,2.357110400000238
+363666,students_dropout_and_academic_success,0,54,None,SelectKBest,DecisionTree,3539,885,ok,,0.6275581002449427,0.6286463172044101,,0.019235200001276098
+363666,students_dropout_and_academic_success,1,54,None,SelectKBest,DecisionTree,3539,885,ok,,0.6024855079231282,0.6049871146485374,,0.04405540000880137
+363666,students_dropout_and_academic_success,2,54,None,SelectKBest,DecisionTree,3539,885,ok,,0.6366142203591986,0.6410716108785474,,0.02009370000450872
+363666,students_dropout_and_academic_success,3,54,None,SelectKBest,DecisionTree,3539,885,ok,,0.6208745368011739,0.6212662688477459,,0.0175248999876203
+363666,students_dropout_and_academic_success,4,54,None,SelectKBest,DecisionTree,3540,884,ok,,0.6129744926582555,0.6126471561110064,,0.01739629999792669
+363666,students_dropout_and_academic_success,0,55,None,None,RandomForest,3539,885,ok,,0.6953829372737941,0.7034350614407998,,0.9729086000006646
+363666,students_dropout_and_academic_success,1,55,None,None,RandomForest,3539,885,ok,,0.6582362641084561,0.6663643535764455,,1.046891300007701
+363666,students_dropout_and_academic_success,2,55,None,None,RandomForest,3539,885,ok,,0.6783565255998077,0.6893728804395449,,0.8910393999976804
+363666,students_dropout_and_academic_success,3,55,None,None,RandomForest,3539,885,ok,,0.715578653949152,0.7283026342599515,,0.8922378999995999
+363666,students_dropout_and_academic_success,4,55,None,None,RandomForest,3540,884,ok,,0.6820869310903858,0.6952759062031194,,0.8239949999988312
+363666,students_dropout_and_academic_success,0,56,None,None,SVM,3539,885,ok,,0.5216366069721496,0.4846955012295675,,0.9956840999948326
+363666,students_dropout_and_academic_success,1,56,None,None,SVM,3539,885,ok,,0.5183650925158796,0.4816900139084768,,1.3229672000015853
+363666,students_dropout_and_academic_success,2,56,None,None,SVM,3539,885,ok,,0.5272502283687039,0.4914162592395915,,0.972326700008125
+363666,students_dropout_and_academic_success,3,56,None,None,SVM,3539,885,ok,,0.5027069937286656,0.46770462306760185,,1.0732778999954462
+363666,students_dropout_and_academic_success,4,56,None,None,SVM,3540,884,ok,,0.5028264827057584,0.46786743248015766,,1.0440382000087993
+363666,students_dropout_and_academic_success,0,57,None,None,kNN,3539,885,ok,,0.535860266277174,0.5362306838950069,,0.05547099999967031
+363666,students_dropout_and_academic_success,1,57,None,None,kNN,3539,885,ok,,0.5487552987084025,0.5515951717586832,,0.034984899990377016
+363666,students_dropout_and_academic_success,2,57,None,None,kNN,3539,885,ok,,0.534584781806179,0.5344045201796799,,0.03178879999904893
+363666,students_dropout_and_academic_success,3,57,None,None,kNN,3539,885,ok,,0.5343925902925785,0.5372534633775123,,0.03448780000326224
+363666,students_dropout_and_academic_success,4,57,None,None,kNN,3540,884,ok,,0.5173345654439766,0.5159984990581274,,0.03138150001177564
+363666,students_dropout_and_academic_success,0,58,None,None,MLP,3539,885,ok,,0.6665310216020695,0.6640956289584166,,1.9068192999984603
+363666,students_dropout_and_academic_success,1,58,None,None,MLP,3539,885,ok,,0.6846609314289981,0.6934421226186469,,2.8672871999879135
+363666,students_dropout_and_academic_success,2,58,None,None,MLP,3539,885,ok,,0.6599902306159829,0.6745360043021079,,2.1197946000029333
+363666,students_dropout_and_academic_success,3,58,None,None,MLP,3539,885,ok,,0.6466785843123187,0.651600129495629,,1.6756256999942707
+363666,students_dropout_and_academic_success,4,58,None,None,MLP,3540,884,ok,,0.6404221977567712,0.6503118013028799,,1.669431699992856
+363666,students_dropout_and_academic_success,0,59,None,None,DecisionTree,3539,885,ok,,0.6585064519753675,0.6620991097566137,,0.04191030000220053
+363666,students_dropout_and_academic_success,1,59,None,None,DecisionTree,3539,885,ok,,0.633603975465913,0.6383491799931392,,0.06995779999124352
+363666,students_dropout_and_academic_success,2,59,None,None,DecisionTree,3539,885,ok,,0.6536392625558028,0.658158350942033,,0.038948599991272204
+363666,students_dropout_and_academic_success,3,59,None,None,DecisionTree,3539,885,ok,,0.6272812929473196,0.6318081834282951,,0.03958219999913126
+363666,students_dropout_and_academic_success,4,59,None,None,DecisionTree,3540,884,ok,,0.6631092836343206,0.6676963221552241,,0.04140390000247862

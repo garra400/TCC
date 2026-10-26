@@ -1,0 +1,17 @@
+{
+  "sources_sha256": {
+    "projeto/revisao/fase1_corrigida.py": "531c03168801f834489ac9ca47c33112f44bfd31d930b2a3d795d917a488fc02",
+    "projeto/revisao/pipeline_bruto.py": "7ee7ffd6b5ae6011e2f9126ed42c3ae5520c72bdc17c65a55cd386459278504f",
+    "projeto/fase1_meta_conjunto/embedding_generator.py": "93d59d1a4156035523666cd80db629d23fbf8d37f3e88865055b36c528ef86f2",
+    "projeto/revisao/avaliar_fase1_corrigida.py": "1e1182b785e3c6750b80d83914f10778558d27e73b03ee738406cccabbeac976",
+    "projeto/revisao/experimentos.py": "c992e6574032ee68562e300f8fb5cb39100bc464bd4835ffa2e0312aae934712",
+    "projeto/revisao/validar_fase1_corrigida.py": "484bf23045331bb88a28bca90b62b790aded25831d6b9f5c319e835568885326",
+    "projeto/revisao/auditar_atributos_fase1.py": "fc72a4ce7e3b7dc70ce9d3e5a8cbe1c3ab96d2a2ec6ed6b57e924e7509edf48e",
+    "projeto/revisao/figuras.py": "d03e337bb43112092f3673135b9783b764548ae7700c74efd9ee51e743266482",
+    "projeto/revisao/relatorio_fase1_corrigida.py": "cbff66b786464b64f09af570a93dc55f7a9ca47a9066f8a8ca3c66607017d942",
+    "projeto/revisao/config_fase1.json": "1b0d1e85dcbb9e3007b8fcf22d2fb625a639ad2940c19ce751ef66fa1d902d29",
+    "projeto/revisao/config.json": "b9ee44772432b2c8a096074094cd6bf65c065f12de96690715119332fb90f4d7",
+    "scripts/compilar_documentos.py": "a73144020e9c38a439b4769bd73e1d9f40432bf3973a79dce9847ba963cabc4d"
+  },
+  "note": "Hashes das fontes usadas na reconstrução, representação, avaliação e geração textual."
+}

@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+361150,Meta_Album_TEX_Micro,0,0,StandardScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.34512440000253264
+361150,Meta_Album_TEX_Micro,1,0,StandardScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3459292000043206
+361150,Meta_Album_TEX_Micro,2,0,StandardScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.60511669999687
+361150,Meta_Album_TEX_Micro,3,0,StandardScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3184451999986777
+361150,Meta_Album_TEX_Micro,4,0,StandardScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3950252999929944
+361150,Meta_Album_TEX_Micro,0,1,StandardScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.052362700007506646
+361150,Meta_Album_TEX_Micro,1,1,StandardScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.04853870000806637
+361150,Meta_Album_TEX_Micro,2,1,StandardScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.06602279999060556
+361150,Meta_Album_TEX_Micro,3,1,StandardScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.04827389999991283
+361150,Meta_Album_TEX_Micro,4,1,StandardScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05336060000990983
+361150,Meta_Album_TEX_Micro,0,2,StandardScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008686700006364845
+361150,Meta_Album_TEX_Micro,1,2,StandardScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.007426099997246638
+361150,Meta_Album_TEX_Micro,2,2,StandardScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.010591599988401867
+361150,Meta_Album_TEX_Micro,3,2,StandardScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.007273699986399151
+361150,Meta_Album_TEX_Micro,4,2,StandardScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.021880500004044734
+361150,Meta_Album_TEX_Micro,0,3,StandardScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8289948000019649
+361150,Meta_Album_TEX_Micro,1,3,StandardScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8370966000074986
+361150,Meta_Album_TEX_Micro,2,3,StandardScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8920581999991555
+361150,Meta_Album_TEX_Micro,3,3,StandardScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.731444899996859
+361150,Meta_Album_TEX_Micro,4,3,StandardScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9285936000087531
+361150,Meta_Album_TEX_Micro,0,4,StandardScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007697699998971075
+361150,Meta_Album_TEX_Micro,1,4,StandardScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.00834509999549482
+361150,Meta_Album_TEX_Micro,2,4,StandardScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008872999998857267
+361150,Meta_Album_TEX_Micro,3,4,StandardScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.009049200001754798
+361150,Meta_Album_TEX_Micro,4,4,StandardScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007430700003169477
+361150,Meta_Album_TEX_Micro,0,5,StandardScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.4146228000026895
+361150,Meta_Album_TEX_Micro,1,5,StandardScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.38976639999600593
+361150,Meta_Album_TEX_Micro,2,5,StandardScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.4344004999875324
+361150,Meta_Album_TEX_Micro,3,5,StandardScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.33226640000066254
+361150,Meta_Album_TEX_Micro,4,5,StandardScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.39469350001309067
+361150,Meta_Album_TEX_Micro,0,6,StandardScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.050579600007040426
+361150,Meta_Album_TEX_Micro,1,6,StandardScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.0562869999994291
+361150,Meta_Album_TEX_Micro,2,6,StandardScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.049012100003892556
+361150,Meta_Album_TEX_Micro,3,6,StandardScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.0486669000092661
+361150,Meta_Album_TEX_Micro,4,6,StandardScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.052939400004106574
+361150,Meta_Album_TEX_Micro,0,7,StandardScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.02494259999366477
+361150,Meta_Album_TEX_Micro,1,7,StandardScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.009141800008364953
+361150,Meta_Album_TEX_Micro,2,7,StandardScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.008663599990541115
+361150,Meta_Album_TEX_Micro,3,7,StandardScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.00759249999828171
+361150,Meta_Album_TEX_Micro,4,7,StandardScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.009968900005333126
+361150,Meta_Album_TEX_Micro,0,8,StandardScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.845692599992617
+361150,Meta_Album_TEX_Micro,1,8,StandardScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.8174128999962704
+361150,Meta_Album_TEX_Micro,2,8,StandardScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.7513990000006743
+361150,Meta_Album_TEX_Micro,3,8,StandardScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.9058652000094298
+361150,Meta_Album_TEX_Micro,4,8,StandardScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.1230125999863958
+361150,Meta_Album_TEX_Micro,0,9,StandardScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.010327500000130385
+361150,Meta_Album_TEX_Micro,1,9,StandardScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.011616899995715357
+361150,Meta_Album_TEX_Micro,2,9,StandardScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.009837700010393746
+361150,Meta_Album_TEX_Micro,3,9,StandardScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.007634900000994094
+361150,Meta_Album_TEX_Micro,4,9,StandardScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.010218800001894124
+361150,Meta_Album_TEX_Micro,0,10,StandardScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.33093470000312664
+361150,Meta_Album_TEX_Micro,1,10,StandardScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.5495557999965968
+361150,Meta_Album_TEX_Micro,2,10,StandardScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.44999100000131875
+361150,Meta_Album_TEX_Micro,3,10,StandardScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3448742000036873
+361150,Meta_Album_TEX_Micro,4,10,StandardScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3783575999987079
+361150,Meta_Album_TEX_Micro,0,11,StandardScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.050984799992875196
+361150,Meta_Album_TEX_Micro,1,11,StandardScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05429539999749977
+361150,Meta_Album_TEX_Micro,2,11,StandardScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.056639000002178364
+361150,Meta_Album_TEX_Micro,3,11,StandardScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05581400000664871
+361150,Meta_Album_TEX_Micro,4,11,StandardScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.06464430000050925
+361150,Meta_Album_TEX_Micro,0,12,StandardScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.00883340000291355
+361150,Meta_Album_TEX_Micro,1,12,StandardScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.010048600001027808
+361150,Meta_Album_TEX_Micro,2,12,StandardScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008966099994722754
+361150,Meta_Album_TEX_Micro,3,12,StandardScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.007674099993892014
+361150,Meta_Album_TEX_Micro,4,12,StandardScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.012534199995570816
+361150,Meta_Album_TEX_Micro,0,13,StandardScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8326243999908911
+361150,Meta_Album_TEX_Micro,1,13,StandardScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7948449999967124
+361150,Meta_Album_TEX_Micro,2,13,StandardScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7777898000058485
+361150,Meta_Album_TEX_Micro,3,13,StandardScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7756244000047445
+361150,Meta_Album_TEX_Micro,4,13,StandardScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.751770699993358
+361150,Meta_Album_TEX_Micro,0,14,StandardScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007348900006036274
+361150,Meta_Album_TEX_Micro,1,14,StandardScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008157199990819208
+361150,Meta_Album_TEX_Micro,2,14,StandardScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008079999999608845
+361150,Meta_Album_TEX_Micro,3,14,StandardScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008412200011662208
+361150,Meta_Album_TEX_Micro,4,14,StandardScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.009041299999807961
+361150,Meta_Album_TEX_Micro,0,15,MinMaxScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.33017020000261255
+361150,Meta_Album_TEX_Micro,1,15,MinMaxScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.33144110000284854
+361150,Meta_Album_TEX_Micro,2,15,MinMaxScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.33614200000010896
+361150,Meta_Album_TEX_Micro,3,15,MinMaxScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.4112528999976348
+361150,Meta_Album_TEX_Micro,4,15,MinMaxScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.33056119999673683
+361150,Meta_Album_TEX_Micro,0,16,MinMaxScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05019759999413509
+361150,Meta_Album_TEX_Micro,1,16,MinMaxScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05005779999191873
+361150,Meta_Album_TEX_Micro,2,16,MinMaxScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.051053099989076145
+361150,Meta_Album_TEX_Micro,3,16,MinMaxScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.06644890000461601
+361150,Meta_Album_TEX_Micro,4,16,MinMaxScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.049355900002410635
+361150,Meta_Album_TEX_Micro,0,17,MinMaxScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.007924300007289276
+361150,Meta_Album_TEX_Micro,1,17,MinMaxScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008005199997569434
+361150,Meta_Album_TEX_Micro,2,17,MinMaxScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.007777399994665757
+361150,Meta_Album_TEX_Micro,3,17,MinMaxScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.011086800004704855
+361150,Meta_Album_TEX_Micro,4,17,MinMaxScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008173000009264797
+361150,Meta_Album_TEX_Micro,0,18,MinMaxScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7263531000062358
+361150,Meta_Album_TEX_Micro,1,18,MinMaxScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7155423000076553
+361150,Meta_Album_TEX_Micro,2,18,MinMaxScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7113005999999586
+361150,Meta_Album_TEX_Micro,3,18,MinMaxScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8415373000025284
+361150,Meta_Album_TEX_Micro,4,18,MinMaxScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7908941000059713
+361150,Meta_Album_TEX_Micro,0,19,MinMaxScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008017300002393313
+361150,Meta_Album_TEX_Micro,1,19,MinMaxScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007368099992163479
+361150,Meta_Album_TEX_Micro,2,19,MinMaxScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007786700007272884
+361150,Meta_Album_TEX_Micro,3,19,MinMaxScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.00805850001052022
+361150,Meta_Album_TEX_Micro,4,19,MinMaxScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.009462000001803972
+361150,Meta_Album_TEX_Micro,0,20,MinMaxScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.42010259999369737
+361150,Meta_Album_TEX_Micro,1,20,MinMaxScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.3313474999886239
+361150,Meta_Album_TEX_Micro,2,20,MinMaxScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.3237281999900006
+361150,Meta_Album_TEX_Micro,3,20,MinMaxScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.40769880000152625
+361150,Meta_Album_TEX_Micro,4,20,MinMaxScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.360971400004928
+361150,Meta_Album_TEX_Micro,0,21,MinMaxScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.07327170000644401
+361150,Meta_Album_TEX_Micro,1,21,MinMaxScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05163190000166651
+361150,Meta_Album_TEX_Micro,2,21,MinMaxScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05067589999816846
+361150,Meta_Album_TEX_Micro,3,21,MinMaxScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.06076379999285564
+361150,Meta_Album_TEX_Micro,4,21,MinMaxScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.04994450000231154
+361150,Meta_Album_TEX_Micro,0,22,MinMaxScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.015026399996713735
+361150,Meta_Album_TEX_Micro,1,22,MinMaxScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.009522100008325651
+361150,Meta_Album_TEX_Micro,2,22,MinMaxScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.011381300006178208
+361150,Meta_Album_TEX_Micro,3,22,MinMaxScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.013120899995556101
+361150,Meta_Album_TEX_Micro,4,22,MinMaxScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.007686900004046038
+361150,Meta_Album_TEX_Micro,0,23,MinMaxScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,1.0697042999963742
+361150,Meta_Album_TEX_Micro,1,23,MinMaxScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.7799774000013713
+361150,Meta_Album_TEX_Micro,2,23,MinMaxScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.6537887000013143
+361150,Meta_Album_TEX_Micro,3,23,MinMaxScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.6601705000066431
+361150,Meta_Album_TEX_Micro,4,23,MinMaxScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.7444303999945987
+361150,Meta_Album_TEX_Micro,0,24,MinMaxScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.00877319999563042
+361150,Meta_Album_TEX_Micro,1,24,MinMaxScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.007709699988481589
+361150,Meta_Album_TEX_Micro,2,24,MinMaxScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.007821299994247966
+361150,Meta_Album_TEX_Micro,3,24,MinMaxScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.008026199997402728
+361150,Meta_Album_TEX_Micro,4,24,MinMaxScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.0082406000001356
+361150,Meta_Album_TEX_Micro,0,25,MinMaxScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3538211999984924
+361150,Meta_Album_TEX_Micro,1,25,MinMaxScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.34679310000501573
+361150,Meta_Album_TEX_Micro,2,25,MinMaxScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.38618289999431
+361150,Meta_Album_TEX_Micro,3,25,MinMaxScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3583877999917604
+361150,Meta_Album_TEX_Micro,4,25,MinMaxScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3748660999990534
+361150,Meta_Album_TEX_Micro,0,26,MinMaxScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05594659999769647
+361150,Meta_Album_TEX_Micro,1,26,MinMaxScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05524349999905098
+361150,Meta_Album_TEX_Micro,2,26,MinMaxScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.09025950000796001
+361150,Meta_Album_TEX_Micro,3,26,MinMaxScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.0516905999975279
+361150,Meta_Album_TEX_Micro,4,26,MinMaxScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05442559999937657
+361150,Meta_Album_TEX_Micro,0,27,MinMaxScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.010098799990373664
+361150,Meta_Album_TEX_Micro,1,27,MinMaxScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.00844360000337474
+361150,Meta_Album_TEX_Micro,2,27,MinMaxScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.019310600007884204
+361150,Meta_Album_TEX_Micro,3,27,MinMaxScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.007881199999246746
+361150,Meta_Album_TEX_Micro,4,27,MinMaxScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.00863769999705255
+361150,Meta_Album_TEX_Micro,0,28,MinMaxScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.783665100010694
+361150,Meta_Album_TEX_Micro,1,28,MinMaxScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8002284999965923
+361150,Meta_Album_TEX_Micro,2,28,MinMaxScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8175335999985691
+361150,Meta_Album_TEX_Micro,3,28,MinMaxScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8345191999978852
+361150,Meta_Album_TEX_Micro,4,28,MinMaxScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.6951432000059867
+361150,Meta_Album_TEX_Micro,0,29,MinMaxScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.009464199989452027
+361150,Meta_Album_TEX_Micro,1,29,MinMaxScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.009293400013120845
+361150,Meta_Album_TEX_Micro,2,29,MinMaxScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008342000000993721
+361150,Meta_Album_TEX_Micro,3,29,MinMaxScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.010658799990778789
+361150,Meta_Album_TEX_Micro,4,29,MinMaxScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.009496700004092418
+361150,Meta_Album_TEX_Micro,0,30,RobustScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.30703799999901094
+361150,Meta_Album_TEX_Micro,1,30,RobustScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3844037999951979
+361150,Meta_Album_TEX_Micro,2,30,RobustScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.41627539999899454
+361150,Meta_Album_TEX_Micro,3,30,RobustScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.568973500005086
+361150,Meta_Album_TEX_Micro,4,30,RobustScaler,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3211299999966286
+361150,Meta_Album_TEX_Micro,0,31,RobustScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.04824720000033267
+361150,Meta_Album_TEX_Micro,1,31,RobustScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.057510099999490194
+361150,Meta_Album_TEX_Micro,2,31,RobustScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.06064729999343399
+361150,Meta_Album_TEX_Micro,3,31,RobustScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05599120000260882
+361150,Meta_Album_TEX_Micro,4,31,RobustScaler,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05103340001369361
+361150,Meta_Album_TEX_Micro,0,32,RobustScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.007077200003550388
+361150,Meta_Album_TEX_Micro,1,32,RobustScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008488899999065325
+361150,Meta_Album_TEX_Micro,2,32,RobustScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008238299997174181
+361150,Meta_Album_TEX_Micro,3,32,RobustScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.009947800004738383
+361150,Meta_Album_TEX_Micro,4,32,RobustScaler,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.00870079999731388
+361150,Meta_Album_TEX_Micro,0,33,RobustScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.726559399990947
+361150,Meta_Album_TEX_Micro,1,33,RobustScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.762155200005509
+361150,Meta_Album_TEX_Micro,2,33,RobustScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.832330399993225
+361150,Meta_Album_TEX_Micro,3,33,RobustScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8437148000084562
+361150,Meta_Album_TEX_Micro,4,33,RobustScaler,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7140018999925815
+361150,Meta_Album_TEX_Micro,0,34,RobustScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008329399992362596
+361150,Meta_Album_TEX_Micro,1,34,RobustScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008050999997067265
+361150,Meta_Album_TEX_Micro,2,34,RobustScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.00914310000371188
+361150,Meta_Album_TEX_Micro,3,34,RobustScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007462499997927807
+361150,Meta_Album_TEX_Micro,4,34,RobustScaler,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.0071050999977160245
+361150,Meta_Album_TEX_Micro,0,35,RobustScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.3278549000096973
+361150,Meta_Album_TEX_Micro,1,35,RobustScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.36096610000822693
+361150,Meta_Album_TEX_Micro,2,35,RobustScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.4152394999982789
+361150,Meta_Album_TEX_Micro,3,35,RobustScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.3258359999890672
+361150,Meta_Album_TEX_Micro,4,35,RobustScaler,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.3619646000006469
+361150,Meta_Album_TEX_Micro,0,36,RobustScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05032999999821186
+361150,Meta_Album_TEX_Micro,1,36,RobustScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05011660000309348
+361150,Meta_Album_TEX_Micro,2,36,RobustScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05869199999142438
+361150,Meta_Album_TEX_Micro,3,36,RobustScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.054926099997828715
+361150,Meta_Album_TEX_Micro,4,36,RobustScaler,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05269189999671653
+361150,Meta_Album_TEX_Micro,0,37,RobustScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.00969489999988582
+361150,Meta_Album_TEX_Micro,1,37,RobustScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.009045899991178885
+361150,Meta_Album_TEX_Micro,2,37,RobustScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.009270599999581464
+361150,Meta_Album_TEX_Micro,3,37,RobustScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.008986800006823614
+361150,Meta_Album_TEX_Micro,4,37,RobustScaler,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.011075400005211122
+361150,Meta_Album_TEX_Micro,0,38,RobustScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.7472035999962827
+361150,Meta_Album_TEX_Micro,1,38,RobustScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.7398225999932038
+361150,Meta_Album_TEX_Micro,2,38,RobustScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.8451897000049939
+361150,Meta_Album_TEX_Micro,3,38,RobustScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.8416198999912012
+361150,Meta_Album_TEX_Micro,4,38,RobustScaler,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,0.828217999995104
+361150,Meta_Album_TEX_Micro,0,39,RobustScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.0078101999970385805
+361150,Meta_Album_TEX_Micro,1,39,RobustScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.008073099990724586
+361150,Meta_Album_TEX_Micro,2,39,RobustScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.007993499995791353
+361150,Meta_Album_TEX_Micro,3,39,RobustScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.009069000007002614
+361150,Meta_Album_TEX_Micro,4,39,RobustScaler,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.008483600002364255
+361150,Meta_Album_TEX_Micro,0,40,RobustScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3137416999961715
+361150,Meta_Album_TEX_Micro,1,40,RobustScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.4673165999993216
+361150,Meta_Album_TEX_Micro,2,40,RobustScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.47275169999920763
+361150,Meta_Album_TEX_Micro,3,40,RobustScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.36236339999595657
+361150,Meta_Album_TEX_Micro,4,40,RobustScaler,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.34853109999676235
+361150,Meta_Album_TEX_Micro,0,41,RobustScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.04845030000433326
+361150,Meta_Album_TEX_Micro,1,41,RobustScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.048528500003158115
+361150,Meta_Album_TEX_Micro,2,41,RobustScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.09492459999455605
+361150,Meta_Album_TEX_Micro,3,41,RobustScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.08039840000856202
+361150,Meta_Album_TEX_Micro,4,41,RobustScaler,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05666930000006687
+361150,Meta_Album_TEX_Micro,0,42,RobustScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.00760440000158269
+361150,Meta_Album_TEX_Micro,1,42,RobustScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.00806870000087656
+361150,Meta_Album_TEX_Micro,2,42,RobustScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.013460100002703257
+361150,Meta_Album_TEX_Micro,3,42,RobustScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008712100010598078
+361150,Meta_Album_TEX_Micro,4,42,RobustScaler,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.009101599993300624
+361150,Meta_Album_TEX_Micro,0,43,RobustScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.780273299998953
+361150,Meta_Album_TEX_Micro,1,43,RobustScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7456396000052337
+361150,Meta_Album_TEX_Micro,2,43,RobustScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8809494000015547
+361150,Meta_Album_TEX_Micro,3,43,RobustScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7753749999974389
+361150,Meta_Album_TEX_Micro,4,43,RobustScaler,None,MLP,640,160,ok,,0.05,0.0047619047619047615,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7250421999924583
+361150,Meta_Album_TEX_Micro,0,44,RobustScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007190100004663691
+361150,Meta_Album_TEX_Micro,1,44,RobustScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.010461800004122779
+361150,Meta_Album_TEX_Micro,2,44,RobustScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007717900007264689
+361150,Meta_Album_TEX_Micro,3,44,RobustScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.009345600003143772
+361150,Meta_Album_TEX_Micro,4,44,RobustScaler,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.00846060000185389
+361150,Meta_Album_TEX_Micro,0,45,None,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3261625000013737
+361150,Meta_Album_TEX_Micro,1,45,None,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3390100000106031
+361150,Meta_Album_TEX_Micro,2,45,None,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.32048070000018924
+361150,Meta_Album_TEX_Micro,3,45,None,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.35470409999834374
+361150,Meta_Album_TEX_Micro,4,45,None,PCA,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.32620979999774136
+361150,Meta_Album_TEX_Micro,0,46,None,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.049821299995528534
+361150,Meta_Album_TEX_Micro,1,46,None,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.048633099999278784
+361150,Meta_Album_TEX_Micro,2,46,None,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.058947199999238364
+361150,Meta_Album_TEX_Micro,3,46,None,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05495309999969322
+361150,Meta_Album_TEX_Micro,4,46,None,PCA,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.050447999994503334
+361150,Meta_Album_TEX_Micro,0,47,None,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008997899989481084
+361150,Meta_Album_TEX_Micro,1,47,None,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.009421299997484311
+361150,Meta_Album_TEX_Micro,2,47,None,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008597500011092052
+361150,Meta_Album_TEX_Micro,3,47,None,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.010097999998833984
+361150,Meta_Album_TEX_Micro,4,47,None,PCA,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.009754799990332685
+361150,Meta_Album_TEX_Micro,0,48,None,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.2184354000055464
+361150,Meta_Album_TEX_Micro,1,48,None,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.21693940000841394
+361150,Meta_Album_TEX_Micro,2,48,None,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.2929301999974996
+361150,Meta_Album_TEX_Micro,3,48,None,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.27924910000001546
+361150,Meta_Album_TEX_Micro,4,48,None,PCA,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.2663927999965381
+361150,Meta_Album_TEX_Micro,0,49,None,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008731699999771081
+361150,Meta_Album_TEX_Micro,1,49,None,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007196999998996034
+361150,Meta_Album_TEX_Micro,2,49,None,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.020000500007881783
+361150,Meta_Album_TEX_Micro,3,49,None,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.00905409999541007
+361150,Meta_Album_TEX_Micro,4,49,None,PCA,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007563000006484799
+361150,Meta_Album_TEX_Micro,0,50,None,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.38725080000585876
+361150,Meta_Album_TEX_Micro,1,50,None,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.3404739999969024
+361150,Meta_Album_TEX_Micro,2,50,None,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.41613960001268424
+361150,Meta_Album_TEX_Micro,3,50,None,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.41721629998937715
+361150,Meta_Album_TEX_Micro,4,50,None,SelectKBest,RandomForest,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.5576113999995869
+361150,Meta_Album_TEX_Micro,0,51,None,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05638819999876432
+361150,Meta_Album_TEX_Micro,1,51,None,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05195269999967422
+361150,Meta_Album_TEX_Micro,2,51,None,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05311299998720642
+361150,Meta_Album_TEX_Micro,3,51,None,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.05436339999141637
+361150,Meta_Album_TEX_Micro,4,51,None,SelectKBest,SVM,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.06695130000298377
+361150,Meta_Album_TEX_Micro,0,52,None,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.011645599995972589
+361150,Meta_Album_TEX_Micro,1,52,None,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.012974700002814643
+361150,Meta_Album_TEX_Micro,2,52,None,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.008787099999608472
+361150,Meta_Album_TEX_Micro,3,52,None,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.011120900002424605
+361150,Meta_Album_TEX_Micro,4,52,None,SelectKBest,kNN,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.023809199992683716
+361150,Meta_Album_TEX_Micro,0,53,None,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.2569639000139432
+361150,Meta_Album_TEX_Micro,1,53,None,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.2785293000051752
+361150,Meta_Album_TEX_Micro,2,53,None,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.22849619999760762
+361150,Meta_Album_TEX_Micro,3,53,None,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.3582631000026595
+361150,Meta_Album_TEX_Micro,4,53,None,SelectKBest,MLP,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.25027079999563284
+361150,Meta_Album_TEX_Micro,0,54,None,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.009098700000322424
+361150,Meta_Album_TEX_Micro,1,54,None,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.007702899994910695
+361150,Meta_Album_TEX_Micro,2,54,None,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.008319400003529154
+361150,Meta_Album_TEX_Micro,3,54,None,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.007745100010652095
+361150,Meta_Album_TEX_Micro,4,54,None,SelectKBest,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,Features [1] are constant. | invalid value encountered in divide,0.007610999993630685
+361150,Meta_Album_TEX_Micro,0,55,None,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.37639520000084303
+361150,Meta_Album_TEX_Micro,1,55,None,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3696575999929337
+361150,Meta_Album_TEX_Micro,2,55,None,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3526285999978427
+361150,Meta_Album_TEX_Micro,3,55,None,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.37593559999368154
+361150,Meta_Album_TEX_Micro,4,55,None,None,RandomForest,640,160,ok,,0.05,0.0047619047619047615,,0.3115220999898156
+361150,Meta_Album_TEX_Micro,0,56,None,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.050953899990417995
+361150,Meta_Album_TEX_Micro,1,56,None,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.06478259999130387
+361150,Meta_Album_TEX_Micro,2,56,None,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.05511810000461992
+361150,Meta_Album_TEX_Micro,3,56,None,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.053660599995055236
+361150,Meta_Album_TEX_Micro,4,56,None,None,SVM,640,160,ok,,0.05,0.0047619047619047615,,0.04829740000423044
+361150,Meta_Album_TEX_Micro,0,57,None,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008772300003329292
+361150,Meta_Album_TEX_Micro,1,57,None,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.010901900008320808
+361150,Meta_Album_TEX_Micro,2,57,None,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.01040300000749994
+361150,Meta_Album_TEX_Micro,3,57,None,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.008917300001485273
+361150,Meta_Album_TEX_Micro,4,57,None,None,kNN,640,160,ok,,0.05,0.0047619047619047615,,0.007377600006293505
+361150,Meta_Album_TEX_Micro,0,58,None,None,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.2762564000004204
+361150,Meta_Album_TEX_Micro,1,58,None,None,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.2610408000036841
+361150,Meta_Album_TEX_Micro,2,58,None,None,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.2364164000027813
+361150,Meta_Album_TEX_Micro,3,58,None,None,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.23389050000696443
+361150,Meta_Album_TEX_Micro,4,58,None,None,MLP,640,160,ok,,0.05,0.0047619047619047615,,0.28719940000155475
+361150,Meta_Album_TEX_Micro,0,59,None,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008803200005786493
+361150,Meta_Album_TEX_Micro,1,59,None,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008932099997764453
+361150,Meta_Album_TEX_Micro,2,59,None,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007365400000708178
+361150,Meta_Album_TEX_Micro,3,59,None,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.007647200007340871
+361150,Meta_Album_TEX_Micro,4,59,None,None,DecisionTree,640,160,ok,,0.05,0.0047619047619047615,,0.008241000003181398

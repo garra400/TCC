@@ -1,0 +1,9 @@
+{
+  "task_id": 9985,
+  "signature": "4a075a53de898d588164d96ce261aaab362265fb36a6ddfb287bfcfbfb0b1282",
+  "folds_sha256": "1631ce75124f6e24505ffe4307e0d0bcf5fd428d7069632084771e980367e898",
+  "raw_sha256": "ab9dbb6a5eb95e1fe632244cbe7e71e91d6b7eaf2c4a524da999c5633664a73e",
+  "n_records": 300,
+  "n_errors": 0,
+  "tempo_s": 623.5200049999985
+}

@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+362103,electrical_grid_stability_simulated_classification,0,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.842461334626509,0.8476511464251232,,3.171287699995446
+362103,electrical_grid_stability_simulated_classification,1,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.8491227766327786,0.8561787808385883,,2.6720927999995183
+362103,electrical_grid_stability_simulated_classification,2,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.8567389459464141,0.8616295427515295,,4.060104299991508
+362103,electrical_grid_stability_simulated_classification,3,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.85748367654445,0.8649365257024684,,3.0038835000013933
+362103,electrical_grid_stability_simulated_classification,4,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.8580075858605103,0.8635557374812389,,2.670980900002178
+362103,electrical_grid_stability_simulated_classification,0,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.9281659710074646,0.9280380716475684,,1.8611974000086775
+362103,electrical_grid_stability_simulated_classification,1,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.9067376469976965,0.9117409481708312,,1.759782200009795
+362103,electrical_grid_stability_simulated_classification,2,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.922361835154748,0.9221095334685598,,2.2484659000037936
+362103,electrical_grid_stability_simulated_classification,3,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.9109354162697657,0.9183550979518162,,1.9001752999902237
+362103,electrical_grid_stability_simulated_classification,4,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.9208875283603803,0.9205104419267944,,1.6289107000047807
+362103,electrical_grid_stability_simulated_classification,0,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.7967686485737543,0.8074355297259401,,0.3564048999978695
+362103,electrical_grid_stability_simulated_classification,1,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.8163459706610783,0.8281320669380371,,0.349640400003409
+362103,electrical_grid_stability_simulated_classification,2,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.808768769808968,0.8202170963364993,,0.3577763000066625
+362103,electrical_grid_stability_simulated_classification,3,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.8200393148478498,0.8343597318226941,,0.3601617999956943
+362103,electrical_grid_stability_simulated_classification,4,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.8316908848438663,0.8391398307529143,,0.35098699999798555
+362103,electrical_grid_stability_simulated_classification,0,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.931657978143023,0.928061879667925,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.41205820000323
+362103,electrical_grid_stability_simulated_classification,1,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.8907259391399227,0.8936480913513809,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.846779600004083
+362103,electrical_grid_stability_simulated_classification,2,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.9266916642130969,0.9264367816091954,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.880811700000777
+362103,electrical_grid_stability_simulated_classification,3,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.9088484386636415,0.9108059659931429,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.757018599993899
+362103,electrical_grid_stability_simulated_classification,4,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.9268042397686139,0.925530916002111,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.420035300005111
+362103,electrical_grid_stability_simulated_classification,0,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.7606600391416547,0.7656212860094702,,0.12528619999648072
+362103,electrical_grid_stability_simulated_classification,1,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.764240807772909,0.7717416115042228,,0.11551080000936054
+362103,electrical_grid_stability_simulated_classification,2,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.798080586778434,0.8025514858000693,,0.1063115999859292
+362103,electrical_grid_stability_simulated_classification,3,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.7885051698158957,0.7942250248921341,,0.12665630000992678
+362103,electrical_grid_stability_simulated_classification,4,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.7754420755468574,0.7797820062079452,,0.10424600000260398
+362103,electrical_grid_stability_simulated_classification,0,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9078395884930464,0.9115062617513675,,2.4583206999959657
+362103,electrical_grid_stability_simulated_classification,1,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9006347529399539,0.9056801394179148,,2.835452200000873
+362103,electrical_grid_stability_simulated_classification,2,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9134380574654912,0.9179039454269213,,2.4620528999948874
+362103,electrical_grid_stability_simulated_classification,3,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9139966054140183,0.9207215222348604,,2.521238400004222
+362103,electrical_grid_stability_simulated_classification,4,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.916724397720778,0.9184703737644185,,2.4624539999931585
+362103,electrical_grid_stability_simulated_classification,0,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.9592584734754672,0.9593957107252982,,1.4245564000011655
+362103,electrical_grid_stability_simulated_classification,1,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.9642789102686227,0.9642789102686227,,1.404194999995525
+362103,electrical_grid_stability_simulated_classification,2,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.9624127539444742,0.9621365787694388,,1.438751499998034
+362103,electrical_grid_stability_simulated_classification,3,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.9611982368936074,0.9635497039229495,,1.5041682000010042
+362103,electrical_grid_stability_simulated_classification,4,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.9611246297996155,0.9615382010983282,,1.573119399996358
+362103,electrical_grid_stability_simulated_classification,0,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.8415996986438975,0.8510034249680871,,0.3395264999999199
+362103,electrical_grid_stability_simulated_classification,1,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.833983529330262,0.8452931568100124,,0.3280765999952564
+362103,electrical_grid_stability_simulated_classification,2,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.8483001091116923,0.857397504456328,,0.2945681999990484
+362103,electrical_grid_stability_simulated_classification,3,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.8541583678276381,0.8661584436588907,,0.34385820000898093
+362103,electrical_grid_stability_simulated_classification,4,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.8573905852196955,0.8645225844998906,,0.3328315999970073
+362103,electrical_grid_stability_simulated_classification,0,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.9584011673219142,0.9563534198307968,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.622879600006854
+362103,electrical_grid_stability_simulated_classification,1,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.9586414728346525,0.9608416436067457,,9.17964239999128
+362103,electrical_grid_stability_simulated_classification,2,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.960732780269835,0.961008198026365,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.484625899989624
+362103,electrical_grid_stability_simulated_classification,3,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.959219505013942,0.9623914154317834,,7.925484599996707
+362103,electrical_grid_stability_simulated_classification,4,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.9601352638597829,0.9609611791458956,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,10.72649060000549
+362103,electrical_grid_stability_simulated_classification,0,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.838189958260448,0.8400043536230306,,0.11427520000142977
+362103,electrical_grid_stability_simulated_classification,1,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8315090320234158,0.8326952576710311,,0.1012994000047911
+362103,electrical_grid_stability_simulated_classification,2,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8344381613813887,0.8369270734054508,,0.11037059999944177
+362103,electrical_grid_stability_simulated_classification,3,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8445721262924539,0.8472414534321027,,0.11457910000171978
+362103,electrical_grid_stability_simulated_classification,4,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8414568142849721,0.8421703047496162,,0.1624322999996366
+362103,electrical_grid_stability_simulated_classification,0,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.9046853080240392,0.9086876584809072,,2.5811097999976482
+362103,electrical_grid_stability_simulated_classification,1,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.898264171530508,0.903877816071025,,3.2163046000059694
+362103,electrical_grid_stability_simulated_classification,2,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.906830738322451,0.9122033020338105,,2.9126570999942487
+362103,electrical_grid_stability_simulated_classification,3,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.9091623512703718,0.9166719781382588,,2.724307199998293
+362103,electrical_grid_stability_simulated_classification,4,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.9080452553733178,0.911100712257821,,3.0741604000068037
+362103,electrical_grid_stability_simulated_classification,0,11,StandardScaler,None,SVM,8000,2000,ok,,0.9487131748038587,0.9500564036919175,,1.73710719999508
+362103,electrical_grid_stability_simulated_classification,1,11,StandardScaler,None,SVM,8000,2000,ok,,0.9518674552728659,0.9528138024509162,,2.129220000002533
+362103,electrical_grid_stability_simulated_classification,2,11,StandardScaler,None,SVM,8000,2000,ok,,0.949908207623963,0.9501771419225775,,1.681283700003405
+362103,electrical_grid_stability_simulated_classification,3,11,StandardScaler,None,SVM,8000,2000,ok,,0.9521272450163667,0.9557951832576166,,1.7947305999987293
+362103,electrical_grid_stability_simulated_classification,4,11,StandardScaler,None,SVM,8000,2000,ok,,0.9555261608271706,0.9551181406797546,,1.6988207000104012
+362103,electrical_grid_stability_simulated_classification,0,12,StandardScaler,None,kNN,8000,2000,ok,,0.8204701328391555,0.8328978765285242,,0.5566976000118302
+362103,electrical_grid_stability_simulated_classification,1,12,StandardScaler,None,kNN,8000,2000,ok,,0.8098707113043178,0.8204050794397877,,0.4640212999947835
+362103,electrical_grid_stability_simulated_classification,2,12,StandardScaler,None,kNN,8000,2000,ok,,0.8262006615978801,0.8376740494913787,,0.4721488000068348
+362103,electrical_grid_stability_simulated_classification,3,12,StandardScaler,None,kNN,8000,2000,ok,,0.834728259928298,0.8484039404755517,,0.4953886000002967
+362103,electrical_grid_stability_simulated_classification,4,12,StandardScaler,None,kNN,8000,2000,ok,,0.8310738842030516,0.8399576640622146,,0.5041347999940626
+362103,electrical_grid_stability_simulated_classification,0,13,StandardScaler,None,MLP,8000,2000,ok,,0.9456714698903688,0.9463378423096843,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.799053800001275
+362103,electrical_grid_stability_simulated_classification,1,13,StandardScaler,None,MLP,8000,2000,ok,,0.9552468868529072,0.9536188113472117,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.071390400000382
+362103,electrical_grid_stability_simulated_classification,2,13,StandardScaler,None,MLP,8000,2000,ok,,0.9577841666810994,0.9577841666810994,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.678073900009622
+362103,electrical_grid_stability_simulated_classification,3,13,StandardScaler,None,MLP,8000,2000,ok,,0.9565891338609952,0.9576822916666666,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.125846200011438
+362103,electrical_grid_stability_simulated_classification,4,13,StandardScaler,None,MLP,8000,2000,ok,,0.9594836245865013,0.957431113168308,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,12.587636199998087
+362103,electrical_grid_stability_simulated_classification,0,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.8341394031763626,0.8368241949879924,,0.136192599995411
+362103,electrical_grid_stability_simulated_classification,1,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.8313228493739067,0.8319161879892729,,0.13531820000207517
+362103,electrical_grid_stability_simulated_classification,2,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.8265427180934897,0.8302253621402558,,0.12828520000039134
+362103,electrical_grid_stability_simulated_classification,3,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.8458407662065501,0.849136800125938,,0.12259500000800472
+362103,electrical_grid_stability_simulated_classification,4,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.8344771298429139,0.8347767793660574,,0.13519309999537654
+362103,electrical_grid_stability_simulated_classification,0,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.8435437918910962,0.8487511381476854,,2.815310899997712
+362103,electrical_grid_stability_simulated_classification,1,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.8481528949237084,0.8543631476978344,,3.0093503999960376
+362103,electrical_grid_stability_simulated_classification,2,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.8570182199206775,0.8628685099011414,,3.127542500005802
+362103,electrical_grid_stability_simulated_classification,3,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.8570182199206775,0.8628685099011414,,2.891168500005733
+362103,electrical_grid_stability_simulated_classification,4,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.856254005091879,0.8607136942566882,,2.8520067000063136
+362103,electrical_grid_stability_simulated_classification,0,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.9307227350664196,0.9307227350664196,,1.635347699993872
+362103,electrical_grid_stability_simulated_classification,1,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.903789033408961,0.908511172730632,,1.9183047999977134
+362103,electrical_grid_stability_simulated_classification,2,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.9210737110098893,0.9214512557641912,,1.670906700004707
+362103,electrical_grid_stability_simulated_classification,3,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.9115329326798178,0.9184648473309358,,1.7464771999948425
+362103,electrical_grid_stability_simulated_classification,4,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.9175470652418642,0.9167991217444955,,1.7483002999942983
+362103,electrical_grid_stability_simulated_classification,0,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.8051685169469509,0.8144801338209162,,0.36180509999394417
+362103,electrical_grid_stability_simulated_classification,1,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.814964755191465,0.8268680428959885,,0.3591128999978537
+362103,electrical_grid_stability_simulated_classification,2,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.8172422452761565,0.8285258525480269,,0.392233300008229
+362103,electrical_grid_stability_simulated_classification,3,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.8271510590761877,0.8404550834218354,,0.46684940000704955
+362103,electrical_grid_stability_simulated_classification,4,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.8353301061674085,0.8429679174577227,,0.4011426999932155
+362103,electrical_grid_stability_simulated_classification,0,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.9331517691681532,0.9282617610559869,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.461082900001202
+362103,electrical_grid_stability_simulated_classification,1,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.9080452553733178,0.911100712257821,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.37591989999055
+362103,electrical_grid_stability_simulated_classification,2,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.9285967889987703,0.9257884972170687,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.706410600003437
+362103,electrical_grid_stability_simulated_classification,3,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.9201774363948112,0.921308535934457,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.814563499996439
+362103,electrical_grid_stability_simulated_classification,4,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.9243405670344135,0.9233274587048172,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.568803899994236
+362103,electrical_grid_stability_simulated_classification,0,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.7653081106357922,0.7693985236552261,,0.11749010000494309
+362103,electrical_grid_stability_simulated_classification,1,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.75700133358735,0.7625925778008529,,0.10143640000023879
+362103,electrical_grid_stability_simulated_classification,2,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.7966062799840663,0.8009674521304729,,0.11443549999967217
+362103,electrical_grid_stability_simulated_classification,3,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.7999813817350492,0.8077522645529447,,0.10751299999537878
+362103,electrical_grid_stability_simulated_classification,4,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.7705536985399817,0.773414889378303,,0.12214539998967666
+362103,electrical_grid_stability_simulated_classification,0,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9078395884930464,0.9115062617513675,,2.420217099992442
+362103,electrical_grid_stability_simulated_classification,1,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9006347529399539,0.9056801394179148,,2.5893104999995558
+362103,electrical_grid_stability_simulated_classification,2,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9134380574654912,0.9179039454269213,,2.3585929999971995
+362103,electrical_grid_stability_simulated_classification,3,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9139966054140183,0.9207215222348604,,2.5950322999997297
+362103,electrical_grid_stability_simulated_classification,4,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.916724397720778,0.9184703737644185,,3.1598730999976397
+362103,electrical_grid_stability_simulated_classification,0,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9600421725350283,0.9604547701433515,,1.375478900008602
+362103,electrical_grid_stability_simulated_classification,1,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9655475501827188,0.9663832375978546,,1.3760340000008
+362103,electrical_grid_stability_simulated_classification,2,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9628046034742548,0.9626663679976106,,1.4072642999963136
+362103,electrical_grid_stability_simulated_classification,3,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9611982368936074,0.9635497039229495,,1.4354399000003468
+362103,electrical_grid_stability_simulated_classification,4,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9611246297996155,0.9615382010983282,,1.5148109000001568
+362103,electrical_grid_stability_simulated_classification,0,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.8452584041982023,0.8537578803233452,,0.27558630000567064
+362103,electrical_grid_stability_simulated_classification,1,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.8470855920608253,0.8580931363351963,,0.269779499998549
+362103,electrical_grid_stability_simulated_classification,2,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.8555049446647847,0.8635462012593688,,0.3130702999915229
+362103,electrical_grid_stability_simulated_classification,3,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.8541583678276381,0.8661584436588907,,0.3383568999997806
+362103,electrical_grid_stability_simulated_classification,4,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.8580811929545021,0.86512168345828,,0.3280441999959294
+362103,electrical_grid_stability_simulated_classification,0,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.9614233880046417,0.961561272819949,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.784435100009432
+362103,electrical_grid_stability_simulated_classification,1,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.9584942586466686,0.9568547082299643,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.43624140000611
+362103,electrical_grid_stability_simulated_classification,2,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.9541254611267946,0.9554850554645351,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.884315200004494
+362103,electrical_grid_stability_simulated_classification,3,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.9471998995479658,0.951367595135776,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.649869399989257
+362103,electrical_grid_stability_simulated_classification,4,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.965326728900743,0.9603615030918027,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.76053879999381
+362103,electrical_grid_stability_simulated_classification,0,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.838189958260448,0.8400043536230306,,0.11366089999501128
+362103,electrical_grid_stability_simulated_classification,1,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8315090320234158,0.8326952576710311,,0.11056340001232456
+362103,electrical_grid_stability_simulated_classification,2,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8344381613813887,0.8369270734054508,,0.10023180001007859
+362103,electrical_grid_stability_simulated_classification,3,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8445721262924539,0.8472414534321027,,0.10840970001299866
+362103,electrical_grid_stability_simulated_classification,4,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8414568142849721,0.8421703047496162,,0.11963710001145955
+362103,electrical_grid_stability_simulated_classification,0,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.9046853080240392,0.9086876584809072,,2.4311010999954306
+362103,electrical_grid_stability_simulated_classification,1,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.898264171530508,0.903877816071025,,2.5364445999875898
+362103,electrical_grid_stability_simulated_classification,2,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.906830738322451,0.9122033020338105,,2.5234027999977116
+362103,electrical_grid_stability_simulated_classification,3,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.9091623512703718,0.9166719781382588,,2.637510900007328
+362103,electrical_grid_stability_simulated_classification,4,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.9080452553733178,0.911100712257821,,2.7222025000082795
+362103,electrical_grid_stability_simulated_classification,0,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.9509711806577876,0.9527273468223404,,1.7711276000045473
+362103,electrical_grid_stability_simulated_classification,1,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.9568878920660212,0.9577079440747203,,1.5476625000010245
+362103,electrical_grid_stability_simulated_classification,2,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.949722024974454,0.949185014120079,,1.808038299990585
+362103,electrical_grid_stability_simulated_classification,3,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.9544978264258127,0.9574992562369842,,1.8076023000030546
+362103,electrical_grid_stability_simulated_classification,4,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.9566086180917577,0.9561996312657847,,1.61119769999641
+362103,electrical_grid_stability_simulated_classification,0,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.8250251130085384,0.8361688969184271,,0.5539451000076951
+362103,electrical_grid_stability_simulated_classification,1,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.8233841077954243,0.8327833546175702,,0.6500971999921603
+362103,electrical_grid_stability_simulated_classification,2,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.8284586674518091,0.8403103509081291,,0.5443390000000363
+362103,electrical_grid_stability_simulated_classification,3,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.837696357747796,0.8506312526945783,,0.5509928999963449
+362103,electrical_grid_stability_simulated_classification,4,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.8264452969396767,0.8353783159759764,,0.526180499990005
+362103,electrical_grid_stability_simulated_classification,0,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.9493648140771402,0.9535533211970895,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.570450899991556
+362103,electrical_grid_stability_simulated_classification,1,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.9560500701432307,0.9532011364055084,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,12.475349600004847
+362103,electrical_grid_stability_simulated_classification,2,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.9505598468972445,0.9536705842275592,,8.792134200004512
+362103,electrical_grid_stability_simulated_classification,3,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.9544242193318208,0.9555121527777778,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.708441399998264
+362103,electrical_grid_stability_simulated_classification,4,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.9524844559136805,0.9514047273481236,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.054427199997008
+362103,electrical_grid_stability_simulated_classification,0,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.8341394031763626,0.8368241949879924,,0.1677501999947708
+362103,electrical_grid_stability_simulated_classification,1,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.8313228493739067,0.8319161879892729,,0.15108840000175405
+362103,electrical_grid_stability_simulated_classification,2,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.8265427180934897,0.8302253621402558,,0.13330010000208858
+362103,electrical_grid_stability_simulated_classification,3,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.8458407662065501,0.849136800125938,,0.12761809999938123
+362103,electrical_grid_stability_simulated_classification,4,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.8344771298429139,0.8347767793660574,,0.11378359999798704
+362103,electrical_grid_stability_simulated_classification,0,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.8516254178285041,0.8562329070803647,,2.90467190000345
+362103,electrical_grid_stability_simulated_classification,1,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.843803581634597,0.8510467289667876,,3.169102200001362
+362103,electrical_grid_stability_simulated_classification,2,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.8569792514591523,0.8651632648135217,,2.8945089999906486
+362103,electrical_grid_stability_simulated_classification,3,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.860412805902423,0.8693273835588826,,3.9745282999938354
+362103,electrical_grid_stability_simulated_classification,4,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.8476484698384108,0.854569141728454,,2.740194199999678
+362103,electrical_grid_stability_simulated_classification,0,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.9225675020350197,0.9216845914433665,,1.7663612999895122
+362103,electrical_grid_stability_simulated_classification,1,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.9016241188797867,0.9063198235744794,,1.9077060999989044
+362103,electrical_grid_stability_simulated_classification,2,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.9129726008417187,0.9155697773575029,,1.776571199996397
+362103,electrical_grid_stability_simulated_classification,3,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.9044406726822425,0.9117352410289905,,2.1164769000024535
+362103,electrical_grid_stability_simulated_classification,4,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.930629643741665,0.9302438572010645,,1.6856830999895465
+362103,electrical_grid_stability_simulated_classification,0,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.8008192036578397,0.8109053581317449,,0.3484568000130821
+362103,electrical_grid_stability_simulated_classification,1,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.7993990197267012,0.8114244948221256,,0.34579850001318846
+362103,electrical_grid_stability_simulated_classification,2,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.8145729056616845,0.8263692018554176,,0.3710335999930976
+362103,electrical_grid_stability_simulated_classification,3,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.8151119693794489,0.8295145742155097,,0.41904799999610987
+362103,electrical_grid_stability_simulated_classification,4,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.8179718214724883,0.8271908246716695,,0.3557661999948323
+362103,electrical_grid_stability_simulated_classification,0,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.9272545419906821,0.9219230460707506,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.074831299993093
+362103,electrical_grid_stability_simulated_classification,1,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.8928908536690972,0.895829668964686,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.698847499996191
+362103,electrical_grid_stability_simulated_classification,2,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.9232775940005888,0.9208807745933635,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.173525400008657
+362103,electrical_grid_stability_simulated_classification,3,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.9156614246869534,0.9160341009893078,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.726374400008353
+362103,electrical_grid_stability_simulated_classification,4,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.9352041081418105,0.9313215556955355,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.200927199999569
+362103,electrical_grid_stability_simulated_classification,0,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.7709260638389996,0.7747252747252747,,0.11295779999636579
+362103,electrical_grid_stability_simulated_classification,1,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.7662043852508702,0.7698560281929112,,0.11459579999791458
+362103,electrical_grid_stability_simulated_classification,2,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.8054521207502727,0.8104858613637966,,0.11680299999716226
+362103,electrical_grid_stability_simulated_classification,3,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.7850131626803374,0.7928179302399543,,0.11750639999809209
+362103,electrical_grid_stability_simulated_classification,4,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.7831903046467725,0.7842845596375763,,0.11015780000889208
+362103,electrical_grid_stability_simulated_classification,0,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9078395884930464,0.9115062617513675,,2.537376399995992
+362103,electrical_grid_stability_simulated_classification,1,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9006347529399539,0.9056801394179148,,2.6296049999946263
+362103,electrical_grid_stability_simulated_classification,2,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9134380574654912,0.9179039454269213,,2.336828300001798
+362103,electrical_grid_stability_simulated_classification,3,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9139966054140183,0.9207215222348604,,3.0502068999921903
+362103,electrical_grid_stability_simulated_classification,4,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.916724397720778,0.9184703737644185,,2.5706300000019837
+362103,electrical_grid_stability_simulated_classification,0,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.9582691075356344,0.9588172308706038,,1.590100600005826
+362103,electrical_grid_stability_simulated_classification,1,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.9615164793293961,0.9620685021176614,,1.5282536000013351
+362103,electrical_grid_stability_simulated_classification,2,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.9586609570654151,0.9593468502346094,,1.5015939000004437
+362103,electrical_grid_stability_simulated_classification,3,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.9611982368936074,0.9635497039229495,,1.457374699995853
+362103,electrical_grid_stability_simulated_classification,4,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.9611246297996155,0.9615382010983282,,1.602813800011063
+362103,electrical_grid_stability_simulated_classification,0,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.8337237395867612,0.8430777315294533,,0.32728720000886824
+362103,electrical_grid_stability_simulated_classification,1,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.8337778624499905,0.84556489430777,,0.3236365000047954
+362103,electrical_grid_stability_simulated_classification,2,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.8409285751398534,0.8493094508274774,,0.35087840000051074
+362103,electrical_grid_stability_simulated_classification,3,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.8534677600928315,0.8655456890094289,,0.337824999995064
+362103,electrical_grid_stability_simulated_classification,4,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.857782434749476,0.8650293174023675,,0.3138862999912817
+362103,electrical_grid_stability_simulated_classification,0,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.9584011673219142,0.9563534198307968,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.713402599998517
+362103,electrical_grid_stability_simulated_classification,1,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.9583816830911516,0.957834373418789,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.680832400001236
+362103,electrical_grid_stability_simulated_classification,2,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.9614428722354041,0.9600673027837408,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.666195099998731
+362103,electrical_grid_stability_simulated_classification,3,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.964073243388351,0.9647672702033281,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.53271610000229
+362103,electrical_grid_stability_simulated_classification,4,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.960918962919344,0.9620225694444444,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.65510409999115
+362103,electrical_grid_stability_simulated_classification,0,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.838189958260448,0.8400043536230306,,0.10204939999675844
+362103,electrical_grid_stability_simulated_classification,1,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8315090320234158,0.8326952576710311,,0.1139365999988513
+362103,electrical_grid_stability_simulated_classification,2,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8344381613813887,0.8369270734054508,,0.10060169998905621
+362103,electrical_grid_stability_simulated_classification,3,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8445721262924539,0.8472414534321027,,0.10935240000253543
+362103,electrical_grid_stability_simulated_classification,4,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.8414568142849721,0.8421703047496162,,0.10368639999069273
+362103,electrical_grid_stability_simulated_classification,0,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.9046853080240392,0.9086876584809072,,2.6218883999972604
+362103,electrical_grid_stability_simulated_classification,1,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.898264171530508,0.903877816071025,,2.8660511000052793
+362103,electrical_grid_stability_simulated_classification,2,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.906830738322451,0.9122033020338105,,2.6020418999978574
+362103,electrical_grid_stability_simulated_classification,3,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.9091623512703718,0.9166719781382588,,2.4569131000025664
+362103,electrical_grid_stability_simulated_classification,4,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.9080452553733178,0.911100712257821,,2.398427400010405
+362103,electrical_grid_stability_simulated_classification,0,41,RobustScaler,None,SVM,8000,2000,ok,,0.9450739534803165,0.9462727245345603,,1.7738705999945523
+362103,electrical_grid_stability_simulated_classification,1,41,RobustScaler,None,SVM,8000,2000,ok,,0.9486200834791043,0.9495595819302897,,1.6689418999885675
+362103,electrical_grid_stability_simulated_classification,2,41,RobustScaler,None,SVM,8000,2000,ok,,0.9467539271549559,0.947421926303428,,1.9621656000090297
+362103,electrical_grid_stability_simulated_classification,3,41,RobustScaler,None,SVM,8000,2000,ok,,0.9488798732226051,0.9525207523878105,,1.7071201000071596
+362103,electrical_grid_stability_simulated_classification,4,41,RobustScaler,None,SVM,8000,2000,ok,,0.9523718803581636,0.9523718803581636,,1.7697462000069208
+362103,electrical_grid_stability_simulated_classification,0,42,RobustScaler,None,kNN,8000,2000,ok,,0.820861982368936,0.8333996334791937,,0.5297692000021925
+362103,electrical_grid_stability_simulated_classification,1,42,RobustScaler,None,kNN,8000,2000,ok,,0.8074806456641092,0.8193031275003363,,0.5174331000016537
+362103,electrical_grid_stability_simulated_classification,2,42,RobustScaler,None,kNN,8000,2000,ok,,0.8215720743345052,0.8330383301125525,,0.5145370000100229
+362103,electrical_grid_stability_simulated_classification,3,42,RobustScaler,None,kNN,8000,2000,ok,,0.8287184571953099,0.8424782661235863,,0.44577900000149384
+362103,electrical_grid_stability_simulated_classification,4,42,RobustScaler,None,kNN,8000,2000,ok,,0.8281057863835536,0.8377575179809427,,0.49167730000044685
+362103,electrical_grid_stability_simulated_classification,0,43,RobustScaler,None,MLP,8000,2000,ok,,0.9486936905730963,0.951520710869792,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.1436543000018
+362103,electrical_grid_stability_simulated_classification,1,43,RobustScaler,None,MLP,8000,2000,ok,,0.9524649716829179,0.9528707534585148,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.603094000005512
+362103,electrical_grid_stability_simulated_classification,2,43,RobustScaler,None,MLP,8000,2000,ok,,0.9577841666810994,0.9577841666810994,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.249606900004437
+362103,electrical_grid_stability_simulated_classification,3,43,RobustScaler,None,MLP,8000,2000,ok,,0.9543311280070663,0.9550105142596343,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,10.710503099995549
+362103,electrical_grid_stability_simulated_classification,4,43,RobustScaler,None,MLP,8000,2000,ok,,0.9567948007412668,0.9572044772784214,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.9434423000057
+362103,electrical_grid_stability_simulated_classification,0,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.8341394031763626,0.8368241949879924,,0.1398714000097243
+362103,electrical_grid_stability_simulated_classification,1,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.8313228493739067,0.8319161879892729,,0.14529290000791661
+362103,electrical_grid_stability_simulated_classification,2,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.8265427180934897,0.8302253621402558,,0.11737999999604654
+362103,electrical_grid_stability_simulated_classification,3,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.8458407662065501,0.849136800125938,,0.13885020000452641
+362103,electrical_grid_stability_simulated_classification,4,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.8344771298429139,0.8347767793660574,,0.16660110000520945
+362103,electrical_grid_stability_simulated_classification,0,45,None,PCA,RandomForest,8000,2000,ok,,0.8720059232061519,0.8762288123990252,,2.8226180999918142
+362103,electrical_grid_stability_simulated_classification,1,45,None,PCA,RandomForest,8000,2000,ok,,0.8794359098702784,0.8805696610024114,,2.956628699990688
+362103,electrical_grid_stability_simulated_classification,2,45,None,PCA,RandomForest,8000,2000,ok,,0.8435827603526213,0.8465503452753753,,2.8748307999921963
+362103,electrical_grid_stability_simulated_classification,3,45,None,PCA,RandomForest,8000,2000,ok,,0.8819342212369456,0.8869617513685311,,4.280590900001698
+362103,electrical_grid_stability_simulated_classification,4,45,None,PCA,RandomForest,8000,2000,ok,,0.8791566358960148,0.8792699132232199,,2.8968489000108093
+362103,electrical_grid_stability_simulated_classification,0,46,None,PCA,SVM,8000,2000,ok,,0.8669465179514713,0.8736283641964322,,2.456215099999099
+362103,electrical_grid_stability_simulated_classification,1,46,None,PCA,SVM,8000,2000,ok,,0.8723046814111779,0.8763086111098949,,3.1501820999983465
+362103,electrical_grid_stability_simulated_classification,2,46,None,PCA,SVM,8000,2000,ok,,0.843877188728589,0.8525414754922541,,2.5757982000068296
+362103,electrical_grid_stability_simulated_classification,3,46,None,PCA,SVM,8000,2000,ok,,0.8753074178631428,0.8823781157029358,,3.965940199996112
+362103,electrical_grid_stability_simulated_classification,4,46,None,PCA,SVM,8000,2000,ok,,0.8689988569251286,0.8766032925893636,,2.539130400007707
+362103,electrical_grid_stability_simulated_classification,0,47,None,PCA,kNN,8000,2000,ok,,0.7355383709451151,0.7409703716797238,,0.09986729999945965
+362103,electrical_grid_stability_simulated_classification,1,47,None,PCA,kNN,8000,2000,ok,,0.7477636432913628,0.7526532367150025,,0.13460430000850465
+362103,electrical_grid_stability_simulated_classification,2,47,None,PCA,kNN,8000,2000,ok,,0.751402864614905,0.7564429152011727,,0.08738749999611173
+362103,electrical_grid_stability_simulated_classification,3,47,None,PCA,kNN,8000,2000,ok,,0.7569818493565874,0.7633418799397163,,0.08765099999436643
+362103,electrical_grid_stability_simulated_classification,4,47,None,PCA,kNN,8000,2000,ok,,0.7575057586726477,0.7626135090620495,,0.09526489999552723
+362103,electrical_grid_stability_simulated_classification,0,48,None,PCA,MLP,8000,2000,ok,,0.9115567467396387,0.9099604014472114,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.856747199999518
+362103,electrical_grid_stability_simulated_classification,1,48,None,PCA,MLP,8000,2000,ok,,0.9028970886229412,0.9013338530828723,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.753581899989513
+362103,electrical_grid_stability_simulated_classification,2,48,None,PCA,MLP,8000,2000,ok,,0.8748073226069035,0.8761510348993347,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.345014799997443
+362103,electrical_grid_stability_simulated_classification,3,48,None,PCA,MLP,8000,2000,ok,,0.9003013561024611,0.9012586805555556,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.947274500009371
+362103,electrical_grid_stability_simulated_classification,4,48,None,PCA,MLP,8000,2000,ok,,0.9033971838791804,0.9079930994824612,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.443556400001398
+362103,electrical_grid_stability_simulated_classification,0,49,None,PCA,DecisionTree,8000,2000,ok,,0.8157917525416096,0.820641816205177,,0.1185338000068441
+362103,electrical_grid_stability_simulated_classification,1,49,None,PCA,DecisionTree,8000,2000,ok,,0.812804170491349,0.8194217952353942,,0.11555590000352822
+362103,electrical_grid_stability_simulated_classification,2,49,None,PCA,DecisionTree,8000,2000,ok,,0.781917334903618,0.7872523250972354,,0.12381200000527315
+362103,electrical_grid_stability_simulated_classification,3,49,None,PCA,DecisionTree,8000,2000,ok,,0.8160515422851107,0.8227453204764605,,0.10906129999784753
+362103,electrical_grid_stability_simulated_classification,4,49,None,PCA,DecisionTree,8000,2000,ok,,0.8121568610471259,0.8115029131981717,,0.1091632000025129
+362103,electrical_grid_stability_simulated_classification,0,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.9078395884930464,0.9115062617513675,,2.4891367000091122
+362103,electrical_grid_stability_simulated_classification,1,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.9006347529399539,0.9056801394179148,,2.577683799987426
+362103,electrical_grid_stability_simulated_classification,2,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.9134380574654912,0.9179039454269213,,2.601466399995843
+362103,electrical_grid_stability_simulated_classification,3,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.9139966054140183,0.9207215222348604,,2.5106672999972943
+362103,electrical_grid_stability_simulated_classification,4,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.916724397720778,0.9184703737644185,,2.544989499991061
+362103,electrical_grid_stability_simulated_classification,0,51,None,SelectKBest,SVM,8000,2000,ok,,0.86259720466236,0.8703825155984117,,2.2923609999998007
+362103,electrical_grid_stability_simulated_classification,1,51,None,SelectKBest,SVM,8000,2000,ok,,0.8717807720951176,0.8777790134454095,,2.9225875999982236
+362103,electrical_grid_stability_simulated_classification,2,51,None,SelectKBest,SVM,8000,2000,ok,,0.8814103119208854,0.888490324603561,,2.4531651999859605
+362103,electrical_grid_stability_simulated_classification,3,51,None,SelectKBest,SVM,8000,2000,ok,,0.8839670759798404,0.8912135624106964,,2.4931483999971533
+362103,electrical_grid_stability_simulated_classification,4,51,None,SelectKBest,SVM,8000,2000,ok,,0.8794900327335077,0.8834610747679275,,2.5633508000028087
+362103,electrical_grid_stability_simulated_classification,0,52,None,SelectKBest,kNN,8000,2000,ok,,0.7547433277334211,0.7600692640692641,,0.08236770000075921
+362103,electrical_grid_stability_simulated_classification,1,52,None,SelectKBest,kNN,8000,2000,ok,,0.7555270267929822,0.7610116912969718,,0.06916050000290852
+362103,electrical_grid_stability_simulated_classification,2,52,None,SelectKBest,kNN,8000,2000,ok,,0.7708676111467119,0.7771795768690174,,0.08277329998963978
+362103,electrical_grid_stability_simulated_classification,3,52,None,SelectKBest,kNN,8000,2000,ok,,0.7669101473873812,0.7739939592212557,,0.07167750000371598
+362103,electrical_grid_stability_simulated_classification,4,52,None,SelectKBest,kNN,8000,2000,ok,,0.7767301996917162,0.7806968727868728,,0.07440469998982735
+362103,electrical_grid_stability_simulated_classification,0,53,None,SelectKBest,MLP,8000,2000,ok,,0.9539241240755815,0.9481410851183893,,5.198562499994296
+362103,electrical_grid_stability_simulated_classification,1,53,None,SelectKBest,MLP,8000,2000,ok,,0.9619472973207017,0.9596098309671426,,9.6201027000061
+362103,electrical_grid_stability_simulated_classification,2,53,None,SelectKBest,MLP,8000,2000,ok,,0.955207918391382,0.9565707858190586,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.417563700000755
+362103,electrical_grid_stability_simulated_classification,3,53,None,SelectKBest,MLP,8000,2000,ok,,0.9505403626664819,0.9551496415800016,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,11.295275900003617
+362103,electrical_grid_stability_simulated_classification,4,53,None,SelectKBest,MLP,8000,2000,ok,,0.970440257018653,0.9656990585463476,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.387730499991449
+362103,electrical_grid_stability_simulated_classification,0,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.838189958260448,0.8400043536230306,,0.10850919999938924
+362103,electrical_grid_stability_simulated_classification,1,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.8315090320234158,0.8326952576710311,,0.8288230000034673
+362103,electrical_grid_stability_simulated_classification,2,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.8344381613813887,0.8369270734054508,,0.09939450000820216
+362103,electrical_grid_stability_simulated_classification,3,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.8445721262924539,0.8472414534321027,,0.11610659999132622
+362103,electrical_grid_stability_simulated_classification,4,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.8414568142849721,0.8421703047496162,,0.09974859999783803
+362103,electrical_grid_stability_simulated_classification,0,55,None,None,RandomForest,8000,2000,ok,,0.9046853080240392,0.9086876584809072,,2.495356300001731
+362103,electrical_grid_stability_simulated_classification,1,55,None,None,RandomForest,8000,2000,ok,,0.898264171530508,0.903877816071025,,3.5599179999990156
+362103,electrical_grid_stability_simulated_classification,2,55,None,None,RandomForest,8000,2000,ok,,0.906830738322451,0.9122033020338105,,2.8866549000085797
+362103,electrical_grid_stability_simulated_classification,3,55,None,None,RandomForest,8000,2000,ok,,0.9091623512703718,0.9166719781382588,,2.7320063000079244
+362103,electrical_grid_stability_simulated_classification,4,55,None,None,RandomForest,8000,2000,ok,,0.9080452553733178,0.911100712257821,,2.6177753000083612
+362103,electrical_grid_stability_simulated_classification,0,56,None,None,SVM,8000,2000,ok,,0.8521644815462686,0.8598095238095238,,2.655550099996617
+362103,electrical_grid_stability_simulated_classification,1,56,None,None,SVM,8000,2000,ok,,0.8608631081244913,0.8663510057086821,,2.692901200003689
+362103,electrical_grid_stability_simulated_classification,2,56,None,None,SVM,8000,2000,ok,,0.8774723323923171,0.8845869773798758,,2.743111099989619
+362103,electrical_grid_stability_simulated_classification,3,56,None,None,SVM,8000,2000,ok,,0.880029096451272,0.8873097523466087,,2.8344922000105726
+362103,electrical_grid_stability_simulated_classification,4,56,None,None,SVM,8000,2000,ok,,0.8718197405566428,0.8753738783649052,,2.694784300008905
+362103,electrical_grid_stability_simulated_classification,0,57,None,None,kNN,8000,2000,ok,,0.740353140857999,0.7461700059783642,,0.1012198999960674
+362103,electrical_grid_stability_simulated_classification,1,57,None,None,kNN,8000,2000,ok,,0.7584561561509551,0.7649286987522281,,0.09038480000162963
+362103,electrical_grid_stability_simulated_classification,2,57,None,None,kNN,8000,2000,ok,,0.7638143196106617,0.7686217393405168,,0.10896329999377485
+362103,electrical_grid_stability_simulated_classification,3,57,None,None,kNN,8000,2000,ok,,0.7617035279447167,0.768270944741533,,0.09837549999065232
+362103,electrical_grid_stability_simulated_classification,4,57,None,None,kNN,8000,2000,ok,,0.7701423647794385,0.773775284181072,,0.08911729999817908
+362103,electrical_grid_stability_simulated_classification,0,58,None,None,MLP,8000,2000,ok,,0.9480030828382895,0.9509606802734432,,8.055526299998746
+362103,electrical_grid_stability_simulated_classification,1,58,None,None,MLP,8000,2000,ok,,0.9558985261261885,0.9571267195780835,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,11.181997799998499
+362103,electrical_grid_stability_simulated_classification,2,58,None,None,MLP,8000,2000,ok,,0.9614623564661667,0.9585803161290132,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.353458400000818
+362103,electrical_grid_stability_simulated_classification,3,58,None,None,MLP,8000,2000,ok,,0.9407787630544346,0.9467558241306447,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.019674700000905
+362103,electrical_grid_stability_simulated_classification,4,58,None,None,MLP,8000,2000,ok,,0.9599685654410364,0.9584605479053732,,7.684545700001763
+362103,electrical_grid_stability_simulated_classification,0,59,None,None,DecisionTree,8000,2000,ok,,0.8341394031763626,0.8368241949879924,,0.1331242000014754
+362103,electrical_grid_stability_simulated_classification,1,59,None,None,DecisionTree,8000,2000,ok,,0.8313228493739067,0.8319161879892729,,0.22852679999778047
+362103,electrical_grid_stability_simulated_classification,2,59,None,None,DecisionTree,8000,2000,ok,,0.8265427180934897,0.8302253621402558,,0.12659860000712797
+362103,electrical_grid_stability_simulated_classification,3,59,None,None,DecisionTree,8000,2000,ok,,0.8458407662065501,0.849136800125938,,0.12068300000100862
+362103,electrical_grid_stability_simulated_classification,4,59,None,None,DecisionTree,8000,2000,ok,,0.8344771298429139,0.8347767793660574,,0.11826699999801349

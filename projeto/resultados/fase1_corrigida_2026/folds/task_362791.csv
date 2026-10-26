@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.56,0.5928941524796447,,0.6188880999980029
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.5773333333333334,0.6140777717186123,,0.565580399997998
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.5973333333333334,0.6419270833333333,,0.5502926000044681
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.536,0.5497835497835498,,0.5244526000024052
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.5921431509666804,0.6313930271847642,,0.5116145000065444
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04925589999766089
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04318290000082925
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.050570300008985214
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.053200499998638406
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.048092900004121475
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,2,StandardScaler,PCA,kNN,1600,400,ok,,0.576,0.609375,,0.019406099992920645
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,2,StandardScaler,PCA,kNN,1600,400,ok,,0.6133333333333333,0.6509598603839442,,0.020540199999231845
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,2,StandardScaler,PCA,kNN,1600,400,ok,,0.616,0.6621102749193672,,0.017878800004837103
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,2,StandardScaler,PCA,kNN,1600,400,ok,,0.5306666666666666,0.5392412839809553,,0.019046800007345155
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,2,StandardScaler,PCA,kNN,1600,400,ok,,0.5715754833401891,0.6006757794501613,,0.017569200004800223
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,3,StandardScaler,PCA,MLP,1600,400,ok,,0.5946666666666667,0.6313930271847642,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0639797000039835
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,3,StandardScaler,PCA,MLP,1600,400,ok,,0.5493333333333333,0.5636998254799302,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7796641000022646
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,3,StandardScaler,PCA,MLP,1600,400,ok,,0.7466666666666667,0.7562056737588652,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6883057999948505
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,3,StandardScaler,PCA,MLP,1600,400,ok,,0.592,0.6218731820826062,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.577553800001624
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,3,StandardScaler,PCA,MLP,1600,400,ok,,0.6722542163718634,0.6753841723605329,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.597543299998506
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.6613333333333333,0.6675531914893618,,0.02487410001049284
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.6186666666666667,0.62322695035461,,0.019777900000917725
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.6413333333333333,0.6496284366081773,,0.022991399993770756
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.5413333333333333,0.5476818695816057,,0.02102549999835901
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.6105512134923899,0.6125553024948297,,0.021982300007948652
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.5373333333333333,0.5527528064761393,,0.39571010001236573
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.5133333333333333,0.5134024078191199,,0.3715494000061881
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.5386666666666666,0.5558845299777943,,0.40772210000432096
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.5146666666666666,0.5151515151515151,,0.3889634999941336
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.5702385849444673,0.5966386554621849,,0.3907303000014508
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.0675891999999294
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06761959999857936
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06755720000364818
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.055412200003047474
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.0763584000087576
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.5533333333333333,0.5733080478843191,,0.017571899996255524
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.5186666666666666,0.5208662737770111,,0.016110199998365715
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.5533333333333333,0.5733080478843191,,0.018432199998642318
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.548,0.5607665332435975,,0.014432600000873208
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.6060263266145619,0.6361063378146163,,0.01878319999377709
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.5,0.4838709677419355,,1.1581039000011515
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.52,0.5229576624925462,,1.2517742000054568
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.56,0.5928941524796447,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.191204500006279
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.492,0.4798439531859558,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.683818900011829
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.5550185109008638,0.5805193170854482,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6209124000015436
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5653333333333334,0.5789473684210527,,0.014051899997866713
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5186666666666666,0.5150849744962145,,0.01844820000405889
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.6253333333333333,0.6436361402107462,,0.014755700001842342
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5373333333333333,0.5408388520971302,,0.014119200001005083
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.6337926779103249,0.6412946003967499,,0.014062300004297867
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,10,StandardScaler,None,RandomForest,1600,400,ok,,0.52,0.5229576624925462,,0.7124020000046585
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,10,StandardScaler,None,RandomForest,1600,400,ok,,0.5373333333333333,0.5527528064761393,,0.8373202000075253
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,10,StandardScaler,None,RandomForest,1600,400,ok,,0.5586666666666666,0.5885325819580483,,0.6643138999934308
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,10,StandardScaler,None,RandomForest,1600,400,ok,,0.556,0.5805193170854482,,0.7408383000001777
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,10,StandardScaler,None,RandomForest,1600,400,ok,,0.6306046894282188,0.6800465386852822,,0.7031872000079602
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,11,StandardScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.0721518000063952
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,11,StandardScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.0778098000009777
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,11,StandardScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.08833310000773054
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,11,StandardScaler,None,SVM,1600,400,ok,,0.52,0.5229576624925462,,0.06418010000197683
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,11,StandardScaler,None,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.07092480000574142
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,12,StandardScaler,None,kNN,1600,400,ok,,0.5773333333333334,0.6140777717186123,,0.015354100003605708
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,12,StandardScaler,None,kNN,1600,400,ok,,0.6133333333333333,0.6509598603839442,,0.01590490000671707
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,12,StandardScaler,None,kNN,1600,400,ok,,0.636,0.6862745098039216,,0.015889899994363077
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,12,StandardScaler,None,kNN,1600,400,ok,,0.5293333333333333,0.5368814192343604,,0.016438899998320267
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,12,StandardScaler,None,kNN,1600,400,ok,,0.5854586589880708,0.6091512517268102,,0.015634900002623908
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,13,StandardScaler,None,MLP,1600,400,ok,,0.6293333333333333,0.6578947368421053,,2.4986140000110026
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,13,StandardScaler,None,MLP,1600,400,ok,,0.632,0.6684624948197264,,2.343739199990523
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,13,StandardScaler,None,MLP,1600,400,ok,,0.7026666666666667,0.7065137639609772,,2.476545099998475
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,13,StandardScaler,None,MLP,1600,400,ok,,0.6719999999999999,0.7105263157894737,,2.2738392999890493
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,13,StandardScaler,None,MLP,1600,400,ok,,0.75586178527355,0.7653333333333334,,2.257799300001352
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.6759999999999999,0.6665908918693643,,0.08405029999266844
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.6106666666666667,0.6028199781550988,,0.07282549999945331
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.6986666666666667,0.6914849856026326,,0.08111759999883361
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.628,0.6127600292791198,,0.07469120000314433
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.6468531468531469,0.6086105675146771,,0.06392990000313148
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.5186666666666666,0.5208662737770111,,0.5086620000074618
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.5186666666666666,0.5208662737770111,,0.5188057999912417
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.6,0.6536796536796536,,0.533028000005288
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.536,0.5497835497835498,,0.5013589999871328
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.5934800493624023,0.6365216704199755,,0.5244868000008864
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04814490000717342
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04297799999767449
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.05012110000825487
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04572770000959281
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.05073629999242257
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.536,0.5497835497835498,,0.026331299988669343
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.616,0.6621102749193672,,0.018233000009786338
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.5773333333333334,0.6140777717186123,,0.017992399996728636
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.5946666666666667,0.6313930271847642,,0.01692959999490995
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.5317770464829288,0.5417012366164908,,0.01835640000354033
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.6306666666666667,0.6630614239024226,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6666866000014124
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.6093333333333333,0.6361063378146163,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.825134700004128
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.7106666666666667,0.7419434118767473,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.561674500000663
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.6546666666666666,0.7024547483263079,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.555768000005628
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.702180172768408,0.7354497354497355,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9082559999951627
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.6799999999999999,0.6799999999999999,,0.03090610000072047
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.5586666666666666,0.5643855776306107,,0.05618220000178553
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.6599999999999999,0.6630343215848257,,0.062011800007894635
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.6546666666666667,0.6463842792553863,,0.021877200008020736
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.70937885643768,0.7021149836163241,,0.02350960001058411
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.536,0.5497835497835498,,0.37913010000193026
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.5146666666666666,0.5151515151515151,,0.5007699999987381
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.54,0.5591969718748503,,0.3847803999960888
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.5146666666666666,0.5151515151515151,,0.40556100000685547
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.5702385849444673,0.5966386554621849,,0.5029142999992473
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06370030000107363
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.09041659999638796
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06657300000370014
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.054178000005776994
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.07096759999694768
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.552,0.5699585317155583,,0.018812700000125915
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.5186666666666666,0.5208662737770111,,0.02743479999480769
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.5533333333333333,0.5733080478843191,,0.016594000000623055
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.5693333333333334,0.5891041762601396,,0.018179599996074103
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.5867955573837927,0.6132062439563476,,0.016681799999787472
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.5,0.4838709677419355,,0.8024943999917014
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.5,0.4838709677419355,,0.9281767999927979
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.5,0.4838709677419355,,0.7246310000045924
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.5,0.4838709677419355,,0.6307756000023801
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.5178938708350473,0.5188749074759438,,0.6498265999980504
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.564,0.5758218451749735,,0.01679399999557063
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5186666666666666,0.5150849744962145,,0.015200499998172745
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.6266666666666667,0.6481970096745823,,0.01400179999473039
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5373333333333333,0.5408388520971302,,0.013833100005285814
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.6337926779103249,0.6412946003967499,,0.01749030000064522
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.52,0.5229576624925462,,0.6970613000012236
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.5373333333333333,0.5527528064761393,,0.7506453999958467
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.5586666666666666,0.5885325819580483,,0.685358400005498
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.556,0.5805193170854482,,0.6762062999914633
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.6306046894282188,0.6800465386852822,,0.7256039000058081
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.05544009999721311
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06083570000191685
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06410129999858327
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06517989998974372
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.0585925000050338
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,27,MinMaxScaler,None,kNN,1600,400,ok,,0.5573333333333333,0.5844155844155844,,0.017194400003063492
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,27,MinMaxScaler,None,kNN,1600,400,ok,,0.592,0.6218731820826062,,0.016042599992942996
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,27,MinMaxScaler,None,kNN,1600,400,ok,,0.6346666666666667,0.6800465386852822,,0.015627500004484318
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,27,MinMaxScaler,None,kNN,1600,400,ok,,0.5933333333333334,0.6265172735760971,,0.01587899999867659
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,27,MinMaxScaler,None,kNN,1600,400,ok,,0.530440148087207,0.5392412839809553,,0.014628300006734207
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,28,MinMaxScaler,None,MLP,1600,400,ok,,0.6146666666666667,0.6563958916900093,,2.383319600005052
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,28,MinMaxScaler,None,MLP,1600,400,ok,,0.596,0.6365216704199755,,2.0339314000011655
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,28,MinMaxScaler,None,MLP,1600,400,ok,,0.712,0.7487121497675587,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.475357899995288
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,28,MinMaxScaler,None,MLP,1600,400,ok,,0.6346666666666667,0.6800465386852822,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.5419684999942547
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,28,MinMaxScaler,None,MLP,1600,400,ok,,0.680275606746195,0.7056659308314938,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.4017000000021653
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.6559999999999999,0.6503496503496504,,0.10236259999510366
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.612,0.6059710540274305,,0.16351910000958014
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.6986666666666667,0.6914849856026326,,0.08523899999272544
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.6293333333333333,0.6159754224270353,,0.08594689999881666
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.645516248457425,0.6058656465542225,,0.06682469999941532
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.5786666666666667,0.6190476190476191,,0.5467654999956721
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.5773333333333334,0.6140777717186123,,0.5838026999990689
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.58,0.624312357439957,,0.5594927000056487
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.5346666666666666,0.5469608624522841,,0.5152249999955529
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.5715754833401891,0.6006757794501613,,0.5166107999975793
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.050283299991860986
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.040532099999836646
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04940990000613965
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.042579899993143044
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.04456039999786299
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,32,RobustScaler,PCA,kNN,1600,400,ok,,0.5546666666666666,0.5768229166666667,,0.01630900001327973
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,32,RobustScaler,PCA,kNN,1600,400,ok,,0.612,0.6457794622932238,,0.017117299998062663
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,32,RobustScaler,PCA,kNN,1600,400,ok,,0.6546666666666666,0.7024547483263079,,0.019605600013164803
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,32,RobustScaler,PCA,kNN,1600,400,ok,,0.5706666666666667,0.5927865037812682,,0.0186760999931721
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,32,RobustScaler,PCA,kNN,1600,400,ok,,0.603352529823118,0.6272373790931585,,0.017096900002798066
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,33,RobustScaler,PCA,MLP,1600,400,ok,,0.6066666666666667,0.6272373790931585,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.643975800005137
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,33,RobustScaler,PCA,MLP,1600,400,ok,,0.5906666666666667,0.6174418192766817,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7025912999961292
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,33,RobustScaler,PCA,MLP,1600,400,ok,,0.6933333333333334,0.736842105263158,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.583429399994202
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,33,RobustScaler,PCA,MLP,1600,400,ok,,0.612,0.6457794622932238,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6066931999957887
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,33,RobustScaler,PCA,MLP,1600,400,ok,,0.6516865487453722,0.6544412157386319,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5982805000094231
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.5986666666666667,0.6044192026221356,,0.020022700002300553
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.576,0.5789007092198581,,0.023973699993803166
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.6493333333333333,0.631649783948431,,0.020084500007214956
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.5986666666666667,0.6044192026221356,,0.02291749999858439
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.7040312628547922,0.6839855005111999,,0.02711769999586977
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.5373333333333333,0.5527528064761393,,0.443349399996805
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.516,0.5169730309942305,,0.4511004999949364
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.5386666666666666,0.5558845299777943,,0.38782950000313576
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.5133333333333333,0.5134024078191199,,0.37916760001098737
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.5702385849444673,0.5966386554621849,,0.37933490000432357
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06791169999632984
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.08493480000470299
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.0659626999986358
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.058243199993739836
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.06116099999053404
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.552,0.5699585317155583,,0.016131600001244806
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.5186666666666666,0.5208662737770111,,0.017881699997815304
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.5333333333333333,0.5442708333333333,,0.01633620000211522
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.548,0.5607665332435975,,0.019325000001117587
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.6060263266145619,0.6361063378146163,,0.01758650000556372
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.516,0.5169730309942305,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8246056000061799
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.52,0.5229576624925462,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.718100099998992
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.52,0.5229576624925462,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6626232999988133
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.49333333333333335,0.4805194805194805,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8214994000009028
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.5536816125051419,0.5768229166666667,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6214982999954373
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5653333333333334,0.5789473684210527,,0.015816500002983958
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5186666666666666,0.5150849744962145,,0.01605849999759812
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.6253333333333333,0.6436361402107462,,0.014197000011336058
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5373333333333333,0.5408388520971302,,0.019275599988759495
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.6337926779103249,0.6412946003967499,,0.01279070001328364
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,40,RobustScaler,None,RandomForest,1600,400,ok,,0.52,0.5229576624925462,,0.7304329000035068
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,40,RobustScaler,None,RandomForest,1600,400,ok,,0.5386666666666666,0.5558845299777943,,0.6879884999943897
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,40,RobustScaler,None,RandomForest,1600,400,ok,,0.5586666666666666,0.5885325819580483,,0.7485212999890791
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,40,RobustScaler,None,RandomForest,1600,400,ok,,0.556,0.5805193170854482,,0.7651081999938469
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,40,RobustScaler,None,RandomForest,1600,400,ok,,0.6306046894282188,0.6800465386852822,,1.025473100002273
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06421490000502672
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.058918999988236465
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.0640999000024749
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.061936800004332326
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.07517140000709333
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,42,RobustScaler,None,kNN,1600,400,ok,,0.596,0.6365216704199755,,0.016678100000717677
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,42,RobustScaler,None,kNN,1600,400,ok,,0.5746666666666667,0.6049148591521473,,0.015587000001687557
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,42,RobustScaler,None,kNN,1600,400,ok,,0.6146666666666667,0.6563958916900093,,0.017197500012116507
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,42,RobustScaler,None,kNN,1600,400,ok,,0.5546666666666666,0.5768229166666667,,0.01445390000299085
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,42,RobustScaler,None,kNN,1600,400,ok,,0.5894693541752365,0.6218731820826062,,0.027508400002261624
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,43,RobustScaler,None,MLP,1600,400,ok,,0.6306666666666667,0.6630614239024226,,2.0091455000074347
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,43,RobustScaler,None,MLP,1600,400,ok,,0.604,0.619059322294246,,2.7764503000071272
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,43,RobustScaler,None,MLP,1600,400,ok,,0.6866666666666668,0.7056659308314938,,3.0400332999997772
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,43,RobustScaler,None,MLP,1600,400,ok,,0.6333333333333333,0.6741171053097659,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.346986899996409
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,43,RobustScaler,None,MLP,1600,400,ok,,0.7187371452077335,0.7400469045802605,,2.921646199989482
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.6559999999999999,0.6503496503496504,,0.08302819999516942
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.612,0.6059710540274305,,0.07443500000226777
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.6813333333333333,0.6847740427729014,,0.08518340000591706
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.6093333333333333,0.5997559487492373,,0.07875050000438932
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.645516248457425,0.6058656465542225,,0.06541970001126174
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,45,None,PCA,RandomForest,1600,400,ok,,0.52,0.5229576624925462,,0.5908027999976184
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,45,None,PCA,RandomForest,1600,400,ok,,0.5173333333333333,0.5188749074759438,,0.5764166000008117
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,45,None,PCA,RandomForest,1600,400,ok,,0.52,0.5229576624925462,,0.5286736000125529
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,45,None,PCA,RandomForest,1600,400,ok,,0.52,0.5229576624925462,,0.5445965000108117
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,45,None,PCA,RandomForest,1600,400,ok,,0.5344508432743726,0.5469608624522841,,0.6074502999981632
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,46,None,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.0504198999988148
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,46,None,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.05099000000336673
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,46,None,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04898730000422802
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,46,None,PCA,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.0716004999994766
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,46,None,PCA,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.10938770000939257
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,47,None,PCA,kNN,1600,400,ok,,0.5186666666666666,0.5208662737770111,,0.017714600006002
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,47,None,PCA,kNN,1600,400,ok,,0.5133333333333333,0.5134024078191199,,0.01836139999795705
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,47,None,PCA,kNN,1600,400,ok,,0.492,0.4798439531859558,,0.017500900008599274
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,47,None,PCA,kNN,1600,400,ok,,0.5546666666666666,0.5768229166666667,,0.018367700002272613
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,47,None,PCA,kNN,1600,400,ok,,0.4946524064171123,0.4805194805194805,,0.0256124000006821
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,48,None,PCA,MLP,1600,400,ok,,0.616,0.6621102749193672,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7314137000066694
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,48,None,PCA,MLP,1600,400,ok,,0.5373333333333333,0.5408388520971302,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.068749600002775
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,48,None,PCA,MLP,1600,400,ok,,0.6253333333333333,0.6436361402107462,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0563630999968154
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,48,None,PCA,MLP,1600,400,ok,,0.6506666666666666,0.6842105263157895,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7708979999879375
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,48,None,PCA,MLP,1600,400,ok,,0.6225832990538873,0.6481970096745823,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8736371000122745
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,49,None,PCA,DecisionTree,1600,400,ok,,0.6559999999999999,0.6503496503496504,,0.024362800002563745
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,49,None,PCA,DecisionTree,1600,400,ok,,0.5386666666666666,0.543049543049543,,0.026004100000136532
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,49,None,PCA,DecisionTree,1600,400,ok,,0.6893333333333334,0.6614744161577346,,0.021387499989941716
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,49,None,PCA,DecisionTree,1600,400,ok,,0.5613333333333334,0.5699056864612455,,0.022730400000000373
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,49,None,PCA,DecisionTree,1600,400,ok,,0.5886466474701769,0.5886466474701769,,0.02344989999255631
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,50,None,SelectKBest,RandomForest,1600,400,ok,,0.536,0.5497835497835498,,0.3741251000028569
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,50,None,SelectKBest,RandomForest,1600,400,ok,,0.5133333333333333,0.5134024078191199,,0.41943360000732355
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,50,None,SelectKBest,RandomForest,1600,400,ok,,0.5386666666666666,0.5558845299777943,,0.39760389999719337
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,50,None,SelectKBest,RandomForest,1600,400,ok,,0.5146666666666666,0.5151515151515151,,0.39267699999618344
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,50,None,SelectKBest,RandomForest,1600,400,ok,,0.5702385849444673,0.5966386554621849,,0.3994864999986021
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.055555599989020266
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.065784899998107
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.06875020000734366
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.05631159999757074
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.055344399996101856
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,52,None,SelectKBest,kNN,1600,400,ok,,0.5373333333333333,0.5527528064761393,,0.014296900000772439
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,52,None,SelectKBest,kNN,1600,400,ok,,0.5186666666666666,0.5208662737770111,,0.017892999996547587
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,52,None,SelectKBest,kNN,1600,400,ok,,0.5186666666666666,0.5208662737770111,,0.013908199995057657
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,52,None,SelectKBest,kNN,1600,400,ok,,0.5333333333333333,0.5442708333333333,,0.01729899999918416
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,52,None,SelectKBest,kNN,1600,400,ok,,0.530440148087207,0.5392412839809553,,0.017991800006711856
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,53,None,SelectKBest,MLP,1600,400,ok,,0.5,0.4838709677419355,,0.5915042999986326
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,53,None,SelectKBest,MLP,1600,400,ok,,0.5,0.4838709677419355,,1.073924900003476
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,53,None,SelectKBest,MLP,1600,400,ok,,0.5,0.4838709677419355,,0.34130220000224654
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,53,None,SelectKBest,MLP,1600,400,ok,,0.5186666666666666,0.5208662737770111,,0.6114573000086239
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,53,None,SelectKBest,MLP,1600,400,ok,,0.5192307692307693,0.5208662737770111,,0.4755563000071561
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.5653333333333334,0.5789473684210527,,0.015874899996560998
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.5186666666666666,0.5150849744962145,,0.015032800001790747
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.6266666666666667,0.6481970096745823,,0.014328100005513988
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.5373333333333333,0.5408388520971302,,0.014863700009300373
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.6337926779103249,0.6412946003967499,,0.01439149999350775
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,55,None,None,RandomForest,1600,400,ok,,0.52,0.5229576624925462,,0.7028052000096068
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,55,None,None,RandomForest,1600,400,ok,,0.5373333333333333,0.5527528064761393,,0.9594409999990603
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,55,None,None,RandomForest,1600,400,ok,,0.5586666666666666,0.5885325819580483,,0.6981693999987328
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,55,None,None,RandomForest,1600,400,ok,,0.556,0.5805193170854482,,0.6636900000012247
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,55,None,None,RandomForest,1600,400,ok,,0.6306046894282188,0.6800465386852822,,0.7005615000089165
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,56,None,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.049203500006115064
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,56,None,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04940890001307707
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,56,None,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04775490000611171
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,56,None,None,SVM,1600,400,ok,,0.5,0.4838709677419355,,0.04294759999902453
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,56,None,None,SVM,1600,400,ok,,0.5,0.48320413436692505,,0.0766557000024477
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,57,None,None,kNN,1600,400,ok,,0.49866666666666665,0.48320413436692505,,0.01600960000359919
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,57,None,None,kNN,1600,400,ok,,0.536,0.5497835497835498,,0.01808169999276288
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,57,None,None,kNN,1600,400,ok,,0.49333333333333335,0.4805194805194805,,0.017292200005613267
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,57,None,None,kNN,1600,400,ok,,0.556,0.5805193170854482,,0.014746000000741333
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,57,None,None,kNN,1600,400,ok,,0.49331550802139035,0.4798439531859558,,0.0189680000039516
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,58,None,None,MLP,1600,400,ok,,0.636,0.3383698242629237,,0.25057319999905303
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,58,None,None,MLP,1600,400,ok,,0.5,0.4838709677419355,,0.2914244999992661
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,58,None,None,MLP,1600,400,ok,,0.5,0.4838709677419355,,0.14967959999921732
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,58,None,None,MLP,1600,400,ok,,0.5346666666666666,0.5469608624522841,,0.3132238999969559
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,58,None,None,MLP,1600,400,ok,,0.5,0.48320413436692505,,0.3719323999976041
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,59,None,None,DecisionTree,1600,400,ok,,0.6759999999999999,0.6665908918693643,,0.08219309999549296
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,59,None,None,DecisionTree,1600,400,ok,,0.612,0.6059710540274305,,0.07429540000157431
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,59,None,None,DecisionTree,1600,400,ok,,0.6786666666666668,0.6753841723605329,,0.07255760001135059
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,59,None,None,DecisionTree,1600,400,ok,,0.6293333333333333,0.6159754224270353,,0.07602919999044389
+362791,ozone-level-8hr_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,59,None,None,DecisionTree,1600,400,ok,,0.645516248457425,0.6058656465542225,,0.0679876000067452

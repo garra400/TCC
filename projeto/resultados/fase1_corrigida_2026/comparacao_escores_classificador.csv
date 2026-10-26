@@ -1,0 +1,6 @@
+classifier,diferenca_media,diferenca_absoluta_media,pares_validos
+DecisionTree,-0.008442919,0.010117512,2308
+MLP,-0.010424134,0.012847207,2304
+RandomForest,-0.016665112,0.017845558,2308
+SVM,-0.010152979,0.013360116,2304
+kNN,-0.016546516,0.017603792,2304

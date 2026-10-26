@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+363577,Phishing_Legitimate_full,0,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.9410000000000001,0.9409978759235332,,3.2618327000091085
+363577,Phishing_Legitimate_full,1,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.9495,0.9494999873749969,,2.272602500001085
+363577,Phishing_Legitimate_full,2,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.9455,0.9454983513251276,,2.6393878999951994
+363577,Phishing_Legitimate_full,3,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.9544999999999999,0.9544994426181721,,2.7713036999921314
+363577,Phishing_Legitimate_full,4,0,StandardScaler,PCA,RandomForest,8000,2000,ok,,0.9464999999999999,0.9464961343457066,,2.632779000006849
+363577,Phishing_Legitimate_full,0,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.9365,0.936495411793502,,1.069303199998103
+363577,Phishing_Legitimate_full,1,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.938,0.938,,1.1230996000085725
+363577,Phishing_Legitimate_full,2,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.9425,0.9424958453248247,,1.1299436999979662
+363577,Phishing_Legitimate_full,3,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.945,0.9449973048679385,,1.1680092999886256
+363577,Phishing_Legitimate_full,4,1,StandardScaler,PCA,SVM,8000,2000,ok,,0.94,0.9399984999624991,,1.165175799993449
+363577,Phishing_Legitimate_full,0,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.9375,0.9374981093178069,,0.12415589999000076
+363577,Phishing_Legitimate_full,1,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.946,0.9459980559300134,,0.14695970001048408
+363577,Phishing_Legitimate_full,2,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.9484999999999999,0.9484993691172716,,0.13973189999524038
+363577,Phishing_Legitimate_full,3,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.9425,0.9424958453248247,,0.15096309999353252
+363577,Phishing_Legitimate_full,4,2,StandardScaler,PCA,kNN,8000,2000,ok,,0.9395,0.9394998638746936,,0.15970390000438783
+363577,Phishing_Legitimate_full,0,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.9455,0.945495080931054,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.764929900004063
+363577,Phishing_Legitimate_full,1,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.955,0.9549988749718743,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.757474900005036
+363577,Phishing_Legitimate_full,2,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.9475,0.9474998818747342,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.833339399992838
+363577,Phishing_Legitimate_full,3,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.9535,0.9534997093731836,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.504896200000076
+363577,Phishing_Legitimate_full,4,3,StandardScaler,PCA,MLP,8000,2000,ok,,0.9504999999999999,0.9504979085366356,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.505617300004815
+363577,Phishing_Legitimate_full,0,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.904,0.9039903990399041,,0.10156090000236873
+363577,Phishing_Legitimate_full,1,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.919,0.9189979749493737,,0.0947225999989314
+363577,Phishing_Legitimate_full,2,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.9155,0.9154952466076216,,0.10097729999688454
+363577,Phishing_Legitimate_full,3,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.918,0.9179992619933579,,0.138867300003767
+363577,Phishing_Legitimate_full,4,4,StandardScaler,PCA,DecisionTree,8000,2000,ok,,0.913,0.912999651998608,,0.09650430000328925
+363577,Phishing_Legitimate_full,0,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9724999999999999,0.972499443113723,Features [19] are constant. | invalid value encountered in divide,0.6897115000028862
+363577,Phishing_Legitimate_full,1,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9715,0.9714974276428447,Features [19] are constant. | invalid value encountered in divide,0.5898174999892944
+363577,Phishing_Legitimate_full,2,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.968,0.9679984319231643,Features [19] are constant. | invalid value encountered in divide,0.7421036000014283
+363577,Phishing_Legitimate_full,3,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9684999999999999,0.9684965267420733,Features [19] are constant. | invalid value encountered in divide,0.6258380000072066
+363577,Phishing_Legitimate_full,4,5,StandardScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9704999999999999,0.9704978684709971,Features [19] are constant. | invalid value encountered in divide,0.6319258000003174
+363577,Phishing_Legitimate_full,0,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.9315,0.9314790154484811,Features [19] are constant. | invalid value encountered in divide,1.1989394999982323
+363577,Phishing_Legitimate_full,1,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.929,0.928912918324948,Features [19] are constant. | invalid value encountered in divide,1.2268159000086598
+363577,Phishing_Legitimate_full,2,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.944,0.9439728828753117,Features [19] are constant. | invalid value encountered in divide,1.1878863999882014
+363577,Phishing_Legitimate_full,3,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.9239999999999999,0.923890097300502,Features [19] are constant. | invalid value encountered in divide,1.2498167000012472
+363577,Phishing_Legitimate_full,4,6,StandardScaler,SelectKBest,SVM,8000,2000,ok,,0.9299999999999999,0.9299450769403212,Features [19] are constant. | invalid value encountered in divide,1.2622217000025557
+363577,Phishing_Legitimate_full,0,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.9484999999999999,0.9484971029620416,Features [19] are constant. | invalid value encountered in divide,0.09608619999198709
+363577,Phishing_Legitimate_full,1,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.953,0.9529920556574061,Features [19] are constant. | invalid value encountered in divide,0.09487529999751132
+363577,Phishing_Legitimate_full,2,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.9430000000000001,0.9429584166857639,Features [19] are constant. | invalid value encountered in divide,0.09764500000164844
+363577,Phishing_Legitimate_full,3,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.9485,0.9484638087096664,Features [19] are constant. | invalid value encountered in divide,0.09846310000284575
+363577,Phishing_Legitimate_full,4,7,StandardScaler,SelectKBest,kNN,8000,2000,ok,,0.952,0.9519930870045287,Features [19] are constant. | invalid value encountered in divide,0.09684980000020005
+363577,Phishing_Legitimate_full,0,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.9595,0.9594955343826657,Features [19] are constant. | invalid value encountered in divide,6.998961399993277
+363577,Phishing_Legitimate_full,1,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.9595,0.9594991798583921,Features [19] are constant. | invalid value encountered in divide,6.734287100000074
+363577,Phishing_Legitimate_full,2,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.96,0.95999983999936,Features [19] are constant. | invalid value encountered in divide,8.317383000001428
+363577,Phishing_Legitimate_full,3,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.9584999999999999,0.9584935146116581,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.906949600001099
+363577,Phishing_Legitimate_full,4,8,StandardScaler,SelectKBest,MLP,8000,2000,ok,,0.9595,0.9594991798583921,Features [19] are constant. | invalid value encountered in divide,7.4156936000072164
+363577,Phishing_Legitimate_full,0,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.9624999999999999,0.9624984155580574,Features [19] are constant. | invalid value encountered in divide,0.029436700002406724
+363577,Phishing_Legitimate_full,1,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.9684999999999999,0.9684990470961747,Features [19] are constant. | invalid value encountered in divide,0.02324100000259932
+363577,Phishing_Legitimate_full,2,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.96,0.9599993599897598,Features [19] are constant. | invalid value encountered in divide,0.025526500001433305
+363577,Phishing_Legitimate_full,3,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.9564999999999999,0.9564960737706578,Features [19] are constant. | invalid value encountered in divide,0.028205799986608326
+363577,Phishing_Legitimate_full,4,9,StandardScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.9635,0.9634997718735743,Features [19] are constant. | invalid value encountered in divide,0.025187599996570498
+363577,Phishing_Legitimate_full,0,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.983,0.9829995749893747,,1.1361047999962466
+363577,Phishing_Legitimate_full,1,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.985,0.985,,0.9879536000080407
+363577,Phishing_Legitimate_full,2,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.9835,0.9834999628749165,,1.0555163000099128
+363577,Phishing_Legitimate_full,3,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.982,0.982,,1.1653144000010798
+363577,Phishing_Legitimate_full,4,10,StandardScaler,None,RandomForest,8000,2000,ok,,0.983,0.983,,1.1168590000015683
+363577,Phishing_Legitimate_full,0,11,StandardScaler,None,SVM,8000,2000,ok,,0.9544999999999999,0.9544997156232227,,2.0039294000016525
+363577,Phishing_Legitimate_full,1,11,StandardScaler,None,SVM,8000,2000,ok,,0.966,0.9659994559912959,,1.411695199989481
+363577,Phishing_Legitimate_full,2,11,StandardScaler,None,SVM,8000,2000,ok,,0.9644999999999999,0.9644985000616276,,1.9588016999914544
+363577,Phishing_Legitimate_full,3,11,StandardScaler,None,SVM,8000,2000,ok,,0.97,0.96999987999952,,1.8942480999976397
+363577,Phishing_Legitimate_full,4,11,StandardScaler,None,SVM,8000,2000,ok,,0.9644999999999999,0.9644999911249978,,1.8417904999951134
+363577,Phishing_Legitimate_full,0,12,StandardScaler,None,kNN,8000,2000,ok,,0.943,0.9429999429999429,,0.17398790000879671
+363577,Phishing_Legitimate_full,1,12,StandardScaler,None,kNN,8000,2000,ok,,0.9515,0.9514946522854144,,0.1328540999966208
+363577,Phishing_Legitimate_full,2,12,StandardScaler,None,kNN,8000,2000,ok,,0.955,0.9549992799884799,,0.14823810000962112
+363577,Phishing_Legitimate_full,3,12,StandardScaler,None,kNN,8000,2000,ok,,0.9495,0.9494944317611016,,0.1424704999953974
+363577,Phishing_Legitimate_full,4,12,StandardScaler,None,kNN,8000,2000,ok,,0.95,0.9499997999992,,0.1473589999950491
+363577,Phishing_Legitimate_full,0,13,StandardScaler,None,MLP,8000,2000,ok,,0.971,0.970999970999971,,7.284176200002548
+363577,Phishing_Legitimate_full,1,13,StandardScaler,None,MLP,8000,2000,ok,,0.977,0.976999792998137,,8.064326599997003
+363577,Phishing_Legitimate_full,2,13,StandardScaler,None,MLP,8000,2000,ok,,0.976,0.975999903999616,,8.161118699994404
+363577,Phishing_Legitimate_full,3,13,StandardScaler,None,MLP,8000,2000,ok,,0.965,0.9649982849159608,,6.424640700002783
+363577,Phishing_Legitimate_full,4,13,StandardScaler,None,MLP,8000,2000,ok,,0.9804999999999999,0.9804996051170036,,7.749496199990972
+363577,Phishing_Legitimate_full,0,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.9695,0.9694999313748456,,0.07840160001069307
+363577,Phishing_Legitimate_full,1,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.9724999999999999,0.9724969677906989,,0.11941290000686422
+363577,Phishing_Legitimate_full,2,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.963,0.9629990749768744,,0.07950029999483377
+363577,Phishing_Legitimate_full,3,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.969,0.9689968996899689,,0.07401359999494161
+363577,Phishing_Legitimate_full,4,14,StandardScaler,None,DecisionTree,8000,2000,ok,,0.9655,0.9654954367715131,,0.07172469999932218
+363577,Phishing_Legitimate_full,0,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.9475,0.9474977817812802,,2.748990699998103
+363577,Phishing_Legitimate_full,1,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.954,0.953999953999954,,3.0242816999962088
+363577,Phishing_Legitimate_full,2,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.9564999999999999,0.9564999891249972,,2.4269038000056753
+363577,Phishing_Legitimate_full,3,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.9564999999999999,0.9564997281233008,,2.6358636999939336
+363577,Phishing_Legitimate_full,4,15,MinMaxScaler,PCA,RandomForest,8000,2000,ok,,0.9564999999999999,0.9564942463640818,,2.417285700008506
+363577,Phishing_Legitimate_full,0,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.909,0.9089991809926289,,1.557892000011634
+363577,Phishing_Legitimate_full,1,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.915,0.9149833367339999,,1.406724899992696
+363577,Phishing_Legitimate_full,2,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.931,0.930999723998896,,1.4526318999996874
+363577,Phishing_Legitimate_full,3,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.9185,0.9184657352252283,,1.4136667999991914
+363577,Phishing_Legitimate_full,4,16,MinMaxScaler,PCA,SVM,8000,2000,ok,,0.9195,0.9194911238964096,,1.3540054000040982
+363577,Phishing_Legitimate_full,0,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.9295,0.9294970212491478,,0.09695170000486542
+363577,Phishing_Legitimate_full,1,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.9390000000000001,0.938999755999024,,0.08410419999563601
+363577,Phishing_Legitimate_full,2,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.9405,0.940493439401694,,0.1324250000034226
+363577,Phishing_Legitimate_full,3,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.9384999999999999,0.9384999846249962,,0.09698810000554658
+363577,Phishing_Legitimate_full,4,17,MinMaxScaler,PCA,kNN,8000,2000,ok,,0.9365,0.9364973170116437,,0.0838553000066895
+363577,Phishing_Legitimate_full,0,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.946,0.9459991359861758,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.948095500003546
+363577,Phishing_Legitimate_full,1,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.9504999999999999,0.9504964233665882,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.90480450000905
+363577,Phishing_Legitimate_full,2,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.9464999999999999,0.9464993446169716,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.509930899992469
+363577,Phishing_Legitimate_full,3,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.9515,0.9514990178551115,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.75981380000303
+363577,Phishing_Legitimate_full,4,18,MinMaxScaler,PCA,MLP,8000,2000,ok,,0.957,0.9569927317716693,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.911488500001724
+363577,Phishing_Legitimate_full,0,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.908,0.9079764419691441,,0.10801280000305269
+363577,Phishing_Legitimate_full,1,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.9125000000000001,0.9124789730732809,,0.10580109999864362
+363577,Phishing_Legitimate_full,2,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.923,0.9229691876750701,,0.10525810001126956
+363577,Phishing_Legitimate_full,3,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.922,0.9219961778127128,,0.11926999999559484
+363577,Phishing_Legitimate_full,4,19,MinMaxScaler,PCA,DecisionTree,8000,2000,ok,,0.925,0.924999324993925,,0.1237350999872433
+363577,Phishing_Legitimate_full,0,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.973,0.9729993249831246,Features [19] are constant. | invalid value encountered in divide,0.8112363999971421
+363577,Phishing_Legitimate_full,1,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9715,0.9714974276428447,Features [19] are constant. | invalid value encountered in divide,0.6377382000064244
+363577,Phishing_Legitimate_full,2,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.968,0.9679984319231643,Features [19] are constant. | invalid value encountered in divide,0.7415747999912128
+363577,Phishing_Legitimate_full,3,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.969,0.9689962485460741,Features [19] are constant. | invalid value encountered in divide,0.8528057000075933
+363577,Phishing_Legitimate_full,4,20,MinMaxScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9704999999999999,0.9704978684709971,Features [19] are constant. | invalid value encountered in divide,0.6270764000073541
+363577,Phishing_Legitimate_full,0,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9225,0.9224674169319657,Features [19] are constant. | invalid value encountered in divide,1.4547973000007914
+363577,Phishing_Legitimate_full,1,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9175,0.9173576692458587,Features [19] are constant. | invalid value encountered in divide,1.2704038999945624
+363577,Phishing_Legitimate_full,2,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9365,0.9364483801968149,Features [19] are constant. | invalid value encountered in divide,1.6153039999917382
+363577,Phishing_Legitimate_full,3,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9159999999999999,0.9158653846153846,Features [19] are constant. | invalid value encountered in divide,1.380983399998513
+363577,Phishing_Legitimate_full,4,21,MinMaxScaler,SelectKBest,SVM,8000,2000,ok,,0.9179999999999999,0.9179050982936274,Features [19] are constant. | invalid value encountered in divide,1.2932870999939041
+363577,Phishing_Legitimate_full,0,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.955,0.954999594996355,Features [19] are constant. | invalid value encountered in divide,0.12447349999274593
+363577,Phishing_Legitimate_full,1,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.9495,0.9494907946973337,Features [19] are constant. | invalid value encountered in divide,0.11373409999941941
+363577,Phishing_Legitimate_full,2,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.954,0.9539909822325175,Features [19] are constant. | invalid value encountered in divide,0.13099499999952968
+363577,Phishing_Legitimate_full,3,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.9490000000000001,0.948968105065666,Features [19] are constant. | invalid value encountered in divide,0.11160999999265186
+363577,Phishing_Legitimate_full,4,22,MinMaxScaler,SelectKBest,kNN,8000,2000,ok,,0.9524999999999999,0.9524925769651508,Features [19] are constant. | invalid value encountered in divide,0.11586259999603499
+363577,Phishing_Legitimate_full,0,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.9624999999999999,0.9624941397093296,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.39823580000666
+363577,Phishing_Legitimate_full,1,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.9615,0.9614995283692225,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.000276599996141
+363577,Phishing_Legitimate_full,2,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.966,0.9659991499787495,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.119225499991444
+363577,Phishing_Legitimate_full,3,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.9644999999999999,0.9644985000616276,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.914384900010191
+363577,Phishing_Legitimate_full,4,23,MinMaxScaler,SelectKBest,MLP,8000,2000,ok,,0.962,0.9619981379087575,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,7.9925682000030065
+363577,Phishing_Legitimate_full,0,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.963,0.9629981869111587,Features [19] are constant. | invalid value encountered in divide,0.023886199996923096
+363577,Phishing_Legitimate_full,1,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.9675,0.9674993418616726,Features [19] are constant. | invalid value encountered in divide,0.023581899993587285
+363577,Phishing_Legitimate_full,2,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.96,0.9599993599897598,Features [19] are constant. | invalid value encountered in divide,0.026294399998732843
+363577,Phishing_Legitimate_full,3,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.9564999999999999,0.9564968568979109,Features [19] are constant. | invalid value encountered in divide,0.024103799994918518
+363577,Phishing_Legitimate_full,4,24,MinMaxScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.9635,0.9634997718735743,Features [19] are constant. | invalid value encountered in divide,0.021827499993378296
+363577,Phishing_Legitimate_full,0,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.9835,0.9834996658682338,,0.8951506999874255
+363577,Phishing_Legitimate_full,1,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.9844999999999999,0.9844999961249989,,1.0723557000019355
+363577,Phishing_Legitimate_full,2,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.9835,0.9834999628749165,,1.002452999993693
+363577,Phishing_Legitimate_full,3,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.982,0.982,,1.1446328000020003
+363577,Phishing_Legitimate_full,4,25,MinMaxScaler,None,RandomForest,8000,2000,ok,,0.983,0.983,,0.9176121999917086
+363577,Phishing_Legitimate_full,0,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.944,0.9439991039856638,,1.4062782999972114
+363577,Phishing_Legitimate_full,1,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.947,0.9469986749668742,,2.0417545000091195
+363577,Phishing_Legitimate_full,2,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.9624999999999999,0.9624997656235351,,1.6205250999919372
+363577,Phishing_Legitimate_full,3,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.956,0.955999603996436,,2.271476400012034
+363577,Phishing_Legitimate_full,4,26,MinMaxScaler,None,SVM,8000,2000,ok,,0.949,0.9489995409958689,,1.537078699999256
+363577,Phishing_Legitimate_full,0,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.9375,0.9374996093725585,,0.12554419999651145
+363577,Phishing_Legitimate_full,1,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.942,0.9419994779953019,,0.13916439999593422
+363577,Phishing_Legitimate_full,2,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.9515,0.9514998908747545,,0.12896709999768063
+363577,Phishing_Legitimate_full,3,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.949,0.948999795999184,,0.1490460999921197
+363577,Phishing_Legitimate_full,4,27,MinMaxScaler,None,kNN,8000,2000,ok,,0.945,0.9449995049955449,,0.1263535000034608
+363577,Phishing_Legitimate_full,0,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.9664999999999999,0.9664963062177605,,7.827769299998181
+363577,Phishing_Legitimate_full,1,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.9784999999999999,0.9784999516248911,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,11.302412400007597
+363577,Phishing_Legitimate_full,2,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.9744999999999999,0.974498922579479,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,9.166517299992847
+363577,Phishing_Legitimate_full,3,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.975,0.9749963994815254,,10.71269040000334
+363577,Phishing_Legitimate_full,4,28,MinMaxScaler,None,MLP,8000,2000,ok,,0.9775,0.9774999943749987,,9.874939399989671
+363577,Phishing_Legitimate_full,0,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.9695,0.9694999313748456,,0.06601809999847319
+363577,Phishing_Legitimate_full,1,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.9724999999999999,0.9724969677906989,,0.08548619999783114
+363577,Phishing_Legitimate_full,2,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.963,0.9629990749768744,,0.0811530000064522
+363577,Phishing_Legitimate_full,3,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.9695,0.9694966370042297,,0.07158509999862872
+363577,Phishing_Legitimate_full,4,29,MinMaxScaler,None,DecisionTree,8000,2000,ok,,0.9655,0.9654954367715131,,0.08128840000426862
+363577,Phishing_Legitimate_full,0,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.9385,0.9384932188773812,,2.4864470999891637
+363577,Phishing_Legitimate_full,1,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.9484999999999999,0.9484998841247393,,2.5112091999908444
+363577,Phishing_Legitimate_full,2,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.948,0.947999791999168,,2.669511300002341
+363577,Phishing_Legitimate_full,3,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.9515,0.9514996968731054,,2.5727016999881016
+363577,Phishing_Legitimate_full,4,30,RobustScaler,PCA,RandomForest,8000,2000,ok,,0.949,0.948994899489949,,2.672216799997841
+363577,Phishing_Legitimate_full,0,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.8714999999999999,0.8714997108743494,,2.327452900004573
+363577,Phishing_Legitimate_full,1,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.8705,0.8704828713597373,,2.387319600005867
+363577,Phishing_Legitimate_full,2,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.8755,0.8754962337610712,,2.430233800012502
+363577,Phishing_Legitimate_full,3,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.8734999999999999,0.87349465514918,,2.313983600004576
+363577,Phishing_Legitimate_full,4,31,RobustScaler,PCA,SVM,8000,2000,ok,,0.87,0.8699250768442623,,2.4393200000049546
+363577,Phishing_Legitimate_full,0,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.9295,0.929499559372246,,0.09073149999312591
+363577,Phishing_Legitimate_full,1,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.9255,0.9254995343720899,,0.10483899999235291
+363577,Phishing_Legitimate_full,2,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.931,0.9309999309999311,,0.09081039999728091
+363577,Phishing_Legitimate_full,3,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.9255,0.9254864199000268,,0.09662670000398066
+363577,Phishing_Legitimate_full,4,32,RobustScaler,PCA,kNN,8000,2000,ok,,0.929,0.928999928999929,,0.10535430000163615
+363577,Phishing_Legitimate_full,0,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.937,0.9369876495793176,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.698296599992318
+363577,Phishing_Legitimate_full,1,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.942,0.941990196343182,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,10.078306800001883
+363577,Phishing_Legitimate_full,2,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.9444999999999999,0.944499653122832,,7.73270420001063
+363577,Phishing_Legitimate_full,3,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.946,0.9459894139251293,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.38867260000552
+363577,Phishing_Legitimate_full,4,33,RobustScaler,PCA,MLP,8000,2000,ok,,0.9444999999999999,0.944499875124719,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.946112700010417
+363577,Phishing_Legitimate_full,0,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.915,0.9149808706959066,,0.09778270000242628
+363577,Phishing_Legitimate_full,1,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.9175,0.9174989893626198,,0.10949610000534449
+363577,Phishing_Legitimate_full,2,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.929,0.9289974439079807,,0.09942140000930522
+363577,Phishing_Legitimate_full,3,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.919,0.9189979749493737,,0.10649459999694955
+363577,Phishing_Legitimate_full,4,34,RobustScaler,PCA,DecisionTree,8000,2000,ok,,0.919,0.9189918991899191,,0.11253779999969993
+363577,Phishing_Legitimate_full,0,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9724999999999999,0.972499443113723,Features [19] are constant. | invalid value encountered in divide,0.6829850999929477
+363577,Phishing_Legitimate_full,1,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9715,0.9714974276428447,Features [19] are constant. | invalid value encountered in divide,0.7444096000108402
+363577,Phishing_Legitimate_full,2,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.968,0.9679984319231643,Features [19] are constant. | invalid value encountered in divide,0.7718187999998918
+363577,Phishing_Legitimate_full,3,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.969,0.9689962485460741,Features [19] are constant. | invalid value encountered in divide,0.7085776000021724
+363577,Phishing_Legitimate_full,4,35,RobustScaler,SelectKBest,RandomForest,8000,2000,ok,,0.9704999999999999,0.9704978684709971,Features [19] are constant. | invalid value encountered in divide,0.7430327000038233
+363577,Phishing_Legitimate_full,0,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.926,0.925999703998816,Features [19] are constant. | invalid value encountered in divide,1.5894411000044784
+363577,Phishing_Legitimate_full,1,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.8965,0.8960809725013686,Features [19] are constant. | invalid value encountered in divide,1.822862000000896
+363577,Phishing_Legitimate_full,2,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.9305,0.9304949782621794,Features [19] are constant. | invalid value encountered in divide,1.5583219999971334
+363577,Phishing_Legitimate_full,3,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.903,0.9026495383380169,Features [19] are constant. | invalid value encountered in divide,1.7878338000009535
+363577,Phishing_Legitimate_full,4,36,RobustScaler,SelectKBest,SVM,8000,2000,ok,,0.9015,0.9011012153756986,Features [19] are constant. | invalid value encountered in divide,1.9648088999965694
+363577,Phishing_Legitimate_full,0,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.949,0.948997500877543,Features [19] are constant. | invalid value encountered in divide,0.07655610000074375
+363577,Phishing_Legitimate_full,1,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.952,0.951995199519952,Features [19] are constant. | invalid value encountered in divide,0.09925299999304116
+363577,Phishing_Legitimate_full,2,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.9445,0.9444718888937524,Features [19] are constant. | invalid value encountered in divide,0.08448720000160392
+363577,Phishing_Legitimate_full,3,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.9510000000000001,0.9509783814662266,Features [19] are constant. | invalid value encountered in divide,0.08447969998815097
+363577,Phishing_Legitimate_full,4,37,RobustScaler,SelectKBest,kNN,8000,2000,ok,,0.9555,0.9554941140965892,Features [19] are constant. | invalid value encountered in divide,0.08056519999809097
+363577,Phishing_Legitimate_full,0,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.9624999999999999,0.9624958651691349,Features [19] are constant. | invalid value encountered in divide,7.8747360999986995
+363577,Phishing_Legitimate_full,1,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.969,0.9689999689999691,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.12353759999678
+363577,Phishing_Legitimate_full,2,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.9635,0.9634984578098424,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,7.881173799993121
+363577,Phishing_Legitimate_full,3,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.9604999999999999,0.9604971459187926,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.940985699999146
+363577,Phishing_Legitimate_full,4,38,RobustScaler,SelectKBest,MLP,8000,2000,ok,,0.967,0.966999702997327,Features [19] are constant. | invalid value encountered in divide,9.447515699997894
+363577,Phishing_Legitimate_full,0,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.963,0.9629981869111587,Features [19] are constant. | invalid value encountered in divide,0.025526500001433305
+363577,Phishing_Legitimate_full,1,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.968,0.9679991999799995,Features [19] are constant. | invalid value encountered in divide,0.022565899998880923
+363577,Phishing_Legitimate_full,2,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.96,0.9599993599897598,Features [19] are constant. | invalid value encountered in divide,0.023765199992340058
+363577,Phishing_Legitimate_full,3,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.9564999999999999,0.9564968568979109,Features [19] are constant. | invalid value encountered in divide,0.022826100001111627
+363577,Phishing_Legitimate_full,4,39,RobustScaler,SelectKBest,DecisionTree,8000,2000,ok,,0.9635,0.9634997718735743,Features [19] are constant. | invalid value encountered in divide,0.02861059999850113
+363577,Phishing_Legitimate_full,0,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.9835,0.9834996658682338,,1.0011338999902364
+363577,Phishing_Legitimate_full,1,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.985,0.985,,1.076955700002145
+363577,Phishing_Legitimate_full,2,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.9835,0.9834999628749165,,1.0475410999933956
+363577,Phishing_Legitimate_full,3,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.982,0.982,,1.1492960000032326
+363577,Phishing_Legitimate_full,4,40,RobustScaler,None,RandomForest,8000,2000,ok,,0.9824999999999999,0.9824999956249989,,1.2084444999927655
+363577,Phishing_Legitimate_full,0,41,RobustScaler,None,SVM,8000,2000,ok,,0.9275,0.927499836874633,,3.4270185999921523
+363577,Phishing_Legitimate_full,1,41,RobustScaler,None,SVM,8000,2000,ok,,0.9225000000000001,0.9224837021983872,,3.8508424000028754
+363577,Phishing_Legitimate_full,2,41,RobustScaler,None,SVM,8000,2000,ok,,0.9319999999999999,0.9319846965567253,,3.124042700001155
+363577,Phishing_Legitimate_full,3,41,RobustScaler,None,SVM,8000,2000,ok,,0.931,0.930993099309931,,2.774642499993206
+363577,Phishing_Legitimate_full,4,41,RobustScaler,None,SVM,8000,2000,ok,,0.9255,0.9254716605989428,,4.837741700001061
+363577,Phishing_Legitimate_full,0,42,RobustScaler,None,kNN,8000,2000,ok,,0.9484999999999999,0.9484998841247393,,0.2809984000050463
+363577,Phishing_Legitimate_full,1,42,RobustScaler,None,kNN,8000,2000,ok,,0.9430000000000001,0.942996351766513,,0.13721650000661612
+363577,Phishing_Legitimate_full,2,42,RobustScaler,None,kNN,8000,2000,ok,,0.948,0.9479957876588003,,0.13747560000047088
+363577,Phishing_Legitimate_full,3,42,RobustScaler,None,kNN,8000,2000,ok,,0.95,0.9499901980788235,,0.12769439999829046
+363577,Phishing_Legitimate_full,4,42,RobustScaler,None,kNN,8000,2000,ok,,0.9484999999999999,0.9484943214989452,,0.15458050000597723
+363577,Phishing_Legitimate_full,0,43,RobustScaler,None,MLP,8000,2000,ok,,0.972,0.971999747997732,,8.38739240000723
+363577,Phishing_Legitimate_full,1,43,RobustScaler,None,MLP,8000,2000,ok,,0.9824999999999999,0.9824997856223738,,9.38912760000676
+363577,Phishing_Legitimate_full,2,43,RobustScaler,None,MLP,8000,2000,ok,,0.9755,0.975499846874043,,8.898045499998261
+363577,Phishing_Legitimate_full,3,43,RobustScaler,None,MLP,8000,2000,ok,,0.978,0.977997799779978,,7.808908699997119
+363577,Phishing_Legitimate_full,4,43,RobustScaler,None,MLP,8000,2000,ok,,0.9755,0.9754996998713235,,6.971610500011593
+363577,Phishing_Legitimate_full,0,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.9695,0.9694999313748456,,0.07033270000829361
+363577,Phishing_Legitimate_full,1,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.9724999999999999,0.9724969677906989,,0.07246999999915715
+363577,Phishing_Legitimate_full,2,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.963,0.9629990749768744,,0.07816669999738224
+363577,Phishing_Legitimate_full,3,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.9695,0.9694966370042297,,0.07415080000646412
+363577,Phishing_Legitimate_full,4,44,RobustScaler,None,DecisionTree,8000,2000,ok,,0.9655,0.9654954367715131,,0.07664490000752266
+363577,Phishing_Legitimate_full,0,45,None,PCA,RandomForest,8000,2000,ok,,0.9075,0.9074972017903542,,2.511462099995697
+363577,Phishing_Legitimate_full,1,45,None,PCA,RandomForest,8000,2000,ok,,0.918,0.9179881902994032,,2.5719852000038372
+363577,Phishing_Legitimate_full,2,45,None,PCA,RandomForest,8000,2000,ok,,0.916,0.9159958837983062,,2.860810300000594
+363577,Phishing_Legitimate_full,3,45,None,PCA,RandomForest,8000,2000,ok,,0.9245000000000001,0.9244916752071917,,2.7090898000024026
+363577,Phishing_Legitimate_full,4,45,None,PCA,RandomForest,8000,2000,ok,,0.9215,0.9214856907671423,,2.642055199990864
+363577,Phishing_Legitimate_full,0,46,None,PCA,SVM,8000,2000,ok,,0.8480000000000001,0.8475718292684149,,3.0490357000089716
+363577,Phishing_Legitimate_full,1,46,None,PCA,SVM,8000,2000,ok,,0.8495,0.8489831826969847,,2.807031000003917
+363577,Phishing_Legitimate_full,2,46,None,PCA,SVM,8000,2000,ok,,0.8420000000000001,0.8413501702975388,,3.1134465000068303
+363577,Phishing_Legitimate_full,3,46,None,PCA,SVM,8000,2000,ok,,0.8540000000000001,0.8535570099551142,,2.97038669999165
+363577,Phishing_Legitimate_full,4,46,None,PCA,SVM,8000,2000,ok,,0.833,0.832334535772481,,3.1556697999913013
+363577,Phishing_Legitimate_full,0,47,None,PCA,kNN,8000,2000,ok,,0.8455,0.8451794828243171,,0.06258120000711642
+363577,Phishing_Legitimate_full,1,47,None,PCA,kNN,8000,2000,ok,,0.8405,0.8403099288928648,,0.05622420000145212
+363577,Phishing_Legitimate_full,2,47,None,PCA,kNN,8000,2000,ok,,0.851,0.8506559112194496,,0.059542899994994514
+363577,Phishing_Legitimate_full,3,47,None,PCA,kNN,8000,2000,ok,,0.8440000000000001,0.8436397459747258,,0.06426939999801107
+363577,Phishing_Legitimate_full,4,47,None,PCA,kNN,8000,2000,ok,,0.829,0.8286683018323474,,0.05763309999019839
+363577,Phishing_Legitimate_full,0,48,None,PCA,MLP,8000,2000,ok,,0.914,0.9139854635433389,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,8.51398319999862
+363577,Phishing_Legitimate_full,1,48,None,PCA,MLP,8000,2000,ok,,0.9279999999999999,0.9279739986134995,,6.793009800006985
+363577,Phishing_Legitimate_full,2,48,None,PCA,MLP,8000,2000,ok,,0.921,0.920999683998736,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.828567999997176
+363577,Phishing_Legitimate_full,3,48,None,PCA,MLP,8000,2000,ok,,0.9385,0.9384987545997807,,7.795940600000904
+363577,Phishing_Legitimate_full,4,48,None,PCA,MLP,8000,2000,ok,,0.929,0.928992899289929,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,7.9133032000099774
+363577,Phishing_Legitimate_full,0,49,None,PCA,DecisionTree,8000,2000,ok,,0.8634999999999999,0.863499146869668,,0.10725140001159161
+363577,Phishing_Legitimate_full,1,49,None,PCA,DecisionTree,8000,2000,ok,,0.867,0.86696594328148,,0.11182029999326915
+363577,Phishing_Legitimate_full,2,49,None,PCA,DecisionTree,8000,2000,ok,,0.859,0.8589543011935867,,0.10890059999655932
+363577,Phishing_Legitimate_full,3,49,None,PCA,DecisionTree,8000,2000,ok,,0.8654999999999999,0.8654789810907955,,0.10025249999307562
+363577,Phishing_Legitimate_full,4,49,None,PCA,DecisionTree,8000,2000,ok,,0.867,0.8669839050525114,,0.1130606000078842
+363577,Phishing_Legitimate_full,0,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.9724999999999999,0.972499443113723,Features [19] are constant. | invalid value encountered in divide,0.7533901999995578
+363577,Phishing_Legitimate_full,1,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.9715,0.9714974276428447,Features [19] are constant. | invalid value encountered in divide,0.693097299998044
+363577,Phishing_Legitimate_full,2,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.968,0.9679984319231643,Features [19] are constant. | invalid value encountered in divide,0.7061433999915607
+363577,Phishing_Legitimate_full,3,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.969,0.9689962485460741,Features [19] are constant. | invalid value encountered in divide,0.6554202999977861
+363577,Phishing_Legitimate_full,4,50,None,SelectKBest,RandomForest,8000,2000,ok,,0.9704999999999999,0.9704978684709971,Features [19] are constant. | invalid value encountered in divide,0.640278799997759
+363577,Phishing_Legitimate_full,0,51,None,SelectKBest,SVM,8000,2000,ok,,0.8945000000000001,0.8944904777656184,Features [19] are constant. | invalid value encountered in divide,1.7300967000046512
+363577,Phishing_Legitimate_full,1,51,None,SelectKBest,SVM,8000,2000,ok,,0.877,0.875950041148279,Features [19] are constant. | invalid value encountered in divide,1.6775440999917919
+363577,Phishing_Legitimate_full,2,51,None,SelectKBest,SVM,8000,2000,ok,,0.893,0.8929219400943288,Features [19] are constant. | invalid value encountered in divide,1.7673711999959778
+363577,Phishing_Legitimate_full,3,51,None,SelectKBest,SVM,8000,2000,ok,,0.8795,0.8788091820399231,Features [19] are constant. | invalid value encountered in divide,1.802717600003234
+363577,Phishing_Legitimate_full,4,51,None,SelectKBest,SVM,8000,2000,ok,,0.8785000000000001,0.8776052638802808,Features [19] are constant. | invalid value encountered in divide,1.7887018000037642
+363577,Phishing_Legitimate_full,0,52,None,SelectKBest,kNN,8000,2000,ok,,0.95,0.9499999499999501,Features [19] are constant. | invalid value encountered in divide,0.08363059999828693
+363577,Phishing_Legitimate_full,1,52,None,SelectKBest,kNN,8000,2000,ok,,0.9485,0.9484919518674793,Features [19] are constant. | invalid value encountered in divide,0.08235080000304151
+363577,Phishing_Legitimate_full,2,52,None,SelectKBest,kNN,8000,2000,ok,,0.9390000000000001,0.9389521384765656,Features [19] are constant. | invalid value encountered in divide,0.13023039999825414
+363577,Phishing_Legitimate_full,3,52,None,SelectKBest,kNN,8000,2000,ok,,0.9490000000000001,0.948977499077093,Features [19] are constant. | invalid value encountered in divide,0.09546029999910388
+363577,Phishing_Legitimate_full,4,52,None,SelectKBest,kNN,8000,2000,ok,,0.95,0.9499915485717085,Features [19] are constant. | invalid value encountered in divide,0.0846639000083087
+363577,Phishing_Legitimate_full,0,53,None,SelectKBest,MLP,8000,2000,ok,,0.955,0.9549945543410753,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,9.137318599998252
+363577,Phishing_Legitimate_full,1,53,None,SelectKBest,MLP,8000,2000,ok,,0.9595,0.9594995038689225,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.572610899995198
+363577,Phishing_Legitimate_full,2,53,None,SelectKBest,MLP,8000,2000,ok,,0.9635,0.9634992608600323,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.525522099997033
+363577,Phishing_Legitimate_full,3,53,None,SelectKBest,MLP,8000,2000,ok,,0.9604999999999999,0.9604927998127659,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,8.946283299999777
+363577,Phishing_Legitimate_full,4,53,None,SelectKBest,MLP,8000,2000,ok,,0.9604999999999999,0.960498331054487,Features [19] are constant. | Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet. | invalid value encountered in divide,7.587603200008743
+363577,Phishing_Legitimate_full,0,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.963,0.9629981869111587,Features [19] are constant. | invalid value encountered in divide,0.028793899997253902
+363577,Phishing_Legitimate_full,1,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.968,0.9679991999799995,Features [19] are constant. | invalid value encountered in divide,0.023049399998853914
+363577,Phishing_Legitimate_full,2,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.96,0.9599993599897598,Features [19] are constant. | invalid value encountered in divide,0.02580590000434313
+363577,Phishing_Legitimate_full,3,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.9564999999999999,0.9564968568979109,Features [19] are constant. | invalid value encountered in divide,0.02529230000800453
+363577,Phishing_Legitimate_full,4,54,None,SelectKBest,DecisionTree,8000,2000,ok,,0.9635,0.9634997718735743,Features [19] are constant. | invalid value encountered in divide,0.020866599996224977
+363577,Phishing_Legitimate_full,0,55,None,None,RandomForest,8000,2000,ok,,0.983,0.9829995749893747,,1.0489838999928907
+363577,Phishing_Legitimate_full,1,55,None,None,RandomForest,8000,2000,ok,,0.985,0.985,,1.0356657999946037
+363577,Phishing_Legitimate_full,2,55,None,None,RandomForest,8000,2000,ok,,0.9835,0.9834999628749165,,1.0727427000092575
+363577,Phishing_Legitimate_full,3,55,None,None,RandomForest,8000,2000,ok,,0.982,0.982,,1.1171190000022762
+363577,Phishing_Legitimate_full,4,55,None,None,RandomForest,8000,2000,ok,,0.9824999999999999,0.9824999956249989,,0.9655703000025824
+363577,Phishing_Legitimate_full,0,56,None,None,SVM,8000,2000,ok,,0.866,0.865763206295906,,6.0505438999971375
+363577,Phishing_Legitimate_full,1,56,None,None,SVM,8000,2000,ok,,0.8575,0.8571061488226925,,4.7740128000004916
+363577,Phishing_Legitimate_full,2,56,None,None,SVM,8000,2000,ok,,0.865,0.8644447657605552,,4.906155699994997
+363577,Phishing_Legitimate_full,3,56,None,None,SVM,8000,2000,ok,,0.859,0.8585564329738058,,6.734158100007335
+363577,Phishing_Legitimate_full,4,56,None,None,SVM,8000,2000,ok,,0.843,0.8422706595296652,,5.040738299998338
+363577,Phishing_Legitimate_full,0,57,None,None,kNN,8000,2000,ok,,0.8745,0.8743589993870622,,0.16032790001190733
+363577,Phishing_Legitimate_full,1,57,None,None,kNN,8000,2000,ok,,0.867,0.8668956461866103,,0.32576930000504944
+363577,Phishing_Legitimate_full,2,57,None,None,kNN,8000,2000,ok,,0.8765000000000001,0.8762323834711605,,0.13703050000185613
+363577,Phishing_Legitimate_full,3,57,None,None,kNN,8000,2000,ok,,0.866,0.8658062241877271,,0.13303300000552554
+363577,Phishing_Legitimate_full,4,57,None,None,kNN,8000,2000,ok,,0.862,0.8618108190112264,,0.14528310000605416
+363577,Phishing_Legitimate_full,0,58,None,None,MLP,8000,2000,ok,,0.9584999999999999,0.9584924352463237,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,11.198845299993991
+363577,Phishing_Legitimate_full,1,58,None,None,MLP,8000,2000,ok,,0.974,0.9739997659978941,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,10.510453799986863
+363577,Phishing_Legitimate_full,2,58,None,None,MLP,8000,2000,ok,,0.96,0.959983993597439,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,10.984713500001817
+363577,Phishing_Legitimate_full,3,58,None,None,MLP,8000,2000,ok,,0.97,0.9699956793778304,,11.162788899993757
+363577,Phishing_Legitimate_full,4,58,None,None,MLP,8000,2000,ok,,0.958,0.957999621996598,,4.174076299997978
+363577,Phishing_Legitimate_full,0,59,None,None,DecisionTree,8000,2000,ok,,0.9695,0.9694999313748456,,0.07346450000477489
+363577,Phishing_Legitimate_full,1,59,None,None,DecisionTree,8000,2000,ok,,0.9724999999999999,0.9724969677906989,,0.08438879999448545
+363577,Phishing_Legitimate_full,2,59,None,None,DecisionTree,8000,2000,ok,,0.963,0.9629990749768744,,0.07468530000187457
+363577,Phishing_Legitimate_full,3,59,None,None,DecisionTree,8000,2000,ok,,0.9695,0.9694966370042297,,0.07816859999729786
+363577,Phishing_Legitimate_full,4,59,None,None,DecisionTree,8000,2000,ok,,0.9655,0.9654954367715131,,0.06779909999750089

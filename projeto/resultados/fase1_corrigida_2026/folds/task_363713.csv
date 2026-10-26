@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+363713,regensburg_pediatric_appendicitis,0,0,StandardScaler,PCA,RandomForest,624,156,ok,,0.6221585847015401,0.6357394809775762,,0.40947769999911543
+363713,regensburg_pediatric_appendicitis,1,0,StandardScaler,PCA,RandomForest,624,156,ok,,0.6097110856561029,0.600593086831619,,0.32788219999929424
+363713,regensburg_pediatric_appendicitis,2,0,StandardScaler,PCA,RandomForest,624,156,ok,,0.6702049128165967,0.7104192872117401,,0.31102850000024773
+363713,regensburg_pediatric_appendicitis,3,0,StandardScaler,PCA,RandomForest,624,156,ok,,0.5794753086419754,0.5763181196168398,,0.3086551000014879
+363713,regensburg_pediatric_appendicitis,4,0,StandardScaler,PCA,RandomForest,624,156,ok,,0.6712962962962963,0.7017412469574986,,0.3242622000107076
+363713,regensburg_pediatric_appendicitis,0,1,StandardScaler,PCA,SVM,624,156,ok,,0.650986381570574,0.6654292581874536,,0.022330000007059425
+363713,regensburg_pediatric_appendicitis,1,1,StandardScaler,PCA,SVM,624,156,ok,,0.6378388697976326,0.6249389499389499,,0.021837699998286553
+363713,regensburg_pediatric_appendicitis,2,1,StandardScaler,PCA,SVM,624,156,ok,,0.6227567773959527,0.6145542527452075,,0.021839799999725074
+363713,regensburg_pediatric_appendicitis,3,1,StandardScaler,PCA,SVM,624,156,ok,,0.5979938271604938,0.5922823051535923,,0.019933900010073557
+363713,regensburg_pediatric_appendicitis,4,1,StandardScaler,PCA,SVM,624,156,ok,,0.6817129629629629,0.7153828441398367,,0.01953789999242872
+363713,regensburg_pediatric_appendicitis,0,2,StandardScaler,PCA,kNN,624,156,ok,,0.6173857706503755,0.6407980145093547,,0.011121399991679937
+363713,regensburg_pediatric_appendicitis,1,2,StandardScaler,PCA,kNN,624,156,ok,,0.5788468881252387,0.5769488283118126,,0.012700700011919253
+363713,regensburg_pediatric_appendicitis,2,2,StandardScaler,PCA,kNN,624,156,ok,,0.7094438080692376,0.7707775863115668,,0.01326110000081826
+363713,regensburg_pediatric_appendicitis,3,2,StandardScaler,PCA,kNN,624,156,ok,,0.5555555555555555,0.5585339996971074,,0.013535599995520897
+363713,regensburg_pediatric_appendicitis,4,2,StandardScaler,PCA,kNN,624,156,ok,,0.6597222222222222,0.6954740947278261,,0.010896599997067824
+363713,regensburg_pediatric_appendicitis,0,3,StandardScaler,PCA,MLP,624,156,ok,,0.7554919180348735,0.7278388278388279,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.210614199997508
+363713,regensburg_pediatric_appendicitis,1,3,StandardScaler,PCA,MLP,624,156,ok,,0.6172203130966017,0.6001923308089915,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8015200999943772
+363713,regensburg_pediatric_appendicitis,2,3,StandardScaler,PCA,MLP,624,156,ok,,0.879814178439608,0.8618112006436881,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.702973599996767
+363713,regensburg_pediatric_appendicitis,3,3,StandardScaler,PCA,MLP,624,156,ok,,0.607638888888889,0.6023809523809524,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6746737000066787
+363713,regensburg_pediatric_appendicitis,4,3,StandardScaler,PCA,MLP,624,156,ok,,0.6060956790123456,0.5969855832241153,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8368461000063689
+363713,regensburg_pediatric_appendicitis,0,4,StandardScaler,PCA,DecisionTree,624,156,ok,,0.6908616520300369,0.6646803200031821,,0.020129500000621192
+363713,regensburg_pediatric_appendicitis,1,4,StandardScaler,PCA,DecisionTree,624,156,ok,,0.5719740358915617,0.5771833919042041,,0.014059499997529201
+363713,regensburg_pediatric_appendicitis,2,4,StandardScaler,PCA,DecisionTree,624,156,ok,,0.5294005345551738,0.5309973045822102,,0.012395300000207499
+363713,regensburg_pediatric_appendicitis,3,4,StandardScaler,PCA,DecisionTree,624,156,ok,,0.5524691358024691,0.5551959726717008,,0.011993899999652058
+363713,regensburg_pediatric_appendicitis,4,4,StandardScaler,PCA,DecisionTree,624,156,ok,,0.5709876543209876,0.5672325004768263,,0.011743199996999465
+363713,regensburg_pediatric_appendicitis,0,5,StandardScaler,SelectKBest,RandomForest,624,156,ok,,0.6791141657121038,0.6996775862755245,,0.33458039999823086
+363713,regensburg_pediatric_appendicitis,1,5,StandardScaler,SelectKBest,RandomForest,624,156,ok,,0.6254931907852871,0.6140221854507568,,0.28578220000781585
+363713,regensburg_pediatric_appendicitis,2,5,StandardScaler,SelectKBest,RandomForest,624,156,ok,,0.7553900980017819,0.7843095742178311,,0.2274020000040764
+363713,regensburg_pediatric_appendicitis,3,5,StandardScaler,SelectKBest,RandomForest,624,156,ok,,0.6940586419753086,0.7253690722387846,,0.23122079999302514
+363713,regensburg_pediatric_appendicitis,4,5,StandardScaler,SelectKBest,RandomForest,624,156,ok,,0.6967592592592592,0.7067692692692692,,0.23424119999981485
+363713,regensburg_pediatric_appendicitis,0,6,StandardScaler,SelectKBest,SVM,624,156,ok,,0.61862033855161,0.6052367484718547,,0.01879440000629984
+363713,regensburg_pediatric_appendicitis,1,6,StandardScaler,SelectKBest,SVM,624,156,ok,,0.6131475117729414,0.6055666806377,,0.01928730000508949
+363713,regensburg_pediatric_appendicitis,2,6,StandardScaler,SelectKBest,SVM,624,156,ok,,0.6351024564082983,0.6245193047223504,,0.016763599996920675
+363713,regensburg_pediatric_appendicitis,3,6,StandardScaler,SelectKBest,SVM,624,156,ok,,0.6446759259259259,0.6334156071966346,,0.016842700002598576
+363713,regensburg_pediatric_appendicitis,4,6,StandardScaler,SelectKBest,SVM,624,156,ok,,0.6597222222222222,0.6401693889897156,,0.019224999996367842
+363713,regensburg_pediatric_appendicitis,0,7,StandardScaler,SelectKBest,kNN,624,156,ok,,0.756090110729286,0.7872210889194617,,0.01060380000853911
+363713,regensburg_pediatric_appendicitis,1,7,StandardScaler,SelectKBest,kNN,624,156,ok,,0.6131475117729414,0.6055666806377,,0.032684199992218055
+363713,regensburg_pediatric_appendicitis,2,7,StandardScaler,SelectKBest,kNN,624,156,ok,,0.6955962835687922,0.7346650177157855,,0.010876799991820008
+363713,regensburg_pediatric_appendicitis,3,7,StandardScaler,SelectKBest,kNN,624,156,ok,,0.6138117283950617,0.6084031480071084,,0.01891769999929238
+363713,regensburg_pediatric_appendicitis,4,7,StandardScaler,SelectKBest,kNN,624,156,ok,,0.7064043209876543,0.732913890944979,,0.011375300004146993
+363713,regensburg_pediatric_appendicitis,0,8,StandardScaler,SelectKBest,MLP,624,156,ok,,0.8220567646684486,0.8415040406906481,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7961645000032149
+363713,regensburg_pediatric_appendicitis,1,8,StandardScaler,SelectKBest,MLP,624,156,ok,,0.5850197276314115,0.583015873015873,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0053685999882873
+363713,regensburg_pediatric_appendicitis,2,8,StandardScaler,SelectKBest,MLP,624,156,ok,,0.6344024436807941,0.6221284790682745,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.735723700010567
+363713,regensburg_pediatric_appendicitis,3,8,StandardScaler,SelectKBest,MLP,624,156,ok,,0.6385030864197531,0.6272993992455642,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7713787000102457
+363713,regensburg_pediatric_appendicitis,4,8,StandardScaler,SelectKBest,MLP,624,156,ok,,0.7125771604938271,0.7286706349206349,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7931180000014137
+363713,regensburg_pediatric_appendicitis,0,9,StandardScaler,SelectKBest,DecisionTree,624,156,ok,,0.720389461626575,0.6935829340464782,,0.008152199996402487
+363713,regensburg_pediatric_appendicitis,1,9,StandardScaler,SelectKBest,DecisionTree,624,156,ok,,0.6605956471935853,0.6673730759178023,,0.007603899997775443
+363713,regensburg_pediatric_appendicitis,2,9,StandardScaler,SelectKBest,DecisionTree,624,156,ok,,0.8062746595392644,0.7650865390830487,,0.007073800006764941
+363713,regensburg_pediatric_appendicitis,3,9,StandardScaler,SelectKBest,DecisionTree,624,156,ok,,0.6473765432098765,0.653099623687859,,0.007816199999069795
+363713,regensburg_pediatric_appendicitis,4,9,StandardScaler,SelectKBest,DecisionTree,624,156,ok,,0.7145061728395062,0.7344676092339643,,0.011341100005665794
+363713,regensburg_pediatric_appendicitis,0,10,StandardScaler,None,RandomForest,624,156,ok,,0.749217258495609,0.7781933662667608,,0.29714189999504015
+363713,regensburg_pediatric_appendicitis,1,10,StandardScaler,None,RandomForest,624,156,ok,,0.6543209876543209,0.6434087063528687,,0.32083649998821784
+363713,regensburg_pediatric_appendicitis,2,10,StandardScaler,None,RandomForest,624,156,ok,,0.6859870179457809,0.7250844043686762,,0.26849490001040976
+363713,regensburg_pediatric_appendicitis,3,10,StandardScaler,None,RandomForest,624,156,ok,,0.6508487654320988,0.637098637098637,,0.2720569999946747
+363713,regensburg_pediatric_appendicitis,4,10,StandardScaler,None,RandomForest,624,156,ok,,0.7098765432098765,0.7385947385947386,,0.3232391000055941
+363713,regensburg_pediatric_appendicitis,0,11,StandardScaler,None,SVM,624,156,ok,,0.679814178439608,0.7034664589656129,,0.03369850000308361
+363713,regensburg_pediatric_appendicitis,1,11,StandardScaler,None,SVM,624,156,ok,,0.640575283186967,0.6243659420289855,,0.03503249998902902
+363713,regensburg_pediatric_appendicitis,2,11,StandardScaler,None,SVM,624,156,ok,,0.6261932035127912,0.6190654205607476,,0.03558169999450911
+363713,regensburg_pediatric_appendicitis,3,11,StandardScaler,None,SVM,624,156,ok,,0.6261574074074074,0.6161616161616161,,0.03096049999294337
+363713,regensburg_pediatric_appendicitis,4,11,StandardScaler,None,SVM,624,156,ok,,0.6253858024691358,0.6112542955326461,,0.031662399997003376
+363713,regensburg_pediatric_appendicitis,0,12,StandardScaler,None,kNN,624,156,ok,,0.5975308641975309,0.6385816936947869,,0.009411499995621853
+363713,regensburg_pediatric_appendicitis,1,12,StandardScaler,None,kNN,624,156,ok,,0.5390734376988672,0.5424366530150168,,0.007852200011257082
+363713,regensburg_pediatric_appendicitis,2,12,StandardScaler,None,kNN,624,156,ok,,0.5308641975308642,0.5363364601587465,,0.009056800001417287
+363713,regensburg_pediatric_appendicitis,3,12,StandardScaler,None,kNN,624,156,ok,,0.4868827160493827,0.48748114630467576,,0.007180400003562681
+363713,regensburg_pediatric_appendicitis,4,12,StandardScaler,None,kNN,624,156,ok,,0.6172839506172839,0.6609669783008494,,0.006919399995240383
+363713,regensburg_pediatric_appendicitis,0,13,StandardScaler,None,MLP,624,156,ok,,0.8001018200330915,0.8022333461686562,,0.6569577999907779
+363713,regensburg_pediatric_appendicitis,1,13,StandardScaler,None,MLP,624,156,ok,,0.6042382588774341,0.6012768243734395,,0.6150177999952575
+363713,regensburg_pediatric_appendicitis,2,13,StandardScaler,None,MLP,624,156,ok,,0.7403080056001018,0.7579278157167604,,0.6511001000035321
+363713,regensburg_pediatric_appendicitis,3,13,StandardScaler,None,MLP,624,156,ok,,0.5952932098765432,0.5930326153449886,,0.6791732999990927
+363713,regensburg_pediatric_appendicitis,4,13,StandardScaler,None,MLP,624,156,ok,,0.6774691358024691,0.704694053787318,,0.6926112999935867
+363713,regensburg_pediatric_appendicitis,0,14,StandardScaler,None,DecisionTree,624,156,ok,,0.7877561410207458,0.7400115141047783,,0.01836209998873528
+363713,regensburg_pediatric_appendicitis,1,14,StandardScaler,None,DecisionTree,624,156,ok,,0.5761104747359043,0.5808580858085809,,0.015561000007437542
+363713,regensburg_pediatric_appendicitis,2,14,StandardScaler,None,DecisionTree,624,156,ok,,0.6784141529845997,0.6959239284948846,,0.016221800004132092
+363713,regensburg_pediatric_appendicitis,3,14,StandardScaler,None,DecisionTree,624,156,ok,,0.6103395061728395,0.6085618085618085,,0.013161399998352863
+363713,regensburg_pediatric_appendicitis,4,14,StandardScaler,None,DecisionTree,624,156,ok,,0.6535493827160493,0.6596990311276026,,0.012852400002884679
+363713,regensburg_pediatric_appendicitis,0,15,MinMaxScaler,PCA,RandomForest,624,156,ok,,0.6627338678885071,0.676068376068376,,0.35719650000100955
+363713,regensburg_pediatric_appendicitis,1,15,MinMaxScaler,PCA,RandomForest,624,156,ok,,0.5836197021764032,0.5729913587056444,,0.3835239000036381
+363713,regensburg_pediatric_appendicitis,2,15,MinMaxScaler,PCA,RandomForest,624,156,ok,,0.5547919053073692,0.5464430235072437,,0.3371793000114849
+363713,regensburg_pediatric_appendicitis,3,15,MinMaxScaler,PCA,RandomForest,624,156,ok,,0.5706018518518519,0.5710715401437051,,0.32126209999842104
+363713,regensburg_pediatric_appendicitis,4,15,MinMaxScaler,PCA,RandomForest,624,156,ok,,0.5833333333333334,0.5711249711249712,,0.31083339999895543
+363713,regensburg_pediatric_appendicitis,0,16,MinMaxScaler,PCA,SVM,624,156,ok,,0.6826524118620338,0.6984126984126983,,0.0607816000119783
+363713,regensburg_pediatric_appendicitis,1,16,MinMaxScaler,PCA,SVM,624,156,ok,,0.5904925544100802,0.5826353992183138,,0.021851700003026053
+363713,regensburg_pediatric_appendicitis,2,16,MinMaxScaler,PCA,SVM,624,156,ok,,0.5836197021764032,0.5729913587056444,,0.02242120000300929
+363713,regensburg_pediatric_appendicitis,3,16,MinMaxScaler,PCA,SVM,624,156,ok,,0.5582561728395062,0.5598071006901139,,0.020965700008673593
+363713,regensburg_pediatric_appendicitis,4,16,MinMaxScaler,PCA,SVM,624,156,ok,,0.6520061728395062,0.6827061099669226,,0.02179529999557417
+363713,regensburg_pediatric_appendicitis,0,17,MinMaxScaler,PCA,kNN,624,156,ok,,0.6853888252513682,0.7004260270230963,,0.013632000001962297
+363713,regensburg_pediatric_appendicitis,1,17,MinMaxScaler,PCA,kNN,624,156,ok,,0.5665012091128929,0.5649972764266719,,0.011618400007137097
+363713,regensburg_pediatric_appendicitis,2,17,MinMaxScaler,PCA,kNN,624,156,ok,,0.6881252386407025,0.7023473979415235,,0.009768400006578304
+363713,regensburg_pediatric_appendicitis,3,17,MinMaxScaler,PCA,kNN,624,156,ok,,0.5135030864197531,0.5131138766225077,,0.011716599998180754
+363713,regensburg_pediatric_appendicitis,4,17,MinMaxScaler,PCA,kNN,624,156,ok,,0.6053240740740741,0.6413946526414084,,0.009804200002690777
+363713,regensburg_pediatric_appendicitis,0,18,MinMaxScaler,PCA,MLP,624,156,ok,,0.6778159602901871,0.6878514640294746,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8188656999991508
+363713,regensburg_pediatric_appendicitis,1,18,MinMaxScaler,PCA,MLP,624,156,ok,,0.6083110602010945,0.595577485380117,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6843663000036031
+363713,regensburg_pediatric_appendicitis,2,18,MinMaxScaler,PCA,MLP,624,156,ok,,0.7959653811887488,0.8406904092471102,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7841164999990724
+363713,regensburg_pediatric_appendicitis,3,18,MinMaxScaler,PCA,MLP,624,156,ok,,0.5821759259259259,0.5784313725490197,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7803424000012456
+363713,regensburg_pediatric_appendicitis,4,18,MinMaxScaler,PCA,MLP,624,156,ok,,0.6574074074074073,0.6830951724861892,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7231540999928256
+363713,regensburg_pediatric_appendicitis,0,19,MinMaxScaler,PCA,DecisionTree,624,156,ok,,0.6325060455644648,0.5902590393955748,,0.012359700005617924
+363713,regensburg_pediatric_appendicitis,1,19,MinMaxScaler,PCA,DecisionTree,624,156,ok,,0.5410462008400153,0.5303362573099415,,0.012034200000925921
+363713,regensburg_pediatric_appendicitis,2,19,MinMaxScaler,PCA,DecisionTree,624,156,ok,,0.6283314242077128,0.641912320483749,,0.012079599997377954
+363713,regensburg_pediatric_appendicitis,3,19,MinMaxScaler,PCA,DecisionTree,624,156,ok,,0.5258487654320988,0.5261162384634572,,0.012142599996877834
+363713,regensburg_pediatric_appendicitis,4,19,MinMaxScaler,PCA,DecisionTree,624,156,ok,,0.5883487654320988,0.5846058128666825,,0.01263279998966027
+363713,regensburg_pediatric_appendicitis,0,20,MinMaxScaler,SelectKBest,RandomForest,624,156,ok,,0.6791141657121038,0.6996775862755245,,0.29402509999636095
+363713,regensburg_pediatric_appendicitis,1,20,MinMaxScaler,SelectKBest,RandomForest,624,156,ok,,0.6254931907852871,0.6140221854507568,,0.2532070000015665
+363713,regensburg_pediatric_appendicitis,2,20,MinMaxScaler,SelectKBest,RandomForest,624,156,ok,,0.694896270841288,0.715126024404375,,0.3356488999997964
+363713,regensburg_pediatric_appendicitis,3,20,MinMaxScaler,SelectKBest,RandomForest,624,156,ok,,0.6940586419753086,0.7253690722387846,,0.2659663999947952
+363713,regensburg_pediatric_appendicitis,4,20,MinMaxScaler,SelectKBest,RandomForest,624,156,ok,,0.6967592592592592,0.7067692692692692,,0.26817249998566695
+363713,regensburg_pediatric_appendicitis,0,21,MinMaxScaler,SelectKBest,SVM,624,156,ok,,0.6254931907852871,0.6140221854507568,,0.01711619998968672
+363713,regensburg_pediatric_appendicitis,1,21,MinMaxScaler,SelectKBest,SVM,624,156,ok,,0.6124474990454372,0.6002442002442002,,0.018546400009654462
+363713,regensburg_pediatric_appendicitis,2,21,MinMaxScaler,SelectKBest,SVM,624,156,ok,,0.6344024436807941,0.6204725846181918,,0.016572699998505414
+363713,regensburg_pediatric_appendicitis,3,21,MinMaxScaler,SelectKBest,SVM,624,156,ok,,0.6138117283950617,0.6084031480071084,,0.016350700010661967
+363713,regensburg_pediatric_appendicitis,4,21,MinMaxScaler,SelectKBest,SVM,624,156,ok,,0.6473765432098765,0.6314824155165298,,0.017235100007383153
+363713,regensburg_pediatric_appendicitis,0,22,MinMaxScaler,SelectKBest,kNN,624,156,ok,,0.6736413389334351,0.6983407731071282,,0.011680400013574399
+363713,regensburg_pediatric_appendicitis,1,22,MinMaxScaler,SelectKBest,kNN,624,156,ok,,0.5973654066437571,0.5909090909090909,,0.010075099999085069
+363713,regensburg_pediatric_appendicitis,2,22,MinMaxScaler,SelectKBest,kNN,624,156,ok,,0.6955962835687922,0.7346650177157855,,0.014078499996685423
+363713,regensburg_pediatric_appendicitis,3,22,MinMaxScaler,SelectKBest,kNN,624,156,ok,,0.6138117283950617,0.6084031480071084,,0.01072829999611713
+363713,regensburg_pediatric_appendicitis,4,22,MinMaxScaler,SelectKBest,kNN,624,156,ok,,0.6967592592592592,0.7245684565272194,,0.00967270000546705
+363713,regensburg_pediatric_appendicitis,0,23,MinMaxScaler,SelectKBest,MLP,624,156,ok,,0.6220567646684486,0.6096153846153847,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.665914299999713
+363713,regensburg_pediatric_appendicitis,1,23,MinMaxScaler,SelectKBest,MLP,624,156,ok,,0.6261932035127912,0.6179043364973013,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7163815000094473
+363713,regensburg_pediatric_appendicitis,2,23,MinMaxScaler,SelectKBest,MLP,624,156,ok,,0.632366043018964,0.6252959501557632,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7455757999996422
+363713,regensburg_pediatric_appendicitis,3,23,MinMaxScaler,SelectKBest,MLP,624,156,ok,,0.6446759259259259,0.6322201607915893,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6645717000064906
+363713,regensburg_pediatric_appendicitis,4,23,MinMaxScaler,SelectKBest,MLP,624,156,ok,,0.6604938271604938,0.6442905833982913,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6460537999955704
+363713,regensburg_pediatric_appendicitis,0,24,MinMaxScaler,SelectKBest,DecisionTree,624,156,ok,,0.720389461626575,0.6935829340464782,,0.007846099993912503
+363713,regensburg_pediatric_appendicitis,1,24,MinMaxScaler,SelectKBest,DecisionTree,624,156,ok,,0.6605956471935853,0.6673730759178023,,0.007962600007886067
+363713,regensburg_pediatric_appendicitis,2,24,MinMaxScaler,SelectKBest,DecisionTree,624,156,ok,,0.8062746595392644,0.7650865390830487,,0.007041400007437915
+363713,regensburg_pediatric_appendicitis,3,24,MinMaxScaler,SelectKBest,DecisionTree,624,156,ok,,0.6473765432098765,0.653099623687859,,0.008810600003926083
+363713,regensburg_pediatric_appendicitis,4,24,MinMaxScaler,SelectKBest,DecisionTree,624,156,ok,,0.7145061728395062,0.7344676092339643,,0.007092500003636815
+363713,regensburg_pediatric_appendicitis,0,25,MinMaxScaler,None,RandomForest,624,156,ok,,0.749217258495609,0.7781933662667608,,0.28851440000289585
+363713,regensburg_pediatric_appendicitis,1,25,MinMaxScaler,None,RandomForest,624,156,ok,,0.6481481481481481,0.6385259321039137,,0.3643341999995755
+363713,regensburg_pediatric_appendicitis,2,25,MinMaxScaler,None,RandomForest,624,156,ok,,0.6859870179457809,0.7250844043686762,,0.2717243000079179
+363713,regensburg_pediatric_appendicitis,3,25,MinMaxScaler,None,RandomForest,624,156,ok,,0.6508487654320988,0.637098637098637,,0.4643831000139471
+363713,regensburg_pediatric_appendicitis,4,25,MinMaxScaler,None,RandomForest,624,156,ok,,0.7098765432098765,0.7385947385947386,,0.2771190000057686
+363713,regensburg_pediatric_appendicitis,0,26,MinMaxScaler,None,SVM,624,156,ok,,0.6736413389334351,0.6983407731071282,,0.02721630000451114
+363713,regensburg_pediatric_appendicitis,1,26,MinMaxScaler,None,SVM,624,156,ok,,0.6227567773959527,0.613443301516696,,0.02731130000029225
+363713,regensburg_pediatric_appendicitis,2,26,MinMaxScaler,None,SVM,624,156,ok,,0.610411098383607,0.6043993867142277,,0.027903299996978603
+363713,regensburg_pediatric_appendicitis,3,26,MinMaxScaler,None,SVM,624,156,ok,,0.5733024691358025,0.570873786407767,,0.036852899997029454
+363713,regensburg_pediatric_appendicitis,4,26,MinMaxScaler,None,SVM,624,156,ok,,0.6219135802469137,0.6078178694158075,,0.02651270000205841
+363713,regensburg_pediatric_appendicitis,0,27,MinMaxScaler,None,kNN,624,156,ok,,0.621522209494718,0.6592132085132693,,0.009524299995973706
+363713,regensburg_pediatric_appendicitis,1,27,MinMaxScaler,None,kNN,624,156,ok,,0.5301641848033601,0.5349681183014516,,0.007408399993437342
+363713,regensburg_pediatric_appendicitis,2,27,MinMaxScaler,None,kNN,624,156,ok,,0.6249586356115565,0.6754092510816719,,0.012358399995719083
+363713,regensburg_pediatric_appendicitis,3,27,MinMaxScaler,None,kNN,624,156,ok,,0.4992283950617284,0.5019027484143763,,0.007697699998971075
+363713,regensburg_pediatric_appendicitis,4,27,MinMaxScaler,None,kNN,624,156,ok,,0.5979938271604939,0.6417316368624951,,0.007439699998940341
+363713,regensburg_pediatric_appendicitis,0,28,MinMaxScaler,None,MLP,624,156,ok,,0.748517245768105,0.7574413418654257,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.817014799991739
+363713,regensburg_pediatric_appendicitis,1,28,MinMaxScaler,None,MLP,624,156,ok,,0.6008018327605956,0.5947933289527206,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8429101999936393
+363713,regensburg_pediatric_appendicitis,2,28,MinMaxScaler,None,MLP,624,156,ok,,0.6254931907852871,0.616192506100763,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0096908999985317
+363713,regensburg_pediatric_appendicitis,3,28,MinMaxScaler,None,MLP,624,156,ok,,0.6157407407407408,0.6028182028182029,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.077161499997601
+363713,regensburg_pediatric_appendicitis,4,28,MinMaxScaler,None,MLP,624,156,ok,,0.6323302469135803,0.6200989486703773,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7718238000088604
+363713,regensburg_pediatric_appendicitis,0,29,MinMaxScaler,None,DecisionTree,624,156,ok,,0.7877561410207458,0.7400115141047783,,0.013749199992162175
+363713,regensburg_pediatric_appendicitis,1,29,MinMaxScaler,None,DecisionTree,624,156,ok,,0.58845615374825,0.5916504854368932,,0.015831700002308935
+363713,regensburg_pediatric_appendicitis,2,29,MinMaxScaler,None,DecisionTree,624,156,ok,,0.6784141529845997,0.6959239284948846,,0.018474199998308904
+363713,regensburg_pediatric_appendicitis,3,29,MinMaxScaler,None,DecisionTree,624,156,ok,,0.6103395061728395,0.6085618085618085,,0.014643799993791617
+363713,regensburg_pediatric_appendicitis,4,29,MinMaxScaler,None,DecisionTree,624,156,ok,,0.6535493827160493,0.6596990311276026,,0.012715700009721331
+363713,regensburg_pediatric_appendicitis,0,30,RobustScaler,PCA,RandomForest,624,156,ok,,0.5520554919180349,0.5454517133956386,,0.3342259000055492
+363713,regensburg_pediatric_appendicitis,1,30,RobustScaler,PCA,RandomForest,624,156,ok,,0.6008018327605956,0.5971643299229507,,0.3305158000002848
+363713,regensburg_pediatric_appendicitis,2,30,RobustScaler,PCA,RandomForest,624,156,ok,,0.5794832633320606,0.5678266178266178,,0.4168869999994058
+363713,regensburg_pediatric_appendicitis,3,30,RobustScaler,PCA,RandomForest,624,156,ok,,0.5945216049382717,0.5878227908078655,,0.8901102000090759
+363713,regensburg_pediatric_appendicitis,4,30,RobustScaler,PCA,RandomForest,624,156,ok,,0.5983796296296297,0.5811252268602541,,0.32345120000536554
+363713,regensburg_pediatric_appendicitis,0,31,RobustScaler,PCA,SVM,624,156,ok,,0.5870561282932417,0.57928531546622,,0.026089099992532283
+363713,regensburg_pediatric_appendicitis,1,31,RobustScaler,PCA,SVM,624,156,ok,,0.6008018327605956,0.5959453088165959,,0.023343799999565817
+363713,regensburg_pediatric_appendicitis,2,31,RobustScaler,PCA,SVM,624,156,ok,,0.6001018200330915,0.5944491379580087,,0.025693899995530955
+363713,regensburg_pediatric_appendicitis,3,31,RobustScaler,PCA,SVM,624,156,ok,,0.5752314814814815,0.5684908789386401,,0.05897900000854861
+363713,regensburg_pediatric_appendicitis,4,31,RobustScaler,PCA,SVM,624,156,ok,,0.6141975308641975,0.595305928639262,,0.022258099997998215
+363713,regensburg_pediatric_appendicitis,0,32,RobustScaler,PCA,kNN,624,156,ok,,0.6792159857451954,0.6808240277242973,,0.012404400011291727
+363713,regensburg_pediatric_appendicitis,1,32,RobustScaler,PCA,kNN,624,156,ok,,0.5479826905943744,0.5497776033490319,,0.012892299986560829
+363713,regensburg_pediatric_appendicitis,2,32,RobustScaler,PCA,kNN,624,156,ok,,0.574710449280896,0.5700455759861701,,0.01278400000592228
+363713,regensburg_pediatric_appendicitis,3,32,RobustScaler,PCA,kNN,624,156,ok,,0.529320987654321,0.5292757961253846,,0.01577309999265708
+363713,regensburg_pediatric_appendicitis,4,32,RobustScaler,PCA,kNN,624,156,ok,,0.650462962962963,0.6752533507682249,,0.009585099993273616
+363713,regensburg_pediatric_appendicitis,0,33,RobustScaler,PCA,MLP,624,156,ok,,0.6798523609520172,0.6729452478062043,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7333209000062197
+363713,regensburg_pediatric_appendicitis,1,33,RobustScaler,PCA,MLP,624,156,ok,,0.5685376097747232,0.5626584060827936,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7395118999993429
+363713,regensburg_pediatric_appendicitis,2,33,RobustScaler,PCA,MLP,624,156,ok,,0.6055746468117602,0.5954776188278726,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8713375999941491
+363713,regensburg_pediatric_appendicitis,3,33,RobustScaler,PCA,MLP,624,156,ok,,0.6006944444444445,0.5941719971570718,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.944398400009959
+363713,regensburg_pediatric_appendicitis,4,33,RobustScaler,PCA,MLP,624,156,ok,,0.5983796296296297,0.5811252268602541,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7902390999952331
+363713,regensburg_pediatric_appendicitis,0,34,RobustScaler,PCA,DecisionTree,624,156,ok,,0.5981036018836706,0.5956354260019181,,0.010832899992237799
+363713,regensburg_pediatric_appendicitis,1,34,RobustScaler,PCA,DecisionTree,624,156,ok,,0.5362733867888507,0.5378000256706456,,0.050326399999903515
+363713,regensburg_pediatric_appendicitis,2,34,RobustScaler,PCA,DecisionTree,624,156,ok,,0.531436935217004,0.5274962462462462,,0.013211600002250634
+363713,regensburg_pediatric_appendicitis,3,34,RobustScaler,PCA,DecisionTree,624,156,ok,,0.5227623456790124,0.5190730497806599,,0.0305893000040669
+363713,regensburg_pediatric_appendicitis,4,34,RobustScaler,PCA,DecisionTree,624,156,ok,,0.5150462962962963,0.5168275418275418,,0.012837600006605498
+363713,regensburg_pediatric_appendicitis,0,35,RobustScaler,SelectKBest,RandomForest,624,156,ok,,0.6791141657121038,0.6996775862755245,,0.2568701999989571
+363713,regensburg_pediatric_appendicitis,1,35,RobustScaler,SelectKBest,RandomForest,624,156,ok,,0.6254931907852871,0.6140221854507568,,0.26742590000503697
+363713,regensburg_pediatric_appendicitis,2,35,RobustScaler,SelectKBest,RandomForest,624,156,ok,,0.6887234313351153,0.71015651015651,,0.29481350000423845
+363713,regensburg_pediatric_appendicitis,3,35,RobustScaler,SelectKBest,RandomForest,624,156,ok,,0.6940586419753086,0.7253690722387846,,0.306110899997293
+363713,regensburg_pediatric_appendicitis,4,35,RobustScaler,SelectKBest,RandomForest,624,156,ok,,0.6967592592592592,0.7067692692692692,,0.24348450000979938
+363713,regensburg_pediatric_appendicitis,0,36,RobustScaler,SelectKBest,SVM,624,156,ok,,0.6151839124347716,0.6008847680513892,,0.019132999994326383
+363713,regensburg_pediatric_appendicitis,1,36,RobustScaler,SelectKBest,SVM,624,156,ok,,0.6385388825251369,0.6290427207858401,,0.01778809999814257
+363713,regensburg_pediatric_appendicitis,2,36,RobustScaler,SelectKBest,SVM,624,156,ok,,0.6296296296296297,0.6236115022372415,,0.020039399998495355
+363713,regensburg_pediatric_appendicitis,3,36,RobustScaler,SelectKBest,SVM,624,156,ok,,0.6350308641975309,0.6227581941867656,,0.018149000010453165
+363713,regensburg_pediatric_appendicitis,4,36,RobustScaler,SelectKBest,SVM,624,156,ok,,0.6315586419753086,0.617206676485027,,0.02164259999699425
+363713,regensburg_pediatric_appendicitis,0,37,RobustScaler,SelectKBest,kNN,624,156,ok,,0.7499172712231131,0.7664261664261666,,0.01184099999954924
+363713,regensburg_pediatric_appendicitis,1,37,RobustScaler,SelectKBest,kNN,624,156,ok,,0.6165839378897798,0.6122641509433963,,0.012373300007311627
+363713,regensburg_pediatric_appendicitis,2,37,RobustScaler,SelectKBest,kNN,624,156,ok,,0.6825505918289424,0.7205387205387206,,0.014136199999484234
+363713,regensburg_pediatric_appendicitis,3,37,RobustScaler,SelectKBest,kNN,624,156,ok,,0.6041666666666666,0.5986925615638486,,0.013757599997916259
+363713,regensburg_pediatric_appendicitis,4,37,RobustScaler,SelectKBest,kNN,624,156,ok,,0.6377314814814815,0.6221284790682745,,0.01275059999898076
+363713,regensburg_pediatric_appendicitis,0,38,RobustScaler,SelectKBest,MLP,624,156,ok,,0.8090110729285986,0.8068813131313131,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7342197999969358
+363713,regensburg_pediatric_appendicitis,1,38,RobustScaler,SelectKBest,MLP,624,156,ok,,0.60353824614993,0.5986714294666918,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7277823999902466
+363713,regensburg_pediatric_appendicitis,2,38,RobustScaler,SelectKBest,MLP,624,156,ok,,0.6887234313351153,0.6998906591690096,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7240486000082456
+363713,regensburg_pediatric_appendicitis,3,38,RobustScaler,SelectKBest,MLP,624,156,ok,,0.7002314814814814,0.7302939524433626,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5877020999905653
+363713,regensburg_pediatric_appendicitis,4,38,RobustScaler,SelectKBest,MLP,624,156,ok,,0.7091049382716049,0.733277346945024,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7973835000011604
+363713,regensburg_pediatric_appendicitis,0,39,RobustScaler,SelectKBest,DecisionTree,624,156,ok,,0.720389461626575,0.6935829340464782,,0.008108399997581728
+363713,regensburg_pediatric_appendicitis,1,39,RobustScaler,SelectKBest,DecisionTree,624,156,ok,,0.6605956471935853,0.6673730759178023,,0.0074179000075673684
+363713,regensburg_pediatric_appendicitis,2,39,RobustScaler,SelectKBest,DecisionTree,624,156,ok,,0.8062746595392644,0.7650865390830487,,0.007469599993783049
+363713,regensburg_pediatric_appendicitis,3,39,RobustScaler,SelectKBest,DecisionTree,624,156,ok,,0.6473765432098765,0.653099623687859,,0.0297327000007499
+363713,regensburg_pediatric_appendicitis,4,39,RobustScaler,SelectKBest,DecisionTree,624,156,ok,,0.7145061728395062,0.7344676092339643,,0.00923989999864716
+363713,regensburg_pediatric_appendicitis,0,40,RobustScaler,None,RandomForest,624,156,ok,,0.749217258495609,0.7781933662667608,,0.3111836000025505
+363713,regensburg_pediatric_appendicitis,1,40,RobustScaler,None,RandomForest,624,156,ok,,0.6481481481481481,0.6385259321039137,,0.2779335999948671
+363713,regensburg_pediatric_appendicitis,2,40,RobustScaler,None,RandomForest,624,156,ok,,0.6859870179457809,0.7250844043686762,,0.4457237000024179
+363713,regensburg_pediatric_appendicitis,3,40,RobustScaler,None,RandomForest,624,156,ok,,0.6508487654320988,0.637098637098637,,0.4290142000099877
+363713,regensburg_pediatric_appendicitis,4,40,RobustScaler,None,RandomForest,624,156,ok,,0.7098765432098765,0.7385947385947386,,0.34024780000618193
+363713,regensburg_pediatric_appendicitis,0,41,RobustScaler,None,SVM,624,156,ok,,0.6001018200330915,0.5901245962159668,,0.02895919998991303
+363713,regensburg_pediatric_appendicitis,1,41,RobustScaler,None,SVM,624,156,ok,,0.6254931907852871,0.6150746039070912,,0.02882010000757873
+363713,regensburg_pediatric_appendicitis,2,41,RobustScaler,None,SVM,624,156,ok,,0.6008018327605956,0.5959453088165959,,0.03733230000943877
+363713,regensburg_pediatric_appendicitis,3,41,RobustScaler,None,SVM,624,156,ok,,0.6068672839506173,0.5970819304152638,,0.030822999993688427
+363713,regensburg_pediatric_appendicitis,4,41,RobustScaler,None,SVM,624,156,ok,,0.6219135802469137,0.6078178694158075,,0.031096999999135733
+363713,regensburg_pediatric_appendicitis,0,42,RobustScaler,None,kNN,624,156,ok,,0.6098765432098766,0.6493024592275528,,0.007922999997390434
+363713,regensburg_pediatric_appendicitis,1,42,RobustScaler,None,kNN,624,156,ok,,0.5082092401680031,0.5147335423197492,,0.007214699988253415
+363713,regensburg_pediatric_appendicitis,2,42,RobustScaler,None,kNN,624,156,ok,,0.6187857961053836,0.6710460968892501,,0.02435840001271572
+363713,regensburg_pediatric_appendicitis,3,42,RobustScaler,None,kNN,624,156,ok,,0.5123456790123457,0.5157152924594784,,0.0077809999929741025
+363713,regensburg_pediatric_appendicitis,4,42,RobustScaler,None,kNN,624,156,ok,,0.5945216049382717,0.6360902255639097,,0.008527600002707914
+363713,regensburg_pediatric_appendicitis,0,43,RobustScaler,None,MLP,624,156,ok,,0.8001018200330915,0.7721260455164365,,0.860207799996715
+363713,regensburg_pediatric_appendicitis,1,43,RobustScaler,None,MLP,624,156,ok,,0.5795469008527427,0.5826139264172723,,0.7522456000006059
+363713,regensburg_pediatric_appendicitis,2,43,RobustScaler,None,MLP,624,156,ok,,0.6605956471935853,0.6772553242402489,,0.8902979999984382
+363713,regensburg_pediatric_appendicitis,3,43,RobustScaler,None,MLP,624,156,ok,,0.6041666666666666,0.597488746742478,,0.8012066999945091
+363713,regensburg_pediatric_appendicitis,4,43,RobustScaler,None,MLP,624,156,ok,,0.6068672839506173,0.6013251735534576,,0.9146767999918666
+363713,regensburg_pediatric_appendicitis,0,44,RobustScaler,None,DecisionTree,624,156,ok,,0.7877561410207458,0.7400115141047783,,0.01755099999718368
+363713,regensburg_pediatric_appendicitis,1,44,RobustScaler,None,DecisionTree,624,156,ok,,0.58845615374825,0.5916504854368932,,0.015769100005854852
+363713,regensburg_pediatric_appendicitis,2,44,RobustScaler,None,DecisionTree,624,156,ok,,0.6784141529845997,0.6959239284948846,,0.014429900009417906
+363713,regensburg_pediatric_appendicitis,3,44,RobustScaler,None,DecisionTree,624,156,ok,,0.6103395061728395,0.6085618085618085,,0.013609399989945814
+363713,regensburg_pediatric_appendicitis,4,44,RobustScaler,None,DecisionTree,624,156,ok,,0.6535493827160493,0.6596990311276026,,0.012883199990028515
+363713,regensburg_pediatric_appendicitis,0,45,None,PCA,RandomForest,624,156,ok,,0.539009800178185,0.5308436042380996,,0.3569932999962475
+363713,regensburg_pediatric_appendicitis,1,45,None,PCA,RandomForest,624,156,ok,,0.5761104747359043,0.5760708534621578,,0.39307170000392944
+363713,regensburg_pediatric_appendicitis,2,45,None,PCA,RandomForest,624,156,ok,,0.6393407152857324,0.6854153182308522,,0.31965970000601374
+363713,regensburg_pediatric_appendicitis,3,45,None,PCA,RandomForest,624,156,ok,,0.6377314814814815,0.6751666183714865,,0.3086382000037702
+363713,regensburg_pediatric_appendicitis,4,45,None,PCA,RandomForest,624,156,ok,,0.5999228395061729,0.5892981884226703,,0.30920819999300875
+363713,regensburg_pediatric_appendicitis,0,46,None,PCA,SVM,624,156,ok,,0.45329005981926945,0.45246629117596865,,0.03202969999983907
+363713,regensburg_pediatric_appendicitis,1,46,None,PCA,SVM,624,156,ok,,0.42452590047091765,0.41835249042145595,,0.029968100003316067
+363713,regensburg_pediatric_appendicitis,2,46,None,PCA,SVM,624,156,ok,,0.41631666030291464,0.4041732635083019,,0.02878930000588298
+363713,regensburg_pediatric_appendicitis,3,46,None,PCA,SVM,624,156,ok,,0.4332561728395062,0.4275915909217643,,0.030085799997323193
+363713,regensburg_pediatric_appendicitis,4,46,None,PCA,SVM,624,156,ok,,0.4888117283950617,0.49040867389491244,,0.02661259999149479
+363713,regensburg_pediatric_appendicitis,0,47,None,PCA,kNN,624,156,ok,,0.41485299732722414,0.41001899335232667,,0.012003200012259185
+363713,regensburg_pediatric_appendicitis,1,47,None,PCA,kNN,624,156,ok,,0.4052437317042128,0.40173285697026184,,0.009354300011182204
+363713,regensburg_pediatric_appendicitis,2,47,None,PCA,kNN,624,156,ok,,0.3887616138475245,0.38302129968796633,,0.010765500002889894
+363713,regensburg_pediatric_appendicitis,3,47,None,PCA,kNN,624,156,ok,,0.43711419753086417,0.43146417445482865,,0.011440400005085394
+363713,regensburg_pediatric_appendicitis,4,47,None,PCA,kNN,624,156,ok,,0.44984567901234573,0.44385990084014854,,0.009302100006607361
+363713,regensburg_pediatric_appendicitis,0,48,None,PCA,MLP,624,156,ok,,0.5355733740613465,0.5326278659611993,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8083541999949375
+363713,regensburg_pediatric_appendicitis,1,48,None,PCA,MLP,624,156,ok,,0.5301005472826779,0.5265103056147832,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7331266999972286
+363713,regensburg_pediatric_appendicitis,2,48,None,PCA,MLP,624,156,ok,,0.5280005091001655,0.5218253968253969,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6701231999904849
+363713,regensburg_pediatric_appendicitis,3,48,None,PCA,MLP,624,156,ok,,0.5767746913580247,0.5710172180760416,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7220014999911655
+363713,regensburg_pediatric_appendicitis,4,48,None,PCA,MLP,624,156,ok,,0.5605709876543209,0.5480486008836524,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.6878154999867547
+363713,regensburg_pediatric_appendicitis,0,49,None,PCA,DecisionTree,624,156,ok,,0.5225276823214967,0.5247450245769089,,0.012671300006331876
+363713,regensburg_pediatric_appendicitis,1,49,None,PCA,DecisionTree,624,156,ok,,0.5204912816596665,0.5225686890661511,,0.012125299996114336
+363713,regensburg_pediatric_appendicitis,2,49,None,PCA,DecisionTree,624,156,ok,,0.6991345297187221,0.6819917119917122,,0.012647199997445568
+363713,regensburg_pediatric_appendicitis,3,49,None,PCA,DecisionTree,624,156,ok,,0.5435956790123457,0.5435567261730563,,0.01528350000444334
+363713,regensburg_pediatric_appendicitis,4,49,None,PCA,DecisionTree,624,156,ok,,0.5987654320987655,0.5898474680272305,,0.014364600006956607
+363713,regensburg_pediatric_appendicitis,0,50,None,SelectKBest,RandomForest,624,156,ok,,0.6791141657121038,0.6996775862755245,,0.246927100000903
+363713,regensburg_pediatric_appendicitis,1,50,None,SelectKBest,RandomForest,624,156,ok,,0.6254931907852871,0.6140221854507568,,0.22792410000693053
+363713,regensburg_pediatric_appendicitis,2,50,None,SelectKBest,RandomForest,624,156,ok,,0.6887234313351153,0.71015651015651,,0.22509819999686442
+363713,regensburg_pediatric_appendicitis,3,50,None,SelectKBest,RandomForest,624,156,ok,,0.6940586419753086,0.7253690722387846,,0.2569867999991402
+363713,regensburg_pediatric_appendicitis,4,50,None,SelectKBest,RandomForest,624,156,ok,,0.6967592592592592,0.7067692692692692,,0.2665809000027366
+363713,regensburg_pediatric_appendicitis,0,51,None,SelectKBest,SVM,624,156,ok,,0.4841542573501337,0.484111221449851,,0.02323439999599941
+363713,regensburg_pediatric_appendicitis,1,51,None,SelectKBest,SVM,624,156,ok,,0.45265368461244754,0.45314074571716495,,0.023653399999602698
+363713,regensburg_pediatric_appendicitis,2,51,None,SelectKBest,SVM,624,156,ok,,0.5089092528955073,0.5171542458537974,,0.026321800003643148
+363713,regensburg_pediatric_appendicitis,3,51,None,SelectKBest,SVM,624,156,ok,,0.47646604938271603,0.4752571587433973,,0.024750299999141134
+363713,regensburg_pediatric_appendicitis,4,51,None,SelectKBest,SVM,624,156,ok,,0.5779320987654321,0.570440251572327,,0.02983230000245385
+363713,regensburg_pediatric_appendicitis,0,52,None,SelectKBest,kNN,624,156,ok,,0.5362733867888507,0.5319496855345912,,0.009833899996010587
+363713,regensburg_pediatric_appendicitis,1,52,None,SelectKBest,kNN,624,156,ok,,0.5239913452971873,0.5302202522076761,,0.009053000001586042
+363713,regensburg_pediatric_appendicitis,2,52,None,SelectKBest,kNN,624,156,ok,,0.5514191167112129,0.5566210501781373,,0.008672299998579547
+363713,regensburg_pediatric_appendicitis,3,52,None,SelectKBest,kNN,624,156,ok,,0.5547839506172839,0.5566475430281866,,0.009701099988888018
+363713,regensburg_pediatric_appendicitis,4,52,None,SelectKBest,kNN,624,156,ok,,0.5455246913580246,0.5382389937106918,,0.010187899999436922
+363713,regensburg_pediatric_appendicitis,0,53,None,SelectKBest,MLP,624,156,ok,,0.6144838997072674,0.5971809866546708,,0.35381539999798406
+363713,regensburg_pediatric_appendicitis,1,53,None,SelectKBest,MLP,624,156,ok,,0.6296296296296297,0.6236115022372415,,0.8058547999971779
+363713,regensburg_pediatric_appendicitis,2,53,None,SelectKBest,MLP,624,156,ok,,0.6076746849942727,0.6049876261184085,,0.3680694000067888
+363713,regensburg_pediatric_appendicitis,3,53,None,SelectKBest,MLP,624,156,ok,,0.6844135802469135,0.7158121379779586,,0.5954001999925822
+363713,regensburg_pediatric_appendicitis,4,53,None,SelectKBest,MLP,624,156,ok,,0.6296296296296297,0.6239385170074482,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7457176999887452
+363713,regensburg_pediatric_appendicitis,0,54,None,SelectKBest,DecisionTree,624,156,ok,,0.720389461626575,0.6935829340464782,,0.008494199995766394
+363713,regensburg_pediatric_appendicitis,1,54,None,SelectKBest,DecisionTree,624,156,ok,,0.6605956471935853,0.6673730759178023,,0.008244900003774092
+363713,regensburg_pediatric_appendicitis,2,54,None,SelectKBest,DecisionTree,624,156,ok,,0.8062746595392644,0.7650865390830487,,0.010121400002390146
+363713,regensburg_pediatric_appendicitis,3,54,None,SelectKBest,DecisionTree,624,156,ok,,0.6473765432098765,0.653099623687859,,0.0074828999931924045
+363713,regensburg_pediatric_appendicitis,4,54,None,SelectKBest,DecisionTree,624,156,ok,,0.7145061728395062,0.7344676092339643,,0.009607799991499633
+363713,regensburg_pediatric_appendicitis,0,55,None,None,RandomForest,624,156,ok,,0.749217258495609,0.7781933662667608,,0.2849337999941781
+363713,regensburg_pediatric_appendicitis,1,55,None,None,RandomForest,624,156,ok,,0.6481481481481481,0.6385259321039137,,0.4045064999954775
+363713,regensburg_pediatric_appendicitis,2,55,None,None,RandomForest,624,156,ok,,0.6859870179457809,0.7250844043686762,,0.31476500000280794
+363713,regensburg_pediatric_appendicitis,3,55,None,None,RandomForest,624,156,ok,,0.6508487654320988,0.637098637098637,,0.2705237999907695
+363713,regensburg_pediatric_appendicitis,4,55,None,None,RandomForest,624,156,ok,,0.7098765432098765,0.7385947385947386,,0.3156292000057874
+363713,regensburg_pediatric_appendicitis,0,56,None,None,SVM,624,156,ok,,0.40804378261422936,0.39876087037659086,,0.034532399993622676
+363713,regensburg_pediatric_appendicitis,1,56,None,None,SVM,624,156,ok,,0.38818887616138475,0.3638040152562974,,0.036999200005084276
+363713,regensburg_pediatric_appendicitis,2,56,None,None,SVM,624,156,ok,,0.4101438207967418,0.3952334071703995,,0.04800229999818839
+363713,regensburg_pediatric_appendicitis,3,56,None,None,SVM,624,156,ok,,0.41203703703703703,0.3995029512270892,,0.03991999999561813
+363713,regensburg_pediatric_appendicitis,4,56,None,None,SVM,624,156,ok,,0.4641203703703704,0.4637494637494637,,0.04682129999855533
+363713,regensburg_pediatric_appendicitis,0,57,None,None,kNN,624,156,ok,,0.4155530100547282,0.4102670541026705,,0.006683400002657436
+363713,regensburg_pediatric_appendicitis,1,57,None,None,kNN,624,156,ok,,0.4175894107165585,0.41368385574654537,,0.007541800005128607
+363713,regensburg_pediatric_appendicitis,2,57,None,None,kNN,624,156,ok,,0.3832887870688558,0.3753632212536322,,0.008217599999625236
+363713,regensburg_pediatric_appendicitis,3,57,None,None,kNN,624,156,ok,,0.43441358024691357,0.4290029168608364,,0.008325900009367615
+363713,regensburg_pediatric_appendicitis,4,57,None,None,kNN,624,156,ok,,0.447145061728395,0.4417290509538759,,0.007944900004076771
+363713,regensburg_pediatric_appendicitis,0,58,None,None,MLP,624,156,ok,,0.5712740231640575,0.5667452459531668,,0.4433132999984082
+363713,regensburg_pediatric_appendicitis,1,58,None,None,MLP,624,156,ok,,0.6110474735904289,0.5928915194451917,,0.34585929999593645
+363713,regensburg_pediatric_appendicitis,2,58,None,None,MLP,624,156,ok,,0.5617283950617283,0.570296627387241,,0.3302018999966094
+363713,regensburg_pediatric_appendicitis,3,58,None,None,MLP,624,156,ok,,0.6014660493827161,0.5993721323351847,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8367620999924839
+363713,regensburg_pediatric_appendicitis,4,58,None,None,MLP,624,156,ok,,0.5910493827160493,0.5823510073733152,,0.7093979999917792
+363713,regensburg_pediatric_appendicitis,0,59,None,None,DecisionTree,624,156,ok,,0.7877561410207458,0.7400115141047783,,0.02197359999991022
+363713,regensburg_pediatric_appendicitis,1,59,None,None,DecisionTree,624,156,ok,,0.58845615374825,0.5916504854368932,,0.013988300008350052
+363713,regensburg_pediatric_appendicitis,2,59,None,None,DecisionTree,624,156,ok,,0.6784141529845997,0.6959239284948846,,0.013800800006720237
+363713,regensburg_pediatric_appendicitis,3,59,None,None,DecisionTree,624,156,ok,,0.6103395061728395,0.6085618085618085,,0.01621490000979975
+363713,regensburg_pediatric_appendicitis,4,59,None,None,DecisionTree,624,156,ok,,0.6535493827160493,0.6596990311276026,,0.029036099993390962

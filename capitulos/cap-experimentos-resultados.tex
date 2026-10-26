@@ -1,70 +1,79 @@
-% Gerado por python -m projeto.revisao.relatorio. Fontes: resultados/revisao_2026/*.csv.
 \chapter{Experimentos e Resultados}\label{cap:experimentos}
 
-Este capítulo distingue a reprodução do benchmark histórico da avaliação revisada. Primeiro é auditada a unidade experimental; depois são comparados metamodelos em grupos separados e investigados os erros. Finalmente, um piloto em dados brutos avalia a sensibilidade a hiperparâmetros. As matrizes históricas não foram reconstruídas nesta etapa.
+Este capítulo apresenta a reconstrução integral dos escores da Fase 1 e a repetição da avaliação dos metamodelos. A comparação usa as mesmas tarefas, grupos e partições da referência histórica revisada; por isso, permite avaliar a mudança sem confundi-la com a alteração anterior de LOO por tarefa para validação por grupos. A avaliação continua retrospectiva sobre um acervo previamente explorado.
 
-\section{Auditoria do Meta-conjunto}
+\section{Reconstrução Integral da Fase 1}
 
-O acervo contém 201 tarefas OpenML, 186 nomes de conjuntos e 60 pipelines, totalizando 12.060 células, das quais 172 estão ausentes. Tarefas OpenML distintas não garantem conjuntos independentes. A combinação de nomes repetidos e fingerprints de atributos processados identifica 172 grupos conservadores. Todos os tipos de tarefa foram conferidos em metadados oficiais como classificação supervisionada; isso, por si só, não assegura adequação estatística do alvo.
+A auditoria dos dados brutos preservou 193 tarefas elegíveis, 179 nomes e 165 grupos. As oito exclusões por suporte insuficiente de classe permanecem documentadas. Não houve falha de carregamento ou mudança entre o alvo oficial da tarefa e o alvo padrão disponível no dataset. A identificação de grupos foi preservada, permitindo usar os mesmos folds externos na comparação.
 
-O requisito de pelo menos cinco exemplos em cada classe exclui oito tarefas: 2075, 3486, 362281, 363078, 363094, 363393, 363554 e 363559. A exclusão não utiliza métricas de recomendação. A avaliação principal considera 193 tarefas, 179 nomes e 165 grupos, com 52 escores ausentes. Os critérios e motivos por tarefa constam do catálogo CSV. A análise de sensibilidade com todas as 201 tarefas foi mantida em diretório separado.
+Foram executados 57900 ajustes de classificadores, correspondentes a 193 tarefas, 60 pipelines e cinco folds estratificados por tarefa. Para todos os classificadores, inclusive SVM, foram usadas as mesmas linhas de treino e teste. A mediana numérica, o codificador categórico, os escalonadores e os seletores foram ajustados exclusivamente no treino de cada fold. O teste recebeu apenas as transformações já ajustadas. Transformações idênticas foram reutilizadas entre classificadores dentro do mesmo fold, sem compartilhar ajustes entre folds.
 
-A tarefa 363713, anteriormente descrita como holdout, consta da matriz histórica e compartilha o nome do conjunto com outra tarefa. Por isso, a demonstração pontual foi retirada da evidência experimental. Cada task da análise principal passa a receber uma predição de teste em uma partição com grupos separados, conforme o protocolo do capítulo de métodos.
+O processo registrou 0 falhas de ajuste, 0 escores agregados ausentes e 7703 avisos de convergência. Avisos de convergência são preservados como limitação do orçamento fixo, sobretudo do MLP com até 200 iterações; não são convertidos em convergência bem-sucedida. Um escore médio só é disponibilizado se os cinco folds foram avaliados. A matriz reconstruída possui 11580 posições de desempenho.
 
-\section{Reprodução dos Resultados Históricos}
+Nos pares tarefa/pipeline com escore observado nas duas versões, a variação média de acurácia balanceada dos classificadores da Fase 1, em pontos percentuais, foi: árvore de decisão: $-0{,}84$ p.p.; MLP: $-1{,}04$ p.p.; Random Forest: $-1{,}67$ p.p.; SVM: $-1{,}02$ p.p.; k-NN: $-1{,}65$ p.p.. Trata-se de uma média descritiva por par tarefa/pipeline, sem imputar os escores históricos ausentes ou atribuir peso igual aos grupos. Esses valores caracterizam a revisão da estimativa de desempenho dos classificadores; não devem ser confundidos com as métricas de ranqueamento dos metamodelos da Fase 2.
 
-A reprodução mantém o preditor original KDTree, as matrizes e os cinco valores de $k$. Para $k=10$, o benchmark histórico apresenta Spearman médio de aproximadamente $0{,}5801$, Kendall de $0{,}4767$, Kendall ponderado de $0{,}5222$ e NDCG de $0{,}9844$ sobre 198 tarefas com correlações definidas. Esses números são resultados exploratórios por tarefa, com possibilidade de parentes no treino e seleção de $k$ na própria avaliação; não são a estimativa principal revisada.
+A validação dos artefatos verificou ausência de sobreposição entre treino e teste, cobertura de todas as linhas uma vez no teste e igualdade de amostras entre os 60 pipelines. Configuração, versões, hashes e índices de cada fold foram preservados em arquivos separados. Isso atende à reconstrução antes pendente; os escores históricos permanecem disponíveis para comparação, sem substituição silenciosa.
 
-Não se atribui toda diferença entre a reprodução e a nova avaliação ao agrupamento: também mudam o número de tarefas de treino por fold, os filtros de qualidade e a unidade usada na agregação. Uma comparação causal exigiria ablações adicionais sob todas as demais condições constantes.
+\section{Comparação Controlada das Condições}
 
-\section{Comparação em Validação por Grupos}
+Três condições foram avaliadas nas mesmas tarefas, grupos e partições externas: (i) escores e vetores históricos; (ii) escores reconstruídos com vetores históricos; e (iii) escores reconstruídos com vetores recalculados dos dados brutos. O segundo caso mantém a representação fixa para examinar o efeito dos novos alvos; o terceiro constitui a avaliação principal. As entradas das três condições usam precisão float32, como as matrizes históricas, preservando a mesma resolução numérica para tratar empates; os escores reconstruídos de origem permanecem em float64 nos artefatos da Fase 1. Em todos os casos, o ajuste de k e da padronização ocorre somente no treino interno.
 
-A \autoref{tab:modelosRevisao} apresenta médias calculadas primeiro dentro de cada grupo e depois entre grupos, evitando maior peso de tarefas repetidas. Para as correlações, 192 tarefas em 164 grupos têm valores definidos; a tarefa restante possui alvo constante entre os pipelines observados. NDCG e regret permanecem contabilizados quando definidos, mesmo se a correlação não existe.
+A \autoref{tab:condicoesFaseUm} apresenta a comparação de Kendall ponderado. As médias de cada condição usam os grupos com métrica definida; a diferença é calculada de forma pareada, apenas com tarefas e grupos avaliáveis em ambas. Assim, a diferença pareada não precisa coincidir exatamente com a subtração de duas médias calculadas com suportes distintos. Os intervalos descritivos completos e as três condições estão nos CSVs.
 
 \begin{table}[htbp]
 \centering
-\caption{Avaliação revisada: médias por grupo em cinco partições externas}
-\label{tab:modelosRevisao}
-\resizebox{\textwidth}{!}{\input{projeto/resultados/revisao_2026/tabela_tcc.tex}}
-\fonte{Autoria própria (2026), com base nos CSVs da execução revisada.}
+\caption{Comparação da referência revisada com a reconstrução integral}
+\label{tab:condicoesFaseUm}
+\resizebox{\textwidth}{!}{\input{projeto/resultados/fase1_corrigida_2026/tabela_condicoes.tex}}
+\fonte{Autoria própria (2026).}
 \end{table}
 
-O k-NN ajustado alcança $\tau_w=0{,}3995$ e o Random Forest, $0{,}4309$. A diferença pareada média Random Forest menos k-NN é $0{,}0314$, com intervalo descritivo de 95\% $[0{,}0073; 0{,}0564]$, estimado por reamostragem dos grupos. A diferença média global menos k-NN é $-0{,}0305$, com intervalo $[-0{,}0637; 0{,}0026]$. Portanto, a vantagem do k-NN sobre a média global não fica estabelecida por esse intervalo. Os resultados sugerem vantagem do Random Forest neste benchmark, sem provar superioridade universal.
+O k-NN apresentou $\tau_w=0{,}3995$ com escores históricos e $\tau_w=0{,}4280$ após reconstrução completa; Random Forest passou de $0{,}4309$ para $0{,}4768$. Esses resultados caracterizam a mudança no benchmark sob partições equivalentes. Não isolam causalmente apenas a imputação: também mudam a codificação por fold, a amostra da SVM, a semente explícita da PCA e, na condição principal, a recomputação dos vetores. A análise com vetor histórico fixo ajuda a distinguir o efeito dos escores daquele da representação. Os próprios rankings reais são recalculados e a cobertura pode mudar quando pipelines antes ausentes passam a ter escore; portanto, a diferença não isola ganho de capacidade preditiva sob uma única verdade de referência e um conjunto idêntico de itens avaliáveis.
 
-O ajuste interno escolheu $k=10$ em todos os folds externos, de modo que o k-NN fixo em 10 e o ajustado coincidiram nesta execução. A padronização das dimensões foi ajustada exclusivamente no treino. O Random Forest foi utilizado com hiperparâmetros fixos; a comparação não constitui uma busca exaustiva de metamodelos. A \autoref{fig:modelosRevisao} mostra a dispersão inferencial descritiva das médias.
+Nos casos avaliáveis em ambas as versões, a mudança pareada de Kendall ponderado foi $-0{,}0093$ para k-NN, com intervalo descritivo $[-0{,}0282;0{,}0092]$ em 149 grupos, e $0{,}0059$ para Random Forest, com intervalo $[-0{,}0085;0{,}0202]$ em 151 grupos. O intervalo da mudança do k-NN ajustado abrange zero. O intervalo da mudança do Random Forest abrange zero. Assim, o aumento das médias gerais não deve ser interpretado isoladamente como melhoria da predição: também mudou o conjunto de casos com correlação definida.
+
+O antigo valor de aproximadamente $0{,}5222$ para k-NN no LOO por tarefa não é a referência controlada desta seção. Ele usava outro protocolo e potencialmente mantinha tarefas relacionadas no treino; compará-lo diretamente aos resultados atuais atribuiria à Fase 1 diferenças de desenho da avaliação.
+
+\section{Avaliação Principal dos Metamodelos}
+
+A \autoref{tab:modelosRevisao} resume a avaliação dos metamodelos sobre a matriz reconstruída. O k-NN teve correlações definidas em 177 tarefas de 149 grupos. Os valores de k selecionados nos cinco treinos externos foram 5, 10, 10, 10, 10. Casos de correlação indefinida continuam contabilizados nos arquivos; NDCG e regret são preservados quando calculáveis.
+
+\begin{table}[htbp]
+\centering
+\caption{Metamodelos sobre escores reconstruídos: médias por grupo}
+\label{tab:modelosRevisao}
+\resizebox{\textwidth}{!}{\input{projeto/resultados/fase1_corrigida_2026/tabela_tcc.tex}}
+\fonte{Autoria própria (2026).}
+\end{table}
+
+A diferença pareada Random Forest menos k-NN em Kendall ponderado foi $0{,}0515$, com intervalo descritivo de 95\% $[0{,}0255;0{,}0771]$. O intervalo descritivo sugere vantagem do Random Forest sobre o k-NN neste acervo. A conclusão é restrita ao acervo e ao protocolo; o Random Forest tem hiperparâmetros fixos e não houve comparação exaustiva de metamodelos. A \autoref{fig:modelosRevisao} mostra os intervalos das médias por grupo.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{projeto/resultados/revisao_2026/figuras/comparacao_modelos.pdf}
-\caption{Kendall ponderado por modelo com intervalos descritivos por grupo}
+\includegraphics[width=.95\textwidth]{projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa/figuras/comparacao_modelos.pdf}
+\caption{Kendall ponderado após reconstrução da Fase 1}
 \label{fig:modelosRevisao}
 \fonte{Autoria própria (2026).}
 \end{figure}
 
-\section{Diagnóstico de Erros e Variabilidade}
+O regret@1 foi $0{,}0336$ para k-NN, $0{,}0207$ para Random Forest e $0{,}0260$ para média global. A baseline aleatória apresentou NDCG@5 de $0{,}8843$. Isso reforça a necessidade de interpretar NDCG com as correlações e o regret: relevâncias próximas podem gerar NDCG alto sem recuperação exata do top-5. Kendall ponderado enfatiza inversões de maior peso, enquanto NDCG acumula relevância com desconto logarítmico.
 
-O k-NN ajustado apresenta 17 tarefas com Kendall ponderado não positivo e 1 com correlação indefinida. Entre os casos de pior ordenação estão task 363159 ($\tau_w=-0{,}5777$); task 9976 ($\tau_w=-0{,}4701$); task 361148 ($\tau_w=-0{,}4383$). O arquivo de diagnóstico associa a cada caso dimensão, tamanho, balanceamento, distância ao vizinho de treino, métricas e estado da avaliação, permitindo inspeção individual.
+\section{Diagnóstico de Falhas}
 
-As correlações exploratórias foram calculadas por grupo para cinco variáveis, com correção Benjamini--Hochberg. O número de atributos tem associação positiva com a qualidade ($\rho\approx0{,}2064$, $q\approx0{,}0400$). As demais variáveis investigadas, incluindo desbalanceamento e distância ao vizinho, não alcançam $q<0{,}05$ nesta análise. Assim, a inspeção não sustenta atribuir a instabilidade exclusivamente a outliers ou desbalanceamento. A \autoref{fig:errosRevisao} ilustra as relações observadas, sem interpretação causal.
+O k-NN ajustado apresentou 13 tarefas com Kendall ponderado não positivo e 16 com correlação indefinida. Foram registradas 14 tarefas com escores reais constantes e 2 com predição constante e escores reais variáveis. Uma correlação indefinida não é promovida a acerto nem convertida em zero. O diagnóstico liga cada task a tamanho, dimensionalidade, balanceamento, atributos constantes, distância ao vizinho de treino, predições e estado de avaliação. Entre as menores correlações definidas estão: tarefa 9976 ($\tau_w=-0{,}4184$, $N=2600$, $P=500$, proporção majoritária $0{,}5000$); tarefa 3512 ($\tau_w=-0{,}3760$, $N=600$, $P=60$, proporção majoritária $0{,}1667$); tarefa 363159 ($\tau_w=-0{,}3330$, $N=4531$, $P=1$, proporção majoritária $0{,}0603$). A inspeção permite reproduzir os casos, sem atribuir automaticamente suas falhas a uma característica isolada. Nenhuma das cinco associações exploratórias permaneceu abaixo de $q=0{,}05$ após ajuste Benjamini--Hochberg. Essas associações não demonstram causalidade nem explicam isoladamente a variabilidade.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{projeto/resultados/revisao_2026/figuras/diagnostico_erros.pdf}
-\caption{Diagnóstico do k-NN: dimensionalidade, balanceamento e distância ao treino}
+\includegraphics[width=\textwidth]{projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa/figuras/diagnostico_erros.pdf}
+\caption{Diagnóstico do k-NN com escores reconstruídos}
 \label{fig:errosRevisao}
 \fonte{Autoria própria (2026).}
 \end{figure}
 
-\section{Piloto de Variação de Hiperparâmetros}
+\section{Discussão e Limitações}\label{sec:discussao}
 
-Um experimento separado usa dados brutos de seis tarefas previamente especificadas (11, 15, 37, 4538, 9914 e 361198). Comparam-se profundidades 5, 10 e ilimitada para árvore de decisão e vizinhanças 3, 5 e 11 para k-NN, mantendo StandardScaler e ausência de seletor. Imputação e codificação categórica são ajustadas dentro de cada fold. São 36 combinações de tarefa, classificador e valor, avaliadas nas mesmas cinco divisões por tarefa, totalizando 180 avaliações de treino/teste. Os arquivos preservam índices de linhas, parâmetros, tempos, avisos e resultados por fold.
+A reconstrução corrige os dois problemas identificados na produção dos escores: estimar imputação antes da CV e usar amostra exclusiva da SVM. O controle também inclui codificação e seleção ajustadas no treino. A inclusão desses cuidados não implica aumento necessário das métricas; o objetivo é estimar desempenho sob condições comparáveis.
 
-As amplitudes de acurácia balanceada entre configurações mostram que a escolha de hiperparâmetros pode alterar o desempenho, mas a seleção do melhor valor usando esses próprios folds é exploratória. As seis tarefas foram escolhidas por identificação e diversidade aparente de tamanho e domínio, sem consultar o desempenho de recomendação; não constituem amostra probabilística. O piloto não testa a capacidade de ranqueamento de um arsenal expandido em todos os grupos. Manter os 60 pipelines na avaliação principal controla o espaço de candidatos ao comparar metamodelos. A expansão completa requer nova matriz experimental.
+Permanecem como limites: avaliação retrospectiva, agrupamento conservador que pode não detectar todas as famílias, codificação ordinal de variáveis nominais, correlações de rótulos multiclasses dependentes de sua codificação e orçamento fixo de treinamento. A auditoria registra 30 tarefas somente categóricas e 18 com nomes sugestivos de identificadores ou caminhos. Esses indicadores exigem interpretação de escopo e não demonstram vazamento por si só; não foram usados para excluir tarefas após observar resultados. A representação descreve um conjunto rotulado completo e não cobre consulta sem rótulos. Intervalos de bootstrap dos grupos são descritivos, pois treinos de folds se sobrepõem. A comparação de metamodelos com o mesmo vetor não substitui uma ablação de representações.
 
-\section{Interpretação e Limitações}\label{sec:discussao}
-
-Kendall ponderado avalia concordância de pares com maior peso em itens bem ranqueados; NDCG acumula relevância com desconto logarítmico. Com ganho linear e acurácias próximas, NDCG pode ser alto mesmo com erros na ordenação: a baseline aleatória já alcança NDCG@5 de $0{,}8687$. Logo, NDCG elevado não demonstra acerto dos cinco melhores pipelines. O regret@1 explicita a perda da primeira recomendação, e NDCG@5 limita a avaliação às primeiras posições, complementando as correlações globais.
-
-A representação de 55 descritores e nove zeros oferece uma referência simples e auditável, mas não isola por si só o efeito da representação. Comparar k-NN e Random Forest com o mesmo vetor evidencia dependência do metamodelo; demonstrar ganho da representação exigiria comparar outras representações sob o mesmo protocolo. Tampouco se convertem valores de trabalhos com tarefas diferentes em uma tabela de superioridade: referências recentes orientam o desenho experimental, não fornecem resultados diretamente comparáveis \cite{Gijsbers2024,Baratchi2024}.
-
-Permanecem limitações de origem dos escores: a Fase 1 histórica imputou dados antes da CV e aplicou subamostragem global apenas à SVM. Sua reconstrução completa com tratamento dentro dos folds não foi executada. O agrupamento por nomes e atributos processados reduz repetições observáveis, mas pode não detectar parentes com nomes e transformações diferentes. Os testes são retrospectivos sobre um acervo previamente explorado, sem amostra externa coletada após o desenvolvimento. Os intervalos por bootstrap não incorporam toda a dependência decorrente de folds de treino sobrepostos. Essas restrições delimitam o alcance das conclusões e os requisitos de uma próxima coleta.
+O piloto anterior de 180 avaliações de hiperparâmetros permanece como evidência exploratória separada. O arsenal principal foi mantido em 60 candidatos para comparar protocolos e metamodelos sob espaço controlado. Expandir todo o arsenal, otimizar os metamodelos e avaliar conjuntos externos coletados após o desenvolvimento são próximos passos, sem tratar resultados de outros benchmarks como comparações numéricas equivalentes \cite{Gijsbers2024,Baratchi2024}.

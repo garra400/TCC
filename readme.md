@@ -1,27 +1,31 @@
 # TCC — Meta-aprendizado para ranqueamento de pipelines
 
-Esta branch contém a revisão experimental e textual de outubro de 2026.
-Comece pelo [painel da revisão](docs/revisao/PAINEL.md), que liga cada solicitação
-dos revisores às alterações, evidências, resultados e pendências.
+Terceira branch: `revisao/fase1-sem-vazamento-2026`, incluindo a revisão anterior
+e a reconstrução integral da Fase 1 em dados brutos.
+
+Comece pelo [painel da terceira branch](docs/fase1_corrigida/PAINEL.md), que liga
+alterações, evidências, resultados e pendências. Foram registradas 57900
+avaliações completas dos 60 pipelines em 193 tarefas e 165 grupos.
+Pré-processamento usa somente o treino de cada fold; SVM recebe as mesmas
+amostras dos demais classificadores.
 
 - [TCC revisado — PDF](documentos/tcc_revisado.pdf)
 - [Artigo revisado — PDF](documentos/artigo_revisado.pdf)
-- [Viabilidade](docs/revisao/VIABILIDADE.md)
-- [Campos numéricos para revisão](docs/revisao/CAMPOS_TCC.json)
-- [Instruções de reprodução](docs/revisao/PAINEL.md#reprodução)
+- [Campos usados nos textos](docs/fase1_corrigida/CAMPOS_TCC.json)
+- [Protocolo e reprodução](docs/fase1_corrigida/PROTOCOLO.md)
+- [Registro histórico da segunda branch](docs/revisao/PAINEL.md)
 
-A `main` preserva o acervo consolidado anterior às correções. Os PDFs antigos
-na raiz são históricos. A comparação principal usa 193 tarefas elegíveis em
-165 grupos; o acervo original contém 201 tarefas e 60 pipelines. A reconstrução
-completa da Fase 1 continua pendente e está declarada nos documentos.
-
-O código está em `projeto/`, as fontes do TCC na raiz e em `capitulos/`, o artigo
-em `artigo/` e os resultados novos em `projeto/resultados/revisao_2026/`.
-Os caches dos datasets são locais e não são enviados ao GitHub.
+Os novos resultados estão em `projeto/resultados/fase1_corrigida_2026/`.
+A `main` e a segunda branch preservam seus estados anteriores. Os PDFs antigos
+na raiz são históricos; os PDFs atuais ficam em `documentos/`. Caches brutos
+permanecem locais e são ignorados pelo Git.
 
 ---
 
 ## Documentação original do template
+
+
+
 
 # Modelo Latex para desenvolvimento de TCCs do DAINF-PB (UTFPR-PB) e DACOM-CM (UTFPR-CM)
 

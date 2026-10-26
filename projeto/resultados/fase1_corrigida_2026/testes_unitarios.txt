@@ -1,0 +1,25 @@
+test_constant_prediction_is_visible (projeto.revisao.test_experimentos.RankingTests.test_constant_prediction_is_visible) ... ok
+test_eligibility_rejects_rare_classes_and_wrong_task_type (projeto.revisao.test_experimentos.RankingTests.test_eligibility_rejects_rare_classes_and_wrong_task_type) ... ok
+test_imputation_is_train_only_and_flags_unseen_pipeline (projeto.revisao.test_experimentos.RankingTests.test_imputation_is_train_only_and_flags_unseen_pipeline) ... ok
+test_knn_distance_weights_and_single_neighbor (projeto.revisao.test_experimentos.RankingTests.test_knn_distance_weights_and_single_neighbor) ... ok
+test_missing_test_score_is_excluded (projeto.revisao.test_experimentos.RankingTests.test_missing_test_score_is_excluded) ... ok
+test_ndcg_uses_linear_gain (projeto.revisao.test_experimentos.RankingTests.test_ndcg_uses_linear_gain) ... ok
+test_outer_test_targets_do_not_change_its_predictions_or_k (projeto.revisao.test_experimentos.RankingTests.test_outer_test_targets_do_not_change_its_predictions_or_k) ... Grupos fold 1/3: k=1; k padronizado=1
+Grupos fold 2/3: k=1; k padronizado=1
+Grupos fold 3/3: k=3; k padronizado=1
+Grupos fold 1/3: k=1; k padronizado=1
+Grupos fold 2/3: k=3; k padronizado=3
+Grupos fold 3/3: k=3; k padronizado=3
+ok
+test_perfect_and_reversed_rankings (projeto.revisao.test_experimentos.RankingTests.test_perfect_and_reversed_rankings) ... ok
+test_raw_preprocessing_handles_unseen_category_and_train_median (projeto.revisao.test_experimentos.RankingTests.test_raw_preprocessing_handles_unseen_category_and_train_median) ... ok
+test_repeated_names_are_kept_in_same_group (projeto.revisao.test_experimentos.RankingTests.test_repeated_names_are_kept_in_same_group) ... ok
+test_all_classifiers_receive_the_same_complete_folds (projeto.revisao.test_fase1_corrigida.PhaseOneTests.test_all_classifiers_receive_the_same_complete_folds) ... ok
+test_condition_comparison_weights_groups_and_only_pairs_observed_scores (projeto.revisao.test_fase1_corrigida.PhaseOneTests.test_condition_comparison_weights_groups_and_only_pairs_observed_scores) ... ok
+test_rare_class_is_rejected_before_any_training (projeto.revisao.test_fase1_corrigida.PhaseOneTests.test_rare_class_is_rejected_before_any_training) ... ok
+test_split_keeps_all_rows_and_classes_and_never_overlaps (projeto.revisao.test_fase1_corrigida.PhaseOneTests.test_split_keeps_all_rows_and_classes_and_never_overlaps) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.347s
+
+OK

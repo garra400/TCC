@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+362251,Credit_Approval_Classification,0,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.580952380952381,0.5780590717299579,,0.3775391999952262
+362251,Credit_Approval_Classification,1,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.5595238095238095,0.5555555555555556,,0.3978694999968866
+362251,Credit_Approval_Classification,2,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.5869047619047619,0.5881354095162398,,0.42408850000356324
+362251,Credit_Approval_Classification,3,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.6107142857142858,0.6174368267391523,,0.35773190000327304
+362251,Credit_Approval_Classification,4,0,StandardScaler,PCA,RandomForest,800,200,ok,,0.5476190476190477,0.5412186379928315,,0.35917959999642335
+362251,Credit_Approval_Classification,0,1,StandardScaler,PCA,SVM,800,200,ok,,0.5154761904761905,0.4658259993870134,,0.04489550000289455
+362251,Credit_Approval_Classification,1,1,StandardScaler,PCA,SVM,800,200,ok,,0.5238095238095238,0.5,,0.05718129999877419
+362251,Credit_Approval_Classification,2,1,StandardScaler,PCA,SVM,800,200,ok,,0.5404761904761904,0.5088075880758808,,0.05065600000671111
+362251,Credit_Approval_Classification,3,1,StandardScaler,PCA,SVM,800,200,ok,,0.5702380952380952,0.557717823971694,,0.04386299999896437
+362251,Credit_Approval_Classification,4,1,StandardScaler,PCA,SVM,800,200,ok,,0.530952380952381,0.4861800141743445,,0.042056200007209554
+362251,Credit_Approval_Classification,0,2,StandardScaler,PCA,kNN,800,200,ok,,0.5857142857142857,0.5888157894736843,,0.013732500010519288
+362251,Credit_Approval_Classification,1,2,StandardScaler,PCA,kNN,800,200,ok,,0.5476190476190477,0.5466666666666666,,0.015381799996248446
+362251,Credit_Approval_Classification,2,2,StandardScaler,PCA,kNN,800,200,ok,,0.5964285714285714,0.6007145108752758,,0.014381599990883842
+362251,Credit_Approval_Classification,3,2,StandardScaler,PCA,kNN,800,200,ok,,0.5333333333333333,0.5322245322245323,,0.012019100002362393
+362251,Credit_Approval_Classification,4,2,StandardScaler,PCA,kNN,800,200,ok,,0.5238095238095238,0.52,,0.013133700005710125
+362251,Credit_Approval_Classification,0,3,StandardScaler,PCA,MLP,800,200,ok,,0.5571428571428572,0.5583364004416635,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.175069100005203
+362251,Credit_Approval_Classification,1,3,StandardScaler,PCA,MLP,800,200,ok,,0.5476190476190476,0.5476190476190476,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8648159000003943
+362251,Credit_Approval_Classification,2,3,StandardScaler,PCA,MLP,800,200,ok,,0.569047619047619,0.5712058212058212,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6031738000019686
+362251,Credit_Approval_Classification,3,3,StandardScaler,PCA,MLP,800,200,ok,,0.6071428571428571,0.6071428571428571,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8381960000115214
+362251,Credit_Approval_Classification,4,3,StandardScaler,PCA,MLP,800,200,ok,,0.6190476190476191,0.6238244514106583,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8537998999963747
+362251,Credit_Approval_Classification,0,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.5880952380952381,0.5907738095238095,,0.014276900008553639
+362251,Credit_Approval_Classification,1,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.5892857142857143,0.5869090909090909,,0.016146800000569783
+362251,Credit_Approval_Classification,2,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.5666666666666667,0.567255679769203,,0.014940900000510737
+362251,Credit_Approval_Classification,3,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.5607142857142857,0.5621473281736611,,0.015169000005698763
+362251,Credit_Approval_Classification,4,4,StandardScaler,PCA,DecisionTree,800,200,ok,,0.5976190476190476,0.5944849959448499,,0.014734199998201802
+362251,Credit_Approval_Classification,0,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6107142857142858,0.6153724896749582,,0.3658503000042401
+362251,Credit_Approval_Classification,1,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6571428571428571,0.6600291403593979,,0.3295767999952659
+362251,Credit_Approval_Classification,2,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6464285714285715,0.6532047038052902,,0.28683209999871906
+362251,Credit_Approval_Classification,3,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6583333333333333,0.6658154418487342,,0.3019638000114355
+362251,Credit_Approval_Classification,4,5,StandardScaler,SelectKBest,RandomForest,800,200,ok,,0.6869047619047619,0.6945041927740889,,0.318949500011513
+362251,Credit_Approval_Classification,0,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.6095238095238096,0.6148718708339506,,0.0366519000090193
+362251,Credit_Approval_Classification,1,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.6023809523809524,0.6066433566433567,,0.05006169999251142
+362251,Credit_Approval_Classification,2,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.580952380952381,0.5780590717299579,,0.04671569999482017
+362251,Credit_Approval_Classification,3,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.6428571428571428,0.6559139784946237,,0.04235940000216942
+362251,Credit_Approval_Classification,4,6,StandardScaler,SelectKBest,SVM,800,200,ok,,0.5702380952380952,0.5666703389519298,,0.06696320000628475
+362251,Credit_Approval_Classification,0,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.6380952380952382,0.6486011623192324,,0.014333999992231838
+362251,Credit_Approval_Classification,1,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.6023809523809525,0.6033177064551027,,0.016499699995620176
+362251,Credit_Approval_Classification,2,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.6285714285714286,0.631947000368053,,0.0150322999979835
+362251,Credit_Approval_Classification,3,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.6202380952380953,0.6238167185717369,,0.015141700001549907
+362251,Credit_Approval_Classification,4,7,StandardScaler,SelectKBest,kNN,800,200,ok,,0.6666666666666666,0.6739811912225705,,0.01363229998969473
+362251,Credit_Approval_Classification,0,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6630952380952381,0.6695657595311575,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2171625000046333
+362251,Credit_Approval_Classification,1,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6523809523809524,0.6564838670101828,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9754443999991054
+362251,Credit_Approval_Classification,2,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6416666666666666,0.649133998915505,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9534086000057869
+362251,Credit_Approval_Classification,3,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6690476190476191,0.6791169297907842,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8864852999977302
+362251,Credit_Approval_Classification,4,8,StandardScaler,SelectKBest,MLP,800,200,ok,,0.6654761904761906,0.6746515262671047,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9207546999969054
+362251,Credit_Approval_Classification,0,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.6916666666666667,0.6978199870494279,,0.011764499999117106
+362251,Credit_Approval_Classification,1,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.6154761904761905,0.6149175034805534,,0.01766230000066571
+362251,Credit_Approval_Classification,2,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.6119047619047618,0.6183708382681932,,0.011551999996299855
+362251,Credit_Approval_Classification,3,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.6238095238095238,0.6155585707824514,,0.007993299994268455
+362251,Credit_Approval_Classification,4,9,StandardScaler,SelectKBest,DecisionTree,800,200,ok,,0.6678571428571429,0.6731522308901976,,0.010268799989717081
+362251,Credit_Approval_Classification,0,10,StandardScaler,None,RandomForest,800,200,ok,,0.6595238095238095,0.6753246753246753,,0.4028720000060275
+362251,Credit_Approval_Classification,1,10,StandardScaler,None,RandomForest,800,200,ok,,0.6821428571428572,0.6979764421624887,,0.358233899998595
+362251,Credit_Approval_Classification,2,10,StandardScaler,None,RandomForest,800,200,ok,,0.6964285714285714,0.7169974115616911,,0.3958536999998614
+362251,Credit_Approval_Classification,3,10,StandardScaler,None,RandomForest,800,200,ok,,0.6761904761904762,0.6940620219719094,,0.37477490000310354
+362251,Credit_Approval_Classification,4,10,StandardScaler,None,RandomForest,800,200,ok,,0.6309523809523809,0.6415770609318996,,0.35338929999852553
+362251,Credit_Approval_Classification,0,11,StandardScaler,None,SVM,800,200,ok,,0.5892857142857143,0.5891690009337068,,0.0764225000020815
+362251,Credit_Approval_Classification,1,11,StandardScaler,None,SVM,800,200,ok,,0.6035714285714286,0.6052478811099501,,0.05171050000353716
+362251,Credit_Approval_Classification,2,11,StandardScaler,None,SVM,800,200,ok,,0.6011904761904762,0.604108309990663,,0.06373470000107773
+362251,Credit_Approval_Classification,3,11,StandardScaler,None,SVM,800,200,ok,,0.5964285714285714,0.597126677055224,,0.0647090999991633
+362251,Credit_Approval_Classification,4,11,StandardScaler,None,SVM,800,200,ok,,0.6214285714285714,0.629684491186491,,0.05060170000069775
+362251,Credit_Approval_Classification,0,12,StandardScaler,None,kNN,800,200,ok,,0.5702380952380952,0.5712973359191589,,0.024241999999503605
+362251,Credit_Approval_Classification,1,12,StandardScaler,None,kNN,800,200,ok,,0.5571428571428572,0.5549993046864136,,0.01182459999108687
+362251,Credit_Approval_Classification,2,12,StandardScaler,None,kNN,800,200,ok,,0.5523809523809524,0.5525727069351231,,0.013182099995901808
+362251,Credit_Approval_Classification,3,12,StandardScaler,None,kNN,800,200,ok,,0.6011904761904762,0.6065573770491803,,0.008168600004864857
+362251,Credit_Approval_Classification,4,12,StandardScaler,None,kNN,800,200,ok,,0.6166666666666667,0.6231808731808732,,0.009483499990892597
+362251,Credit_Approval_Classification,0,13,StandardScaler,None,MLP,800,200,ok,,0.6107142857142858,0.6153724896749582,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1842585000122199
+362251,Credit_Approval_Classification,1,13,StandardScaler,None,MLP,800,200,ok,,0.6142857142857143,0.609375,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9657276000070851
+362251,Credit_Approval_Classification,2,13,StandardScaler,None,MLP,800,200,ok,,0.5928571428571429,0.5951417004048583,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.1982487999921432
+362251,Credit_Approval_Classification,3,13,StandardScaler,None,MLP,800,200,ok,,0.65,0.6575342465753424,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0576329000032274
+362251,Credit_Approval_Classification,4,13,StandardScaler,None,MLP,800,200,ok,,0.6654761904761906,0.6677841200809398,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9891086999996332
+362251,Credit_Approval_Classification,0,14,StandardScaler,None,DecisionTree,800,200,ok,,0.6476190476190476,0.6461846915909895,,0.015247500006807968
+362251,Credit_Approval_Classification,1,14,StandardScaler,None,DecisionTree,800,200,ok,,0.6285714285714286,0.6259934548854604,,0.012700599996605888
+362251,Credit_Approval_Classification,2,14,StandardScaler,None,DecisionTree,800,200,ok,,0.6738095238095239,0.6754417598269022,,0.014930800010915846
+362251,Credit_Approval_Classification,3,14,StandardScaler,None,DecisionTree,800,200,ok,,0.6226190476190476,0.6166938413570182,,0.012152099996455945
+362251,Credit_Approval_Classification,4,14,StandardScaler,None,DecisionTree,800,200,ok,,0.6345238095238095,0.6281358162418833,,0.014032099992618896
+362251,Credit_Approval_Classification,0,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.5630952380952381,0.5592326312366775,,0.49963920000300277
+362251,Credit_Approval_Classification,1,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.4988095238095238,0.4896396856180463,,0.3721761000051629
+362251,Credit_Approval_Classification,2,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.5726190476190476,0.5750384099898663,,0.4161797000124352
+362251,Credit_Approval_Classification,3,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.5821428571428571,0.5813594800044067,,0.4595324999972945
+362251,Credit_Approval_Classification,4,15,MinMaxScaler,PCA,RandomForest,800,200,ok,,0.5333333333333333,0.517781796262809,,0.34669860001304187
+362251,Credit_Approval_Classification,0,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.544047619047619,0.5119654094781455,,0.12578299999586307
+362251,Credit_Approval_Classification,1,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.5214285714285715,0.4859890565412038,,0.04793420000351034
+362251,Credit_Approval_Classification,2,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.5416666666666666,0.5158974358974359,,0.05328249999729451
+362251,Credit_Approval_Classification,3,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.5642857142857143,0.5551464948611751,,0.05540810000093188
+362251,Credit_Approval_Classification,4,16,MinMaxScaler,PCA,SVM,800,200,ok,,0.5464285714285714,0.5255518475332717,,0.04101440000522416
+362251,Credit_Approval_Classification,0,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.5404761904761906,0.5341614906832298,,0.012962200009496883
+362251,Credit_Approval_Classification,1,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.5345238095238095,0.5304685107686027,,0.013730800012126565
+362251,Credit_Approval_Classification,2,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.5630952380952381,0.5649295375011822,,0.01581689999147784
+362251,Credit_Approval_Classification,3,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.5380952380952381,0.5339912280701754,,0.013085900005535223
+362251,Credit_Approval_Classification,4,17,MinMaxScaler,PCA,kNN,800,200,ok,,0.4916666666666667,0.48320413436692505,,0.011730400001397356
+362251,Credit_Approval_Classification,0,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.6273809523809524,0.6321581096667601,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0706847999972524
+362251,Credit_Approval_Classification,1,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.5773809523809524,0.5789473684210527,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0396283000009134
+362251,Credit_Approval_Classification,2,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.5857142857142856,0.5892696701322038,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0347667000023648
+362251,Credit_Approval_Classification,3,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.5607142857142857,0.5619626687587853,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.054935200008913
+362251,Credit_Approval_Classification,4,18,MinMaxScaler,PCA,MLP,800,200,ok,,0.575,0.5771670190274841,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8251489000103902
+362251,Credit_Approval_Classification,0,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.6035714285714286,0.5970373733647379,,0.018109199998434633
+362251,Credit_Approval_Classification,1,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.5476190476190477,0.54858934169279,,0.024009999993722886
+362251,Credit_Approval_Classification,2,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.5273809523809524,0.5274978318729627,,0.01515829999698326
+362251,Credit_Approval_Classification,3,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.5738095238095238,0.5750364254492473,,0.017314400000032037
+362251,Credit_Approval_Classification,4,19,MinMaxScaler,PCA,DecisionTree,800,200,ok,,0.5190476190476191,0.5180111618467782,,0.014633800004958175
+362251,Credit_Approval_Classification,0,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6023809523809524,0.6067985794013191,,0.3270235999953002
+362251,Credit_Approval_Classification,1,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6571428571428571,0.6600291403593979,,0.37910540000302717
+362251,Credit_Approval_Classification,2,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6428571428571429,0.6489028213166144,,0.2699295000056736
+362251,Credit_Approval_Classification,3,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6666666666666666,0.6739811912225705,,0.6063606000097934
+362251,Credit_Approval_Classification,4,20,MinMaxScaler,SelectKBest,RandomForest,800,200,ok,,0.6833333333333333,0.6899801587301587,,0.34578819999296684
+362251,Credit_Approval_Classification,0,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.5761904761904761,0.5704862709004449,,0.04379809999954887
+362251,Credit_Approval_Classification,1,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.5785714285714285,0.5775058275058275,,0.047381600001244806
+362251,Credit_Approval_Classification,2,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.5714285714285714,0.5625,,0.041469499992672354
+362251,Credit_Approval_Classification,3,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.594047619047619,0.5898838004101161,,0.057653299998492
+362251,Credit_Approval_Classification,4,21,MinMaxScaler,SelectKBest,SVM,800,200,ok,,0.5523809523809523,0.5398067188219052,,0.03882659999362659
+362251,Credit_Approval_Classification,0,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.6607142857142857,0.6707021791767553,,0.015391900000395253
+362251,Credit_Approval_Classification,1,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.6142857142857143,0.6153383820170694,,0.014817300005233847
+362251,Credit_Approval_Classification,2,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.6511904761904762,0.6570965429096917,,0.011084900004789233
+362251,Credit_Approval_Classification,3,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.6154761904761905,0.6196888930452944,,0.02678139999625273
+362251,Credit_Approval_Classification,4,22,MinMaxScaler,SelectKBest,kNN,800,200,ok,,0.6130952380952381,0.6190476190476191,,0.01261950000480283
+362251,Credit_Approval_Classification,0,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6345238095238095,0.6442833652135977,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0366521999967517
+362251,Credit_Approval_Classification,1,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6392857142857142,0.6386148878817501,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8573584999976447
+362251,Credit_Approval_Classification,2,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6416666666666666,0.649133998915505,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8012926999945194
+362251,Credit_Approval_Classification,3,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6511904761904762,0.6570965429096917,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3020783999963896
+362251,Credit_Approval_Classification,4,23,MinMaxScaler,SelectKBest,MLP,800,200,ok,,0.6511904761904762,0.6570965429096917,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8255952000035904
+362251,Credit_Approval_Classification,0,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.6833333333333333,0.6899801587301587,,0.01112539999303408
+362251,Credit_Approval_Classification,1,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.611904761904762,0.6108031607500884,,0.01228619999892544
+362251,Credit_Approval_Classification,2,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.6119047619047618,0.6183708382681932,,0.012214100002893247
+362251,Credit_Approval_Classification,3,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.6202380952380953,0.6113880206133311,,0.01264410000294447
+362251,Credit_Approval_Classification,4,24,MinMaxScaler,SelectKBest,DecisionTree,800,200,ok,,0.6678571428571429,0.6731522308901976,,0.008275500003946945
+362251,Credit_Approval_Classification,0,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.6464285714285714,0.660392355215145,,0.30250550000346266
+362251,Credit_Approval_Classification,1,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.6738095238095239,0.6891471820516286,,0.45367230000556447
+362251,Credit_Approval_Classification,2,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.6928571428571428,0.712171052631579,,0.3493730000045616
+362251,Credit_Approval_Classification,3,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.6726190476190477,0.6893874029335634,,0.4864467000006698
+362251,Credit_Approval_Classification,4,25,MinMaxScaler,None,RandomForest,800,200,ok,,0.6428571428571428,0.6559139784946237,,0.3867842000036035
+362251,Credit_Approval_Classification,0,26,MinMaxScaler,None,SVM,800,200,ok,,0.5666666666666667,0.5540691192865106,,0.051905800006352365
+362251,Credit_Approval_Classification,1,26,MinMaxScaler,None,SVM,800,200,ok,,0.5583333333333333,0.5416348357524827,,0.0671645999973407
+362251,Credit_Approval_Classification,2,26,MinMaxScaler,None,SVM,800,200,ok,,0.5952380952380952,0.59375,,0.04817880000337027
+362251,Credit_Approval_Classification,3,26,MinMaxScaler,None,SVM,800,200,ok,,0.6142857142857143,0.6177735308170091,,0.05293970000639092
+362251,Credit_Approval_Classification,4,26,MinMaxScaler,None,SVM,800,200,ok,,0.5833333333333333,0.578125,,0.05375729998922907
+362251,Credit_Approval_Classification,0,27,MinMaxScaler,None,kNN,800,200,ok,,0.5345238095238095,0.5304685107686027,,0.009881000005407259
+362251,Credit_Approval_Classification,1,27,MinMaxScaler,None,kNN,800,200,ok,,0.5547619047619048,0.553993782943641,,0.013540499989176169
+362251,Credit_Approval_Classification,2,27,MinMaxScaler,None,kNN,800,200,ok,,0.5797619047619047,0.5827676413126263,,0.010064400004921481
+362251,Credit_Approval_Classification,3,27,MinMaxScaler,None,kNN,800,200,ok,,0.5666666666666667,0.5675091228544398,,0.011029899993445724
+362251,Credit_Approval_Classification,4,27,MinMaxScaler,None,kNN,800,200,ok,,0.5809523809523809,0.5828118481435127,,0.009856899996520951
+362251,Credit_Approval_Classification,0,28,MinMaxScaler,None,MLP,800,200,ok,,0.6452380952380952,0.6408295678368672,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9405692000000272
+362251,Credit_Approval_Classification,1,28,MinMaxScaler,None,MLP,800,200,ok,,0.6369047619047619,0.6334545454545455,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0630265999934636
+362251,Credit_Approval_Classification,2,28,MinMaxScaler,None,MLP,800,200,ok,,0.6190476190476191,0.6238244514106583,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0794891000114148
+362251,Credit_Approval_Classification,3,28,MinMaxScaler,None,MLP,800,200,ok,,0.6190476190476191,0.6238244514106583,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0316542999935336
+362251,Credit_Approval_Classification,4,28,MinMaxScaler,None,MLP,800,200,ok,,0.7011904761904761,0.7040258524357464,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9961476000025868
+362251,Credit_Approval_Classification,0,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.6440476190476191,0.6419242170761057,,0.012227100000018254
+362251,Credit_Approval_Classification,1,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.6321428571428571,0.6301840274720436,,0.017281899999943562
+362251,Credit_Approval_Classification,2,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.6702380952380953,0.671042794341936,,0.016961300003458746
+362251,Credit_Approval_Classification,3,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.6226190476190476,0.6166938413570182,,0.016321099988999777
+362251,Credit_Approval_Classification,4,29,MinMaxScaler,None,DecisionTree,800,200,ok,,0.6345238095238095,0.6281358162418833,,0.016790299996500835
+362251,Credit_Approval_Classification,0,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.6107142857142857,0.6170381877958019,,0.6045535000012023
+362251,Credit_Approval_Classification,1,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.6404761904761904,0.6523432067862607,,0.4688001000031363
+362251,Credit_Approval_Classification,2,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.6071428571428572,0.6133333333333333,,0.5027073999954155
+362251,Credit_Approval_Classification,3,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.6095238095238096,0.6148718708339506,,0.4748064000013983
+362251,Credit_Approval_Classification,4,30,RobustScaler,PCA,RandomForest,800,200,ok,,0.5571428571428572,0.5479204339963833,,0.36614310000732075
+362251,Credit_Approval_Classification,0,31,RobustScaler,PCA,SVM,800,200,ok,,0.6095238095238096,0.6101364522417154,,0.04888040000514593
+362251,Credit_Approval_Classification,1,31,RobustScaler,PCA,SVM,800,200,ok,,0.5773809523809523,0.5742296918767507,,0.05256290000397712
+362251,Credit_Approval_Classification,2,31,RobustScaler,PCA,SVM,800,200,ok,,0.5880952380952381,0.5858260469397147,,0.08278120000613853
+362251,Credit_Approval_Classification,3,31,RobustScaler,PCA,SVM,800,200,ok,,0.611904761904762,0.6165055990182544,,0.05035649999626912
+362251,Credit_Approval_Classification,4,31,RobustScaler,PCA,SVM,800,200,ok,,0.5654761904761905,0.5487179487179488,,0.039576499999384396
+362251,Credit_Approval_Classification,0,32,RobustScaler,PCA,kNN,800,200,ok,,0.5630952380952381,0.5637437497902614,,0.0116691000002902
+362251,Credit_Approval_Classification,1,32,RobustScaler,PCA,kNN,800,200,ok,,0.6178571428571429,0.6236164715639054,,0.015007399997557513
+362251,Credit_Approval_Classification,2,32,RobustScaler,PCA,kNN,800,200,ok,,0.5464285714285715,0.5440781191521213,,0.037292000008164905
+362251,Credit_Approval_Classification,3,32,RobustScaler,PCA,kNN,800,200,ok,,0.5928571428571429,0.5967181198720624,,0.015118499999516644
+362251,Credit_Approval_Classification,4,32,RobustScaler,PCA,kNN,800,200,ok,,0.6238095238095238,0.6315304645348072,,0.012339299995801412
+362251,Credit_Approval_Classification,0,33,RobustScaler,PCA,MLP,800,200,ok,,0.5880952380952381,0.5920515857349651,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9053802999987965
+362251,Credit_Approval_Classification,1,33,RobustScaler,PCA,MLP,800,200,ok,,0.5845238095238096,0.5868150843328914,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8977783000009367
+362251,Credit_Approval_Classification,2,33,RobustScaler,PCA,MLP,800,200,ok,,0.6333333333333333,0.6406109613656783,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9955344000045443
+362251,Credit_Approval_Classification,3,33,RobustScaler,PCA,MLP,800,200,ok,,0.6761904761904762,0.6881496881496881,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.259363699995447
+362251,Credit_Approval_Classification,4,33,RobustScaler,PCA,MLP,800,200,ok,,0.5702380952380952,0.5725814168607062,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.7835433000000194
+362251,Credit_Approval_Classification,0,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.5785714285714285,0.5810244627652386,,0.03864379999868106
+362251,Credit_Approval_Classification,1,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.5904761904761905,0.579599513220489,,0.014128700000583194
+362251,Credit_Approval_Classification,2,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.5952380952380952,0.5952380952380952,,0.015404700010549277
+362251,Credit_Approval_Classification,3,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.6214285714285714,0.6236036911121904,,0.013485200004652143
+362251,Credit_Approval_Classification,4,34,RobustScaler,PCA,DecisionTree,800,200,ok,,0.5726190476190476,0.5714830794517332,,0.013699600007385015
+362251,Credit_Approval_Classification,0,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6023809523809524,0.6067985794013191,,0.31006190000334755
+362251,Credit_Approval_Classification,1,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6535714285714286,0.6557035426293376,,0.27585390000604093
+362251,Credit_Approval_Classification,2,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6428571428571429,0.6489028213166144,,0.34424310000031255
+362251,Credit_Approval_Classification,3,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6583333333333333,0.6658154418487342,,0.32400730000517797
+362251,Credit_Approval_Classification,4,35,RobustScaler,SelectKBest,RandomForest,800,200,ok,,0.6833333333333333,0.6899801587301587,,0.24683740000182297
+362251,Credit_Approval_Classification,0,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.6095238095238096,0.6148718708339506,,0.047930600005201995
+362251,Credit_Approval_Classification,1,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.6,0.6047430830039526,,0.037677200001780875
+362251,Credit_Approval_Classification,2,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.5904761904761905,0.592074592074592,,0.046276399996713735
+362251,Credit_Approval_Classification,3,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.6345238095238095,0.645940966075364,,0.044386499997926876
+362251,Credit_Approval_Classification,4,36,RobustScaler,SelectKBest,SVM,800,200,ok,,0.5702380952380952,0.5666703389519298,,0.03782499999215361
+362251,Credit_Approval_Classification,0,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.6023809523809524,0.6080551425868361,,0.01630630000727251
+362251,Credit_Approval_Classification,1,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.6166666666666667,0.6196785670469881,,0.011726400000043213
+362251,Credit_Approval_Classification,2,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.6297619047619047,0.6363752352397053,,0.0228958999941824
+362251,Credit_Approval_Classification,3,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.5797619047619047,0.5822812431808971,,0.10567689999879804
+362251,Credit_Approval_Classification,4,37,RobustScaler,SelectKBest,kNN,800,200,ok,,0.6130952380952381,0.6155606407322655,,0.0112098999961745
+362251,Credit_Approval_Classification,0,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.6726190476190477,0.6836158192090396,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9545648999919649
+362251,Credit_Approval_Classification,1,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.6547619047619048,0.6547619047619048,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.8038166000042111
+362251,Credit_Approval_Classification,2,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.6416666666666666,0.649133998915505,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5346436999971047
+362251,Credit_Approval_Classification,3,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.6714285714285715,0.6841689696012634,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.4488648000115063
+362251,Credit_Approval_Classification,4,38,RobustScaler,SelectKBest,MLP,800,200,ok,,0.6821428571428572,0.6910369179356222,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9202147999894805
+362251,Credit_Approval_Classification,0,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.6916666666666667,0.6978199870494279,,0.012287799996556714
+362251,Credit_Approval_Classification,1,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.611904761904762,0.6108031607500884,,0.012097900005755946
+362251,Credit_Approval_Classification,2,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.6119047619047618,0.6183708382681932,,0.012528799998108298
+362251,Credit_Approval_Classification,3,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.6238095238095238,0.6155585707824514,,0.03742429999692831
+362251,Credit_Approval_Classification,4,39,RobustScaler,SelectKBest,DecisionTree,800,200,ok,,0.6678571428571429,0.6731522308901976,,0.009548399990308098
+362251,Credit_Approval_Classification,0,40,RobustScaler,None,RandomForest,800,200,ok,,0.6547619047619048,0.6702508960573477,,0.35436479999043513
+362251,Credit_Approval_Classification,1,40,RobustScaler,None,RandomForest,800,200,ok,,0.6821428571428572,0.6979764421624887,,0.3671537000045646
+362251,Credit_Approval_Classification,2,40,RobustScaler,None,RandomForest,800,200,ok,,0.6928571428571428,0.712171052631579,,0.5315909000055399
+362251,Credit_Approval_Classification,3,40,RobustScaler,None,RandomForest,800,200,ok,,0.6726190476190477,0.6893874029335634,,0.7266939000110142
+362251,Credit_Approval_Classification,4,40,RobustScaler,None,RandomForest,800,200,ok,,0.6392857142857142,0.6514812048792631,,0.35827509999217
+362251,Credit_Approval_Classification,0,41,RobustScaler,None,SVM,800,200,ok,,0.6214285714285714,0.629684491186491,,0.04964759999711532
+362251,Credit_Approval_Classification,1,41,RobustScaler,None,SVM,800,200,ok,,0.6273809523809524,0.6372559479355595,,0.0623695999966003
+362251,Credit_Approval_Classification,2,41,RobustScaler,None,SVM,800,200,ok,,0.6226190476190476,0.6314895769355829,,0.055089700006647035
+362251,Credit_Approval_Classification,3,41,RobustScaler,None,SVM,800,200,ok,,0.6488095238095238,0.6638655462184874,,0.05345740000484511
+362251,Credit_Approval_Classification,4,41,RobustScaler,None,SVM,800,200,ok,,0.605952380952381,0.6107377621093607,,0.052024899996467866
+362251,Credit_Approval_Classification,0,42,RobustScaler,None,kNN,800,200,ok,,0.5821428571428572,0.5849069443026778,,0.01123639999423176
+362251,Credit_Approval_Classification,1,42,RobustScaler,None,kNN,800,200,ok,,0.6047619047619047,0.6101871101871101,,0.012972700002137572
+362251,Credit_Approval_Classification,2,42,RobustScaler,None,kNN,800,200,ok,,0.6190476190476191,0.6272401433691757,,0.01202170000760816
+362251,Credit_Approval_Classification,3,42,RobustScaler,None,kNN,800,200,ok,,0.6321428571428571,0.6427445623620889,,0.008577999993576668
+362251,Credit_Approval_Classification,4,42,RobustScaler,None,kNN,800,200,ok,,0.669047619047619,0.6847587719298246,,0.009494300000369549
+362251,Credit_Approval_Classification,0,43,RobustScaler,None,MLP,800,200,ok,,0.6309523809523809,0.6309523809523809,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0268677999993088
+362251,Credit_Approval_Classification,1,43,RobustScaler,None,MLP,800,200,ok,,0.594047619047619,0.5953006553713267,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2339551000040956
+362251,Credit_Approval_Classification,2,43,RobustScaler,None,MLP,800,200,ok,,0.6464285714285715,0.6532047038052902,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.2664736000006087
+362251,Credit_Approval_Classification,3,43,RobustScaler,None,MLP,800,200,ok,,0.6452380952380952,0.6534462841740469,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.0464147999882698
+362251,Credit_Approval_Classification,4,43,RobustScaler,None,MLP,800,200,ok,,0.6964285714285714,0.7009916094584288,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,0.9571971999976085
+362251,Credit_Approval_Classification,0,44,RobustScaler,None,DecisionTree,800,200,ok,,0.6440476190476191,0.6419242170761057,,0.012077299994416535
+362251,Credit_Approval_Classification,1,44,RobustScaler,None,DecisionTree,800,200,ok,,0.6285714285714286,0.6259934548854604,,0.015418199996929616
+362251,Credit_Approval_Classification,2,44,RobustScaler,None,DecisionTree,800,200,ok,,0.6738095238095239,0.6754417598269022,,0.017782700000680052
+362251,Credit_Approval_Classification,3,44,RobustScaler,None,DecisionTree,800,200,ok,,0.6226190476190476,0.6166938413570182,,0.011099000010290183
+362251,Credit_Approval_Classification,4,44,RobustScaler,None,DecisionTree,800,200,ok,,0.6345238095238095,0.6281358162418833,,0.01376860000891611
+362251,Credit_Approval_Classification,0,45,None,PCA,RandomForest,800,200,ok,,0.6285714285714286,0.638436935057711,,0.4307186000078218
+362251,Credit_Approval_Classification,1,45,None,PCA,RandomForest,800,200,ok,,0.6142857142857143,0.6215704824976348,,0.4437146999989636
+362251,Credit_Approval_Classification,2,45,None,PCA,RandomForest,800,200,ok,,0.6666666666666667,0.6799999999999999,,0.3846434000006411
+362251,Credit_Approval_Classification,3,45,None,PCA,RandomForest,800,200,ok,,0.6904761904761905,0.7066666666666668,,0.35110420000273734
+362251,Credit_Approval_Classification,4,45,None,PCA,RandomForest,800,200,ok,,0.5928571428571429,0.5967181198720624,,0.3902135999960592
+362251,Credit_Approval_Classification,0,46,None,PCA,SVM,800,200,ok,,0.5095238095238096,0.4419642857142857,,0.06409829999029171
+362251,Credit_Approval_Classification,1,46,None,PCA,SVM,800,200,ok,,0.5369047619047619,0.5056763436806166,,0.06286920000275131
+362251,Credit_Approval_Classification,2,46,None,PCA,SVM,800,200,ok,,0.5059523809523809,0.4397244546498278,,0.05505830000038259
+362251,Credit_Approval_Classification,3,46,None,PCA,SVM,800,200,ok,,0.525,0.4630493146813622,,0.04944139999861363
+362251,Credit_Approval_Classification,4,46,None,PCA,SVM,800,200,ok,,0.5095238095238096,0.4419642857142857,,0.08750730000610929
+362251,Credit_Approval_Classification,0,47,None,PCA,kNN,800,200,ok,,0.5214285714285714,0.5192307692307692,,0.009694499996840023
+362251,Credit_Approval_Classification,1,47,None,PCA,kNN,800,200,ok,,0.5202380952380953,0.516540282790821,,0.011773000005632639
+362251,Credit_Approval_Classification,2,47,None,PCA,kNN,800,200,ok,,0.5011904761904762,0.48863437357710765,,0.010256199995637871
+362251,Credit_Approval_Classification,3,47,None,PCA,kNN,800,200,ok,,0.5428571428571428,0.5337995337995338,,0.020925599994370714
+362251,Credit_Approval_Classification,4,47,None,PCA,kNN,800,200,ok,,0.5,0.49843260188087773,,0.031446900000446476
+362251,Credit_Approval_Classification,0,48,None,PCA,MLP,800,200,ok,,0.5880952380952381,0.5858260469397147,,0.23471730000164825
+362251,Credit_Approval_Classification,1,48,None,PCA,MLP,800,200,ok,,0.5785714285714285,0.568536342515765,,0.1959433000010904
+362251,Credit_Approval_Classification,2,48,None,PCA,MLP,800,200,ok,,0.5547619047619048,0.5519301470588236,,0.13697659999888856
+362251,Credit_Approval_Classification,3,48,None,PCA,MLP,800,200,ok,,0.49166666666666664,0.4307981960681291,,0.12845930000185035
+362251,Credit_Approval_Classification,4,48,None,PCA,MLP,800,200,ok,,0.5547619047619048,0.5519301470588236,,0.17508729999826755
+362251,Credit_Approval_Classification,0,49,None,PCA,DecisionTree,800,200,ok,,0.6107142857142858,0.6153724896749582,,0.021239399997284636
+362251,Credit_Approval_Classification,1,49,None,PCA,DecisionTree,800,200,ok,,0.6047619047619047,0.6074101337259232,,0.01697099999000784
+362251,Credit_Approval_Classification,2,49,None,PCA,DecisionTree,800,200,ok,,0.5952380952380952,0.5987460815047022,,0.016518900010851212
+362251,Credit_Approval_Classification,3,49,None,PCA,DecisionTree,800,200,ok,,0.575,0.5709259418175577,,0.0222693999967305
+362251,Credit_Approval_Classification,4,49,None,PCA,DecisionTree,800,200,ok,,0.5892857142857143,0.5869090909090909,,0.01815020000503864
+362251,Credit_Approval_Classification,0,50,None,SelectKBest,RandomForest,800,200,ok,,0.6023809523809524,0.6067985794013191,,0.32971859999815933
+362251,Credit_Approval_Classification,1,50,None,SelectKBest,RandomForest,800,200,ok,,0.6535714285714286,0.6557035426293376,,0.371860100000049
+362251,Credit_Approval_Classification,2,50,None,SelectKBest,RandomForest,800,200,ok,,0.6428571428571429,0.6489028213166144,,0.33207190000393894
+362251,Credit_Approval_Classification,3,50,None,SelectKBest,RandomForest,800,200,ok,,0.6583333333333333,0.6658154418487342,,0.3287703999958467
+362251,Credit_Approval_Classification,4,50,None,SelectKBest,RandomForest,800,200,ok,,0.6833333333333333,0.6899801587301587,,0.337126000013086
+362251,Credit_Approval_Classification,0,51,None,SelectKBest,SVM,800,200,ok,,0.5178571428571429,0.4580941446613088,,0.08580289999372326
+362251,Credit_Approval_Classification,1,51,None,SelectKBest,SVM,800,200,ok,,0.5285714285714286,0.49186991869918695,,0.06417789999977686
+362251,Credit_Approval_Classification,2,51,None,SelectKBest,SVM,800,200,ok,,0.5059523809523809,0.4397244546498278,,0.06295289999980014
+362251,Credit_Approval_Classification,3,51,None,SelectKBest,SVM,800,200,ok,,0.5166666666666667,0.44645924794808167,,0.05320920000667684
+362251,Credit_Approval_Classification,4,51,None,SelectKBest,SVM,800,200,ok,,0.5095238095238096,0.4419642857142857,,0.05213660000299569
+362251,Credit_Approval_Classification,0,52,None,SelectKBest,kNN,800,200,ok,,0.4892857142857143,0.48350822137229904,,0.012050199991790578
+362251,Credit_Approval_Classification,1,52,None,SelectKBest,kNN,800,200,ok,,0.5107142857142857,0.5032492940015652,,0.012390099989715964
+362251,Credit_Approval_Classification,2,52,None,SelectKBest,kNN,800,200,ok,,0.5202380952380952,0.5092286354422276,,0.013223500005551614
+362251,Credit_Approval_Classification,3,52,None,SelectKBest,kNN,800,200,ok,,0.5678571428571428,0.5661296632170418,,0.010700400001951493
+362251,Credit_Approval_Classification,4,52,None,SelectKBest,kNN,800,200,ok,,0.5190476190476191,0.5180111618467782,,0.01151440000103321
+362251,Credit_Approval_Classification,0,53,None,SelectKBest,MLP,800,200,ok,,0.5083333333333333,0.4605933473179502,,0.10727409999526571
+362251,Credit_Approval_Classification,1,53,None,SelectKBest,MLP,800,200,ok,,0.5,0.4117647058823529,,0.23857300000963733
+362251,Credit_Approval_Classification,2,53,None,SelectKBest,MLP,800,200,ok,,0.5,0.4117647058823529,,0.11621849999937695
+362251,Credit_Approval_Classification,3,53,None,SelectKBest,MLP,800,200,ok,,0.5,0.4117647058823529,,0.09594249998917803
+362251,Credit_Approval_Classification,4,53,None,SelectKBest,MLP,800,200,ok,,0.4833333333333334,0.36485532815808047,,0.1181879000068875
+362251,Credit_Approval_Classification,0,54,None,SelectKBest,DecisionTree,800,200,ok,,0.6916666666666667,0.6978199870494279,,0.008080299987341277
+362251,Credit_Approval_Classification,1,54,None,SelectKBest,DecisionTree,800,200,ok,,0.611904761904762,0.6108031607500884,,0.019611700001405552
+362251,Credit_Approval_Classification,2,54,None,SelectKBest,DecisionTree,800,200,ok,,0.6119047619047618,0.6183708382681932,,0.008287999997264706
+362251,Credit_Approval_Classification,3,54,None,SelectKBest,DecisionTree,800,200,ok,,0.6238095238095238,0.6155585707824514,,0.008339400010299869
+362251,Credit_Approval_Classification,4,54,None,SelectKBest,DecisionTree,800,200,ok,,0.6678571428571429,0.6731522308901976,,0.012810500003979541
+362251,Credit_Approval_Classification,0,55,None,None,RandomForest,800,200,ok,,0.6464285714285714,0.660392355215145,,0.3203809000115143
+362251,Credit_Approval_Classification,1,55,None,None,RandomForest,800,200,ok,,0.6821428571428572,0.6979764421624887,,0.361487300004228
+362251,Credit_Approval_Classification,2,55,None,None,RandomForest,800,200,ok,,0.6928571428571428,0.712171052631579,,0.29292580000765156
+362251,Credit_Approval_Classification,3,55,None,None,RandomForest,800,200,ok,,0.6726190476190477,0.6893874029335634,,0.6470018999971217
+362251,Credit_Approval_Classification,4,55,None,None,RandomForest,800,200,ok,,0.6345238095238095,0.645940966075364,,0.2992845999979181
+362251,Credit_Approval_Classification,0,56,None,None,SVM,800,200,ok,,0.5178571428571429,0.4580941446613088,,0.059057300008134916
+362251,Credit_Approval_Classification,1,56,None,None,SVM,800,200,ok,,0.5285714285714286,0.49186991869918695,,0.06451320000633132
+362251,Credit_Approval_Classification,2,56,None,None,SVM,800,200,ok,,0.5059523809523809,0.4397244546498278,,0.05812700001115445
+362251,Credit_Approval_Classification,3,56,None,None,SVM,800,200,ok,,0.5166666666666667,0.44645924794808167,,0.11579580001125578
+362251,Credit_Approval_Classification,4,56,None,None,SVM,800,200,ok,,0.5095238095238096,0.4419642857142857,,0.05797860000166111
+362251,Credit_Approval_Classification,0,57,None,None,kNN,800,200,ok,,0.5214285714285714,0.5192307692307692,,0.010232500004349276
+362251,Credit_Approval_Classification,1,57,None,None,kNN,800,200,ok,,0.5202380952380953,0.516540282790821,,0.009238099999492988
+362251,Credit_Approval_Classification,2,57,None,None,kNN,800,200,ok,,0.5047619047619047,0.49181253529079616,,0.01052529999287799
+362251,Credit_Approval_Classification,3,57,None,None,kNN,800,200,ok,,0.5428571428571428,0.5337995337995338,,0.01331519999075681
+362251,Credit_Approval_Classification,4,57,None,None,kNN,800,200,ok,,0.4916666666666667,0.4892651092405183,,0.010230199986835942
+362251,Credit_Approval_Classification,0,58,None,None,MLP,800,200,ok,,0.638095238095238,0.6138996138996139,,0.31187730000237934
+362251,Credit_Approval_Classification,1,58,None,None,MLP,800,200,ok,,0.5,0.4117647058823529,,0.15103399999497924
+362251,Credit_Approval_Classification,2,58,None,None,MLP,800,200,ok,,0.5178571428571429,0.4580941446613088,,0.20535720000043511
+362251,Credit_Approval_Classification,3,58,None,None,MLP,800,200,ok,,0.5,0.4117647058823529,,0.708334199996898
+362251,Credit_Approval_Classification,4,58,None,None,MLP,800,200,ok,,0.5,0.4117647058823529,,0.1511191999888979
+362251,Credit_Approval_Classification,0,59,None,None,DecisionTree,800,200,ok,,0.6440476190476191,0.6419242170761057,,0.013155000007827766
+362251,Credit_Approval_Classification,1,59,None,None,DecisionTree,800,200,ok,,0.6285714285714286,0.6259934548854604,,0.015417299990076572
+362251,Credit_Approval_Classification,2,59,None,None,DecisionTree,800,200,ok,,0.6738095238095239,0.6754417598269022,,0.013918299999204464
+362251,Credit_Approval_Classification,3,59,None,None,DecisionTree,800,200,ok,,0.6226190476190476,0.6166938413570182,,0.013873300005798228
+362251,Credit_Approval_Classification,4,59,None,None,DecisionTree,800,200,ok,,0.6345238095238095,0.6281358162418833,,0.014894299994921312

@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+363459,air-quality-and-pollution-assessment,0,0,StandardScaler,PCA,RandomForest,4000,1000,ok,,0.8714583333333333,0.8850061123193063,,1.4173264999990351
+363459,air-quality-and-pollution-assessment,1,0,StandardScaler,PCA,RandomForest,4000,1000,ok,,0.8904166666666666,0.8924390170491946,,1.478637099993648
+363459,air-quality-and-pollution-assessment,2,0,StandardScaler,PCA,RandomForest,4000,1000,ok,,0.9016666666666666,0.9063881607630102,,1.0649121000024024
+363459,air-quality-and-pollution-assessment,3,0,StandardScaler,PCA,RandomForest,4000,1000,ok,,0.8795833333333334,0.8855022698893498,,1.0762154999974882
+363459,air-quality-and-pollution-assessment,4,0,StandardScaler,PCA,RandomForest,4000,1000,ok,,0.9127083333333333,0.9176140653426886,,0.9172664999932749
+363459,air-quality-and-pollution-assessment,0,1,StandardScaler,PCA,SVM,4000,1000,ok,,0.8897916666666668,0.8970396324285537,,0.21288979999371804
+363459,air-quality-and-pollution-assessment,1,1,StandardScaler,PCA,SVM,4000,1000,ok,,0.9104166666666667,0.9119696080745154,,0.20781089999945834
+363459,air-quality-and-pollution-assessment,2,1,StandardScaler,PCA,SVM,4000,1000,ok,,0.9170833333333334,0.9194573044853349,,0.21696609999344219
+363459,air-quality-and-pollution-assessment,3,1,StandardScaler,PCA,SVM,4000,1000,ok,,0.90625,0.9093664794812938,,0.2101290999999037
+363459,air-quality-and-pollution-assessment,4,1,StandardScaler,PCA,SVM,4000,1000,ok,,0.9133333333333333,0.9225242541415637,,0.20279530000698287
+363459,air-quality-and-pollution-assessment,0,2,StandardScaler,PCA,kNN,4000,1000,ok,,0.8535416666666666,0.8681994854851409,,0.04496520000975579
+363459,air-quality-and-pollution-assessment,1,2,StandardScaler,PCA,kNN,4000,1000,ok,,0.8879166666666667,0.8987303958177745,,0.04670699998678174
+363459,air-quality-and-pollution-assessment,2,2,StandardScaler,PCA,kNN,4000,1000,ok,,0.8677083333333333,0.880490641377957,,0.049598099998547696
+363459,air-quality-and-pollution-assessment,3,2,StandardScaler,PCA,kNN,4000,1000,ok,,0.8733333333333333,0.8837588604239932,,0.04446829999506008
+363459,air-quality-and-pollution-assessment,4,2,StandardScaler,PCA,kNN,4000,1000,ok,,0.8670833333333333,0.8810111913358866,,0.04382849999819882
+363459,air-quality-and-pollution-assessment,0,3,StandardScaler,PCA,MLP,4000,1000,ok,,0.8870833333333333,0.8926051843902565,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.964213100000052
+363459,air-quality-and-pollution-assessment,1,3,StandardScaler,PCA,MLP,4000,1000,ok,,0.9133333333333333,0.9159811692114287,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.07880610000575
+363459,air-quality-and-pollution-assessment,2,3,StandardScaler,PCA,MLP,4000,1000,ok,,0.9233333333333333,0.9294599573997377,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.091294799989555
+363459,air-quality-and-pollution-assessment,3,3,StandardScaler,PCA,MLP,4000,1000,ok,,0.9199999999999999,0.9183037298882051,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.998726399993757
+363459,air-quality-and-pollution-assessment,4,3,StandardScaler,PCA,MLP,4000,1000,ok,,0.9222916666666667,0.9286223541562364,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.980674499995075
+363459,air-quality-and-pollution-assessment,0,4,StandardScaler,PCA,DecisionTree,4000,1000,ok,,0.8374999999999999,0.8504510537276649,,0.03997189999790862
+363459,air-quality-and-pollution-assessment,1,4,StandardScaler,PCA,DecisionTree,4000,1000,ok,,0.8929166666666667,0.891217053216916,,0.03961900000285823
+363459,air-quality-and-pollution-assessment,2,4,StandardScaler,PCA,DecisionTree,4000,1000,ok,,0.875,0.8819921257746814,,0.0411076000018511
+363459,air-quality-and-pollution-assessment,3,4,StandardScaler,PCA,DecisionTree,4000,1000,ok,,0.8425,0.849444905246831,,0.0426407999912044
+363459,air-quality-and-pollution-assessment,4,4,StandardScaler,PCA,DecisionTree,4000,1000,ok,,0.8547916666666666,0.8624645032584295,,0.044073200013372116
+363459,air-quality-and-pollution-assessment,0,5,StandardScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9033333333333333,0.9140304038200096,,0.6965632000064943
+363459,air-quality-and-pollution-assessment,1,5,StandardScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9310416666666668,0.9296164410451251,,0.6683152000041446
+363459,air-quality-and-pollution-assessment,2,5,StandardScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9375,0.9423839524273501,,0.704847199987853
+363459,air-quality-and-pollution-assessment,3,5,StandardScaler,SelectKBest,RandomForest,4000,1000,ok,,0.925625,0.9276039824607957,,0.6755684999952791
+363459,air-quality-and-pollution-assessment,4,5,StandardScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9381250000000001,0.9423772008803522,,0.680265100003453
+363459,air-quality-and-pollution-assessment,0,6,StandardScaler,SelectKBest,SVM,4000,1000,ok,,0.8916666666666667,0.8995303900238637,,0.18912119999004062
+363459,air-quality-and-pollution-assessment,1,6,StandardScaler,SelectKBest,SVM,4000,1000,ok,,0.9087500000000001,0.9100063826164976,,0.229401600008714
+363459,air-quality-and-pollution-assessment,2,6,StandardScaler,SelectKBest,SVM,4000,1000,ok,,0.9195833333333333,0.9213681043925334,,0.18800939999346156
+363459,air-quality-and-pollution-assessment,3,6,StandardScaler,SelectKBest,SVM,4000,1000,ok,,0.9225,0.9225,,0.1901962999982061
+363459,air-quality-and-pollution-assessment,4,6,StandardScaler,SelectKBest,SVM,4000,1000,ok,,0.9133333333333333,0.9225242541415637,,0.20108069998968858
+363459,air-quality-and-pollution-assessment,0,7,StandardScaler,SelectKBest,kNN,4000,1000,ok,,0.8579166666666667,0.8722926217630669,,0.054664399998728186
+363459,air-quality-and-pollution-assessment,1,7,StandardScaler,SelectKBest,kNN,4000,1000,ok,,0.8970833333333333,0.9062555191528134,,0.11619960000098217
+363459,air-quality-and-pollution-assessment,2,7,StandardScaler,SelectKBest,kNN,4000,1000,ok,,0.88125,0.8939555137852011,,0.04986080000526272
+363459,air-quality-and-pollution-assessment,3,7,StandardScaler,SelectKBest,kNN,4000,1000,ok,,0.8691666666666668,0.8811718618421854,,0.04996930000197608
+363459,air-quality-and-pollution-assessment,4,7,StandardScaler,SelectKBest,kNN,4000,1000,ok,,0.8829166666666667,0.8959202149448724,,0.05217880000418518
+363459,air-quality-and-pollution-assessment,0,8,StandardScaler,SelectKBest,MLP,4000,1000,ok,,0.8952083333333333,0.899147549356551,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.202117900000303
+363459,air-quality-and-pollution-assessment,1,8,StandardScaler,SelectKBest,MLP,4000,1000,ok,,0.9095833333333333,0.908730992792507,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.229689400002826
+363459,air-quality-and-pollution-assessment,2,8,StandardScaler,SelectKBest,MLP,4000,1000,ok,,0.93,0.9308426636009501,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.8637445000058506
+363459,air-quality-and-pollution-assessment,3,8,StandardScaler,SelectKBest,MLP,4000,1000,ok,,0.9120833333333334,0.911924589624448,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.15813279998838
+363459,air-quality-and-pollution-assessment,4,8,StandardScaler,SelectKBest,MLP,4000,1000,ok,,0.9152083333333334,0.9188371379017568,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.293118100002175
+363459,air-quality-and-pollution-assessment,0,9,StandardScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.856875,0.8659294763249042,,0.026892900001257658
+363459,air-quality-and-pollution-assessment,1,9,StandardScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.8827083333333333,0.8844825250064179,,0.03006940000341274
+363459,air-quality-and-pollution-assessment,2,9,StandardScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.9027083333333333,0.9074158862305818,,0.0255926000099862
+363459,air-quality-and-pollution-assessment,3,9,StandardScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.8997916666666667,0.9032875835059542,,0.029826099998899736
+363459,air-quality-and-pollution-assessment,4,9,StandardScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.8875,0.8935340727098946,,0.025905600006808527
+363459,air-quality-and-pollution-assessment,0,10,StandardScaler,None,RandomForest,4000,1000,ok,,0.90875,0.9185007508089734,,0.9102342999976827
+363459,air-quality-and-pollution-assessment,1,10,StandardScaler,None,RandomForest,4000,1000,ok,,0.921875,0.9211174571448141,,0.9564730999991298
+363459,air-quality-and-pollution-assessment,2,10,StandardScaler,None,RandomForest,4000,1000,ok,,0.9383333333333334,0.9424197462405467,,1.2524861999991117
+363459,air-quality-and-pollution-assessment,3,10,StandardScaler,None,RandomForest,4000,1000,ok,,0.9320833333333334,0.9339329550295495,,0.9956179000000702
+363459,air-quality-and-pollution-assessment,4,10,StandardScaler,None,RandomForest,4000,1000,ok,,0.9352083333333333,0.9403079772892674,,0.8593604000052437
+363459,air-quality-and-pollution-assessment,0,11,StandardScaler,None,SVM,4000,1000,ok,,0.891875,0.901235951021369,,0.2270316000067396
+363459,air-quality-and-pollution-assessment,1,11,StandardScaler,None,SVM,4000,1000,ok,,0.9091666666666667,0.9101715289282322,,0.20042590000957716
+363459,air-quality-and-pollution-assessment,2,11,StandardScaler,None,SVM,4000,1000,ok,,0.9162499999999999,0.9187211166896996,,0.21336009999504313
+363459,air-quality-and-pollution-assessment,3,11,StandardScaler,None,SVM,4000,1000,ok,,0.9270833333333334,0.9265494893951296,,0.22437080000236165
+363459,air-quality-and-pollution-assessment,4,11,StandardScaler,None,SVM,4000,1000,ok,,0.91875,0.9265782869243129,,0.19892609999806155
+363459,air-quality-and-pollution-assessment,0,12,StandardScaler,None,kNN,4000,1000,ok,,0.8610416666666666,0.8759114974359209,,0.08814009999332484
+363459,air-quality-and-pollution-assessment,1,12,StandardScaler,None,kNN,4000,1000,ok,,0.8916666666666667,0.9035821207320551,,0.05296719999751076
+363459,air-quality-and-pollution-assessment,2,12,StandardScaler,None,kNN,4000,1000,ok,,0.8652083333333334,0.8789941740847655,,0.09970590000739321
+363459,air-quality-and-pollution-assessment,3,12,StandardScaler,None,kNN,4000,1000,ok,,0.8645833333333335,0.8760195389987029,,0.05841730000975076
+363459,air-quality-and-pollution-assessment,4,12,StandardScaler,None,kNN,4000,1000,ok,,0.8708333333333333,0.8851988516887347,,0.15781390000483952
+363459,air-quality-and-pollution-assessment,0,13,StandardScaler,None,MLP,4000,1000,ok,,0.89125,0.9009165220749925,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.4812447000003885
+363459,air-quality-and-pollution-assessment,1,13,StandardScaler,None,MLP,4000,1000,ok,,0.91875,0.9171385647085948,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.9224028999888105
+363459,air-quality-and-pollution-assessment,2,13,StandardScaler,None,MLP,4000,1000,ok,,0.9285416666666666,0.9265437096856798,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.618310500009102
+363459,air-quality-and-pollution-assessment,3,13,StandardScaler,None,MLP,4000,1000,ok,,0.9254166666666667,0.9205985970774471,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,5.172420699993381
+363459,air-quality-and-pollution-assessment,4,13,StandardScaler,None,MLP,4000,1000,ok,,0.9031250000000001,0.9145055656911013,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.354984199992032
+363459,air-quality-and-pollution-assessment,0,14,StandardScaler,None,DecisionTree,4000,1000,ok,,0.859375,0.8681662244804451,,0.02832990000024438
+363459,air-quality-and-pollution-assessment,1,14,StandardScaler,None,DecisionTree,4000,1000,ok,,0.8772916666666667,0.8782568980116376,,0.02873619999445509
+363459,air-quality-and-pollution-assessment,2,14,StandardScaler,None,DecisionTree,4000,1000,ok,,0.8995833333333333,0.9031333199673781,,0.029596499996841885
+363459,air-quality-and-pollution-assessment,3,14,StandardScaler,None,DecisionTree,4000,1000,ok,,0.891875,0.8927545453637807,,0.028725100011797622
+363459,air-quality-and-pollution-assessment,4,14,StandardScaler,None,DecisionTree,4000,1000,ok,,0.89,0.8962789806907686,,0.03771059999417048
+363459,air-quality-and-pollution-assessment,0,15,MinMaxScaler,PCA,RandomForest,4000,1000,ok,,0.87125,0.8828285492654343,,1.2254231999977492
+363459,air-quality-and-pollution-assessment,1,15,MinMaxScaler,PCA,RandomForest,4000,1000,ok,,0.9035416666666666,0.9070795056266389,,1.0205380999977933
+363459,air-quality-and-pollution-assessment,2,15,MinMaxScaler,PCA,RandomForest,4000,1000,ok,,0.9114583333333334,0.9157051056218305,,0.9483285999885993
+363459,air-quality-and-pollution-assessment,3,15,MinMaxScaler,PCA,RandomForest,4000,1000,ok,,0.8910416666666667,0.8976518289762424,,1.037482599989744
+363459,air-quality-and-pollution-assessment,4,15,MinMaxScaler,PCA,RandomForest,4000,1000,ok,,0.9160416666666666,0.9235408416928389,,1.3671047999960138
+363459,air-quality-and-pollution-assessment,0,16,MinMaxScaler,PCA,SVM,4000,1000,ok,,0.8941666666666667,0.9016505789833589,,0.21244339999975637
+363459,air-quality-and-pollution-assessment,1,16,MinMaxScaler,PCA,SVM,4000,1000,ok,,0.9199999999999999,0.9200109425417521,,0.2075928000122076
+363459,air-quality-and-pollution-assessment,2,16,MinMaxScaler,PCA,SVM,4000,1000,ok,,0.9258333333333334,0.9271365390771874,,0.18988020000688266
+363459,air-quality-and-pollution-assessment,3,16,MinMaxScaler,PCA,SVM,4000,1000,ok,,0.9149999999999999,0.9172361682558026,,0.19125620000704657
+363459,air-quality-and-pollution-assessment,4,16,MinMaxScaler,PCA,SVM,4000,1000,ok,,0.9149999999999999,0.9228538247445877,,0.2882347000122536
+363459,air-quality-and-pollution-assessment,0,17,MinMaxScaler,PCA,kNN,4000,1000,ok,,0.8629166666666668,0.8776458425423955,,0.0507173999940278
+363459,air-quality-and-pollution-assessment,1,17,MinMaxScaler,PCA,kNN,4000,1000,ok,,0.89625,0.9084148557152834,,0.051884300002711825
+363459,air-quality-and-pollution-assessment,2,17,MinMaxScaler,PCA,kNN,4000,1000,ok,,0.8758333333333334,0.8893508379829513,,0.04561840000678785
+363459,air-quality-and-pollution-assessment,3,17,MinMaxScaler,PCA,kNN,4000,1000,ok,,0.88125,0.890218160959283,,0.04487589999916963
+363459,air-quality-and-pollution-assessment,4,17,MinMaxScaler,PCA,kNN,4000,1000,ok,,0.8883333333333334,0.9002135273223955,,0.05203140000230633
+363459,air-quality-and-pollution-assessment,0,18,MinMaxScaler,PCA,MLP,4000,1000,ok,,0.89625,0.9031378577242015,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.6923684000066714
+363459,air-quality-and-pollution-assessment,1,18,MinMaxScaler,PCA,MLP,4000,1000,ok,,0.9245833333333333,0.9260340479192938,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.1363882000005106
+363459,air-quality-and-pollution-assessment,2,18,MinMaxScaler,PCA,MLP,4000,1000,ok,,0.9383333333333334,0.939079988126991,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.8394205999939004
+363459,air-quality-and-pollution-assessment,3,18,MinMaxScaler,PCA,MLP,4000,1000,ok,,0.9241666666666666,0.9250999432888602,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.733622599989758
+363459,air-quality-and-pollution-assessment,4,18,MinMaxScaler,PCA,MLP,4000,1000,ok,,0.926875,0.9328110712090739,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.580750900000567
+363459,air-quality-and-pollution-assessment,0,19,MinMaxScaler,PCA,DecisionTree,4000,1000,ok,,0.8610416666666667,0.8692123236563578,,0.03864100000646431
+363459,air-quality-and-pollution-assessment,1,19,MinMaxScaler,PCA,DecisionTree,4000,1000,ok,,0.8760416666666667,0.8776947593644508,,0.03850740000780206
+363459,air-quality-and-pollution-assessment,2,19,MinMaxScaler,PCA,DecisionTree,4000,1000,ok,,0.8777083333333333,0.8857757070810529,,0.04650559999572579
+363459,air-quality-and-pollution-assessment,3,19,MinMaxScaler,PCA,DecisionTree,4000,1000,ok,,0.8747916666666667,0.8733730086609282,,0.039697500003967434
+363459,air-quality-and-pollution-assessment,4,19,MinMaxScaler,PCA,DecisionTree,4000,1000,ok,,0.8916666666666667,0.8936131966759409,,0.04117799999949057
+363459,air-quality-and-pollution-assessment,0,20,MinMaxScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9020833333333333,0.9129573224143248,,0.6655209000018658
+363459,air-quality-and-pollution-assessment,1,20,MinMaxScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9310416666666668,0.9296164410451251,,0.9238993999897502
+363459,air-quality-and-pollution-assessment,2,20,MinMaxScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9408333333333333,0.9453496603753841,,0.7374018999980763
+363459,air-quality-and-pollution-assessment,3,20,MinMaxScaler,SelectKBest,RandomForest,4000,1000,ok,,0.928125,0.9296040225645295,,0.7096703999995952
+363459,air-quality-and-pollution-assessment,4,20,MinMaxScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9381250000000001,0.9423772008803522,,0.7344460000022082
+363459,air-quality-and-pollution-assessment,0,21,MinMaxScaler,SelectKBest,SVM,4000,1000,ok,,0.8966666666666666,0.9045537987710438,,0.17205829999875277
+363459,air-quality-and-pollution-assessment,1,21,MinMaxScaler,SelectKBest,SVM,4000,1000,ok,,0.91125,0.9129488001323447,,0.20661949999339413
+363459,air-quality-and-pollution-assessment,2,21,MinMaxScaler,SelectKBest,SVM,4000,1000,ok,,0.9183333333333332,0.9203035712356813,,0.17805170000065118
+363459,air-quality-and-pollution-assessment,3,21,MinMaxScaler,SelectKBest,SVM,4000,1000,ok,,0.9154166666666668,0.9173742434191143,,0.17166039999574423
+363459,air-quality-and-pollution-assessment,4,21,MinMaxScaler,SelectKBest,SVM,4000,1000,ok,,0.9112500000000001,0.9205781136831259,,0.24239490000763908
+363459,air-quality-and-pollution-assessment,0,22,MinMaxScaler,SelectKBest,kNN,4000,1000,ok,,0.8579166666666667,0.8744531404680389,,0.05096639999828767
+363459,air-quality-and-pollution-assessment,1,22,MinMaxScaler,SelectKBest,kNN,4000,1000,ok,,0.90625,0.9181817412845467,,0.05610739999974612
+363459,air-quality-and-pollution-assessment,2,22,MinMaxScaler,SelectKBest,kNN,4000,1000,ok,,0.8916666666666666,0.9055408243057443,,0.051090900000417605
+363459,air-quality-and-pollution-assessment,3,22,MinMaxScaler,SelectKBest,kNN,4000,1000,ok,,0.8941666666666667,0.9020833898132903,,0.047613700007786974
+363459,air-quality-and-pollution-assessment,4,22,MinMaxScaler,SelectKBest,kNN,4000,1000,ok,,0.89125,0.9041600842752555,,0.050681200009421445
+363459,air-quality-and-pollution-assessment,0,23,MinMaxScaler,SelectKBest,MLP,4000,1000,ok,,0.888125,0.8989460717993212,,3.7520497999939835
+363459,air-quality-and-pollution-assessment,1,23,MinMaxScaler,SelectKBest,MLP,4000,1000,ok,,0.916875,0.9206126655668976,,3.5157118999923114
+363459,air-quality-and-pollution-assessment,2,23,MinMaxScaler,SelectKBest,MLP,4000,1000,ok,,0.9391666666666667,0.9385741700705715,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,6.134309499990195
+363459,air-quality-and-pollution-assessment,3,23,MinMaxScaler,SelectKBest,MLP,4000,1000,ok,,0.9133333333333334,0.9159733595509272,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.0557798000081675
+363459,air-quality-and-pollution-assessment,4,23,MinMaxScaler,SelectKBest,MLP,4000,1000,ok,,0.9252083333333333,0.9297591300600513,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.663488599995617
+363459,air-quality-and-pollution-assessment,0,24,MinMaxScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.856875,0.8659294763249042,,0.026207099988823757
+363459,air-quality-and-pollution-assessment,1,24,MinMaxScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.8802083333333334,0.8823889208001081,,0.030846900001051836
+363459,air-quality-and-pollution-assessment,2,24,MinMaxScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.9027083333333333,0.9074158862305818,,0.050599000009242445
+363459,air-quality-and-pollution-assessment,3,24,MinMaxScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.8997916666666667,0.9032875835059542,,0.02344999999331776
+363459,air-quality-and-pollution-assessment,4,24,MinMaxScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.8875,0.8935340727098946,,0.02580459999444429
+363459,air-quality-and-pollution-assessment,0,25,MinMaxScaler,None,RandomForest,4000,1000,ok,,0.90875,0.9185007508089734,,0.9146473000000697
+363459,air-quality-and-pollution-assessment,1,25,MinMaxScaler,None,RandomForest,4000,1000,ok,,0.920625,0.9193503759646952,,0.996442500007106
+363459,air-quality-and-pollution-assessment,2,25,MinMaxScaler,None,RandomForest,4000,1000,ok,,0.9383333333333334,0.9424197462405467,,1.1133206999948015
+363459,air-quality-and-pollution-assessment,3,25,MinMaxScaler,None,RandomForest,4000,1000,ok,,0.9304166666666667,0.9329252387510404,,0.9784963999991305
+363459,air-quality-and-pollution-assessment,4,25,MinMaxScaler,None,RandomForest,4000,1000,ok,,0.9352083333333333,0.9403079772892674,,0.969423899994581
+363459,air-quality-and-pollution-assessment,0,26,MinMaxScaler,None,SVM,4000,1000,ok,,0.8929166666666667,0.9013245567547321,,0.1784919999918202
+363459,air-quality-and-pollution-assessment,1,26,MinMaxScaler,None,SVM,4000,1000,ok,,0.91,0.9118089246600977,,0.23802839999552816
+363459,air-quality-and-pollution-assessment,2,26,MinMaxScaler,None,SVM,4000,1000,ok,,0.9195833333333333,0.9213791449980248,,0.1945731000014348
+363459,air-quality-and-pollution-assessment,3,26,MinMaxScaler,None,SVM,4000,1000,ok,,0.9204166666666667,0.9213688675550222,,0.1920869000023231
+363459,air-quality-and-pollution-assessment,4,26,MinMaxScaler,None,SVM,4000,1000,ok,,0.91875,0.926754439224951,,0.19751389999873936
+363459,air-quality-and-pollution-assessment,0,27,MinMaxScaler,None,kNN,4000,1000,ok,,0.8629166666666668,0.8776458425423955,,0.05888529999356251
+363459,air-quality-and-pollution-assessment,1,27,MinMaxScaler,None,kNN,4000,1000,ok,,0.89625,0.9084148557152834,,0.06001800000376534
+363459,air-quality-and-pollution-assessment,2,27,MinMaxScaler,None,kNN,4000,1000,ok,,0.8758333333333334,0.8893508379829513,,0.060227399997529574
+363459,air-quality-and-pollution-assessment,3,27,MinMaxScaler,None,kNN,4000,1000,ok,,0.88125,0.8909028006794254,,0.05198399999062531
+363459,air-quality-and-pollution-assessment,4,27,MinMaxScaler,None,kNN,4000,1000,ok,,0.8858333333333333,0.898088836562877,,0.05749800000921823
+363459,air-quality-and-pollution-assessment,0,28,MinMaxScaler,None,MLP,4000,1000,ok,,0.8889583333333333,0.8968763223196307,,2.7565417000005255
+363459,air-quality-and-pollution-assessment,1,28,MinMaxScaler,None,MLP,4000,1000,ok,,0.9270833333333334,0.927341207533698,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.8768180000042776
+363459,air-quality-and-pollution-assessment,2,28,MinMaxScaler,None,MLP,4000,1000,ok,,0.935,0.9318724198018383,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.239724600003683
+363459,air-quality-and-pollution-assessment,3,28,MinMaxScaler,None,MLP,4000,1000,ok,,0.92,0.913784769591891,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.9592332000029273
+363459,air-quality-and-pollution-assessment,4,28,MinMaxScaler,None,MLP,4000,1000,ok,,0.91625,0.921782740093642,,3.642632799994317
+363459,air-quality-and-pollution-assessment,0,29,MinMaxScaler,None,DecisionTree,4000,1000,ok,,0.859375,0.8681662244804451,,0.027376700003514998
+363459,air-quality-and-pollution-assessment,1,29,MinMaxScaler,None,DecisionTree,4000,1000,ok,,0.8747916666666667,0.8761586366874609,,0.030703600001288578
+363459,air-quality-and-pollution-assessment,2,29,MinMaxScaler,None,DecisionTree,4000,1000,ok,,0.8995833333333333,0.9031333199673781,,0.028742299997247756
+363459,air-quality-and-pollution-assessment,3,29,MinMaxScaler,None,DecisionTree,4000,1000,ok,,0.891875,0.8927545453637807,,0.03125430000363849
+363459,air-quality-and-pollution-assessment,4,29,MinMaxScaler,None,DecisionTree,4000,1000,ok,,0.89,0.8962789806907686,,0.028142299997853115
+363459,air-quality-and-pollution-assessment,0,30,RobustScaler,PCA,RandomForest,4000,1000,ok,,0.8583333333333334,0.8709020401521974,,0.9349053000041749
+363459,air-quality-and-pollution-assessment,1,30,RobustScaler,PCA,RandomForest,4000,1000,ok,,0.8895833333333334,0.8921112843625927,,1.0381232000072487
+363459,air-quality-and-pollution-assessment,2,30,RobustScaler,PCA,RandomForest,4000,1000,ok,,0.8747916666666666,0.8838923402357892,,0.9777081000065664
+363459,air-quality-and-pollution-assessment,3,30,RobustScaler,PCA,RandomForest,4000,1000,ok,,0.8670833333333334,0.8764402813794234,,0.9873966000013752
+363459,air-quality-and-pollution-assessment,4,30,RobustScaler,PCA,RandomForest,4000,1000,ok,,0.8966666666666667,0.9044986056205625,,1.0366297000000486
+363459,air-quality-and-pollution-assessment,0,31,RobustScaler,PCA,SVM,4000,1000,ok,,0.8831249999999999,0.8922169166941774,,0.1967175000027055
+363459,air-quality-and-pollution-assessment,1,31,RobustScaler,PCA,SVM,4000,1000,ok,,0.9112500000000001,0.914109509674042,,0.20353140000952408
+363459,air-quality-and-pollution-assessment,2,31,RobustScaler,PCA,SVM,4000,1000,ok,,0.9141666666666666,0.91661708292682,,0.2237031999975443
+363459,air-quality-and-pollution-assessment,3,31,RobustScaler,PCA,SVM,4000,1000,ok,,0.9029166666666666,0.9071695918555371,,0.21796790001098998
+363459,air-quality-and-pollution-assessment,4,31,RobustScaler,PCA,SVM,4000,1000,ok,,0.9129166666666666,0.9215242337906613,,0.25465540000004694
+363459,air-quality-and-pollution-assessment,0,32,RobustScaler,PCA,kNN,4000,1000,ok,,0.8472916666666668,0.8609769990386031,,0.043379800001275726
+363459,air-quality-and-pollution-assessment,1,32,RobustScaler,PCA,kNN,4000,1000,ok,,0.8720833333333333,0.8847482690426187,,0.045578500008559786
+363459,air-quality-and-pollution-assessment,2,32,RobustScaler,PCA,kNN,4000,1000,ok,,0.8622916666666667,0.8746945498342815,,0.04785400000400841
+363459,air-quality-and-pollution-assessment,3,32,RobustScaler,PCA,kNN,4000,1000,ok,,0.8520833333333333,0.8629256362423448,,0.045741800000541843
+363459,air-quality-and-pollution-assessment,4,32,RobustScaler,PCA,kNN,4000,1000,ok,,0.8570833333333333,0.8718244228615035,,0.05272069999773521
+363459,air-quality-and-pollution-assessment,0,33,RobustScaler,PCA,MLP,4000,1000,ok,,0.885,0.8916598749336058,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.048609799996484
+363459,air-quality-and-pollution-assessment,1,33,RobustScaler,PCA,MLP,4000,1000,ok,,0.91375,0.9158942798553515,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.256326599992462
+363459,air-quality-and-pollution-assessment,2,33,RobustScaler,PCA,MLP,4000,1000,ok,,0.9158333333333334,0.9206522190477846,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.046855599997798
+363459,air-quality-and-pollution-assessment,3,33,RobustScaler,PCA,MLP,4000,1000,ok,,0.9066666666666666,0.9078004339083496,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.0386428000056185
+363459,air-quality-and-pollution-assessment,4,33,RobustScaler,PCA,MLP,4000,1000,ok,,0.9102083333333334,0.9148576164281659,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.995606800002861
+363459,air-quality-and-pollution-assessment,0,34,RobustScaler,PCA,DecisionTree,4000,1000,ok,,0.8447916666666667,0.8545796362765264,,0.04013699998904485
+363459,air-quality-and-pollution-assessment,1,34,RobustScaler,PCA,DecisionTree,4000,1000,ok,,0.8489583333333333,0.8455411346688487,,0.04315550001047086
+363459,air-quality-and-pollution-assessment,2,34,RobustScaler,PCA,DecisionTree,4000,1000,ok,,0.8689583333333334,0.8721190441168094,,0.04135419998783618
+363459,air-quality-and-pollution-assessment,3,34,RobustScaler,PCA,DecisionTree,4000,1000,ok,,0.8400000000000001,0.8452961381431247,,0.038743100012652576
+363459,air-quality-and-pollution-assessment,4,34,RobustScaler,PCA,DecisionTree,4000,1000,ok,,0.8577083333333333,0.8675355119769048,,0.047548899994581006
+363459,air-quality-and-pollution-assessment,0,35,RobustScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9020833333333333,0.9129573224143248,,0.7240041999903042
+363459,air-quality-and-pollution-assessment,1,35,RobustScaler,SelectKBest,RandomForest,4000,1000,ok,,0.931875,0.9306051540224223,,0.7240898000018205
+363459,air-quality-and-pollution-assessment,2,35,RobustScaler,SelectKBest,RandomForest,4000,1000,ok,,0.94,0.9443574862161979,,0.7330080999963684
+363459,air-quality-and-pollution-assessment,3,35,RobustScaler,SelectKBest,RandomForest,4000,1000,ok,,0.928125,0.9296040225645295,,0.8086866999947233
+363459,air-quality-and-pollution-assessment,4,35,RobustScaler,SelectKBest,RandomForest,4000,1000,ok,,0.9381250000000001,0.9423772008803522,,0.8102552000054857
+363459,air-quality-and-pollution-assessment,0,36,RobustScaler,SelectKBest,SVM,4000,1000,ok,,0.8872916666666667,0.8970226982634489,,0.2745553000131622
+363459,air-quality-and-pollution-assessment,1,36,RobustScaler,SelectKBest,SVM,4000,1000,ok,,0.9195833333333334,0.9210682493994458,,0.27241989999311045
+363459,air-quality-and-pollution-assessment,2,36,RobustScaler,SelectKBest,SVM,4000,1000,ok,,0.9083333333333332,0.9116970556320655,,0.2013221999950474
+363459,air-quality-and-pollution-assessment,3,36,RobustScaler,SelectKBest,SVM,4000,1000,ok,,0.9041666666666667,0.9066405508072175,,0.23650759999873117
+363459,air-quality-and-pollution-assessment,4,36,RobustScaler,SelectKBest,SVM,4000,1000,ok,,0.9179166666666667,0.92577353375763,,0.22304899999289773
+363459,air-quality-and-pollution-assessment,0,37,RobustScaler,SelectKBest,kNN,4000,1000,ok,,0.8481249999999999,0.8620273249444325,,0.051049300003796816
+363459,air-quality-and-pollution-assessment,1,37,RobustScaler,SelectKBest,kNN,4000,1000,ok,,0.8822916666666667,0.8937873864162509,,0.05485390000103507
+363459,air-quality-and-pollution-assessment,2,37,RobustScaler,SelectKBest,kNN,4000,1000,ok,,0.8727083333333334,0.8858239950511608,,0.04829579999204725
+363459,air-quality-and-pollution-assessment,3,37,RobustScaler,SelectKBest,kNN,4000,1000,ok,,0.8504166666666666,0.8636317308393243,,0.05220320000080392
+363459,air-quality-and-pollution-assessment,4,37,RobustScaler,SelectKBest,kNN,4000,1000,ok,,0.8745833333333334,0.8907810422821092,,0.04864890000317246
+363459,air-quality-and-pollution-assessment,0,38,RobustScaler,SelectKBest,MLP,4000,1000,ok,,0.8916666666666667,0.8994901276337106,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.763284600005136
+363459,air-quality-and-pollution-assessment,1,38,RobustScaler,SelectKBest,MLP,4000,1000,ok,,0.9125,0.9173375592493173,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.188855000000331
+363459,air-quality-and-pollution-assessment,2,38,RobustScaler,SelectKBest,MLP,4000,1000,ok,,0.9233333333333333,0.9265617581288772,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.945999200004735
+363459,air-quality-and-pollution-assessment,3,38,RobustScaler,SelectKBest,MLP,4000,1000,ok,,0.9133333333333333,0.9159677794972096,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.206464100003359
+363459,air-quality-and-pollution-assessment,4,38,RobustScaler,SelectKBest,MLP,4000,1000,ok,,0.9314583333333333,0.9345821629033514,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.90444079998997
+363459,air-quality-and-pollution-assessment,0,39,RobustScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.856875,0.8659294763249042,,0.026805700006661937
+363459,air-quality-and-pollution-assessment,1,39,RobustScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.8802083333333334,0.8823889208001081,,0.03309530000842642
+363459,air-quality-and-pollution-assessment,2,39,RobustScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.9027083333333333,0.9074158862305818,,0.02546779999102
+363459,air-quality-and-pollution-assessment,3,39,RobustScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.8997916666666667,0.9032875835059542,,0.02309360000072047
+363459,air-quality-and-pollution-assessment,4,39,RobustScaler,SelectKBest,DecisionTree,4000,1000,ok,,0.8875,0.8935340727098946,,0.02964970000903122
+363459,air-quality-and-pollution-assessment,0,40,RobustScaler,None,RandomForest,4000,1000,ok,,0.9049999999999999,0.9152605111544188,,0.8787826999905519
+363459,air-quality-and-pollution-assessment,1,40,RobustScaler,None,RandomForest,4000,1000,ok,,0.921875,0.9211174571448141,,0.8763709000049857
+363459,air-quality-and-pollution-assessment,2,40,RobustScaler,None,RandomForest,4000,1000,ok,,0.9383333333333334,0.9424197462405467,,1.0712354999996023
+363459,air-quality-and-pollution-assessment,3,40,RobustScaler,None,RandomForest,4000,1000,ok,,0.9341666666666667,0.9360006025244835,,0.894668000008096
+363459,air-quality-and-pollution-assessment,4,40,RobustScaler,None,RandomForest,4000,1000,ok,,0.9360416666666667,0.9413074577861164,,1.0556038999930024
+363459,air-quality-and-pollution-assessment,0,41,RobustScaler,None,SVM,4000,1000,ok,,0.888125,0.8980022836975283,,0.20520890000625513
+363459,air-quality-and-pollution-assessment,1,41,RobustScaler,None,SVM,4000,1000,ok,,0.9137500000000001,0.9165447899418259,,0.23188370000571012
+363459,air-quality-and-pollution-assessment,2,41,RobustScaler,None,SVM,4000,1000,ok,,0.9179166666666666,0.9204474766816527,,0.23072140000294894
+363459,air-quality-and-pollution-assessment,3,41,RobustScaler,None,SVM,4000,1000,ok,,0.9141666666666667,0.9162649707605147,,0.2649663999909535
+363459,air-quality-and-pollution-assessment,4,41,RobustScaler,None,SVM,4000,1000,ok,,0.9166666666666666,0.9239167379400208,,0.4540279000066221
+363459,air-quality-and-pollution-assessment,0,42,RobustScaler,None,kNN,4000,1000,ok,,0.8468749999999999,0.8613815394162935,,0.05956970000988804
+363459,air-quality-and-pollution-assessment,1,42,RobustScaler,None,kNN,4000,1000,ok,,0.8683333333333334,0.8807168025703972,,0.06307639999431558
+363459,air-quality-and-pollution-assessment,2,42,RobustScaler,None,kNN,4000,1000,ok,,0.858125,0.8710621843503031,,0.05560400000831578
+363459,air-quality-and-pollution-assessment,3,42,RobustScaler,None,kNN,4000,1000,ok,,0.8533333333333334,0.8666316581801744,,0.05574130000604782
+363459,air-quality-and-pollution-assessment,4,42,RobustScaler,None,kNN,4000,1000,ok,,0.8525,0.8684450306355109,,0.04973220000101719
+363459,air-quality-and-pollution-assessment,0,43,RobustScaler,None,MLP,4000,1000,ok,,0.8883333333333333,0.8978853669402241,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.972162499994738
+363459,air-quality-and-pollution-assessment,1,43,RobustScaler,None,MLP,4000,1000,ok,,0.9129166666666667,0.9153824493967992,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.170709400001215
+363459,air-quality-and-pollution-assessment,2,43,RobustScaler,None,MLP,4000,1000,ok,,0.9177083333333333,0.9175029612637062,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.426124299992807
+363459,air-quality-and-pollution-assessment,3,43,RobustScaler,None,MLP,4000,1000,ok,,0.9187500000000001,0.9158948858361042,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.333857400008128
+363459,air-quality-and-pollution-assessment,4,43,RobustScaler,None,MLP,4000,1000,ok,,0.9114583333333334,0.9200757387754069,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,3.7738077999965753
+363459,air-quality-and-pollution-assessment,0,44,RobustScaler,None,DecisionTree,4000,1000,ok,,0.859375,0.8681662244804451,,0.029336799998418428
+363459,air-quality-and-pollution-assessment,1,44,RobustScaler,None,DecisionTree,4000,1000,ok,,0.8747916666666667,0.8761586366874609,,0.028203499998198822
+363459,air-quality-and-pollution-assessment,2,44,RobustScaler,None,DecisionTree,4000,1000,ok,,0.8995833333333333,0.9031333199673781,,0.03049089999694843
+363459,air-quality-and-pollution-assessment,3,44,RobustScaler,None,DecisionTree,4000,1000,ok,,0.891875,0.8927545453637807,,0.032384299993282184
+363459,air-quality-and-pollution-assessment,4,44,RobustScaler,None,DecisionTree,4000,1000,ok,,0.89,0.8962789806907686,,0.03027950000250712
+363459,air-quality-and-pollution-assessment,0,45,None,PCA,RandomForest,4000,1000,ok,,0.7891666666666667,0.8039651201661613,,1.1154716000019107
+363459,air-quality-and-pollution-assessment,1,45,None,PCA,RandomForest,4000,1000,ok,,0.8064583333333333,0.8202233565723616,,1.0279070999968098
+363459,air-quality-and-pollution-assessment,2,45,None,PCA,RandomForest,4000,1000,ok,,0.8045833333333334,0.8161297755521877,,1.2306384999974398
+363459,air-quality-and-pollution-assessment,3,45,None,PCA,RandomForest,4000,1000,ok,,0.7802083333333333,0.7918588873121688,,1.1946664999995846
+363459,air-quality-and-pollution-assessment,4,45,None,PCA,RandomForest,4000,1000,ok,,0.815,0.8298523546670229,,1.0982511000038357
+363459,air-quality-and-pollution-assessment,0,46,None,PCA,SVM,4000,1000,ok,,0.786875,0.8053833826820946,,0.5467102000111481
+363459,air-quality-and-pollution-assessment,1,46,None,PCA,SVM,4000,1000,ok,,0.8133333333333334,0.8318022294780837,,0.5965878999995766
+363459,air-quality-and-pollution-assessment,2,46,None,PCA,SVM,4000,1000,ok,,0.815,0.8299842061390008,,0.5766028999933042
+363459,air-quality-and-pollution-assessment,3,46,None,PCA,SVM,4000,1000,ok,,0.7985416666666667,0.8120259788487774,,0.588239100005012
+363459,air-quality-and-pollution-assessment,4,46,None,PCA,SVM,4000,1000,ok,,0.8229166666666666,0.8410811836068428,,0.6487288000062108
+363459,air-quality-and-pollution-assessment,0,47,None,PCA,kNN,4000,1000,ok,,0.7164583333333334,0.7317152246296859,,0.022884799996973015
+363459,air-quality-and-pollution-assessment,1,47,None,PCA,kNN,4000,1000,ok,,0.7266666666666666,0.742443252133534,,0.026141399997868575
+363459,air-quality-and-pollution-assessment,2,47,None,PCA,kNN,4000,1000,ok,,0.733125,0.7460257795384292,,0.024267399989184923
+363459,air-quality-and-pollution-assessment,3,47,None,PCA,kNN,4000,1000,ok,,0.7052083333333334,0.71262431164473,,0.027647900002193637
+363459,air-quality-and-pollution-assessment,4,47,None,PCA,kNN,4000,1000,ok,,0.730625,0.7441157128001297,,0.02736449999792967
+363459,air-quality-and-pollution-assessment,0,48,None,PCA,MLP,4000,1000,ok,,0.8400000000000001,0.8402033715583457,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.3109997999999905
+363459,air-quality-and-pollution-assessment,1,48,None,PCA,MLP,4000,1000,ok,,0.8383333333333333,0.8425456273482079,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.066366400002153
+363459,air-quality-and-pollution-assessment,2,48,None,PCA,MLP,4000,1000,ok,,0.8308333333333333,0.7977044652927677,,3.1438596000079997
+363459,air-quality-and-pollution-assessment,3,48,None,PCA,MLP,4000,1000,ok,,0.841875,0.8389829974345221,,3.8217911000101594
+363459,air-quality-and-pollution-assessment,4,48,None,PCA,MLP,4000,1000,ok,,0.8716666666666666,0.8701463048406075,,2.960270900002797
+363459,air-quality-and-pollution-assessment,0,49,None,PCA,DecisionTree,4000,1000,ok,,0.7104166666666667,0.7220316573836887,,0.04830249999940861
+363459,air-quality-and-pollution-assessment,1,49,None,PCA,DecisionTree,4000,1000,ok,,0.6981249999999999,0.7025299264834732,,0.045794400008162484
+363459,air-quality-and-pollution-assessment,2,49,None,PCA,DecisionTree,4000,1000,ok,,0.71625,0.7203368396647717,,0.0500847000075737
+363459,air-quality-and-pollution-assessment,3,49,None,PCA,DecisionTree,4000,1000,ok,,0.7079166666666666,0.7096826292384576,,0.049170099999173544
+363459,air-quality-and-pollution-assessment,4,49,None,PCA,DecisionTree,4000,1000,ok,,0.7460416666666667,0.7509185392269351,,0.058201000007102266
+363459,air-quality-and-pollution-assessment,0,50,None,SelectKBest,RandomForest,4000,1000,ok,,0.9020833333333333,0.9129573224143248,,0.7437185000017053
+363459,air-quality-and-pollution-assessment,1,50,None,SelectKBest,RandomForest,4000,1000,ok,,0.9310416666666668,0.9296164410451251,,0.9504678000084823
+363459,air-quality-and-pollution-assessment,2,50,None,SelectKBest,RandomForest,4000,1000,ok,,0.93875,0.9425072760203901,,0.8652719000092475
+363459,air-quality-and-pollution-assessment,3,50,None,SelectKBest,RandomForest,4000,1000,ok,,0.9262499999999999,0.9283203677510609,,0.7375113000016427
+363459,air-quality-and-pollution-assessment,4,50,None,SelectKBest,RandomForest,4000,1000,ok,,0.9381250000000001,0.9423772008803522,,0.7233097999996971
+363459,air-quality-and-pollution-assessment,0,51,None,SelectKBest,SVM,4000,1000,ok,,0.6558333333333334,0.6778550713764343,,0.8060468999901786
+363459,air-quality-and-pollution-assessment,1,51,None,SelectKBest,SVM,4000,1000,ok,,0.6797916666666667,0.7036642520808809,,0.8384331999986898
+363459,air-quality-and-pollution-assessment,2,51,None,SelectKBest,SVM,4000,1000,ok,,0.67125,0.6899060621637366,,0.7734445999958552
+363459,air-quality-and-pollution-assessment,3,51,None,SelectKBest,SVM,4000,1000,ok,,0.6391666666666667,0.6544113419089881,,0.7992952000058722
+363459,air-quality-and-pollution-assessment,4,51,None,SelectKBest,SVM,4000,1000,ok,,0.6458333333333334,0.6670211893126874,,0.7665877999970689
+363459,air-quality-and-pollution-assessment,0,52,None,SelectKBest,kNN,4000,1000,ok,,0.7072916666666667,0.7210714043292418,,0.024554699994041584
+363459,air-quality-and-pollution-assessment,1,52,None,SelectKBest,kNN,4000,1000,ok,,0.7270833333333334,0.739816302005611,,0.026214299999992363
+363459,air-quality-and-pollution-assessment,2,52,None,SelectKBest,kNN,4000,1000,ok,,0.740625,0.7500279321010404,,0.028156400003354065
+363459,air-quality-and-pollution-assessment,3,52,None,SelectKBest,kNN,4000,1000,ok,,0.7197916666666667,0.7300047613852637,,0.024507800000719726
+363459,air-quality-and-pollution-assessment,4,52,None,SelectKBest,kNN,4000,1000,ok,,0.7260416666666667,0.7391108250269234,,0.022479900013422593
+363459,air-quality-and-pollution-assessment,0,53,None,SelectKBest,MLP,4000,1000,ok,,0.7029166666666666,0.7082967988746139,,1.3749519999983022
+363459,air-quality-and-pollution-assessment,1,53,None,SelectKBest,MLP,4000,1000,ok,,0.6695833333333333,0.648499231364521,,1.4388166999997338
+363459,air-quality-and-pollution-assessment,2,53,None,SelectKBest,MLP,4000,1000,ok,,0.7845833333333333,0.7734155079919338,,1.7742580999911297
+363459,air-quality-and-pollution-assessment,3,53,None,SelectKBest,MLP,4000,1000,ok,,0.7625,0.7309063922478072,,1.8981099000084214
+363459,air-quality-and-pollution-assessment,4,53,None,SelectKBest,MLP,4000,1000,ok,,0.655625,0.6299366635769658,,1.7136814999976195
+363459,air-quality-and-pollution-assessment,0,54,None,SelectKBest,DecisionTree,4000,1000,ok,,0.856875,0.8659294763249042,,0.029010500002186745
+363459,air-quality-and-pollution-assessment,1,54,None,SelectKBest,DecisionTree,4000,1000,ok,,0.8802083333333334,0.8823889208001081,,0.029752600006759167
+363459,air-quality-and-pollution-assessment,2,54,None,SelectKBest,DecisionTree,4000,1000,ok,,0.9027083333333333,0.9074158862305818,,0.02754389999608975
+363459,air-quality-and-pollution-assessment,3,54,None,SelectKBest,DecisionTree,4000,1000,ok,,0.8997916666666667,0.9032875835059542,,0.023598500003572553
+363459,air-quality-and-pollution-assessment,4,54,None,SelectKBest,DecisionTree,4000,1000,ok,,0.888125,0.8942241723767066,,0.027932099997997284
+363459,air-quality-and-pollution-assessment,0,55,None,None,RandomForest,4000,1000,ok,,0.9049999999999999,0.9152605111544188,,0.9046356000035303
+363459,air-quality-and-pollution-assessment,1,55,None,None,RandomForest,4000,1000,ok,,0.921875,0.9211174571448141,,0.8829887000028975
+363459,air-quality-and-pollution-assessment,2,55,None,None,RandomForest,4000,1000,ok,,0.9383333333333334,0.9424197462405467,,0.9797633999987738
+363459,air-quality-and-pollution-assessment,3,55,None,None,RandomForest,4000,1000,ok,,0.9329166666666666,0.9342058181865436,,0.8743786999984877
+363459,air-quality-and-pollution-assessment,4,55,None,None,RandomForest,4000,1000,ok,,0.9360416666666667,0.9413074577861164,,0.9357439000013983
+363459,air-quality-and-pollution-assessment,0,56,None,None,SVM,4000,1000,ok,,0.6572916666666667,0.6794732097825075,,0.8831656999973347
+363459,air-quality-and-pollution-assessment,1,56,None,None,SVM,4000,1000,ok,,0.6814583333333333,0.7058116567398514,,0.8279504999954952
+363459,air-quality-and-pollution-assessment,2,56,None,None,SVM,4000,1000,ok,,0.6708333333333334,0.689197860996599,,1.0601819999865256
+363459,air-quality-and-pollution-assessment,3,56,None,None,SVM,4000,1000,ok,,0.6387499999999999,0.653198301156426,,0.9211183000006713
+363459,air-quality-and-pollution-assessment,4,56,None,None,SVM,4000,1000,ok,,0.6499999999999999,0.6717005566995996,,0.9527470999892103
+363459,air-quality-and-pollution-assessment,0,57,None,None,kNN,4000,1000,ok,,0.7172916666666667,0.7326293789886658,,0.0269512999948347
+363459,air-quality-and-pollution-assessment,1,57,None,None,kNN,4000,1000,ok,,0.7279166666666667,0.744276375165142,,0.03237880000961013
+363459,air-quality-and-pollution-assessment,2,57,None,None,kNN,4000,1000,ok,,0.733125,0.7460257795384292,,0.02891809999709949
+363459,air-quality-and-pollution-assessment,3,57,None,None,kNN,4000,1000,ok,,0.7077083333333334,0.7149162914999829,,0.029911100005847402
+363459,air-quality-and-pollution-assessment,4,57,None,None,kNN,4000,1000,ok,,0.730625,0.7441157128001297,,0.029436800003168173
+363459,air-quality-and-pollution-assessment,0,58,None,None,MLP,4000,1000,ok,,0.6945833333333333,0.6939858835430306,,1.2854712999978801
+363459,air-quality-and-pollution-assessment,1,58,None,None,MLP,4000,1000,ok,,0.5689583333333333,0.5507513336734686,,0.8328809999948135
+363459,air-quality-and-pollution-assessment,2,58,None,None,MLP,4000,1000,ok,,0.76875,0.776403045151605,,1.7721368000056827
+363459,air-quality-and-pollution-assessment,3,58,None,None,MLP,4000,1000,ok,,0.7166666666666666,0.641166606317891,,1.035615200002212
+363459,air-quality-and-pollution-assessment,4,58,None,None,MLP,4000,1000,ok,,0.7410416666666666,0.7129556192688767,,1.0804076000058558
+363459,air-quality-and-pollution-assessment,0,59,None,None,DecisionTree,4000,1000,ok,,0.859375,0.8681662244804451,,0.030062600009841844
+363459,air-quality-and-pollution-assessment,1,59,None,None,DecisionTree,4000,1000,ok,,0.8747916666666667,0.8761586366874609,,0.0300248000130523
+363459,air-quality-and-pollution-assessment,2,59,None,None,DecisionTree,4000,1000,ok,,0.8995833333333333,0.9031333199673781,,0.028831599993281998
+363459,air-quality-and-pollution-assessment,3,59,None,None,DecisionTree,4000,1000,ok,,0.891875,0.8927545453637807,,0.0279148000117857
+363459,air-quality-and-pollution-assessment,4,59,None,None,DecisionTree,4000,1000,ok,,0.890625,0.8969678660696617,,0.03023340000072494

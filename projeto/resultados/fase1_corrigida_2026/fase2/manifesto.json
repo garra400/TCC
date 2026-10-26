@@ -1,0 +1,61 @@
+{
+  "config": {
+    "seed": 42,
+    "outer_folds": 5,
+    "inner_folds": 4,
+    "k_values": [
+      1,
+      3,
+      5,
+      7,
+      10
+    ],
+    "rf_estimators": 200,
+    "rf_min_samples_leaf": 2,
+    "bootstrap_samples": 2000,
+    "primary_metric": "kendall_ponderado",
+    "grouping": "nome_dataset_or_identical_processed_features",
+    "pilot_tasks": [
+      11,
+      15,
+      37,
+      4538,
+      9914,
+      361198
+    ],
+    "pilot_classifiers": {
+      "DecisionTree": {
+        "max_depth": [
+          5,
+          10,
+          null
+        ]
+      },
+      "kNN": {
+        "n_neighbors": [
+          3,
+          5,
+          11
+        ]
+      }
+    }
+  },
+  "code_sha256": "1e1182b785e3c6750b80d83914f10778558d27e73b03ee738406cccabbeac976",
+  "evaluation_code_sha256": "c992e6574032ee68562e300f8fb5cb39100bc464bd4835ffa2e0312aae934712",
+  "phase1_manifest_sha256": "1ddec4eaff826b2400eafecccac8886f8de8a9b5dcbba2922e0ce8238bc25171",
+  "reference_input_sha256": {
+    "X_emb.npy": "fadfbdeb206373d701b9b2b115cd92a84794f29b9adec1860a08ae134b12b830",
+    "Y_accuracy.npy": "6af1959d04d84655363b09e88999eddc173492b85bb3517db4b6bbacf42a4599",
+    "task_ids.npy": "1cd70c6478dde8fdf65180a85ac39509589dc4139ddf92cf5ed9a5c83fb68fda"
+  },
+  "n_tasks": 193,
+  "n_groups": 165,
+  "conditions": [
+    "historico_mesmos_folds",
+    "novos_escores_vetor_historico",
+    "reconstrucao_completa"
+  ],
+  "comparison_input_dtype": "float32 for vectors and scores in all three conditions; float64 source scores retained",
+  "same_outer_splits": true,
+  "caveat": "Retrospective grouped CV; bootstrap intervals descriptive."
+}

@@ -1,25 +1,23 @@
 \chapter{Conclusão}\label{cap:conclusoeseperspectivas}
 
-Este trabalho desenvolveu e avaliou uma infraestrutura de meta-aprendizado para ranquear pipelines de classificação com descritores estatísticos de conjuntos rotulados. A auditoria e a separação de tarefas relacionadas reformularam a interpretação dos resultados históricos.
+Este trabalho desenvolveu e avaliou uma infraestrutura de meta-aprendizado para ranquear pipelines de classificação com descritores estatísticos de conjuntos rotulados. A auditoria das tarefas e a reconstrução da Fase 1 permitiram revisar resultados e conclusões com maior controle experimental.
 
 \section{Síntese dos Resultados}\label{sec:sintese-conclusao}
 
-O acervo histórico contém 201 tarefas e 60 pipelines, com 172 escores ausentes. A auditoria identificou 186 nomes e 172 grupos conservadores. O requisito de cinco exemplos por classe delimitou a avaliação principal a 193 tarefas em 165 grupos. A tarefa anteriormente apresentada como holdout pertencia ao acervo e foi retirada como evidência de generalização independente.
+O acervo histórico continha 201 tarefas. Os critérios de qualidade delimitaram 193 tarefas em 165 grupos, sobre as quais foram executados 57900 ajustes dos 60 pipelines em cinco folds. Todas as etapas ajustáveis de pré-processamento usaram somente treino, e a SVM recebeu as mesmas amostras dos demais classificadores. Os avisos e as falhas foram documentados, sem substituir escores ausentes por resultados de teste.
 
-Em cinco partições externas por grupos, com ajuste interno de k, o Kendall ponderado médio por grupo foi $0{,}3995$ para k-NN, $0{,}4309$ para Random Forest multi-saída e $0{,}3690$ para média global. A diferença pareada Random Forest menos k-NN foi $0{,}0314$, com intervalo descritivo de 95\% $[0{,}0073;0{,}0564]$. A comparação entre k-NN e média global permaneceu inconclusiva pelo intervalo adotado. Os dados sugerem vantagem de Random Forest neste benchmark, sem estabelecer superioridade geral do metamodelo ou da representação.
+Na avaliação principal, o Kendall ponderado médio por grupo foi $0{,}4280$ para k-NN, $0{,}4768$ para Random Forest e $0{,}4011$ para média global. A diferença Random Forest menos k-NN foi $0{,}0515$, com intervalo descritivo $[0{,}0255;0{,}0771]$. O intervalo descritivo sugere vantagem do Random Forest sobre o k-NN neste acervo. O diagnóstico encontrou 13 tarefas com Kendall ponderado não positivo e 16 com correlação indefinida.
 
-Foram encontradas 17 tarefas com Kendall ponderado não positivo e uma com correlação indefinida. A associação com número de atributos permaneceu após correção para cinco comparações; desbalanceamento e distância ao treino não explicaram isoladamente a instabilidade. Essas associações não demonstram causalidade.
+A comparação com escores históricos usou as mesmas tarefas e partições, distinguindo a reconstrução de escores da recomputação da representação. Os valores de LOO por tarefa divulgados inicialmente não constituem uma comparação direta com a validação revisada por grupos. A melhoria do protocolo deve ser distinguida de qualquer alteração numérica de desempenho.
+
+Na comparação pareada com a referência revisada, a mudança de Kendall ponderado foi $-0{,}0093$ para k-NN e $0{,}0059$ para Random Forest. O intervalo da mudança do k-NN ajustado abrange zero. O intervalo da mudança do Random Forest abrange zero. A elevação das médias gerais, calculadas sobre suportes diferentes, não estabelece melhoria geral da predição.
 
 \section{Atendimento dos Objetivos}\label{sec:objetivosAtendidos}
 
-O primeiro objetivo foi atendido pela construção e disponibilização de matrizes, configurações e escores para investigar relações entre características dos dados e desempenho. A auditoria mostrou que parte das tarefas não atendia ao protocolo declarado; sua exclusão documentada integra o resultado científico.
-
-O segundo objetivo foi atendido pela implementação de preditores de ranking e sua comparação com baselines sob grupos separados. O ganho depende do comparador e da métrica. O piloto de hiperparâmetros em dados brutos, com 180 avaliações, demonstrou a viabilidade técnica de ampliar as configurações, mantendo essa evidência separada da matriz histórica.
+O primeiro objetivo foi atendido pela construção e reconstrução auditável do meta-conjunto, com dados, configurações, escores e falhas rastreáveis. O segundo foi atendido pela implementação e avaliação de preditores de ranking com ajuste interno e grupos externos separados. O ganho depende da métrica e do comparador; não se conclui adequação uniforme para todos os problemas.
 
 \section{Limitações e Perspectivas}\label{sec:limitacoes}
 
-A representação determinística permite auditoria: são 55 descritores, nove zeros e normalização L2. As correlações com alvos multiclasses codificados dependem de uma ordenação nominal arbitrária, e o método requer rótulos do problema de entrada. Comparar dois metamodelos com o mesmo vetor não isola o ganho da representação.
+A representação determinística exige rótulos na consulta e usa codificações nominais que limitam a interpretação de algumas correlações. A avaliação continua retrospectiva, os grupos podem não identificar todas as versões relacionadas, os hiperparâmetros dos classificadores e do Random Forest meta foram mantidos fixos e o orçamento de MLP pode produzir avisos de convergência. Os intervalos de bootstrap são descritivos devido à sobreposição dos treinos.
 
-A Fase 1 histórica mantém imputação antes da CV e subamostragem global exclusiva da SVM. O piloto novo usa tratamento dentro dos folds, mas não substitui a reconstrução de toda a matriz. Os grupos não garantem independência entre todas as versões dos dados; a avaliação é retrospectiva, Random Forest não foi otimizado e os intervalos de bootstrap são descritivos devido à sobreposição de treinos.
-
-Os próximos passos científicos são: (i) reconstruir o benchmark com dados brutos e pré-processamento dentro dos folds; (ii) avaliar o arsenal expandido sob o mesmo protocolo; (iii) comparar representações estatísticas e neurais com recursos equivalentes; e (iv) validar em conjuntos externos coletados após o desenvolvimento. Isso permitirá distinguir os efeitos da representação, do metamodelo e do espaço de pipelines.
+A reconstrução integral da Fase 1 foi concluída nesta etapa; deixa de ser uma pendência do trabalho. As próximas etapas são ampliar o arsenal de hiperparâmetros, comparar representações sob o mesmo protocolo, avaliar orçamento e convergência e validar em dados externos coletados após o desenvolvimento. O piloto anterior de hiperparâmetros permanece uma análise exploratória separada.

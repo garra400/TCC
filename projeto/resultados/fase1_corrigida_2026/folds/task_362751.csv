@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,0,StandardScaler,PCA,RandomForest,1552,389,ok,,0.7545543029095662,0.7812301397805653,,0.7130174999911105
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,0,StandardScaler,PCA,RandomForest,1553,388,ok,,0.7207945401014361,0.7476375963218069,,0.674596400000155
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,0,StandardScaler,PCA,RandomForest,1553,388,ok,,0.723961992805744,0.7517331672953461,,0.8534365000086837
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,0,StandardScaler,PCA,RandomForest,1553,388,ok,,0.7687525075751666,0.7793761275894916,,0.6262798999960069
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,0,StandardScaler,PCA,RandomForest,1553,388,ok,,0.7403825384512991,0.7693827631839005,,0.6813438000099268
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,1,StandardScaler,PCA,SVM,1552,389,ok,,0.7262843881264934,0.7624159735957275,,0.19045739999273792
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,1,StandardScaler,PCA,SVM,1553,388,ok,,0.7342907427330237,0.7555398298466863,,0.1394646999979159
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,1,StandardScaler,PCA,SVM,1553,388,ok,,0.7259237421583586,0.7425432643161284,,0.1460934999922756
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,1,StandardScaler,PCA,SVM,1553,388,ok,,0.7666284133230901,0.7795229415530167,,0.14353709999704733
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,1,StandardScaler,PCA,SVM,1553,388,ok,,0.7158174812673964,0.7349293480310957,,0.127408700005617
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,2,StandardScaler,PCA,kNN,1552,389,ok,,0.7460706204127255,0.7518041331622184,,0.017573999997694045
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,2,StandardScaler,PCA,kNN,1553,388,ok,,0.7506035810963242,0.7454079799413854,,0.018999699997948483
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,2,StandardScaler,PCA,kNN,1553,388,ok,,0.7325992687425654,0.730356942192652,,0.01826680000522174
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,2,StandardScaler,PCA,kNN,1553,388,ok,,0.755067082309136,0.7458556154828312,,0.026527100009843707
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,2,StandardScaler,PCA,kNN,1553,388,ok,,0.7462703483713671,0.7358169346452337,,0.020192399999359623
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,3,StandardScaler,PCA,MLP,1552,389,ok,,0.7785478653899707,0.7737334914272412,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7800003000011202
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,3,StandardScaler,PCA,MLP,1553,388,ok,,0.7719481094453039,0.7803566210089468,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6611154999991413
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,3,StandardScaler,PCA,MLP,1553,388,ok,,0.7700831543133193,0.7589652104138652,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.12919389999297
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,3,StandardScaler,PCA,MLP,1553,388,ok,,0.7984718873097051,0.7849705734819538,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.4363088000100106
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,3,StandardScaler,PCA,MLP,1553,388,ok,,0.7688713435530073,0.766796089747194,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8639354000042658
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,4,StandardScaler,PCA,DecisionTree,1552,389,ok,,0.6702983054956739,0.6924127007957287,,0.02677609999955166
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,4,StandardScaler,PCA,DecisionTree,1553,388,ok,,0.650830743346314,0.6680089738600935,,0.027038199987146072
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,4,StandardScaler,PCA,DecisionTree,1553,388,ok,,0.6437515892192697,0.6682888745471505,,0.02237789999344386
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,4,StandardScaler,PCA,DecisionTree,1553,388,ok,,0.6357835335977021,0.6286909542861066,,0.026308699991204776
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,4,StandardScaler,PCA,DecisionTree,1553,388,ok,,0.6225038017695065,0.6541258005269076,,0.023901399996248074
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,5,StandardScaler,SelectKBest,RandomForest,1552,389,ok,,0.5956018761939814,0.612751768166625,,0.6199949000001652
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,5,StandardScaler,SelectKBest,RandomForest,1553,388,ok,,0.61564970597697,0.6283125186316424,,0.5932343000022229
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,5,StandardScaler,SelectKBest,RandomForest,1553,388,ok,,0.6019366961110312,0.6284102731564811,,0.6484952999890083
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,5,StandardScaler,SelectKBest,RandomForest,1553,388,ok,,0.5885699076473967,0.5995507246972526,,0.6664956999884453
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,5,StandardScaler,SelectKBest,RandomForest,1553,388,ok,,0.5841659810038417,0.5885635411498628,,0.5166533000010531
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,6,StandardScaler,SelectKBest,SVM,1552,389,ok,,0.46156764775185827,0.4574150370822614,,0.15397830000438262
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,6,StandardScaler,SelectKBest,SVM,1553,388,ok,,0.4677759829445013,0.4607318796554349,,0.15884389998973347
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,6,StandardScaler,SelectKBest,SVM,1553,388,ok,,0.4601807506270155,0.45136473913954195,,0.16821290001098532
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,6,StandardScaler,SelectKBest,SVM,1553,388,ok,,0.48754529384769746,0.478374873322193,,0.22106179999536835
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,6,StandardScaler,SelectKBest,SVM,1553,388,ok,,0.46721263629158366,0.4510989600173661,,0.14316609999514185
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,7,StandardScaler,SelectKBest,kNN,1552,389,ok,,0.5946872815293868,0.6016205587634158,,0.014953799996874295
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,7,StandardScaler,SelectKBest,kNN,1553,388,ok,,0.5769459448573279,0.5929850130831152,,0.01510349998716265
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,7,StandardScaler,SelectKBest,kNN,1553,388,ok,,0.5935923863543753,0.6053306435604763,,0.017048900001100264
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,7,StandardScaler,SelectKBest,kNN,1553,388,ok,,0.5316443903297675,0.5333280088156506,,0.0229611999966437
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,7,StandardScaler,SelectKBest,kNN,1553,388,ok,,0.5719010772915697,0.5748407337601884,,0.014535800000885502
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,8,StandardScaler,SelectKBest,MLP,1552,389,ok,,0.5911305069199806,0.6132838527901098,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.94682909999392
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,8,StandardScaler,SelectKBest,MLP,1553,388,ok,,0.5980921111903886,0.6052738791951812,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7369941999932053
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,8,StandardScaler,SelectKBest,MLP,1553,388,ok,,0.5859880797598226,0.6261128192964052,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.5180721999931848
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,8,StandardScaler,SelectKBest,MLP,1553,388,ok,,0.5687090939358245,0.5700494769312165,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8103189999965252
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,8,StandardScaler,SelectKBest,MLP,1553,388,ok,,0.599643052508078,0.618561169407034,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8522767999966163
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,9,StandardScaler,SelectKBest,DecisionTree,1552,389,ok,,0.6411617743854585,0.6379612868452006,,0.0173233999958029
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,9,StandardScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5935697146969263,0.6036533384302168,,0.017353500006720424
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,9,StandardScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5646958518690087,0.5713023548416195,,0.01828360000217799
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,9,StandardScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5609490421422636,0.5717662465340808,,0.01729469999554567
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,9,StandardScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5718780433551232,0.5715014121807739,,0.019388600005186163
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,10,StandardScaler,None,RandomForest,1552,389,ok,,0.7462310593889542,0.7788658156839833,,0.7185420000023441
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,10,StandardScaler,None,RandomForest,1553,388,ok,,0.7780820761535141,0.8005336371556802,,0.7003738999919733
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,10,StandardScaler,None,RandomForest,1553,388,ok,,0.7816480893190859,0.800779122574009,,0.8425051000085659
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,10,StandardScaler,None,RandomForest,1553,388,ok,,0.7822236855200286,0.7976822389602903,,0.8404892000107793
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,10,StandardScaler,None,RandomForest,1553,388,ok,,0.7700059608378792,0.7866957779613822,,0.7403249999915715
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,11,StandardScaler,None,SVM,1552,389,ok,,0.72907488466699,0.7620318452896208,,0.17149809999682475
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,11,StandardScaler,None,SVM,1553,388,ok,,0.7311932494303066,0.7526389987925572,,0.16101640000124462
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,11,StandardScaler,None,SVM,1553,388,ok,,0.7547129009062761,0.7608955956922647,,0.16876570000022184
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,11,StandardScaler,None,SVM,1553,388,ok,,0.7589789269255647,0.7759124730199937,,0.1856502000009641
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,11,StandardScaler,None,SVM,1553,388,ok,,0.7471834130153315,0.7612450390142076,,0.16312310000648722
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,12,StandardScaler,None,kNN,1552,389,ok,,0.769078326644116,0.7679512905325296,,0.014494199989712797
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,12,StandardScaler,None,kNN,1553,388,ok,,0.7217790643238592,0.7206572163258833,,0.014819600008195266
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,12,StandardScaler,None,kNN,1553,388,ok,,0.7403179591252386,0.7327592812575288,,0.012695299999904819
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,12,StandardScaler,None,kNN,1553,388,ok,,0.7730303255543342,0.7550626725593342,,0.01570569998875726
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,12,StandardScaler,None,kNN,1553,388,ok,,0.7390712145805525,0.7345452019534369,,0.014759700003196485
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,13,StandardScaler,None,MLP,1552,389,ok,,0.8032932223721697,0.802524842159721,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.786015799996676
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,13,StandardScaler,None,MLP,1553,388,ok,,0.7377481618436149,0.7464606829077838,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.1132880999939516
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,13,StandardScaler,None,MLP,1553,388,ok,,0.7738498696782934,0.7618416785467476,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,4.574140899989288
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,13,StandardScaler,None,MLP,1553,388,ok,,0.7941068079446258,0.7860126946918999,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.050976599988644
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,13,StandardScaler,None,MLP,1553,388,ok,,0.7598176889136141,0.759064473335484,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0314174000086496
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,14,StandardScaler,None,DecisionTree,1552,389,ok,,0.6960962039909407,0.7197765705696241,,0.039141899993410334
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,14,StandardScaler,None,DecisionTree,1553,388,ok,,0.7346926982033872,0.7449297322644968,,0.036484700001892634
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,14,StandardScaler,None,DecisionTree,1553,388,ok,,0.7049647354443861,0.7287846364634988,,0.037450299991178326
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,14,StandardScaler,None,DecisionTree,1553,388,ok,,0.7068350419839595,0.727269011510517,,0.03865649999352172
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,14,StandardScaler,None,DecisionTree,1553,388,ok,,0.7431858424855029,0.7751747676729466,,0.05504520000249613
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,15,MinMaxScaler,PCA,RandomForest,1552,389,ok,,0.7161876500692289,0.7371856541849512,,0.678326900000684
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,15,MinMaxScaler,PCA,RandomForest,1553,388,ok,,0.6632879773473795,0.6773336368488067,,0.6752254000020912
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,15,MinMaxScaler,PCA,RandomForest,1553,388,ok,,0.7102336882278807,0.7225998544729195,,0.901907299994491
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,15,MinMaxScaler,PCA,RandomForest,1553,388,ok,,0.752568464201454,0.7603047752661265,,0.7250281000015093
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,15,MinMaxScaler,PCA,RandomForest,1553,388,ok,,0.6953565204838549,0.7277572668221904,,1.1655181999958586
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,16,MinMaxScaler,PCA,SVM,1552,389,ok,,0.6506011167195378,0.6857138446122588,,0.12838799999735784
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,16,MinMaxScaler,PCA,SVM,1553,388,ok,,0.6694897278469082,0.6838991847143345,,0.1218588999909116
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,16,MinMaxScaler,PCA,SVM,1553,388,ok,,0.6736120888619672,0.6856622012869467,,0.2029337999993004
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,16,MinMaxScaler,PCA,SVM,1553,388,ok,,0.6955690870749035,0.7115064736492881,,0.15546009999525268
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,16,MinMaxScaler,PCA,SVM,1553,388,ok,,0.6225262295084028,0.6405007181144409,,0.14894269999058452
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,17,MinMaxScaler,PCA,kNN,1552,389,ok,,0.733104492972914,0.7339571778441444,,0.013548699993407354
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,17,MinMaxScaler,PCA,kNN,1553,388,ok,,0.734599427276783,0.7133732463107784,,0.01421979999577161
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,17,MinMaxScaler,PCA,kNN,1553,388,ok,,0.7066368426496826,0.6833587523451242,,0.02517480000096839
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,17,MinMaxScaler,PCA,kNN,1553,388,ok,,0.745073213552714,0.7204697563249712,,0.018202500010374933
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,17,MinMaxScaler,PCA,kNN,1553,388,ok,,0.7002497620282,0.6775883390902918,,0.018259700009366497
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,18,MinMaxScaler,PCA,MLP,1552,389,ok,,0.7271238629791261,0.7404720958050942,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.3549774999992223
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,18,MinMaxScaler,PCA,MLP,1553,388,ok,,0.7094565269865927,0.7123153977415432,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6970366000023205
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,18,MinMaxScaler,PCA,MLP,1553,388,ok,,0.7467258403612815,0.7437709649535736,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.7818840999971144
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,18,MinMaxScaler,PCA,MLP,1553,388,ok,,0.751730742026881,0.7505571358307167,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.390769099991303
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,18,MinMaxScaler,PCA,MLP,1553,388,ok,,0.7107890568841333,0.7222757544595506,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.830969799993909
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,19,MinMaxScaler,PCA,DecisionTree,1552,389,ok,,0.659444162075741,0.6637870511282848,,0.026028299995232373
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,19,MinMaxScaler,PCA,DecisionTree,1553,388,ok,,0.6234432260902354,0.6423184579276864,,0.02772170001117047
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,19,MinMaxScaler,PCA,DecisionTree,1553,388,ok,,0.6527808616764682,0.6365246007189741,,0.02910820000397507
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,19,MinMaxScaler,PCA,DecisionTree,1553,388,ok,,0.6592620971911891,0.6787018354864554,,0.03144199999223929
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,19,MinMaxScaler,PCA,DecisionTree,1553,388,ok,,0.6340981394886319,0.6540785780225492,,0.02961969999887515
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,20,MinMaxScaler,SelectKBest,RandomForest,1552,389,ok,,0.5938161619082672,0.6096760725476101,,0.6549127000034787
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,20,MinMaxScaler,SelectKBest,RandomForest,1553,388,ok,,0.6190478936102323,0.6310666139342997,,0.5967006000137189
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,20,MinMaxScaler,SelectKBest,RandomForest,1553,388,ok,,0.6083967118912225,0.6344736249320951,,0.6046237000118708
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,20,MinMaxScaler,SelectKBest,RandomForest,1553,388,ok,,0.5875117065891956,0.5983143494234053,,0.659984700003406
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,20,MinMaxScaler,SelectKBest,RandomForest,1553,388,ok,,0.5859516952895562,0.59035154828186,,0.5553964999999152
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,21,MinMaxScaler,SelectKBest,SVM,1552,389,ok,,0.45431340102392737,0.44342777778738374,,0.1972444999992149
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,21,MinMaxScaler,SelectKBest,SVM,1553,388,ok,,0.4649462164331427,0.4539815275573039,,0.1639354000071762
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,21,MinMaxScaler,SelectKBest,SVM,1553,388,ok,,0.4565169476702039,0.4514268227227095,,0.2623792999947909
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,21,MinMaxScaler,SelectKBest,SVM,1553,388,ok,,0.48192404987755705,0.4703838304684088,,0.16462440000032075
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,21,MinMaxScaler,SelectKBest,SVM,1553,388,ok,,0.4640380331169804,0.4483306364953071,,0.1623085000028368
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,22,MinMaxScaler,SelectKBest,kNN,1552,389,ok,,0.5716574848153796,0.5699994699889512,,0.016990000003715977
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,22,MinMaxScaler,SelectKBest,kNN,1553,388,ok,,0.5188024813546173,0.5425210749806876,,0.015936299998429604
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,22,MinMaxScaler,SelectKBest,kNN,1553,388,ok,,0.5811811113579994,0.6032287072440875,,0.019489500002237037
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,22,MinMaxScaler,SelectKBest,kNN,1553,388,ok,,0.5205355847660748,0.5315326844610467,,0.016770100002759136
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,22,MinMaxScaler,SelectKBest,kNN,1553,388,ok,,0.5265347343658041,0.5396134782050522,,0.015259400010108948
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,23,MinMaxScaler,SelectKBest,MLP,1552,389,ok,,0.5210392434076645,0.5324604069628781,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6336905999924056
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,23,MinMaxScaler,SelectKBest,MLP,1553,388,ok,,0.5072234303357821,0.5129840308288681,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7780083999969065
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,23,MinMaxScaler,SelectKBest,MLP,1553,388,ok,,0.4710934490397139,0.47679297093030304,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.2963607999990927
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,23,MinMaxScaler,SelectKBest,MLP,1553,388,ok,,0.505911211095658,0.49487371418924014,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.013634999995702
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,23,MinMaxScaler,SelectKBest,MLP,1553,388,ok,,0.5070899954601144,0.5082225907089043,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8045931999949971
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,24,MinMaxScaler,SelectKBest,DecisionTree,1552,389,ok,,0.6422199754436597,0.6392217005267519,,0.0171591999969678
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,24,MinMaxScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5935697146969263,0.6036533384302168,,0.01846829999703914
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,24,MinMaxScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5646958518690087,0.5713023548416195,,0.016032699990319088
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,24,MinMaxScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5609490421422636,0.5717662465340808,,0.018635600004927255
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,24,MinMaxScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5718780433551232,0.5715014121807739,,0.018474500000593252
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,25,MinMaxScaler,None,RandomForest,1552,389,ok,,0.7499904578851948,0.7823745374030003,,1.029762899997877
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,25,MinMaxScaler,None,RandomForest,1553,388,ok,,0.7741862115611321,0.795426986705683,,0.8608442999975523
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,25,MinMaxScaler,None,RandomForest,1553,388,ok,,0.7798844208887508,0.7990369622952631,,0.8020545000035781
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,25,MinMaxScaler,None,RandomForest,1553,388,ok,,0.7875594936784175,0.8019589628267676,,0.7604080000019167
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,25,MinMaxScaler,None,RandomForest,1553,388,ok,,0.7717916751235936,0.7883640747818695,,0.8758997999975691
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,26,MinMaxScaler,None,SVM,1552,389,ok,,0.6671400602321655,0.7027768153101649,,0.1686520999937784
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,26,MinMaxScaler,None,SVM,1553,388,ok,,0.6578607177644417,0.685782058396507,,0.15253259999735747
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,26,MinMaxScaler,None,SVM,1553,388,ok,,0.6612240139738923,0.6745466250307697,,0.19707219999691006
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,26,MinMaxScaler,None,SVM,1553,388,ok,,0.6757922264191126,0.6887545227257015,,0.16324549999262672
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,26,MinMaxScaler,None,SVM,1553,388,ok,,0.6350068641664567,0.6508919721504048,,0.15189209999516606
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,27,MinMaxScaler,None,kNN,1552,389,ok,,0.7704324062876695,0.7613774153273031,,0.014329799989354797
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,27,MinMaxScaler,None,kNN,1553,388,ok,,0.7313579378641756,0.7267949808346739,,0.011288900001090951
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,27,MinMaxScaler,None,kNN,1553,388,ok,,0.7178259601739009,0.6876303666491757,,0.01647190000221599
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,27,MinMaxScaler,None,kNN,1553,388,ok,,0.7536185227725737,0.7138300068836482,,0.013844199987943284
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,27,MinMaxScaler,None,kNN,1553,388,ok,,0.7133338404348591,0.7054198386274446,,0.012978900005691685
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,28,MinMaxScaler,None,MLP,1552,389,ok,,0.7315488361540993,0.7405646412396517,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.193093100009719
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,28,MinMaxScaler,None,MLP,1553,388,ok,,0.7293100959613322,0.753363123336823,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6960058999975445
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,28,MinMaxScaler,None,MLP,1553,388,ok,,0.7542685435049273,0.7536133576472599,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.244937800001935
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,28,MinMaxScaler,None,MLP,1553,388,ok,,0.7462627202425862,0.75668666043941,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.1039832000096794
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,28,MinMaxScaler,None,MLP,1553,388,ok,,0.7257994654217065,0.7291312262859596,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0954125999996904
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,29,MinMaxScaler,None,DecisionTree,1552,389,ok,,0.6960962039909407,0.7197765705696241,,0.03586319999885745
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,29,MinMaxScaler,None,DecisionTree,1553,388,ok,,0.7346926982033872,0.7449297322644968,,0.03864169999724254
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,29,MinMaxScaler,None,DecisionTree,1553,388,ok,,0.7049647354443861,0.7287846364634988,,0.03808140000910498
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,29,MinMaxScaler,None,DecisionTree,1553,388,ok,,0.7068350419839595,0.727269011510517,,0.03851980000035837
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,29,MinMaxScaler,None,DecisionTree,1553,388,ok,,0.7431858424855029,0.7751747676729466,,0.03952979999303352
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,30,RobustScaler,PCA,RandomForest,1552,389,ok,,0.7267521586600534,0.7426258249046318,,0.7003113999962807
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,30,RobustScaler,PCA,RandomForest,1553,388,ok,,0.7251666940125494,0.7472260807128369,,0.6928442000062205
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,30,RobustScaler,PCA,RandomForest,1553,388,ok,,0.7041554044439055,0.7174787467714975,,0.9163902000000235
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,30,RobustScaler,PCA,RandomForest,1553,388,ok,,0.7202877215929575,0.7467014530034101,,0.6583123000018531
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,30,RobustScaler,PCA,RandomForest,1553,388,ok,,0.7469614858197202,0.7724433091080224,,0.8035606000048574
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,31,RobustScaler,PCA,SVM,1552,389,ok,,0.5345990510464195,0.5365528283869158,,0.1475886999978684
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,31,RobustScaler,PCA,SVM,1553,388,ok,,0.3366497632012164,0.33119578358387525,,0.16425650000746828
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,31,RobustScaler,PCA,SVM,1553,388,ok,,0.36243279670878514,0.36021350746273406,,0.18604909999703523
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,31,RobustScaler,PCA,SVM,1553,388,ok,,0.3710145176584217,0.3688086475724421,,0.24212009999610018
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,31,RobustScaler,PCA,SVM,1553,388,ok,,0.345916607758713,0.34271208297182326,,0.16093410000030417
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,32,RobustScaler,PCA,kNN,1552,389,ok,,0.7451353227669016,0.7558095436929564,,0.016949199998634867
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,32,RobustScaler,PCA,kNN,1553,388,ok,,0.7456335694737203,0.7296217325606983,,0.01631029999407474
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,32,RobustScaler,PCA,kNN,1553,388,ok,,0.6776319101698782,0.6525483985413063,,0.0178961000056006
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,32,RobustScaler,PCA,kNN,1553,388,ok,,0.7433084293933974,0.7174039387100615,,0.019743400000152178
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,32,RobustScaler,PCA,kNN,1553,388,ok,,0.7242076267755385,0.7188066687392315,,0.018166599998949096
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,33,RobustScaler,PCA,MLP,1552,389,ok,,0.7238265389581178,0.7369987074486488,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.4810663999960525
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,33,RobustScaler,PCA,MLP,1553,388,ok,,0.7120925590817672,0.7079021008027977,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5852368000050774
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,33,RobustScaler,PCA,MLP,1553,388,ok,,0.7068528651228404,0.7059511625277674,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0692569999955595
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,33,RobustScaler,PCA,MLP,1553,388,ok,,0.728773768170929,0.720667634366618,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.2491485999926226
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,33,RobustScaler,PCA,MLP,1553,388,ok,,0.7317925150055881,0.7392654700489487,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8675903999974253
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,34,RobustScaler,PCA,DecisionTree,1552,389,ok,,0.6353490685727528,0.658754245159206,,0.02451709999877494
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,34,RobustScaler,PCA,DecisionTree,1553,388,ok,,0.5882285991338941,0.6080980860830276,,0.02392120000149589
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,34,RobustScaler,PCA,DecisionTree,1553,388,ok,,0.6591995011563055,0.6767647752107825,,0.031895299995085225
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,34,RobustScaler,PCA,DecisionTree,1553,388,ok,,0.579407240762804,0.6178199198724351,,0.023720200013485737
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,34,RobustScaler,PCA,DecisionTree,1553,388,ok,,0.5934345656544299,0.6094307699116305,,0.030939499993110076
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,35,RobustScaler,SelectKBest,RandomForest,1552,389,ok,,0.593088648680754,0.6117353938500969,,0.5535501000122167
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,35,RobustScaler,SelectKBest,RandomForest,1553,388,ok,,0.613886037546635,0.6260744636463345,,0.507082599986461
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,35,RobustScaler,SelectKBest,RandomForest,1553,388,ok,,0.6035712153139584,0.628708581458404,,0.5924752999999328
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,35,RobustScaler,SelectKBest,RandomForest,1553,388,ok,,0.5875117065891956,0.5983143494234053,,0.5250957999960519
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,35,RobustScaler,SelectKBest,RandomForest,1553,388,ok,,0.5852241820620429,0.5908631352227411,,0.6432631000061519
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,36,RobustScaler,SelectKBest,SVM,1552,389,ok,,0.2968253968253968,0.2701103181048689,,0.16905409999890253
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,36,RobustScaler,SelectKBest,SVM,1553,388,ok,,0.25397736591766445,0.20510013189996293,,0.15520009999454487
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,36,RobustScaler,SelectKBest,SVM,1553,388,ok,,0.2670790474628428,0.22624680719316803,,0.1596785000001546
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,36,RobustScaler,SelectKBest,SVM,1553,388,ok,,0.2659270740645063,0.22613950089319548,,0.16126919999078382
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,36,RobustScaler,SelectKBest,SVM,1553,388,ok,,0.4028388278388278,0.37618528430031667,,0.1585693000088213
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,37,RobustScaler,SelectKBest,kNN,1552,389,ok,,0.572022981891403,0.572385880799896,,0.01539970000158064
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,37,RobustScaler,SelectKBest,kNN,1553,388,ok,,0.5528818792738853,0.5589909445529954,,0.015592099996865727
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,37,RobustScaler,SelectKBest,kNN,1553,388,ok,,0.6050353962262933,0.6186007981346965,,0.013263000000733882
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,37,RobustScaler,SelectKBest,kNN,1553,388,ok,,0.5473706683794352,0.549188486185816,,0.01565669999399688
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,37,RobustScaler,SelectKBest,kNN,1553,388,ok,,0.5525316152438394,0.550304678751439,,0.01702800000202842
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,38,RobustScaler,SelectKBest,MLP,1552,389,ok,,0.6370157376736324,0.6566666050485317,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6307283000060124
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,38,RobustScaler,SelectKBest,MLP,1553,388,ok,,0.6265378594089831,0.635009042885016,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6475453000020934
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,38,RobustScaler,SelectKBest,MLP,1553,388,ok,,0.6335524434421397,0.6524355279925936,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6249034999927972
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,38,RobustScaler,SelectKBest,MLP,1553,388,ok,,0.5804100212412874,0.5912214441488158,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.777104299995699
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,38,RobustScaler,SelectKBest,MLP,1553,388,ok,,0.6015369055267188,0.6145472891253719,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9570113999943715
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,39,RobustScaler,SelectKBest,DecisionTree,1552,389,ok,,0.6401035733272575,0.634523487437716,,0.017342599996482022
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,39,RobustScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5935697146969263,0.6036533384302168,,0.016082499991171062
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,39,RobustScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5646958518690087,0.5713023548416195,,0.016566899997997098
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,39,RobustScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5609490421422636,0.5717662465340808,,0.019582199995056726
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,39,RobustScaler,SelectKBest,DecisionTree,1553,388,ok,,0.5718780433551232,0.5715014121807739,,0.018739599996479228
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,40,RobustScaler,None,RandomForest,1552,389,ok,,0.7489322568269937,0.7802229363315705,,0.7070217000000412
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,40,RobustScaler,None,RandomForest,1553,388,ok,,0.776318407723179,0.7989616849210454,,0.6694188999972539
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,40,RobustScaler,None,RandomForest,1553,388,ok,,0.7743540370934416,0.7941429295904194,,0.892306900001131
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,40,RobustScaler,None,RandomForest,1553,388,ok,,0.7822236855200286,0.7976822389602903,,0.734562099998584
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,40,RobustScaler,None,RandomForest,1553,388,ok,,0.7717916751235936,0.7883640747818695,,0.7605334999971092
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,41,RobustScaler,None,SVM,1552,389,ok,,0.5582339931024142,0.552181506152275,,0.18427569999767002
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,41,RobustScaler,None,SVM,1553,388,ok,,0.4609496408209609,0.4806728305357231,,0.24004540000169072
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,41,RobustScaler,None,SVM,1553,388,ok,,0.5224069839339356,0.5365243921519364,,0.33596930000931025
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,41,RobustScaler,None,SVM,1553,388,ok,,0.4824510291199165,0.49425906568763706,,0.22663669999747071
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,41,RobustScaler,None,SVM,1553,388,ok,,0.4788536512220723,0.48942824542493174,,0.19513330000336282
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,42,RobustScaler,None,kNN,1552,389,ok,,0.7534042589963642,0.7624455672962844,,0.013749799996730871
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,42,RobustScaler,None,kNN,1553,388,ok,,0.7330505963059829,0.7335158996155675,,0.012867500001448207
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,42,RobustScaler,None,kNN,1553,388,ok,,0.7159117225234011,0.699143968516122,,0.027292500002658926
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,42,RobustScaler,None,kNN,1553,388,ok,,0.7921416439168045,0.7700211811375574,,0.017609700007596985
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,42,RobustScaler,None,kNN,1553,388,ok,,0.7521972917983105,0.7525938371468225,,0.01512419999926351
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,43,RobustScaler,None,MLP,1552,389,ok,,0.7867116192774086,0.7996963717182419,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.963846900005592
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,43,RobustScaler,None,MLP,1553,388,ok,,0.7346789836537994,0.7352461360037881,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.827299699987634
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,43,RobustScaler,None,MLP,1553,388,ok,,0.7880942977745151,0.7818283421189399,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.8503415000013774
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,43,RobustScaler,None,MLP,1553,388,ok,,0.7660658771970509,0.7703231916405218,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,2.0649033000081545
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,43,RobustScaler,None,MLP,1553,388,ok,,0.7863212182397241,0.7914367403171843,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.910509599998477
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,44,RobustScaler,None,DecisionTree,1552,389,ok,,0.6960962039909407,0.7197765705696241,,0.05095590000564698
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,44,RobustScaler,None,DecisionTree,1553,388,ok,,0.7346926982033872,0.7449297322644968,,0.03826119999575894
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,44,RobustScaler,None,DecisionTree,1553,388,ok,,0.7049647354443861,0.7287846364634988,,0.03867680000257678
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,44,RobustScaler,None,DecisionTree,1553,388,ok,,0.7068350419839595,0.727269011510517,,0.042536099994322285
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,44,RobustScaler,None,DecisionTree,1553,388,ok,,0.744244043543704,0.7803724654133004,,0.04686050000600517
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,45,None,PCA,RandomForest,1552,389,ok,,0.7288917223127749,0.7606919978147946,,0.8863448000047356
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,45,None,PCA,RandomForest,1553,388,ok,,0.7361771271569088,0.755964723636633,,0.768286899998202
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,45,None,PCA,RandomForest,1553,388,ok,,0.7487331374801917,0.7728982620452287,,0.6799621999962255
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,45,None,PCA,RandomForest,1553,388,ok,,0.7650736078284763,0.7868667696120343,,1.1893164000066463
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,45,None,PCA,RandomForest,1553,388,ok,,0.6972296756252614,0.7176467159277692,,0.8797239000123227
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,46,None,PCA,SVM,1552,389,ok,,0.265511803011803,0.23984780352819096,,0.1803587000031257
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,46,None,PCA,SVM,1553,388,ok,,0.266001089384174,0.24308568394001034,,0.19992759999877308
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,46,None,PCA,SVM,1553,388,ok,,0.28608369932996797,0.2685391711696904,,0.18730729998787865
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,46,None,PCA,SVM,1553,388,ok,,0.2761352220212979,0.2532977506993497,,0.19254039999214
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,46,None,PCA,SVM,1553,388,ok,,0.263476800976801,0.2420711691661697,,0.1971386000077473
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,47,None,PCA,kNN,1552,389,ok,,0.36601820450504663,0.34894907432174666,,0.01826900000742171
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,47,None,PCA,kNN,1553,388,ok,,0.350752987568908,0.31481611074080734,,0.013766699994448572
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,47,None,PCA,kNN,1553,388,ok,,0.3263238754204975,0.315854071923913,,0.012692199990851805
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,47,None,PCA,kNN,1553,388,ok,,0.3507224420532215,0.3379758951310924,,0.012964000008651055
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,47,None,PCA,kNN,1553,388,ok,,0.3139387659124501,0.3075240303353401,,0.014181300008203834
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,48,None,PCA,MLP,1552,389,ok,,0.20782685881370092,0.19596712905990676,,0.17915260000154376
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,48,None,PCA,MLP,1553,388,ok,,0.2895133140452596,0.1900693025598705,,0.18371480000496376
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,48,None,PCA,MLP,1553,388,ok,,0.3343436995290509,0.2499402877191433,,0.15894369999296032
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,48,None,PCA,MLP,1553,388,ok,,0.26709367476356144,0.2554584729848036,,0.14069839999137912
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,48,None,PCA,MLP,1553,388,ok,,0.22555962555962555,0.2057790000938184,,0.2272651999955997
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,49,None,PCA,DecisionTree,1552,389,ok,,0.6454740556714241,0.6695708576118907,,0.02429479999409523
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,49,None,PCA,DecisionTree,1553,388,ok,,0.6273570660996783,0.6290065896787852,,0.026312200003303587
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,49,None,PCA,DecisionTree,1553,388,ok,,0.6113591505779999,0.6294335225517615,,0.024464300004183315
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,49,None,PCA,DecisionTree,1553,388,ok,,0.6168390085282279,0.6435188779838071,,0.034261299995705485
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,49,None,PCA,DecisionTree,1553,388,ok,,0.6352372137389116,0.6272625386298262,,0.028064400001312606
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,50,None,SelectKBest,RandomForest,1552,389,ok,,0.5938161619082672,0.6121349833854506,,0.49545050000597257
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,50,None,SelectKBest,RandomForest,1553,388,ok,,0.6149521356276584,0.6279875406040288,,0.49137489999702666
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,50,None,SelectKBest,RandomForest,1553,388,ok,,0.5991069295996727,0.6244466734058663,,1.0235094000090612
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,50,None,SelectKBest,RandomForest,1553,388,ok,,0.5875117065891956,0.5983143494234053,,0.5147972999984631
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,50,None,SelectKBest,RandomForest,1553,388,ok,,0.5859516952895562,0.59035154828186,,0.5227765000017826
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,51,None,SelectKBest,SVM,1552,389,ok,,0.24525844525844523,0.19304383451067725,,0.16288730000087526
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,51,None,SelectKBest,SVM,1553,388,ok,,0.25107976600513915,0.20186769125814943,,0.15314570000919048
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,51,None,SelectKBest,SVM,1553,388,ok,,0.2547427696681428,0.20257116004296455,,0.20696680000401102
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,51,None,SelectKBest,SVM,1553,388,ok,,0.25285647310963766,0.20339156021975405,,0.1665453999885358
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,51,None,SelectKBest,SVM,1553,388,ok,,0.2511192511192511,0.20231780566222715,,0.2722152000060305
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,52,None,SelectKBest,kNN,1552,389,ok,,0.37557488807488804,0.37450269003859765,,0.012620599998626858
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,52,None,SelectKBest,kNN,1553,388,ok,,0.3726169645071377,0.35583390421325595,,0.012270499995793216
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,52,None,SelectKBest,kNN,1553,388,ok,,0.4055620906388216,0.3918902896601172,,0.0127749999955995
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,52,None,SelectKBest,kNN,1553,388,ok,,0.3720646719594426,0.36949942750798803,,0.015478699991945177
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,52,None,SelectKBest,kNN,1553,388,ok,,0.3862408813597269,0.3884786362806045,,0.012517299997853115
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,53,None,SelectKBest,MLP,1552,389,ok,,0.14285714285714285,0.0487359122753579,,0.25752520000969525
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,53,None,SelectKBest,MLP,1553,388,ok,,0.14102564102564102,0.047311827956989246,,0.1520579999923939
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,53,None,SelectKBest,MLP,1553,388,ok,,0.14285714285714285,0.0217687074829932,,0.28619800000160467
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,53,None,SelectKBest,MLP,1553,388,ok,,0.1410488245931284,0.04782342121397915,,0.18211090000113472
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,53,None,SelectKBest,MLP,1553,388,ok,,0.14285714285714285,0.04782342121397915,,0.18736110000463668
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,54,None,SelectKBest,DecisionTree,1552,389,ok,,0.6411617743854585,0.6357903046134281,,0.01628060000075493
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,54,None,SelectKBest,DecisionTree,1553,388,ok,,0.5935697146969263,0.6036533384302168,,0.015547000002698041
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,54,None,SelectKBest,DecisionTree,1553,388,ok,,0.5646958518690087,0.5713023548416195,,0.0319417999999132
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,54,None,SelectKBest,DecisionTree,1553,388,ok,,0.5609490421422636,0.5711670295884586,,0.018033600004855543
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,54,None,SelectKBest,DecisionTree,1553,388,ok,,0.5718780433551232,0.5715014121807739,,0.021050800001830794
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,55,None,None,RandomForest,1552,389,ok,,0.7499904578851948,0.7823745374030003,,0.6920420000096783
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,55,None,None,RandomForest,1553,388,ok,,0.7780820761535141,0.8005336371556802,,0.6568476999964332
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,55,None,None,RandomForest,1553,388,ok,,0.7798844208887508,0.7992661008181052,,0.7466753000044264
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,55,None,None,RandomForest,1553,388,ok,,0.7811654844618277,0.7963943291444154,,0.6860491000115871
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,55,None,None,RandomForest,1553,388,ok,,0.7717916751235936,0.7883640747818695,,1.0971248999994714
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,56,None,None,SVM,1552,389,ok,,0.2626678876678877,0.23579486430789445,,0.25346799999533687
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,56,None,None,SVM,1553,388,ok,,0.2623380857211703,0.24081845689923723,,0.22650590000557713
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,56,None,None,SVM,1553,388,ok,,0.27425752798887126,0.24911415553742414,,0.2469759000086924
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,56,None,None,SVM,1553,388,ok,,0.27071026722925456,0.24926997177767987,,0.3358885000052396
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,56,None,None,SVM,1553,388,ok,,0.263476800976801,0.2420711691661697,,0.32478460000129417
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,57,None,None,kNN,1552,389,ok,,0.36601820450504663,0.34894907432174666,,0.013550899995607324
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,57,None,None,kNN,1553,388,ok,,0.350752987568908,0.31481611074080734,,0.012203100006445311
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,57,None,None,kNN,1553,388,ok,,0.3263238754204975,0.315854071923913,,0.015076800002134405
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,57,None,None,kNN,1553,388,ok,,0.3507224420532215,0.3379758951310924,,0.015844399997149594
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,57,None,None,kNN,1553,388,ok,,0.3139387659124501,0.3075240303353401,,0.01593779999529943
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,58,None,None,MLP,1552,389,ok,,0.25955915429599635,0.19075603623179457,,0.1528414999920642
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,58,None,None,MLP,1553,388,ok,,0.2216732272702422,0.16555854928088184,,0.3729403000033926
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,58,None,None,MLP,1553,388,ok,,0.25034271054171553,0.2013406095038748,,0.32422999999835156
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,58,None,None,MLP,1553,388,ok,,0.2360699568894106,0.15861615881084407,,0.16875879999133758
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,58,None,None,MLP,1553,388,ok,,0.2437577953706986,0.18182812352599864,,0.6133354000048712
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,59,None,None,DecisionTree,1552,389,ok,,0.6960962039909407,0.7197765705696241,,0.04115530000126455
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,59,None,None,DecisionTree,1553,388,ok,,0.7346926982033872,0.7449297322644968,,0.032519599990337156
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,59,None,None,DecisionTree,1553,388,ok,,0.7049647354443861,0.7287846364634988,,0.03698009999061469
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,59,None,None,DecisionTree,1553,388,ok,,0.7068350419839595,0.727269011510517,,0.04485890000069048
+362751,steel-plates-fault_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,59,None,None,DecisionTree,1553,388,ok,,0.7431858424855029,0.7751747676729466,,0.03831910000008065

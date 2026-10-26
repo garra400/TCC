@@ -1,0 +1,10 @@
+{
+  "n_candidatas": 201,
+  "n_elegiveis": 193,
+  "n_grupos": 165,
+  "erros_carregamento": 0,
+  "alvos_diferentes_padrao": 0,
+  "config_sha256": "1b0d1e85dcbb9e3007b8fcf22d2fb625a639ad2940c19ce751ef66fa1d902d29",
+  "code_sha256": "531c03168801f834489ac9ca47c33112f44bfd31d930b2a3d795d917a488fc02",
+  "preprocessing_sha256": "7ee7ffd6b5ae6011e2f9126ed42c3ae5520c72bdc17c65a55cd386459278504f"
+}

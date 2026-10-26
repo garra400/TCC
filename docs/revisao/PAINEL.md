@@ -1,3 +1,5 @@
+> Registro histórico da segunda branch. A reconstrução integral e os resultados atuais estão no [painel da terceira branch](../fase1_corrigida/PAINEL.md).
+
 # Revisão do TCC e artigo
 
 Branch: `revisao/avaliacao-kdmile-2026`. A `main` preserva a versão consolidada

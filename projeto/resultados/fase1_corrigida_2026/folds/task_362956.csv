@@ -1,0 +1,301 @@
+task_id,nome_dataset,fold,pipeline_id,scaler,selector,classifier,n_train,n_test,status,error,balanced_accuracy,f1_macro,warnings,tempo_s
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.520412870487833,0.5251612903225806,,0.5985292999976082
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.4973474801061008,0.4838709677419355,,0.4736737000057474
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.5434782608695652,0.5664516129032258,,0.42188169999280944
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.487970200003474
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,0,StandardScaler,PCA,RandomForest,1600,400,ok,,0.4973404255319149,0.48320413436692505,,0.4251065999997081
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.21573140000691637
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07253300001320895
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07792340000742115
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.08747500000754371
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,1,StandardScaler,PCA,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.07505359999777284
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,2,StandardScaler,PCA,kNN,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.025967699999455363
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,2,StandardScaler,PCA,kNN,1600,400,ok,,0.5177603505939338,0.5208662737770111,,0.01967779999540653
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,2,StandardScaler,PCA,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.01803259999724105
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,2,StandardScaler,PCA,kNN,1600,400,ok,,0.520412870487833,0.5251612903225806,,0.01980850000109058
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,2,StandardScaler,PCA,kNN,1600,400,ok,,0.4933510638297872,0.48119325551232167,,0.01780650000728201
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,3,StandardScaler,PCA,MLP,1600,400,ok,,0.5177603505939338,0.5208662737770111,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6624679999949876
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,3,StandardScaler,PCA,MLP,1600,400,ok,,0.5164340906469842,0.5188749074759438,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6601489000022411
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,3,StandardScaler,PCA,MLP,1600,400,ok,,0.5177603505939338,0.5208662737770111,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7117716000066139
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,3,StandardScaler,PCA,MLP,1600,400,ok,,0.5124553108061354,0.5134024078191199,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5612641000043368
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,3,StandardScaler,PCA,MLP,1600,400,ok,,0.48936170212765956,0.4791666666666667,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9551814000005834
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.5018452312305386,0.5013309073755854,,0.02263160000438802
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.4753200322915465,0.47848761408083446,,0.021754600005806424
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.47877984084880637,0.4743758212877792,,0.021788300000480376
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.48010610079575594,0.47506561679790027,,0.019661400001496077
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,4,StandardScaler,PCA,DecisionTree,1600,400,ok,,0.5177304964539007,0.518999518999519,,0.01992029999382794
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.4199460999952862
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.39919370001007337
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.343415899988031
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.3438511000131257
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,5,StandardScaler,SelectKBest,RandomForest,1600,400,ok,,0.488031914893617,0.4784876140808344,,0.3617615000111982
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07889660001092125
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.08120620000408962
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.0760739000106696
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07497470000816975
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,6,StandardScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.07388380001066253
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.4973474801061008,0.4838709677419355,,0.021145000006072223
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.5394994810287164,0.5558845299777943,,0.020305199999711476
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.019272999998065643
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.5217391304347826,0.5274914089347079,,0.018910799990408123
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,7,StandardScaler,SelectKBest,kNN,1600,400,ok,,0.49601063829787234,0.48253557567917205,,0.019215399996028282
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.5151078307000346,0.5169730309942305,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.506472400011262
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.4946949602122016,0.48253557567917205,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6462758999987273
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.540825740975666,0.5591969718748503,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5491943000088213
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.5164340906469842,0.5188749074759438,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7821747999987565
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,8,StandardScaler,SelectKBest,MLP,1600,400,ok,,0.4946808510638298,0.48186528497409326,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9905631999863544
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5129742820897244,0.5124113475177305,,0.013397899994743057
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.47877984084880637,0.4743758212877792,,0.013702700001886114
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.6065621035636029,0.6044192026221356,,0.017471800005296245
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5267558528428093,0.521659548505186,,0.015821900000446476
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,9,StandardScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5762411347517731,0.5733333333333334,,0.013408200000412762
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,10,StandardScaler,None,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.4064092000044184
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,10,StandardScaler,None,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.4005151000019396
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,10,StandardScaler,None,RandomForest,1600,400,ok,,0.5394994810287164,0.5558845299777943,,0.7111922999902163
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,10,StandardScaler,None,RandomForest,1600,400,ok,,0.5381732210817668,0.5527528064761393,,0.4488684999960242
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,10,StandardScaler,None,RandomForest,1600,400,ok,,0.4920212765957447,0.4805194805194805,,0.44460160000016913
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,11,StandardScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07345509999140631
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,11,StandardScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07512220001081005
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,11,StandardScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.08028949999425095
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,11,StandardScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.09792070000548847
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,11,StandardScaler,None,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.12092809999012388
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,12,StandardScaler,None,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.023754099995130673
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,12,StandardScaler,None,kNN,1600,400,ok,,0.5177603505939338,0.5208662737770111,,0.0226152999966871
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,12,StandardScaler,None,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.020974700004444458
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,12,StandardScaler,None,kNN,1600,400,ok,,0.5217391304347826,0.5274914089347079,,0.030962099990574643
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,12,StandardScaler,None,kNN,1600,400,ok,,0.4933510638297872,0.48119325551232167,,0.023915600002510473
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,13,StandardScaler,None,MLP,1600,400,ok,,0.5177603505939338,0.5208662737770111,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6486882000026526
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,13,StandardScaler,None,MLP,1600,400,ok,,0.5355207011878677,0.5469608624522841,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7438668999966467
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,13,StandardScaler,None,MLP,1600,400,ok,,0.602064352439165,0.6365216704199755,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6368167999899015
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,13,StandardScaler,None,MLP,1600,400,ok,,0.5394994810287164,0.5558845299777943,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7352050000044983
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,13,StandardScaler,None,MLP,1600,400,ok,,0.4867021276595745,0.47780678851174935,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.411157499998808
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.5089955022488756,0.5078405193853243,,0.019912800009478815
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.5493022719409526,0.5579499930929687,,0.017213699989952147
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.5795179333410219,0.5733333333333334,,0.011944899990339763
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.609733594741091,0.5803829006031995,,0.014260700001614168
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,14,StandardScaler,None,DecisionTree,1600,400,ok,,0.5735815602836879,0.5680789798436857,,0.016622900002403185
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.5177603505939338,0.5208662737770111,,0.40571360000467394
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.5,0.4851994851994852,,0.5289039999915985
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.41937370000232477
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.4303405999962706
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,15,MinMaxScaler,PCA,RandomForest,1600,400,ok,,0.49601063829787234,0.48253557567917205,,0.45150399999693036
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.06787650000478607
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.10116700000071432
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07444870000472292
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.08624639999470674
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,16,MinMaxScaler,PCA,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.08308690000558272
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.014770099995075725
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.4973474801061008,0.4838709677419355,,0.03432079999765847
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.01564360001066234
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.5434782608695652,0.5664516129032258,,0.018551100001786835
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,17,MinMaxScaler,PCA,kNN,1600,400,ok,,0.4946808510638298,0.48186528497409326,,0.01793250000628177
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.5190866105408835,0.5229576624925462,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.334085700000287
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.4946949602122016,0.48253557567917205,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6154491999914171
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.5394994810287164,0.5558845299777943,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3846376000001328
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.5164340906469842,0.5188749074759438,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8643620999937411
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,18,MinMaxScaler,PCA,MLP,1600,400,ok,,0.4946808510638298,0.48186528497409326,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5972366000059992
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.5249106216122708,0.5282859934633917,,0.019722099998034537
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.541344712259255,0.543049543049543,,0.018007399994530715
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.5924922154307461,0.551264367816092,,0.038891300006071106
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.49573290277937954,0.4942212560172142,,0.02184280000801664
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,19,MinMaxScaler,PCA,DecisionTree,1600,400,ok,,0.5252659574468085,0.521659548505186,,0.01980879998882301
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.34412609999708366
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.36690449999878183
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.3640502999915043
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.33992459998989943
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,20,MinMaxScaler,SelectKBest,RandomForest,1600,400,ok,,0.488031914893617,0.4784876140808344,,0.31149970000842586
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.06885899999178946
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07682039999053814
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.08533010000246577
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07744860000093468
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,21,MinMaxScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.07408359998953529
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.4973474801061008,0.4838709677419355,,0.015402199991513044
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.016265199999907054
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.5,0.4851994851994852,,0.01831050000328105
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.520412870487833,0.5251612903225806,,0.015653599999495782
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,22,MinMaxScaler,SelectKBest,kNN,1600,400,ok,,0.49601063829787234,0.48253557567917205,,0.01603029998659622
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.5177603505939338,0.5208662737770111,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3354516999970656
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.4986737400530504,0.4845360824742268,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6031785999948625
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.5190866105408835,0.5229576624925462,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.9179558000032557
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.5217391304347826,0.5274914089347079,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5173210999928415
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,23,MinMaxScaler,SelectKBest,MLP,1600,400,ok,,0.49867021276595747,0.4838709677419355,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.511978899987298
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5129742820897244,0.5124113475177305,,0.01299430000653956
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.47877984084880637,0.4743758212877792,,0.014815000002272427
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.6065621035636029,0.6044192026221356,,0.01368999999249354
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5254295928958598,0.5199692780337941,,0.015514099999563769
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,24,MinMaxScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5762411347517731,0.5733333333333334,,0.012454200012143701
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.3536031000112416
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.48344660000293516
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.5394994810287164,0.5558845299777943,,0.40309379999234807
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.5381732210817668,0.5527528064761393,,0.4197848000039812
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,25,MinMaxScaler,None,RandomForest,1600,400,ok,,0.4920212765957447,0.4805194805194805,,0.38162490000831895
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.07135230000130832
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.10895210001035593
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.08039430000644643
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.08275850000791252
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,26,MinMaxScaler,None,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.07602120000228751
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,27,MinMaxScaler,None,kNN,1600,400,ok,,0.4973474801061008,0.4838709677419355,,0.017118600007961504
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,27,MinMaxScaler,None,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.020455599995329976
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,27,MinMaxScaler,None,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.01869930000975728
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,27,MinMaxScaler,None,kNN,1600,400,ok,,0.5217391304347826,0.5274914089347079,,0.021133699992788024
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,27,MinMaxScaler,None,kNN,1600,400,ok,,0.4946808510638298,0.48186528497409326,,0.019357299999683164
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,28,MinMaxScaler,None,MLP,1600,400,ok,,0.5190866105408835,0.5229576624925462,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.4935595999995712
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,28,MinMaxScaler,None,MLP,1600,400,ok,,0.5,0.4851994851994852,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6087794000050053
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,28,MinMaxScaler,None,MLP,1600,400,ok,,0.5217391304347826,0.5274914089347079,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.474855699998443
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,28,MinMaxScaler,None,MLP,1600,400,ok,,0.5217391304347826,0.5274914089347079,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5991434000025038
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,28,MinMaxScaler,None,MLP,1600,400,ok,,0.5,0.4845360824742268,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5330321999936132
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.5089955022488756,0.5078405193853243,,0.0192010000027949
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.5493022719409526,0.5579499930929687,,0.01694159999897238
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.5795179333410219,0.5733333333333334,,0.012784999998984858
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.609733594741091,0.5803829006031995,,0.014825500009465031
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,29,MinMaxScaler,None,DecisionTree,1600,400,ok,,0.5735815602836879,0.5680789798436857,,0.01644750000559725
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.5164340906469842,0.5188749074759438,,0.5198168999922927
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.5217391304347826,0.5274914089347079,,0.451753599991207
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.5434782608695652,0.5664516129032258,,0.5023965000000317
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.5394994810287164,0.5558845299777943,,0.42650980000325944
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,30,RobustScaler,PCA,RandomForest,1600,400,ok,,0.4973404255319149,0.48320413436692505,,0.4192534999892814
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.10266709999996237
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.05237000000488479
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.06830490000720602
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.04604739999922458
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,31,RobustScaler,PCA,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.04389220000302885
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,32,RobustScaler,PCA,kNN,1600,400,ok,,0.4973474801061008,0.4838709677419355,,0.028462100002798252
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,32,RobustScaler,PCA,kNN,1600,400,ok,,0.540825740975666,0.5591969718748503,,0.014699399995151907
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,32,RobustScaler,PCA,kNN,1600,400,ok,,0.5434782608695652,0.5664516129032258,,0.032588700007181615
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,32,RobustScaler,PCA,kNN,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.015550500000244938
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,32,RobustScaler,PCA,kNN,1600,400,ok,,0.49601063829787234,0.48253557567917205,,0.0147486000059871
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,33,RobustScaler,PCA,MLP,1600,400,ok,,0.4986737400530504,0.4845360824742268,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8114709999936167
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,33,RobustScaler,PCA,MLP,1600,400,ok,,0.5532810517818014,0.5667600373482726,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.3847825999982888
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,33,RobustScaler,PCA,MLP,1600,400,ok,,0.5315419213470188,0.5392412839809553,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5699461999902269
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,33,RobustScaler,PCA,MLP,1600,400,ok,,0.5,0.4851994851994852,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5602959999960149
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,33,RobustScaler,PCA,MLP,1600,400,ok,,0.4946808510638298,0.48186528497409326,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6768380999856163
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.52756314150617,0.5324288902270553,,0.020908700011204928
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.48938992042440316,0.4798439531859558,,0.017734099994413555
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.5861492330757698,0.5879323031640913,,0.020317300004535355
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.5861492330757698,0.5879323031640913,,0.02829360000032466
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,34,RobustScaler,PCA,DecisionTree,1600,400,ok,,0.4747340425531915,0.4715984147952444,,0.02246239999658428
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.36110730000655167
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.4149887000094168
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.34813840000424534
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.37172139999165665
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,35,RobustScaler,SelectKBest,RandomForest,1600,400,ok,,0.488031914893617,0.4784876140808344,,0.4875886000081664
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.046721699996851385
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.04344989999663085
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.0539134999999078
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.04904940001142677
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,36,RobustScaler,SelectKBest,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.05747010000050068
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.5177603505939338,0.5208662737770111,,0.024568299995735288
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.540825740975666,0.5591969718748503,,0.017278700004681014
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.029390199997578748
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.540825740975666,0.5591969718748503,,0.01799429999664426
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,37,RobustScaler,SelectKBest,kNN,1600,400,ok,,0.4973404255319149,0.48320413436692505,,0.019335999997565523
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.5190866105408835,0.5229576624925462,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.7805666000058409
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.554607311728751,0.5699585317155583,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5227273000054993
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.4973474801061008,0.4838709677419355,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.6056667000084417
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.4986737400530504,0.4845360824742268,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.964509099998395
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,38,RobustScaler,SelectKBest,MLP,1600,400,ok,,0.49867021276595747,0.4838709677419355,,1.1194810000015423
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5129742820897244,0.5124113475177305,,0.01296619999629911
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.47745358090185674,0.47368421052631576,,0.01379669999005273
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.6065621035636029,0.6044192026221356,,0.013580599988927133
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5267558528428093,0.521659548505186,,0.013003900006879121
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,39,RobustScaler,SelectKBest,DecisionTree,1600,400,ok,,0.5970744680851063,0.5916123458729287,,0.013911799993366003
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,40,RobustScaler,None,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.37040949999936856
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,40,RobustScaler,None,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.3982064000010723
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,40,RobustScaler,None,RandomForest,1600,400,ok,,0.5394994810287164,0.5558845299777943,,0.4318006000103196
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,40,RobustScaler,None,RandomForest,1600,400,ok,,0.5381732210817668,0.5527528064761393,,0.3695923000050243
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,40,RobustScaler,None,RandomForest,1600,400,ok,,0.4920212765957447,0.4805194805194805,,0.42586440000741277
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.049077200004830956
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.05936450000444893
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.061201899996376596
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.044083600005251355
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,41,RobustScaler,None,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.058419699998921715
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,42,RobustScaler,None,kNN,1600,400,ok,,0.4973474801061008,0.4838709677419355,,0.017272199998842552
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,42,RobustScaler,None,kNN,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.018658900007721968
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,42,RobustScaler,None,kNN,1600,400,ok,,0.5434782608695652,0.5664516129032258,,0.01900210000167135
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,42,RobustScaler,None,kNN,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.018089699995471165
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,42,RobustScaler,None,kNN,1600,400,ok,,0.49601063829787234,0.48253557567917205,,0.018932800012407824
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,43,RobustScaler,None,MLP,1600,400,ok,,0.5177603505939338,0.5208662737770111,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5297015999967698
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,43,RobustScaler,None,MLP,1600,400,ok,,0.5368469611348172,0.5497835497835498,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.5856312999967486
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,43,RobustScaler,None,MLP,1600,400,ok,,0.5164340906469842,0.5188749074759438,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.4439586000080453
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,43,RobustScaler,None,MLP,1600,400,ok,,0.5,0.4851994851994852,,1.3907922000071267
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,43,RobustScaler,None,MLP,1600,400,ok,,0.4946808510638298,0.48186528497409326,Stochastic Optimizer: Maximum iterations (200) reached and the optimization hasn't converged yet.,1.8560342999990098
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.5089955022488756,0.5078405193853243,,0.013854700009687804
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.547976011994003,0.5552410795511978,,0.03283789999841247
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.5795179333410219,0.5733333333333334,,0.023434999995515682
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.609733594741091,0.5803829006031995,,0.01383680000435561
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,44,RobustScaler,None,DecisionTree,1600,400,ok,,0.5944148936170213,0.5857644414134525,,0.013930399989476427
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,45,None,PCA,RandomForest,1600,400,ok,,0.520412870487833,0.5251612903225806,,0.4261159999878146
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,45,None,PCA,RandomForest,1600,400,ok,,0.5,0.4851994851994852,,0.48578409999026917
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,45,None,PCA,RandomForest,1600,400,ok,,0.5434782608695652,0.5664516129032258,,0.44075470000097994
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,45,None,PCA,RandomForest,1600,400,ok,,0.547976011994003,0.5552410795511978,,0.4281236999959219
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,45,None,PCA,RandomForest,1600,400,ok,,0.49601063829787234,0.48253557567917205,,0.5340186000103131
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,46,None,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.09927260001131799
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,46,None,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.12955610000062734
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,46,None,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.10240629999316297
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,46,None,PCA,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.11235100000340026
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,46,None,PCA,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.10507150000194088
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,47,None,PCA,kNN,1600,400,ok,,0.520412870487833,0.5251612903225806,,0.013502900008461438
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,47,None,PCA,kNN,1600,400,ok,,0.5,0.4851994851994852,,0.012064900001860224
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,47,None,PCA,kNN,1600,400,ok,,0.5,0.4851994851994852,,0.013220699998782948
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,47,None,PCA,kNN,1600,400,ok,,0.5,0.4851994851994852,,0.013453000006848015
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,47,None,PCA,kNN,1600,400,ok,,0.5,0.4845360824742268,,0.014218800002709031
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,48,None,PCA,MLP,1600,400,ok,,0.5050167224080268,0.5035249726938735,,0.9512992999952985
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,48,None,PCA,MLP,1600,400,ok,,0.5124553108061354,0.5134024078191199,,0.9632809000031557
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,48,None,PCA,MLP,1600,400,ok,,0.48408488063660476,0.477124183006536,,0.9059889999916777
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,48,None,PCA,MLP,1600,400,ok,,0.5031714911774882,0.5026937422295897,,1.5247506000014255
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,48,None,PCA,MLP,1600,400,ok,,0.4995567375886525,0.49869854429769594,,1.1604156999965198
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,49,None,PCA,DecisionTree,1600,400,ok,,0.5352323838080959,0.5210965238213194,,0.019899000006262213
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,49,None,PCA,DecisionTree,1600,400,ok,,0.6309537538922847,0.6309537538922847,,0.019615700002759695
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,49,None,PCA,DecisionTree,1600,400,ok,,0.507669242301926,0.5063759769642122,,0.023313400000915863
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,49,None,PCA,DecisionTree,1600,400,ok,,0.5956637066082344,0.5367762128325508,,0.019090200003120117
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,49,None,PCA,DecisionTree,1600,400,ok,,0.6099290780141844,0.5290087775636908,,0.02322930000082124
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,50,None,SelectKBest,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.32653530000243336
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,50,None,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.35177559999283403
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,50,None,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.35422860000107903
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,50,None,SelectKBest,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.3608358000055887
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,50,None,SelectKBest,RandomForest,1600,400,ok,,0.488031914893617,0.4784876140808344,,0.32218059999286197
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.10178959999757353
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.08387660000880715
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.09079479999491014
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.0771037999948021
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,51,None,SelectKBest,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.10810300000593998
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,52,None,SelectKBest,kNN,1600,400,ok,,0.5217391304347826,0.5274914089347079,,0.015922199992928654
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,52,None,SelectKBest,kNN,1600,400,ok,,0.5,0.4851994851994852,,0.015392100001918152
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,52,None,SelectKBest,kNN,1600,400,ok,,0.5,0.4851994851994852,,0.015639500008546747
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,52,None,SelectKBest,kNN,1600,400,ok,,0.5,0.4851994851994852,,0.011430400001700036
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,52,None,SelectKBest,kNN,1600,400,ok,,0.49867021276595747,0.4838709677419355,,0.014004600001499057
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,53,None,SelectKBest,MLP,1600,400,ok,,0.5262368815592204,0.5303218676612792,,0.5099418000027072
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,53,None,SelectKBest,MLP,1600,400,ok,,0.4960212201591512,0.48320413436692505,,0.5645770999981323
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,53,None,SelectKBest,MLP,1600,400,ok,,0.4925614116018914,0.4925614116018914,,0.8260078999883262
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,53,None,SelectKBest,MLP,1600,400,ok,,0.5254295928958598,0.5199692780337941,,1.0524316999944858
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,53,None,SelectKBest,MLP,1600,400,ok,,0.49601063829787234,0.48253557567917205,,0.8627384999999776
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.5129742820897244,0.5124113475177305,,0.013994799999636598
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.47745358090185674,0.47368421052631576,,0.013178599998354912
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.6065621035636029,0.6044192026221356,,0.013113499997416511
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.5267558528428093,0.521659548505186,,0.013454999992973171
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,54,None,SelectKBest,DecisionTree,1600,400,ok,,0.5970744680851063,0.5916123458729287,,0.01381980000587646
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,55,None,None,RandomForest,1600,400,ok,,0.5190866105408835,0.5229576624925462,,0.36926279999897815
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,55,None,None,RandomForest,1600,400,ok,,0.5421520009226156,0.5627111906181674,,0.39686880000226665
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,55,None,None,RandomForest,1600,400,ok,,0.5394994810287164,0.5558845299777943,,0.39397489999828395
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,55,None,None,RandomForest,1600,400,ok,,0.5381732210817668,0.5527528064761393,,0.37040559999877587
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,55,None,None,RandomForest,1600,400,ok,,0.4920212765957447,0.4805194805194805,,0.39791580000019167
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,56,None,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.08530849999806378
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,56,None,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.09697709999454673
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,56,None,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.09224820000235923
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,56,None,None,SVM,1600,400,ok,,0.5,0.4851994851994852,,0.09984320000512525
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,56,None,None,SVM,1600,400,ok,,0.5,0.4845360824742268,,0.0903517999977339
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,57,None,None,kNN,1600,400,ok,,0.520412870487833,0.5251612903225806,,0.011726000011549331
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,57,None,None,kNN,1600,400,ok,,0.4986737400530504,0.4845360824742268,,0.014603999996325001
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,57,None,None,kNN,1600,400,ok,,0.5,0.4851994851994852,,0.014621499998611398
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,57,None,None,kNN,1600,400,ok,,0.5,0.4851994851994852,,0.013948200008599088
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,57,None,None,kNN,1600,400,ok,,0.5,0.4845360824742268,,0.014675699989311397
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,58,None,None,MLP,1600,400,ok,,0.4960212201591512,0.48320413436692505,,0.5830725999985589
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,58,None,None,MLP,1600,400,ok,,0.4761273209549072,0.47299077733860345,,0.35513260000152513
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,58,None,None,MLP,1600,400,ok,,0.48460385192019373,0.48580830933772107,,0.4019292000011774
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,58,None,None,MLP,1600,400,ok,,0.4925614116018914,0.4925614116018914,,0.6108243000053335
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,58,None,None,MLP,1600,400,ok,,0.5150709219858156,0.5156268019836235,,0.32115310001245234
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,0,59,None,None,DecisionTree,1600,400,ok,,0.5089955022488756,0.5078405193853243,,0.013439799993648194
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,1,59,None,None,DecisionTree,1600,400,ok,,0.547976011994003,0.5552410795511978,,0.015333600007579662
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,2,59,None,None,DecisionTree,1600,400,ok,,0.5795179333410219,0.5733333333333334,,0.01526719999674242
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,3,59,None,None,DecisionTree,1600,400,ok,,0.609733594741091,0.5803829006031995,,0.015055099996970966
+362956,Amazon_employee_access_seed_3_nrows_2000_nclasses_10_ncols_100_stratify_True,4,59,None,None,DecisionTree,1600,400,ok,,0.5944148936170213,0.5857644414134525,,0.016693400000804104
