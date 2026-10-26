@@ -72,7 +72,12 @@ def run():
     indices = np.array([np.flatnonzero(historic_ids == tid)[0] for tid in ids])
     old_x = np.load(historic/"X_emb.npy")[indices]
     old_y = np.load(historic/"Y_accuracy.npy")[indices]
-    new_x, new_y = np.load(OUTPUT/"X_emb.npy"), np.load(OUTPUT/"Y_accuracy.npy")
+    # Mesma precisão das matrizes históricas: evita introduzir uma mudança de
+    # desempate por usar float64 apenas na condição reconstruída. As médias de
+    # origem em float64 continuam preservadas nos CSVs e NPY da Fase 1.
+    old_x, old_y = old_x.astype(np.float32), old_y.astype(np.float32)
+    new_x = np.load(OUTPUT/"X_emb.npy").astype(np.float32)
+    new_y = np.load(OUTPUT/"Y_accuracy.npy").astype(np.float32)
     cases = {}
     for name, x, y in [("historico_mesmos_folds", old_x, old_y),
                         ("novos_escores_vetor_historico", old_x, new_y),
@@ -105,6 +110,7 @@ def run():
                "phase1_manifest_sha256": sha256(OUTPUT/"manifesto.json"),
                "reference_input_sha256": {name: sha256(historic/name) for name in ["X_emb.npy", "Y_accuracy.npy", "task_ids.npy"]},
                "n_tasks": len(ids), "n_groups": len(set(groups)), "conditions": list(cases),
+               "comparison_input_dtype": "float32 for vectors and scores in all three conditions; float64 source scores retained",
                "same_outer_splits": True, "caveat": "Retrospective grouped CV; bootstrap intervals descriptive."})
     print(pd.concat(combined).query("metrica == 'kendall_ponderado'")[["condicao", "modelo", "media_grupos"]].to_string(index=False))
 

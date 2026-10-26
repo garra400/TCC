@@ -73,6 +73,11 @@ As diferenças entre condições são pareadas por grupo e não equivalem a uma
 prova causal isolada da imputação: a reconstrução também altera a amostra da SVM,
 a codificação por fold e o controle aleatório da PCA.
 
+As três condições usam vetores e escores com a mesma precisão float32 das matrizes
+históricas na entrada da Fase 2. Isso evita mudar o tratamento de empates apenas
+por usar float64 na condição nova. Os escores originais reconstruídos em float64
+continuam preservados nos CSVs e NPY da Fase 1.
+
 ## Artefatos e integridade
 
 Diretório novo: `projeto/resultados/fase1_corrigida_2026/`.
@@ -89,6 +94,12 @@ Diretório novo: `projeto/resultados/fase1_corrigida_2026/`.
 Checkpoints são validados por hash de código/configuração e conteúdo. Os dados
 brutos em cache ficam locais, sem envio ao GitHub. A documentação e os números
 finais devem ser gerados somente depois de terminar e validar a execução.
+
+Os tempos por linha de fold medem ajuste e predição do classificador, incluindo
+o cálculo das métricas. As transformações compartilhadas não são repetidas
+nesses tempos; o tempo por tarefa nos checkpoints inclui o conjunto do trabalho.
+O campo `tempo_total_s` do resumo soma os tempos dos classificadores nos folds e
+não é diretamente comparável ao tempo histórico de uma CV paralela completa.
 
 O desenho segue as recomendações de separação do pré-processamento e prevenção
 de vazamento da [documentação oficial do scikit-learn](https://scikit-learn.org/stable/common_pitfalls.html).

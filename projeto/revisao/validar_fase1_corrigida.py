@@ -13,6 +13,7 @@ def run():
     ids = np.load(OUTPUT/"task_ids.npy")
     expected_signature = execution_signature(CONFIG)
     errors = []
+    all_folds = []
     n_records = 0
     for tid in ids:
         folds_file = OUTPUT/"folds"/f"task_{tid}.csv"
@@ -22,6 +23,7 @@ def run():
         assert metadata["folds_sha256"] == sha256(folds_file), f"Checkpoint alterado: {tid}"
         assert metadata["raw_sha256"] == catalog.loc[tid, "raw_sha256"], f"Dados de origem alterados: {tid}"
         folds = pd.read_csv(folds_file)
+        all_folds.append(folds)
         assert len(folds) == 300 and not folds.duplicated(["pipeline_id", "fold"]).any()
         n_records += len(folds)
         n = int(catalog.loc[tid, "n_instancias"])
@@ -42,10 +44,16 @@ def run():
         assert folds.loc[valid, "balanced_accuracy"].between(0, 1).all()
     y = np.load(OUTPUT/"Y_accuracy.npy")
     assert y.shape == (len(ids), 60)
+    raw = pd.concat(all_folds, ignore_index=True)
+    expected = raw.groupby(["task_id", "pipeline_id"]).balanced_accuracy.agg(["mean", "count"])
+    expected.loc[expected["count"].ne(5), "mean"] = np.nan
+    expected_matrix = expected["mean"].unstack("pipeline_id").reindex(index=ids, columns=range(60)).to_numpy()
+    np.testing.assert_allclose(y, expected_matrix, atol=1e-12, rtol=0, equal_nan=True)
     assert np.isfinite(np.load(OUTPUT/"X_emb.npy")).all()
     result = {"n_tasks": len(ids), "n_pipelines": 60, "n_fits": n_records,
               "same_rows_all_classifiers": True, "disjoint_train_test_rows": True,
               "all_rows_tested_once": True, "checksums_verified": True,
+              "matrix_matches_five_fold_scores": True,
               "failed_fits": len(errors), "missing_pipeline_scores": int(np.isnan(y).sum()),
               "signature": expected_signature}
     write_json(OUTPUT/"validacao.json", result)

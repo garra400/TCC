@@ -35,6 +35,7 @@ def run():
     errors = pd.read_csv(primary/"diagnostico_erros.csv")
     correlations = pd.read_csv(primary/"correlacoes_erros.csv")
     catalog = pd.read_csv(OUTPUT/"datasets.csv")
+    quality = pd.read_csv(OUTPUT/"qualidade_atributos.csv")
     selected_k = pd.read_csv(primary/"selecao_k_interna.csv")
     labels = {"aleatorio": "Aleatório", "media_global": "Média global", "knn_ajustado": "k-NN ajustado",
               "knn_padronizado_ajustado": "k-NN padronizado", "random_forest": "Random Forest"}
@@ -47,6 +48,8 @@ def run():
               "N_ERRORS_KNN": int(errors.correlacao_nao_positiva.sum()),
               "N_UNDEFINED": int(errors.correlacao_indefinida.sum()),
               "N_NAMES": catalog.loc[catalog.elegivel, "nome_dataset"].nunique()}
+    fields.update(N_CATEGORICAL_ONLY=int(quality.somente_categoricos.sum()),
+                  N_POSSIBLE_IDENTIFIERS=int(quality.possivel_identificador_ou_caminho.sum()))
     for short, model in [("KNN", "knn_ajustado"), ("RF", "random_forest"), ("GLOBAL", "media_global"), ("RANDOM", "aleatorio")]:
         for metric, abbrev in [("kendall_ponderado", "TAU"), ("spearman", "RHO"), ("regret_1", "REGRET"), ("ndcg_5", "NDCG")]:
             fields[f"{abbrev}_{short}"] = number(score(model, metric))
@@ -96,7 +99,7 @@ A validação dos artefatos verificou ausência de sobreposição entre treino e
 
 \section{Comparação Controlada das Condições}
 
-Três condições foram avaliadas nas mesmas tarefas, grupos e partições externas: (i) escores e vetores históricos; (ii) escores reconstruídos com vetores históricos; e (iii) escores reconstruídos com vetores recalculados dos dados brutos. O segundo caso mantém a representação fixa para examinar o efeito dos novos alvos; o terceiro constitui a avaliação principal. Em todos os casos, o ajuste de k e da padronização ocorre somente no treino interno.
+Três condições foram avaliadas nas mesmas tarefas, grupos e partições externas: (i) escores e vetores históricos; (ii) escores reconstruídos com vetores históricos; e (iii) escores reconstruídos com vetores recalculados dos dados brutos. O segundo caso mantém a representação fixa para examinar o efeito dos novos alvos; o terceiro constitui a avaliação principal. As entradas das três condições usam precisão float32, como as matrizes históricas, preservando a mesma resolução numérica para tratar empates; os escores reconstruídos de origem permanecem em float64 nos artefatos da Fase 1. Em todos os casos, o ajuste de k e da padronização ocorre somente no treino interno.
 
 A \autoref{tab:condicoesFaseUm} apresenta a comparação de Kendall ponderado. As médias de cada condição usam os grupos com métrica definida; a diferença é calculada de forma pareada, apenas com tarefas e grupos avaliáveis em ambas. Assim, a diferença pareada não precisa coincidir exatamente com a subtração de duas médias calculadas com suportes distintos. Os intervalos descritivos completos e as três condições estão nos CSVs.
 
@@ -108,7 +111,7 @@ A \autoref{tab:condicoesFaseUm} apresenta a comparação de Kendall ponderado. A
 \fonte{Autoria própria (2026).}
 \end{table}
 
-O k-NN apresentou $\tau_w=@@OLD_TAU_KNN@@$ com escores históricos e $\tau_w=@@TAU_KNN@@$ após reconstrução completa; Random Forest passou de $@@OLD_TAU_RF@@$ para $@@TAU_RF@@$. Esses resultados caracterizam a mudança no benchmark sob partições equivalentes. Não isolam causalmente apenas a imputação: também mudam a codificação por fold, a amostra da SVM, a semente explícita da PCA e, na condição principal, a recomputação dos vetores. A análise com vetor histórico fixo ajuda a distinguir o efeito dos escores daquele da representação.
+O k-NN apresentou $\tau_w=@@OLD_TAU_KNN@@$ com escores históricos e $\tau_w=@@TAU_KNN@@$ após reconstrução completa; Random Forest passou de $@@OLD_TAU_RF@@$ para $@@TAU_RF@@$. Esses resultados caracterizam a mudança no benchmark sob partições equivalentes. Não isolam causalmente apenas a imputação: também mudam a codificação por fold, a amostra da SVM, a semente explícita da PCA e, na condição principal, a recomputação dos vetores. A análise com vetor histórico fixo ajuda a distinguir o efeito dos escores daquele da representação. Os próprios rankings reais são recalculados e a cobertura pode mudar quando pipelines antes ausentes passam a ter escore; portanto, a diferença não isola ganho de capacidade preditiva sob uma única verdade de referência e um conjunto idêntico de itens avaliáveis.
 
 O antigo valor de aproximadamente $0{,}5222$ para k-NN no LOO por tarefa não é a referência controlada desta seção. Ele usava outro protocolo e potencialmente mantinha tarefas relacionadas no treino; compará-lo diretamente aos resultados atuais atribuiria à Fase 1 diferenças de desenho da avaliação.
 
@@ -152,7 +155,7 @@ O k-NN ajustado apresentou @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não p
 
 A reconstrução corrige os dois problemas identificados na produção dos escores: estimar imputação antes da CV e usar amostra exclusiva da SVM. O controle também inclui codificação e seleção ajustadas no treino. A inclusão desses cuidados não implica aumento necessário das métricas; o objetivo é estimar desempenho sob condições comparáveis.
 
-Permanecem como limites: avaliação retrospectiva, agrupamento conservador que pode não detectar todas as famílias, codificação ordinal de variáveis nominais, correlações de rótulos multiclasses dependentes de sua codificação e orçamento fixo de treinamento. A representação descreve um conjunto rotulado completo e não cobre consulta sem rótulos. Intervalos de bootstrap dos grupos são descritivos, pois treinos de folds se sobrepõem. A comparação de metamodelos com o mesmo vetor não substitui uma ablação de representações.
+Permanecem como limites: avaliação retrospectiva, agrupamento conservador que pode não detectar todas as famílias, codificação ordinal de variáveis nominais, correlações de rótulos multiclasses dependentes de sua codificação e orçamento fixo de treinamento. A auditoria registra @@N_CATEGORICAL_ONLY@@ tarefas somente categóricas e @@N_POSSIBLE_IDENTIFIERS@@ com nomes sugestivos de identificadores ou caminhos. Esses indicadores exigem interpretação de escopo e não demonstram vazamento por si só; não foram usados para excluir tarefas após observar resultados. A representação descreve um conjunto rotulado completo e não cobre consulta sem rótulos. Intervalos de bootstrap dos grupos são descritivos, pois treinos de folds se sobrepõem. A comparação de metamodelos com o mesmo vetor não substitui uma ablação de representações.
 
 O piloto anterior de 180 avaliações de hiperparâmetros permanece como evidência exploratória separada. O arsenal principal foi mantido em 60 candidatos para comparar protocolos e metamodelos sob espaço controlado. Expandir todo o arsenal, otimizar os metamodelos e avaliar conjuntos externos coletados após o desenvolvimento são próximos passos, sem tratar resultados de outros benchmarks como comparações numéricas equivalentes \cite{Gijsbers2024,Baratchi2024}.
 '''
@@ -270,7 +273,7 @@ Reportam-se NDCG completo e NDCG@5. Regret@1 é a diferença para a melhor acur�
 
 \subsection{Comparação Controlada e Diagnóstico}
 
-Executam-se três condições com as mesmas tarefas, grupos e folds externos: matrizes históricas; escores reconstruídos com vetores históricos; e escores e vetores reconstruídos. A comparação pareada examina as mesmas tarefas/grupos avaliáveis nas duas condições. Ela distingue parte do efeito da representação, mas não isola causalmente somente a imputação, pois também mudam a codificação por fold, a amostra da SVM e o controle aleatório da PCA.
+Executam-se três condições com as mesmas tarefas, grupos e folds externos: matrizes históricas; escores reconstruídos com vetores históricos; e escores e vetores reconstruídos. As entradas usam precisão float32 em todas as condições, como no armazenamento histórico, evitando mudar a resolução dos empates somente na condição nova. Os valores originais reconstruídos em float64 são preservados. A comparação pareada examina as mesmas tarefas/grupos avaliáveis nas duas condições. Ela distingue parte do efeito da representação, mas não isola causalmente somente a imputação, pois também mudam a codificação por fold, a amostra da SVM e o controle aleatório da PCA.
 
 Calculam-se médias dentro dos grupos e depois entre grupos. Intervalos descritivos de 95\% usam 2.000 reamostragens de grupos, com semente 42; a sobreposição dos treinos limita a interpretação inferencial. O diagnóstico usa cinco associações de Spearman por grupo (tamanho, atributos, proporção majoritária, atributos constantes e distância ao vizinho), com ajuste Benjamini--Hochberg e sem atribuição causal.
 
@@ -341,7 +344,7 @@ As médias são calculadas dentro de grupo e depois entre grupos. Intervalos des
 
 \subsection{Condições de Comparação}
 
-As mesmas tarefas, grupos e folds avaliam: (i) matrizes históricas; (ii) escores reconstruídos e vetores históricos; e (iii) escores e vetores reconstruídos, a condição principal. A diferença pareada usa casos avaliáveis em ambas as condições. Comparar escores históricos e novos também altera os próprios rankings reais usados como alvo; por isso, a diferença não isola ganho de capacidade preditiva sob uma única verdade de referência. A comparação com vetor fixo ajuda a separar representação e escores, mantendo essa limitação.
+As mesmas tarefas, grupos e folds avaliam: (i) matrizes históricas; (ii) escores reconstruídos e vetores históricos; e (iii) escores e vetores reconstruídos, a condição principal. As entradas usam precisão float32 em todas as condições, compatível com as matrizes históricas; os escores reconstruídos de origem ficam preservados em float64. A diferença pareada usa casos avaliáveis em ambas as condições. Comparar escores históricos e novos também altera os próprios rankings reais usados como alvo; por isso, a diferença não isola ganho de capacidade preditiva sob uma única verdade de referência. A comparação com vetor fixo ajuda a separar representação e escores, mantendo essa limitação.
 
 \section{Resultados e Discussão}
 
@@ -382,7 +385,7 @@ O diagnóstico registra @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não posi
 
 \subsection{Limitações}
 
-A reconstrução conclui o tratamento antes pendente na Fase 1, sem tornar a avaliação externa ou prospectiva. Permanecem grupos potencialmente incompletos, codificação nominal ordinal, rótulos necessários na consulta, hiperparâmetros fixos e orçamento de MLP sujeito a avisos de convergência. Os intervalos são descritivos devido à sobreposição dos treinos. Comparar dois preditores sobre um vetor não constitui ablação completa de representações. O piloto anterior de 180 avaliações permanece separado e não equivale a expandir todo o arsenal.
+A reconstrução conclui o tratamento antes pendente na Fase 1, sem tornar a avaliação externa ou prospectiva. Permanecem grupos potencialmente incompletos, codificação nominal ordinal, rótulos necessários na consulta, hiperparâmetros fixos e orçamento de MLP sujeito a avisos de convergência. A auditoria identifica @@N_CATEGORICAL_ONLY@@ tarefas somente categóricas e @@N_POSSIBLE_IDENTIFIERS@@ com nomes sugestivos de identificadores/caminhos, sem usá-los para seleção após observar resultados. Os intervalos são descritivos devido à sobreposição dos treinos. Comparar dois preditores sobre um vetor não constitui ablação completa de representações. O piloto anterior de 180 avaliações permanece separado e não equivale a expandir todo o arsenal.
 
 \section{Conclusão}
 
@@ -400,6 +403,20 @@ Os autores agradecem à Universidade Tecnológica Federal do Paraná pelo apoio 
 \end{document}
 ''', fields)
     article_file.write_text(article, encoding="utf-8", newline="\n")
+    intro_file = ROOT/"capitulos/cap-introducao.tex"
+    intro = intro_file.read_text(encoding="utf-8")
+    replacement = render(r'''Diante desse cenário, este trabalho investiga o ranqueamento e a recomendação de pipelines de classificação por meta-aprendizado. A proposta compreende: (i) auditar um acervo histórico de 201 tarefas OpenML e reconstruir os escores de 60 pipelines sobre @@N_TASKS@@ tarefas elegíveis, com pré-processamento ajustado somente no treino e amostras equivalentes para todos os classificadores; (ii) representar cada tarefa rotulada por um vetor estatístico determinístico de 55 descritores e nove zeros; e (iii) comparar k-NN e Random Forest multi-saída com baselines, usando validação por grupos, ajuste interno e comparação controlada com os escores históricos. A avaliação inclui @@N_GROUPS@@ grupos e permanece retrospectiva, sem inferir superioridade universal a partir das métricas do benchmark.''', fields)
+    intro, count = re.subn(r"Diante desse cenário,.*?(?=\n\n)", lambda _: replacement.strip(), intro, count=1, flags=re.S)
+    if count != 1:
+        raise ValueError("Não foi localizado o parágrafo de apresentação da proposta na introdução.")
+    intro = intro.replace("com reprodução LOO histórica e validação principal por grupos", "com comparação controlada e validação principal por grupos")
+    intro_file.write_text(intro, encoding="utf-8", newline="\n")
+    from projeto.revisao.fase1_corrigida import CONFIG, make_classifier
+    current_config = json.loads(CONFIG.read_text(encoding="utf-8"))
+    write_json(OUTPUT/"parametros_classificadores.json", {
+        "base_classifiers": {name: make_classifier(name, current_config).get_params()
+                             for name in current_config["classifiers"]},
+        "note": "Parâmetros efetivos da reconstrução; seletores e pré-processamento descritos na configuração e código."})
     documentation = ROOT/"docs/fase1_corrigida"
     documentation.mkdir(parents=True, exist_ok=True)
     write_json(documentation/"CAMPOS_TCC.json", fields)

@@ -14,6 +14,26 @@ from projeto.revisao.fase1_corrigida import CONFIG, make_splits, pipeline_keys, 
 
 
 class PhaseOneTests(unittest.TestCase):
+    def test_condition_comparison_weights_groups_and_only_pairs_observed_scores(self):
+        from projeto.revisao.avaliar_fase1_corrigida import compare_conditions
+        from projeto.revisao.experimentos import METRICS
+        base = pd.DataFrame({"task_id": [1, 2, 3], "grupo": ["a", "a", "b"],
+                             "modelo": ["knn_ajustado"]*3, "fold": [0, 0, 1]})
+        for metric in METRICS:
+            base[metric] = [.2, .4, .3]
+        complete = base.copy()
+        partial = base.copy()
+        for metric in METRICS:
+            complete[metric] = [.4, .4, .6]
+            partial[metric] = [.4, np.nan, .6]
+        cases = {"historico_mesmos_folds": (base, None, None),
+                 "novos_escores_vetor_historico": (partial, None, None),
+                 "reconstrucao_completa": (complete, None, None)}
+        result = compare_conditions(cases, {"bootstrap_samples": 50, "seed": 42})
+        self.assertTrue(np.allclose(result.query("condicao == 'reconstrucao_completa'").diferenca_media_grupos, .2))
+        self.assertTrue(np.allclose(result.query("condicao == 'novos_escores_vetor_historico'").diferenca_media_grupos, .25))
+        self.assertTrue(result.n_grupos_pareados.eq(2).all())
+
     def test_split_keeps_all_rows_and_classes_and_never_overlaps(self):
         config = json.loads(CONFIG.read_text())
         y = np.repeat([0, 1], [70, 30])
