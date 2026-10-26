@@ -47,6 +47,8 @@ def run():
               "N_WARNINGS": manifest["convergence_warnings"],
               "N_ERRORS_KNN": int(errors.correlacao_nao_positiva.sum()),
               "N_UNDEFINED": int(errors.correlacao_indefinida.sum()),
+              "N_CONSTANT_TARGET": int(errors.status.eq("alvo_constante").sum()),
+              "N_CONSTANT_PREDICTION": int(errors.status.eq("predicao_constante").sum()),
               "N_NAMES": catalog.loc[catalog.elegivel, "nome_dataset"].nunique()}
     fields.update(N_CATEGORICAL_ONLY=int(quality.somente_categoricos.sum()),
                   N_POSSIBLE_IDENTIFIERS=int(quality.possivel_identificador_ou_caminho.sum()))
@@ -156,7 +158,7 @@ O regret@1 foi $@@REGRET_KNN@@$ para k-NN, $@@REGRET_RF@@$ para Random Forest e 
 
 \section{Diagnóstico de Falhas}
 
-O k-NN ajustado apresentou @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não positivo e @@N_UNDEFINED@@ com correlação indefinida. O diagnóstico liga cada task a tamanho, dimensionalidade, balanceamento, atributos constantes, distância ao vizinho de treino, predições e estado de avaliação. @@WORST_CASES@@ A inspeção permite reproduzir os casos, sem atribuir automaticamente suas falhas a uma característica isolada. @@CORRELATIONS@@ Essas associações não demonstram causalidade nem explicam isoladamente a variabilidade.
+O k-NN ajustado apresentou @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não positivo e @@N_UNDEFINED@@ com correlação indefinida. Foram registradas @@N_CONSTANT_TARGET@@ tarefas com escores reais constantes e @@N_CONSTANT_PREDICTION@@ com predição constante e escores reais variáveis. Uma correlação indefinida não é promovida a acerto nem convertida em zero. O diagnóstico liga cada task a tamanho, dimensionalidade, balanceamento, atributos constantes, distância ao vizinho de treino, predições e estado de avaliação. @@WORST_CASES@@ A inspeção permite reproduzir os casos, sem atribuir automaticamente suas falhas a uma característica isolada. @@CORRELATIONS@@ Essas associações não demonstram causalidade nem explicam isoladamente a variabilidade.
 
 \begin{figure}[htbp]
 \centering
@@ -396,7 +398,7 @@ A Tabela~\ref{tab:modelos} apresenta os metamodelos sobre a matriz reconstruída
 
 O regret@1 é $@@REGRET_KNN@@$ para k-NN, $@@REGRET_RF@@$ para Random Forest e $@@REGRET_GLOBAL@@$ para média global. A baseline aleatória já apresenta NDCG@5 $@@NDCG_RANDOM@@$, ilustrando por que NDCG alto não demonstra top-5 correto. Correlações, relevância e perda da primeira recomendação são interpretadas conjuntamente.
 
-O diagnóstico registra @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não positivo e @@N_UNDEFINED@@ indefinidas. @@WORST_CASES@@ @@CORRELATIONS@@ Essas associações não demonstram causalidade ou explicação exclusiva da instabilidade.
+O diagnóstico registra @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não positivo e @@N_UNDEFINED@@ indefinidas. Há @@N_CONSTANT_TARGET@@ tarefas com escores reais constantes e @@N_CONSTANT_PREDICTION@@ com predição constante e escores reais variáveis; casos indefinidos não são convertidos em acerto ou zero. @@WORST_CASES@@ @@CORRELATIONS@@ Essas associações não demonstram causalidade ou explicação exclusiva da instabilidade.
 
 \subsection{Limitações}
 
@@ -445,6 +447,8 @@ Os autores agradecem à Universidade Tecnológica Federal do Paraná pelo apoio 
     source_files = ["projeto/revisao/fase1_corrigida.py", "projeto/revisao/pipeline_bruto.py",
                     "projeto/fase1_meta_conjunto/embedding_generator.py",
                     "projeto/revisao/avaliar_fase1_corrigida.py", "projeto/revisao/experimentos.py",
+                    "projeto/revisao/validar_fase1_corrigida.py", "projeto/revisao/auditar_atributos_fase1.py",
+                    "projeto/revisao/figuras.py",
                     "projeto/revisao/relatorio_fase1_corrigida.py", "projeto/revisao/config_fase1.json",
                     "projeto/revisao/config.json", "scripts/compilar_documentos.py"]
     write_json(OUTPUT/"proveniencia_codigo.json", {"sources_sha256": {name: sha256(ROOT/name) for name in source_files},
@@ -484,6 +488,9 @@ A diferença Random Forest menos k-NN na avaliação principal é
 @@MODEL_INTERPRETATION@@ Há @@N_VALID@@ tarefas em @@N_VALID_GROUPS@@ grupos com
 correlação definida para o k-NN. O diagnóstico registra @@N_ERRORS_KNN@@ casos
 não positivos e @@N_UNDEFINED@@ indefinidos.
+Os estados distinguem @@N_CONSTANT_TARGET@@ tarefas com alvo constante e
+@@N_CONSTANT_PREDICTION@@ com predição constante e alvo variável; as médias de
+correlação usam somente os casos definidos, sem convertê-los em acerto ou zero.
 
 A referência acima usa as mesmas tarefas, grupos e folds. O valor antigo do
 LOO por tarefa não é uma comparação direta. Mesmo nesta comparação controlada,
@@ -497,9 +504,12 @@ Os CSVs preservam as três condições, seus suportes e diferenças pareadas.
 | Informação | Arquivo |
 | --- | --- |
 | Protocolo e parâmetros da reconstrução | [PROTOCOLO.md](PROTOCOLO.md) |
+| Validação final dos resultados e documentos | [VALIDACAO.md](VALIDACAO.md) |
 | Solicitações, ações, evidências e pendências | [modificacoes.csv](modificacoes.csv) |
 | Campos usados no texto | [CAMPOS_TCC.json](CAMPOS_TCC.json) |
 | Catálogo, origem bruta, grupos e exclusões | [datasets.csv](../../projeto/resultados/fase1_corrigida_2026/datasets.csv) |
+| Auditoria dos tipos e possíveis identificadores | [qualidade_atributos.csv](../../projeto/resultados/fase1_corrigida_2026/qualidade_atributos.csv) |
+| Parâmetros efetivos dos classificadores | [parametros_classificadores.json](../../projeto/resultados/fase1_corrigida_2026/parametros_classificadores.json) |
 | Manifesto da Fase 1 | [manifesto.json](../../projeto/resultados/fase1_corrigida_2026/manifesto.json) |
 | Auditoria da cobertura e igualdade de amostras | [validacao.json](../../projeto/resultados/fase1_corrigida_2026/validacao.json) |
 | Matrizes e médias por tarefa/pipeline | [pipelines_raw.csv](../../projeto/resultados/fase1_corrigida_2026/pipelines_raw.csv) |
@@ -508,6 +518,8 @@ Os CSVs preservam as três condições, seus suportes e diferenças pareadas.
 | Desempenho principal por task/modelo | [metricas_por_task.csv](../../projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa/metricas_por_task.csv) |
 | Diagnóstico de erros | [diagnostico_erros.csv](../../projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa/diagnostico_erros.csv) |
 | Escores que mudaram desde o histórico | [comparacao_escores.csv](../../projeto/resultados/fase1_corrigida_2026/comparacao_escores.csv) |
+| Mudança de escores por classificador | [comparacao_escores_classificador.csv](../../projeto/resultados/fase1_corrigida_2026/comparacao_escores_classificador.csv) |
+| Registro dos 14 testes automatizados | [testes_unitarios.txt](../../projeto/resultados/fase1_corrigida_2026/testes_unitarios.txt) |
 | TCC revisado | [tcc_revisado.pdf](../../documentos/tcc_revisado.pdf) |
 | Artigo revisado | [artigo_revisado.pdf](../../documentos/artigo_revisado.pdf) |
 

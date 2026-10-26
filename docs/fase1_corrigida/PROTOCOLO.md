@@ -88,7 +88,8 @@ continuam preservados nos CSVs e NPY da Fase 1.
 Diretório novo: `projeto/resultados/fase1_corrigida_2026/`.
 
 - `datasets.csv`: dados, alvo, elegibilidade, grupos e hashes da origem.
-- `folds/task_ID.csv`: cada ajuste, score, parâmetros, amostra, tempo e aviso.
+- `folds/task_ID.csv`: cada ajuste, identidade do pipeline, escore, amostra, tempo e aviso.
+- `parametros_classificadores.json`: parâmetros efetivos dos classificadores.
 - `splits/task_ID.json`: índices exatos de treino e teste.
 - `progresso.json`: estado da execução e quantidade de tarefas concluídas.
 - `pipelines_raw.csv`: média dos cinco folds por tarefa/pipeline.
@@ -99,6 +100,10 @@ Diretório novo: `projeto/resultados/fase1_corrigida_2026/`.
 Checkpoints são validados por hash de código/configuração e conteúdo. Os dados
 brutos em cache ficam locais, sem envio ao GitHub. A documentação e os números
 finais devem ser gerados somente depois de terminar e validar a execução.
+Quando os caches locais estão disponíveis, a validação também confere seus
+hashes e regenera os índices da estratificação com semente 42 para compará-los
+aos índices efetivamente salvos. Sem os caches, permanecem as verificações
+estruturais dos artefatos publicados; a quantidade de caches conferidos é explícita.
 
 Os tempos por linha de fold medem ajuste e predição do classificador, incluindo
 o cálculo das métricas. As transformações compartilhadas não são repetidas
