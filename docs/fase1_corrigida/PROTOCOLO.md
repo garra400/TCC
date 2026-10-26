@@ -43,8 +43,13 @@ automático com semente 42; o seletor usa até dez componentes/atributos, limita
 ao número disponível. A semente explícita controla a parte aleatória da PCA,
 não fixada no código histórico.
 
-Quatro processos trabalham em tarefas diferentes; cada processo usa uma thread
-BLAS e um único job nos classificadores. Isso evita multiplicação de threads.
+A execução iniciou com quatro processos e foi retomada com seis, após validar
+13 checkpoints completos. Os processos retomados usam prioridade BelowNormal,
+preservando a responsividade do computador. Cada processo usa uma thread BLAS
+e um único job nos classificadores; os hiperparâmetros, sementes e dados não
+foram alterados na retomada. O ajuste operacional está em
+`execucao_operacional.json`; o valor padrão de quatro workers na configuração
+foi sobrescrito pelo argumento de execução `--workers 6`.
 Avisos de convergência não são escondidos; escores continuam válidos para o
 orçamento fixo de 200 iterações, com a limitação registrada. Se algum fold
 falhar, o escore agregado desse pipeline/tarefa fica ausente, sem promover
@@ -103,3 +108,8 @@ não é diretamente comparável ao tempo histórico de uma CV paralela completa.
 
 O desenho segue as recomendações de separação do pré-processamento e prevenção
 de vazamento da [documentação oficial do scikit-learn](https://scikit-learn.org/stable/common_pitfalls.html).
+
+As versões diretas utilizadas estão fixadas em
+`projeto/requirements-fase1-lock.txt`. Para retomar checkpoints, mantenha o
+ambiente registrado: versões diferentes invalidam a assinatura. O protocolo
+pode ser repetido em outro diretório de saída se houver nova configuração.

@@ -50,6 +50,13 @@ def run():
               "N_NAMES": catalog.loc[catalog.elegivel, "nome_dataset"].nunique()}
     fields.update(N_CATEGORICAL_ONLY=int(quality.somente_categoricos.sum()),
                   N_POSSIBLE_IDENTIFIERS=int(quality.possivel_identificador_ou_caminho.sum()))
+    operational_path = OUTPUT/"execucao_operacional.json"
+    fields["WORKER_DESCRIPTION"] = "quatro processos"
+    if operational_path.exists():
+        operational = json.loads(operational_path.read_text(encoding="utf-8"))
+        fields["WORKER_DESCRIPTION"] = ("quatro processos inicialmente e seis após retomada dos checkpoints"
+                                         if operational.get("resumed_workers") == 6 else
+                                         str(operational["resumed_workers"])+" processos após retomada")
     for short, model in [("KNN", "knn_ajustado"), ("RF", "random_forest"), ("GLOBAL", "media_global"), ("RANDOM", "aleatorio")]:
         for metric, abbrev in [("kendall_ponderado", "TAU"), ("spearman", "RHO"), ("regret_1", "REGRET"), ("ndcg_5", "NDCG")]:
             fields[f"{abbrev}_{short}"] = number(score(model, metric))
@@ -72,6 +79,14 @@ def run():
             corr_text.append(row.variavel.replace("_", r"\_")+f" ($\\rho={number(row.spearman)}$, $q={number(row.q_bh)}$)")
     fields["CORRELATIONS"] = ("Após ajuste Benjamini--Hochberg das cinco comparações, foram observadas associações para: "+"; ".join(corr_text)+"."
                                if corr_text else "Nenhuma das cinco associações exploratórias permaneceu abaixo de $q=0{,}05$ após ajuste Benjamini--Hochberg.")
+    worst = errors.dropna(subset=["kendall_ponderado"]).nsmallest(3, "kendall_ponderado")
+    examples = []
+    for row in worst.itertuples():
+        examples.append(f"tarefa {int(row.task_id)} ($\\tau_w={number(row.kendall_ponderado)}$, "
+                        f"$N={int(row.n_instancias)}$, $P={int(row.n_atributos)}$, "
+                        f"proporção majoritária ${number(row.classe_majoritaria)}$)")
+    fields["WORST_CASES"] = ("Entre as menores correlações definidas estão: "+"; ".join(examples)+"."
+                             if examples else "Não houve correlações definidas para detalhar exemplos de ordenação.")
     # Tabelas pequenas geradas a partir das mesmas linhas que alimentam o texto.
     table = [r"\begin{tabular}{lrrrr}", r"\toprule", r"Método & Spearman & $\tau_w$ & NDCG@5 & Regret@1 \\", r"\midrule"]
     comparison = [r"\begin{tabular}{lrrr}", r"\toprule", r"Método & $\tau_w$ histórico & $\tau_w$ reconstruído & Diferença pareada \\", r"\midrule"]
@@ -141,7 +156,7 @@ O regret@1 foi $@@REGRET_KNN@@$ para k-NN, $@@REGRET_RF@@$ para Random Forest e 
 
 \section{Diagnóstico de Falhas}
 
-O k-NN ajustado apresentou @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não positivo e @@N_UNDEFINED@@ com correlação indefinida. O diagnóstico liga cada task a tamanho, dimensionalidade, balanceamento, atributos constantes, distância ao vizinho de treino, predições e estado de avaliação. @@CORRELATIONS@@ Essas associações não demonstram causalidade nem explicam isoladamente a variabilidade.
+O k-NN ajustado apresentou @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não positivo e @@N_UNDEFINED@@ com correlação indefinida. O diagnóstico liga cada task a tamanho, dimensionalidade, balanceamento, atributos constantes, distância ao vizinho de treino, predições e estado de avaliação. @@WORST_CASES@@ A inspeção permite reproduzir os casos, sem atribuir automaticamente suas falhas a uma característica isolada. @@CORRELATIONS@@ Essas associações não demonstram causalidade nem explicam isoladamente a variabilidade.
 
 \begin{figure}[htbp]
 \centering
@@ -212,7 +227,7 @@ Tarefas distintas podem representar o mesmo dataset ou versões relacionadas. Os
 
 \subsection{Ambiente Computacional}\label{subsec:recursos}
 
-A execução usa Python 3.14.2, NumPy 2.4.3, pandas 3.0.1, SciPy 1.17.1 e scikit-learn 1.8.0. O computador local dispõe de processador Intel Core i5-9400F, com seis núcleos lógicos. A reconstrução utiliza quatro processos em tarefas diferentes, com uma thread BLAS e um job por classificador em cada processo. As versões efetivas, configurações e hashes constam dos manifestos; a limitação de paralelismo controla a utilização de recursos sem subamostrar observações.
+A execução usa Python 3.14.2, NumPy 2.4.3, pandas 3.0.1, SciPy 1.17.1 e scikit-learn 1.8.0. O computador local dispõe de processador Intel Core i5-9400F, com seis núcleos lógicos. A reconstrução utiliza @@WORKER_DESCRIPTION@@ em tarefas diferentes, com uma thread BLAS e um job por classificador em cada processo. As versões efetivas, configurações, ajustes operacionais e hashes constam dos manifestos; a limitação de paralelismo controla a utilização de recursos sem subamostrar observações.
 
 \section{Fase 1: Escores em Dados Brutos}
 
@@ -320,7 +335,7 @@ O arsenal cruza StandardScaler, MinMaxScaler, RobustScaler e ausência; PCA, Sel
 
 Cada tarefa recebe cinco folds estratificados, com shuffle e semente 42. Os mesmos índices são usados em todos os pipelines, e cada linha é testada uma vez. Não há subamostra exclusiva da SVM. A mediana numérica é estimada no treino, preservando colunas vazias. Categorias recebem um marcador determinístico para ausência e codificador ordinal ajustado no treino; categorias desconhecidas recebem -1. Escalonadores e seletores usam apenas treino, e o teste recebe somente transformações já ajustadas.
 
-Transformações comuns são reaproveitadas entre classificadores dentro do mesmo fold, sem compartilhar ajuste entre folds. A execução utiliza quatro processos em tarefas diferentes, uma thread BLAS e um job por classificador. O ambiente é Python 3.14.2 e scikit-learn 1.8.0, com demais versões nos manifestos.
+Transformações comuns são reaproveitadas entre classificadores dentro do mesmo fold, sem compartilhar ajuste entre folds. A execução utiliza @@WORKER_DESCRIPTION@@ em tarefas diferentes, uma thread BLAS e um job por classificador. O ambiente é Python 3.14.2 e scikit-learn 1.8.0, com demais versões e ajustes operacionais nos manifestos.
 
 São calculados acurácia balanceada e F1 macro em cada teste. O alvo do metamodelo é a média dos cinco folds de acurácia balanceada; falha em qualquer fold torna esse alvo ausente. Avisos de convergência são preservados como limitação do orçamento finito, sem serem descritos como convergência garantida. Foram executados @@N_FITS@@ ajustes, com @@N_FAILURES@@ falhas, @@N_MISSING@@ escores agregados ausentes e @@N_WARNINGS@@ avisos de convergência.
 
@@ -381,7 +396,7 @@ A Tabela~\ref{tab:modelos} apresenta os metamodelos sobre a matriz reconstruída
 
 O regret@1 é $@@REGRET_KNN@@$ para k-NN, $@@REGRET_RF@@$ para Random Forest e $@@REGRET_GLOBAL@@$ para média global. A baseline aleatória já apresenta NDCG@5 $@@NDCG_RANDOM@@$, ilustrando por que NDCG alto não demonstra top-5 correto. Correlações, relevância e perda da primeira recomendação são interpretadas conjuntamente.
 
-O diagnóstico registra @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não positivo e @@N_UNDEFINED@@ indefinidas. @@CORRELATIONS@@ Essas associações não demonstram causalidade ou explicação exclusiva da instabilidade.
+O diagnóstico registra @@N_ERRORS_KNN@@ tarefas com Kendall ponderado não positivo e @@N_UNDEFINED@@ indefinidas. @@WORST_CASES@@ @@CORRELATIONS@@ Essas associações não demonstram causalidade ou explicação exclusiva da instabilidade.
 
 \subsection{Limitações}
 
@@ -410,6 +425,12 @@ Os autores agradecem à Universidade Tecnológica Federal do Paraná pelo apoio 
     if count != 1:
         raise ValueError("Não foi localizado o parágrafo de apresentação da proposta na introdução.")
     intro = intro.replace("com reprodução LOO histórica e validação principal por grupos", "com comparação controlada e validação principal por grupos")
+    intro = intro.replace(
+        "O meta-conjunto construído, com 201 conjuntos de dados e 60 pipelines avaliados por validação cruzada estratificada, constitui um acervo reutilizável cuja auditoria e reavaliação integram a contribuição.",
+        render("O acervo histórico de 201 tarefas e 60 pipelines foi auditado, e a avaliação principal usa @@N_TASKS@@ tarefas em @@N_GROUPS@@ grupos com escores integralmente reconstruídos. A disponibilização de configurações, índices e resultados por fold integra a contribuição.", fields).strip())
+    intro = intro.replace(
+        "apresenta a auditoria do acervo, a reprodução histórica, a comparação de metamodelos por grupos, o diagnóstico de erros e um piloto de hiperparâmetros em dados brutos;",
+        "apresenta a reconstrução integral da Fase 1, a comparação controlada com os escores históricos, a avaliação de metamodelos por grupos e o diagnóstico de erros;")
     intro_file.write_text(intro, encoding="utf-8", newline="\n")
     from projeto.revisao.fase1_corrigida import CONFIG, make_classifier
     current_config = json.loads(CONFIG.read_text(encoding="utf-8"))
@@ -420,6 +441,170 @@ Os autores agradecem à Universidade Tecnológica Federal do Paraná pelo apoio 
     documentation = ROOT/"docs/fase1_corrigida"
     documentation.mkdir(parents=True, exist_ok=True)
     write_json(documentation/"CAMPOS_TCC.json", fields)
+    from projeto.revisao.experimentos import sha256
+    source_files = ["projeto/revisao/fase1_corrigida.py", "projeto/revisao/pipeline_bruto.py",
+                    "projeto/fase1_meta_conjunto/embedding_generator.py",
+                    "projeto/revisao/avaliar_fase1_corrigida.py", "projeto/revisao/experimentos.py",
+                    "projeto/revisao/relatorio_fase1_corrigida.py", "projeto/revisao/config_fase1.json",
+                    "projeto/revisao/config.json", "scripts/compilar_documentos.py"]
+    write_json(OUTPUT/"proveniencia_codigo.json", {"sources_sha256": {name: sha256(ROOT/name) for name in source_files},
+               "note": "Hashes das fontes usadas na reconstrução, representação, avaliação e geração textual."})
+    markdown_fields = {key: str(value).replace("{,}", ",") for key, value in fields.items()}
+    panel = r'''
+# Terceira branch — reconstrução integral da Fase 1
+
+Branch: `revisao/fase1-sem-vazamento-2026`, derivada da revisão anterior.
+As alterações da segunda branch estão incluídas; a `main` e a segunda branch
+preservam seus próprios estados e resultados.
+
+## O que foi concluído
+
+Foram registradas **@@N_FITS@@ avaliações completas** de classificadores:
+@@N_TASKS@@ tarefas × 60 pipelines × cinco folds. Imputação, codificação,
+escalonamento e seleção usam somente o treino de cada fold. Todos os
+classificadores, inclusive SVM, recebem as mesmas linhas de treino e teste.
+Houve **@@N_FAILURES@@ falhas**, **@@N_MISSING@@ escores agregados ausentes** e
+**@@N_WARNINGS@@ registros de aviso de convergência**, preservados nas evidências.
+
+A execução usa @@WORKER_DESCRIPTION@@, com uma thread por processo.
+A retomada reaproveita apenas checkpoints completos e compatíveis por hash.
+Detalhes em `execucao_operacional.json`. O orçamento de MLP continua fixo em 200
+iterações; avisos de convergência não foram ocultados.
+
+## Resultados principais
+
+| Metamodelo | Kendall ponderado histórico nos mesmos folds | Kendall ponderado após reconstrução |
+| --- | ---: | ---: |
+| k-NN ajustado | @@OLD_TAU_KNN@@ | @@TAU_KNN@@ |
+| Random Forest | @@OLD_TAU_RF@@ | @@TAU_RF@@ |
+| Média global | @@OLD_TAU_GLOBAL@@ | @@TAU_GLOBAL@@ |
+
+A diferença Random Forest menos k-NN na avaliação principal é
+**@@RF_KNN_DELTA@@**, com intervalo descritivo de 95% **[@@RF_KNN_LO@@; @@RF_KNN_HI@@]**.
+@@MODEL_INTERPRETATION@@ Há @@N_VALID@@ tarefas em @@N_VALID_GROUPS@@ grupos com
+correlação definida para o k-NN. O diagnóstico registra @@N_ERRORS_KNN@@ casos
+não positivos e @@N_UNDEFINED@@ indefinidos.
+
+A referência acima usa as mesmas tarefas, grupos e folds. O valor antigo do
+LOO por tarefa não é uma comparação direta. Mesmo nesta comparação controlada,
+reconstruir escores altera os rankings reais e pode recuperar itens antes
+ausentes; isso não isola ganho preditivo sob uma única verdade de referência.
+Uma condição adicional mantém os vetores históricos ao trocar somente os escores.
+Os CSVs preservam as três condições, seus suportes e diferenças pareadas.
+
+## Onde conferir e editar
+
+| Informação | Arquivo |
+| --- | --- |
+| Protocolo e parâmetros da reconstrução | [PROTOCOLO.md](PROTOCOLO.md) |
+| Solicitações, ações, evidências e pendências | [modificacoes.csv](modificacoes.csv) |
+| Campos usados no texto | [CAMPOS_TCC.json](CAMPOS_TCC.json) |
+| Catálogo, origem bruta, grupos e exclusões | [datasets.csv](../../projeto/resultados/fase1_corrigida_2026/datasets.csv) |
+| Manifesto da Fase 1 | [manifesto.json](../../projeto/resultados/fase1_corrigida_2026/manifesto.json) |
+| Auditoria da cobertura e igualdade de amostras | [validacao.json](../../projeto/resultados/fase1_corrigida_2026/validacao.json) |
+| Matrizes e médias por tarefa/pipeline | [pipelines_raw.csv](../../projeto/resultados/fase1_corrigida_2026/pipelines_raw.csv) |
+| Comparação de três condições | [resumo_condicoes.csv](../../projeto/resultados/fase1_corrigida_2026/fase2/resumo_condicoes.csv) |
+| Diferenças pareadas de protocolos | [comparacao_condicoes.csv](../../projeto/resultados/fase1_corrigida_2026/fase2/comparacao_condicoes.csv) |
+| Desempenho principal por task/modelo | [metricas_por_task.csv](../../projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa/metricas_por_task.csv) |
+| Diagnóstico de erros | [diagnostico_erros.csv](../../projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa/diagnostico_erros.csv) |
+| Escores que mudaram desde o histórico | [comparacao_escores.csv](../../projeto/resultados/fase1_corrigida_2026/comparacao_escores.csv) |
+| TCC revisado | [tcc_revisado.pdf](../../documentos/tcc_revisado.pdf) |
+| Artigo revisado | [artigo_revisado.pdf](../../documentos/artigo_revisado.pdf) |
+
+Os diretórios `folds/` e `splits/` preservam ajustes e índices por tarefa.
+As fontes LaTeX foram atualizadas em resumo, abstract, introdução, métodos,
+resultados, conclusão e artigo. O gerador é `relatorio_fase1_corrigida.py`;
+alterações manuais nesses trechos podem ser sobrescritas ao regenerar o relatório.
+
+## Limitações que permanecem
+
+A reconstrução da Fase 1 **foi concluída** e deixa de ser uma pendência.
+Permanecem a avaliação retrospectiva, os grupos conservadores, a codificação
+ordinal nominal e os rótulos necessários na consulta. A auditoria identifica
+@@N_CATEGORICAL_ONLY@@ tarefas apenas categóricas e @@N_POSSIBLE_IDENTIFIERS@@ com
+nomes sugestivos de identificadores/caminhos, sem exclusão posterior orientada
+pelos resultados. Esses nomes são indicadores de escopo, não prova de vazamento.
+
+Expandir todo o arsenal de hiperparâmetros, testar outras representações e obter
+avaliação externa posterior continuam como extensões. O piloto anterior de 180
+avaliações permanece separado. Vínculo formal de orientação e data de defesa
+dependem de confirmação institucional; os PDFs são versões de trabalho.
+
+## Reprodução
+
+```powershell
+python -m pip install -r projeto/requirements-fase1-lock.txt
+python -m projeto.revisao.fase1_corrigida --prepare
+python -m projeto.revisao.fase1_corrigida --workers 6
+python -m projeto.revisao.validar_fase1_corrigida
+python -m projeto.revisao.auditar_atributos_fase1
+python -m projeto.revisao.avaliar_fase1_corrigida
+python -m projeto.revisao.figuras --input projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa
+python -m projeto.revisao.relatorio_fase1_corrigida
+python scripts/compilar_documentos.py
+```
+
+Os dados brutos ficam no cache local OpenML e em diretório ignorado pelo Git.
+Para retomar, execute a Fase 1 sem `--prepare`; hashes incompatíveis impedem
+misturar resultados de configurações diferentes. A reexecução completa é custosa.
+'''
+    (documentation/"PAINEL.md").write_text(render(panel, markdown_fields), encoding="utf-8", newline="\n")
+    changes = pd.read_csv(ROOT/"docs/revisao/modificacoes.csv", keep_default_na=False)
+    replacements = {
+        "R03": "projeto/resultados/fase1_corrigida_2026/datasets.csv",
+        "R04": "projeto/resultados/fase1_corrigida_2026/parametros_classificadores.json",
+        "R05": "projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa/splits.json",
+        "R06": "projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa/diagnostico_erros.csv",
+        "R08": "projeto/resultados/fase1_corrigida_2026/fase2/reconstrucao_completa/comparacoes_pareadas.csv",
+        "R13": "projeto/resultados/fase1_corrigida_2026/datasets.csv",
+        "R15": "projeto/resultados/fase1_corrigida_2026/validacao.json",
+    }
+    for identifier, evidence in replacements.items():
+        changes.loc[changes.id.eq(identifier), "evidencia"] = evidence
+    changes.loc[changes.id.eq("R15"), ["acao", "status", "pendencia"]] = [
+        "Reconstruida toda a matriz com tratamento no treino e mesmas amostras para SVM e demais classificadores",
+        "implementado", ""]
+    changes.loc[changes.id.eq("R04"), ["acao", "pendencia"]] = [
+        "Descritas 60 combinacoes e exportados parametros e versoes efetivos da reconstrucao",
+        "Versoes da geracao historica continuam parcialmente desconhecidas; ambiente da reconstrucao registrado"]
+    changes.to_csv(documentation/"modificacoes.csv", index=False, lineterminator="\n")
+    readme = ROOT/"readme.md"
+    old_readme = readme.read_text(encoding="utf-8")
+    marker = "## Documentação original do template"
+    original_template = old_readme.split(marker, 1)[1] if marker in old_readme else old_readme
+    prefix = render(r'''
+# TCC — Meta-aprendizado para ranqueamento de pipelines
+
+Terceira branch: `revisao/fase1-sem-vazamento-2026`, incluindo a revisão anterior
+e a reconstrução integral da Fase 1 em dados brutos.
+
+Comece pelo [painel da terceira branch](docs/fase1_corrigida/PAINEL.md), que liga
+alterações, evidências, resultados e pendências. Foram registradas @@N_FITS@@
+avaliações completas dos 60 pipelines em @@N_TASKS@@ tarefas e @@N_GROUPS@@ grupos.
+Pré-processamento usa somente o treino de cada fold; SVM recebe as mesmas
+amostras dos demais classificadores.
+
+- [TCC revisado — PDF](documentos/tcc_revisado.pdf)
+- [Artigo revisado — PDF](documentos/artigo_revisado.pdf)
+- [Campos usados nos textos](docs/fase1_corrigida/CAMPOS_TCC.json)
+- [Protocolo e reprodução](docs/fase1_corrigida/PROTOCOLO.md)
+- [Registro histórico da segunda branch](docs/revisao/PAINEL.md)
+
+Os novos resultados estão em `projeto/resultados/fase1_corrigida_2026/`.
+A `main` e a segunda branch preservam seus estados anteriores. Os PDFs antigos
+na raiz são históricos; os PDFs atuais ficam em `documentos/`. Caches brutos
+permanecem locais e são ignorados pelo Git.
+
+---
+
+## Documentação original do template
+''', markdown_fields)
+    readme.write_text(prefix+original_template, encoding="utf-8", newline="\n")
+    old_panel = ROOT/"docs/revisao/PAINEL.md"
+    historical_panel = old_panel.read_text(encoding="utf-8")
+    banner = "> Registro histórico da segunda branch. A reconstrução integral e os resultados atuais estão no [painel da terceira branch](../fase1_corrigida/PAINEL.md).\n\n"
+    if not historical_panel.startswith("> Registro histórico da segunda branch"):
+        old_panel.write_text(banner+historical_panel, encoding="utf-8", newline="\n")
     print("TCC atualizado a partir das saídas reconstruídas e validadas.")
     return fields
 
