@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automl-pipeline-ranking"
+version = "2026.11.2"
+description = "Meta-learning for ranking and recommending classification pipelines in AutoML"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0,<3", "pandas>=2.2,<4", "scipy>=1.15,<2", "scikit-learn>=1.6,<2", "matplotlib>=3.9,<4", "threadpoolctl>=3,<4", "joblib>=1.4,<2"]
+
+[project.optional-dependencies]
+openml = ["openml>=0.15,<1", "pyarrow>=18"]
+dev = ["ruff>=0.8,<1"]
+
+[project.scripts]
+automl-rank = "automl_ranker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["automl_ranker*"]

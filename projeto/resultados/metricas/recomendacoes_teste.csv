@@ -1,6 +1,0 @@
-rank,scaler,selector,classifier,score_predito
-1,RobustScaler,None,RandomForest,0.8918273126567456
-2,StandardScaler,None,RandomForest,0.8916177149059746
-3,RobustScaler,None,SVM,0.8706739848592249
-4,StandardScaler,None,SVM,0.8688452201577977
-5,StandardScaler,None,kNN,0.8647037022674415

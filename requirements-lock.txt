@@ -1,0 +1,11 @@
+# Direct runtime versions used for reference reproduction (not a full transitive lock)
+# Python 3.14.2
+numpy==2.4.3
+pandas==3.0.1
+scipy==1.17.1
+scikit-learn==1.8.0
+openml==0.15.1
+matplotlib==3.10.8
+threadpoolctl==3.6.0
+joblib==1.5.3
+pyarrow==23.0.1

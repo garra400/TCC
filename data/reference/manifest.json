@@ -1,0 +1,22 @@
+{
+  "source_revision": "2919502eb587c428aa265b5639637a8cd5a9e66d",
+  "evaluation_date": "2026-11-02",
+  "n_tasks": 193,
+  "n_groups": 165,
+  "n_pipelines": 60,
+  "input_dtype": "float32 for meta-evaluation; original numerical input files preserved",
+  "representation": "55 deterministic statistical descriptors plus nine zero positions, L2 normalization",
+  "raw_data_included": false,
+  "files_sha256": {
+    "datasets.csv": "ec27fbf813f91e45d77a4e152401691bafde0a288dcba37fb7f17c7347ee6a16",
+    "expected_k.csv": "ec87c722de1bf9a41af0ed64e786945edd711f5d5fb606354d854ef320a05b76",
+    "expected_metrics.csv": "a134c594d6a7feb94047f532322f589446fcc72aa836da6f53ea929cbd554493",
+    "pipelines_raw.csv": "a0352140aa12a75ed351525512c577d322b4f0535bfb8040140d4a6579b0009b",
+    "pipeline_keys.json": "2d82f876b6d3d0d327a230c9313ae1aa93527d38d8d989fd21985e2b85344d3b",
+    "qualidade_atributos.csv": "528103b881c11d56016a7bbf9f097e8a5856ab31d11a9f7413282cfee0683b35",
+    "sensitivity_plan.json": "1617c45e3a134d420daeeb3ed06d10321e05ba4ff3954114d5527bdeb8247219",
+    "task_ids.npy": "a8de3c1cd87bafc6d9f32a27ee63becf9012aca5cecaa12a2d956ae9351445d0",
+    "X_emb.npy": "c718b006b88743ea6006473415a76fa7deee7334abda37752b8a54a03d3256ab",
+    "Y_accuracy.npy": "06b0d9cb0ecd661559a3dcea8d50cec9ea0db0575e43746878c1751d469f4e88"
+  }
+}
