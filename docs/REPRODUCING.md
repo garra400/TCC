@@ -71,3 +71,15 @@ If an institutional proxy produces a certificate error, configure `REQUESTS_CA_B
 Follow the clone and checkout commands in the main README, then run `automl-rank dataset2vec --source ../dataset2vec`. The five published partitions each have 80 training, 16 validation and 24 test datasets. The predictor uses only the 80 training datasets; tests cover all 120 once. Candidate identity/order is checked across all 256 configurations.
 
 The published artifacts contain Dataset2Vec vectors of 32 dimensions, MF1 vectors of 41 and MF2 vectors of 22. They are compared with the deterministic 64-position descriptor under the same fixed-k=10 predictor and train-only standardization. No neural training is performed. Previously published normalization and incomplete auditing of pretraining/families limit interpretation. The published score is not relabeled as the balanced accuracy of the OpenML experiment.
+
+## 6. Extended grid and partition stability
+
+`automl-rank robustness` fixes its plan before computing new results and keeps the original reference inputs unchanged. The numeric k grid is expanded through 50 and includes an all-training-neighbor option. Selection still uses only the four inner group partitions of each outer training set, averaged within groups and then across groups. The same inner curves also reconstruct the original short-grid controls.
+
+Five variants are evaluated: unscaled inverse-distance k-NN; standardized inverse-distance k-NN at epsilon 1e-8; standardized uniform k-NN; and standardized inverse-distance k-NN at epsilon 1e-4 or 1e-2. The principal model is prespecified as the standardized epsilon-1e-8 variant. Alternative weight rules do not become the principal model based on their outer scores. Finite k is clipped to the number of available training tasks in small inner folds.
+
+Outer group partitions use seeds 42, 0, 1, 2, 3, 4, 5, 6, 7 and 8. The inner partition seed and Random Forest seed stay at 42, isolating variation from outer partitioning. Per-seed group means, sample SD, minimum and maximum are reported. RF-minus-k-NN differences pair tasks/groups within each seed; repeated tasks and folds are not treated as independent samples for inference.
+
+The seed-42 principal run retains complete predictions, selected k, inner curves, seven metrics and paired intervals. Normalized maximum neighbor weight and effective neighbor count `1/sum(w**2)` quantify near-copy behavior. The all-uniform endpoint is checked against the global mean, including its floating-point convention. All-inverse predictions are not assumed to equal that baseline.
+
+The fixed cosine-threshold stress grouping and metadata exclusion cohorts are repeated with the expanded grid. This changes their k-NN results relative to the short-grid controls, so both conditions must be named when reporting older numbers. An optional `--external-metrics` argument computes all published-representation-versus-global-mean paired contrasts, including regret@5; a claim about one metric must not be generalized to every metric.

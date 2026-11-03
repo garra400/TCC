@@ -218,6 +218,21 @@ def main(argv=None):
     p.add_argument("--input", type=Path, default=REFERENCE)
     p.add_argument("--evaluation", type=Path, default=ROOT / "outputs/evaluation")
     p.add_argument("--output", type=Path, default=ROOT / "outputs/figures")
+    p = sub.add_parser(
+        "robustness",
+        help="Extended k grid, weighting controls and repeated outer group partitions",
+    )
+    p.add_argument("--input", type=Path, default=REFERENCE)
+    p.add_argument("--output", type=Path, default=ROOT / "outputs/robustness")
+    p.add_argument("--config", type=Path)
+    p.add_argument(
+        "--seeds", type=int, nargs="+", default=[42, 0, 1, 2, 3, 4, 5, 6, 7, 8]
+    )
+    p.add_argument(
+        "--external-metrics",
+        type=Path,
+        help="Optional dataset2vec/metricas.csv for comparisons against the global mean",
+    )
     args = parser.parse_args(argv)
     if args.command == "info":
         x, y, ids, groups, keys, _ = load_reference(args.input)
@@ -291,3 +306,15 @@ def main(argv=None):
         from .plotting import plot
 
         plot(args.input, args.evaluation, args.output)
+    elif args.command == "robustness":
+        from .robustness import run
+        from .robustness_report import derive
+
+        run(
+            args.input,
+            args.output,
+            load_config(args.config),
+            args.seeds,
+            args.external_metrics,
+        )
+        derive(args.input, args.output, load_config(args.config))

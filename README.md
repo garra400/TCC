@@ -9,8 +9,8 @@ Research code for representing labeled tabular datasets, predicting pipeline per
 Python **3.14.2** reproduces the recorded environment. The package supports Python 3.11 or newer; exact numerical agreement is checked against the bundled reference with the pinned scientific-library versions.
 
 ```bash
-git clone --depth 1 --single-branch --branch main https://github.com/garra400/TCC.git
-cd TCC
+git clone --depth 1 --single-branch --branch main https://github.com/garra400/automl-pipeline-ranking.git
+cd automl-pipeline-ranking
 python -m venv .venv
 ```
 
@@ -47,6 +47,24 @@ automl-rank plot
 The repository includes small numerical reference inputs: **193 tasks, 165 groups, 64 descriptor positions and 60 candidate pipelines**. The first command recomputes nested grouped evaluation and checks all 42 reference metric means and the internally selected k values. It does not rerun the 57,900 classifier fits needed to build the performance matrix.
 
 Outputs are written under `outputs/`, which Git ignores. They include per-task predictions and metrics, group means, descriptive paired bootstrap intervals, split definitions, k-selection records and run manifests. The additional analyses cover task-level LOO versus group separation, metadata exclusions, a conservative proximity stress test and recorded top-5 execution cost.
+
+## Extended k grid, neighbor weights and partition stability
+
+```bash
+automl-rank robustness
+```
+
+This additional experiment extends the nested search to **1, 3, 5, 7, 10, 15, 20, 30, 50 and all training neighbors**. It saves inner-validation curves for every outer fold, compares inverse-distance weights with epsilon 1e-8, 1e-4 and 1e-2 against uniform weights, and repeats grouped evaluation with ten fixed outer seeds. Inner and model seeds remain 42. The principal variant remains standardized inverse-distance k-NN with epsilon 1e-8; weighting alternatives are controls rather than choices made from outer-test results.
+
+The original short-grid evaluation remains available with `evaluate --verify-reference` as an audit control. Expanded-grid results are in `outputs/robustness/principal/`; repeated-seed variation, the 113-group stress test, metadata exclusions and normalized weight concentration are saved separately. Repeated seeds measure partition variation, not additional independent datasets.
+
+Using all training neighbors equals the global mean **only for uniform weights**. The experiment checks that equality numerically; inverse-distance weighting with all neighbors is a different estimator. To add the published-representation comparisons against the global mean, first run `dataset2vec`, then:
+
+```bash
+automl-rank robustness --external-metrics outputs/dataset2vec/metricas.csv
+```
+
+Use a new output directory when changing an existing experiment plan. See [the robustness protocol](docs/REPRODUCING.md#6-extended-grid-and-partition-stability) for the complete reporting rules.
 
 ## Recommend pipelines for your data
 

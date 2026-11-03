@@ -7,8 +7,8 @@ Este repositório contém o algoritmo, os experimentos, testes e instruções de
 Use Python 3.14.2 para reproduzir o ambiente registrado. Na pasta em que deseja clonar o projeto:
 
 ```powershell
-git clone --depth 1 --single-branch --branch main https://github.com/garra400/TCC.git
-cd TCC
+git clone --depth 1 --single-branch --branch main https://github.com/garra400/automl-pipeline-ranking.git
+cd automl-pipeline-ranking
 py -3.14 -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements-lock.txt -e .
 .venv\Scripts\python.exe -m automl_ranker info
@@ -28,6 +28,14 @@ As versões das dependências científicas estão fixadas em `requirements-lock.
 A demonstração usa tarefas sintéticas e quatro candidatos para percorrer a construção dos escores e a avaliação. A avaliação de referência usa as matrizes numéricas fornecidas de 193 tarefas, 165 grupos e 60 candidatos. Ela recalcula os metamodelos e confere 42 médias de métricas e os valores de k selecionados internamente, sem repetir os 57.900 ajustes dos classificadores. Os resultados são gravados em `outputs/` e não são enviados ao Git.
 
 `analyse --kind all` executa comparações LOO/grupos, exclusões por metadados, teste de estresse por proximidade e estimativa de custo. Também é possível escolher `loo`, `sensitivity`, `proximity` ou `cost` separadamente. As análises são retrospectivas e os intervalos são descritivos.
+
+Para repetir a grade ampliada, os controles de peso e as dez sementes externas:
+
+```powershell
+.venv\Scripts\python.exe -m automl_ranker robustness
+```
+
+A grade inclui 1, 3, 5, 7, 10, 15, 20, 30, 50 e todos os vizinhos disponíveis no treino. A escolha é interna ao treino; as alternativas de ponderação não são selecionadas pelos resultados externos. A igualdade com a média global ocorre no caso de todos os vizinhos com pesos uniformes. A avaliação antiga com teto 10 continua disponível como controle em `evaluate --verify-reference`.
 
 ## Recomendar para seu CSV
 
